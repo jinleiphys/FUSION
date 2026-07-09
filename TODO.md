@@ -13,10 +13,13 @@ Question to answer: how much does skill quality drop on opencode + a domestic mo
 
 ## Phase 1: rebrand fork + CI
 
-- [ ] Fork anomalyco/opencode; identify every brand asset file (logo ASCII, name strings, icons, splash)
-- [ ] Brand patch: FUSION name + logo; keep MIT license notice; confirm no opencode trademark remains
-- [ ] CI job: weekly fetch upstream, rebase brand patch, build, release; alert on conflict
-- [ ] Reserve names: GitHub org/repo, domain [Please specify preference], check collisions
+- [x] Fork created: github.com/jinleiphys/fusion-core (upstream anomalyco/opencode, forked at v1.17.16); local /Users/jinlei/Desktop/code/fusion-core; default branch = fusion-brand
+- [x] Brand assets mapped: TUI packages/tui/src/logo.ts (patched); remaining surfaces = desktop icons (packages/desktop/icons/), web SVGs (packages/web/src/assets/), ui/components/logo.tsx, docs logo
+- [x] Brand patch first cut (2026-07-09, commit 25eea06): TUI main logo "fu sion" + compact "fu" pulse logo, same block-glyph style and shadow marks as upstream; MIT notice untouched. Decision: internal identifiers/config paths stay "opencode" for upstream compatibility; only user-visible surfaces get rebranded
+- [x] CI weekly rebase (fusion-rebase.yml, Mondays 02:00 UTC): rebases fusion-brand onto upstream/dev, force-with-lease push, syncs dev mirror; verified green on manual dispatch (run 29000283160)
+- [ ] Remaining brand surfaces: desktop/web icons need an actual FUSION graphic (nature-figure skill or designer), TUI/CLI display-name strings sweep
+- [ ] Build + release pipeline for FUSION binaries (adapt upstream release workflow; bun installed locally)
+- [ ] Domain name [Please specify preference]
 
 ## Phase 2: skill pack
 
