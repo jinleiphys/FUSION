@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="assets/brand/fusion-github-logo.png" alt="FUSION" width="760">
+</p>
+
 # FUSION
 
-**F**ramework for **U**nified **S**kills, **I**nference & **O**pen **N**uclear-science
+**F**ramework for **U**nified **S**cientific **I**ntelligence in **O**pen **N**uclear physics
 
 A nuclear-physics research agent platform, built as a rebrand fork of [opencode](https://github.com/anomalyco/opencode) (MIT). Not affiliated with the opencode project.
 
