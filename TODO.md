@@ -20,13 +20,14 @@ Question to answer: how much does skill quality drop on opencode + a domestic mo
 
 ## Phase 2: skill pack
 
-Port order inside each tier: user confirms priorities before work starts.
+Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics code gets its own skill**, across reactions, statistical/fission, R-matrix/astro, structure, and (scoped) transport/data. Full living roadmap with openness-verification flags and wave ordering: [skills-catalog.md](skills-catalog.md).
 
 - [ ] Port the existing ~30 research skills (writing, review, literature, figures) to FUSION format; strip Claude-Code-only mechanics per skill
-- [ ] Tier 1 per-code skills (community, reactions, user is expert): FRESCO (exists, port), TALYS, CCFULL
-- [ ] Tier 2 per-code skills (group-owned): smoothie, COLOSS, SLAM.jl, HPRMAT, inhomoR, swift.jl, PINN-ECS, transfer
-- [ ] Tier 3 per-code skills (structure/other, need domain check): KSHELL, BIGSTICK, [Please specify which structure codes matter]
-- [ ] Each per-code skill: benchmark case with published reference value, agreement stated to N digits, before it ships
+- [ ] User confirms wave ordering in skills-catalog.md
+- [ ] Wave 1 per-code skills (user expert, benchmarks at hand): THOx, CCFULL, TALYS, smoothie, COLOSS
+- [ ] Wave 2 (community heavyweights): KSHELL, GEMINI++, GEF, AZURE2, SkyNet
+- [ ] Wave 3+ per catalog; each entry needs its open-source status verified before work starts
+- [ ] Each per-code skill meets the quality bar in skills-catalog.md (install, verified deck examples, run/parse, benchmark to N digits, failure modes) before it ships
 
 ## Phase 3: knowledge base
 
