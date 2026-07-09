@@ -32,12 +32,16 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 - [ ] Licensing decision for the public artifact: abstracts included vs snippets vs fetch-on-first-run [user decision]
 - [ ] Optional later: MCP server exposing kb_search/kb_browse (demoted from load-bearing to sugar, per 2026-07-09 revision)
 
-## Phase 4: distribution
+## Phase 4: onboarding + distribution (wizard design: [onboarding-design.md](onboarding-design.md))
 
+- [ ] `fusion init` wizard v1 (CLI): model+key test, PhySH area picker, kb-wiki slice mount, personal-wiki seeding from user's arXiv ids, skill recommendation with benchmark-on-install
+- [ ] concept-skill-map.yaml (PhySH concept -> skills-catalog entries)
+- [ ] Monthly personal digest loop (filter corpus updates by user concepts, greet on launch)
 - [ ] install.sh: opencode binary + skill pack + kb-wiki + default config in one shot
 - [ ] Default model config for CN users (domestic providers) and international users
-- [ ] Student-facing docs (zh + en), first-run tutorial: one real FRESCO calculation end to end
+- [ ] Student-facing docs (zh + en); wizard closing demo doubles as the tutorial
 - [ ] Pilot with 2-3 group students; collect failures into devlog
+- [ ] v2+: TUI popup wizard (plugin slots), ORCID/INSPIRE author lookup, group mode (advisor-curated shared config)
 
 ## Wiki ingest queue
 
