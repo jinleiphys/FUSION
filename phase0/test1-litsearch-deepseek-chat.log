@@ -1,0 +1,121 @@
+[0m
+> build · deepseek-chat
+[0m
+[0m→ [0mSkill "literature-search"
+[0m→ [0mSkill "literature-wiki"
+[0m
+[0m$ [0mfind ~/research-wiki -name "*.md" | xargs grep -li -E "Typel|Baur|trojan.?horse" 2>/dev/null | head -20
+/Users/jinlei/research-wiki/methods/prior-form-dwba.md
+/Users/jinlei/research-wiki/methods/surrogate-reactions-method.md
+/Users/jinlei/research-wiki/methods/time-dependent-tdse-method.md
+/Users/jinlei/research-wiki/methods/complete-fusion-cs.md
+/Users/jinlei/research-wiki/methods/feshbach-projection.md
+/Users/jinlei/research-wiki/methods/watanabe-folding.md
+/Users/jinlei/research-wiki/methods/hauser-feshbach.md
+/Users/jinlei/research-wiki/methods/iav-dwba.md
+/Users/jinlei/research-wiki/methods/adiabatic-approximation.md
+/Users/jinlei/research-wiki/methods/lagrange-mesh.md
+/Users/jinlei/research-wiki/methods/post-form-dwba.md
+/Users/jinlei/research-wiki/methods/nonorthogonality-correction.md
+/Users/jinlei/research-wiki/methods/eikonal-approximation.md
+/Users/jinlei/research-wiki/methods/cdcc.md
+/Users/jinlei/research-wiki/methods/mdwba.md
+/Users/jinlei/research-wiki/methods/weisskopf-ewing.md
+/Users/jinlei/research-wiki/methods/quasi-free-kinematics.md
+/Users/jinlei/research-wiki/methods/half-off-energy-shell.md
+/Users/jinlei/research-wiki/methods/trojan-horse-method.md
+/Users/jinlei/research-wiki/methods/sudden-approximation.md
+[0m
+[0m→ [0mRead /Users/jinlei/research-wiki/methods/trojan-horse-method.md
+Wiki 已命中。接下来直接进行 Stage 2 Fetch 获取验证过的 BibTeX。
+[0m
+[0m$ [0mpython /Users/jinlei/.claude/skills/literature-search/scripts/inspire_search.py '(a:S.Typel and a:G.Baur and t:"trojan horse" and de:2003)' 2>/dev/null | python3 -m json.tool 2>/dev/null || echo "FAILED"
+[]
+[0m
+[0m$ [0mpython /Users/jinlei/.claude/skills/literature-search/scripts/inspire_search.py 't:"Trojan horse" and a:Typel and a:Baur' 2>/dev/null
+[
+  {
+    "control_number": 643371,
+    "title": "Theory of the Trojan-Horse method",
+    "authors": [
+      "Baur, Gerhard",
+      "Typel, Stefan"
+    ],
+    "journal": "Prog.Theor.Phys.Suppl.",
+    "volume": "154",
+    "pages": "333",
+    "year": 2004,
+    "doi": "10.1143/PTPS.154.333",
+    "arxiv_id": "nucl-th/0401054",
+    "abstract": "The Trojan-Horse method is an indirect approach to determine the energy dependence of S factors of astrophysically relevant two-body reactions. This is accomplished by studying closely related three-body reactions under quasi-free scattering conditions. The basic theory of the Trojan-Horse method is developed starting from a post-form distorted wave Born approximation of the T-matrix element. In the surface approximation the cross section of the three-body reaction can be related to the S-matrix elements of the two-body reaction. The essential feature of the Trojan-Horse method is the effective suppression of the Coulomb barrier at low energies for the astrophysical reaction leading to finite cross sections at the threshold of the two-body reaction. In a modified plane wave approximation the relation between the two-body and three-body cross sections becomes very transparent. Applications of the Trojan Horse Method are discussed. It is of special interest that electron screening corrections are negligible due to the high projectile energy.",
+    "url": "https://inspirehep.net/literature/643371"
+  },
+  {
+    "control_number": 593945,
+    "title": "Theory of the Trojan horse method",
+    "authors": [
+      "Typel, S.",
+      "Baur, G."
+    ],
+    "journal": "Annals Phys.",
+    "volume": "305",
+    "pages": "228",
+    "year": 2003,
+    "doi": "10.1016/S0003-4916(03)00060-5",
+    "arxiv_id": "nucl-th/0208069",
+    "abstract": "The Trojan-Horse method is an indirect approach to determine the energy dependence of S-factors of astrophysically relevant two-body reactions. This is accomplished by studying closely related three-body reactions under quasi-free scattering conditions. The basic theory of the Trojan-Horse method is developed starting from a post-form distorted wave Born approximation of the T-matrix element. In the surface approximation the cross section of the three-body reaction can be related to the S-matrix elements of the two-body reaction. The essential feature of the Trojan-Horse method is the effective suppression of the Coulomb barrier at low energies for the astrophysical reaction leading to finite cross sections at the threshold of the two-body reaction. In a modified plane wave approximation the relation between the two-body and three-body cross sections becomes very transparent. The appearing Trojan-Horse integrals are studied in detail.",
+    "url": "https://inspirehep.net/literature/593945"
+  },
+  {
+    "control_number": 715222,
+    "title": "Investigation of subthreshold resonances with the Trojan horse method",
+    "authors": [
+      "Baur, G.",
+      "Typel, S."
+    ],
+    "journal": "AIP Conf.Proc.",
+    "volume": "853",
+    "pages": "366",
+    "year": 2006,
+    "doi": "10.1063/1.2338403",
+    "arxiv_id": "nucl-th/0604057",
+    "abstract": "It is pointed out that the Trojan horse method is a suitable tool to investigate subthreshold resonances.",
+    "url": "https://inspirehep.net/literature/715222"
+  }
+]
+[0m
+命中。Ann. Phys. 2003 正是你要的原始论文。验证 DOI。
+[0m$ [0mpython /Users/jinlei/.claude/skills/literature-search/scripts/verify_doi.py '10.1016/S0003-4916(03)00060-5' 2>/dev/null
+{
+  "doi": "10.1016/s0003-4916(03)00060-5",
+  "title": "Theory of the Trojan–Horse method",
+  "authors": [
+    "Typel, S.",
+    "Baur, G."
+  ],
+  "journal": "Annals of Physics",
+  "volume": "305",
+  "pages": "228-265",
+  "year": 2003,
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/s0003-4916(03)00060-5"
+}
+[0m
+全部字段验证通过。BibTeX：
+
+```bibtex
+@article{Typel:2003zz,
+  author    = {Typel, S. and Baur, G.},
+  title     = {Theory of the {Trojan-Horse} method},
+  journal   = {Annals Phys.},
+  volume    = {305},
+  year      = {2003},
+  number    = {2},
+  pages     = {228--265},
+  doi       = {10.1016/S0003-4916(03)00060-5},
+  eprint    = {nucl-th/0208069},
+  url       = {https://doi.org/10.1016/S0003-4916(03)00060-5}
+}
+```
+
+**来源**：INSPIRE-HEP record 593945 + CrossRef 双重验证，2026-07-09 获取。DOI `10.1016/S0003-4916(03)00060-5` 已确认可解析。arXiv `nucl-th/0208069` 可用作开放获取备份链接。

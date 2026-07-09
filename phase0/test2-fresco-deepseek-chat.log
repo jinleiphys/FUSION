@@ -1,0 +1,213 @@
+[0m
+> build · deepseek-chat
+[0m
+[0m→ [0mSkill "fresco"
+[0m→ [0mRead .
+Let me first load the FRESCO skill to follow its workflow precisely.
+[0m→ [0mRead /Users/jinlei/.config/opencode/skills/fresco/examples/B1-elastic.in
+[0m→ [0mRead /Users/jinlei/.config/opencode/skills/fresco/references/verification.md
+[0m→ [0mRead /Users/jinlei/.config/opencode/skills/fresco/references/namelist-reference.md
+[0m
+[0m# [0mTodos
+[•] Build FRESCO input deck for n+90Zr elastic scattering at Elab=10 MeV
+[ ] Run baseline calculation with reasonable numerical parameters
+[ ] Convergence check: halve hcm (0.1->0.05->0.02)
+[ ] Convergence check: increase rmatch (60->80->100)
+[ ] Convergence check: increase jtmax (50->80->120)
+[ ] Extract final cross sections and report agreement to N digits
+[0m
+Now I have the reference material. Let me build the input deck for n+90Zr elastic scattering at Elab=10 MeV.
+
+The target is 90Zr: mass=90, Z=40. The projectile is a neutron: mass=1, Z=0. No Coulomb needed. For neutron elastic, the cross sections are not divided by Rutherford (which is undefined for neutral projectile), so fort.16 gives dσ/dΩ directly.
+
+Key: since neutron has no charge, `TYPE=0` (Coulomb) should NOT be included, or at least rc is irrelevant. Actually, for neutron-induced reactions, we skip TYPE=0 entirely (no Coulomb). Let me check the B1 example: it uses `type=0` with rc=1.2 because it's a proton. For neutrons, the manual says `rc` is for Coulomb radius; we should just skip TYPE 0.
+
+Potential parameters:
+- V=47.0 MeV, rv=1.20 fm, av=0.66 fm (volume real, TYPE=1, shape=0)
+- Wv=3.5 MeV (volume imag, same geometry: add to TYPE=1 as p4-p6)
+- Wd=6.0 MeV, rd=1.28 fm, ad=0.58 fm (surface imag, TYPE=2, shape=0)
+- No spin-orbit, no Coulomb
+
+Let me write the input deck. The radius convention: `p2 = r0 * (A_target^(1/3) + A_projectile^(1/3))`? Actually, the problem says "半径按 r*A_target^(1/3)". So the WS radius uses R = r * A_target^(1/3), not the usual R = r * (Ap^(1/3) + At^(1/3)). 
+
+For FRESCO, `p2` in &POT is the radius parameter. If the user says R = r * At^(1/3) (target-only radius), that's non-standard but let's follow the user's specification. Actually, looking more carefully at typical neutron optical models: for n+A, the radius is usually R = r * A^(1/3) where A is the target mass. FRESCO's convention for `p2` is that it's a radius parameter such that the actual radius is `p2 * (massp^1/3 + masst^1/3)`. But for neutron scattering, the conventional Becchetti-Greenlees or similar use R = r * A_target^(1/3) for the real volume.
+
+Wait, let me re-check: FRESCO manual says p2 is the "radius parameter" such that R = p2 * (Ap^(1/3) + At^(1/3)) for the Coulomb potential (TYPE=0). But for a TYPE=1 WS potential, the radius R = p2 * (Ap^1/3 + At^1/3) by default. 
+
+The user says "半径按 r*A_target^(1/3)". This means the potential radius is R = r * At^(1/3), not the usual Ap^(1/3)+At^(1/3). In FRESCO, to specify the radius directly in fm rather than as a parameter times (Ap^1/3+At^1/3), we can set massp=1, masst=1 (so Ap^1/3+At^1/3=2), then p2 = R/2. Or we can set massp=0 and masst=0... Actually, looking at FRESCO doc more carefully, if we set `ap=1, at=90`, then `R = p2 * (1 + 90^(1/3)) = p2 * (1 + 4.48) = p2 * 5.48`. For rv=1.20, R_v = 1.20 * 90^(1/3) = 1.20 * 4.48 = 5.376 fm. So p2 we need: p2 * 5.48 = 5.376 => p2 = 0.981. Similarly for rd=1.28, R_d = 1.28 * 4.48 = 5.734 fm, p2 = 5.734/5.48 = 1.046.
+
+Hmm, that's getting confusing. Let me check: another approach in FRESCO. If I set `ap=1, at=1` (so Ap^1/3+At^1/3 = 2), then `p2` directly gives R/2, which means I'd set p2 = R/2. But that would affect the Coulomb radius formula too (not relevant here since no Coulomb).
+
+Actually, since we are told the radius convention explicitly as r * A_target^(1/3), the simplest approach is to just pre-compute the actual radii and set massp=masst=1 so R=p2*2, and set p2 accordingly. But let me look at how the convergence checks run...
+
+Let me just use massp=1, masst=90 (realistic masses) and compute p2 from the condition: R = p2 * (1 + 90^(1/3)). So p2 = r*A_target^(1/3) / (1 + 90^(1/3)).
+
+90^(1/3) = 4.4814
+1 + 4.4814 = 5.4814
+
+For rv=1.20: R_v = 1.20 * 4.4814 = 5.3777, p2 = 5.3777/5.4814 = 0.9811
+For rd=1.28: R_d = 1.28 * 4.4814 = 5.7362, p2 = 5.7362/5.4814 = 1.0465
+For av=0.66, ad=0.58 (diffuseness, not affected by radius convention, used directly)
+
+Actually wait, I realize the simpler and more correct interpretation: the user says the radius convention is "r * A_target^(1/3)". This is the standard convention for neutron-nucleus optical potentials (e.g., Koning-Delaroche). The radius parameter r in FRESCO's p2 field is defined such that R = p2 * (Ap^(1/3) + At^(1/3)). For a neutron projectile, Ap=1, so Ap^(1/3)=1. So R = p2 * (1 + At^(1/3)). And we want R = r_user * At^(1/3). Therefore p2 = r_user * At^(1/3) / (1 + At^(1/3)).
+
+Let me proceed.
+
+For the FRESCO input: masses should be correct because the reduced mass matters. So massp=1.0, masst=90.0.
+
+Let me now write the input deck.
+[0m← [0mWrite n-90Zr.in
+Wrote file successfully.
+[0m
+[0m# [0mTodos
+[✓] Build FRESCO input deck for n+90Zr elastic scattering at Elab=10 MeV
+[•] Run baseline calculation with reasonable numerical parameters
+[ ] Convergence check: halve hcm (0.1->0.05->0.02)
+[ ] Convergence check: increase rmatch (60->80->100)
+[ ] Convergence check: increase jtmax (50->80->120)
+[ ] Extract final cross sections and report agreement to N digits
+[0m
+Now let me run the baseline calculation:
+[0m$ [0mSCRATCH=$(mktemp -d /tmp/fresco-XXXXXX) && cp /Users/jinlei/Desktop/code/FUSION/phase0/test2-deepseek/n-90Zr.in "$SCRATCH/" && cd "$SCRATCH" && ~/bin/fresco < n-90Zr.in > n-90Zr.out 2>&1 && echo "--- exit code: $? ---" && grep -A 30 "CUMULATIVE" n-90Zr.out | head -40
+--- exit code: 0 ---
+0CUMULATIVE REACTION cross section                 = 1976.80032  <L> =     3.54  <L**2> =     15.1
+0CUMULATIVE  TOTAL   cross section                 = 4015.22380  <L> =     3.07  <L**2> =     11.5
+0CUMULATIVE  ELASTIC cross section                 = 2038.42349  <L> =     2.61  <L**2> =      8.1
+0CUMULATIVE outgoing cross sections in partition 1 :    0.00000
+0Cumulative ABSORBTION by Imaginary Potentials     = 1976.80032  <L> =     3.54  <L**2> =     15.1
+   Fusion for specific n        M-states : 2849.478324 2849.478324
+0CUMULATIVE OUTGOING cross section                 =    0.00000
+ To convert to S-factors (MeV.mb = keV.b),  multiply by  9.8901E+00
+
+
+ CROSS SECTIONS FOR OUTGOING n        & 90Zr     in state #   1 with spins & parities 0.5  + & 0.0  +;  0
+
+ AMM: LJMAX,NLJ=  0.50000000000000000                2
+ AMM: NJ=           1
+ AMM: JBL,JUMP(JBL,:)=           1           1          13          25
+
+ CC#   1   1 IS  0.5   1   1
+
+ CC#   1   2 IS  0.5   1   1
+
+ CC#   1   3 IS  1.5   1   1
+
+ CC#   1   4 IS  1.5   1   1
+
+ CC#   1   5 IS  2.5   1   1
+
+ CC#   1   6 IS  2.5   1   1
+
+ CC#   1   7 IS  3.5   1   1
+
+ CC#   1   8 IS  3.5   1   1
+
+ CC#   1   9 IS  4.5   1   1
+
+ CC#   1  10 IS  4.5   1   1
+
+ CC#   1  11 IS  5.5   1   1
+[0m
+[0m# [0mTodos
+[✓] Build FRESCO input deck for n+90Zr elastic scattering at Elab=10 MeV
+[✓] Run baseline calculation with reasonable numerical parameters
+[•] Convergence check: halve hcm (0.1->0.05->0.02)
+[•] Convergence check: increase rmatch (60->80->100)
+[•] Convergence check: increase jtmax (50->80->120)
+[ ] Extract final cross sections and report agreement to N digits
+[0m
+Baseline gives:
+- Reaction σ = 1976.80032 mb
+- Total σ = 4015.22380 mb
+- Elastic σ = 2038.42349 mb
+
+Now let's run the convergence checks. I'll run all three variations in parallel.
+[0m$ [0mSCRATCH=$(mktemp -d /tmp/fresco-hcm-XXXXXX) && sed 's/hcm=0.1/hcm=0.05/' /Users/jinlei/Desktop/code/FUSION/phase0/test2-deepseek/n-90Zr.in > "$SCRATCH/n-90Zr.in" && cd "$SCRATCH" && ~/bin/fresco < n-90Zr.in > n-90Zr.out 2>&1 && echo "=== hcm=0.05 ===" && grep "CUMULATIVE REACTION" n-90Zr.out && grep "CUMULATIVE  TOTAL" n-90Zr.out
+=== hcm=0.05 ===
+0CUMULATIVE REACTION cross section                 = 1976.80612  <L> =     3.54  <L**2> =     15.1
+0CUMULATIVE  TOTAL   cross section                 = 4015.22567  <L> =     3.07  <L**2> =     11.5
+[0m
+[0m$ [0mSCRATCH=$(mktemp -d /tmp/fresco-hcm2-XXXXXX) && sed 's/hcm=0.1/hcm=0.02/' /Users/jinlei/Desktop/code/FUSION/phase0/test2-deepseek/n-90Zr.in > "$SCRATCH/n-90Zr.in" && cd "$SCRATCH" && ~/bin/fresco < n-90Zr.in > n-90Zr.out 2>&1 && echo "=== hcm=0.02 ===" && grep "CUMULATIVE REACTION" n-90Zr.out && grep "CUMULATIVE  TOTAL" n-90Zr.out
+=== hcm=0.02 ===
+0CUMULATIVE REACTION cross section                 = 1976.80638  <L> =     3.54  <L**2> =     15.1
+0CUMULATIVE  TOTAL   cross section                 = 4015.22764  <L> =     3.07  <L**2> =     11.5
+[0m
+[0m$ [0mSCRATCH=$(mktemp -d /tmp/fresco-rmatch-XXXXXX) && sed 's/rmatch=60/rmatch=80/' /Users/jinlei/Desktop/code/FUSION/phase0/test2-deepseek/n-90Zr.in > "$SCRATCH/n-90Zr.in" && cd "$SCRATCH" && ~/bin/fresco < n-90Zr.in > n-90Zr.out 2>&1 && echo "=== rmatch=80 ===" && grep "CUMULATIVE REACTION" n-90Zr.out && grep "CUMULATIVE  TOTAL" n-90Zr.out
+=== rmatch=80 ===
+0CUMULATIVE REACTION cross section                 = 1976.80032  <L> =     3.54  <L**2> =     15.1
+0CUMULATIVE  TOTAL   cross section                 = 4015.22380  <L> =     3.07  <L**2> =     11.5
+[0m
+[0m$ [0mSCRATCH=$(mktemp -d /tmp/fresco-rmatch2-XXXXXX) && sed 's/rmatch=60/rmatch=100/' /Users/jinlei/Desktop/code/FUSION/phase0/test2-deepseek/n-90Zr.in > "$SCRATCH/n-90Zr.in" && cd "$SCRATCH" && ~/bin/fresco < n-90Zr.in > n-90Zr.out 2>&1 && echo "=== rmatch=100 ===" && grep "CUMULATIVE REACTION" n-90Zr.out && grep "CUMULATIVE  TOTAL" n-90Zr.out
+=== rmatch=100 ===
+0CUMULATIVE REACTION cross section                 = 1976.80032  <L> =     3.54  <L**2> =     15.1
+0CUMULATIVE  TOTAL   cross section                 = 4015.22380  <L> =     3.07  <L**2> =     11.5
+[0m
+[0m$ [0mSCRATCH=$(mktemp -d /tmp/fresco-jtmax-XXXXXX) && sed 's/jtmax=50/jtmax=80/' /Users/jinlei/Desktop/code/FUSION/phase0/test2-deepseek/n-90Zr.in > "$SCRATCH/n-90Zr.in" && cd "$SCRATCH" && ~/bin/fresco < n-90Zr.in > n-90Zr.out 2>&1 && echo "=== jtmax=80 ===" && grep "CUMULATIVE REACTION" n-90Zr.out && grep "CUMULATIVE  TOTAL" n-90Zr.out
+=== jtmax=80 ===
+0CUMULATIVE REACTION cross section                 = 1976.80032  <L> =     3.54  <L**2> =     15.1
+0CUMULATIVE  TOTAL   cross section                 = 4015.22380  <L> =     3.07  <L**2> =     11.5
+[0m
+[0m$ [0mSCRATCH=$(mktemp -d /tmp/fresco-jtmax2-XXXXXX) && sed 's/jtmax=50/jtmax=120/' /Users/jinlei/Desktop/code/FUSION/phase0/test2-deepseek/n-90Zr.in > "$SCRATCH/n-90Zr.in" && cd "$SCRATCH" && ~/bin/fresco < n-90Zr.in > n-90Zr.out 2>&1 && echo "=== jtmax=120 ===" && grep "CUMULATIVE REACTION" n-90Zr.out && grep "CUMULATIVE  TOTAL" n-90Zr.out
+=== jtmax=120 ===
+0CUMULATIVE REACTION cross section                 = 1976.80032  <L> =     3.54  <L**2> =     15.1
+0CUMULATIVE  TOTAL   cross section                 = 4015.22380  <L> =     3.07  <L**2> =     11.5
+[0m
+[0m# [0mTodos
+[✓] Build FRESCO input deck for n+90Zr elastic scattering at Elab=10 MeV
+[✓] Run baseline calculation with reasonable numerical parameters
+[✓] Convergence check: halve hcm (0.1->0.05->0.02)
+[✓] Convergence check: increase rmatch (60->80->100)
+[✓] Convergence check: increase jtmax (50->80->120)
+[•] Extract final cross sections and report agreement to N digits
+[0m
+Results summary:
+
+| Variation | Reaction σ (mb) | Total σ (mb) |
+|-----------|----------------|--------------|
+| baseline (hcm=0.1, rmatch=60, jtmax=50) | 1976.80032 | 4015.22380 |
+| hcm=0.05 | 1976.80612 | 4015.22567 |
+| hcm=0.02 | 1976.80638 | 4015.22764 |
+| rmatch=80 | 1976.80032 | 4015.22380 |
+| rmatch=100 | 1976.80032 | 4015.22380 |
+| jtmax=80 | 1976.80032 | 4015.22380 |
+| jtmax=120 | 1976.80032 | 4015.22380 |
+
+Convergence:
+- **rmatch**: stable to all shown digits at 60 (no change at 80, 100)
+- **jtmax**: stable to all shown digits at 50 (no change at 80, 120)
+- **hcm**: 0.1→0.05 changes reaction σ by 0.0058 mb (0.0003%), 0.05→0.02 changes by 0.0003 mb (0.00002%). Total σ changes similarly.
+
+The hcm convergence is the rate-limiting factor. The result is stable to **5 significant figures** under hcm halving.
+
+Final result:
+- Reaction σ = **1977 mb** (stable to 5 sig figs)
+- Total σ = **4015 mb** (stable to 5 sig figs)
+
+Let me quote a bit more precisely, using the high-resolution hcm=0.02 result and rounding appropriately.
+[0m# [0mTodos
+[✓] Build FRESCO input deck for n+90Zr elastic scattering at Elab=10 MeV
+[✓] Run baseline calculation with reasonable numerical parameters
+[✓] Convergence check: halve hcm (0.1->0.05->0.02)
+[✓] Convergence check: increase rmatch (60->80->100)
+[✓] Convergence check: increase jtmax (50->80->120)
+[✓] Extract final cross sections and report agreement to N digits
+[0m
+**n+90Zr 弹性散射, Elab = 10 MeV, 光学势结果:**
+
+- **Reaction cross section (σ_reac) = 1976.8 mb** (稳定至 5 位有效数字)
+- **Total cross section (σ_tot) = 4015.2 mb** (稳定至 5 位有效数字)
+
+**收敛检查报告:**
+
+| 扫描参数 | σ_reac (mb) | 变化 | σ_tot (mb) | 变化 |
+|----------|------------|------|------------|------|
+| 基线 (hcm=0.1, rmatch=60, jtmax=50) | 1976.80032 | - | 4015.22380 | - |
+| **hcm=0.05** | 1976.80612 | +0.0003% | 4015.22567 | +0.00005% |
+| **hcm=0.02** | 1976.80638 | +0.00001% | 4015.22764 | +0.00005% |
+| rmatch=80 | 1976.80032 | 0 | 4015.22380 | 0 |
+| rmatch=100 | 1976.80032 | 0 | 4015.22380 | 0 |
+| jtmax=80 | 1976.80032 | 0 | 4015.22380 | 0 |
+| jtmax=120 | 1976.80032 | 0 | 4015.22380 | 0 |
+
+rmatch 和 jtmax 均已收敛至全精度；hcm 是限制因素，0.05→0.02 变化 < 0.0001%。因此结果可直接报告约 1977 mb (reaction) 和 4015 mb (total)，稳定至 **5 位有效数字**。
+总计完成。

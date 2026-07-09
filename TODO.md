@@ -6,10 +6,10 @@ Validation rules and hard constraints live in [CLAUDE.md](CLAUDE.md); do not res
 
 Question to answer: how much does skill quality drop on opencode + a domestic model vs Claude Code + Claude?
 
-- [ ] Install stock opencode locally, connect one domestic model (DeepSeek V3 or Qwen; pick by API access at hand)
-- [ ] Port 3 representative skills into opencode's skill/agent format: literature-search (tool-calling), fresco (code-running), prc-writing (long-form writing)
-- [ ] Run each on one REAL past case the user has actually done; compare against the Claude Code result side by side
-- [ ] Verdict with user: acceptable / acceptable-with-caveats / premise fails. If premise fails, stop the project and log to devlog.
+- [x] Install stock opencode locally, connect one domestic model (was already done: opencode 1.17.15, DeepSeek + Qwen keys, all 36 skills symlinked into ~/.config/opencode/skills/)
+- [x] Port 3 representative skills (no porting needed: opencode reads the SKILL.md symlinks directly)
+- [x] Run each on one REAL case; compare against Claude reference (2026-07-09, deepseek-chat: test 1 litsearch PASS exact BibTeX; test 2 fresco PASS 4-5 sig figs vs independent Claude deck; test 3 prc-writing PASS 10/10 verified citations. See phase0/report.md)
+- [ ] Verdict with user: prose taste on test 3 + sign-off to proceed to Phase 1 (objective verdict: acceptable; caveats in phase0/report.md)
 
 ## Phase 1: rebrand fork + CI
 

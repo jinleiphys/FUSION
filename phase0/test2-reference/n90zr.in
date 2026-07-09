@@ -1,0 +1,19 @@
+n+90Zr elastic 10 MeV reference;
+NAMELIST
+ &FRESCO hcm=0.05 rmatch=60
+         jtmin=0.0 jtmax=30 absend=0.00001
+         thmin=0.00 thmax=180.00 thinc=1.00
+         chans=1 smats=2 xstabl=1
+         elab(1)=10.0 nlab(1)=1 /
+
+ &PARTITION namep='n' massp=1.008665 zp=0
+            namet='90Zr' masst=90.0 zt=40 qval=0.0 nex=1 /
+ &STATES jp=0.5 bandp=1 ep=0.0 cpot=1 jt=0.0 bandt=1 et=0.0 /
+ &partition /
+
+ &POT kp=1 ap=0.0 at=90.0 rc=1.2 /
+ &POT kp=1 type=1 p1=47.0 p2=1.20 p3=0.66 p4=3.5 p5=1.20 p6=0.66 /
+ &POT kp=1 type=2 p1=0.0 p2=0.0 p3=0.0 p4=6.0 p5=1.28 p6=0.58 /
+ &pot /
+ &overlap /
+ &coupling /
