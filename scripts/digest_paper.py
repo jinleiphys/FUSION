@@ -35,7 +35,7 @@ Bullet list of the specific numerical results worth remembering, each with its c
 ## Context
 2-3 sentences: what line of work this extends or contradicts, and what it enables next. Name specific prior approaches or papers where the text does.
 
-Rules: no em-dashes anywhere; physics terms over CS jargon; do not invent numbers not present in the text; if the full text is truncated, work with what is shown.
+Rules: no em-dashes anywhere; physics terms over CS jargon; do not invent numbers not present in the text; if the full text is truncated, work with what is shown. Every Key numbers bullet must contain at least one explicit number from the text with its units or context; if a claimed result has no number in the text, omit that bullet rather than paraphrasing qualitatively. If the paper is a review, white paper, or conference summary with no original numerical results, write "Review-type paper: no original numerics." under Key numbers and write Context as scope plus open questions. In Context, refer to prior work as Author (Year) in plain words; never output raw LaTeX citation keys such as [Jin15b] or [Potel:2015eqa].
 
 TITLE: {title}
 AUTHORS: {authors}
@@ -45,6 +45,18 @@ ABSTRACT: {abstract}
 FULL TEXT (may be truncated):
 {fulltext}
 """
+
+
+def strip_references(text: str) -> str:
+    """Cut the fulltext at the bibliography so the char cap covers body text.
+    Only cuts if the marker sits past 30% of the document (guards against
+    pathological early hits in concatenated multi-file sources)."""
+    cut = len(text)
+    for marker in (r"\begin{thebibliography}", r"\bibliography{", "\n[1] ", "\nReferences\n"):
+        i = text.find(marker)
+        if i != -1 and len(text) * 0.3 < i < cut:
+            cut = i
+    return text[:cut]
 
 
 def strip_emdash(text: str) -> str:
@@ -67,7 +79,7 @@ def digest(arxiv_id: str, outdir: Path) -> dict:
     title, authors, abstract, date, doi, cats, fulltext = row
     prompt = TEMPLATE.format(
         title=title, authors=authors, date=date, abstract=abstract,
-        fulltext=(fulltext or "")[:FULLTEXT_CAP],
+        fulltext=strip_references(fulltext or "")[:FULLTEXT_CAP],
     )
     t0 = time.time()
     req = urllib.request.Request(
