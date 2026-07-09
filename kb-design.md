@@ -4,7 +4,9 @@ Design settled 2026-07-09 (user directive: think this through before building; t
 
 ## The one-line design
 
-Classify all 62,714 nucl-th papers against the **PhySH taxonomy** (APS Physics Subject Headings, **CC0 public domain**, v2.8.0, 3882 concepts; Nuclear Physics subtree = 176 concepts) using zero-token lexical rules on the existing corpus.db, add a within-corpus **citation graph** parsed from the raw .tex, and serve the result as a **DB-backed wiki** (topic pages + paper pages + on-demand LLM digests) through one MCP server.
+Classify all 62,714 nucl-th papers against the **PhySH taxonomy** (APS Physics Subject Headings, **CC0 public domain**, v2.8.0, 3882 concepts; Nuclear Physics subtree = 176 concepts) using zero-token lexical rules on the existing corpus.db, add a within-corpus **citation graph** parsed from the raw .tex, and **pre-generate the whole wiki as real markdown files** (one page per paper with a DeepSeek full-text digest, one page per PhySH concept), so any agent can browse it with plain grep/read, no server required.
+
+(Revision 2026-07-09 evening, user decision: pre-generated md replaces the earlier DB-rendered + digest-on-touch idea. Measured cost made bulk digestion cheap; see cost table below.)
 
 ## Why PhySH
 
@@ -32,15 +34,36 @@ For each concept, run its FTS queries against corpus.db with tiered confidence: 
 
 Parse \bibitem / .bbl / \cite from the 35 GB raw .tex; extract arXiv IDs and DOIs; keep edges where both ends are in the corpus. Table `citation(citing, cited)`. This fulfills the literature-corpus skill's own unbuilt Tier 2 (`cites` / `cited-by`). Payoff: "key papers" per topic = in-corpus citation rank (no external API), and wiki backlinks.
 
-### L3: the wiki itself (DB-backed, served by one MCP server)
+### L3: the wiki itself (pre-generated markdown, bulk-digested by DeepSeek)
 
-Pages are rendered from SQLite on demand (no 62k-file dump; static md export only for snapshots/Obsidian):
+A real file tree, Obsidian-compatible, grep-able, git-versioned:
 
-- **Topic page** (one per concept): PhySH lineage (broader/narrower links), paper count + trend, top-15 by in-corpus citations, 10 most recent, sibling topics. Plus a **synthesis section**: LLM summary of the topic's landscape from top-paper abstracts (~176 topics x DeepSeek = trivial cost; refreshed quarterly).
-- **Paper page** (one per arXiv id): metadata, abstract, concept tags, cites/cited-by within corpus, tex_dir pointer. Plus a cached **digest** section.
-- **Digest-on-touch**: whenever the agent or user opens a paper page, a DeepSeek digest (key claim, method, numbers, relation to neighbors) is generated once and cached in `digest(arxiv_id, model, date, md)`. The wiki densifies along real usage paths, the same way the personal literature-wiki grows by reading, but automated. No bulk pre-digestion of 62k papers (cost without demand).
+```
+kb-wiki/
+├── papers/<arxiv_id>.md      62k pages: frontmatter (id/title/authors/date/doi/concepts)
+│                             + abstract + DeepSeek FULL-TEXT digest
+│                             (Key claim / Method / Key numbers / Context)
+│                             + in-corpus cites / cited-by links
+├── topics/<physh-slug>.md    176+ pages: PhySH lineage, paper count, top-15 by
+│                             in-corpus citations, 10 most recent, LLM landscape
+│                             synthesis, links to sibling topics
+└── index.md                  PhySH discipline tree as the navigation hub
+```
 
-MCP tools: `kb_browse(concept)`, `kb_paper(arxiv_id)`, `kb_search(query, concept_filter)`, `kb_cites(arxiv_id)`. The existing query.py text/abs/author search stays as the raw search layer underneath.
+Digest pipeline: `scripts/digest_paper.py` (prototype validated 2026-07-09 on 1511.03214 + 2605.03342; the Lei-Moro digest checked correct against ground truth, zero fabrication). Bulk run = the same script with a worker pool, resumable by skipping existing files, capped at 40k chars of full text per paper.
+
+**Measured cost (deepseek-chat, 2026-07-09):** 10.7k tokens in / 0.5-0.75k out / ~8 s per paper.
+| | tokens | cost (standard) | cost (off-peak) |
+|---|---|---|---|
+| input 62,714 papers | ~690M | ~$190 | ~$50-95 |
+| output | ~38M | ~$42 | ~$20 |
+| **total** | | **~$230 (~1700 RMB)** | **~$70-115 (~500-800 RMB)** |
+
+Wall clock: ~7 h at 20 concurrent requests. Monthly increment (~300 new papers) = pennies, hooked into the existing corpus-update cron.
+
+Access: agents just grep/read the md tree (same pattern as the personal literature-wiki skills). An MCP server (a small program exposing kb_search/kb_browse as callable tools, per the Model Context Protocol that opencode and Claude Code both speak) is OPTIONAL later sugar for structured queries; it is no longer a load-bearing component.
+
+Storage: ~260 MB of markdown for 62k pages; ships as a git repo (public version) or tarball.
 
 ## Relation to the existing three-layer stack
 
