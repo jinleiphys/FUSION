@@ -51,11 +51,7 @@ To see the current TUI branding: `cd fusion-core && git pull && bun install && b
 
 ## Knowledge base design
 
-Base: the existing `literature-corpus` stack (`corpus.db` ~5.5 GB, `query.py`; see `~/.claude/skills/literature-corpus/SKILL.md`). FUSION adds:
-
-- a **domain-keyword tag layer**: each paper classified by arXiv category + keyword rules into domains (nuclear reactions, structure, astrophysics, chiral EFT, lattice, ML-applications, ...), exposed as query filters; classification rules to be defined in Phase 3, [Please specify final domain list];
-- an **MCP server wrapper** around query.py so any opencode-compatible client can search the corpus;
-- a **packaging story** compatible with arXiv licensing (see TODO Phase 3; public artifacts must not redistribute full text).
+Base: the existing `literature-corpus` stack (`corpus.db` ~5.5 GB, `query.py`; see `~/.claude/skills/literature-corpus/SKILL.md`). FUSION builds on top a **pre-generated markdown wiki** (`kb-wiki/`): one page per paper (frontmatter + abstract + DeepSeek full-text digest + in-corpus citation links) and one page per **PhySH concept** (APS Physics Subject Headings, CC0, Nuclear Physics subtree 176 concepts) with citation-ranked paper lists and a landscape synthesis. Agents browse it with plain grep/read; no server required. Full design, measured costs, and licensing constraints: [kb-design.md](kb-design.md). Public artifacts must not redistribute arXiv full text (hard rule in CLAUDE.md).
 
 ## How to run
 

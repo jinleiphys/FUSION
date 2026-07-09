@@ -2,6 +2,14 @@
 
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 
+## 2026-07-09: KB wiki form pivoted from DB-rendered + digest-on-touch to pre-generated md
+
+**Why we tried it:** The first L3 design rendered pages from SQLite on demand through an MCP server, digesting papers only when touched, on the assumption that bulk-digesting 62k papers was cost-without-demand.
+**What failed:** Nothing failed technically; the premise was wrong. Measured on the 500-paper pilot: 10.7k tokens in / 0.6k out / 8 s per paper, $1.74 per 500, so the FULL corpus costs ~$218 standard / ~$109 off-peak. At that price pre-generation strictly dominates: plain md files, grep/read access identical to the personal literature-wiki workflow, no server dependency, trivially shippable.
+**Root cause:** Cost estimate made before measuring; the design guarded against an expense that turned out to be two dinners.
+**Lesson:** Run the 100-sample cost measurement BEFORE designing around cost. Also: the user calls this instinct correctly ("反正用deepseek做，成本也很低"); check premises against the cheapest available model first.
+**Status:** Replaced by pre-generated md wiki (kb-design.md L3, revised 2026-07-09; MCP server demoted to optional sugar).
+
 ## 2026-07-09, Phase 1 started: fork, brand patch, rebase CI; two decisions + one discovery
 
 **Decisions:**

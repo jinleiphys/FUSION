@@ -19,6 +19,10 @@ One-sentence goal: build FUSION, a rebrand fork of opencode that ships nuclear-p
 
 - 2026-07-09: rebrand fork (VSCodium model) over functional fork and over pure distribution; reasons in devlog entry of same date.
 - 2026-07-09: knowledge base = literature-corpus stack (FTS5/BM25), domain-keyword partition added as a tag layer on top, not a new index.
+- 2026-07-09: domain taxonomy = PhySH v2.8.0 (user's pointer; CC0, so shippable; Nuclear Physics subtree 176 concepts). Match rules live in physh-nuclear.yaml, lexical only.
+- 2026-07-09: KB wiki is PRE-GENERATED markdown (papers/ + topics/), bulk-digested by DeepSeek; not DB-rendered, no load-bearing MCP server (user decision after measured cost ~$109 off-peak for 62k papers; see devlog 2026-07-09 pivot entry).
+- 2026-07-09: bulk API jobs run in the DeepSeek off-peak window (00:30-08:30 Beijing, half price) via scripts/run_full_digest.sh: time-gated start, 08:25 hard stop, resume next night on skip-existing.
+- 2026-07-09: DeepSeek data policy, three tiers (their API trains on inputs by default; opt-out exists): referee/others' manuscripts NEVER; user's own unpublished drafts only after account opt-out or per-case clearance; public/corpus content freely. Full statement in the deepseek-delegate skill.
 
 ## References Claude must know
 

@@ -2,21 +2,8 @@
 
 Validation rules and hard constraints live in [CLAUDE.md](CLAUDE.md); do not restate them here.
 
-## Phase 0: quality gate (do this before writing any platform code)
-
-Question to answer: how much does skill quality drop on opencode + a domestic model vs Claude Code + Claude?
-
-- [x] Install stock opencode locally, connect one domestic model (was already done: opencode 1.17.15, DeepSeek + Qwen keys, all 36 skills symlinked into ~/.config/opencode/skills/)
-- [x] Port 3 representative skills (no porting needed: opencode reads the SKILL.md symlinks directly)
-- [x] Run each on one REAL case; compare against Claude reference (2026-07-09, deepseek-chat: test 1 litsearch PASS exact BibTeX; test 2 fresco PASS 4-5 sig figs vs independent Claude deck; test 3 prc-writing PASS 10/10 verified citations. See phase0/report.md)
-- [ ] Verdict with user: prose taste on test 3 + sign-off to proceed to Phase 1 (objective verdict: acceptable; caveats in phase0/report.md)
-
 ## Phase 1: rebrand fork + CI
 
-- [x] Fork created: github.com/jinleiphys/fusion-core (upstream anomalyco/opencode, forked at v1.17.16); local /Users/jinlei/Desktop/code/fusion-core; default branch = fusion-brand
-- [x] Brand assets mapped: TUI packages/tui/src/logo.ts (patched); remaining surfaces = desktop icons (packages/desktop/icons/), web SVGs (packages/web/src/assets/), ui/components/logo.tsx, docs logo
-- [x] Brand patch first cut (2026-07-09, commit 25eea06): TUI main logo "fu sion" + compact "fu" pulse logo, same block-glyph style and shadow marks as upstream; MIT notice untouched. Decision: internal identifiers/config paths stay "opencode" for upstream compatibility; only user-visible surfaces get rebranded
-- [x] CI weekly rebase (fusion-rebase.yml, Mondays 02:00 UTC): rebases fusion-brand onto upstream/dev, force-with-lease push, syncs dev mirror; verified green on manual dispatch (run 29000283160)
 - [ ] Remaining brand surfaces: desktop/web icons need an actual FUSION graphic (nature-figure skill or designer), TUI/CLI display-name strings sweep
 - [ ] TUI logo v2: current block-glyph version verified rendering as "FUSion" (user: 效果一般, acceptable for now); revisit in the visual design pass together with the icons
 - [ ] Build + release pipeline for FUSION binaries (adapt upstream release workflow; bun installed locally)
@@ -33,20 +20,21 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 - [ ] Wave 3+ per catalog; each entry needs its open-source status verified before work starts
 - [ ] Each per-code skill meets the quality bar in skills-catalog.md (install, verified deck examples, run/parse, benchmark to N digits, failure modes) before it ships
 
-## Phase 3: knowledge base (design settled 2026-07-09: [kb-design.md](kb-design.md); PhySH taxonomy per user)
+## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki)
 
-- [x] Design: PhySH-organized DB-backed wiki, 4 layers (taxonomy rules / mechanical classification / citation graph / wiki + digest-on-touch). Taxonomy verified: PhySH v2.8.0, CC0, Nuclear Physics subtree 176 concepts
-- [ ] Prototype gate: 2 concepts (Breakup reactions + THM-adjacent), classify corpus, topic pages + 3 DeepSeek digests; validate against the user's 25 FRESCO-line papers
-- [ ] L0: physh-nuclear.yaml (176 concepts + neighbor whitelist [user input]) with FTS match rules
-- [ ] L1: paper_concept classification table, monthly re-run hooked into the corpus-update launchd job
-- [ ] L2: within-corpus citation graph from raw .tex (needs KINGSTON mounted; fulfills literature-corpus Tier 2 cites/cited-by)
-- [ ] L3: MCP server (kb_browse/kb_paper/kb_search/kb_cites) + digest cache + 176 topic syntheses
-- [ ] Licensing decision for the public artifact: abstract snippets vs fetch-on-first-run [user decision]
-- [ ] kb.db vs in-corpus.db decision at prototype time (leaning separate kb.db + ATTACH)
+- [ ] **Morning verification of tonight's full run** (armed 2026-07-09 16:23, PID under caffeinate; window 00:30-08:25): check kb-wiki/full-run-*.log + kb-wiki/batch-summary.json, random-sample cross-review, cost reconciliation; re-arm next evening if incomplete
+- [ ] Abstract-only pages for the ~1,655 corpus papers without fulltext (lighter template, separate small batch)
+- [ ] L0: physh-nuclear.yaml (176 concepts + neighbor whitelist [user input]) with FTS match rules; add negative filters against hep-ph/astro leakage (pilot finding)
+- [ ] L1: run classification, write concept tags into page frontmatter + build 176 topic pages; hook monthly re-run into the corpus-update launchd job
+- [ ] L2: within-corpus citation graph from raw .tex (needs KINGSTON mounted; fulfills literature-corpus Tier 2 cites/cited-by); add cites/cited-by links into paper pages
+- [ ] 176 topic landscape syntheses (DeepSeek, after L1)
+- [ ] Distribution decision for kb-wiki (61k md, ~250 MB, currently gitignored): separate git repo vs tarball vs GitHub release asset [user decision]
+- [ ] Licensing decision for the public artifact: abstracts included vs snippets vs fetch-on-first-run [user decision]
+- [ ] Optional later: MCP server exposing kb_search/kb_browse (demoted from load-bearing to sugar, per 2026-07-09 revision)
 
 ## Phase 4: distribution
 
-- [ ] install.sh: opencode binary + skill pack + MCP servers + default config in one shot
+- [ ] install.sh: opencode binary + skill pack + kb-wiki + default config in one shot
 - [ ] Default model config for CN users (domestic providers) and international users
 - [ ] Student-facing docs (zh + en), first-run tutorial: one real FRESCO calculation end to end
 - [ ] Pilot with 2-3 group students; collect failures into devlog
@@ -57,4 +45,10 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 
 ## Completed
 
-(nothing yet)
+- [x] 2026-07-09: Phase 0 quality gate, all items: opencode 1.17.15 + DeepSeek/Qwen keys + 36 skills symlinked (pre-existing); 3 real-case tests vs Claude references (litsearch exact BibTeX; fresco 4-5 sig figs; prc-writing 10/10 verified citations); user verdict = proceed (phase0/report.md)
+- [x] 2026-07-09: Phase 1 fork created: github.com/jinleiphys/fusion-core @ v1.17.16, default branch fusion-brand, dev = pristine upstream mirror
+- [x] 2026-07-09: Phase 1 brand assets mapped; TUI logo patched ("FUSion" block glyphs + compact "fu" pulse logo, 3 glyph iterations with user screenshots); MIT notice untouched
+- [x] 2026-07-09: Phase 1 CI weekly rebase (fusion-rebase.yml, Mondays 02:00 UTC) verified green on manual dispatch (run 29000283160)
+- [x] 2026-07-09: Phase 3 design settled then revised same day: PhySH v2.8.0 (CC0) taxonomy, Nuclear subtree 176 concepts; wiki form changed from DB-rendered + digest-on-touch to pre-generated md (user decision; see devlog)
+- [x] 2026-07-09: Phase 3 pilot: 500-paper digestion by DeepSeek via deepseek.md brief (500/500, $1.74, 9.5 min); Claude cross-review passed (structure 0 violations, no fabrication on calibration set, one new finding: raw cite-key leakage, fixed in template v2); merged kb-pilot into main (fa5ee32)
+- [x] 2026-07-09: Template v2 (cite-key resolution, numeric-bullet rule, review-paper branch, reference-stripping before truncation) smoke-tested on 1812.11248; full-corpus list 61,059; off-peak launcher armed under caffeinate for tonight 00:30 (~$109 off-peak; user topping up 900 RMB)
