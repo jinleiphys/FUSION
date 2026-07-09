@@ -14,6 +14,23 @@ Give nuclear physicists (starting with students and group members, extending to 
 
 Provider-agnostic by inheritance from opencode: runs on domestic models (DeepSeek, Qwen, GLM) as well as Claude/GPT, which is the point; the target users often cannot access Anthropic APIs.
 
+## Repository layout: FUSION vs fusion-core
+
+The platform lives in TWO repos with a strict division of labor:
+
+| | [jinleiphys/FUSION](https://github.com/jinleiphys/FUSION) (this repo) | [jinleiphys/fusion-core](https://github.com/jinleiphys/fusion-core) |
+|---|---|---|
+| Role | The platform itself: everything we write | The engine: fork of anomalyco/opencode |
+| Local path | `/Users/jinlei/Desktop/code/FUSION` | `/Users/jinlei/Desktop/code/fusion-core` |
+| Contents | docs, skills catalog, phase reports; later: skills/, agents/, mcp-servers/, config/, install.sh | full opencode source + the brand patch (branch `fusion-brand`, default; branch `dev` = pristine upstream mirror) |
+| Changes | freely, by us | brand assets ONLY (TUI logo, icons, name strings); functional code never touched |
+| Upstream sync | n/a | CI `fusion-rebase.yml` rebases the brand patch onto upstream `dev` every Monday and syncs the mirror; a failed run = a real conflict |
+| End-user view | the product repo they install from (install.sh pulls a fusion-core binary) | build source; users normally never clone it |
+
+Analogy: FUSION is Ubuntu, fusion-core is the (rebadged) kernel. Development happens here; fusion-core only carries the badge.
+
+To see the current TUI branding: `cd fusion-core && git pull && bun install && bun dev` (dev mode runs the TS source directly, no rebuild step).
+
 ## Architecture
 
 ```

@@ -18,6 +18,7 @@ Question to answer: how much does skill quality drop on opencode + a domestic mo
 - [x] Brand patch first cut (2026-07-09, commit 25eea06): TUI main logo "fu sion" + compact "fu" pulse logo, same block-glyph style and shadow marks as upstream; MIT notice untouched. Decision: internal identifiers/config paths stay "opencode" for upstream compatibility; only user-visible surfaces get rebranded
 - [x] CI weekly rebase (fusion-rebase.yml, Mondays 02:00 UTC): rebases fusion-brand onto upstream/dev, force-with-lease push, syncs dev mirror; verified green on manual dispatch (run 29000283160)
 - [ ] Remaining brand surfaces: desktop/web icons need an actual FUSION graphic (nature-figure skill or designer), TUI/CLI display-name strings sweep
+- [ ] TUI logo v2: current block-glyph version verified rendering as "FUSion" (user: 效果一般, acceptable for now); revisit in the visual design pass together with the icons
 - [ ] Build + release pipeline for FUSION binaries (adapt upstream release workflow; bun installed locally)
 - [ ] Domain name [Please specify preference]
 
