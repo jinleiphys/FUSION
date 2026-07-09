@@ -33,12 +33,16 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 - [ ] Wave 3+ per catalog; each entry needs its open-source status verified before work starts
 - [ ] Each per-code skill meets the quality bar in skills-catalog.md (install, verified deck examples, run/parse, benchmark to N digits, failure modes) before it ships
 
-## Phase 3: knowledge base
+## Phase 3: knowledge base (design settled 2026-07-09: [kb-design.md](kb-design.md); PhySH taxonomy per user)
 
-- [ ] Domain-keyword classification layer on corpus.db: define domain list + keyword/category rules with user; add tag column + query filter to query.py
-- [ ] MCP server wrapping query.py (text/abs/author/show/similar + domain filter)
-- [ ] Licensing decision: public artifact = metadata+abstract index, or rebuild-from-arXiv script, or group-internal full copy only. Decide with user before any public release.
-- [ ] Update pipeline: adapt the monthly launchd job so FUSION installs can refresh (or pin to releases)
+- [x] Design: PhySH-organized DB-backed wiki, 4 layers (taxonomy rules / mechanical classification / citation graph / wiki + digest-on-touch). Taxonomy verified: PhySH v2.8.0, CC0, Nuclear Physics subtree 176 concepts
+- [ ] Prototype gate: 2 concepts (Breakup reactions + THM-adjacent), classify corpus, topic pages + 3 DeepSeek digests; validate against the user's 25 FRESCO-line papers
+- [ ] L0: physh-nuclear.yaml (176 concepts + neighbor whitelist [user input]) with FTS match rules
+- [ ] L1: paper_concept classification table, monthly re-run hooked into the corpus-update launchd job
+- [ ] L2: within-corpus citation graph from raw .tex (needs KINGSTON mounted; fulfills literature-corpus Tier 2 cites/cited-by)
+- [ ] L3: MCP server (kb_browse/kb_paper/kb_search/kb_cites) + digest cache + 176 topic syntheses
+- [ ] Licensing decision for the public artifact: abstract snippets vs fetch-on-first-run [user decision]
+- [ ] kb.db vs in-corpus.db decision at prototype time (leaning separate kb.db + ATTACH)
 
 ## Phase 4: distribution
 
