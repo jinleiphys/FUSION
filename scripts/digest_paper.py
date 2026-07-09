@@ -5,11 +5,15 @@ Prototype for the bulk pre-generation pipeline (kb-design.md L3).
 Usage: digest_paper.py <arxiv_id> [outdir]
 Reads fulltext from ~/literature-corpus/corpus.db, key from opencode auth.json.
 """
+import argparse
 import json
+import re
 import sqlite3
 import sys
+import threading
 import time
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 DB = Path.home() / "literature-corpus/corpus.db"
@@ -41,6 +45,13 @@ ABSTRACT: {abstract}
 FULL TEXT (may be truncated):
 {fulltext}
 """
+
+
+def strip_emdash(text: str) -> str:
+    """Guarantee no long horizontal bars survive: em-dash, horizontal bar,
+    two/three-em dashes all become a comma. Hyphen-minus and en-dash kept."""
+    text = re.sub(r"\s*[\u2014\u2015\u2E3A\u2E3B]+\s*", ", ", text)
+    return text
 
 
 def digest(arxiv_id: str, outdir: Path) -> dict:
@@ -79,13 +90,80 @@ def digest(arxiv_id: str, outdir: Path) -> dict:
     )
     outdir.mkdir(parents=True, exist_ok=True)
     out = outdir / f"{arxiv_id.replace('/', '_')}.md"
-    out.write_text(page)
+    out.write_text(strip_emdash(page))
     return {"file": str(out), "seconds": round(time.time() - t0, 1),
             "in_tokens": usage.get("prompt_tokens"), "out_tokens": usage.get("completion_tokens"),
             "cache_hit": usage.get("prompt_cache_hit_tokens")}
 
 
+def outpath(arxiv_id: str, outdir: Path) -> Path:
+    return outdir / f"{arxiv_id.replace('/', '_')}.md"
+
+
+def batch(list_file: Path, outdir: Path, workers: int) -> None:
+    ids = [ln.strip() for ln in list_file.read_text().splitlines() if ln.strip()]
+    outdir.mkdir(parents=True, exist_ok=True)
+    todo = [i for i in ids if not outpath(i, outdir).exists()]
+    skipped = len(ids) - len(todo)
+    print(f"batch: {len(ids)} ids, {skipped} already done, {len(todo)} to digest, {workers} workers")
+
+    lock = threading.Lock()
+    stats = {"done": 0, "ok": 0, "in": 0, "out": 0}
+    failures = []
+    t_start = time.time()
+
+    def work(aid):
+        for attempt in (1, 2):
+            try:
+                r = digest(aid, outdir)
+                return aid, r, None
+            except (Exception, SystemExit) as e:
+                if attempt == 1:
+                    time.sleep(30)
+                else:
+                    return aid, None, repr(e)
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = {ex.submit(work, aid): aid for aid in todo}
+        for fut in as_completed(futs):
+            aid, r, err = fut.result()
+            with lock:
+                stats["done"] += 1
+                if err is None:
+                    stats["ok"] += 1
+                    stats["in"] += r.get("in_tokens") or 0
+                    stats["out"] += r.get("out_tokens") or 0
+                else:
+                    failures.append((aid, err))
+                if stats["done"] % 25 == 0 or stats["done"] == len(todo):
+                    el = time.time() - t_start
+                    print(f"  progress {stats['done']}/{len(todo)} ok={stats['ok']} "
+                          f"fail={len(failures)} in={stats['in']} out={stats['out']} "
+                          f"elapsed={el:.0f}s", flush=True)
+
+    summary = {
+        "attempted": len(todo), "skipped_existing": skipped,
+        "succeeded": stats["ok"], "failed": len(failures),
+        "in_tokens": stats["in"], "out_tokens": stats["out"],
+        "elapsed_s": round(time.time() - t_start, 1),
+        "failures": failures,
+    }
+    (outdir.parent / "batch-summary.json").write_text(json.dumps(summary, indent=1))
+    print(json.dumps(summary, indent=1))
+
+
 if __name__ == "__main__":
-    aid = sys.argv[1]
-    outdir = Path(sys.argv[2]) if len(sys.argv) > 2 else Path.cwd() / "kb-sample"
-    print(json.dumps(digest(aid, outdir), indent=1))
+    ap = argparse.ArgumentParser()
+    ap.add_argument("arxiv_id", nargs="?")
+    ap.add_argument("outdir_pos", nargs="?")
+    ap.add_argument("--list")
+    ap.add_argument("--outdir", default="kb-wiki-pilot/papers")
+    ap.add_argument("--workers", type=int, default=8)
+    args = ap.parse_args()
+
+    if args.list:
+        batch(Path(args.list), Path(args.outdir), args.workers)
+    else:
+        aid = args.arxiv_id
+        outdir = Path(args.outdir_pos) if args.outdir_pos else Path.cwd() / "kb-sample"
+        print(json.dumps(digest(aid, outdir), indent=1))
