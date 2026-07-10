@@ -28,7 +28,7 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 - [ ] L1: run classification, write concept tags into page frontmatter + build 176 topic pages; hook monthly re-run into the corpus-update launchd job
 - [ ] L2: within-corpus citation graph from raw .tex (needs KINGSTON mounted; fulfills literature-corpus Tier 2 cites/cited-by); add cites/cited-by links into paper pages
 - [ ] 176 topic landscape syntheses (DeepSeek, after L1)
-- [ ] Distribution decision for kb-wiki (61k md, ~250 MB, currently gitignored): separate git repo vs tarball vs GitHub release asset [user decision]
+- [x] Distribution decision for kb-wiki: user decided 2026-07-10, pages live directly in the main repo (night-1 19,202 pages pushed in a1c4357; final ~250 MB, revisit only if GitHub complains)
 - [ ] Licensing decision for the public artifact: abstracts included vs snippets vs fetch-on-first-run [user decision]
 - [ ] Optional later: MCP server exposing kb_search/kb_browse (demoted from load-bearing to sugar, per 2026-07-09 revision)
 
