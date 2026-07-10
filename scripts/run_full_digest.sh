@@ -19,7 +19,7 @@ while :; do
 done
 
 echo "window open $(date), starting batch" >> "$LOG"
-$PY scripts/digest_paper.py --list "$LIST" --outdir kb-wiki/papers --workers 28 >> "$LOG" 2>&1 &
+$PY scripts/digest_paper.py --list "$LIST" --outdir kb-wiki/papers --workers 48 >> "$LOG" 2>&1 &
 PID=$!
 
 while kill -0 "$PID" 2>/dev/null; do
