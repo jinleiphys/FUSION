@@ -6,7 +6,7 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 
 ## Reactions: coupled channels / DWBA / breakup
 
-- [S] **FRESCO** (Thompson) — coupled channels, CC/CRC/CDCC/transfer/capture. The template skill.
+- [S] **FRESCO** (Thompson) — coupled channels, CC/CRC/CDCC/transfer/capture. The template skill; embedded in-repo at `skills/fresco/` (2026-07-14) with binary auto-install from github.com/I-Thompson/fresco (install_fresco.sh). Reference for both the skill house style and the auto-provision pattern.
 - [ ] **THOx** (Sevilla) — CDCC with core excitation (XCDCC); Moro group, on GitHub.
 - [ ] **CCFULL** (Hagino) — fusion coupled channels near barrier.
 - [V] **ECIS** (Raynal) — coupled channels + optical model fits; distribution status to verify.
@@ -58,7 +58,7 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 
 ## Skill quality bar (every entry, no exceptions)
 
-1. Install/build recipe tested on macOS + Linux.
+1. Install/build recipe tested on macOS + Linux; where the code is open-source and buildable, ship an auto-install script (check bin/PATH, else clone+compile from upstream, verify against a published anchor). fresco's install_fresco.sh is the pattern.
 2. Input-deck authoring guidance with verified examples (anti-hallucination: never write decks from memory).
 3. Run + output parsing (which file, which line, what units).
 4. At least one benchmark against a published value, agreement stated to N digits.

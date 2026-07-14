@@ -2,6 +2,18 @@
 
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 
+## 2026-07-14: first per-code skill embedded in-repo (fresco), with binary auto-install; cp -R symlink trap
+
+**Why we tried it:** Start the Phase 2 skill pack by pulling the reference fresco skill into the repo (`skills/fresco/`, the layout the README already anticipated) and giving it the missing capability every per-code skill will need: provision the underlying code itself, rather than assuming a pre-built binary at `~/bin/fresco`. Added `scripts/install_fresco.sh` (checks `~/bin`/`PATH`, else clones https://github.com/I-Thompson/fresco and builds `make FC=gfortran`, copies fresco+sfresco to the bin dir) and wired `run_fresco.sh` to call it on first use.
+
+**What failed / trap caught:** The initial `cp -R ~/.claude/skills/fresco skills/fresco` did NOT embed the files. `~/.claude/skills/fresco` is itself a symlink to `~/Desktop/claude_skills/skills/fresco`, and BSD `cp -R` copies a command-line symlink AS a symlink, so `skills/fresco` became a dangling-on-clone symlink and every subsequent edit wrote THROUGH it into the shared live skill repo, not into FUSION. Codex cross-review flagged it (its finding #2). Verified: `ls -ld` showed the symlink; the edits had landed in `~/Desktop/claude_skills/skills/fresco` (untracked there, so nothing committed was clobbered).
+
+**Root cause:** BSD vs GNU `cp` semantics on a symlinked source; on macOS `-R` alone preserves the top-level symlink (need `-RL` to dereference). Compounded by the fresco skill being a symlink, which was invisible until Codex checked the inode.
+
+**Lesson:** When "embedding" a skill/dir into a shippable repo, use `cp -RL` (or verify with `find -type l` after) so the result is real files, not a symlink that dies on `git clone`. Build+verify against a published anchor before trusting a freshly compiled binary: the gfortran build reproduced B1-elastic sigma_R = 1575.17495 (ref 1575.175). Cross-AI review earns its keep on filesystem/portability bugs a single agent misses.
+
+**Status:** Resolved. `skills/fresco/` is now a real self-contained copy with auto-install; the global skill was reverted to pristine (the auto-install variant lives only in FUSION). Applied Codex fixes #1 (preserve FRESCO exit code), #12 (absolutize binary path before cd), #4 (recheck both binaries post-install), #16 (EXIT-trap the verify tmpdir), #17 (validate deck before any clone). Deferred as over-engineering for a single-user research wrapper: install locking, atomic rename, pinned commit, unique scratch dir.
+
 ## 2026-07-09: KB wiki form pivoted from DB-rendered + digest-on-touch to pre-generated md
 
 **Why we tried it:** The first L3 design rendered pages from SQLite on demand through an MCP server, digesting papers only when touched, on the assumption that bulk-digesting 62k papers was cost-without-demand.
@@ -9,6 +21,18 @@ Append-only, reverse-chronological. Log direction changes and dead-ends, not eve
 **Root cause:** Cost estimate made before measuring; the design guarded against an expense that turned out to be two dinners.
 **Lesson:** Run the 100-sample cost measurement BEFORE designing around cost. Also: the user calls this instinct correctly ("反正用deepseek做，成本也很低"); check premises against the cheapest available model first.
 **Status:** Replaced by pre-generated md wiki (kb-design.md L3, revised 2026-07-09; MCP server demoted to optional sugar).
+
+## 2026-07-13, disabled inherited upstream community-bot workflows on the fork
+
+**Why we tried it:** The daily `close-issues` workflow on jinleiphys/fusion-core failed with `403 Forbidden` (run #4). Root cause: `script/github/close-issues.ts:3` hardcodes `const repo = "anomalyco/opencode"`, so the fork's cron was trying to auto-close *upstream* opencode's stale issues using the fork's `github.token`. Reading upstream issues is public (worked), but POSTing a comment returned 403 (fork has no write access to upstream, and shouldn't). The log's real opencode issue numbers (#27459, #12723) and opencode maintainers as "exempt" are the tell.
+
+**Scope:** A whole inherited family of upstream community-management bots, none gated to skip forks: close-issues, close-prs (`close-prs.ts:5` same hardcode), compliance-close, duplicate-issues, triage, pr-management, pr-standards, review, notify-discord. (publish/deploy/stats/docs-update already self-gate with `if: github.repository == 'anomalyco/opencode' / 'sst/opencode'`, so they no-op on the fork.)
+
+**Fix:** Disabled all 9 at the repo level via `gh workflow disable <name>.yml`. Chose disable over editing the files because `fusion-weekly-rebase` force-pushes `fusion-brand` onto `upstream/dev` weekly; editing would bloat the brand patch and invite rebase conflicts. Disabled state lives in Actions config keyed by workflow path, decoupled from file content, so it survives the weekly force-push. Files stay byte-identical to upstream (clean rebases); they just never fire. Verified: all 9 now `disabled_manually`; fusion-weekly-rebase / test / typecheck stay `active`. Reversible with `gh workflow enable`.
+
+**Residual (not fixed, flagged):** the `anomalyco/opencode` hardcode still sits in close-issues.ts / close-prs.ts. Harmless while disabled. Permanent root-fix would add an `if: github.repository == 'jinleiphys/fusion-core'` guard into the brand patch (upstream's own pattern), traded against a larger, conflict-prone patch. Deferred until it actually bites.
+
+**Status:** Resolved; daily 403 stopped.
 
 ## 2026-07-09, Phase 1 started: fork, brand patch, rebase CI; two decisions + one discovery
 

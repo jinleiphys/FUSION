@@ -1,0 +1,28 @@
+14C(n,g)15C E1 only
+NAMELIST
+ &FRESCO hcm= 0.100 rmatch=100 
+         jtmin=0 jtmax=4.5 absend=-1
+         thmin=0 thmax=0 iter=1 
+         elab(1)= 0.005 4.005 nlab=50/
+
+ &PARTITION namep='neutron' massp=1.0087 zp=0 nex=1 namet='14C' masst=14.0032 zt=6 /
+ &STATES jp=0.5 ptyp=1 ep=0 cpot=1 jt=0.0 ptyt=1 et=0/
+
+ &PARTITION namep='Gamma' massp=0 zp=0 nex=1 namet='15C' masst=15.0106 zt=6 qval=1.218 /
+ &STATES jp=1.0 ptyp=1 ep= 0 cpot=3 jt=0.5 ptyt=1 et=0/
+ &partition / 
+
+ &Pot kp=1 type= 0 shape= 0 p(1:3)=   14.0000   0.0000   1.3000 /                                     
+ &Pot kp=1 type= 1 shape= 0 p(1:3)=   57.0000   1.7   0.7000 /                                     
+ &Pot kp=1 type= 3 shape= 0 p(1:3)=    0.0000   1.7   0.5000 /                                     
+ &Pot kp=2 type= 0 shape= 0 p(1:3)=   14.0000   0.0000   1.2000 /                                     
+ &Pot kp=2 type= 1 shape= 0 p(1:3)=   55.7700   1.2230   0.5000 /                                     
+ &Pot kp=2 type= 3 shape= 0 p(1:3)=    5.0000   1.2230   0.5000 /                                     
+ &pot / 
+
+ &OVERLAP kn1=1 ic1=1 ic2=2 in=-2 kind=0 nn=2 l=0 sn=0.5 j=0.5 kbpot=2 be=1.218 isc=1 /
+ &overlap / 
+
+ &COUPLING icto=2 icfrom=1 kind=2 ip1=-1 ip2= 1/
+ &cfp  in=2 ib=1 ia=1 kn=1  a=1.000     /
+

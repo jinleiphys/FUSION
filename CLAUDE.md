@@ -23,6 +23,7 @@ One-sentence goal: build FUSION, a rebrand fork of opencode that ships nuclear-p
 - 2026-07-09: KB wiki is PRE-GENERATED markdown (papers/ + topics/), bulk-digested by DeepSeek; not DB-rendered, no load-bearing MCP server (user decision after measured cost ~$109 off-peak for 62k papers; see devlog 2026-07-09 pivot entry).
 - 2026-07-09: bulk API jobs run in the DeepSeek off-peak window (00:30-08:30 Beijing, half price) via scripts/run_full_digest.sh: time-gated start, 08:25 hard stop, resume next night on skip-existing.
 - 2026-07-09: DeepSeek data policy, three tiers (their API trains on inputs by default; opt-out exists): referee/others' manuscripts NEVER; user's own unpublished drafts only after account opt-out or per-case clearance; public/corpus content freely. Full statement in the deepseek-delegate skill.
+- 2026-07-14: per-code skills are embedded as REAL copies under skills/ (use `cp -RL`, never a symlink that dies on clone) and auto-provision their binary (check ~/bin + PATH, else clone+build from the code's upstream, verify against a published anchor). fresco is the reference: skills/fresco/scripts/install_fresco.sh. The auto-install variant lives only in FUSION; the user's global /fresco skill stays pristine (see devlog 2026-07-14).
 
 ## References Claude must know
 
