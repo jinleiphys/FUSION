@@ -1,0 +1,106 @@
+# Effective field theory
+
+**PhySH lineage:** Effective field theory
+
+**Papers:** 2497 (showing first 100 of 2497)
+
+- [2307.13568](../papers/2307.13568.md) (2023) [2] Optimized nuclear energy density functionals including long-range pion contributions
+- [2307.13103](../papers/2307.13103.md) (2023) [1] Effective Field Theory for the Bound States and Scattering of a Heavy Charged Particle and a Neutral Atom
+- [2307.11577](../papers/2307.11577.md) (2023) [2] Hyperon-Nucleon Interaction Constrained by Light Hypernuclei
+- [2307.04063](../papers/2307.04063.md) (2023) [1] Symmetry energy and neutron star properties constrained by chiral effective field theory calculations
+- [2307.03640](../papers/2307.03640.md) (2023) [2] Recent progress on in-medium properties of heavy mesons from finite-temperature EFTs
+- [2307.01145](../papers/2307.01145.md) (2023) [2] The Standard Model theory of neutron beta decay
+- [2306.17452](../papers/2306.17452.md) (2023) [2] Repulsive $Λ$ potentials in dense neutron star matter and binding energy of $Λ$ in hypernuclei
+- [2306.13900](../papers/2306.13900.md) (2023) [2] Electromagnetic Transition Form Factors of Baryon Resonances
+- [2306.13579](../papers/2306.13579.md) (2023) [1] Maximally local two-nucleon interactions at N$^3$LO in $Δ$-less chiral effective field theory
+- [2306.13007](../papers/2306.13007.md) (2023) [2] Generative modeling of nucleon-nucleon interactions
+- [2306.09277](../papers/2306.09277.md) (2023) [2] Robust universal relations in neutron star asteroseismology
+- [2306.08721](../papers/2306.08721.md) (2023) [1] Higher Order Corrections to the Effective Field Theory of Low-energy Axions
+- [2306.08033](../papers/2306.08033.md) (2023) [2] NNLL Resummation of Sudakov Shoulder Logarithms in the Heavy Jet Mass Distribution
+- [2306.07268](../papers/2306.07268.md) (2023) [2] Derivation of transition density from the observed 4He(e,e')4He(0^+_2) form factor raising the alpha-particle monopole p...
+- [2306.06692](../papers/2306.06692.md) (2023) [2] Complex valence-space effective operators for observables: the Gamow-Teller transition
+- [2306.06218](../papers/2306.06218.md) (2023) [2] Evidence against a strong first-order phase transition in neutron star cores: impact of new data
+- [2306.04918](../papers/2306.04918.md) (2023) [2] Spin entanglement in neutron-proton scattering
+- [2306.05280](../papers/2306.05280.md) (2023) [2] Chiral EFT calculation of neutrino reactions in warm neutron-rich matter
+- [2306.04386](../papers/2306.04386.md) (2023) [2] Framework for Multi-messenger Inference from Neutron Stars: Combining Nuclear Theory Priors
+- [2306.04500](../papers/2306.04500.md) (2023) [2] Structure Factors for Hot Neutron Matter from Ab Initio Lattice Simulations with High-Fidelity Chiral Interactions
+- [2306.04036](../papers/2306.04036.md) (2023) [1] Five-body calculation of $s$-wave $n$-$^4$He scattering at next-to-leading order pionless effective field theory
+- [2306.03138](../papers/2306.03138.md) (2023) [1] Effective field theory for radiative corrections to charged-current processes I: Vector coupling
+- [2306.02478](../papers/2306.02478.md) (2023) [2] Role of three-body dynamics in nucleon-deuteron correlation functions
+- [2306.00337](../papers/2306.00337.md) (2023) [2] Low-lying odd-parity nucleon resonances as quark-model like states
+- [2306.01037](../papers/2306.01037.md) (2023) [1] Proton charge radius extraction from muon scattering at MUSE using dispersively improved chiral effective field theory
+- [2305.19648](../papers/2305.19648.md) (2023) [2] Uncertainties in ab initio nuclear structure calculations with chiral interactions
+- [2305.18790](../papers/2305.18790.md) (2023) [2] Effects of multiple single-particle basis states in scattering systems
+- [2305.17357](../papers/2305.17357.md) (2023) [2] Vector meson effects on the multi-skyrmion states from the rational map ansatz
+- [2305.15787](../papers/2305.15787.md) (2023) [2] $Z_{cs}$, $Z_c$ and $Z_b$ states under the complex scaling method
+- [2305.15037](../papers/2305.15037.md) (2023) [2] Ab initio study of nuclear clustering in hot dilute nuclear matter
+- [2305.07568](../papers/2305.07568.md) (2023) [1] Bayesian analysis of muon capture on deuteron in chiral effective field theory
+- [2305.06955](../papers/2305.06955.md) (2023) [2] How chiral forces shape neutron-rich Ne and Mg nuclei
+- [2305.06313](../papers/2305.06313.md) (2023) [2] Constraint of pionless EFT using two-nucleon spectra from lattice QCD
+- [2304.14173](../papers/2304.14173.md) (2023) [1] U(1) quasi-hydrodynamics: Schwinger-Keldysh effective field theory and holography
+- [2304.10187](../papers/2304.10187.md) (2023) [2] $ Δ$ baryon spectroscopy in lattice QCD
+- [2304.07836](../papers/2304.07836.md) (2023) [1] Tabulated Equations of State From Models Informed by Chiral Effective Field Theory
+- [2304.06172](../papers/2304.06172.md) (2023) [1] Four-Body Systems at Large Cutoffs in Effective Field Theory
+- [2304.05415](../papers/2304.05415.md) (2023) [2] $ν$DoBe -- A Python Tool for Neutrinoless Double Beta Decay
+- [2304.03304](../papers/2304.03304.md) (2023) [2] Back-to-back inclusive dijets in DIS at small $x$: Gluon Weizsäcker-Williams distribution at NLO
+- [2304.03327](../papers/2304.03327.md) (2023) [1] Revisiting proton-proton fusion in chiral effective field theory
+- [2304.01898](../papers/2304.01898.md) (2023) [2] Hybrid stars with reactive interfaces: analysis within the Nambu-Jona-Lasinio model
+- [2304.02004](../papers/2304.02004.md) (2023) [1] Inference of the low-energy constants in $Δ$-full chiral effective field theory including a correlated truncation error
+- [2304.00985](../papers/2304.00985.md) (2023) [2] One-loop matching of $CP$-odd four-quark operators to the gradient-flow scheme
+- [2304.01389](../papers/2304.01389.md) (2023) [1] Magnetic moments of $A = 3$ nuclei with chiral effective field theory operators
+- [2303.17292](../papers/2303.17292.md) (2023) [1] Effective field theory with resonant P-wave interaction
+- [2303.17021](../papers/2303.17021.md) (2023) [2] Theoretical and Experimental Constraints for the Equation of State of Dense and Hot Matter
+- [2303.13710](../papers/2303.13710.md) (2023) [1] Small-$x$ Factorization from Effective Field Theory
+- [2303.08004](../papers/2303.08004.md) (2023) [2] Critical Properties of Symmetric Nuclear Matter in Low-Density Regime Using Effective-Relativistic Mean Field Formalism
+- [2303.07038](../papers/2303.07038.md) (2023) [2] Compositeness of $T_{cc}$ and $X(3872)$ by considering decay and coupled-channels effects
+- [2303.00338](../papers/2303.00338.md) (2023) [1] Low-Energy Deuteron-Alpha Elastic Scattering in Cluster Effective Field Theory
+- [2302.12624](../papers/2302.12624.md) (2023) [2] Bayesian Analysis of $χ$EFT at Leading Order in a Modified Weinberg Power Counting Approach
+- [2302.11826](../papers/2302.11826.md) (2023) [2] Regeneration of bottomonia in an open quantum systems approach
+- [2302.08716](../papers/2302.08716.md) (2023) [2] Universal geometry of two-neutron halos and Borromean Efimov states close to dissociation
+- [2302.07490](../papers/2302.07490.md) (2023) [2] Electric dipole polarizability of $^{40}$Ca
+- [2302.07962](../papers/2302.07962.md) (2023) [1] \texttt{NuHamil}: A numerical code to generate nuclear two- and three-body matrix elements from chiral effective field t...
+- [2302.07285](../papers/2302.07285.md) (2023) [2] Second-Order Perturbation Theory in Continuum Quantum Monte Carlo Calculations
+- [2302.03906](../papers/2302.03906.md) (2023) [2] Systematic analysis of the impacts of symmetry energy parameters on neutron star properties
+- [2302.03468](../papers/2302.03468.md) (2023) [2] Effect of the N3LO three-nucleon contact interaction on p-d scattering observables
+- [2302.02989](../papers/2302.02989.md) (2023) [2] Nuclear and Hybrid Equations of State in Light of the Low-Mass Compact Star in HESS J1731-347
+- [2302.01042](../papers/2302.01042.md) (2023) [2] Implementation of chiral two-nucleon forces to nuclear many-body methods with Gaussian-wave packets
+- [2302.00642](../papers/2302.00642.md) (2023) [1] Radiative corrections to neutron beta decay and (anti)neutrino-nucleon scattering from low-energy effective field theory
+- [2301.13032](../papers/2301.13032.md) (2023) [1] Renormalization of nuclear chiral effective field theory with non-perturbative leading order interactions
+- [2301.08169](../papers/2301.08169.md) (2023) [2] Spanning the full range of neutron star properties within a microscopic description
+- [2301.08349](../papers/2301.08349.md) (2023) [2] Auxiliary field diffusion Monte Carlo calculations of magnetic moments of light nuclei with chiral EFT interactions
+- [2301.07296](../papers/2301.07296.md) (2023) [2] Three-body coupled channel framework for two-neutron halo nuclei
+- [2301.06703](../papers/2301.06703.md) (2023) [1] Non-Gaussianity from Schwinger-Keldysh Effective Field Theory
+- [2301.06444](../papers/2301.06444.md) (2023) [1] Effective field theory analysis of the Coulomb breakup of the one-neutron halo nucleus 19C
+- [2301.02105](../papers/2301.02105.md) (2023) [2] Topology and emergent symmetries in dense compact star matter
+- [2301.01031](../papers/2301.01031.md) (2023) [2] Bottomonium suppression in the quark-gluon plasma -- From effective field theories to non-unitary quantum evolution
+- [2301.00722](../papers/2301.00722.md) (2023) [1] Hyperon-nucleon interaction in chiral effective field theory at next-to-next-to-leading order
+- [2212.14619](../papers/2212.14619.md) (2022) [2] On the correlation functions in stable first-order relativistic hydrodynamics
+- [2212.13203](../papers/2212.13203.md) (2022) [1] Nuclear-matter saturation and symmetry energy within $Δ$--full chiral effective field theory
+- [2212.12400](../papers/2212.12400.md) (2022) [2] Implications of gradient flow on the static force
+- [2212.11499](../papers/2212.11499.md) (2022) [2] Theory of non-linear diffusion with a physical gapped mode
+- [2212.10576](../papers/2212.10576.md) (2022) [2] Constraints on strong phase transitions in neutron stars
+- [2212.08447](../papers/2212.08447.md) (2022) [2] Revisiting the $DD^\ast$ chiral interactions with the local momentum-space regularization up to the third order and the ...
+- [2212.07794](../papers/2212.07794.md) (2022) [2] $C$ and $CP$ violation in effective field theories
+- [2212.08138](../papers/2212.08138.md) (2022) [1] Muon capture on the deuteron in chiral effective field theory
+- [2212.05177](../papers/2212.05177.md) (2022) [2] Toward precision Fermi liquid theory in two dimensions
+- [2212.05087](../papers/2212.05087.md) (2022) [2] Weak decay of halo nuclei
+- [2212.04436](../papers/2212.04436.md) (2022) [2] Dilute neutron star matter from neural-network quantum states
+- [2212.02171](../papers/2212.02171.md) (2022) [2] Particle-dimer approach for the Roper resonance in a finite volume
+- [2212.00493](../papers/2212.00493.md) (2022) [2] Transport coefficients of heavy mesons in a thermal medium
+- [2211.17031](../papers/2211.17031.md) (2022) [2] Chiral perturbation theory
+- [2211.17122](../papers/2211.17122.md) (2022) [2] Lifetime of the hypertriton
+- [2211.16447](../papers/2211.16447.md) (2022) [1] Lee-Yang-inspired functional including contributions to fourth order in effective field theory
+- [2211.14890](../papers/2211.14890.md) (2022) [2] Probing Fractional Quantum Hall Sheets in Dense Baryonic Matter
+- [2211.14641](../papers/2211.14641.md) (2022) [2] Elastic scattering of 3He+4He with SONIK
+- [2211.13998](../papers/2211.13998.md) (2022) [2] Deep-neural-network approach to solving the ab initio nuclear structure problem
+- [2211.09521](../papers/2211.09521.md) (2022) [2] Quantification of the hadronic CP violation contribution to the atomic EDMs
+- [2211.09881](../papers/2211.09881.md) (2022) [2] Non-equilibrium evolution of quarkonium in medium in the open quantum system approach
+- [2211.06363](../papers/2211.06363.md) (2022) [2] The impact of fluctuating initial conditions on bottomonium suppression in 5.02 TeV heavy-ion collisions
+- [2211.05671](../papers/2211.05671.md) (2022) [2] Structure and reaction study of Z=120 isotopes using non-relativistic and relativistic mean-field formalism
+- [2211.03764](../papers/2211.03764.md) (2022) [2] Two-neutrino $ββ$ decay of $^{136}$Xe to the first excited $0^+$ state in $^{136}$Ba
+- [2210.17202](../papers/2210.17202.md) (2022) [2] Directed flow of $Λ$ from heavy-ion collisions and hyperon puzzle of neutron stars
+- [2210.17345](../papers/2210.17345.md) (2022) [2] Inclusive production of $J/ψ$, $ψ(2S)$, and $Υ$ states in pNRQCD
+- [2210.17488](../papers/2210.17488.md) (2022) [2] Wavefunction matching for solving quantum many-body problems
+- [2210.16225](../papers/2210.16225.md) (2022) [2] Is the "RG-invariant EFT'' for few-nucleon systems cutoff independent?
+- [2210.15650](../papers/2210.15650.md) (2022) [2] Cold Neutron-Deuteron Capture and Wigner-SU(4) Symmetry
+- [2210.11683](../papers/2210.11683.md) (2022) [1] Renormalization of One-Pion Exchange in Higher Partial Waves in Chiral Effective Field Theory for Antinucleon-Nucleon Sy...

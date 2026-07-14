@@ -1,0 +1,99 @@
+# Solar neutrinos
+
+**PhySH lineage:** [Nuclear astrophysics](nuclear-astrophysics.md) > Solar neutrinos
+
+**Broader:** [Nuclear astrophysics](nuclear-astrophysics.md)
+
+**Papers:** 91
+
+- [2303.17752](../papers/2303.17752.md) (2023) [1] Interaction of solar neutrinos with $^{98,100}$Mo isotopes and the influence of nuclear resonances
+- [2209.14832](../papers/2209.14832.md) (2022) [2] Solar neutrino physics
+- [2206.13570](../papers/2206.13570.md) (2022) [2] Towards solar measurements of nuclear reaction rates
+- [2202.11759](../papers/2202.11759.md) (2022) [2] Ab initio informed evaluation of the radiative capture of protons on $^7$Be
+- [2202.01676](../papers/2202.01676.md) (2022) [2] Neutrino Astronomy with IMB, Kamiokande and Super Kamiokande
+- [2201.06733](../papers/2201.06733.md) (2022) [2] Taking Neutrino Pictures via Electrons
+- [2107.11570](../papers/2107.11570.md) (2021) [2] Quantum field-theoretical description of neutrino oscillations in magnetic field
+- [2103.12325](../papers/2103.12325.md) (2021) [2] Cross sections of solar neutrino capture by 127I nuclei and Gamow Teller resonances
+- [2012.12421](../papers/2012.12421.md) (2020) [2] Evolution of Primordial Neutrino Helicities in Astrophysical Magnetic Fields and Implications for their Detection
+- [2009.05676](../papers/2009.05676.md) (2020) [2] The luminosity constraint in the era of precision solar physics
+- [2009.01528](../papers/2009.01528.md) (2020) [2] Brownian motion of neutrinos in the Sun [On the distribution of collisions of a neutrino with nucleons of the Sun]
+- [2009.01164](../papers/2009.01164.md) (2020) [2] Real-time measurements of solar $pp$ neutrinos using $^{131}$Xe
+- [1903.06085](../papers/1903.06085.md) (2019) [2] Discovery potential of multi-ton xenon detectors in neutrino electromagnetic properties
+- [1902.07398](../papers/1902.07398.md) (2019) [2] Impact of form factor uncertainties on interpretations of coherent elastic neutrino-nucleus scattering data
+- [1901.02320](../papers/1901.02320.md) (2019) [2] Solar neutrino problem as evidence of new interaction
+- [1811.12056](../papers/1811.12056.md) (2018) [2] Existing and expected manifestations of a new fundamental interaction
+- [1811.07912](../papers/1811.07912.md) (2018) [2] Developing the MeV potential of DUNE: Detailed considerations of muon-induced spallation and other backgrounds
+- [1808.08232](../papers/1808.08232.md) (2018) [2] DUNE as the Next-Generation Solar Neutrino Experiment
+- [1808.05516](../papers/1808.05516.md) (2018) [2] Deuteron disintegration by reactor antineutrinos
+- [1808.05103](../papers/1808.05103.md) (2018) [1] Hypothesis about semi-weak interaction and experiments with solar neutrinos. II. Deuteron disintegration by neutral curr...
+- [1804.08995](../papers/1804.08995.md) (2018) [2] Neutral-current neutrino-nucleus scattering off Xe isotopes
+- [1710.08035](../papers/1710.08035.md) (2017) [2] Beta decays in investigations and searches for rare effects
+- [1706.05435](../papers/1706.05435.md) (2017) [2] Solar neutrino physics on the beginning of 2017
+- [1610.04177](../papers/1610.04177.md) (2016) [1] Low-energy electronic recoil in xenon detectors by solar neutrinos
+- [1609.06747](../papers/1609.06747.md) (2016) [2] Neutrino Astrophysics
+- [1608.05853](../papers/1608.05853.md) (2016) [2] Bayesian Estimation of Thermonuclear Reaction Rates
+- [1604.03197](../papers/1604.03197.md) (2016) [2] Frontiers in Nuclear Astrophysics
+- [1506.01998](../papers/1506.01998.md) (2015) [2] Oscillations at low energies
+- [1503.04823](../papers/1503.04823.md) (2015) [2] Spallation Backgrounds in Super-Kamiokande Are Made in Muon-Induced Showers
+- [1503.01355](../papers/1503.01355.md) (2015) [2] Neutrino astrophysics : recent advances and open issues
+- [1502.03262](../papers/1502.03262.md) (2015) [1] Hypothesis about semi-weak interaction and experiments with solar neutrinos
+- [1211.4078](../papers/1211.4078.md) (2012) [2] Neutrino Capture Reactions on $^{40}$Ar
+- [1208.5723](../papers/1208.5723.md) (2012) [1] Solar Neutrinos: Status and Prospects
+- [1208.1356](../papers/1208.1356.md) (2012) [1] Solar Neutrinos
+- [1108.4228](../papers/1108.4228.md) (2011) [2] Roles of High-lying Excited States on Neutrino Reactions and the Gamow Teller strength for $^{40}$Ar
+- [1104.1639](../papers/1104.1639.md) (2011) [2] Solar models with accretion. I. Application to the solar abundance problem
+- [1004.2318](../papers/1004.2318.md) (2010) [2] Solar fusion cross sections II: the pp chain and CNO cycles
+- [0810.1959](../papers/0810.1959.md) (2008) [2] Core-Collapse Astrophysics with a Five-Megaton Neutrino Detector
+- [0808.0735](../papers/0808.0735.md) (2008) [2] Neutrino Astrophysics
+- [0805.2013](../papers/0805.2013.md) (2008) [1] CN-Cycle Solar Neutrinos and Sun's Primordial Core Metalicity
+- [0710.2295](../papers/0710.2295.md) (2007) [1] Solar Neutrinos: Models, Observations, and New Opportunities
+- [2408.06041](../papers/2408.06041.md) (0000) [1] 2408.06041
+- [2409.09515](../papers/2409.09515.md) (0000) [2] 2409.09515
+- [2410.00330](../papers/2410.00330.md) (0000) [2] 2410.00330
+- [2502.17546](../papers/2502.17546.md) (0000) [2] 2502.17546
+- [2504.11736](../papers/2504.11736.md) (0000) [2] 2504.11736
+- [2510.12873](../papers/2510.12873.md) (0000) [2] 2510.12873
+- [astro-ph/0210032](../papers/astro-ph/0210032.md) (0000) [2] astro-ph/0210032
+- [astro-ph/0312629](../papers/astro-ph/0312629.md) (0000) [2] astro-ph/0312629
+- [astro-ph/0412096](../papers/astro-ph/0412096.md) (0000) [2] astro-ph/0412096
+- [astro-ph/9306024](../papers/astro-ph/9306024.md) (0000) [2] astro-ph/9306024
+- [astro-ph/9604061](../papers/astro-ph/9604061.md) (0000) [2] astro-ph/9604061
+- [astro-ph/9610250](../papers/astro-ph/9610250.md) (0000) [2] astro-ph/9610250
+- [astro-ph/9702057](../papers/astro-ph/9702057.md) (0000) [1] astro-ph/9702057
+- [astro-ph/9707320](../papers/astro-ph/9707320.md) (0000) [1] astro-ph/9707320
+- [hep-ex/0002018](../papers/hep-ex/0002018.md) (0000) [1] hep-ex/0002018
+- [hep-ph/0009044](../papers/hep-ph/0009044.md) (0000) [2] hep-ph/0009044
+- [hep-ph/0103179](../papers/hep-ph/0103179.md) (0000) [1] hep-ph/0103179
+- [hep-ph/0104095](../papers/hep-ph/0104095.md) (0000) [1] hep-ph/0104095
+- [hep-ph/0104166](../papers/hep-ph/0104166.md) (0000) [2] hep-ph/0104166
+- [hep-ph/0106339](../papers/hep-ph/0106339.md) (0000) [1] hep-ph/0106339
+- [hep-ph/0212147](../papers/hep-ph/0212147.md) (0000) [1] hep-ph/0212147
+- [hep-ph/0309266](../papers/hep-ph/0309266.md) (0000) [1] hep-ph/0309266
+- [hep-ph/0402025](../papers/hep-ph/0402025.md) (0000) [2] hep-ph/0402025
+- [hep-ph/0405019](../papers/hep-ph/0405019.md) (0000) [2] hep-ph/0405019
+- [hep-ph/0406294](../papers/hep-ph/0406294.md) (0000) [1] hep-ph/0406294
+- [hep-ph/0501247](../papers/hep-ph/0501247.md) (0000) [1] hep-ph/0501247
+- [hep-ph/0502196](../papers/hep-ph/0502196.md) (0000) [2] hep-ph/0502196
+- [hep-ph/9607433](../papers/hep-ph/9607433.md) (0000) [2] hep-ph/9607433
+- [hep-ph/9710491](../papers/hep-ph/9710491.md) (0000) [2] hep-ph/9710491
+- [hep-ph/9711358](../papers/hep-ph/9711358.md) (0000) [2] hep-ph/9711358
+- [hep-ph/9905220](../papers/hep-ph/9905220.md) (0000) [2] hep-ph/9905220
+- [nucl-ex/9707006](../papers/nucl-ex/9707006.md) (0000) [2] nucl-ex/9707006
+- [nucl-th/0009012](../papers/nucl-th/0009012.md) (0000) [2] nucl-th/0009012
+- [nucl-th/0212042](../papers/nucl-th/0212042.md) (0000) [1] nucl-th/0212042
+- [nucl-th/0310083](../papers/nucl-th/0310083.md) (0000) [2] nucl-th/0310083
+- [nucl-th/0402008](../papers/nucl-th/0402008.md) (0000) [2] nucl-th/0402008
+- [nucl-th/0501020](../papers/nucl-th/0501020.md) (0000) [2] nucl-th/0501020
+- [nucl-th/0507029](../papers/nucl-th/0507029.md) (0000) [1] nucl-th/0507029
+- [nucl-th/0601066](../papers/nucl-th/0601066.md) (0000) [1] nucl-th/0601066
+- [nucl-th/0609006](../papers/nucl-th/0609006.md) (0000) [2] nucl-th/0609006
+- [nucl-th/9402022](../papers/nucl-th/9402022.md) (0000) [2] nucl-th/9402022
+- [nucl-th/9802028](../papers/nucl-th/9802028.md) (0000) [2] nucl-th/9802028
+- [nucl-th/9802050](../papers/nucl-th/9802050.md) (0000) [1] nucl-th/9802050
+- [nucl-th/9802078](../papers/nucl-th/9802078.md) (0000) [2] nucl-th/9802078
+- [nucl-th/9803003](../papers/nucl-th/9803003.md) (0000) [2] nucl-th/9803003
+- [nucl-th/9806067](../papers/nucl-th/9806067.md) (0000) [2] nucl-th/9806067
+- [nucl-th/9811081](../papers/nucl-th/9811081.md) (0000) [1] nucl-th/9811081
+- [nucl-th/9812033](../papers/nucl-th/9812033.md) (0000) [2] nucl-th/9812033
+- [nucl-th/9905037](../papers/nucl-th/9905037.md) (0000) [1] nucl-th/9905037
+- [nucl-th/9912064](../papers/nucl-th/9912064.md) (0000) [1] nucl-th/9912064

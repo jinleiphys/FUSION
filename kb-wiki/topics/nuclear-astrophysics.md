@@ -1,0 +1,108 @@
+# Nuclear astrophysics
+
+**PhySH lineage:** Nuclear astrophysics
+
+**Narrower:** [Nuclear physics of explosive environments](nuclear-physics-of-explosive-environments.md), [Solar neutrinos](solar-neutrinos.md), [Hydrostatic stellar nucleosynthesis](hydrostatic-stellar-nucleosynthesis.md), [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md), [Nuclear matter in neutron stars](nuclear-matter-in-neutron-stars.md)
+
+**Papers:** 239 (showing first 100 of 239)
+
+- [2307.14276](../papers/2307.14276.md) (2023) [2] Skyrme-Hartree-Fock-Bogoliubov mass models on a 3D mesh: III. From atomic nuclei to neutron stars
+- [2307.14391](../papers/2307.14391.md) (2023) [2] Nuclear Reactions in Evolving Stars
+- [2307.05636](../papers/2307.05636.md) (2023) [2] Impact of the $^6$Li asymptotic normalization constant onto $α$-induced reactions of astrophysical interest
+- [2306.08377](../papers/2306.08377.md) (2023) [2] Manipulation of Giant Multipole Resonances via Vortex $γ$ Photons
+- [2306.05215](../papers/2306.05215.md) (2023) [2] Description of $^7$Be and $^7$Li within the Gamow Shell Model
+- [2304.10608](../papers/2304.10608.md) (2023) [2] Executive Summary of the Topical Program: Nuclear Isomers in the Era of FRIB
+- [2212.03650](../papers/2212.03650.md) (2022) [1] Transfer Reactions in Nuclear Astrophysics
+- [2212.02156](../papers/2212.02156.md) (2022) [1] Progress in Nuclear Astrophysics: a multi-disciplinary field with still many open questions
+- [2211.01927](../papers/2211.01927.md) (2022) [1] Modeling Solids in Nuclear Astrophysics with Smoothed Particle Hydrodynamics
+- [2210.08438](../papers/2210.08438.md) (2022) [2] ARIEL experiments and theory
+- [2210.02906](../papers/2210.02906.md) (2022) [2] Nuclear binding energies in artificial neural networks
+- [2206.04809](../papers/2206.04809.md) (2022) [2] Renormalization group evolution of optical potentials: explorations using a toy model
+- [2205.09599](../papers/2205.09599.md) (2022) [2] Feasibility of studying astrophysically important charged-particle emission with the variable energy $γ$-ray system at t...
+- [2205.07996](../papers/2205.07996.md) (2022) [1] Horizons: Nuclear Astrophysics in the 2020s and Beyond
+- [2205.03985](../papers/2205.03985.md) (2022) [2] The Big Bang Nucleosynthesis abundances of the light elements using improved thermonuclear reaction rates
+- [2205.01174](../papers/2205.01174.md) (2022) [2] Bayesian Inference of Phenomenological EoS of Neutron Stars with Recent Observations
+- [2202.13940](../papers/2202.13940.md) (2022) [2] Unsupervised machine learning correlations in EoS of neutron stars
+- [2203.05410](../papers/2203.05410.md) (2022) [2] New constraints on the neutron-star mass and radius relation from terrestrial nuclear experiments
+- [2201.09512](../papers/2201.09512.md) (2022) [2] Coupled-channels calculations for nuclear reactions: from exotic nuclei to superheavy elements
+- [2201.02083](../papers/2201.02083.md) (2022) [2] Shell-model study on properties of proton dripline nuclides with Z, N = 30-50 including uncertainty analysis
+- [2201.01756](../papers/2201.01756.md) (2022) [2] Neural network reconstruction of the dense matter equation of state from neutron star observables
+- [2112.14256](../papers/2112.14256.md) (2021) [2] Prediction of (p,n) Charge-Exchange Reactions with Uncertainty Quantification
+- [2112.12562](../papers/2112.12562.md) (2021) [2] Artificial Intelligence Supported Shell-Model Calculations for Light Sn Isotopes
+- [2109.13968](../papers/2109.13968.md) (2021) [2] Systematical studies of the E1 photon strength functions combining Skyrme-HFB+QRPA model and experimental giant dipole r...
+- [2109.03776](../papers/2109.03776.md) (2021) [2] Potential model with bound-to-continuum approach for low-energy nucleon radiative capture by $^{12}$C and $^{16}$O
+- [2108.03814](../papers/2108.03814.md) (2021) [1] Progress in Nuclear Astrophysics of East and Southeast Asia
+- [2106.03890](../papers/2106.03890.md) (2021) [2] Extreme Matter meets Extreme Gravity: Ultra-heavy neutron stars with crossovers and first-order phase transitions
+- [2106.02606](../papers/2106.02606.md) (2021) [2] Uncertainties in the $^{18}$F(p,$α$)$^{15}$O reaction rate in classical novae
+- [2105.06541](../papers/2105.06541.md) (2021) [2] How Bayesian methods can improve $R$-matrix analyses of data: the example of the $dt$ Reaction
+- [2103.13311](../papers/2103.13311.md) (2021) [2] Quantum effects on plasma screening for thermonuclear reactions in laser-generated plasmas
+- [2103.07129](../papers/2103.07129.md) (2021) [1] Systematics of semi-microscopic proton-nucleus optical potential at low energies relevant to nuclear astrophysics
+- [2102.07497](../papers/2102.07497.md) (2021) [1] A new mass model for nuclear astrophysics: crossing 200 keV accuracy
+- [2101.08470](../papers/2101.08470.md) (2021) [2] Momentum dependent mean-fields of (anti)hyperons
+- [2101.00199](../papers/2101.00199.md) (2021) [2] Bound-to-continuum potential model for the $(p,γ)$ reactions of the CNO cycle
+- [2011.07207](../papers/2011.07207.md) (2020) [2] Cluster effective field theory and nuclear reactions
+- [2007.15416](../papers/2007.15416.md) (2020) [2] A Bayesian-Neural-Network Prediction for Fragment Production in Proton Induced Spallation Reaction
+- [2007.13331](../papers/2007.13331.md) (2020) [1] Trojan horse method as surrogate indirect approach to study resonant reactions in nuclear astrophysics
+- [2007.13139](../papers/2007.13139.md) (2020) [2] Asymptotic normalization coefficient method for two-proton radiative capture
+- [2007.10424](../papers/2007.10424.md) (2020) [2] Thermodynamical Description of Hot, Rapidly Rotating Neutron Stars, Protoneutron Stars, and Neutron Star Merger Remnants
+- [2006.10496](../papers/2006.10496.md) (2020) [2] Elimination of the effect of internal activity in LaCl3:Ce scintillator
+- [2004.14659](../papers/2004.14659.md) (2020) [2] QCD Hidden-Color Hexa-diquark in the Central Core of Nuclei
+- [2003.05721](../papers/2003.05721.md) (2020) [1] Dispersion (asymptotic) theory of charged particle transfer reactions at low energies and nuclear astrophysics: II. the ...
+- [2003.06296](../papers/2003.06296.md) (2020) [1] Dispersion (asymptotic) theory of charged particle transfer reactions at low energies and nuclear astrophysics: I. the "...
+- [2003.02179](../papers/2003.02179.md) (2020) [2] Magnetic dipole excitations based on the relativistic nuclear energy density functional
+- [2001.11228](../papers/2001.11228.md) (2020) [2] Astronuclear Physics: a Tale of the Atomic Nuclei in the Skies
+- [2001.09570](../papers/2001.09570.md) (2020) [2] Nuclear medium effect on neutron capture reactions during neutron star mergers
+- [1911.05304](../papers/1911.05304.md) (2019) [2] Characterization of an electrically cooled BEGe detector till E$_γ\sim7$ MeV
+- [1911.01328](../papers/1911.01328.md) (2019) [2] Theory Summary at Strangeness in Quark Matter 2019
+- [1910.14094](../papers/1910.14094.md) (2019) [1] Indirect methods in nuclear astrophysics with relativistic radioactive beams
+- [1910.09712](../papers/1910.09712.md) (2019) [2] LRP2020: The cosmic origin and evolution of the elements
+- [1910.03677](../papers/1910.03677.md) (2019) [2] Baseline predictions of elliptic flow and fluctuations at the RHIC Beam Energy Scan using response coefficients
+- [1908.11638](../papers/1908.11638.md) (2019) [2] $\bf ^{12}{C} + {}^{16}{O}$ molecular resonances at deep sub-barrier energy
+- [1907.08054](../papers/1907.08054.md) (2019) [2] New thermonuclear reaction rate equations for radiative neutron capture
+- [1906.09258](../papers/1906.09258.md) (2019) [2] $^7$Be and $^7$Li nuclei within the no-core shell model with continuum
+- [1904.12269](../papers/1904.12269.md) (2019) [2] Neutron skins of atomic nuclei: per aspera ad astra
+- [1903.05693](../papers/1903.05693.md) (2019) [2] All the Fun of the FAIR: Fundamental physics at the Facility for Antiproton and Ion Research
+- [1902.05262](../papers/1902.05262.md) (2019) [1] Experimental nuclear astrophysics in Italy
+- [1901.09874](../papers/1901.09874.md) (2019) [2] Confronting gravitational-wave observations with modern nuclear physics constraints
+- [1901.03282](../papers/1901.03282.md) (2019) [2] An essential singularity of the cotangent of the Coulomb-nuclear phase shift, and a finite limit of the nuclear part of ...
+- [1812.04438](../papers/1812.04438.md) (2018) [1] Nuclear Astrophysics in the Multimessenger Era: A Partnership Made in Heaven
+- [1812.04582](../papers/1812.04582.md) (2018) [2] Impact of $^{16}$O($γ$,$α$)$^{12}$C measurements on the $^{12}$C($α,γ$)$^{16}$O astrophysical reaction rate
+- [1811.09175](../papers/1811.09175.md) (2018) [1] Asymptotic theory of charged particle transfer reactions at low energies and nuclear astrophysics
+- [1810.08996](../papers/1810.08996.md) (2018) [2] Weakly Bound Neutron-Rich Nuclei and Cosmic Phenomena
+- [1810.06812](../papers/1810.06812.md) (2018) [2] Extrapolation of scattering data to the negative-energy region. Application to the $p-^{16}$O system
+- [1809.09980](../papers/1809.09980.md) (2018) [2] Connection between asymptotic normalization coefficients and resonance widths of mirror states
+- [1809.02619](../papers/1809.02619.md) (2018) [2] Study of various few-body systems using Gaussian expansion method (GEM)
+- [1806.08955](../papers/1806.08955.md) (2018) [2] From Nuclei to the Cosmos: Tracing Heavy-Element Production with the Oldest Stars
+- [1805.10183](../papers/1805.10183.md) (2018) [2] Nuclear processes in Astrophysics: Recent progress
+- [1805.04637](../papers/1805.04637.md) (2018) [2] r-Process Nucleosynthesis: Connecting Rare-Isotope Beam Facilities with the Cosmos
+- [1805.04780](../papers/1805.04780.md) (2018) [1] Nuclear Astrophysics in the New Era of Multimessenger Astronomy
+- [1805.01204](../papers/1805.01204.md) (2018) [2] Extension of the ratio method to proton-rich nuclei
+- [1804.06256](../papers/1804.06256.md) (2018) [2] Nuclear Equation of State from ground and collective excited state properties of nuclei
+- [1801.07522](../papers/1801.07522.md) (2018) [2] Uncertainties in radiative neutron-capture rates relevant to the $A\sim 80$ $r$-process peak
+- [1710.06172](../papers/1710.06172.md) (2017) [2] Gamow-Teller response in the configuration space of DFT-rooted no-core configuration-interaction model
+- [1710.00752](../papers/1710.00752.md) (2017) [2] Constant temperature description of the nuclear level densities
+- [1709.09502](../papers/1709.09502.md) (2017) [2] Validating neural-network refinements of nuclear mass models
+- [1707.09222](../papers/1707.09222.md) (2017) [2] Isospin-Asymmetry Dependence of the Thermodynamic Nuclear Equation of State in Many-Body Perturbation Theory
+- [1706.07504](../papers/1706.07504.md) (2017) [2] Estimation of M1 scissors mode strength for deformed nuclei in the medium to heavy mass region by statistical Hauser-Fes...
+- [1705.06305](../papers/1705.06305.md) (2017) [2] Two-step nuclear reactions: The Surrogate Method, the Trojan Horse Method and their common foundations
+- [1703.08347](../papers/1703.08347.md) (2017) [2] Microscopic studies on nuclear spin-isospin properties---a personal perspective on covariant density functional theory
+- [1702.00463](../papers/1702.00463.md) (2017) [2] Subthreshold resonances and resonances in the $R$-matrix method for binary reactions and in the Trojan Horse method
+- [1701.05853](../papers/1701.05853.md) (2017) [2] Nonlocal nucleon-nucleus interactions in (d,p) reactions: Role of the deuteron D-state
+- [1701.02587](../papers/1701.02587.md) (2017) [2] Applications of nuclear physics to a wider context: from molecules to stars passing through hypernuclei
+- [1701.00279](../papers/1701.00279.md) (2017) [2] Volume Dependence of N-Body Bound States
+- [1612.06884](../papers/1612.06884.md) (2016) [2] Determination of plasma screening effects for thermonuclear reactions in laser-generated plasmas
+- [1610.07522](../papers/1610.07522.md) (2016) [2] Scalable Nuclear Density Functional Theory with Sky3D
+- [1610.04942](../papers/1610.04942.md) (2016) [2] Pigmy resonances, transfer, and separable potentials
+- [1609.00363](../papers/1609.00363.md) (2016) [2] Towards Quantum Turbulence in Cold Atomic Fermionic Superfluids
+- [1607.08483](../papers/1607.08483.md) (2016) [2] Large-scale deformed quasiparticle random-phase approximation calculations of the $γ$-ray strength function using the Go...
+- [1606.00485](../papers/1606.00485.md) (2016) [1] Trends in Nuclear Astrophysics
+- [1604.03197](../papers/1604.03197.md) (2016) [1] Frontiers in Nuclear Astrophysics
+- [1603.00224](../papers/1603.00224.md) (2016) [2] Numerically Fitting The Electron Fermi Energy and The Electron Fraction in A Neutron Star
+- [1512.06954](../papers/1512.06954.md) (2015) [2] Recent developments in heavy-ion fusion reactions around the Coulomb barrier
+- [1511.08859](../papers/1511.08859.md) (2015) [1] Indirect methods in nuclear astrophysics
+- [1511.01301](../papers/1511.01301.md) (2015) [2] On microscopic theory of radiative nuclear reaction characteristics
+- [1510.00491](../papers/1510.00491.md) (2015) [2] Electron capture rates in stars studied with heavy ion charge exchange reactions
+- [1509.09009](../papers/1509.09009.md) (2015) [2] Ab initio calculations of reactions with light nuclei
+- [1509.00725](../papers/1509.00725.md) (2015) [2] Astrophysical S factor of {$^{12}$C($α,γ$)$^{16}$O} Calculated with the Reduced R-matrix Theory
+- [1509.00508](../papers/1509.00508.md) (2015) [2] Current Status of Nuclear Physics Research
+- [1506.04844](../papers/1506.04844.md) (2015) [2] Microscopic dynamical description of proton-induced fission with the Constrained Molecular Dynamics (CoMD) Model

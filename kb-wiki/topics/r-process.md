@@ -1,0 +1,108 @@
+# r process
+
+**PhySH lineage:** [Nuclear astrophysics](nuclear-astrophysics.md) > [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md) > r process
+
+**Broader:** [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md)
+
+**Papers:** 375 (showing first 100 of 375)
+
+- [2307.08971](../papers/2307.08971.md) (2023) [2] Postfission properties of uranium isotopes: A hybrid method with Langevin dynamics and the Hauser-Feshbach statistical m...
+- [2307.02554](../papers/2307.02554.md) (2023) [2] Viscous hydrodynamic evolution of neutron star merger accretion disks: a code comparison
+- [2306.07659](../papers/2306.07659.md) (2023) [1] R-process beta-decay neutrino flux from binary neutron star mergers and collapsars
+- [2306.01842](../papers/2306.01842.md) (2023) [1] 133In: A Rosetta Stone for decays of r-process nuclei
+- [2305.11050](../papers/2305.11050.md) (2023) [1] Production of $p$-nuclei from $r$-process seeds: the $νr$-process
+- [2305.04675](../papers/2305.04675.md) (2023) [2] Predicting nuclear masses with product-unit networks
+- [2305.03664](../papers/2305.03664.md) (2023) [1] Impact of level densities and $γ$-strength functions on $r$-process simulations
+- [2305.01782](../papers/2305.01782.md) (2023) [2] Uncertainty Quantification of Mass Models using Ensemble Bayesian Model Averaging
+- [2304.01850](../papers/2304.01850.md) (2023) [2] Nucleosynthesis and observation of the heaviest elements
+- [2303.06366](../papers/2303.06366.md) (2023) [1] The study of r-process nucleosynthesis in binary neutron star mergers: Nucleonic weak interactions and nuclear uncertain...
+- [2301.11814](../papers/2301.11814.md) (2023) [2] Neutrinos from dense environments : Flavor mechanisms, theoretical approaches, observations, and new directions
+- [2212.09221](../papers/2212.09221.md) (2022) [2] Temperature dependence of cluster decay
+- [2212.03983](../papers/2212.03983.md) (2022) [2] Alpha decay of thermally excited nuclei
+- [2212.02156](../papers/2212.02156.md) (2022) [2] Progress in Nuclear Astrophysics: a multi-disciplinary field with still many open questions
+- [2211.03687](../papers/2211.03687.md) (2022) [2] Counting States: A Combinatorial Analysis of SQM Fragmentation
+- [2210.12136](../papers/2210.12136.md) (2022) [2] Nuclear data activities for medium mass and heavy nuclei at Los Alamos
+- [2208.09455](../papers/2208.09455.md) (2022) [2] Continuum random-phase approximation for (n,γ) reactions on neutron-rich nuclei: collective effects and resonances
+- [2208.06373](../papers/2208.06373.md) (2022) [1] The Influence of Beta Decay Rates on r-Process Observables
+- [2208.04783](../papers/2208.04783.md) (2022) [1] Nuclear mass predictions with machine learning reaching the accuracy required by $r$-process studies
+- [2208.02074](../papers/2208.02074.md) (2022) [2] Origin of Plutonium-244 in the Early Solar System
+- [2207.10680](../papers/2207.10680.md) (2022) [2] The Fast Flavor Instability in Hypermassive Neutron Star Disk Outflows
+- [2207.07421](../papers/2207.07421.md) (2022) [2] Impact of systematic nuclear uncertainties on composition and decay heat of dynamical and disk ejecta in compact binary ...
+- [2206.15022](../papers/2206.15022.md) (2022) [1] Radiative neutron capture reaction rates for r-process nucleosynthesis
+- [2204.03005](../papers/2204.03005.md) (2022) [2] Long-term 3D-MHD Simulations of Black Hole Accretion Disks formed in Neutron Star Mergers
+- [2203.04480](../papers/2203.04480.md) (2022) [2] The impact of isospin dependence of pairing on fission barriers in the fission cycling regions
+- [2203.01975](../papers/2203.01975.md) (2022) [2] Nudged elastic band approach to nuclear fission pathways
+- [2202.09437](../papers/2202.09437.md) (2022) [1] The need for a local nuclear physics feature in the neutron-rich rare-earths to explain solar $r$-process abundances
+- [2112.13772](../papers/2112.13772.md) (2021) [2] Low-energy enhancement in the magnetic dipole $γ$-ray strength functions of heavy nuclei
+- [2112.09607](../papers/2112.09607.md) (2021) [1] Proposed Lunar Measurements of $r$-Process Radioisotopes to Distinguish Origin of Deep-sea 244Pu
+- [2111.14841](../papers/2111.14841.md) (2021) [1] Beyond-mean-field calculations of allowed and first-forbidden $β^-$ decays of $r$-process waiting-point nuclei
+- [2111.11536](../papers/2111.11536.md) (2021) [2] Decision Theory for the Mass Measurements at the Facility for Rare Isotope Beams
+- [2111.08250](../papers/2111.08250.md) (2021) [1] Neutrino flavor evolution in dense environments and the r-process
+- [2110.02447](../papers/2110.02447.md) (2021) [2] Thermonuclear 17O(n,gamma)18O reaction rate and its astrophysical implications
+- [2110.00713](../papers/2110.00713.md) (2021) [1] Enhanced symmetry energy bears universality of the r-process
+- [2109.09162](../papers/2109.09162.md) (2021) [1] $r$-process nucleosynthesis from compact binary mergers
+- [2108.06104](../papers/2108.06104.md) (2021) [2] High-precision nuclear chronometer for the cosmos
+- [2108.03814](../papers/2108.03814.md) (2021) [2] Progress in Nuclear Astrophysics of East and Southeast Asia
+- [2105.13043](../papers/2105.13043.md) (2021) [1] Correlations between nuclear landscape boundaries and neutron-rich r-process abundances
+- [2105.10218](../papers/2105.10218.md) (2021) [1] Sensitivity study of \emph{r}-process abundances to nuclear masses
+- [2105.09272](../papers/2105.09272.md) (2021) [1] Fission fragment distributions of neutron-rich nuclei based on Langevin calculations: toward r-process simulations
+- [2105.05178](../papers/2105.05178.md) (2021) [1] r-Process Radioisotopes from Near-Earth Supernovae and Kilonovae
+- [2105.03202](../papers/2105.03202.md) (2021) [2] Limits on active-sterile neutrino mixing parameters using heavy nuclei abundances
+- [2103.10688](../papers/2103.10688.md) (2021) [1] Production cross sections and angular distributions of neutron-rich rare isotopes from 15 MeV/nucleon Kr-induced collisi...
+- [2103.09392](../papers/2103.09392.md) (2021) [2] Sensitivity of Neutron-Rich Nuclear Isomer Behavior to Uncertainties in Direct Transitions
+- [2103.02616](../papers/2103.02616.md) (2021) [2] Neutrino Fast Flavor Conversions in Neutron-star Post-Merger Accretion Disks
+- [2102.13361](../papers/2102.13361.md) (2021) [2] Gamow-Teller transitions of neutron-rich $N=82,81$ nuclei by shell-model calculations
+- [2102.11377](../papers/2102.11377.md) (2021) [2] $β$-Delayed Neutron and Fission Calculations with Relativistic QRPA and Statistical Model
+- [2102.03846](../papers/2102.03846.md) (2021) [1] Isochronic evolution and the radioactive decay of r-process nuclei
+- [2102.03686](../papers/2102.03686.md) (2021) [1] Fission fragment distributions and their impact on the r-process nucleosynthesis in neutron star mergers
+- [2012.01622](../papers/2012.01622.md) (2020) [2] The evolution of magnetic dipole strength in $^{100-140}$ Sn isotope chain and quenching of nucleon g factors
+- [2011.13368](../papers/2011.13368.md) (2020) [1] Covariant density functional theory input for r-process simulations in actinides and superheavy nuclei: the ground state...
+- [2011.11889](../papers/2011.11889.md) (2020) [1] Astromers in the radioactive decay of r-process nuclei
+- [2011.08645](../papers/2011.08645.md) (2020) [2] The origin of the elements and other implications of gravitational wave detection for nuclear physics
+- [2011.00296](../papers/2011.00296.md) (2020) [2] Effect of quantizing magnetic field on the inner crusts of hot Neutron Stars
+- [2010.01698](../papers/2010.01698.md) (2020) [1] Propagation of Hauser-Feshbach uncertainty estimates to r-process nucleosynthesis: Benchmark of statistical property mod...
+- [2009.01814](../papers/2009.01814.md) (2020) [1] The importance of charged particle reactions in the r-process on supernovae and neutron stars
+- [2008.06075](../papers/2008.06075.md) (2020) [2] Following nuclei through nucleosynthesis: a novel tracing technique
+- [2008.03335](../papers/2008.03335.md) (2020) [2] MeV Gamma Rays from Fission: A Distinct Signature of Actinide Production in Neutron Star Mergers
+- [2006.14148](../papers/2006.14148.md) (2020) [1] Nuclear Reaction Screening, Weak Interactions, and r-Process Nucleosynthesis in High Magnetic Fields
+- [2006.10905](../papers/2006.10905.md) (2020) [1] Probing the fission properties of neutron-rich actinides with the astrophysical $r$ process
+- [2006.08043](../papers/2006.08043.md) (2020) [2] Neutrino mixing in nuclear rapid neutron-capture processes
+- [2006.04322](../papers/2006.04322.md) (2020) [1] Markov Chain Monte Carlo Predictions of Neutron-rich Lanthanide Properties as a Probe of $r$-process Dynamics
+- [2004.07953](../papers/2004.07953.md) (2020) [2] Exploring laser-driven neutron sources for neutron capture cascades and the production of neutron-rich isotopes
+- [2003.06370](../papers/2003.06370.md) (2020) [1] Spallation of r-Process Nuclei Ejected from a Neutron Star Merger
+- [2003.03338](../papers/2003.03338.md) (2020) [2] Structure and composition of inner crust of neutron stars from Gogny interactions
+- [2002.04814](../papers/2002.04814.md) (2020) [2] Testing ab initio nuclear structure in neutron-rich nuclei: lifetime measurements of second 2+ states in 16C and 20O
+- [2001.09570](../papers/2001.09570.md) (2020) [2] Nuclear medium effect on neutron capture reactions during neutron star mergers
+- [2001.08616](../papers/2001.08616.md) (2020) [1] Efficient method for estimation of fission fragment yields of r-process nuclei
+- [2001.08792](../papers/2001.08792.md) (2020) [1] Characterizing $r$-Process Sites through Actinide Production
+- [2001.00976](../papers/2001.00976.md) (2020) [2] First Exploration of Neutron Shell Structure Below Lead and Beyond $\boldsymbol{N=126}$
+- [1912.04934](../papers/1912.04934.md) (2019) [2] Microscopic predictions for production of neutron rich nuclei in the reaction $^\mathbf{176}\mathbf{Yb}+{}^\mathbf{176}\...
+- [1911.07766](../papers/1911.07766.md) (2019) [1] Co-production of light and heavy $r$-process elements via fission deposition
+- [1911.06344](../papers/1911.06344.md) (2019) [2] Primary fission fragment mass yields across the chart of nuclides
+- [1911.00411](../papers/1911.00411.md) (2019) [2] Neutron rich matter in the laboratory and in the heavens after GW170817
+- [1907.02641](../papers/1907.02641.md) (2019) [2] Low-Energy Magnetic Radiation
+- [1906.05002](../papers/1906.05002.md) (2019) [1] Current Status of r-Process Nucleosynthesis
+- [1904.03733](../papers/1904.03733.md) (2019) [1] Fission and the r-process nucleosynthesis of translead nuclei in neutron star mergers
+- [1903.12373](../papers/1903.12373.md) (2019) [2] Shape and shell-structure of lighter (N<90) neutron-rich nuclei based on phenomenological Woods-Saxon potential
+- [1902.07077](../papers/1902.07077.md) (2019) [2] Quadrupole collectivity and shell closure in neutron-rich nuclei around $N=126$
+- [1902.00642](../papers/1902.00642.md) (2019) [1] Impact of the nuclear mass uncertainties on the r process
+- [1901.10337](../papers/1901.10337.md) (2019) [1] Propagation of Statistical Uncertainties of Skyrme Mass Models to Simulations of $r$-Process Nucleosynthesis
+- [1901.01410](../papers/1901.01410.md) (2019) [2] Origin of the Heaviest Elements: the Rapid Neutron-Capture Process
+- [1812.04438](../papers/1812.04438.md) (2018) [2] Nuclear Astrophysics in the Multimessenger Era: A Partnership Made in Heaven
+- [1810.11561](../papers/1810.11561.md) (2018) [1] Mass Measurements of Neutron-Rich Gallium Isotopes Refine Production of Nuclei of the First r-Process Abundance Peak in ...
+- [1810.08996](../papers/1810.08996.md) (2018) [2] Weakly Bound Neutron-Rich Nuclei and Cosmic Phenomena
+- [1810.08402](../papers/1810.08402.md) (2018) [2] From Asymmetric to Symmetric Fission in the Fermium Isotopes within the Time-Dependent GCM Formalism
+- [1810.08133](../papers/1810.08133.md) (2018) [1] Using excitation-energy dependent fission yields to identify key fissioning nuclei in r-process nucleosynthesis
+- [1810.03156](../papers/1810.03156.md) (2018) [1] Predictions of nuclear $β$-decay half-lives with machine learning and their impacts on $r$ process
+- [1810.01456](../papers/1810.01456.md) (2018) [2] Nuclear Dipole Response in the Finite-Temperature Relativistic Time Blocking Approximation
+- [1809.01063](../papers/1809.01063.md) (2018) [2] Effects of neutrino mixing upon electron fraction in core collapse supernovae
+- [1809.00703](../papers/1809.00703.md) (2018) [2] FRIB and the GW170817 Kilonova
+- [1808.10459](../papers/1808.10459.md) (2018) [2] Fingerprints of heavy element nucleosynthesis in the late-time lightcurves of kilonovae
+- [1808.03249](../papers/1808.03249.md) (2018) [2] Neutrino induced reactions in core-collapse supernovae: effects on the electron fraction
+- [1808.00461](../papers/1808.00461.md) (2018) [2] Long-term GRMHD Simulations of Neutron Star Merger Accretion Disks: Implications for Electromagnetic Counterparts
+- [1807.06662](../papers/1807.06662.md) (2018) [2] Actinide Production in Neutron-Rich Ejecta of a Neutron Star Merger
+- [1806.09724](../papers/1806.09724.md) (2018) [2] Californium-254 and kilonova light curves
+- [1806.08955](../papers/1806.08955.md) (2018) [2] From Nuclei to the Cosmos: Tracing Heavy-Element Production with the Oldest Stars
+- [1805.04637](../papers/1805.04637.md) (2018) [1] r-Process Nucleosynthesis: Connecting Rare-Isotope Beam Facilities with the Cosmos
+- [1802.04398](../papers/1802.04398.md) (2018) [1] $β$-delayed fission in $r$-process nucleosynthesis
+- [1801.08940](../papers/1801.08940.md) (2018) [1] Precision mass measurements on neutron-rich rare-earth isotopes at JYFLTRAP - reduced neutron pairing and implications f...

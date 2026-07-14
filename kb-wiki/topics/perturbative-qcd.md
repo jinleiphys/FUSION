@@ -1,0 +1,108 @@
+# Perturbative QCD
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > [Quantum chromodynamics](quantum-chromodynamics.md) > Perturbative QCD
+
+**Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
+
+**Papers:** 2868 (showing first 100 of 2868)
+
+- [2307.14808](../papers/2307.14808.md) (2023) [3] Reexamining charm versus bottom quark energy loss inside a color-deconfined medium
+- [2307.15014](../papers/2307.15014.md) (2023) [2] Lattice quantum chromodynamics at large isospin density: 6144 pions in a box
+- [2307.15223](../papers/2307.15223.md) (2023) [2] Central Speed of Sound, Trace Anomaly and Observables of Neutron Stars from Perturbative Analyses of Scaled TOV Equation...
+- [2307.13810](../papers/2307.13810.md) (2023) [3] Dwarf (Twin) Neutron Stars I: Did GW170817 Involve One?
+- [2307.11886](../papers/2307.11886.md) (2023) [3] Neutron stars in the Witten-Sakai-Sugimoto model
+- [2307.11125](../papers/2307.11125.md) (2023) [1] Reexamining constraints on neutron star properties from perturbative QCD
+- [2307.08593](../papers/2307.08593.md) (2023) [3] Artificial Intelligence for the Electron Ion Collider (AI4EIC)
+- [2307.08883](../papers/2307.08883.md) (2023) [1] Triple Charmonium Production in pQCD
+- [2307.05086](../papers/2307.05086.md) (2023) [3] Neutron star equation of state: identifying hadronic matter characteristics
+- [2307.04396](../papers/2307.04396.md) (2023) [3] Diffusion and fluctuations of open charmed hadrons in an interacting hadronic medium
+- [2307.03885](../papers/2307.03885.md) (2023) [3] Hot QCD Phase Diagram From Holographic Einstein-Maxwell-Dilaton Models
+- [2307.01745](../papers/2307.01745.md) (2023) [2] Holographic baryons, dense matter and neutron star mergers
+- [2307.01145](../papers/2307.01145.md) (2023) [3] The Standard Model theory of neutron beta decay
+- [2307.00386](../papers/2307.00386.md) (2023) [3] Hybrid Stars Built with Density Dependent Models
+- [2306.14578](../papers/2306.14578.md) (2023) [3] Radiative Corrections: From Medium to High Energy Experiments
+- [2306.13900](../papers/2306.13900.md) (2023) [2] Electromagnetic Transition Form Factors of Baryon Resonances
+- [2306.13742](../papers/2306.13742.md) (2023) [3] Linear Boltzmann transport for jet propagation in the quark-gluon plasma: Inelastic processes and jet modification
+- [2306.10626](../papers/2306.10626.md) (2023) [2] Exclusive $η_c$ production from small-$x$ evolved Odderon at a electron-ion collider
+- [2306.10277](../papers/2306.10277.md) (2023) [3] Core-corona procedure and microcanonical hadronization to understand strangeness enhancement in proton-proton and heavy ...
+- [2306.09277](../papers/2306.09277.md) (2023) [2] Robust universal relations in neutron star asteroseismology
+- [2306.09514](../papers/2306.09514.md) (2023) [3] Open charm phenomenology with a multi-stage approach to relativistic heavy-ion collisions
+- [2306.08202](../papers/2306.08202.md) (2023) [3] Core States of Neutron Stars from Anatomizing their Scaled Structure Equations
+- [2306.08097](../papers/2306.08097.md) (2023) [3] Lectures on Field Theory and the Standard Model: A Symmetry-Oriented Approach
+- [2306.06218](../papers/2306.06218.md) (2023) [2] Evidence against a strong first-order phase transition in neutron star cores: impact of new data
+- [2306.02530](../papers/2306.02530.md) (2023) [3] Heavy quark drag and diffusion coefficients in the pre-hydrodynamic QCD plasma
+- [2306.03138](../papers/2306.03138.md) (2023) [3] Effective field theory for radiative corrections to charged-current processes I: Vector coupling
+- [2306.02396](../papers/2306.02396.md) (2023) [1] Perturbative QCD concerning light and heavy flavor in the EPOS4 framework
+- [2306.00870](../papers/2306.00870.md) (2023) [3] Constraining Palatini gravity with GR-independent equations of state for neutron stars
+- [2306.00192](../papers/2306.00192.md) (2023) [3] Holographic neutrino transport in dense strongly-coupled matter
+- [2305.15491](../papers/2305.15491.md) (2023) [3] Predictions for the sPHENIX physics program
+- [2305.14295](../papers/2305.14295.md) (2023) [2] Vector quarkonia at the LHC with JETHAD: A high-energy viewpoint
+- [2305.13177](../papers/2305.13177.md) (2023) [3] Production of bottomonia states in proton+proton and heavy-ion collisions
+- [2305.13182](../papers/2305.13182.md) (2023) [3] Inconsistencies in, and short pathlength correction to, $R_{AA}(p_T)$ in $\mathrm{A}+\mathrm{A}$ and $\mathrm{p} + \math...
+- [2305.12490](../papers/2305.12490.md) (2023) [3] On the momentum broadening of in-medium jet evolution using a light-front Hamiltonian approach
+- [2305.10750](../papers/2305.10750.md) (2023) [3] Bottomonium production in pp and heavy-ion collisions
+- [2305.11318](../papers/2305.11318.md) (2023) [3] Constraining $η/s$ through high-p$_\perp$ theory and data
+- [2305.10497](../papers/2305.10497.md) (2023) [3] The Photon Content of the Neutron
+- [2305.08979](../papers/2305.08979.md) (2023) [2] Is infrared-collinear safe information all you need for jet classification?
+- [2305.07411](../papers/2305.07411.md) (2023) [3] Phase Transition Phenomenology with Nonparametric Representations of the Neutron Star Equation of State
+- [2305.04715](../papers/2305.04715.md) (2023) [3] Dense Baryonic Matter Predicted in "Pseudo-Conformal Model
+- [2305.03687](../papers/2305.03687.md) (2023) [3] Multi-charmed and singled charmed hadrons from coalescence: yields and ratios in different collision systems at LHC
+- [2304.14887](../papers/2304.14887.md) (2023) [2] A contact interaction model for the $η$ and $η'$ mesons in a SDE-BSE approach to QCD: masses, decay widths and transitio...
+- [2304.13920](../papers/2304.13920.md) (2023) [2] Sound velocity peak and conformality in isospin QCD
+- [2304.12209](../papers/2304.12209.md) (2023) [2] Colour-Flavour Locked Quark Stars in Light of the Compact Object in HESS J1731-347 and the GW190814 Event
+- [2304.12469](../papers/2304.12469.md) (2023) [3] Polarised parton distribution functions and proton spin
+- [2304.08787](../papers/2304.08787.md) (2023) [3] Constraining the equation of state with heavy quarks in the quasi-particle model of QCD matter
+- [2304.06339](../papers/2304.06339.md) (2023) [3] Bayesian inference of the path-length dependence of jet energy loss
+- [2304.06161](../papers/2304.06161.md) (2023) [3] Analytic Solution for the Revised Helicity Evolution at Small $x$ and Large $N_c$: New Resummed Gluon-Gluon Polarized An...
+- [2304.05441](../papers/2304.05441.md) (2023) [3] Building an Equation of State Density Ladder
+- [2304.03712](../papers/2304.03712.md) (2023) [3] Medium induced gluon spectrum in dense inhomogeneous matter
+- [2304.02953](../papers/2304.02953.md) (2023) [3] B meson production in Pb+Pb at 5.02 ATeV at LHC: estimating the diffusion coefficient in the infinite mass limit
+- [2304.03302](../papers/2304.03302.md) (2023) [3] TMD Handbook
+- [2304.01898](../papers/2304.01898.md) (2023) [3] Hybrid stars with reactive interfaces: analysis within the Nambu-Jona-Lasinio model
+- [2303.17254](../papers/2303.17254.md) (2023) [3] Hot QCD White Paper
+- [2303.17518](../papers/2303.17518.md) (2023) [3] Constraining a relativistic mean field model using neutron star mass-radius measurements I: Nucleonic models
+- [2303.17021](../papers/2303.17021.md) (2023) [2] Theoretical and Experimental Constraints for the Equation of State of Dense and Hot Matter
+- [2303.15136](../papers/2303.15136.md) (2023) [3] Exploring QCD matter in extreme conditions with Machine Learning
+- [2303.14660](../papers/2303.14660.md) (2023) [3] Heavy-Flavour Jets in High-Energy Nuclear Collisions
+- [2303.14527](../papers/2303.14527.md) (2023) [3] Importance of higher orders in opacity in QGP tomography
+- [2303.12485](../papers/2303.12485.md) (2023) [2] Flavor hierarchy of parton energy loss in quark-gluon plasma from a Bayesian analysis
+- [2303.11356](../papers/2303.11356.md) (2023) [3] Strongly interacting matter exhibits deconfined behavior in massive neutron stars
+- [2303.08347](../papers/2303.08347.md) (2023) [3] Colloquium: Gravitational Form Factors of the Proton
+- [2303.07654](../papers/2303.07654.md) (2023) [3] The improved saturation model in nuclei
+- [2303.05599](../papers/2303.05599.md) (2023) [3] Simulating jets and heavy quarks in the Glasma using the colored particle-in-cell method
+- [2303.03773](../papers/2303.03773.md) (2023) [3] Search for jet quenching effects on the plain jet mass in Pb+Pb collisions at the LHC with a multiphase transport model
+- [2303.03914](../papers/2303.03914.md) (2023) [3] Jet polarisation in an anisotropic medium
+- [2303.03061](../papers/2303.03061.md) (2023) [2] Gluons, light and heavy quarks and their interactions in the instanton vacuum
+- [2303.02175](../papers/2303.02175.md) (2023) [1] Bayesian uncertainty quantification of perturbative QCD input to the neutron-star equation of state
+- [2302.14537](../papers/2302.14537.md) (2023) [3] Signatures of quark deconfinement through the r-modes of twin stars
+- [2303.00013](../papers/2303.00013.md) (2023) [3] What neutron stars tell about the hadron-quark phase transition: a Bayesian study
+- [2302.10117](../papers/2302.10117.md) (2023) [2] Implementation of Cluster expansion for hot QCD matter
+- [2302.08527](../papers/2302.08527.md) (2023) [2] Neutrino Structure Functions from GeV to EeV Energies
+- [2302.07696](../papers/2302.07696.md) (2023) [3] The effect of weak magnetic photon emission from quark-gluon plasma
+- [2302.07978](../papers/2302.07978.md) (2023) [2] Searching for phase transitions in neutron stars with modified Gaussian processes
+- [2302.03867](../papers/2302.03867.md) (2023) [3] Thermodynamic and hydrodynamic characteristics of interacting system formed in relativistic heavy ion collisions
+- [2302.03759](../papers/2302.03759.md) (2023) [3] Hadronic structure on the light-front VII. Pions and kaons and their partonic distributions
+- [2302.02329](../papers/2302.02329.md) (2023) [2] Probing the jet transport coefficient of cold nuclear matter in electron-ion collisions
+- [2301.12690](../papers/2301.12690.md) (2023) [3] High-Density behavior of symmetry energy and speed of sound in the dense matter within an effective chiral model
+- [2301.13253](../papers/2301.13253.md) (2023) [3] Dense Nuclear Matter Equation of State from Heavy-Ion Collisions
+- [2301.12076](../papers/2301.12076.md) (2023) [3] Difference between signal and background of the chiral magnetic effect relative to spectator and participant planes in i...
+- [2301.09692](../papers/2301.09692.md) (2023) [3] Bayesian refinement of covariant energy density functionals
+- [2301.08169](../papers/2301.08169.md) (2023) [2] Spanning the full range of neutron star properties within a microscopic description
+- [2301.07654](../papers/2301.07654.md) (2023) [2] Revisiting the stability of strange-dwarf stars and strange planets
+- [2301.07715](../papers/2301.07715.md) (2023) [3] Target mass corrections in lepton--nucleus DIS: theory and applications to nuclear PDFs
+- [2301.07777](../papers/2301.07777.md) (2023) [3] Nucleon Resonance Electroexcitation Amplitudes and Emergent Hadron Mass
+- [2301.06940](../papers/2301.06940.md) (2023) [3] Accessing Compton Form Factors at the Electron Ion Collider in China: An Impact study on $\textbf{Im} {\mathcal E}$
+- [2301.06154](../papers/2301.06154.md) (2023) [2] The Nambu-Goto string in QCD: Dipole interactions, scattering and entanglement
+- [2212.14856](../papers/2212.14856.md) (2022) [1] Effect of color superconductivity on the mass of hybrid neutron stars in an effective model with pQCD asymptotics
+- [2212.11184](../papers/2212.11184.md) (2022) [2] Non-strange quark stars within resummed QCD
+- [2212.10576](../papers/2212.10576.md) (2022) [2] Constraints on strong phase transitions in neutron stars
+- [2212.08848](../papers/2212.08848.md) (2022) [3] Hot Spot model of Nucleon and Double Parton Scattering
+- [2212.08933](../papers/2212.08933.md) (2022) [3] Spatial diffusion of heavy quarks in background magnetic field
+- [2212.07688](../papers/2212.07688.md) (2022) [3] Pion and photon beam initiated backward charmonium or lepton pair production
+- [2212.05944](../papers/2212.05944.md) (2022) [3] Comparing the MARTINI and CUJET models for jet-quenching: Medium modification of jets and jet substructure
+- [2212.04649](../papers/2212.04649.md) (2022) [3] Axial coupling constant in a magnetic background
+- [2212.04087](../papers/2212.04087.md) (2022) [3] Revisiting the centrality definition and observable centrality dependence of relativistic heavy-ion collisions in PACIAE...
+- [2212.02478](../papers/2212.02478.md) (2022) [3] Jet quenching for heavy flavors in $AA$ and $pp$ collisions
+- [2211.15553](../papers/2211.15553.md) (2022) [2] Quenching jets increases their flavor
+- [2211.15746](../papers/2211.15746.md) (2022) [3] Precision Studies of QCD in the Low Energy Domain of the EIC
+- [2211.13753](../papers/2211.13753.md) (2022) [1] Inverse Problem Approach for Non-Perturbative QCD: Theoretical Foundation

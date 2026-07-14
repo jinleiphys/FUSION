@@ -1,0 +1,108 @@
+# Giant resonances
+
+**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Giant resonances
+
+**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+
+**Papers:** 204 (showing first 100 of 204)
+
+- [2306.08377](../papers/2306.08377.md) (2023) [2] Manipulation of Giant Multipole Resonances via Vortex $γ$ Photons
+- [2304.13333](../papers/2304.13333.md) (2023) [2] Neutron-proton effective mass splitting in neutron-rich matter
+- [2304.13369](../papers/2304.13369.md) (2023) [2] Generalized time-dependent generator coordinate method for small and large amplitude collective motion
+- [2304.12475](../papers/2304.12475.md) (2023) [2] Ultra-peripheral nuclear collisions
+- [2208.09455](../papers/2208.09455.md) (2022) [2] Continuum random-phase approximation for (n,γ) reactions on neutron-rich nuclei: collective effects and resonances
+- [2207.06785](../papers/2207.06785.md) (2022) [1] Isoscalar Giant Resonances: Experimental Studies
+- [2206.03030](../papers/2206.03030.md) (2022) [1] Triaxiality induced monopole-quadrupole-hexadecupole coupling in the isoscalar giant resonances for $^{86}\textrm{Ge}$
+- [2204.08677](../papers/2204.08677.md) (2022) [2] Finite amplitude method on the deformed relativistic Hartree-Bogoliubov theory in continuum: The isoscalar giant monopol...
+- [2203.02848](../papers/2203.02848.md) (2022) [2] Theory of nuclear collective vibrations
+- [2202.13214](../papers/2202.13214.md) (2022) [1] Non-iterative finite amplitude methods for E1 and M1 giant resonances
+- [2202.00361](../papers/2202.00361.md) (2022) [1] Nuclear matrix elements for neutrinoless double beta decays and spin-dipole giant resonances
+- [2201.04578](../papers/2201.04578.md) (2022) [1] Theoretical Methods for Giant Resonances
+- [2108.04894](../papers/2108.04894.md) (2021) [2] Nuclear Dynamics and Reactions in the Ab Initio Symmetry-Adapted Framework
+- [2108.04900](../papers/2108.04900.md) (2021) [2] Emergent symplectic symmetry in atomic nuclei: Ab initio symmetry-adapted no-core shell model
+- [2107.10962](../papers/2107.10962.md) (2021) [2] Bayesian uncertainty quantification for nuclear matter incompressibility
+- [2107.00867](../papers/2107.00867.md) (2021) [2] Isovector giant monopole and quadrupole resonances in a Skyrme energy density functional approach with axial symmetry
+- [2103.04643](../papers/2103.04643.md) (2021) [1] Bayesian inference on the isospin splitting of nucleon effective mass from giant resonances in $^{208}$Pb
+- [2103.02596](../papers/2103.02596.md) (2021) [1] Microscopic theory of pygmy- and giant resonances:Accounting for complex 1p1h\otimes phonon and two-phonon configuration...
+- [2011.11943](../papers/2011.11943.md) (2020) [1] Learning the structure of giant resonances from their $γ$-decay
+- [2010.07790](../papers/2010.07790.md) (2020) [2] Nuclear collective dynamics in transport model with the lattice Hamiltonian method
+- [2009.07696](../papers/2009.07696.md) (2020) [2] Prior probability distributions of neutron star crust models
+- [2007.11194](../papers/2007.11194.md) (2020) [1] Nucleus giant resonances from an improved isospin-dependent Boltzmann-Uehling-Uhlenbeck transport approach
+- [2006.05217](../papers/2006.05217.md) (2020) [1] Constraining isovector nuclear interactions with giant resonances within a Bayesian approach
+- [2003.12522](../papers/2003.12522.md) (2020) [1] Reexamination of $^{6}$Li scattering as a Probe to Investigate the Isoscalar Giant Resonances in Nuclei
+- [2003.02553](../papers/2003.02553.md) (2020) [1] On microscopic theory of pygmy- and giant resonances
+- [2002.10048](../papers/2002.10048.md) (2020) [2] Nuclear multipole responses from chiral effective field theory interaction
+- [1912.05468](../papers/1912.05468.md) (2019) [2] Fission of relativistic nuclei with fragment excitation and reorientation
+- [1912.03932](../papers/1912.03932.md) (2019) [2] An overview of the scientific contribution of Andrea Vitturi to Nuclear Physics (being an account of the recent TNP19 me...
+- [1912.03050](../papers/1912.03050.md) (2019) [2] Volution of nuclear spin-orbit splittings with Skyrme functional SAMi-T
+- [1911.09795](../papers/1911.09795.md) (2019) [1] Quenching factor of Gamow-Teller and spin dipole giant resonances
+- [1909.07171](../papers/1909.07171.md) (2019) [1] Particle-vibration coupling for giant resonances beyond the diagonal approximation
+- [1905.03351](../papers/1905.03351.md) (2019) [2] Where we stand on structure dependence of ISGMR in the Zr-Mo region: Implications on K_\infty
+- [1905.02579](../papers/1905.02579.md) (2019) [1] Gross, intermediate and fine structure of nuclear giant resonances: Evidence for doorway states
+- [1903.01075](../papers/1903.01075.md) (2019) [2] Isoscalar dipole excitations in $^{16}$O
+- [1901.04371](../papers/1901.04371.md) (2019) [2] Tides in merging neutron stars: Consistency of the GW170817 event with experimental data on finite nuclei
+- [1812.09070](../papers/1812.09070.md) (2018) [1] Fine structure of giant resonances: What can be learned
+- [1812.07787](../papers/1812.07787.md) (2018) [2] Electromagnetic Excitations and Responses in Nuclei from First Principles
+- [1810.08942](../papers/1810.08942.md) (2018) [1] Effect of giant resonances on fluctuations of electromagnetic fields in heavy ion collisions
+- [1806.05980](../papers/1806.05980.md) (2018) [2] Isoscalar Giant Monopole, Dipole, and Quadrupole Resonances in $^{90,92}$Zr and $^{92}$Mo
+- [1801.03672](../papers/1801.03672.md) (2018) [1] The Compression-Mode Giant Resonances and Nuclear Incompressibility
+- [1712.04999](../papers/1712.04999.md) (2017) [2] Experimental signals for broken axial symmetry in excited heavy nuclei from the valley of stability
+- [1709.10272](../papers/1709.10272.md) (2017) [1] Charge-exchange dipole excitations in neutron-rich nuclei: $-1 \hbar ω_0$, anti-analog pygmy, and anti-analog giant reso...
+- [1705.07602](../papers/1705.07602.md) (2017) [2] Pairing in spherical nuclei: quasi-particle random phase approximation calculations with the Gogny interaction
+- [1704.08429](../papers/1704.08429.md) (2017) [2] From chiral NN(N) interactions to giant and pygmy resonances via extended RPA
+- [1704.08560](../papers/1704.08560.md) (2017) [2] Optimizing phonon space in the phonon-coupling model
+- [1703.10003](../papers/1703.10003.md) (2017) [1] Comment on "Spreading widths of giant resonances in spherical nuclei: damped transient response" by Severyukhin et al. [...
+- [1703.05710](../papers/1703.05710.md) (2017) [1] Spreading widths of giant resonances in spherical nuclei: damped transient response
+- [1702.00530](../papers/1702.00530.md) (2017) [2] Effects of meson-nucleon dynamics in a relativistic approach to medium-mass nuclei
+- [1701.04502](../papers/1701.04502.md) (2017) [1] Constraining simultaneously nuclear symmetry energy and neutron-proton effective mass splitting with nucleus giant reson...
+- [1612.05391](../papers/1612.05391.md) (2016) [2] Simultaneous microscopic description of nuclear level density and radiative strength function
+- [1612.04298](../papers/1612.04298.md) (2016) [2] Symmetry-guided large-scale shell-model theory
+- [1611.09037](../papers/1611.09037.md) (2016) [2] Nuclear scissors modes and hidden angular momenta
+- [1609.02341](../papers/1609.02341.md) (2016) [2] Quasi-particle random phase approximation with quasi-particle-vibration coupling: application to the Gamow-Teller respon...
+- [1603.04383](../papers/1603.04383.md) (2016) [2] Theoretical description of nuclear collective excitations
+- [1602.07518](../papers/1602.07518.md) (2016) [1] Application of an Extended Random Phase Approximation on Giant Resonances in Light, Medium and Heavy Mass Nuclei
+- [1602.00230](../papers/1602.00230.md) (2016) [2] Electron-neutrino scattering off nuclei from two different theoretical perspectives
+- [1601.06469](../papers/1601.06469.md) (2016) [1] Dynamical Coupling of Pygmy and Giant Resonances in Relativistic Coulomb Excitation
+- [1512.03619](../papers/1512.03619.md) (2015) [1] Isoscalar monopole and dipole excitations of cluster states and giant resonances in $^{12}$C
+- [1511.09366](../papers/1511.09366.md) (2015) [2] Shapes and Dynamics from the Time-Dependent Mean Field
+- [1509.08078](../papers/1509.08078.md) (2015) [2] Nuclear excitations as coupled one and two random--phase--approximation modes
+- [1509.02639](../papers/1509.02639.md) (2015) [2] Estimation of 2p2h effect on Gamow-Teller transition with Second Tamm-Dancoff-Approximation
+- [1507.04675](../papers/1507.04675.md) (2015) [1] Isospin splitting of nucleon effective mass from giant resonances in $^{208}$Pb
+- [1506.09195](../papers/1506.09195.md) (2015) [2] Nuclear Energy Density Functionals: What do we really know?
+- [1505.03245](../papers/1505.03245.md) (2015) [2] Microscopic description of large amplitude collective motion in the nuclear astrophysics context
+- [1504.01852](../papers/1504.01852.md) (2015) [2] The nuclear symmetry energy and other isovector observables from the point of view of nuclear structure
+- [1503.08095](../papers/1503.08095.md) (2015) [2] Neutrino-nucleus reactions and their role for supernova dynamics and nucleosynthesis
+- [1404.1828](../papers/1404.1828.md) (2014) [2] State-Selective High-Energy Excitation of Nuclei by Resonant Positron Annihilation
+- [1403.7574](../papers/1403.7574.md) (2014) [2] Neutron star structure and collective excitations of finite nuclei
+- [1311.1938](../papers/1311.1938.md) (2013) [2] Electromagnetic excitation of nuclei and neutron evaporation in ultrarelativistic ultraperipheral heavy ion collisions
+- [1310.6500](../papers/1310.6500.md) (2013) [2] Microscopic approach to coupled-channels effects on fusion
+- [1309.1572](../papers/1309.1572.md) (2013) [2] Symmetry energy from the nuclear collective motion: constraints from dipole, quadrupole, monopole and spin-dipole resona...
+- [1308.3687](../papers/1308.3687.md) (2013) [2] A semiclassical collective response of heated, asymmetric and rotating nuclei
+- [1307.7593](../papers/1307.7593.md) (2013) [1] A microscopic model beyond mean-field: from giant resonances properties to the fit of new effective interactions
+- [1307.7746](../papers/1307.7746.md) (2013) [1] Symmetry Energy Constraints from Giant Resonances: A Theoretical Overview
+- [1305.6437](../papers/1305.6437.md) (2013) [1] Shape evolution of giant resonances in Nd and Sm isotopes
+- [1305.3202](../papers/1305.3202.md) (2013) [2] Pygmies, giants, and skins as laboratory constraints on the equation of state of neutron-rich matter
+- [1304.0928](../papers/1304.0928.md) (2013) [2] Evaluation of the escape widths of the giant dipole resonances in the fermi-liquid theory
+- [1303.6098](../papers/1303.6098.md) (2013) [1] Giant Resonances based on Unitarily Transformed Two-Nucleon plus Phenomenological Three-Nucleon Interactions
+- [1301.2513](../papers/1301.2513.md) (2013) [2] A new type of nuclear collective motion - the spin scissors mode
+- [1211.1649](../papers/1211.1649.md) (2012) [2] Information content of the low-energy electric dipole strength: correlation analysis
+- [1209.4969](../papers/1209.4969.md) (2012) [2] Linear-response calculation in the time-dependent density functional theory
+- [1209.0971](../papers/1209.0971.md) (2012) [1] Continuum time-dependent Hartree-Fock for giant resonances in spherical nuclei
+- [1208.3417](../papers/1208.3417.md) (2012) [2] Pygmies, Giants, and Skins
+- [1202.3902](../papers/1202.3902.md) (2012) [2] Skyrme Interaction and Nuclear Matter Constraints
+- [1201.5723](../papers/1201.5723.md) (2012) [1] Study of nuclear giant resonances using a Fermi-liquid method
+- [1111.0619](../papers/1111.0619.md) (2011) [1] Microscopic theory of the γ-decay of nuclear giant resonances
+- [1009.0624](../papers/1009.0624.md) (2010) [2] Exploration of a modified density dependence in the Skyrme functional
+- [1008.3030](../papers/1008.3030.md) (2010) [1] Relativistic effective interaction for nuclei, giant resonances, and neutron stars
+- [1005.2349](../papers/1005.2349.md) (2010) [2] Particle-Hole Optical Model: Fantasy or Reality?
+- [1003.1683](../papers/1003.1683.md) (2010) [2] Nuclear collective excitations in Landau Fermi liquid theory
+- [1003.0547](../papers/1003.0547.md) (2010) [2] Solutions of the dispersion equation in the region of overlapping of zero-sound and particle-hole modes
+- [0912.3858](../papers/0912.3858.md) (2009) [1] Microscopic study of the isoscalar giant resonances in 208Pb induced by inelastic alpha scattering
+- [0912.3594](../papers/0912.3594.md) (2009) [1] Time scales in nuclear giant resonances
+- [0911.2410](../papers/0911.2410.md) (2009) [1] Skyrme-Random-Phase-Approximation description of spin-flip and orbital giant resonances
+- [0910.1674](../papers/0910.1674.md) (2009) [2] Large-scale second RPA calculations with finite-range interactions
+- [0909.1276](../papers/0909.1276.md) (2009) [2] Particle vibrational coupling in covariant density functional theory
+- [0903.0130](../papers/0903.0130.md) (2009) [2] Mass distributions in a variational model
+- [0807.0089](../papers/0807.0089.md) (2008) [1] A dependence of the enhancement factor in energy-weighted sums for isovector giant resonances
+- [0806.2886](../papers/0806.2886.md) (2008) [2] Nuclear symmetry energy probed by neutron skin thickness of nuclei
+- [0804.3385](../papers/0804.3385.md) (2008) [2] Variations on a theme by Skyrme

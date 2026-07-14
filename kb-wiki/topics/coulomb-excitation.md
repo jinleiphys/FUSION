@@ -1,0 +1,108 @@
+# Coulomb excitation
+
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Coulomb excitation
+
+**Broader:** [Nuclear reactions](nuclear-reactions.md)
+
+**Papers:** 117 (showing first 100 of 117)
+
+- [2307.05079](../papers/2307.05079.md) (2023) [2] Decay Pattern of Pygmy States Observed in Neutron-Rich 26 Ne
+- [2209.06298](../papers/2209.06298.md) (2022) [2] E2 Rotational Invariants of $0^+_1$ and $2^+_1$ states for $^{106}$Cd: the Emergence of Collective Rotation
+- [2207.13576](../papers/2207.13576.md) (2022) [2] Structure of $^{128,129,130}$Xe through multi-reference energy density functional calculations
+- [2201.00433](../papers/2201.00433.md) (2022) [2] Direct Nuclear Reactions
+- [2110.03932](../papers/2110.03932.md) (2021) [2] Coulomb and nuclear excitations of $^{70}$Zn and $^{68}$Ni at intermediate energy
+- [2109.07312](../papers/2109.07312.md) (2021) [2] First Measurement of the $B(E2; 3/2^- \rightarrow 1/2^-)$ Transition Strength in $^7$Be: Testing Ab Initio Predictions f...
+- [2109.06081](../papers/2109.06081.md) (2021) [2] Remeasuring the anomalously enhanced $B(E2; 2^+ \rightarrow 1^+)$ in $^8\mathrm{Li}$
+- [2106.00292](../papers/2106.00292.md) (2021) [2] Systematic calculations of reactions with exotic and stable nuclei to establish a unified theoretical approach
+- [2105.14597](../papers/2105.14597.md) (2021) [1] Cross section of the Coulomb excitation of $^{229m}$Th by low energy muons
+- [2103.07048](../papers/2103.07048.md) (2021) [2] On the timescale of quasi fission and Coulomb fission
+- [2009.05911](../papers/2009.05911.md) (2020) [2] Influence of triaxial deformation on wobbling motion in even-even nuclei
+- [2008.08870](../papers/2008.08870.md) (2020) [2] Octupole correlations in light actinides from the interacting boson model based on the Gogny energy density functional
+- [2008.01978](../papers/2008.01978.md) (2020) [2] The $\boldsymbol{^{29}}$F nucleus as a lighthouse on the coast of the island of inversion
+- [2006.01369](../papers/2006.01369.md) (2020) [2] Quantum Simulation of Nuclear Inelastic Scattering
+- [2005.03796](../papers/2005.03796.md) (2020) [1] Coulomb excitation of the $\left|T_z\right|=\frac{1}{2}$, $A=23$ mirror pair
+- [2001.09681](../papers/2001.09681.md) (2020) [1] Evolution of Octupole Deformation in Radium Nuclei from Coulomb Excitation of Radioactive $^{222}$Ra and $^{228}$Ra Beam...
+- [1912.09612](../papers/1912.09612.md) (2019) [2] Early signal of emerging nuclear collectivity in neutron-rich $^{129}$Sb
+- [1909.03270](../papers/1909.03270.md) (2019) [2] Evidence for rigid triaxial deformation in $^{76}$Ge from a model-independent analysis
+- [1908.02485](../papers/1908.02485.md) (2019) [2] Spectroscopy and excited-state $g$~factors in weakly collective ${^{111}}$Cd: confronting collective and microscopic mod...
+- [1811.07163](../papers/1811.07163.md) (2018) [2] Nuclear electromagnetic dipole response with the Self-Consistent Green's Function formalism
+- [1808.02282](../papers/1808.02282.md) (2018) [2] Studies of the Giant Dipole Resonance in $^{27}$Al, $^{40}$Ca, $^{56}$Fe, $^{58}$Ni and $^{208}$Pb with high energy-reso...
+- [1807.04349](../papers/1807.04349.md) (2018) [2] Models for nuclear reactions with weakly bound systems
+- [1804.02674](../papers/1804.02674.md) (2018) [1] From Coulomb excitation cross sections to non-resonant astrophysical rates in three-body systems: $^{17}$Ne case
+- [1804.01156](../papers/1804.01156.md) (2018) [1] Coulomb Excitation of Deuteron in Peripheral Collisions with a Heavy Ion
+- [1712.04999](../papers/1712.04999.md) (2017) [2] Experimental signals for broken axial symmetry in excited heavy nuclei from the valley of stability
+- [1709.07501](../papers/1709.07501.md) (2017) [2] Reorientation-effect measurement of the first 2$^+$ state in $^{12}$C: confirmation of oblate deformation
+- [1707.06072](../papers/1707.06072.md) (2017) [2] Low-lying electric-dipole strengths of Ca, Ni, and Sn isotopes imprinted on total reaction cross sections
+- [1704.05520](../papers/1704.05520.md) (2017) [1] Deuteron Coulomb Excitation in Peripheral Collisions with a Heavy Ion
+- [1610.04942](../papers/1610.04942.md) (2016) [2] Pigmy resonances, transfer, and separable potentials
+- [1605.05455](../papers/1605.05455.md) (2016) [2] Comment on "Solution of the $α$-Potential Mystery in the $γ$ Process and Its Impact on the Nd/Sm Ratio in Meteorites
+- [1603.04484](../papers/1603.04484.md) (2016) [2] Shape coexistence and the role of axial asymmetry in $^{72}$Ge
+- [1601.06469](../papers/1601.06469.md) (2016) [1] Dynamical Coupling of Pygmy and Giant Resonances in Relativistic Coulomb Excitation
+- [1601.04002](../papers/1601.04002.md) (2016) [2] Coulomb breakup of neutron-rich $^{29,30}$Na isotopes near the island of inversion
+- [1510.04087](../papers/1510.04087.md) (2015) [1] Nuclear polarization effects in Coulomb excitation studies
+- [1504.05335](../papers/1504.05335.md) (2015) [2] Well funneled nuclear structure landscape: renormalization
+- [1504.01669](../papers/1504.01669.md) (2015) [2] Evolution of E2 transition strength in deformed hafnium isotopes from new measurements on $^{172}$Hf, $^{174}$Hf, and $^...
+- [1404.7365](../papers/1404.7365.md) (2014) [2] Dual Origin of Pairing in Nuclei
+- [1404.1828](../papers/1404.1828.md) (2014) [2] State-Selective High-Energy Excitation of Nuclei by Resonant Positron Annihilation
+- [1403.2671](../papers/1403.2671.md) (2014) [1] Relativistic Coulomb excitation within Time Dependent Superfluid Local Density Approximation
+- [1307.4921](../papers/1307.4921.md) (2013) [2] Solution of the alpha-potential mystery in the gamma-process and its impact on the Nd/Sm ratio in meteorites
+- [1307.2706](../papers/1307.2706.md) (2013) [2] Electric dipole response of 208Pb from proton inelastic scattering: constraints on neutron skin thickness and symmetry e...
+- [1307.1715](../papers/1307.1715.md) (2013) [2] Population of rotational states in the ground-band of fission fragments
+- [1212.3379](../papers/1212.3379.md) (2012) [1] Pygmy and Giant Dipole Resonances by Coulomb Excitation using a Quantum Molecular Dynamics model
+- [1203.4630](../papers/1203.4630.md) (2012) [1] Quadrupole collectivity beyond N=28: Intermediate-energy Coulomb excitation of 47,48Ar
+- [1203.2155](../papers/1203.2155.md) (2012) [2] Pygmy dipole resonance in 208Pb
+- [1006.5297](../papers/1006.5297.md) (2010) [2] Observation of isotonic symmetry for enhanced quadrupole collectivity in neutron-rich 62,64,66Fe isotopes at N=40
+- [1004.1911](../papers/1004.1911.md) (2010) [2] Long range effects on the optical model of 6He around the Coulomb barrier
+- [0912.4057](../papers/0912.4057.md) (2009) [1] Coulomb Excitation of Multi-Phonon Levels of the Giant Dipole Resonance
+- [0908.4307](../papers/0908.4307.md) (2009) [1] Theory and Applications of Coulomb Excitation
+- [0808.3478](../papers/0808.3478.md) (2008) [1] Scaling laws and higher-order effects in Coulomb excitation of neutron halo nuclei
+- [0808.0361](../papers/0808.0361.md) (2008) [1] Coulomb excitation at intermediate energies
+- [0712.0484](../papers/0712.0484.md) (2007) [1] On the Analysis of Intermediate-Energy Coulomb Excitation Experiments
+- [0709.3972](../papers/0709.3972.md) (2007) [2] $^{64}$Ni+$^{64}$Ni fusion reaction calculated with the density-constrained time-dependent Hartree-Fock formalism
+- [0708.3007](../papers/0708.3007.md) (2007) [1] On the measurement of B(E2, 0+ -> 2+) using intermediate-energy Coulomb excitation
+- [0705.1313](../papers/0705.1313.md) (2007) [2] Study of $^{64}$Ni+$^{132}$Sn Fusion with Density Constrained TDHF Formalism
+- [0704.0060](../papers/0704.0060.md) (2007) [1] Coulomb excitation of unstable nuclei at intermediate energies
+- [2309.09445](../papers/2309.09445.md) (0000) [2] 2309.09445
+- [2311.08864](../papers/2311.08864.md) (0000) [2] 2311.08864
+- [2311.14525](../papers/2311.14525.md) (0000) [2] 2311.14525
+- [2407.03503](../papers/2407.03503.md) (0000) [2] 2407.03503
+- [2408.06940](../papers/2408.06940.md) (0000) [2] 2408.06940
+- [2408.08410](../papers/2408.08410.md) (0000) [1] 2408.08410
+- [2411.10598](../papers/2411.10598.md) (0000) [2] 2411.10598
+- [2502.18076](../papers/2502.18076.md) (0000) [2] 2502.18076
+- [2503.22766](../papers/2503.22766.md) (0000) [2] 2503.22766
+- [2505.19229](../papers/2505.19229.md) (0000) [2] 2505.19229
+- [2506.03236](../papers/2506.03236.md) (0000) [2] 2506.03236
+- [2508.09643](../papers/2508.09643.md) (0000) [1] 2508.09643
+- [2601.12829](../papers/2601.12829.md) (0000) [2] 2601.12829
+- [2603.17414](../papers/2603.17414.md) (0000) [2] 2603.17414
+- [2603.24022](../papers/2603.24022.md) (0000) [1] 2603.24022
+- [2603.24341](../papers/2603.24341.md) (0000) [2] 2603.24341
+- [2604.10972](../papers/2604.10972.md) (0000) [2] 2604.10972
+- [hep-ph/0112363](../papers/hep-ph/0112363.md) (0000) [1] hep-ph/0112363
+- [hep-ph/9611270](../papers/hep-ph/9611270.md) (0000) [2] hep-ph/9611270
+- [nucl-ex/9803009](../papers/nucl-ex/9803009.md) (0000) [2] nucl-ex/9803009
+- [nucl-th/0008025](../papers/nucl-th/0008025.md) (0000) [2] nucl-th/0008025
+- [nucl-th/0009025](../papers/nucl-th/0009025.md) (0000) [1] nucl-th/0009025
+- [nucl-th/0104014](../papers/nucl-th/0104014.md) (0000) [1] nucl-th/0104014
+- [nucl-th/0111053](../papers/nucl-th/0111053.md) (0000) [1] nucl-th/0111053
+- [nucl-th/0205031](../papers/nucl-th/0205031.md) (0000) [2] nucl-th/0205031
+- [nucl-th/0210060](../papers/nucl-th/0210060.md) (0000) [1] nucl-th/0210060
+- [nucl-th/0301057](../papers/nucl-th/0301057.md) (0000) [1] nucl-th/0301057
+- [nucl-th/0302062](../papers/nucl-th/0302062.md) (0000) [1] nucl-th/0302062
+- [nucl-th/0304081](../papers/nucl-th/0304081.md) (0000) [2] nucl-th/0304081
+- [nucl-th/0305001](../papers/nucl-th/0305001.md) (0000) [1] nucl-th/0305001
+- [nucl-th/0305080](../papers/nucl-th/0305080.md) (0000) [1] nucl-th/0305080
+- [nucl-th/0408049](../papers/nucl-th/0408049.md) (0000) [2] nucl-th/0408049
+- [nucl-th/0410112](../papers/nucl-th/0410112.md) (0000) [1] nucl-th/0410112
+- [nucl-th/0412092](../papers/nucl-th/0412092.md) (0000) [2] nucl-th/0412092
+- [nucl-th/0501024](../papers/nucl-th/0501024.md) (0000) [1] nucl-th/0501024
+- [nucl-th/0508015](../papers/nucl-th/0508015.md) (0000) [2] nucl-th/0508015
+- [nucl-th/0509036](../papers/nucl-th/0509036.md) (0000) [2] nucl-th/0509036
+- [nucl-th/0512016](../papers/nucl-th/0512016.md) (0000) [2] nucl-th/0512016
+- [nucl-th/0604010](../papers/nucl-th/0604010.md) (0000) [2] nucl-th/0604010
+- [nucl-th/0605053](../papers/nucl-th/0605053.md) (0000) [1] nucl-th/0605053
+- [nucl-th/0610082](../papers/nucl-th/0610082.md) (0000) [2] nucl-th/0610082
+- [nucl-th/0703055](../papers/nucl-th/0703055.md) (0000) [1] nucl-th/0703055
+- [nucl-th/9505006](../papers/nucl-th/9505006.md) (0000) [1] nucl-th/9505006
+- [nucl-th/9601039](../papers/nucl-th/9601039.md) (0000) [2] nucl-th/9601039

@@ -1,0 +1,192 @@
+# Nuclear Physics: PhySH concept tree
+
+**Total concepts:** 180
+**Concepts with topic pages:** 108
+
+## Core concepts
+
+- [Ab initio calculations](../topics/ab-initio-calculations.md) (311 papers)
+- [Cluster models](../topics/cluster-models.md) (68 papers)
+- [Collective models](../topics/collective-models.md) (29 papers)
+- [Hydrodynamic models](../topics/hydrodynamic-models.md) (78 papers)
+- [Hyperspherical method](../topics/hyperspherical-method.md) (6 papers)
+- [Lattice gauge theory](../topics/lattice-gauge-theory.md) (154 papers)
+- Models based on symmetries
+- [Monte Carlo methods](../topics/monte-carlo-methods.md) (85 papers)
+  - Entropic sampling methods
+  - Heatbath algorithm
+  - Hybrid Monte Carlo algorithm
+  - [Langevin algorithm](../topics/langevin-algorithm.md) (5 papers)
+  - [Metropolis algorithm](../topics/metropolis-algorithm.md) (7 papers)
+  - [Path-integral Monte Carlo](../topics/path-integral-monte-carlo.md) (16 papers)
+  - [Quantum Monte Carlo](../topics/quantum-monte-carlo.md) (274 papers)
+    - Diffusion quantum Monte Carlo
+  - [Simulated annealing](../topics/simulated-annealing.md) (20 papers)
+- Multipole matrix elements
+- [Nuclear astrophysics](../topics/nuclear-astrophysics.md) (239 papers)
+  - Hydrostatic stellar nucleosynthesis
+    - H & He burning
+    - [s process](../topics/s-process.md) (58 papers)
+  - [Nuclear matter in neutron stars](../topics/nuclear-matter-in-neutron-stars.md) (8 papers)
+  - Nuclear physics of explosive environments
+  - Nucleosynthesis in explosive environments
+    - [Explosive burning](../topics/explosive-burning.md) (7 papers)
+    - [r process](../topics/r-process.md) (375 papers)
+    - [rp process](../topics/rp-process.md) (43 papers)
+  - [Solar neutrinos](../topics/solar-neutrinos.md) (91 papers)
+- Nuclear data analysis & compilation
+- [Nuclear density functional theory](../topics/nuclear-density-functional-theory.md) (153 papers)
+- [Nuclear engineering](../topics/nuclear-engineering.md) (7 papers)
+  - Isotope separation & enrichment
+  - [Neutron physics](../topics/neutron-physics.md) (7 papers)
+  - Nuclear explosions
+  - [Nuclear reactors](../topics/nuclear-reactors.md) (25 papers)
+    - Radioactive waste
+    - Reactor fuels & coolants
+    - Reactor instrumentation
+    - Theory, design & simulation of reactors
+- [Nuclear many-body theory](../topics/nuclear-many-body-theory.md) (33 papers)
+- Nuclear mass ranges
+  - 150 ≤ A ≤ 189
+  - 190 ≤ A ≤ 219
+  - 20 ≤ A ≤ 38
+  - 39 ≤ A ≤ 58
+  - 59 ≤ A ≤ 89
+  - 6 ≤ A ≤ 19
+  - 90 ≤ A ≤ 149
+  - [A ≤ 5](../topics/a-5.md) (205 papers)
+  - A ≥ 220
+- [Nuclear reactions](../topics/nuclear-reactions.md) (535 papers)
+  - [Breakup reactions](../topics/breakup-reactions.md) (377 papers)
+  - [Charge-exchange reactions](../topics/charge-exchange-reactions.md) (79 papers)
+  - [Coulomb dissociation](../topics/coulomb-dissociation.md) (91 papers)
+  - [Coulomb excitation](../topics/coulomb-excitation.md) (117 papers)
+  - [Direct reactions](../topics/direct-reactions.md) (244 papers)
+  - [Elastic scattering reactions](../topics/elastic-scattering-reactions.md) (7 papers)
+  - [Electron-ion collisions](../topics/electron-ion-collisions.md) (19 papers)
+  - [Fission](../topics/fission.md) (1446 papers)
+    - [Scission point](../topics/scission-point.md) (40 papers)
+  - [Gamma-ray strength functions](../topics/gamma-ray-strength-functions.md) (7 papers)
+  - H & He induced nuclear reactions
+  - Inelastic scattering reactions
+  - Lepton induced nuclear reactions
+  - Low & intermediate energy heavy-ion reactions
+    - Heavy-ion reaction mechanisms
+  - Meson & hyperon induced nuclear reactions
+  - Models & methods for nuclear reactions
+  - [Nuclear fragmentation](../topics/nuclear-fragmentation.md) (58 papers)
+  - [Nuclear fusion](../topics/nuclear-fusion.md) (1624 papers)
+    - [Fusion evaporation reactions](../topics/fusion-evaporation-reactions.md) (12 papers)
+  - [Nuclear reaction rates](../topics/nuclear-reaction-rates.md) (63 papers)
+  - Nuclear transition rates
+  - Nucleon induced nuclear reactions
+  - [Photonuclear reactions](../topics/photonuclear-reactions.md) (36 papers)
+  - [Polarization phenomena](../topics/polarization-phenomena.md) (39 papers)
+  - QCD in nuclear reactions
+  - [Radiative capture](../topics/radiative-capture.md) (206 papers)
+  - Resonance reactions
+  - [S-factor](../topics/s-factor.md) (200 papers)
+  - Statistical phenomena & chaos
+  - [Transfer reactions](../topics/transfer-reactions.md) (214 papers)
+    - [Knockout reactions](../topics/knockout-reactions.md) (113 papers)
+  - Unstable nuclei induced nuclear reactions
+    - [Shape coexistence](../topics/shape-coexistence.md) (212 papers)
+    - Shape development
+- Nuclear structure & decays
+  - [Alpha decay](../topics/alpha-decay.md) (171 papers)
+  - [Beta decay](../topics/beta-decay.md) (842 papers)
+    - [Double beta decay](../topics/double-beta-decay.md) (435 papers)
+    - [Neutrinoless double beta decay](../topics/neutrinoless-double-beta-decay.md) (282 papers)
+  - Binding energy & masses
+  - [Charge distributions](../topics/charge-distributions.md) (113 papers)
+  - Collective levels
+  - Coulomb energies & analogue states
+  - [Electromagnetic transitions](../topics/electromagnetic-transitions.md) (103 papers)
+  - [Electron & muon capture](../topics/electron-muon-capture.md) (306 papers)
+  - Electroweak interactions in nuclear physics
+  - [Energy levels](../topics/energy-levels.md) (381 papers)
+  - [Few-body systems](../topics/few-body-systems.md) (141 papers)
+    - [Efimov states](../topics/efimov-states.md) (63 papers)
+  - [Giant resonances](../topics/giant-resonances.md) (204 papers)
+  - Heavy-particle decays
+  - [High spin states](../topics/high-spin-states.md) (72 papers)
+  - Hypernuclei & mesic nuclei
+  - Isomer decays
+  - [Level densities](../topics/level-densities.md) (150 papers)
+  - Lifetimes & widths
+    - Lifetime of molecular or ionic species
+  - Neutron decay time
+  - [Neutron skin thickness](../topics/neutron-skin-thickness.md) (303 papers)
+  - [Nuclear binding](../topics/nuclear-binding.md) (189 papers)
+  - [Nuclear charge distribution](../topics/nuclear-charge-distribution.md) (11 papers)
+    - [Nuclear charge radii](../topics/nuclear-charge-radii.md) (79 papers)
+  - [Nuclear forces](../topics/nuclear-forces.md) (409 papers)
+  - [Nuclear matter](../topics/nuclear-matter.md) (4107 papers)
+    - [Asymmetric nuclear matter](../topics/asymmetric-nuclear-matter.md) (452 papers)
+    - [Equations of state of nuclear matter](../topics/equations-of-state-of-nuclear-matter.md) (10 papers)
+    - [Symmetry energy](../topics/symmetry-energy.md) (1367 papers)
+  - [Nuclear radii](../topics/nuclear-radii.md) (57 papers)
+  - Nuclear shapes and moments
+  - Nuclear spin & parity
+  - [Nucleon distribution](../topics/nucleon-distribution.md) (29 papers)
+  - [Nucleon-nucleon interactions](../topics/nucleon-nucleon-interactions.md) (305 papers)
+  - Nucleus-neutrino interactions
+  - [Proton emission](../topics/proton-emission.md) (99 papers)
+  - Rare & new isotopes
+  - Spectroscopic factors & electromagnetic moments
+- Nuclear tests of fundamental interactions
+- Optical, coupled-channel & distorted wave models
+- [Parity](../topics/parity.md) (2018 papers)
+- Particle sources & targets
+- Radiation detectors
+- [Radioactive beams](../topics/radioactive-beams.md) (60 papers)
+- [Random matrix theory](../topics/random-matrix-theory.md) (82 papers)
+- [Relativistic heavy-ion collisions](../topics/relativistic-heavy-ion-collisions.md) (1969 papers)
+  - [Charged-particle multiplicity](../topics/charged-particle-multiplicity.md) (141 papers)
+  - [Collective flow](../topics/collective-flow.md) (346 papers)
+  - [Hard scattering](../topics/hard-scattering.md) (119 papers)
+  - [Jet quenching](../topics/jet-quenching.md) (526 papers)
+  - Jets & heavy flavor physics
+  - Particle & resonance production
+  - Particle correlations & fluctuations
+  - Photon, lepton & quark production
+  - [QCD phase transitions](../topics/qcd-phase-transitions.md) (31 papers)
+    - [Color deconfinement](../topics/color-deconfinement.md) (17 papers)
+  - [Quark-gluon plasma](../topics/quark-gluon-plasma.md) (2805 papers)
+  - [Transport in heavy-ion collisions](../topics/transport-in-heavy-ion-collisions.md) (6 papers)
+    - Ion-induced tracks
+- [Shell model](../topics/shell-model.md) (2308 papers)
+- Spectrometers & spectroscopic techniques
+- [Spin](../topics/spin.md) (5935 papers)
+  - [Nucleon spin structure](../topics/nucleon-spin-structure.md) (27 papers)
+    - Helicity distribution functions
+    - Transversity distribution functions
+- [Strong interaction](../topics/strong-interaction.md) (951 papers)
+  - [Color confinement](../topics/color-confinement.md) (40 papers)
+  - Multiquark bound states
+  - [Quantum chromodynamics](../topics/quantum-chromodynamics.md) (15203 papers)
+    - [Chiral perturbation theory](../topics/chiral-perturbation-theory.md) (1328 papers)
+    - [Generalized parton distributions](../topics/generalized-parton-distributions.md) (658 papers)
+    - [Heavy quark effective theory](../topics/heavy-quark-effective-theory.md) (32 papers)
+    - [Lattice QCD](../topics/lattice-qcd.md) (2455 papers)
+    - [Nonrelativistic QCD](../topics/nonrelativistic-qcd.md) (295 papers)
+    - [Parton distribution functions](../topics/parton-distribution-functions.md) (521 papers)
+      - [Fragmentation functions](../topics/fragmentation-functions.md) (333 papers)
+      - [Spin-dependent parton distribution functions](../topics/spin-dependent-parton-distribution-functions.md) (9 papers)
+      - [Transverse momentum dependent distribution](../topics/transverse-momentum-dependent-distribution.md) (13 papers)
+    - [Perturbative QCD](../topics/perturbative-qcd.md) (2868 papers)
+    - [QCD phenomenology](../topics/qcd-phenomenology.md) (17 papers)
+  - Quark & gluon jets
+  - [Quark matter](../topics/quark-matter.md) (1653 papers)
+  - [Quark model](../topics/quark-model.md) (1313 papers)
+  - [Quark-gluon plasma](../topics/quark-gluon-plasma.md) (2805 papers)
+- Synthesis of new superheavy elements
+- Thermal & statistical models
+
+## Neighbor topics (cross-discipline)
+- [Big bang nucleosynthesis](../topics/big-bang-nucleosynthesis.md) (171 papers)
+- [Effective field theory](../topics/effective-field-theory.md) (2497 papers)
+- [Neutron star crust](../topics/neutron-star-crust.md) (146 papers)
+- [Neutron stars & pulsars](../topics/neutron-stars-pulsars.md) (5 papers)
+
+*Index generated from PhySH v2.8.0 Nuclear Physics concept scheme. Data: kb-wiki/physh-nuclear.yaml.*

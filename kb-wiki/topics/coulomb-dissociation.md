@@ -1,0 +1,99 @@
+# Coulomb dissociation
+
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Coulomb dissociation
+
+**Broader:** [Nuclear reactions](nuclear-reactions.md)
+
+**Papers:** 91
+
+- [2211.03968](../papers/2211.03968.md) (2022) [2] Electromagnetic fields in ultra-peripheral relativistic heavy-ion collisions
+- [2206.07546](../papers/2206.07546.md) (2022) [2] Calculation of Coulomb breakup cross sections using a new Coulomb dynamical polarization potential
+- [2009.00658](../papers/2009.00658.md) (2020) [2] Microscopic investigation of the $^8$Li($n, γ$)$^9$Li reaction
+- [2005.05605](../papers/2005.05605.md) (2020) [2] Systematic study on the role of various higher-order processes in the breakup of weakly-bound projectiles
+- [2004.14612](../papers/2004.14612.md) (2020) [2] Determining $B(E1)$ distributions of weakly bound nuclei from breakup cross sections using Continuum Discretized Coupled...
+- [1812.08482](../papers/1812.08482.md) (2018) [2] Low-lying dipole strengths for probable $p$-wave one-neutron halos in the medium mass region
+- [1810.08996](../papers/1810.08996.md) (2018) [2] Weakly Bound Neutron-Rich Nuclei and Cosmic Phenomena
+- [1804.02674](../papers/1804.02674.md) (2018) [2] From Coulomb excitation cross sections to non-resonant astrophysical rates in three-body systems: $^{17}$Ne case
+- [1708.07152](../papers/1708.07152.md) (2017) [1] Determination of the $^{36}$Mg($n,γ$)$^{37}$Mg reaction rate from Coulomb dissociation of $^{37}$Mg
+- [1706.09687](../papers/1706.09687.md) (2017) [2] Structural effects of $^{34}$Na in the $^{33}$Na(n,$γ)^{34}$Na radiative capture reaction
+- [1702.08605](../papers/1702.08605.md) (2017) [2] Effective field theory description of halo nuclei
+- [1605.08286](../papers/1605.08286.md) (2016) [1] Reply to comments on `Structure effects in the $^{15}$N($n,γ$)$^{16}$N radiative capture reaction from the Coulomb disso...
+- [1605.07499](../papers/1605.07499.md) (2016) [1] Comment on "Structure effects in the $^{15}$N(n,$γ$)$^{16}$N radiative capture reaction from the Coulomb dissociation of...
+- [1601.04002](../papers/1601.04002.md) (2016) [2] Coulomb breakup of neutron-rich $^{29,30}$Na isotopes near the island of inversion
+- [1511.08859](../papers/1511.08859.md) (2015) [2] Indirect methods in nuclear astrophysics
+- [1510.02897](../papers/1510.02897.md) (2015) [1] Structure effects in the $^{15}$N($n,γ$)$^{16}$N radiative capture reaction from the Coulomb dissociation of $^{16}$N
+- [1508.02697](../papers/1508.02697.md) (2015) [2] Properties of Lithium-11 and Carbon-22 at leading order in halo effective field theory
+- [1310.2165](../papers/1310.2165.md) (2013) [1] Measurement of the 92,93,94,100Mo(g,n) reactions by Coulomb Dissociation
+- [1302.4762](../papers/1302.4762.md) (2013) [1] Carbon-19 in Halo EFT: Effective-range parameters from Coulomb-dissociation experiments
+- [1204.2346](../papers/1204.2346.md) (2012) [1] Structure and Coulomb dissociation of 23O within the quark-meson coupling model
+- [1105.4942](../papers/1105.4942.md) (2011) [2] Coulomb breakup of $^6\rm{Li}$ into $α\,+\,\rm{d}$ in the field of ion $^{208}\rm{Pb}$
+- [1103.4189](../papers/1103.4189.md) (2011) [1] Coulomb dissociation of the deformed halo nucleus 31Ne
+- [1103.1087](../papers/1103.1087.md) (2011) [2] Electric properties of the Beryllium-11 system in Halo EFT
+- [0908.3472](../papers/0908.3472.md) (2009) [1] Coulomb Dissociation of $^{15}$C and Radiative Neutron Capture on $^{14}$C
+- [0806.0873](../papers/0806.0873.md) (2008) [1] Extracting (n,g) direct capture cross sections from Coulomb dissociation: application to $^{14}$C(n,$γ$)$^{15}$C
+- [0804.2065](../papers/0804.2065.md) (2008) [1] Coulomb dissociation of 9Li and the rate of the 8Li(n,g)9Li reaction
+- [0710.4944](../papers/0710.4944.md) (2007) [2] Evidence for higher order QED in e+ e- pair production at RHIC
+- [0707.0687](../papers/0707.0687.md) (2007) [2] The Dissociation of 8B in the Coulomb Field and the Validity of the CD Method
+- [0705.3307](../papers/0705.3307.md) (2007) [1] Coulomb dissociation, a tool for nuclear astrophysics
+- [2402.06755](../papers/2402.06755.md) (0000) [1] 2402.06755
+- [2407.03044](../papers/2407.03044.md) (0000) [2] 2407.03044
+- [2407.16775](../papers/2407.16775.md) (0000) [2] 2407.16775
+- [astro-ph/0107226](../papers/astro-ph/0107226.md) (0000) [2] astro-ph/0107226
+- [astro-ph/9909317](../papers/astro-ph/9909317.md) (0000) [1] astro-ph/9909317
+- [nucl-ex/0010014](../papers/nucl-ex/0010014.md) (0000) [2] nucl-ex/0010014
+- [nucl-ex/0101010](../papers/nucl-ex/0101010.md) (0000) [2] nucl-ex/0101010
+- [nucl-ex/0104003](../papers/nucl-ex/0104003.md) (0000) [2] nucl-ex/0104003
+- [nucl-ex/0303009](../papers/nucl-ex/0303009.md) (0000) [1] nucl-ex/0303009
+- [nucl-ex/0404022](../papers/nucl-ex/0404022.md) (0000) [1] nucl-ex/0404022
+- [nucl-ex/0502020](../papers/nucl-ex/0502020.md) (0000) [1] nucl-ex/0502020
+- [nucl-ex/0605001](../papers/nucl-ex/0605001.md) (0000) [1] nucl-ex/0605001
+- [nucl-ex/9712002](../papers/nucl-ex/9712002.md) (0000) [2] nucl-ex/9712002
+- [nucl-th/0001045](../papers/nucl-th/0001045.md) (0000) [2] nucl-th/0001045
+- [nucl-th/0008025](../papers/nucl-th/0008025.md) (0000) [1] nucl-th/0008025
+- [nucl-th/0008033](../papers/nucl-th/0008033.md) (0000) [1] nucl-th/0008033
+- [nucl-th/0011061](../papers/nucl-th/0011061.md) (0000) [2] nucl-th/0011061
+- [nucl-th/0101033](../papers/nucl-th/0101033.md) (0000) [2] nucl-th/0101033
+- [nucl-th/0108013](../papers/nucl-th/0108013.md) (0000) [1] nucl-th/0108013
+- [nucl-th/0201072](../papers/nucl-th/0201072.md) (0000) [1] nucl-th/0201072
+- [nucl-th/0203062](../papers/nucl-th/0203062.md) (0000) [1] nucl-th/0203062
+- [nucl-th/0205079](../papers/nucl-th/0205079.md) (0000) [2] nucl-th/0205079
+- [nucl-th/0207045](../papers/nucl-th/0207045.md) (0000) [2] nucl-th/0207045
+- [nucl-th/0209023](../papers/nucl-th/0209023.md) (0000) [2] nucl-th/0209023
+- [nucl-th/0209036](../papers/nucl-th/0209036.md) (0000) [2] nucl-th/0209036
+- [nucl-th/0304041](../papers/nucl-th/0304041.md) (0000) [2] nucl-th/0304041
+- [nucl-th/0304054](../papers/nucl-th/0304054.md) (0000) [2] nucl-th/0304054
+- [nucl-th/0307024](../papers/nucl-th/0307024.md) (0000) [2] nucl-th/0307024
+- [nucl-th/0308002](../papers/nucl-th/0308002.md) (0000) [1] nucl-th/0308002
+- [nucl-th/0312101](../papers/nucl-th/0312101.md) (0000) [2] nucl-th/0312101
+- [nucl-th/0402012](../papers/nucl-th/0402012.md) (0000) [2] nucl-th/0402012
+- [nucl-th/0408049](../papers/nucl-th/0408049.md) (0000) [1] nucl-th/0408049
+- [nucl-th/0410109](../papers/nucl-th/0410109.md) (0000) [2] nucl-th/0410109
+- [nucl-th/0411069](../papers/nucl-th/0411069.md) (0000) [2] nucl-th/0411069
+- [nucl-th/0503053](../papers/nucl-th/0503053.md) (0000) [2] nucl-th/0503053
+- [nucl-th/0504068](../papers/nucl-th/0504068.md) (0000) [2] nucl-th/0504068
+- [nucl-th/0506008](../papers/nucl-th/0506008.md) (0000) [1] nucl-th/0506008
+- [nucl-th/0506073](../papers/nucl-th/0506073.md) (0000) [2] nucl-th/0506073
+- [nucl-th/0601004](../papers/nucl-th/0601004.md) (0000) [2] nucl-th/0601004
+- [nucl-th/0603007](../papers/nucl-th/0603007.md) (0000) [2] nucl-th/0603007
+- [nucl-th/9402003](../papers/nucl-th/9402003.md) (0000) [1] nucl-th/9402003
+- [nucl-th/9405023](../papers/nucl-th/9405023.md) (0000) [1] nucl-th/9405023
+- [nucl-th/9502020](../papers/nucl-th/9502020.md) (0000) [2] nucl-th/9502020
+- [nucl-th/9502036](../papers/nucl-th/9502036.md) (0000) [2] nucl-th/9502036
+- [nucl-th/9601039](../papers/nucl-th/9601039.md) (0000) [1] nucl-th/9601039
+- [nucl-th/9607023](../papers/nucl-th/9607023.md) (0000) [2] nucl-th/9607023
+- [nucl-th/9610035](../papers/nucl-th/9610035.md) (0000) [2] nucl-th/9610035
+- [nucl-th/9610044](../papers/nucl-th/9610044.md) (0000) [2] nucl-th/9610044
+- [nucl-th/9611054](../papers/nucl-th/9611054.md) (0000) [2] nucl-th/9611054
+- [nucl-th/9708034](../papers/nucl-th/9708034.md) (0000) [2] nucl-th/9708034
+- [nucl-th/9710060](../papers/nucl-th/9710060.md) (0000) [2] nucl-th/9710060
+- [nucl-th/9711050](../papers/nucl-th/9711050.md) (0000) [1] nucl-th/9711050
+- [nucl-th/9804057](../papers/nucl-th/9804057.md) (0000) [2] nucl-th/9804057
+- [nucl-th/9805045](../papers/nucl-th/9805045.md) (0000) [1] nucl-th/9805045
+- [nucl-th/9809052](../papers/nucl-th/9809052.md) (0000) [1] nucl-th/9809052
+- [nucl-th/9812065](../papers/nucl-th/9812065.md) (0000) [2] nucl-th/9812065
+- [nucl-th/9901034](../papers/nucl-th/9901034.md) (0000) [1] nucl-th/9901034
+- [nucl-th/9905066](../papers/nucl-th/9905066.md) (0000) [1] nucl-th/9905066
+- [nucl-th/9906097](../papers/nucl-th/9906097.md) (0000) [1] nucl-th/9906097
+- [nucl-th/9910027](../papers/nucl-th/9910027.md) (0000) [2] nucl-th/9910027
+- [nucl-th/9910071](../papers/nucl-th/9910071.md) (0000) [2] nucl-th/9910071
+- [nucl-th/9912052](../papers/nucl-th/9912052.md) (0000) [1] nucl-th/9912052

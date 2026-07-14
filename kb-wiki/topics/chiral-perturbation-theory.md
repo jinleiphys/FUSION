@@ -1,0 +1,108 @@
+# Chiral perturbation theory
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > [Quantum chromodynamics](quantum-chromodynamics.md) > Chiral perturbation theory
+
+**Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
+
+**Papers:** 1328 (showing first 100 of 1328)
+
+- [2307.08620](../papers/2307.08620.md) (2023) [2] Magnetic polarizability of a charged pion from four-point functions in lattice QCD
+- [2306.14472](../papers/2306.14472.md) (2023) [2] Pion condensation in dense QCD, the dilute Bose gas, and speedy Goldstone bosons
+- [2306.03138](../papers/2306.03138.md) (2023) [2] Effective field theory for radiative corrections to charged-current processes I: Vector coupling
+- [2306.00870](../papers/2306.00870.md) (2023) [2] Constraining Palatini gravity with GR-independent equations of state for neutron stars
+- [2305.09633](../papers/2305.09633.md) (2023) [1] Chiral perturbation theory of the hyperfine splitting in (muonic) hydrogen
+- [2305.07045](../papers/2305.07045.md) (2023) [2] On the role of isospin violation in the pion-nucleon $σ$-term
+- [2305.06205](../papers/2305.06205.md) (2023) [2] Constraining the chirally motivated $πΣ$-$\bar{K}N$ models with the $πΣ$ photoproduction mass spectra
+- [2304.05089](../papers/2304.05089.md) (2023) [2] Quasicrystals in QCD
+- [2304.02940](../papers/2304.02940.md) (2023) [2] How baryons appear in low-energy QCD: Domain-wall Skyrmion phase in strong magnetic fields
+- [2303.13206](../papers/2303.13206.md) (2023) [2] The isospin-3 three-particle $K$-matrix at NLO in ChPT
+- [2303.08741](../papers/2303.08741.md) (2023) [2] Nucleon Sigma Terms with $N_f = 2 + 1$ O($a$)-improved Wilson fermions
+- [2302.13587](../papers/2302.13587.md) (2023) [2] Interactions of $πK$, $ππK$ and $KKπ$ systems at maximal isospin from lattice QCD
+- [2302.09179](../papers/2302.09179.md) (2023) [2] QCD Thermodynamics and Neutral Pion in a Uniform Magnetic Field: Finite Volume Effects
+- [2302.00642](../papers/2302.00642.md) (2023) [2] Radiative corrections to neutron beta decay and (anti)neutrino-nucleon scattering from low-energy effective field theory
+- [2301.08059](../papers/2301.08059.md) (2023) [1] Relations for low-energy constants in baryon chiral perturbation theory with explicit $Δ(1232)$ derived from the chiral ...
+- [2301.07226](../papers/2301.07226.md) (2023) [2] The mass of charged pions in neutron star matter
+- [2212.07794](../papers/2212.07794.md) (2022) [2] $C$ and $CP$ violation in effective field theories
+- [2212.07856](../papers/2212.07856.md) (2022) [2] Can the two-pole structure of the $D_0^*(2300)$ be understood from recent lattice data?
+- [2212.00763](../papers/2212.00763.md) (2022) [2] A Strong-QCD Regime Measurement of the Proton's Spin Structure
+- [2211.17031](../papers/2211.17031.md) (2022) [1] Chiral perturbation theory
+- [2210.14385](../papers/2210.14385.md) (2022) [2] Bump of sound velocity in dense 2-color QCD
+- [2210.11904](../papers/2210.11904.md) (2022) [2] Chiral extrapolation of hadronic vacuum polarization and isospin-breaking corrections
+- [2209.09995](../papers/2209.09995.md) (2022) [2] Theoretical discrepancies in the nucleon spin structure and the hyperfine splitting of muonic hydrogen
+- [2209.02471](../papers/2209.02471.md) (2022) [2] Cross-channel constraints on resonant antikaon-nucleon scattering
+- [2209.00198](../papers/2209.00198.md) (2022) [1] Amplitude/Operator Basis in Chiral Perturbation Theory
+- [2208.14802](../papers/2208.14802.md) (2022) [2] Dispersion-theoretical analysis of the electromagnetic form factors of the $Λ$ hyperon
+- [2206.13122](../papers/2206.13122.md) (2022) [2] Nonperturbative effects in neutrino magnetic moments
+- [2206.08767](../papers/2206.08767.md) (2022) [2] Testing chiral unitary models for the $Λ(1405)$ in $K^{+}πΣ$ photoproduction
+- [2206.06570](../papers/2206.06570.md) (2022) [1] Relations for low-energy coupling constants in baryon chiral perturbation theory derived from the chiral quark model
+- [2206.04579](../papers/2206.04579.md) (2022) [2] Chiral condensate from a hadron resonance gas model
+- [2206.01227](../papers/2206.01227.md) (2022) [2] Chiral anomaly induces superconducting baryon crystal
+- [2205.13369](../papers/2205.13369.md) (2022) [1] Phonon modes of magnetic vortex lattices in finite isospin chiral perturbation theory
+- [2205.02619](../papers/2205.02619.md) (2022) [1] Phase shifts of the light pseudoscalar meson and heavy meson scattering in heavy meson chiral perturbation theory
+- [2205.00850](../papers/2205.00850.md) (2022) [2] The electromagnetic Sigma-to-Lambda transition form factors with coupled-channel effects in the space-like region
+- [2204.08716](../papers/2204.08716.md) (2022) [1] Chiral perturbation theory for heavy hadrons and chiral effective field theory for heavy hadronic molecules
+- [2204.06933](../papers/2204.06933.md) (2022) [2] New calculations of neutron and kaon decays
+- [2203.13862](../papers/2203.13862.md) (2022) [2] The pion-nucleon sigma term from Lattice QCD
+- [2203.11230](../papers/2203.11230.md) (2022) [2] CP-violating axion interactions in effective field theory
+- [2203.06878](../papers/2203.06878.md) (2022) [2] Contribution of the Weinberg-type Operator to atomic and nuclear electric dipole moments
+- [2203.05647](../papers/2203.05647.md) (2022) [2] Excited states and precision results for nucleon charges and form factors
+- [2202.10524](../papers/2202.10524.md) (2022) [2] Standard Model prediction for paramagnetic EDMs
+- [2202.03124](../papers/2202.03124.md) (2022) [2] Scrutinizing $ππ$ scattering in light of recent lattice phase shifts
+- [2201.10495](../papers/2201.10495.md) (2022) [1] Kinetics of hydrodynamic pions in chiral perturbation theory
+- [2201.08132](../papers/2201.08132.md) (2022) [1] Axions in Baryon Chiral Perturbation Theory
+- [2112.14076](../papers/2112.14076.md) (2021) [2] Light-quark mass dependence of the nucleon axial charge and pion-nucleon scattering phenomenology
+- [2112.13702](../papers/2112.13702.md) (2021) [1] Light pseudoscalar meson and heavy meson scattering lengths to $\mathcal{O}(p^4)$ in heavy meson chiral perturbation the...
+- [2112.06230](../papers/2112.06230.md) (2021) [1] Radiative Correction to Lepton Proton Scatterings in Manifestly Lorentz-Invariant Chiral Perturbation Theory
+- [2112.00558](../papers/2112.00558.md) (2021) [2] Maximum latent heat of neutron star matter without GR
+- [2111.13000](../papers/2111.13000.md) (2021) [2] Electric dipole moments of baryons with bottom quarks
+- [2111.12734](../papers/2111.12734.md) (2021) [2] Implementing the three-particle quantization condition for $π^+π^+K^+$ and related systems
+- [2111.07766](../papers/2111.07766.md) (2021) [2] Accurate relativistic chiral nucleon-nucleon interaction up to NNLO
+- [2111.04374](../papers/2111.04374.md) (2021) [2] The effect of the energy functional on the pasta-phase properties of catalysed neutron stars
+- [2110.11372](../papers/2110.11372.md) (2021) [2] The $γπ\toππ$ anomaly from lattice QCD and dispersion relations
+- [2110.05278](../papers/2110.05278.md) (2021) [1] Nonperturbative two-pion exchange contributions to the nucleon-nucleon interaction in covariant baryon chiral perturbati...
+- [2109.11348](../papers/2109.11348.md) (2021) [1] Peripheral nucleon-nucleon scattering at next-to-next-to-leading order in SU(3) heavy baryon chiral perturbation theory
+- [2108.11672](../papers/2108.11672.md) (2021) [2] Renormalization of NN Chiral EFT, my personal mixed feelings
+- [2108.01619](../papers/2108.01619.md) (2021) [1] Pion photoproduction in chiral perturbation theory with explicit treatment of the $Δ(1232)$ resonance
+- [2106.15700](../papers/2106.15700.md) (2021) [2] Degeneracy patterns of chiral companions at finite temperature
+- [2106.12482](../papers/2106.12482.md) (2021) [1] $η^{(')}\toπ^+π^-γ^{(\ast)}$ in large-$N_c$ chiral perturbation theory
+- [2106.05590](../papers/2106.05590.md) (2021) [2] Interactions of two and three mesons including higher partial waves from lattice QCD
+- [2105.12095](../papers/2105.12095.md) (2021) [2] The pion-nucleon sigma term from lattice QCD
+- [2104.10413](../papers/2104.10413.md) (2021) [1] The axion-baryon coupling in SU(3) heavy baryon chiral perturbation theory
+- [2104.09963](../papers/2104.09963.md) (2021) [2] Chiral extrapolation of the charged-pion magnetic polarizability with Padé approximant
+- [2104.03125](../papers/2104.03125.md) (2021) [2] Axial-vector nucleon-to-delta transition form factors using the complex-mass renormalization scheme
+- [2103.15849](../papers/2103.15849.md) (2021) [2] The role of $U(1)_A$ symmetry breaking in the QCD corrections to the pion mass difference
+- [2103.10799](../papers/2103.10799.md) (2021) [2] Maximum latent heat of neutron star matter independently of General Relativity
+- [2103.08823](../papers/2103.08823.md) (2021) [2] Density dependence of the quark condensate in isospin-asymmetric nuclear matter
+- [2103.00975](../papers/2103.00975.md) (2021) [2] High-precision determination of the $K_{e3}$ radiative corrections
+- [2103.00577](../papers/2103.00577.md) (2021) [2] Multi-particle systems on the lattice and chiral extrapolations: a brief review
+- [2102.07460](../papers/2102.07460.md) (2021) [2] Isovector electromagnetic form factors of the nucleon from lattice QCD and the proton radius puzzle
+- [2102.03059](../papers/2102.03059.md) (2021) [2] Extracting the low-energy constant $L_0^r$ at three flavors from pion-kaon scattering
+- [2102.00192](../papers/2102.00192.md) (2021) [2] $η$ mesons in hot magnetized nuclear matter
+- [2101.12576](../papers/2101.12576.md) (2021) [2] Dispersive analysis of low energy $γ^* N\rightarrowπN$ process
+- [2012.11298](../papers/2012.11298.md) (2020) [2] A formalism for the study of $K^{+}π\,Σ$ photoproduction in the $Λ^{\ast}(1405)$ region
+- [2012.05921](../papers/2012.05921.md) (2020) [2] Pion crystals hosting topologically stable baryons
+- [2011.14072](../papers/2011.14072.md) (2020) [2] $η$ mesons in hot and dense asymmetric nuclear matter
+- [2011.00921](../papers/2011.00921.md) (2020) [1] Two-Meson Form Factors in Unitarized Chiral Perturbation Theory
+- [2010.13655](../papers/2010.13655.md) (2020) [1] Condensates and pressure of two-flavor chiral perturbation theory at nonzero isospin and temperature
+- [2010.13709](../papers/2010.13709.md) (2020) [2] Systematizing and addressing theory uncertainties of unitarization with the Inverse Amplitude Method
+- [2010.13044](../papers/2010.13044.md) (2020) [2] Chiral symmetry breaking and chemical equilibrium in a heavy-ion collisions
+- [2010.09380](../papers/2010.09380.md) (2020) [1] Radiative and chiral corrections to elastic lepton-proton scattering in chiral perturbation theory
+- [2010.01580](../papers/2010.01580.md) (2020) [2] Chiral extrapolation of the magnetic polarizability of the neutral pion
+- [2009.05578](../papers/2009.05578.md) (2020) [2] Signals of the QCD axion with mass of 17 MeV/c^2: nuclear transitions and light meson decays
+- [2009.04479](../papers/2009.04479.md) (2020) [2] Two-loop analysis of the pion-mass dependence of the $ρ$ meson
+- [2009.01819](../papers/2009.01819.md) (2020) [1] Operator Counting and Soft Blocks in Chiral Perturbation Theory
+- [2009.00357](../papers/2009.00357.md) (2020) [2] Light clusters in dilute heavy-baryon admixed nuclear matter
+- [2009.00459](../papers/2009.00459.md) (2020) [2] New method for calculating electromagnetic effects in semileptonic beta-decays of mesons
+- [2008.01371](../papers/2008.01371.md) (2020) [2] Strong CP violation in spin-1/2 singly charmed baryons
+- [2007.13675](../papers/2007.13675.md) (2020) [1] Two-Pion-Exchange contributions to the nucleon-nucleon interactions in covariant baryon chiral perturbation theory
+- [2007.08438](../papers/2007.08438.md) (2020) [1] Nucleon polarizabilities in covariant baryon chiral perturbation theory with explicit $Δ$ degrees of freedom
+- [2007.01173](../papers/2007.01173.md) (2020) [1] Pion-nucleon scattering to order $p^4$ in SU(3) heavy baryon chiral perturbation theory
+- [2006.16124](../papers/2006.16124.md) (2020) [1] Nucleon Polarizabilities and Compton Scattering as a Playground for Chiral Perturbation Theory
+- [2006.15196](../papers/2006.15196.md) (2020) [2] A shell-model study of calcium isotopes towards their drip line
+- [2006.12321](../papers/2006.12321.md) (2020) [2] $θ$-dependence of light nuclei and nucleosynthesis
+- [2006.08626](../papers/2006.08626.md) (2020) [1] Forward doubly-virtual Compton scattering off the nucleon in chiral perturbation theory: II. Spin polarizabilities and m...
+- [2006.03917](../papers/2006.03917.md) (2020) [1] Radiative pion photoproduction in covariant chiral perturbation theory
+- [2005.14417](../papers/2005.14417.md) (2020) [2] Unitarization Technics in Hadron Physics with Historical Remarks
+- [2005.09518](../papers/2005.09518.md) (2020) [1] Forward doubly-virtual Compton scattering off the nucleon in chiral perturbation theory: the subtraction function and mo...
+- [2005.08550](../papers/2005.08550.md) (2020) [1] Two-photon decays and transition form factors of $π^0$, $η$, and $η'$ in large-$N_c$ chiral perturbation theory
+- [2005.06909](../papers/2005.06909.md) (2020) [2] Two-pole structures in QCD: Facts, not fantasy!

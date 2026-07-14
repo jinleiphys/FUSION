@@ -1,0 +1,108 @@
+# Jet quenching
+
+**PhySH lineage:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md) > Jet quenching
+
+**Broader:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
+
+**Papers:** 526 (showing first 100 of 526)
+
+- [2307.06226](../papers/2307.06226.md) (2023) [2] In-medium gluon radiation spectrum with all-order resummation of multiple scatterings in longitudinally evolving media
+- [2305.19989](../papers/2305.19989.md) (2023) [1] Jet quenching in mini-quark-gluon plasma: Medium modification factor $I_{pA}$ for photon-tagged jets
+- [2305.15491](../papers/2305.15491.md) (2023) [2] Predictions for the sPHENIX physics program
+- [2304.07196](../papers/2304.07196.md) (2023) [1] Jet substructure observables for jet quenching in Quark Gluon Plasma: a Machine Learning driven analysis
+- [2304.04649](../papers/2304.04649.md) (2023) [2] Multijet topology in high-energy nuclear collisions: jet broadening
+- [2304.03241](../papers/2304.03241.md) (2023) [2] Glasma properties in small proper time expansion
+- [2303.14660](../papers/2303.14660.md) (2023) [2] Heavy-Flavour Jets in High-Energy Nuclear Collisions
+- [2303.12595](../papers/2303.12595.md) (2023) [2] Jet momentum broadening during initial stages in heavy-ion collisions
+- [2303.08620](../papers/2303.08620.md) (2023) [2] Substructures of heavy flavor jets in $pp$ and PbPb collisions at $\sqrt{s}$ = 5.02 TeV
+- [2303.03773](../papers/2303.03773.md) (2023) [1] Search for jet quenching effects on the plain jet mass in Pb+Pb collisions at the LHC with a multiphase transport model
+- [2302.10215](../papers/2302.10215.md) (2023) [2] The LPM effect in sequential bremsstrahlung: gluon shower development
+- [2301.13467](../papers/2301.13467.md) (2023) [2] Perfect QCD -- a new Universal approach to soft QCD
+- [2212.08086](../papers/2212.08086.md) (2022) [2] Are gluon showers inside a quark-gluon plasma strongly coupled? a theorist's test
+- [2212.05944](../papers/2212.05944.md) (2022) [1] Comparing the MARTINI and CUJET models for jet-quenching: Medium modification of jets and jet substructure
+- [2212.02478](../papers/2212.02478.md) (2022) [1] Jet quenching for heavy flavors in $AA$ and $pp$ collisions
+- [2211.16821](../papers/2211.16821.md) (2022) [2] Medium Response and Jet-Hadron Correlations in Relativistic Heavy-Ion Collisions
+- [2211.13674](../papers/2211.13674.md) (2022) [2] Jet radius and momentum splitting fraction with dynamical grooming in heavy-ion collisions
+- [2211.10161](../papers/2211.10161.md) (2022) [2] Medium-induced radiation with vacuum propagation in the pre-hydrodynamics phase
+- [2210.06519](../papers/2210.06519.md) (2022) [2] Quantum partonic transport in QCD matter
+- [2209.07643](../papers/2209.07643.md) (2022) [2] Equation of State and Energy Loss of Hot and Dense Quark-Gluon matter from Holographic Black Holes
+- [2209.00548](../papers/2209.00548.md) (2022) [2] Longitudinal momentum fraction of heavy-flavor mesons in jets in high-energy nuclear collisions
+- [2208.14297](../papers/2208.14297.md) (2022) [1] Partonic Critical Opalescence and Its Impact on the Jet Quenching Parameter $\hat{q}$
+- [2208.14419](../papers/2208.14419.md) (2022) [2] Global constraint on the jet transport coefficient from single hadron, dihadron and $γ$-hadron spectra in high-energy he...
+- [2208.13331](../papers/2208.13331.md) (2022) [1] Effects of the formation time of parton shower on jet quenching in heavy-ion collisions
+- [2208.08323](../papers/2208.08323.md) (2022) [1] Unraveling Gluon Jet Quenching through $J/ψ$ Production in Heavy-Ion Collisions
+- [2208.07950](../papers/2208.07950.md) (2022) [2] Bayesian analysis of QGP jet transport using multi-scale modeling applied to inclusive hadron and reconstructed jet data
+- [2208.00813](../papers/2208.00813.md) (2022) [2] The role of initial state radiation in quenched jets
+- [2207.14814](../papers/2207.14814.md) (2022) [2] Improved background subtraction and a fresh look at jet sub-structure in JEWEL
+- [2207.10472](../papers/2207.10472.md) (2022) [2] Multiparticle production in proton-nucleus collisions beyond eikonal accuracy
+- [2206.02811](../papers/2206.02811.md) (2022) [2] A unified picture of medium-induced radiation
+- [2205.14668](../papers/2205.14668.md) (2022) [1] Exposing the dead-cone effect of jet quenching in QCD medium
+- [2205.07902](../papers/2205.07902.md) (2022) [1] Quantum Simulation of Light-Front QCD for Jet Quenching in Nuclear Environments
+- [2204.01998](../papers/2204.01998.md) (2022) [2] Parton energy loss at LHC tests for a strongly coupled medium
+- [2204.00634](../papers/2204.00634.md) (2022) [2] Searching for QGP droplets with high-$p_T$ hadrons and heavy flavor
+- [2203.10742](../papers/2203.10742.md) (2022) [1] Particle production at large $p_T$ in Xe+Xe collisions with jet quenching using the higher twist approach
+- [2203.00139](../papers/2203.00139.md) (2022) [2] Transport coefficients of the quark-gluon plasma at the critical point and across the first-order line
+- [2202.03414](../papers/2202.03414.md) (2022) [1] Mini-jet quenching in a concurrent jet+hydro evolution and the non-equilibrium quark-gluon plasma
+- [2202.00357](../papers/2202.00357.md) (2022) [2] Transport of hard probes through glasma
+- [2201.13003](../papers/2201.13003.md) (2022) [2] An overview of recent STAR jet measurements
+- [2201.08408](../papers/2201.08408.md) (2022) [2] Event-by-event jet anisotropy and hard-soft tomography of the quark-gluon plasma
+- [2112.15062](../papers/2112.15062.md) (2021) [2] Perturbative and non-perturbative interactions between heavy quarks and quark-gluon plasma within a unified approach
+- [2112.06812](../papers/2112.06812.md) (2021) [1] Jet quenching in glasma
+- [2111.14589](../papers/2111.14589.md) (2021) [1] The information content of jet quenching and machine learning assisted observable design
+- [2111.14768](../papers/2111.14768.md) (2021) [2] Dynamically groomed jet radius in heavy-ion collisions
+- [2111.01088](../papers/2111.01088.md) (2021) [2] Asymptotics of transverse momentum broadening in dense QCD media
+- [2110.13159](../papers/2110.13159.md) (2021) [2] Disentangling Jet Modification in Jet Simulations and in Z+Jet Data
+- [2109.14314](../papers/2109.14314.md) (2021) [2] Enhancement of baryon-to-meson ratios around jets as a signature of medium response
+- [2109.12359](../papers/2109.12359.md) (2021) [2] Cracking hadron and nuclear collisions open with ropes and string shoving in PYTHIA8
+- [2109.06571](../papers/2109.06571.md) (2021) [2] Full solution of the medium-induced radiation spectrum
+- [2108.06648](../papers/2108.06648.md) (2021) [2] Scaling behaviors of heavy flavor meson suppression and flow in different nuclear collision systems at the LHC
+- [2107.14775](../papers/2107.14775.md) (2021) [2] $η/s-\hat{q}/T^3$ Relation at Next-to-Leading Order in QCD
+- [2107.12000](../papers/2107.12000.md) (2021) [2] Probing the in-medium $P_T$-broadening by $γ$+HF angular de-correlations
+- [2107.11751](../papers/2107.11751.md) (2021) [2] Jet shape and redistribution of the lost energy from jets in Pb+Pb collisions at the LHC in a multiphase transport model
+- [2107.02225](../papers/2107.02225.md) (2021) [2] Scattering and gluon emission in a color field: a light-front Hamiltonian approach
+- [2107.01522](../papers/2107.01522.md) (2021) [1] Heavy and light flavor jet quenching in different collision systems at the LHC energies
+- [2106.11348](../papers/2106.11348.md) (2021) [2] Determining the jet transport coefficient $\hat{q}$ of the quark-gluon plasma using Bayesian parameter estimation
+- [2105.09350](../papers/2105.09350.md) (2021) [1] Jet quenching from heavy to light ion collisions
+- [2104.09513](../papers/2104.09513.md) (2021) [2] Ab Initio Coupling of Jets to Collective Flow in the Opacity Expansion Approach
+- [2103.14657](../papers/2103.14657.md) (2021) [1] From hydro to jet quenching, coalescence and hadron cascade: a coupled approach to solving the $R_{AA}\otimes v_2$ puzzl...
+- [2102.11337](../papers/2102.11337.md) (2021) [2] Determining the jet transport coefficient $\hat{q}$ from inclusive hadron suppression measurements using Bayesian parame...
+- [2012.13935](../papers/2012.13935.md) (2020) [2] Radial profile of bottom quarks in jets in high-energy nuclear collisions
+- [2011.00920](../papers/2011.00920.md) (2020) [2] Light quark energy loss in a soft-wall AdS/QCD model
+- [2011.01526](../papers/2011.01526.md) (2020) [1] Jet quenching with $T$-dependent running coupling
+- [2010.13488](../papers/2010.13488.md) (2020) [2] Kinetic and Chemical Equilibration of Quark-Gluon Plasma
+- [2010.02874](../papers/2010.02874.md) (2020) [2] Jet evolution in a dense QCD medium
+- [2009.13959](../papers/2009.13959.md) (2020) [2] Radial profile of heavy quarks in jets in high-energy nuclear collisions
+- [2009.02936](../papers/2009.02936.md) (2020) [2] Resolving the spacetime structure of jets with medium
+- [2009.02973](../papers/2009.02973.md) (2020) [2] Energy loss and equilibration of jets in a QCD plasma
+- [2009.03316](../papers/2009.03316.md) (2020) [2] Disentangling Jet Modification
+- [2009.02202](../papers/2009.02202.md) (2020) [2] Jet suppression from small to large radius
+- [2009.02410](../papers/2009.02410.md) (2020) [1] Constraints on jet quenching from a multi-stage energy-loss approach
+- [2009.01736](../papers/2009.01736.md) (2020) [1] Jet quenching in the hadron gas: An exploratory study
+- [2008.13304](../papers/2008.13304.md) (2020) [1] Gradient tomography of jet quenching in high-energy heavy-ion collisions
+- [2007.14834](../papers/2007.14834.md) (2020) [1] Full resummation analysis of jet quenching and tests of the QCD Equation of State
+- [2007.09772](../papers/2007.09772.md) (2020) [1] Updated analysis of jet quenching at RHIC and LHC within the light cone path integral approach
+- [2006.14324](../papers/2006.14324.md) (2020) [1] Jet quenching parameter from a soft wall AdS/QCD model
+- [2005.07018](../papers/2005.07018.md) (2020) [2] $Z^0$ boson associated b-jet production in high-energy nuclear collisions
+- [2005.02892](../papers/2005.02892.md) (2020) [2] The global geometrical property of jet events in high-energy nuclear collisions
+- [2005.01093](../papers/2005.01093.md) (2020) [2] Medium modifications of girth distributions for inclusive jets and $Z^0+{\rm jet}$ in relativistic heavy-ion collisions ...
+- [2004.11403](../papers/2004.11403.md) (2020) [2] Transverse Momentum Broadening of a Jet in Quark-Gluon Plasma: An Open Quantum System EFT
+- [2003.11728](../papers/2003.11728.md) (2020) [1] A Comprehensive Monte Carlo Framework for Jet-Quenching
+- [2002.12442](../papers/2002.12442.md) (2020) [2] The dijet mass distribution in heavy ion collisions
+- [2002.10188](../papers/2002.10188.md) (2020) [2] Perturbative Thermal QCD: Formalism and Applications
+- [2002.06725](../papers/2002.06725.md) (2020) [1] Jet quenching parameters in strongly coupled anisotropic plasmas in the presence of magnetic fields
+- [2002.07124](../papers/2002.07124.md) (2020) [1] Jet quenching in a multi-stage Monte Carlo approach
+- [2002.06411](../papers/2002.06411.md) (2020) [2] Interplaying mechanisms behind inclusive jet $R_{AA}$ and extraction of jet energy loss distributions
+- [2002.04028](../papers/2002.04028.md) (2020) [1] Jet quenching and medium response in high-energy heavy-ion collisions: a review
+- [2002.01517](../papers/2002.01517.md) (2020) [2] Medium-induced gluon radiation with full resummation of multiple scatterings for realistic parton-medium interactions
+- [2001.11660](../papers/2001.11660.md) (2020) [2] Radial distribution of charm quarks in jets in high-energy heavy-ion collisions
+- [2001.08273](../papers/2001.08273.md) (2020) [1] Gradient Tomography of Jet Quenching in Heavy-Ion Collisions
+- [1911.01309](../papers/1911.01309.md) (2019) [1] Jet quenching test of the QCD matter created at RHIC and the LHC needs opacity-resummed medium induced radiation
+- [1910.07027](../papers/1910.07027.md) (2019) [1] Jet quenching in the hadron gas: an exploratory study
+- [1908.06979](../papers/1908.06979.md) (2019) [2] Jet charge modification in dense QCD matter
+- [1908.01518](../papers/1908.01518.md) (2019) [2] Jet charge in high energy nuclear collisions
+- [1907.12301](../papers/1907.12301.md) (2019) [2] Jet suppression from small to intermediate to large radius
+- [1906.11998](../papers/1906.11998.md) (2019) [1] 30 years of jet quenching
+- [1906.00413](../papers/1906.00413.md) (2019) [1] Flavor hierarchy of jet quenching in relativistic heavy-ion collisions
+- [1903.01302](../papers/1903.01302.md) (2019) [1] Higher-order corrections to jet quenching
+- [1902.07643](../papers/1902.07643.md) (2019) [2] Constraining energy loss from high-$p_{\rm T}$ azimuthal asymmetries
+- [1902.03231](../papers/1902.03231.md) (2019) [1] Jet quenching as a probe of the initial stages in heavy-ion collisions

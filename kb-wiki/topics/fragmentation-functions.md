@@ -1,0 +1,108 @@
+# Fragmentation functions
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > [Quantum chromodynamics](quantum-chromodynamics.md) > [Parton distribution functions](parton-distribution-functions.md) > Fragmentation functions
+
+**Broader:** [Parton distribution functions](parton-distribution-functions.md)
+
+**Papers:** 333 (showing first 100 of 333)
+
+- [2307.07890](../papers/2307.07890.md) (2023) [2] Comparative multi-probe study of jet energy-loss in QGP
+- [2306.09495](../papers/2306.09495.md) (2023) [2] Transverse momentum dependent factorization for SIDIS at next-to-leading power
+- [2305.19989](../papers/2305.19989.md) (2023) [2] Jet quenching in mini-quark-gluon plasma: Medium modification factor $I_{pA}$ for photon-tagged jets
+- [2305.14620](../papers/2305.14620.md) (2023) [2] Automated calculation of Jet fragmentation at NLO in QCD
+- [2305.11995](../papers/2305.11995.md) (2023) [1] Number density interpretation of dihadron fragmentation functions
+- [2304.13648](../papers/2304.13648.md) (2023) [1] Determination of meson fragmentation functions in the Field-Feynman model
+- [2304.03302](../papers/2304.03302.md) (2023) [2] TMD Handbook
+- [2303.14660](../papers/2303.14660.md) (2023) [2] Heavy-Flavour Jets in High-Energy Nuclear Collisions
+- [2303.12485](../papers/2303.12485.md) (2023) [2] Flavor hierarchy of parton energy loss in quark-gluon plasma from a Bayesian analysis
+- [2303.04314](../papers/2303.04314.md) (2023) [2] Analogies between hadron-in-jet and dihadron fragmentation
+- [2303.04921](../papers/2303.04921.md) (2023) [2] The resolution to the problem of consistent large transverse momentum in TMDs
+- [2212.05944](../papers/2212.05944.md) (2022) [2] Comparing the MARTINI and CUJET models for jet-quenching: Medium modification of jets and jet substructure
+- [2211.08341](../papers/2211.08341.md) (2022) [2] Transverse momentum dependent distribution functions in the threshold limit
+- [2210.10061](../papers/2210.10061.md) (2022) [2] Collinear Parton Dynamics Beyond DGLAP
+- [2210.09311](../papers/2210.09311.md) (2022) [2] Beautiful and Charming Energy Correlators
+- [2209.15336](../papers/2209.15336.md) (2022) [2] Hadron productions and jet substructures associated with $Z^0/γ$ in Pb+Pb collisions at the LHC
+- [2209.14872](../papers/2209.14872.md) (2022) [2] Precision QCD, Hadronic Structure & Forward QCD, Heavy Ions: Report of Energy Frontier Topical Groups 5, 6, 7 submitted ...
+- [2209.05689](../papers/2209.05689.md) (2022) [2] Hadronization effects on transverse momentum dependent jet fragmentation function in small systems
+- [2207.03606](../papers/2207.03606.md) (2022) [2] One-Loop Corrections to Dihadron Production in DIS at Small $x$
+- [2206.07598](../papers/2206.07598.md) (2022) [2] Unpolarized Transverse Momentum Distributions from a global fit of Drell-Yan and Semi-Inclusive Deep-Inelastic Scatterin...
+- [2205.05750](../papers/2205.05750.md) (2022) [2] Combining nonperturbative transverse momentum dependence with TMD evolution
+- [2204.00634](../papers/2204.00634.md) (2022) [2] Searching for QGP droplets with high-$p_T$ hadrons and heavy flavor
+- [2203.10742](../papers/2203.10742.md) (2022) [2] Particle production at large $p_T$ in Xe+Xe collisions with jet quenching using the higher twist approach
+- [2202.03372](../papers/2202.03372.md) (2022) [2] Polarized Antimatter in the Proton from Global QCD Analysis
+- [2202.00338](../papers/2202.00338.md) (2022) [2] Transverse Polarization of Hyperons Produced in Semi-Inclusive Deep Inelastic Scattering
+- [2201.05397](../papers/2201.05397.md) (2022) [2] TMDs for spin-1 hadrons
+- [2201.04875](../papers/2201.04875.md) (2022) [2] Gluon transversity and TMDs for spin-1 hadrons
+- [2201.04582](../papers/2201.04582.md) (2022) [2] Spin Asymmetries in Electron-jet Production at the EIC
+- [2201.02796](../papers/2201.02796.md) (2022) [1] Extracting the jet transport coefficient from hadron suppressions by confronting current NLO parton fragmentation functi...
+- [2112.04611](../papers/2112.04611.md) (2021) [2] Accessing subnuclear fluctuations and saturation with multiplicity dependent $J/ψ$ production in p+p and p+Pb collisions
+- [2108.01381](../papers/2108.01381.md) (2021) [2] Transverse-momentum-dependent parton distribution functions for spin-1 hadrons
+- [2108.01674](../papers/2108.01674.md) (2021) [2] Extending Precision Perturbative QCD with Track Functions
+- [2108.00305](../papers/2108.00305.md) (2021) [2] QCD factorization for hadronic quarkonium production at high $p_T$
+- [2107.12401](../papers/2107.12401.md) (2021) [2] Three-dimensional imaging in nuclei
+- [2106.15624](../papers/2106.15624.md) (2021) [2] Spin asymmetries in electron-jet production at the future electron ion collider
+- [2105.09873](../papers/2105.09873.md) (2021) [2] Impact of inclusive hadron production data on nuclear gluon PDFs
+- [2101.04664](../papers/2101.04664.md) (2021) [1] Simultaneous Monte Carlo analysis of parton densities and fragmentation functions
+- [2012.07853](../papers/2012.07853.md) (2020) [1] TMD Fragmentation Functions at N$^3$LO
+- [2012.03256](../papers/2012.03256.md) (2020) [2] Unpolarized Quark and Gluon TMD PDFs and FFs at N$^3$LO
+- [2012.01457](../papers/2012.01457.md) (2020) [2] Jet radiation in a longitudinally expanding medium
+- [2011.08583](../papers/2011.08583.md) (2020) [2] Transverse-momentum-dependent parton distribution functions up to twist 4 for spin-1 hadrons
+- [2010.13680](../papers/2010.13680.md) (2020) [2] QGP modification to single inclusive jets in a calibrated transport model
+- [2009.11871](../papers/2009.11871.md) (2020) [2] Joint thrust and TMD resummation in electron-positron and electron-proton collisions
+- [2009.03512](../papers/2009.03512.md) (2020) [2] First results from Hybrid Hadronization in small and large systems
+- [2007.07281](../papers/2007.07281.md) (2020) [2] Jet-based measurements of Sivers and Collins asymmetries at the future Electron-Ion Collider
+- [2006.07375](../papers/2006.07375.md) (2020) [2] Power expansion for heavy quarkonium production at next-to-leading order in $\rm e^+e^-$ annihilation
+- [2005.11310](../papers/2005.11310.md) (2020) [2] On the connection between quark propagation and hadronization
+- [2005.09678](../papers/2005.09678.md) (2020) [1] Medium modification of $γ$-jet fragmentation functions in Pb+Pb collisions at LHC
+- [2005.02398](../papers/2005.02398.md) (2020) [1] Polarized jet fragmentation functions
+- [2004.11381](../papers/2004.11381.md) (2020) [2] Rethinking Jets with Energy Correlators: Tracks, Resummation and Analytic Continuation
+- [2003.04828](../papers/2003.04828.md) (2020) [1] Extracting the Transverse Momentum Dependent Polarizing Fragmentation Functions
+- [2003.02441](../papers/2003.02441.md) (2020) [2] $γ$-hadron spectra in p + Pb collisions at $\sqrt{s_{\rm NN}}=5.02$ TeV
+- [2002.05880](../papers/2002.05880.md) (2020) [2] A New Heavy Flavor Program for the Future Electron-Ion Collider
+- [2002.03012](../papers/2002.03012.md) (2020) [2] Far-forward neutrinos at the Large Hadron Collider
+- [1912.10965](../papers/1912.10965.md) (2019) [2] Radiative processes and jet modification at the EIC
+- [1910.11746](../papers/1910.11746.md) (2019) [2] Hadron-in-jet production at partonic threshold
+- [1910.05481](../papers/1910.05481.md) (2019) [2] The JETSCAPE framework: p+p results
+- [1910.03586](../papers/1910.03586.md) (2019) [2] An effective field theory approach to quarkonium at small transverse momentum
+- [1909.02951](../papers/1909.02951.md) (2019) [2] Collinear Factorization in Wide-Angle Hadron Pair Production in $e^+e^-$ Annihilation
+- [1907.09576](../papers/1907.09576.md) (2019) [2] Studying transverse momentum distributions with jets at N$^3$LL
+- [1906.07187](../papers/1906.07187.md) (2019) [1] Jet fragmentation functions for $Z$-tagged jets
+- [1905.05167](../papers/1905.05167.md) (2019) [2] Thermal radiation and inclusive production in the KLN model for ion-ion collisions
+- [1905.03788](../papers/1905.03788.md) (2019) [1] Strange quark suppression from a simultaneous Monte Carlo analysis of parton distributions and fragmentation functions
+- [1905.02581](../papers/1905.02581.md) (2019) [2] Universal scaling of meson and baryon spectra in p-Pb collisions at 5.02 TeV
+- [1904.04259](../papers/1904.04259.md) (2019) [2] Transverse momentum dependent distributions in $e^+e^-$ and semi-inclusive deep-inelastic scattering using jets
+- [1903.01529](../papers/1903.01529.md) (2019) [2] Large Transverse Momentum in Semi-Inclusive Deeply Inelastic Scattering Beyond Lowest Order
+- [1901.03635](../papers/1901.03635.md) (2019) [2] Medium modified leading hadrons, jets and sub-jets in a single formalism
+- [1812.02033](../papers/1812.02033.md) (2018) [2] NLO Productions of $ω$ and $K^0_{\rm S}$ with a Global Extraction of the Jet Transport Parameter in Heavy Ion collisions
+- [1811.08975](../papers/1811.08975.md) (2018) [2] E-by-e jet suppression, anisotropy, medium response and hard-soft tomography
+- [1811.01974](../papers/1811.01974.md) (2018) [1] Non-extensive Motivated Parton Fragmentation Functions
+- [1810.09747](../papers/1810.09747.md) (2018) [2] Simulation studies of $\rm{R_{2}}(Δη, Δφ)$ and $\rm{P_{2}}(Δη, Δφ)$ correlation functions in pp collisions with the PYTH...
+- [1810.00496](../papers/1810.00496.md) (2018) [2] First extraction of transversity from data on lepton-hadron scattering and hadronic collisions
+- [1809.00115](../papers/1809.00115.md) (2018) [2] Theoretical perspective for the future experiments on parton densities
+- [1808.00954](../papers/1808.00954.md) (2018) [2] Semi-inclusive back-to-back production of a hadron pair and a single hadron in $e^+e^-$ annihilation
+- [1807.07573](../papers/1807.07573.md) (2018) [2] Transverse momentum dependent distributions with jets
+- [1807.06917](../papers/1807.06917.md) (2018) [2] Revisiting heavy quark radiative energy loss in nuclei within the high-twist approach
+- [1807.06524](../papers/1807.06524.md) (2018) [2] Charged Kaon multiplicities of Semi-inclusive DIS off the deuteron target
+- [1805.07243](../papers/1805.07243.md) (2018) [2] Transverse momentum dependent transversely polarized distributions at next-to-next-to-leading-order
+- [1805.02300](../papers/1805.02300.md) (2018) [2] Universal scaling of the pion, kaon and proton $p_{\rm{T}}$ spectra in Pb-Pb collisions at 2.76 TeV
+- [1803.11093](../papers/1803.11093.md) (2018) [2] Event engineering studies for heavy flavor production and hadronization in high multiplicity hadron-hadron and hadron-nu...
+- [1802.05212](../papers/1802.05212.md) (2018) [2] First Extraction of Transversity from a Global Analysis of Electron-Proton and Proton-Proton Data
+- [1802.01578](../papers/1802.01578.md) (2018) [2] Semi-inclusive production of two back-to-back hadron pairs in $e^+e^-$ annihilation revisited
+- [1712.06384](../papers/1712.06384.md) (2017) [2] Accessing Quark Helicity through Dihadron Studies
+- [1709.08643](../papers/1709.08643.md) (2017) [1] Dihadron fragmentation functions in the quark-jet model: Transversely polarized quarks
+- [1707.04999](../papers/1707.04999.md) (2017) [1] Dihadron fragmentation functions in the quark-jet model: Longitudinally polarized quarks
+- [1706.09857](../papers/1706.09857.md) (2017) [1] Using hadron-in-jet data in a global analysis of $D^{*}$ fragmentation functions
+- [1706.07049](../papers/1706.07049.md) (2017) [1] A determination of the fragmentation functions of pions, kaons, and protons with faithful uncertainties
+- [1705.08443](../papers/1705.08443.md) (2017) [2] The transverse momentum distribution of hadrons within jets
+- [1705.05889](../papers/1705.05889.md) (2017) [1] First simultaneous extraction of spin-dependent parton distributions and fragmentation functions from a global QCD analy...
+- [1703.00822](../papers/1703.00822.md) (2017) [2] Heavy and light flavor jet quenching at RHIC and LHC energies
+- [1702.05525](../papers/1702.05525.md) (2017) [2] NRQCD Confronts LHCb Data on Quarkonium Production within Jets
+- [1702.01614](../papers/1702.01614.md) (2017) [2] Nuclear suppression of $ϕ$ meson yields with large $p_T$ at the RHIC and the LHC
+- [1701.07121](../papers/1701.07121.md) (2017) [2] Novel scenario for production of heavy flavored mesons in heavy ion collisions
+- [1701.04147](../papers/1701.04147.md) (2017) [2] Production of $ρ^{0}$ meson with large $p_T$ at NLO in heavy-ion collisions
+- [1612.04817](../papers/1612.04817.md) (2016) [2] Jet axes and universal transverse-momentum-dependent fragmentation
+- [1610.05624](../papers/1610.05624.md) (2016) [2] Monte Carlo Implementation of Polarized Hadronization
+- [1609.07422](../papers/1609.07422.md) (2016) [1] Heavy quark fragmentation functions at next-to-leading perturbative QCD
+- [1609.00899](../papers/1609.00899.md) (2016) [1] First Monte Carlo analysis of fragmentation functions from single-inclusive $e^+ e^-$ annihilation
+- [1608.04067](../papers/1608.04067.md) (2016) [1] Impacts of B-factory measurements on determination of fragmentation functions from electron-positron annihilation data
+- [1607.04726](../papers/1607.04726.md) (2016) [2] Forward Hadron Productions in Proton-Proton Collisions in Small-$x$ Formalism

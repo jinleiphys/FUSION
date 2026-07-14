@@ -1,0 +1,110 @@
+# Few-body systems
+
+**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Few-body systems
+
+**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+
+**Narrower:** [Efimov states](efimov-states.md)
+
+**Papers:** 141 (showing first 100 of 141)
+
+- [2304.10478](../papers/2304.10478.md) (2023) [2] Real and Imaginary Phase Shifts for Nucleon-Deuteron Scattering using Phase Function Method
+- [2303.01312](../papers/2303.01312.md) (2023) [1] Unitary interaction geometries in few-body systems
+- [2211.00395](../papers/2211.00395.md) (2022) [2] Efficient few-body calculations in finite volume
+- [2210.00369](../papers/2210.00369.md) (2022) [2] Electro-Weak Transitions in A=2,3 Nuclei in Pionless Effective Field Theory
+- [2207.03828](../papers/2207.03828.md) (2022) [2] Machine Learning for the Prediction of Converged Energies from Ab Initio Nuclear Structure Calculations
+- [2206.04497](../papers/2206.04497.md) (2022) [2] Spectrum of light nuclei in a finite volume
+- [2202.12629](../papers/2202.12629.md) (2022) [2] Four-body system of ${}^4\mathrm{He}$ atoms: Dimer-dimer scattering
+- [2112.02442](../papers/2112.02442.md) (2021) [2] Ab initio nucleon-nucleus elastic scattering with chiral effective field theory uncertainties
+- [2111.05954](../papers/2111.05954.md) (2021) [2] Fixed-Point Few-Body Hamiltonians in Quantum Mechanics
+- [2111.00930](../papers/2111.00930.md) (2021) [2] What Can Possibly Go Wrong?
+- [2107.03558](../papers/2107.03558.md) (2021) [2] What hath Weinberg wrought? Reflections on what Weinberg's papers on 'Nuclear Forces from Chiral Lagrangians' did and di...
+- [2007.07080](../papers/2007.07080.md) (2020) [2] Stable bound states of $N$'s, $Λ$'s, and $Ξ$'s
+- [2005.14357](../papers/2005.14357.md) (2020) [1] Few-body systems consisting of mesons
+- [2001.02937](../papers/2001.02937.md) (2020) [2] Breakdown of the tensor component in the Skyrme energy density functional
+- [1904.00925](../papers/1904.00925.md) (2019) [2] Comment on "Is a Trineutron Resonance Lower in Energy than a Tetraneutron Resonance?" [arXiv:1612.01502]
+- [1903.00034](../papers/1903.00034.md) (2019) [2] Renormalization of a Finite Range Inverse Cube Potential
+- [1812.01730](../papers/1812.01730.md) (2018) [2] Universality and the Coulomb interaction
+- [1812.00387](../papers/1812.00387.md) (2018) [2] Four-Body Scale in Universal Few-Boson Systems
+- [1811.09405](../papers/1811.09405.md) (2018) [1] The problem of cluster separability in relativistic few-body systems
+- [1809.02619](../papers/1809.02619.md) (2018) [1] Study of various few-body systems using Gaussian expansion method (GEM)
+- [1803.04231](../papers/1803.04231.md) (2018) [2] The Tjon Band in Nuclear Lattice Effective Field Theory
+- [1710.11228](../papers/1710.11228.md) (2017) [2] Few-body techniques using momentum space for bound and continuum states
+- [1704.02029](../papers/1704.02029.md) (2017) [2] Universal few-body physics and cluster formation
+- [1701.07589](../papers/1701.07589.md) (2017) [2] Few-body approach to structure of $\bar{K}$-nuclear quasi-bound states
+- [1609.09751](../papers/1609.09751.md) (2016) [2] Reactions with a 10Be beam to study the one-neutron halo nucleus 11Be
+- [1608.05192](../papers/1608.05192.md) (2016) [1] Maximal isospin few-body systems of nucleons and $Ξ$ hyperons
+- [1607.01509](../papers/1607.01509.md) (2016) [2] Effective Field Theory for Few-Boson Systems
+- [1512.06114](../papers/1512.06114.md) (2015) [2] Three-body systems in physics of cold atoms and halo nuclei
+- [1509.07331](../papers/1509.07331.md) (2015) [2] Violations of discrete space-time symmetries in chiral effective field theory
+- [1504.02182](../papers/1504.02182.md) (2015) [2] Adiabatic hyperspherical approach to large-scale nuclear dynamics
+- [1411.2937](../papers/1411.2937.md) (2014) [1] Two- and three- dimensional few-body systems in the universal regime
+- [1401.0671](../papers/1401.0671.md) (2014) [2] Few-body Physics in a Many-body World
+- [1312.7082](../papers/1312.7082.md) (2013) [1] Critical stability of few-body systems
+- [1311.5103](../papers/1311.5103.md) (2013) [2] One- and two-neutron halos in effective field theory
+- [1311.2141](../papers/1311.2141.md) (2013) [1] Coupling the Lorentz Integral Transform (LIT) and the Coupled Cluster (CC) Methods: A way towards continuum spectra of "...
+- [1304.2992](../papers/1304.2992.md) (2013) [2] Fermionization of two-component few-fermion systems in a one-dimensional harmonic trap
+- [1303.6757](../papers/1303.6757.md) (2013) [1] Universal prohibited zones in the coordinate space of few-body systems
+- [1302.4256](../papers/1302.4256.md) (2013) [2] Complex-Scaling Calculation of Three-Body Resonances Using Complex-Range Gaussian Basis Functions --- Application to 3$α...
+- [1212.0393](../papers/1212.0393.md) (2012) [1] Neutron resonances in few-body systems and the EOS of neutron star crust
+- [1210.1993](../papers/1210.1993.md) (2012) [1] Hadronic few-body systems in chiral dynamics, -- Few-body systems in hadron physics --
+- [1209.6208](../papers/1209.6208.md) (2012) [1] Antikaon-nucleon dynamics and its application to few-body systems
+- [1208.6347](../papers/1208.6347.md) (2012) [1] Few-Body Systems Composed of Heavy Quarks
+- [1203.6284](../papers/1203.6284.md) (2012) [2] Isovector part of nuclear energy density functional from chiral two- and three-nucleon forces
+- [1203.3130](../papers/1203.3130.md) (2012) [2] Linear correlations between 4He trimer and tetramer energies calculated with various realistic 4He potentials
+- [1201.4852](../papers/1201.4852.md) (2012) [2] Hadronic Parity Violation at Next-to-Leading Order
+- [1112.2651](../papers/1112.2651.md) (2011) [1] Universality of nucleon-nucleon short-range correlations: two-nucleon momentum distributions in few-body systems
+- [1111.4370](../papers/1111.4370.md) (2011) [2] Variational calculation of 4He tetramer ground and excited states using a realistic pair potential
+- [1110.6827](../papers/1110.6827.md) (2011) [2] Two, three, many body systems involving mesons
+- [1110.3180](../papers/1110.3180.md) (2011) [1] Electromagnetic Properties of Few-Body Systems Within a Point-Form Approach
+- [1109.6575](../papers/1109.6575.md) (2011) [2] Model tests of cluster separability in relativistic quantum mechanics
+- [1107.5966](../papers/1107.5966.md) (2011) [2] Nuclear energy density functional from chiral two- and three-nucleon interactions
+- [1104.4474](../papers/1104.4474.md) (2011) [2] The nature of the Lambda(1405) resonance in chiral dynamics
+- [1103.3674](../papers/1103.3674.md) (2011) [2] Tagging emc effects and hadronization mechanisms by semi-inclusive deep inelastic scattering off nuclei
+- [1102.0896](../papers/1102.0896.md) (2011) [2] Efimov physics from the functional renormalization group
+- [1012.4725](../papers/1012.4725.md) (2010) [2] Parity violation in $n + ^3He \rightarrow ^3H + p$ reaction: resonance approach
+- [1011.1721](../papers/1011.1721.md) (2010) [2] Short range correlations and wave function factorization in light and finite nuclei
+- [1011.0314](../papers/1011.0314.md) (2010) [1] Relativistic descriptions of few-body systems
+- [1010.3647](../papers/1010.3647.md) (2010) [2] Three body systems with strangeness and exotic systems
+- [1008.5187](../papers/1008.5187.md) (2010) [2] How quantum bound states bounce and the structure it reveals
+- [1008.1569](../papers/1008.1569.md) (2010) [2] Operator Evolution via the Similarity Renormalization Group I: The Deuteron
+- [1008.0551](../papers/1008.0551.md) (2010) [2] Universal few-body physics in a harmonic trap
+- [1006.5186](../papers/1006.5186.md) (2010) [2] Heavy-Light Few Fermion Clusters at Unitarity
+- [0912.2937](../papers/0912.2937.md) (2009) [2] Applications of the Similarity Renormalization Group to the Nuclear Interaction
+- [0910.0031](../papers/0910.0031.md) (2009) [1] Few-Body Systems and the Pionless Effective Field Theory
+- [0908.2607](../papers/0908.2607.md) (2009) [2] Three-body forces and the limit of oxygen isotopes
+- [0907.3995](../papers/0907.3995.md) (2009) [2] Parity-violating polarization in $np \to dγ$ with a pionless effective field theory
+- [0904.1405](../papers/0904.1405.md) (2009) [1] Correlated Gaussian Hyperspherical Method for Few-Body Systems
+- [0902.4725](../papers/0902.4725.md) (2009) [2] Mapping the Two-Component Atomic Fermi Gas to the Nuclear Shell-Model
+- [0812.4992](../papers/0812.4992.md) (2008) [1] Universality and Leading Corrections in Few-Body Systems
+- [0811.4259](../papers/0811.4259.md) (2008) [2] The harmonic hyperspherical basis for identical particles without permutational symmetry
+- [0809.4199](../papers/0809.4199.md) (2008) [2] Similarity Renormalization Group Evolution of Many-Body Forces in a One-Dimensional Model
+- [0712.3812](../papers/0712.3812.md) (2007) [1] Universality in Few-Body Systems
+- [0712.1613](../papers/0712.1613.md) (2007) [2] Effective Kbar N interaction based on chiral SU(3) dynamics
+- [0712.0867](../papers/0712.0867.md) (2007) [2] On Non-Relativistic Conformal Field Theory and Trapped Atoms: Virial Theorems and the State-Operator Correspondence in T...
+- [0712.0039](../papers/0712.0039.md) (2007) [2] Dynamical coupled-channels: the key to understanding resonances
+- [0711.3846](../papers/0711.3846.md) (2007) [1] Similarity Renormalization Group for Few-Body Systems
+- [0704.3439](../papers/0704.3439.md) (2007) [2] The symmetric heavy-light ansatz
+- [2308.00136](../papers/2308.00136.md) (0000) [2] 2308.00136
+- [2309.16385](../papers/2309.16385.md) (0000) [2] 2309.16385
+- [2405.10258](../papers/2405.10258.md) (0000) [2] 2405.10258
+- [2407.02135](../papers/2407.02135.md) (0000) [1] 2407.02135
+- [2407.17221](../papers/2407.17221.md) (0000) [2] 2407.17221
+- [2407.17668](../papers/2407.17668.md) (0000) [2] 2407.17668
+- [2408.10052](../papers/2408.10052.md) (0000) [1] 2408.10052
+- [2502.00438](../papers/2502.00438.md) (0000) [2] 2502.00438
+- [2508.03575](../papers/2508.03575.md) (0000) [2] 2508.03575
+- [2508.05814](../papers/2508.05814.md) (0000) [2] 2508.05814
+- [2509.02953](../papers/2509.02953.md) (0000) [2] 2509.02953
+- [2509.13967](../papers/2509.13967.md) (0000) [2] 2509.13967
+- [2511.14155](../papers/2511.14155.md) (0000) [2] 2511.14155
+- [2601.19408](../papers/2601.19408.md) (0000) [2] 2601.19408
+- [2602.15765](../papers/2602.15765.md) (0000) [2] 2602.15765
+- [2602.18162](../papers/2602.18162.md) (0000) [2] 2602.18162
+- [2604.06139](../papers/2604.06139.md) (0000) [2] 2604.06139
+- [2604.13430](../papers/2604.13430.md) (0000) [2] 2604.13430
+- [2604.25792](../papers/2604.25792.md) (0000) [1] 2604.25792
+- [chao-dyn/9701008](../papers/chao-dyn/9701008.md) (0000) [1] chao-dyn/9701008
+- [cond-mat/0308481](../papers/cond-mat/0308481.md) (0000) [2] cond-mat/0308481
+- [cond-mat/0410049](../papers/cond-mat/0410049.md) (0000) [2] cond-mat/0410049
+- [cond-mat/0410417](../papers/cond-mat/0410417.md) (0000) [1] cond-mat/0410417

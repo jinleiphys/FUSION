@@ -1,0 +1,108 @@
+# Direct reactions
+
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Direct reactions
+
+**Broader:** [Nuclear reactions](nuclear-reactions.md)
+
+**Papers:** 244 (showing first 100 of 244)
+
+- [2307.01835](../papers/2307.01835.md) (2023) [3] Reaction dynamics in clustered nuclear systems
+- [2305.19945](../papers/2305.19945.md) (2023) [3] Transfer reactions of exotic nuclei including core deformations: $^{11}$Be and $^{17}$C
+- [2305.17792](../papers/2305.17792.md) (2023) [2] A schematic model for the direct cross-section in reactions induced by exotic and stable projectiles
+- [2304.13391](../papers/2304.13391.md) (2023) [3] Two-proton emission and related phenomena
+- [2303.11085](../papers/2303.11085.md) (2023) [3] Investigation of spectroscopic factors of deeply-bound nucleons in drip-line nuclei with the Gamow shell model
+- [2303.06128](../papers/2303.06128.md) (2023) [2] New Constraints on Sodium Production in Globular Clusters From the $^{23}$Na$(^3$He$, \textbf{d})^{24}$Mg Reaction
+- [2302.09980](../papers/2302.09980.md) (2023) [3] Study of the threshold anomaly in the elastic scattering of d+$^{197}$Au
+- [2302.07544](../papers/2302.07544.md) (2023) [3] Preequilibrium cluster emission in massive transfer reactions near Coulomb barrier energy
+- [2302.04837](../papers/2302.04837.md) (2023) [3] Nonlocal optical potential with core excitation in ${}^{10}\mathrm{Be}(d,p){}^{11}\mathrm{Be}$ and ${}^{11}\mathrm{Be}(p...
+- [2301.05419](../papers/2301.05419.md) (2023) [1] Gamow Shell Model description of ${ { }^{ 40 } }$Ca(d,p) transfer reaction
+- [2212.00218](../papers/2212.00218.md) (2022) [3] Secondary Neutron Production from Thick Target Deuteron Breakup
+- [2211.16781](../papers/2211.16781.md) (2022) [3] Dissipative reactions with intermediate-energy beams -- a novel approach to populate complex-structure states in rare is...
+- [2211.12113](../papers/2211.12113.md) (2022) [3] Role of neutron transfer in the reaction mechanism of $^9$Be+$^{169}$Tm, $^{181}$Ta, $^{187}$Re and $^{197}$Au systems
+- [2211.06281](../papers/2211.06281.md) (2022) [3] Perspectives on few-body cluster structures in exotic nuclei
+- [2207.13582](../papers/2207.13582.md) (2022) [2] Production of proton-rich nuclei in the vicinity of 100Sn via multinucleon transfer reactions
+- [2206.12341](../papers/2206.12341.md) (2022) [1] Analysis of one-neutron transfer reaction in $^{18}$O + $^{76}$Se collision at 275 MeV
+- [2206.04809](../papers/2206.04809.md) (2022) [2] Renormalization group evolution of optical potentials: explorations using a toy model
+- [2202.12820](../papers/2202.12820.md) (2022) [1] In-beam $γ$-ray spectroscopy of $^{32}$Mg via direct reactions
+- [2202.05918](../papers/2202.05918.md) (2022) [3] Multi-channel experimental and theoretical constraints for the $^{116}$Cd($^{20}$Ne,$^{20}$F)$^{116}$In charge exchange ...
+- [2201.09512](../papers/2201.09512.md) (2022) [3] Coupled-channels calculations for nuclear reactions: from exotic nuclei to superheavy elements
+- [2201.00433](../papers/2201.00433.md) (2022) [2] Direct Nuclear Reactions
+- [2111.07541](../papers/2111.07541.md) (2021) [3] $α$ knockout reaction as a new probe for $α$ formation in $α$-decay nuclei
+- [2110.10975](../papers/2110.10975.md) (2021) [2] Analysis of two-proton transfer in the 40Ca(18O,20Ne)38Ar reaction at 270 MeV incident energy
+- [2110.10642](../papers/2110.10642.md) (2021) [1] Study of one-proton transfer reaction for the $^{18}$O + $^{48}$Ti system at 275 MeV
+- [2110.07254](../papers/2110.07254.md) (2021) [3] Neutron transfer in $^{9}$Be + $^{159}$Tb system
+- [2110.01592](../papers/2110.01592.md) (2021) [3] Proton inelastic scattering reveals deformation in $^8$He
+- [2109.03203](../papers/2109.03203.md) (2021) [3] Determination of $1p$ and $2p$ stripping excitation functions for $^{16}$O+$^{142}$Ce using a Recoil Mass Spectrometer
+- [2108.13598](../papers/2108.13598.md) (2021) [2] Production of neutron-rich heavy nuclei around N = 162 in multinucleon transfer reactions
+- [2106.05693](../papers/2106.05693.md) (2021) [2] Elastic scattering measurements for the $^{10}$C + $^{208}$Pb system at E$_{\rm lab}$ = 66 MeV
+- [2105.04435](../papers/2105.04435.md) (2021) [2] The $^{6}$H states studied in the $^2\text{He}(^8\text{He},^4\text{He})$ reaction and evidence of extremely correlated c...
+- [2105.04490](../papers/2105.04490.md) (2021) [3] Halo effective field theory analysis of one-neutron knockout reactions of $^{11}\rm Be$ and $^{15}\rm C$
+- [2104.13689](../papers/2104.13689.md) (2021) [2] Investigating neutron transfer in the $^{9}$Be + $^{197}$Au system
+- [2103.05357](../papers/2103.05357.md) (2021) [1] Experimental study of intruder components in light neutron-rich nuclei via single-nucleon transfer reaction
+- [2103.01642](../papers/2103.01642.md) (2021) [2] Tests of collectivity in $^{98}$Zr by absolute transition rates
+- [2102.03452](../papers/2102.03452.md) (2021) [3] Cross sections for neutron-induced reactions from surrogate data: revisiting the Weisskopf-Ewing approximation for $(n,n...
+- [2012.12553](../papers/2012.12553.md) (2020) [1] Quenching of single-particle strength from direct reactions with stable and rare-isotope beams
+- [2011.02622](../papers/2011.02622.md) (2020) [3] Folding model approach to the elastic $p+^{12,13}$C scattering at low energies and radiative capture $^{12,13}$C$(p,γ)$ ...
+- [2010.15587](../papers/2010.15587.md) (2020) [2] Important Influence of Entrance Channel Reorientation Coupling on Proton Stripping
+- [2009.12801](../papers/2009.12801.md) (2020) [2] Multi-neutron transfer in $^{8}$He induced reactions near the Coulomb barrier
+- [2009.01159](../papers/2009.01159.md) (2020) [1] Role of continuum in nuclear direct reactions with one-neutron halo nuclei: a one-dimensional model
+- [2008.10408](../papers/2008.10408.md) (2020) [2] The total reaction cross section of heavy-ion reactions induced by stable and unstable exotic beams: The low-energy regi...
+- [2008.01282](../papers/2008.01282.md) (2020) [3] Coupled reaction channel study of the 12C(alpha,8Be) reaction, and the 8Be+8Be optical potential
+- [2007.15225](../papers/2007.15225.md) (2020) [2] Parity-transfer $({}^{16}{\rm O},{}^{16}{\rm F}(0^-,{\rm g.s.}))$ reaction as a selective probe of isovector $0^-$ state...
+- [2007.13331](../papers/2007.13331.md) (2020) [3] Trojan horse method as surrogate indirect approach to study resonant reactions in nuclear astrophysics
+- [2007.13370](../papers/2007.13370.md) (2020) [2] Multi-step processes in heavy-ion induced single-nucleon transfer reactions
+- [2006.14530](../papers/2006.14530.md) (2020) [1] Bayesian Analysis of the $^{70}$Zn$(d, ^3\!\text{He}) ^{69}$Cu Transfer Reaction
+- [2005.09492](../papers/2005.09492.md) (2020) [3] A two-neutron halo is unveiled in $^{29}$F
+- [1912.03932](../papers/1912.03932.md) (2019) [3] An overview of the scientific contribution of Andrea Vitturi to Nuclear Physics (being an account of the recent TNP19 me...
+- [1911.12571](../papers/1911.12571.md) (2019) [2] Impact of uncertainties of unbound $^{10}$Li on the ground state of two-neutron halo $^{11}$Li
+- [1911.06782](../papers/1911.06782.md) (2019) [3] Lifetimes and moments measurements to investigate the structure of midheavy nuclei
+- [1910.10570](../papers/1910.10570.md) (2019) [1] Asymptotic normalization coefficients from transfer reaction and R-martix analysis of direct capture in $^{22}$Ne(p,$γ$)...
+- [1910.03104](../papers/1910.03104.md) (2019) [3] Elastic and inelastic scattering of $^{16}$O on $^{27}$Al and $^{28}$Si at 240 MeV
+- [1907.04581](../papers/1907.04581.md) (2019) [1] Microscopic studies of production cross sections in multinucleon transfer reaction $^{58}$Ni+$^{124}$Sn
+- [1905.12976](../papers/1905.12976.md) (2019) [2] Two-particle transfer processes as a signature of shape phase transition in Zirconium isotopes
+- [1905.03664](../papers/1905.03664.md) (2019) [3] Characterization of vorticity in pygmy resonances and soft-dipole modes with two-nucleon transfer reactions
+- [1904.04224](../papers/1904.04224.md) (2019) [2] Investigating the 10Li continuum through 9Li(d,p)10Li reactions
+- [1904.02786](../papers/1904.02786.md) (2019) [3] Radioactive beams and inverse kinematics: probing the quantal texture of the nuclear vacuum
+- [1904.00398](../papers/1904.00398.md) (2019) [2] Production of the exotic neutron-deficient isotopes near N, Z = 50 in multinucleon transfer reactions
+- [1903.10580](../papers/1903.10580.md) (2019) [3] Elastic scattering, inelastic excitation, and 1n pick-up transfer cross sections for $^{10}$B+$^{120}$Sn at energies nea...
+- [1903.00335](../papers/1903.00335.md) (2019) [3] Revisiting fission-probability data using $\mathcal{R}$-matrix Monte-Carlo simulations : application to Pu fissile isoto...
+- [1902.06595](../papers/1902.06595.md) (2019) [3] States of the $^{12}$C Nucleus in the Toroidal Configuration
+- [1902.01616](../papers/1902.01616.md) (2019) [1] TDHF Theory and Its Extensions for the Multinucleon Transfer Reaction: a Mini Review
+- [1812.09152](../papers/1812.09152.md) (2018) [2] Neutron transfer reactions in halo effective field theory
+- [1812.05197](../papers/1812.05197.md) (2018) [2] Two-neutron transfer reactions and shape phase transitions in the microscopically-formulated interacting boson model
+- [1812.01761](../papers/1812.01761.md) (2018) [3] The 9Li(d,p) reaction, a specific probe of 10Li, paradigm of parity--inverted nuclei around N=6 closed shell
+- [1811.03111](../papers/1811.03111.md) (2018) [3] Recent developments for the optical model of nuclei
+- [1811.02118](../papers/1811.02118.md) (2018) [3] Dominance of tensor correlations in high-momentum nucleon pairs studied by (p,pd) reaction
+- [1811.01231](../papers/1811.01231.md) (2018) [3] Inclusive breakup reaction of a two-cluster projectile on a two-fragment target: A genuine four-body problem
+- [1810.08827](../papers/1810.08827.md) (2018) [1] Polarization of nucleons in the deuteron stripping reaction on nuclei
+- [1809.11139](../papers/1809.11139.md) (2018) [2] Binding-energy independence of reduced single particle strengths derived from $(p,d)$ reactions
+- [1809.09295](../papers/1809.09295.md) (2018) [1] Isospin equilibration in multinucleon transfer reaction at near-barrier energies
+- [1809.05899](../papers/1809.05899.md) (2018) [2] Shape Coexistence and Mixing of Low-Lying $0^+$ States in $^{96}$Sr
+- [1809.04980](../papers/1809.04980.md) (2018) [2] Investigation of spatial manifestation of $α$ clusters in $^{16}$O via $α$-transfer reactions
+- [1809.02706](../papers/1809.02706.md) (2018) [3] Consistent account of deuteron-induced reactions on Cr up to 60 MeV
+- [1809.01775](../papers/1809.01775.md) (2018) [3] Production cross sections for exotic nuclei with multinucleon transfer reactions
+- [1807.10412](../papers/1807.10412.md) (2018) [1] Production mechanism of neutron-rich nuclei around $N=126$ in multi-nucleon transfer reaction $^{132}$Sn + $^{208}$Pb
+- [1807.07139](../papers/1807.07139.md) (2018) [3] High-resolution $(p,t)$ study of low-spin states in $^{240}$Pu: Octupole excitations, $α$ clustering, and other structur...
+- [1807.04349](../papers/1807.04349.md) (2018) [3] Models for nuclear reactions with weakly bound systems
+- [1805.12074](../papers/1805.12074.md) (2018) [1] Systematic analysis of the peripherality of the $^{10}$Be$(d,p)$$^{11}$Be transfer reaction and extraction of the asympt...
+- [1805.06501](../papers/1805.06501.md) (2018) [3] Evolution of shell structure in exotic nuclei
+- [1805.04637](../papers/1805.04637.md) (2018) [3] r-Process Nucleosynthesis: Connecting Rare-Isotope Beam Facilities with the Cosmos
+- [1803.04710](../papers/1803.04710.md) (2018) [2] Effect of direct reaction channels on deep sub-barrier fusion in asymmetric systems
+- [1803.02958](../papers/1803.02958.md) (2018) [2] Three-body Faddeev equations in two-particle Alt-Grassberger-Sandhas form with Distorted-Wave-Born-approximation amplitu...
+- [1712.09954](../papers/1712.09954.md) (2017) [3] Evolution of single-particle structure of silicon isotopes
+- [1712.08822](../papers/1712.08822.md) (2017) [2] Neutron Transfer Reactions for Deformed Nuclei Using Sturmian Basis States
+- [1708.01994](../papers/1708.01994.md) (2017) [2] Transfer probabilities for the reactions $^{14,20}$O+$^{20}$O in terms of multiple time-dependent Hartree-Fock-Bogoliubo...
+- [1707.04164](../papers/1707.04164.md) (2017) [3] Deep-inelastic multinucleon transfer processes in the $^{16}$O+$^{27}$Al reaction
+- [1706.04495](../papers/1706.04495.md) (2017) [2] A revised $B(E2; 2^+_1 \to 0^+_1)$ value in the semi-magic nucleus $^{210}$Po
+- [1705.11083](../papers/1705.11083.md) (2017) [3] From bare to renormalized order parameter in gauge space: structure and reactions
+- [1705.07782](../papers/1705.07782.md) (2017) [3] Toward a complete theory for predicting inclusive deuteron breakup away from stability
+- [1703.08320](../papers/1703.08320.md) (2017) [2] Linking structure and dynamics in $(p,pn)$ reactions with Borromean nuclei: the $^{11}$Li$(p,pn){^{10}}$Li case
+- [1702.04576](../papers/1702.04576.md) (2017) [1] ${}^{7}$Li($d$,$p$)${}^{8}$Li transfer reaction in the NCSM/RGM approach
+- [1702.01207](../papers/1702.01207.md) (2017) [3] Structure and reactions of 11Be: many-body basis for single-neutron halo
+- [1701.05853](../papers/1701.05853.md) (2017) [2] Nonlocal nucleon-nucleus interactions in (d,p) reactions: Role of the deuteron D-state
+- [1611.06000](../papers/1611.06000.md) (2016) [1] Description of the $^{11}$Li$(p,d){^{10}}$Li transfer reaction using structure overlaps from a full three-body model
+- [1610.07378](../papers/1610.07378.md) (2016) [2] The dynamic polarization potential and dynamical non-locality in nuclear potentials: Deuteron-nucleus potential
+- [1608.02897](../papers/1608.02897.md) (2016) [3] The neutron within the deuteron as a surrogate for neutron-induced reactions
+- [1607.02540](../papers/1607.02540.md) (2016) [2] A Search for $0^+$ States in $^{50}$Cr: Implications for the Superallowed $β$-decay of $^{50}$Mn
+- [1606.09330](../papers/1606.09330.md) (2016) [2] New neutron-rich isotope production in $^{154}$Sm+$^{160}$Gd
+- [1606.09423](../papers/1606.09423.md) (2016) [3] Probing transfer to unbound states of the ejectile with weakly bound 7Li on 93Nb

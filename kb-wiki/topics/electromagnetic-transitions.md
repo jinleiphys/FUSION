@@ -1,0 +1,108 @@
+# Electromagnetic transitions
+
+**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Electromagnetic transitions
+
+**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+
+**Papers:** 103 (showing first 100 of 103)
+
+- [2306.08377](../papers/2306.08377.md) (2023) [2] Manipulation of Giant Multipole Resonances via Vortex $γ$ Photons
+- [2208.07191](../papers/2208.07191.md) (2022) [1] Information entropy of nuclear electromagnetic transitions in AdS/QCD
+- [2205.15939](../papers/2205.15939.md) (2022) [2] Effective operators for valence space calculations from the {\itshape ab initio} No-Core Shell Mode
+- [2204.12126](../papers/2204.12126.md) (2022) [2] Symmetry restoration methods
+- [2204.10709](../papers/2204.10709.md) (2022) [2] Nuclear spectra from low-energy interactions
+- [2203.15914](../papers/2203.15914.md) (2022) [2] Ab initio prediction of the $^4{\rm He}(d,γ)\,^6\rm Li$ big bang radiative capture
+- [2202.13596](../papers/2202.13596.md) (2022) [2] Emergent geometry and duality in the carbon nucleus
+- [2108.04894](../papers/2108.04894.md) (2021) [2] Nuclear Dynamics and Reactions in the Ab Initio Symmetry-Adapted Framework
+- [2107.12876](../papers/2107.12876.md) (2021) [2] Weisskopf units for neutron-proton pair transfers
+- [2101.12133](../papers/2101.12133.md) (2021) [2] A Semimicroscopic Algebraic Cluster Model for Heavy Nuclei
+- [2012.01622](../papers/2012.01622.md) (2020) [2] The evolution of magnetic dipole strength in $^{100-140}$ Sn isotope chain and quenching of nucleon g factors
+- [2008.01978](../papers/2008.01978.md) (2020) [2] The $\boldsymbol{^{29}}$F nucleus as a lighthouse on the coast of the island of inversion
+- [2006.12062](../papers/2006.12062.md) (2020) [1] Selection rules of electromagnetic transitions for chirality-parity violation in atomic nuclei
+- [2004.10835](../papers/2004.10835.md) (2020) [2] Structure of Krypton Isotopes using the Generalised Bohr Hamiltonian Method
+- [2003.00859](../papers/2003.00859.md) (2020) [2] The single-particle unit for alpha decay
+- [1912.01935](../papers/1912.01935.md) (2019) [1] Electromagnetic transitions in near-threshold resonances
+- [1911.05208](../papers/1911.05208.md) (2019) [2] Uncertainty quantification of an empirical shell-model interaction using principal component analysis
+- [1910.06526](../papers/1910.06526.md) (2019) [1] Collectivity of the electromagnetic transitions in near-threshold resonances
+- [1909.13417](../papers/1909.13417.md) (2019) [2] Robust ab initio predictions for nuclear rotational structure in the Be isotopes
+- [1908.02485](../papers/1908.02485.md) (2019) [2] Spectroscopy and excited-state $g$~factors in weakly collective ${^{111}}$Cd: confronting collective and microscopic mod...
+- [1810.02601](../papers/1810.02601.md) (2018) [2] Resonant enhancement of oscillating electric field in atom
+- [1809.04418](../papers/1809.04418.md) (2018) [1] Two-dimensional collective Hamiltonian for chiral and wobbling modes II: Electromagnetic transitions
+- [1808.10234](../papers/1808.10234.md) (2018) [2] Woods-Saxon-Gaussian Potential and Alpha-Cluster Structures of Alpha+Closed Shell Nuclei
+- [1805.07076](../papers/1805.07076.md) (2018) [2] Systematic study of high-K isomers in the midshell Gd and Dy nuclei
+- [1803.11327](../papers/1803.11327.md) (2018) [2] Azimuthal angle distributions of neutrons emitted from the $^9$Be($γ$,$n$) reaction with linearly polarized $γ$-rays
+- [1710.03767](../papers/1710.03767.md) (2017) [1] Electromagnetic transitions in the algebraic cluster model
+- [1708.05316](../papers/1708.05316.md) (2017) [2] Beam normal spin asymmetry for the $e p \to e Δ(1232)$ process
+- [1707.03552](../papers/1707.03552.md) (2017) [2] Multiple multi-orbit pairing algebras in shell model and interacting boson models
+- [1705.05511](../papers/1705.05511.md) (2017) [2] Ab initio electromagnetic observables with the in-medium similarity renormalization group
+- [1610.09707](../papers/1610.09707.md) (2016) [2] Shape phase mixing in critical point nuclei
+- [1609.07260](../papers/1609.07260.md) (2016) [1] Electromagnetic transitions in multiple chiral doublet bands
+- [1609.02766](../papers/1609.02766.md) (2016) [2] Isomerism in the "south-east" of $^{132}$Sn and a predicted neutron-decaying isomer in $^{129}$Pd
+- [1608.00287](../papers/1608.00287.md) (2016) [1] Charmonium spectrum and their electromagnetic transitions with higher multipole contributions
+- [1607.04696](../papers/1607.04696.md) (2016) [1] Spectrum and electromagnetic transitions of bottomonium
+- [1601.03160](../papers/1601.03160.md) (2016) [2] Description of electromagnetic and favored $α$-transitions in heavy odd-mass nuclei
+- [1512.05123](../papers/1512.05123.md) (2015) [2] Electromagnetic selection rules in the triangular alpha-cluster model of 12C
+- [1510.02401](../papers/1510.02401.md) (2015) [2] Effective field theory for nuclear vibrations with quantified uncertainties
+- [1509.00102](../papers/1509.00102.md) (2015) [2] Collective rotation from ab initio theory
+- [1507.06933](../papers/1507.06933.md) (2015) [2] Algebraic Solutions for $U^{BF}(5)-O^{BF}(6)$ Quantum Phase Transition in Odd Mass Number Nuclei
+- [1506.07883](../papers/1506.07883.md) (2015) [2] Electromagnetic modulation of monochromatic neutrino beams
+- [1504.00759](../papers/1504.00759.md) (2015) [2] Random Matrix Theory for Transition Strength Densities in Finite Quantum Systems: Results from Embedded Unitary Ensemble...
+- [1502.01083](../papers/1502.01083.md) (2015) [2] Emergence of rotational bands in ab initio no-core configuration interaction calculations
+- [1501.07670](../papers/1501.07670.md) (2015) [2] Random Matrix Theory with U(N) Racah Algebra for Transition Strengths
+- [1409.1844](../papers/1409.1844.md) (2014) [2] Simultaneous description of low-lying positive and negative parity bands in heavy even-even nuclei
+- [1409.0881](../papers/1409.0881.md) (2014) [2] Emergence of rotational bands in ab initio no-core configuration interaction calculations of the Be isotopes
+- [1406.2343](../papers/1406.2343.md) (2014) [1] Quantum Monte Carlo calculations of electromagnetic transitions in 8Be with meson-exchange currents derived from chiral ...
+- [1405.7602](../papers/1405.7602.md) (2014) [2] Three-nucleon forces and spectroscopy of neutron-rich calcium isotopes
+- [1403.7907](../papers/1403.7907.md) (2014) [2] Probing the $XYZ$ states through radiative decays
+- [1310.7384](../papers/1310.7384.md) (2013) [2] Nucleon pair approximation description of the low-lying structure of $^{108,109}$Te and $^{109}$I
+- [1307.6840](../papers/1307.6840.md) (2013) [2] What is the role of the meson cloud in the $Σ^{*0} \to γΛ$ and $Σ^\ast \to γΣ$ decays?
+- [1303.4252](../papers/1303.4252.md) (2013) [2] Electromagnetic Decay of Molecular States
+- [1302.6889](../papers/1302.6889.md) (2013) [2] Octet to decuplet electromagnetic transition in a relativistic quark model
+- [1301.7172](../papers/1301.7172.md) (2013) [2] Two neutrino double-$β$ decay in the interacting boson-fermion model
+- [1206.7042](../papers/1206.7042.md) (2012) [2] Electromagnetic transition strengths in soft deformed nuclei
+- [1204.4125](../papers/1204.4125.md) (2012) [1] Electromagnetic transitions in an effective chiral Lagrangian with the eta-prime and light vector mesons
+- [1110.0634](../papers/1110.0634.md) (2011) [2] Systematics of 2+ states in C isotopes from the ab initio no-core shell model
+- [1102.0163](../papers/1102.0163.md) (2011) [1] Selection Rule for Electromagnetic Transitions in Nuclear Chiral Geometry
+- [1006.0059](../papers/1006.0059.md) (2010) [2] Systematics of 2+ states in semi-magic nuclei
+- [1005.2151](../papers/1005.2151.md) (2010) [2] Modification of nuclear transitions in stellar plasma by electronic processes: K-isomers in 176Lu and 180Ta under s-proc...
+- [0802.3316](../papers/0802.3316.md) (2008) [2] Negative-Parity States and beta-decays in odd Ho and Dy Nuclei with A=151,153
+- [0707.1212](../papers/0707.1212.md) (2007) [2] Extended Cluster Model for Light, and Medium Nuclei
+- [2308.04773](../papers/2308.04773.md) (0000) [2] 2308.04773
+- [2310.09039](../papers/2310.09039.md) (0000) [2] 2310.09039
+- [2312.09782](../papers/2312.09782.md) (0000) [2] 2312.09782
+- [2402.18723](../papers/2402.18723.md) (0000) [2] 2402.18723
+- [2405.05052](../papers/2405.05052.md) (0000) [2] 2405.05052
+- [2405.15591](../papers/2405.15591.md) (0000) [2] 2405.15591
+- [2507.16885](../papers/2507.16885.md) (0000) [2] 2507.16885
+- [2510.27293](../papers/2510.27293.md) (0000) [2] 2510.27293
+- [2512.07601](../papers/2512.07601.md) (0000) [2] 2512.07601
+- [2512.11515](../papers/2512.11515.md) (0000) [2] 2512.11515
+- [2605.13903](../papers/2605.13903.md) (0000) [2] 2605.13903
+- [cond-mat/0603487](../papers/cond-mat/0603487.md) (0000) [2] cond-mat/0603487
+- [hep-lat/0309013](../papers/hep-lat/0309013.md) (0000) [1] hep-lat/0309013
+- [hep-lat/0406011](../papers/hep-lat/0406011.md) (0000) [2] hep-lat/0406011
+- [hep-ph/0505002](../papers/hep-ph/0505002.md) (0000) [2] hep-ph/0505002
+- [hep-ph/0608103](../papers/hep-ph/0608103.md) (0000) [2] hep-ph/0608103
+- [hep-ph/9910469](../papers/hep-ph/9910469.md) (0000) [1] hep-ph/9910469
+- [nucl-th/0009088](../papers/nucl-th/0009088.md) (0000) [2] nucl-th/0009088
+- [nucl-th/0010009](../papers/nucl-th/0010009.md) (0000) [2] nucl-th/0010009
+- [nucl-th/0012077](../papers/nucl-th/0012077.md) (0000) [2] nucl-th/0012077
+- [nucl-th/0202029](../papers/nucl-th/0202029.md) (0000) [1] nucl-th/0202029
+- [nucl-th/0210001](../papers/nucl-th/0210001.md) (0000) [2] nucl-th/0210001
+- [nucl-th/0301060](../papers/nucl-th/0301060.md) (0000) [2] nucl-th/0301060
+- [nucl-th/0305067](../papers/nucl-th/0305067.md) (0000) [1] nucl-th/0305067
+- [nucl-th/0409072](../papers/nucl-th/0409072.md) (0000) [1] nucl-th/0409072
+- [nucl-th/0411064](../papers/nucl-th/0411064.md) (0000) [2] nucl-th/0411064
+- [nucl-th/0411083](../papers/nucl-th/0411083.md) (0000) [1] nucl-th/0411083
+- [nucl-th/0510001](../papers/nucl-th/0510001.md) (0000) [2] nucl-th/0510001
+- [nucl-th/0511044](../papers/nucl-th/0511044.md) (0000) [2] nucl-th/0511044
+- [nucl-th/0611059](../papers/nucl-th/0611059.md) (0000) [2] nucl-th/0611059
+- [nucl-th/0612084](../papers/nucl-th/0612084.md) (0000) [2] nucl-th/0612084
+- [nucl-th/0701016](../papers/nucl-th/0701016.md) (0000) [2] nucl-th/0701016
+- [nucl-th/0703047](../papers/nucl-th/0703047.md) (0000) [2] nucl-th/0703047
+- [nucl-th/9307001](../papers/nucl-th/9307001.md) (0000) [2] nucl-th/9307001
+- [nucl-th/9409016](../papers/nucl-th/9409016.md) (0000) [1] nucl-th/9409016
+- [nucl-th/9508006](../papers/nucl-th/9508006.md) (0000) [2] nucl-th/9508006
+- [nucl-th/9606049](../papers/nucl-th/9606049.md) (0000) [2] nucl-th/9606049
+- [nucl-th/9608055](../papers/nucl-th/9608055.md) (0000) [2] nucl-th/9608055
+- [nucl-th/9804071](../papers/nucl-th/9804071.md) (0000) [2] nucl-th/9804071

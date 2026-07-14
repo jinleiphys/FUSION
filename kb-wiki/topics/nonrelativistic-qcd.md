@@ -1,0 +1,108 @@
+# Nonrelativistic QCD
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > [Quantum chromodynamics](quantum-chromodynamics.md) > Nonrelativistic QCD
+
+**Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
+
+**Papers:** 295 (showing first 100 of 295)
+
+- [2306.12721](../papers/2306.12721.md) (2023) [2] Exclusive $J/Ψ$ plus jet associated production in ultraperipheral $PbPb$ collisions
+- [2306.03565](../papers/2306.03565.md) (2023) [2] Lattice study on a tetra-quark state $T_{bb}$ in the HAL QCD method
+- [2305.14295](../papers/2305.14295.md) (2023) [2] Vector quarkonia at the LHC with JETHAD: A high-energy viewpoint
+- [2302.11826](../papers/2302.11826.md) (2023) [3] Regeneration of bottomonia in an open quantum systems approach
+- [2301.04382](../papers/2301.04382.md) (2023) [3] Phase Transitions in Particle Physics -- Results and Perspectives from Lattice Quantum Chromo-Dynamics
+- [2212.00202](../papers/2212.00202.md) (2022) [2] Lattice study on a tetraquark state $T_{bb}$ in the HAL QCD method
+- [2211.13717](../papers/2211.13717.md) (2022) [3] Hadrons at high temperature: an update from the FASTSUM collaboration
+- [2211.12648](../papers/2211.12648.md) (2022) [2] Subleading power corrections to heavy quarkonium production in QCD factorization approach
+- [2210.17345](../papers/2210.17345.md) (2022) [2] Inclusive production of $J/ψ$, $ψ(2S)$, and $Υ$ states in pNRQCD
+- [2210.13698](../papers/2210.13698.md) (2022) [3] Study of Differential Scattering Cross-section using Yukawa term of medium-modified Cornell potential
+- [2210.12056](../papers/2210.12056.md) (2022) [3] The exploration of hot and dense nuclear matter: Introduction to relativistic heavy-ion physics
+- [2209.04072](../papers/2209.04072.md) (2022) [2] Fixed-target charmonium production and pion parton distributions
+- [2208.08323](../papers/2208.08323.md) (2022) [2] Unraveling Gluon Jet Quenching through $J/ψ$ Production in Heavy-Ion Collisions
+- [2207.10752](../papers/2207.10752.md) (2022) [3] Effective-theory description of heavy-flavored hadrons and their properties in a hot medium
+- [2207.03012](../papers/2207.03012.md) (2022) [3] gamma-UPC: Automated generation of exclusive photon-photon processes in ultraperipheral proton and nuclear collisions wi...
+- [2206.01477](../papers/2206.01477.md) (2022) [3] Towards a theory of hadron resonances
+- [2205.10289](../papers/2205.10289.md) (2022) [3] Heavy quarkonium dynamics at next-to-leading order in the binding energy over temperature
+- [2205.02862](../papers/2205.02862.md) (2022) [3] Strongly Bound Dibaryon with Maximal Beauty Flavor from Lattice QCD
+- [2204.11295](../papers/2204.11295.md) (2022) [2] Quark Nuclear Physics with Heavy Quarks
+- [2204.08716](../papers/2204.08716.md) (2022) [3] Chiral perturbation theory for heavy hadrons and chiral effective field theory for heavy hadronic molecules
+- [2203.16911](../papers/2203.16911.md) (2022) [3] Exclusive production of light vector mesons at next-to-leading order in the dipole picture
+- [2203.13516](../papers/2203.13516.md) (2022) [2] $\cos2ϕ_t$ azimuthal asymmetry in back-to-back $J/ψ$-jet production in $e~p\rightarrow e~J/ψ~Jet~ X$ at the EIC
+- [2203.07778](../papers/2203.07778.md) (2022) [1] Production and polarization of $S$-wave quarkonia in potential nonrelativistic QCD
+- [2202.03054](../papers/2202.03054.md) (2022) [3] Heavy quarks at finite temperature
+- [2201.09158](../papers/2201.09158.md) (2022) [3] $Υ$ and $η_{b}$ mass shifts in nuclear matter and the nucleus bound states
+- [2112.07043](../papers/2112.07043.md) (2021) [2] Bottomonia screening masses from $2 + 1$ flavor QCD
+- [2112.02116](../papers/2112.02116.md) (2021) [2] Reconstruction of bottomonium spectral functions in thermal QCD using Kernel Ridge Regression
+- [2112.00460](../papers/2112.00460.md) (2021) [2] Machine learning Hadron Spectral Functions in Lattice QCD
+- [2111.10788](../papers/2111.10788.md) (2021) [3] Effective Field Theories and Lattice QCD for the X Y Z frontier
+- [2111.07087](../papers/2111.07087.md) (2021) [3] Light-front wavefunctions of mesons by design
+- [2110.04013](../papers/2110.04013.md) (2021) [3] Quarkonium production in pNRQCD: the $P$-wave case
+- [2108.03479](../papers/2108.03479.md) (2021) [3] Forming Molecular States with Hadronic Rescattering
+- [2107.06222](../papers/2107.06222.md) (2021) [2] Bottomonium production in heavy-ion collisions using quantum trajectories: Differential observables and momentum anisotr...
+- [2106.09417](../papers/2106.09417.md) (2021) [2] Inclusive Production of Heavy Quarkonia in pNRQCD
+- [2106.00940](../papers/2106.00940.md) (2021) [1] Bottomonia production in p+p collisions under NRQCD formalism
+- [2105.07862](../papers/2105.07862.md) (2021) [3] Heavy quark potential in quark-gluon Plasma: Deep neural network meets lattice quantum chromodynamics
+- [2103.01724](../papers/2103.01724.md) (2021) [1] $J/ψ$ polarization in high multiplicity $pp$ and $pA$ collisions: CGC+NRQCD approach
+- [2102.01736](../papers/2102.01736.md) (2021) [3] Open Quantum Systems for Quarkonia
+- [2101.04268](../papers/2101.04268.md) (2021) [3] Quarkonium propagation in the quark gluon plasma
+- [2011.10350](../papers/2011.10350.md) (2020) [3] Investigating the transverse momentum dependent gluon Sivers function in quarkonium production at $pp$ colliders
+- [2010.12232](../papers/2010.12232.md) (2020) [3] Effective Field Theories and Lattice for Hard Probes
+- [2010.07592](../papers/2010.07592.md) (2020) [3] QCD and the Strange Baryon Spectrum
+- [2010.00028](../papers/2010.00028.md) (2020) [3] Effective Field Theory for jet substructure in heavy ion collisions
+- [2009.08741](../papers/2009.08741.md) (2020) [3] $J/ψ$ near $T_c$
+- [2009.02408](../papers/2009.02408.md) (2020) [2] Quarkonium Semiclassical Transport in Quark-Gluon Plasma: Factorization and Quantum Correction
+- [2008.00100](../papers/2008.00100.md) (2020) [2] Bethe-Salpeter amplitudes of Upsilons
+- [2007.07613](../papers/2007.07613.md) (2020) [1] Inclusive Hadroproduction of $P$-Wave Heavy Quarkonia in Potential Nonrelativistic QCD
+- [2006.15451](../papers/2006.15451.md) (2020) [3] FeynOnium: Using FeynCalc for automatic calculations in Nonrelativistic Effective Field Theories
+- [2006.06947](../papers/2006.06947.md) (2020) [3] Constraining gluon density of pions at large $x$ by pion-induced $J/ψ$ production
+- [2006.07375](../papers/2006.07375.md) (2020) [2] Power expansion for heavy quarkonium production at next-to-leading order in $\rm e^+e^-$ annihilation
+- [2005.08277](../papers/2005.08277.md) (2020) [3] Heavy flavors under extreme conditions in high energy nuclear collisions
+- [2004.14345](../papers/2004.14345.md) (2020) [2] Complete NLO QCD study of single- and double-quarkonium hadroproduction in the colour-evaporation model at the Tevatron ...
+- [2004.11403](../papers/2004.11403.md) (2020) [3] Transverse Momentum Broadening of a Jet in Quark-Gluon Plasma: An Open Quantum System EFT
+- [2004.08868](../papers/2004.08868.md) (2020) [3] Magnetic field-induced anisotropic interaction in heavy quark bound states
+- [2004.06746](../papers/2004.06746.md) (2020) [3] Coupled Boltzmann Transport Equations of Heavy Quarks and Quarkonia in Quark-Gluon Plasma
+- [2002.12333](../papers/2002.12333.md) (2020) [3] Probing Nucleons and Nuclei in High Energy Collisions
+- [2002.04079](../papers/2002.04079.md) (2020) [3] Quarkonium Production in Heavy Ion Collisions: From Open Quantum System to Transport Equation
+- [1912.12900](../papers/1912.12900.md) (2019) [3] News from bottomonium spectral functions in thermal QCD
+- [1912.08008](../papers/1912.08008.md) (2019) [2] An Effective Theory of Quarkonia in QCD Matter
+- [1912.01633](../papers/1912.01633.md) (2019) [3] Fate of Heavy Quark Bound States inside Quark-Gluon Plasma
+- [1912.00836](../papers/1912.00836.md) (2019) [3] Study of the radiative decay $J/ψ\rightarrowη_{c}+γ$ in light cone sum rules
+- [1911.11676](../papers/1911.11676.md) (2019) [3] Parton Distribution Functions of Heavy Mesons on the Light Front
+- [1911.08500](../papers/1911.08500.md) (2019) [3] Application of Effective Field Theory in Nuclear Physics
+- [1910.07374](../papers/1910.07374.md) (2019) [3] Excited bottomonia in quark-gluon plasma from lattice QCD
+- [1909.12770](../papers/1909.12770.md) (2019) [3] $D$-wave effects in diffractive electroproduction of heavy quarkonia from the photon-like $V\rightarrow Q\bar Q$ transit...
+- [1909.10691](../papers/1909.10691.md) (2019) [2] Precision Model-Independent Bounds from Global Analysis of $b \to c \ell ν$ Form Factors
+- [1909.07696](../papers/1909.07696.md) (2019) [2] $Υ(1S)$ transverse momentum spectra through dissociation and regeneration in heavy ion collisions
+- [1907.04419](../papers/1907.04419.md) (2019) [2] Toward an effective theory of quarkonium production in nuclear matter
+- [1906.12122](../papers/1906.12122.md) (2019) [3] Nuclear effective field theory: status and perspectives
+- [1906.10049](../papers/1906.10049.md) (2019) [2] Prompt ${J/ψ}$-pair production at the LHC: impact of loop-induced contributions and of the colour-octet mechanism
+- [1906.04186](../papers/1906.04186.md) (2019) [2] An Effective Theory of Quarkonia in QCD Matter
+- [1905.07708](../papers/1905.07708.md) (2019) [3] Mass shifts of $^3P_J$ heavy quarkonia due to the effect of two-gluon annihilation
+- [1905.03794](../papers/1905.03794.md) (2019) [2] Novel implementation of the multipole expansion to quarkonium hadronic transitions
+- [1904.11928](../papers/1904.11928.md) (2019) [3] Associated Quarkonium Hadroproduction at High-Energy Colliders
+- [1903.11976](../papers/1903.11976.md) (2019) [3] Pentaquark and Tetraquark states
+- [1903.09185](../papers/1903.09185.md) (2019) [3] New Observables in Inclusive Production of Quarkonia
+- [1903.02297](../papers/1903.02297.md) (2019) [1] In-medium heavy quarkonium from lattice NRQCD
+- [1901.09766](../papers/1901.09766.md) (2019) [2] Phenomenological NLO analysis of eta(c) production at the LHC in the collider and fixed-target modes
+- [1901.04971](../papers/1901.04971.md) (2019) [3] Near-the-origin divergence of Dirac wave functions of hydrogen and operator product expansion
+- [1812.02238](../papers/1812.02238.md) (2018) [2] Quarkonium production in heavy ion collisions: coupled Boltzmann transport equations
+- [1811.09644](../papers/1811.09644.md) (2018) [2] Quarkonium inside Quark-Gluon Plasma: Diffusion, Dissociation, Recombination and Energy Loss
+- [1811.07474](../papers/1811.07474.md) (2018) [3] Studying parton correlations via double parton scatterings in associated quarkonium production at the LHC and the Tevatr...
+- [1811.07607](../papers/1811.07607.md) (2018) [2] Quarkonium dissociation in perturbative QCD
+- [1811.07634](../papers/1811.07634.md) (2018) [2] Correction to the energy spectrum of $^1S_0$ heavy quarkonia due to two-gluon annihilation effect
+- [1810.12313](../papers/1810.12313.md) (2018) [3] $γ^\ast γ\to η, η^\prime$ transition form factors
+- [1810.10550](../papers/1810.10550.md) (2018) [2] Evidence for charm-bottom tetraquarks and the mass dependence of heavy-light tetraquark states from lattice QCD
+- [1810.09260](../papers/1810.09260.md) (2018) [3] In-medium properties of the low-lying strange, charm, and bottom baryons in the quark-meson coupling model
+- [1809.09124](../papers/1809.09124.md) (2018) [3] P-wave heavy quarkonium spectrum with next-to-next-to-next-to-leading logarithmic accuracy
+- [1809.03573](../papers/1809.03573.md) (2018) [1] $J/ψ$ polarization in the CGC+NRQCD approach
+- [1808.09884](../papers/1808.09884.md) (2018) [3] Theoretical analysis of double parton scatterings in quarkonium production in proton-proton collisions at the LHC
+- [1808.01937](../papers/1808.01937.md) (2018) [1] Proof of NRQCD Color Octet Factorization of P-Wave Heavy Quarkonium Production In Non-Equilibrium QCD at RHIC and LHC
+- [1807.08357](../papers/1807.08357.md) (2018) [3] The $πγ\to ππ$ transition and the $ρ$ radiative decay width from lattice QCD
+- [1807.06199](../papers/1807.06199.md) (2018) [3] Quarkonium production in heavy ion collisions: coupled Boltzmann transport equations
+- [1807.04722](../papers/1807.04722.md) (2018) [1] Proof of Color Octet NRQCD Factorization of P-Wave Heavy Quarkonium Production at All Orders in Coupling Constant
+- [1807.02730](../papers/1807.02730.md) (2018) [3] Model-Independent Bounds on $R(J/ψ)$
+- [1806.07398](../papers/1806.07398.md) (2018) [2] Manifestly Soft Gauge Invariant Formulation of vNRQCD
+- [1806.04376](../papers/1806.04376.md) (2018) [3] Modeling the nonperturbative contributions to the complex heavy-quark potential
+- [1805.09787](../papers/1805.09787.md) (2018) [2] Quarkonium radiative decays from the hadronic Paschen-Back effect
+- [1804.10600](../papers/1804.10600.md) (2018) [3] Color screening in (2+1)-flavor QCD
+- [1803.11519](../papers/1803.11519.md) (2018) [3] Radiative transitions between $0^{-+}$ and $1^{--}$ heavy quarkonia on the light front

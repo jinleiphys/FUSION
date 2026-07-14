@@ -1,0 +1,108 @@
+# Quark matter
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > Quark matter
+
+**Broader:** [Strong interaction](strong-interaction.md)
+
+**Papers:** 1653 (showing first 100 of 1653)
+
+- [2307.09038](../papers/2307.09038.md) (2023) [2] Effects of Symmetry Energy on the Equation of State for Hybrid Neutron Stars
+- [2307.08734](../papers/2307.08734.md) (2023) [1] Equation of State of Cold Quark Matter to $O(α_s^3 \ln α_s)$
+- [2307.03032](../papers/2307.03032.md) (2023) [2] Quarkyonic matter and quarkyonic stars in an extended RMF model
+- [2307.01745](../papers/2307.01745.md) (2023) [2] Holographic baryons, dense matter and neutron star mergers
+- [2307.05395](../papers/2307.05395.md) (2023) [2] Graphene is neither Relativistic nor Non-Relativistic case: Thermodynamics Aspects
+- [2306.15976](../papers/2306.15976.md) (2023) [1] A method for probing the formation of quark matter
+- [2306.16005](../papers/2306.16005.md) (2023) [2] Phase diagram determination at fivefold nuclear compression
+- [2306.14747](../papers/2306.14747.md) (2023) [2] Shear viscosity expression for a graphene system in relaxation time approximation
+- [2306.13884](../papers/2306.13884.md) (2023) [2] Impact of Multiple Phase Transitions in Dense QCD on Compact Stars
+- [2306.12326](../papers/2306.12326.md) (2023) [2] What is the nature of the HESS J1731-347 compact object?
+- [2306.11753](../papers/2306.11753.md) (2023) [1] Chiral symmetry breaking and phase diagram of dual chiral density wave in a rotating quark matter
+- [2306.08234](../papers/2306.08234.md) (2023) [2] Radial and Non-Radial Oscillations of Inverted Hybrid Stars
+- [2306.05110](../papers/2306.05110.md) (2023) [2] Relativistic Mean Field Model parameterizations in the light of GW170817, GW190814, and PSR J0740 + 6620
+- [2306.04304](../papers/2306.04304.md) (2023) [2] Momentum Shell in Quarkyonic Matter from Explicit Duality: A Dual Model for Cold, Dense QCD
+- [2306.04472](../papers/2306.04472.md) (2023) [1] The magnetic dual chiral density wave phase in a rotating cold quark matter
+- [2305.11740](../papers/2305.11740.md) (2023) [2] The vector MIT bag model under the light of new data
+- [2305.10183](../papers/2305.10183.md) (2023) [1] Effect of the Coriolis force on the electrical conductivity of quark matter: A nonrelativistic description
+- [2305.07188](../papers/2305.07188.md) (2023) [1] Quark matter under strong electric fields in the Linear Sigma Model coupled with quarks
+- [2305.01246](../papers/2305.01246.md) (2023) [1] Properties of quark matter and hybrid stars from a quasiparticle model
+- [2305.01662](../papers/2305.01662.md) (2023) [1] Properties of quark-matter cores in massive hybrid stars
+- [2304.13920](../papers/2304.13920.md) (2023) [2] Sound velocity peak and conformality in isospin QCD
+- [2304.12209](../papers/2304.12209.md) (2023) [2] Colour-Flavour Locked Quark Stars in Light of the Compact Object in HESS J1731-347 and the GW190814 Event
+- [2304.10240](../papers/2304.10240.md) (2023) [1] Exploring the axion potential and axion walls in dense quark matter
+- [2304.07381](../papers/2304.07381.md) (2023) [2] Properties of First-Order Hadron-Quark Phase Transition from Inverting Neutron Star Observables
+- [2304.02454](../papers/2304.02454.md) (2023) [2] Temperature and Strong Magnetic Field Effects in Dense Matter
+- [2304.01898](../papers/2304.01898.md) (2023) [2] Hybrid stars with reactive interfaces: analysis within the Nambu-Jona-Lasinio model
+- [2303.16462](../papers/2303.16462.md) (2023) [1] Effect of Coriolis force on the shear viscosity of quark matter: A nonrelativistic description
+- [2303.16840](../papers/2303.16840.md) (2023) [1] Effects of finite volume and magnetic fields on thermodynamic properties of quark matter and fluctuations of conserved c...
+- [2303.11356](../papers/2303.11356.md) (2023) [2] Strongly interacting matter exhibits deconfined behavior in massive neutron stars
+- [2303.10734](../papers/2303.10734.md) (2023) [2] QCD Phase Diagrams via QHD and MIT-Based Models
+- [2303.07086](../papers/2303.07086.md) (2023) [2] Non-radial oscillations and gravitational wave emission of hybrid neutron stars
+- [2303.05452](../papers/2303.05452.md) (2023) [2] Probing spherical outbursts of neutron star mergers from an equation of state with composite nucleons
+- [2303.04326](../papers/2303.04326.md) (2023) [1] A possibility of existence of a pseudovector-type quark-antiquark condensate in the quark matter and Nambu-Goldstone mod...
+- [2303.03030](../papers/2303.03030.md) (2023) [1] A Crossover phase transition based on the phenomenology of hadronic matter and quark matter
+- [2303.00013](../papers/2303.00013.md) (2023) [2] What neutron stars tell about the hadron-quark phase transition: a Bayesian study
+- [2302.13332](../papers/2302.13332.md) (2023) [2] Practicing carpe diem in the journey of studying physics: A brief review of the scientific contribution of Ru-Keng Su
+- [2302.10117](../papers/2302.10117.md) (2023) [2] Implementation of Cluster expansion for hot QCD matter
+- [2302.03856](../papers/2302.03856.md) (2023) [2] $g$-mode of neutron stars in pseudo-Newtonian gravity
+- [2302.02989](../papers/2302.02989.md) (2023) [2] Nuclear and Hybrid Equations of State in Light of the Low-Mass Compact Star in HESS J1731-347
+- [2302.00825](../papers/2302.00825.md) (2023) [2] Chiral restoration of nucleons in neutron star matter: studies based on a parity doublet model
+- [2301.11614](../papers/2301.11614.md) (2023) [2] Non-Abelian Anyons and Non-Abelian Vortices in Topological Superconductors
+- [2301.10940](../papers/2301.10940.md) (2023) [2] Relativistic hybrid stars with sequential first-order phase transitions in light of multimessenger constraints
+- [2301.10721](../papers/2301.10721.md) (2023) [1] Causality violation and the speed of sound of hot and dense quark matter in the Nambu--Jona-Lasinio model
+- [2301.10765](../papers/2301.10765.md) (2023) [2] Hybrid star phenomenology from the properties of the special point
+- [2301.07654](../papers/2301.07654.md) (2023) [2] Revisiting the stability of strange-dwarf stars and strange planets
+- [2301.02768](../papers/2301.02768.md) (2023) [2] Hadron-quark phase transition in neutron star by combining the relativistic Brueckner-Hartree-Fock theory and Dyson-Schw...
+- [2301.00588](../papers/2301.00588.md) (2023) [2] Hydrodynamic model of heavy-ion collisions with low momentum components
+- [2212.14856](../papers/2212.14856.md) (2022) [2] Effect of color superconductivity on the mass of hybrid neutron stars in an effective model with pQCD asymptotics
+- [2212.13030](../papers/2212.13030.md) (2022) [2] Diquarkyonic matter: quarks, diquarks and baryons
+- [2212.11184](../papers/2212.11184.md) (2022) [2] Non-strange quark stars within resummed QCD
+- [2212.08263](../papers/2212.08263.md) (2022) [2] Speed of sound and liquid-gas phase transition in nuclear matter
+- [2211.14674](../papers/2211.14674.md) (2022) [2] Quarkyonic or baryquark matter? On the dynamical generation of momentum space shell structure
+- [2211.12730](../papers/2211.12730.md) (2022) [1] Early deconfinement of asymptotically conformal color-superconducting quark matter in neutron stars
+- [2211.12043](../papers/2211.12043.md) (2022) [2] Hybrid stars may have an inverted structure
+- [2211.12626](../papers/2211.12626.md) (2022) [2] Special point "trains" in the M-R diagram of hybrid stars
+- [2211.11414](../papers/2211.11414.md) (2022) [2] Thoughts about the utility of perturbative QCD in the cores of neutron stars
+- [2211.11071](../papers/2211.11071.md) (2022) [1] Equation of state for strange quark matter: Linking the Nambu--Jona-Lasinio model to perturbative QCD
+- [2211.10118](../papers/2211.10118.md) (2022) [2] Exploring the Phase Diagram of V-QCD with Neutron Star Merger Simulations
+- [2211.04662](../papers/2211.04662.md) (2022) [2] Reverse phase transitions in binary neutron-star systems with exotic-matter cores
+- [2211.04978](../papers/2211.04978.md) (2022) [2] Testing the phase transition parameters inside neutron stars with the production of protons and lambdas in relativistic ...
+- [2211.03687](../papers/2211.03687.md) (2022) [2] Counting States: A Combinatorial Analysis of SQM Fragmentation
+- [2210.09077](../papers/2210.09077.md) (2022) [2] Constraining the equation of state of hybrid stars using recent information from multidisciplinary physics
+- [2209.09021](../papers/2209.09021.md) (2022) [1] Vector dark boson mediated feeble interaction between fermionic dark matter and strange quark matter in quark stars
+- [2209.06602](../papers/2209.06602.md) (2022) [2] Compact Star Twins with a Dark Matter Core
+- [2209.06016](../papers/2209.06016.md) (2022) [2] Magnetic-Field Induced Deformation in Hybrid Stars
+- [2209.03455](../papers/2209.03455.md) (2022) [1] Cold dense quark matter with phenomenological medium effects: a self-consistent formulation of the quark-mass density-de...
+- [2209.02248](../papers/2209.02248.md) (2022) [1] Anisotropic pressure of magnetized quark matter with anomalous magnetic moment
+- [2209.02050](../papers/2209.02050.md) (2022) [1] Recovering the conformal limit of color superconducting quark matter within a confining density functional approach
+- [2209.00766](../papers/2209.00766.md) (2022) [2] Holographic cold dense matter constrained by neutron stars
+- [2209.00070](../papers/2209.00070.md) (2022) [2] SQM2022: Theoretical Summary
+- [2208.09085](../papers/2208.09085.md) (2022) [2] Early quark deconfinement in compact star astrophysics and heavy-ion collisions
+- [2208.08278](../papers/2208.08278.md) (2022) [1] MSW effect with quark matter: Neutron Star as a case study
+- [2208.05311](../papers/2208.05311.md) (2022) [2] Van der Waals type PV diagrams of PNJL matter
+- [2208.03031](../papers/2208.03031.md) (2022) [1] Properties of Hot Quark Matter with Neutrino Confinement In the NJL Model
+- [2208.00466](../papers/2208.00466.md) (2022) [1] Quark Matter in the NJL Model with a Vector Interaction and the Structure of Hybrid Stars
+- [2207.13613](../papers/2207.13613.md) (2022) [2] Plausible presence of new state in neutron stars with masses above $0.98M_{\rm TOV}$
+- [2207.12947](../papers/2207.12947.md) (2022) [2] Charged quark stars in $f(R,T)$ gravity
+- [2207.08704](../papers/2207.08704.md) (2022) [2] Stability and instability of strange dwarfs
+- [2207.03878](../papers/2207.03878.md) (2022) [2] Phase transitions and latent heat in magnetized matter
+- [2206.14963](../papers/2206.14963.md) (2022) [2] Equation of State at High-Baryon Density and Compact Stellar Objects
+- [2206.10513](../papers/2206.10513.md) (2022) [2] Fundamental-mode eigenfrequencies of neutral and charged twin neutron stars
+- [2206.09219](../papers/2206.09219.md) (2022) [1] Strange quark matter from a baryonic approach
+- [2206.01631](../papers/2206.01631.md) (2022) [2] Axion effects in the stability of hybrid stars
+- [2205.15843](../papers/2205.15843.md) (2022) [2] Bayesian inference of signatures of hyperons inside neutron stars
+- [2205.08169](../papers/2205.08169.md) (2022) [2] Restriction on the form of quark anomalous magnetic moment from lattice QCD results
+- [2205.07928](../papers/2205.07928.md) (2022) [2] Oscillating Magnetized Color Superconducting Quark Stars
+- [2205.05691](../papers/2205.05691.md) (2022) [2] Quark formation and phenomenology in binary neutron-star mergers using V-QCD
+- [2205.04801](../papers/2205.04801.md) (2022) [2] Deconfinement phase transition and quark condensate in compact stars
+- [2205.03882](../papers/2205.03882.md) (2022) [1] Gravitational Wave Signal for Quark Matter with Realistic Phase Transition
+- [2205.03455](../papers/2205.03455.md) (2022) [2] A new class of hybrid EoS with multiple critical endpoints for simulations of supernovae, neutron stars and their merger...
+- [2205.00559](../papers/2205.00559.md) (2022) [2] Hybrid Equations of State for Neutron Stars with Hyperons and Deltas
+- [2205.00338](../papers/2205.00338.md) (2022) [1] Rotating Hybrid Stars with Color-Flavor-Locked Quark Matter
+- [2204.08555](../papers/2204.08555.md) (2022) [2] Constraining the equation of state of neutron stars using multimessenger observations
+- [2204.06998](../papers/2204.06998.md) (2022) [2] QCD Phase Boundary and the Hadrochemical Horizon
+- [2204.05083](../papers/2204.05083.md) (2022) [2] Chiral spin symmetry and the QCD phase diagram
+- [2204.05221](../papers/2204.05221.md) (2022) [2] Hyperons, deconfinement and the speed of sound in neutron stars
+- [2204.03611](../papers/2204.03611.md) (2022) [1] Density functional approach to quark matter with confinement and color superconductivity
+- [2204.03037](../papers/2204.03037.md) (2022) [2] Universal Relations for Neutron Star F-Mode and G-Mode Oscillations
+- [2204.00892](../papers/2204.00892.md) (2022) [2] Dilepton production from chirally asymmetric matter
+- [2204.00358](../papers/2204.00358.md) (2022) [2] Zero-temperature thermodynamics of dense asymmetric strong-interaction matter

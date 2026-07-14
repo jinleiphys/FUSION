@@ -1,0 +1,108 @@
+# Charge distributions
+
+**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Charge distributions
+
+**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+
+**Papers:** 113 (showing first 100 of 113)
+
+- [2302.08171](../papers/2302.08171.md) (2023) [2] Spontaneous fission half-lives of actinides and super-heavy elements
+- [2212.02124](../papers/2212.02124.md) (2022) [2] Charge-dependent anisotropic flow in high-energy heavy-ion collisions from relativistic resistive magneto-hydrodynamic e...
+- [2207.14323](../papers/2207.14323.md) (2022) [2] Crystallization in single and multicomponent Neutron Star crusts
+- [2206.12903](../papers/2206.12903.md) (2022) [2] Minkowski's lost legacy and hadron electromagnetism
+- [2206.07858](../papers/2206.07858.md) (2022) [1] Driving Potential and Fission-Fragment Charge Distributions
+- [2205.05968](../papers/2205.05968.md) (2022) [2] Analysis of 2-Body Central Events for $^{129}Xe+^{nat}Sn$ from $8A$ $MeV$ up to $18A$ $MeV$ and for $^{129}Xe+^{197}Au$ ...
+- [2204.01465](../papers/2204.01465.md) (2022) [1] On the deuteron relativistic charge distributions
+- [2203.01975](../papers/2203.01975.md) (2022) [2] Nudged elastic band approach to nuclear fission pathways
+- [2201.03216](../papers/2201.03216.md) (2022) [2] Nuclear mass table in deformed relativistic Hartree-Bogoliubov theory in continuum: I. even-even nuclei
+- [2201.01442](../papers/2201.01442.md) (2022) [2] Determination of neutron-skin thickness using configurational information entropy
+- [2111.12464](../papers/2111.12464.md) (2021) [2] Universal trend of charge radii of even-even Ca-Zn nuclei
+- [2108.11729](../papers/2108.11729.md) (2021) [2] Extraction of the second and fourth radial moments of nuclear charge density from the elastic electron-nucleus scatterin...
+- [2108.09910](../papers/2108.09910.md) (2021) [2] Electromagnetic Field Produced in High Energy Small Collision System within Charge Density Models of Nucleon
+- [2108.10134](../papers/2108.10134.md) (2021) [2] Pileup Correction on Higher-order Cumulants with Unfolding Approach
+- [2107.05129](../papers/2107.05129.md) (2021) [2] Bremsstrahlung photons from stopping in heavy-ion collisions
+- [2105.09272](../papers/2105.09272.md) (2021) [2] Fission fragment distributions of neutron-rich nuclei based on Langevin calculations: toward r-process simulations
+- [2104.08077](../papers/2104.08077.md) (2021) [2] Efficiency corrections for mutually inclusive variables and particle identification effect for mixed-cumulants in heavy-...
+- [2102.02346](../papers/2102.02346.md) (2021) [2] Microscopic Calculation of Fission Product Yields with Particle Number Projection
+- [2101.09845](../papers/2101.09845.md) (2021) [2] Electromagnetic fields from the extended Kharzeev-McLerran-Warringa model in relativistic heavy-ion collisions
+- [2101.04304](../papers/2101.04304.md) (2021) [2] Dynamic Jet Charge
+- [2101.00320](../papers/2101.00320.md) (2021) [2] Nuclear charge densities in spherical and deformed nuclei: towards precise calculations of charge radii
+- [2012.13281](../papers/2012.13281.md) (2020) [2] Kinetic Energy Distribution of Fragments for Thermal Neutron-Induced $^{235}$U and $^{239}$Pu Fission Reactions
+- [2010.15501](../papers/2010.15501.md) (2020) [2] Higher order cumulants of electric charge and strangeness fluctuations on the crossover line
+- [2010.11172](../papers/2010.11172.md) (2020) [2] 3-D structure of the Glasma initial state -- Breaking boost-invariance by collisions of extended shock waves in classica...
+- [2008.06639](../papers/2008.06639.md) (2020) [2] Improvements to the macroscopic-microscopic approach of nuclear fission
+- [2007.05318](../papers/2007.05318.md) (2020) [1] Charge Distributions of Moving Nucleons
+- [2005.00141](../papers/2005.00141.md) (2020) [2] Novel ansatz for charge radii in density functional theories
+- [2002.11398](../papers/2002.11398.md) (2020) [1] Higher-order cumulants of net-charge distributions from local charge conservation
+- [2002.02227](../papers/2002.02227.md) (2020) [2] Skyrme-type nuclear interaction as a tool for calculating the finite nuclear size correction to atomic energy levels and...
+- [2001.01689](../papers/2001.01689.md) (2020) [2] Ab initio calculations of reactor antineutrino fluxes with exact lepton wave functions
+- [1911.12454](../papers/1911.12454.md) (2019) [2] Toward Initial Conditions of Conserved Charges Part II: The ICCING Monte Carlo Algorithm
+- [1910.03006](../papers/1910.03006.md) (2019) [2] Color Correlations in the Proton
+- [1907.04560](../papers/1907.04560.md) (2019) [2] Allowed $β$-decay spectrum with numerical electron wave functions
+- [1907.01122](../papers/1907.01122.md) (2019) [2] Lepton scattering from $^{40}$Ar and $^{48}$Ti in the quasielastic peak region
+- [1903.01653](../papers/1903.01653.md) (2019) [2] Axial Kinetic Theory and Spin Transport for Fermions with Arbitrary Mass
+- [1902.09535](../papers/1902.09535.md) (2019) [2] Time-dependent generator coordinate method study of mass-asymmetric fission of actinides
+- [1811.05568](../papers/1811.05568.md) (2018) [2] Number of Particles in Fission Fragments
+- [1809.07049](../papers/1809.07049.md) (2018) [2] Dilepton Radiation in Heavy-Ion Collisions at Small Transverse Momentum
+- [1806.06750](../papers/1806.06750.md) (2018) [2] Dilepton photoproduction measures the fluctuations of initial electromagnetic fields in nuclear collisions
+- [1805.00775](../papers/1805.00775.md) (2018) [2] Nonequilibrium axial charge production in expanding glasma flux tubes
+- [1709.01183](../papers/1709.01183.md) (2017) [2] Identifying Inconsistencies in Fission Product Yield Evaluations with Prompt Neutron Emission
+- [1708.08625](../papers/1708.08625.md) (2017) [2] Linearly polarized gluons and axial charge fluctuations in the Glasma
+- [1708.08152](../papers/1708.08152.md) (2017) [2] Freezeout systematics due to the hadron spectrum
+- [1704.08906](../papers/1704.08906.md) (2017) [2] The limits of the nuclear landscape explored by the relativistic continuum Hatree-Bogoliubov theory
+- [1704.01253](../papers/1704.01253.md) (2017) [2] On the charge distribution of $d^*(2380)$
+- [1612.06485](../papers/1612.06485.md) (2016) [1] Effects of volume corrections and resonance decays on cumulants of net-charge distributions in a Monte Carlo hadron reso...
+- [1610.08591](../papers/1610.08591.md) (2016) [1] Importance of volume corrections on the net-charge distributions at the RHIC BES energies
+- [1610.07138](../papers/1610.07138.md) (2016) [2] Higher moments of multiplicity fluctuations in a hadron-resonance gas with exact conservation laws
+- [1608.07319](../papers/1608.07319.md) (2016) [2] A Euclidean bridge to the relativistic constituent quark model
+- [1607.01875](../papers/1607.01875.md) (2016) [2] Resonance decay effect on conserved number fluctuations in a hadron resonance gas model
+- [1602.07089](../papers/1602.07089.md) (2016) [2] Cumulants of multiplicity distributions in most-central heavy-ion collisions
+- [1602.06378](../papers/1602.06378.md) (2016) [2] Understanding the negative binomial multiplicity fluctuations in relativistic heavy ion collisions
+- [1601.01428](../papers/1601.01428.md) (2016) [2] Comparisons of electric charge and axial charge meson cloud distributions in the PCQM
+- [1512.05603](../papers/1512.05603.md) (2015) [2] Influence of kinematic cuts on the net charge distribution
+- [1512.00098](../papers/1512.00098.md) (2015) [2] Aspects of QCD Current Algebra on a Null Plane
+- [1510.08003](../papers/1510.08003.md) (2015) [1] Microscopic modeling of mass and charge distributions in the spontaneous fission of 240Pu
+- [1510.02898](../papers/1510.02898.md) (2015) [2] Intermediate Mass Fragment Emission in ${^{32}}$S +${^{51}}$V, ${^{109}}$Ag, and ${^{238}}$U Collisions at E~=~31.6~MeV~...
+- [1509.05786](../papers/1509.05786.md) (2015) [2] The curvature of the freeze-out line in heavy ion collisions
+- [1509.03404](../papers/1509.03404.md) (2015) [2] Dynamical and statistical description of multifragmentation in heavy-ion collisions
+- [1501.03010](../papers/1501.03010.md) (2015) [2] Fluctuations of Conserved Quantities in High Energy Nuclear Collisions at RHIC
+- [1410.2389](../papers/1410.2389.md) (2014) [2] Beyond mean-field study of elastic and inelastic electron scattering off nuclei
+- [1408.6810](../papers/1408.6810.md) (2014) [2] Influence of the density of states on the odd-even staggering in the charge distribution of the emitted fragments
+- [1407.3168](../papers/1407.3168.md) (2014) [2] Chiral Hall Effect and Chiral Electric Waves
+- [1211.2074](../papers/1211.2074.md) (2012) [1] Unfolding of event-by-event net-charge distributions in heavy-ion collision
+- [1211.1787](../papers/1211.1787.md) (2012) [2] Nuclear proton and neutron distributions in the detection of weak interacting massive particles
+- [1108.2541](../papers/1108.2541.md) (2011) [2] Proton form-factor dependence of the finite-size correction to the Lamb shift in muonic hydrogen
+- [1108.2448](../papers/1108.2448.md) (2011) [2] Actinide collisions for QED and superheavy elements with the time-dependent Hartree-Fock theory and the Balian-Vénéroni ...
+- [1103.5443](../papers/1103.5443.md) (2011) [2] Anomaly-induced charges in nucleons
+- [1101.5125](../papers/1101.5125.md) (2011) [2] Probing the QCD Critical Point by Higher Moments of Net-Charge Distribution
+- [1006.3723](../papers/1006.3723.md) (2010) [2] Isospin dependent multifragmentation of relativistic projectiles
+- [1003.0903](../papers/1003.0903.md) (2010) [2] The Role of Mesons in the Electromagnetic Form Factors of the Nucleon
+- [0903.3304](../papers/0903.3304.md) (2009) [2] Interaction between Interpenetrating Charge Clouds and Collision of High-Energy Particles
+- [0810.0925](../papers/0810.0925.md) (2008) [2] Charge distribution and radii in clusters from nuclear pasta models
+- [0807.2173](../papers/0807.2173.md) (2008) [2] Symmetry interaction and many-body correlations
+- [2308.04852](../papers/2308.04852.md) (0000) [2] 2308.04852
+- [2309.06371](../papers/2309.06371.md) (0000) [2] 2309.06371
+- [2309.16893](../papers/2309.16893.md) (0000) [2] 2309.16893
+- [2310.04083](../papers/2310.04083.md) (0000) [2] 2310.04083
+- [2312.15008](../papers/2312.15008.md) (0000) [2] 2312.15008
+- [2402.02935](../papers/2402.02935.md) (0000) [2] 2402.02935
+- [2403.11628](../papers/2403.11628.md) (0000) [2] 2403.11628
+- [2405.09648](../papers/2405.09648.md) (0000) [2] 2405.09648
+- [2406.05267](../papers/2406.05267.md) (0000) [2] 2406.05267
+- [2406.06677](../papers/2406.06677.md) (0000) [1] 2406.06677
+- [2406.17394](../papers/2406.17394.md) (0000) [2] 2406.17394
+- [2410.09565](../papers/2410.09565.md) (0000) [2] 2410.09565
+- [2410.09577](../papers/2410.09577.md) (0000) [2] 2410.09577
+- [2412.04545](../papers/2412.04545.md) (0000) [2] 2412.04545
+- [2502.16539](../papers/2502.16539.md) (0000) [2] 2502.16539
+- [2502.16562](../papers/2502.16562.md) (0000) [2] 2502.16562
+- [2508.08616](../papers/2508.08616.md) (0000) [2] 2508.08616
+- [2508.20791](../papers/2508.20791.md) (0000) [2] 2508.20791
+- [2509.02216](../papers/2509.02216.md) (0000) [2] 2509.02216
+- [2509.03778](../papers/2509.03778.md) (0000) [2] 2509.03778
+- [2602.07501](../papers/2602.07501.md) (0000) [2] 2602.07501
+- [2603.13819](../papers/2603.13819.md) (0000) [2] 2603.13819
+- [nucl-th/0002046](../papers/nucl-th/0002046.md) (0000) [2] nucl-th/0002046
+- [nucl-th/0005023](../papers/nucl-th/0005023.md) (0000) [2] nucl-th/0005023
+- [nucl-th/0108065](../papers/nucl-th/0108065.md) (0000) [1] nucl-th/0108065
+- [nucl-th/0404007](../papers/nucl-th/0404007.md) (0000) [2] nucl-th/0404007

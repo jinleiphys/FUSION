@@ -1,0 +1,108 @@
+# Collective flow
+
+**PhySH lineage:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md) > Collective flow
+
+**Broader:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
+
+**Papers:** 346 (showing first 100 of 346)
+
+- [2307.08306](../papers/2307.08306.md) (2023) [2] System size dependence of pre-equilibrium and applicability of hydrodynamics in heavy-ion collisions
+- [2307.02995](../papers/2307.02995.md) (2023) [1] Collective flow and the fluid behavior in p/d/$^3$He+Au collisions at $\sqrt{s_{NN}} = 200$ GeV
+- [2306.02152](../papers/2306.02152.md) (2023) [2] Heavy-flavor transport and hadronization in pp collisions
+- [2305.09937](../papers/2305.09937.md) (2023) [1] Machine learning study to identify collective flow in small and large colliding systems
+- [2305.00015](../papers/2305.00015.md) (2023) [2] Determination of the neutron skin of $^{208}$Pb from ultrarelativistic nuclear collisions
+- [2304.12711](../papers/2304.12711.md) (2023) [2] Random model of flow decorrelation
+- [2304.03241](../papers/2304.03241.md) (2023) [2] Glasma properties in small proper time expansion
+- [2301.07907](../papers/2301.07907.md) (2023) [2] Revisiting angular momentum conservation in transport simulations of intermediate-energy heavy-ion collisions
+- [2301.04279](../papers/2301.04279.md) (2023) [2] Collective flows of protons and deuterons in Au + Au collisions at $E_{beam}$ = 1.23$A$ GeV by the IQMD model
+- [2301.03066](../papers/2301.03066.md) (2023) [2] Impacts of momentum dependent interaction, symmetry energy and near-threshold $NN\to NΔ$ cross sections on isospin sensi...
+- [2212.12679](../papers/2212.12679.md) (2022) [1] Collective flow of light nuclei and hyper-nuclei in Au+Au collisions at $\sqrt{s_{NN}}$ = 3, 14.6, 19.6, 27, and 54.4 Ge...
+- [2212.09288](../papers/2212.09288.md) (2022) [2] Bose-Einstein Condensation and Dissipative Dynamics in a Relativistic Pion Gas
+- [2211.14356](../papers/2211.14356.md) (2022) [2] Establishing the Range of Applicability of Hydrodynamics in High-Energy Collisions
+- [2211.14379](../papers/2211.14379.md) (2022) [2] Opacity dependence of transverse flow, pre-equilibrium and applicability of hydrodynamics in heavy-ion collisions
+- [2211.12170](../papers/2211.12170.md) (2022) [2] Charmed hadron production in high-energy nuclear collisions
+- [2209.04239](../papers/2209.04239.md) (2022) [2] Heavy-flavor meson and baryon production in high-energy nucleus-nucleus collisions
+- [2208.06854](../papers/2208.06854.md) (2022) [2] Testing the collectivity in large and small colliding systems with test particles
+- [2208.00452](../papers/2208.00452.md) (2022) [1] Possible Enhancements of Collective Flow Anisotropy Induced by Uncertainty Relation for Fluid Element
+- [2207.04927](../papers/2207.04927.md) (2022) [2] Splitting of proton-antiproton directed flow in relativistic heavy-ion collisions
+- [2207.03563](../papers/2207.03563.md) (2022) [2] Principal Component Analysis of Azimuthal Flow in Intermediate-Energy Heavy-Ion Reactions
+- [2206.10766](../papers/2206.10766.md) (2022) [2] Probing high-density nuclear symmetry energy with $Ξ^{-}/Ξ^{0}$ ratio in heavy-ion collisions at $\sqrt{s_{NN}} \sim 3$ ...
+- [2206.08218](../papers/2206.08218.md) (2022) [2] Influence of nuclear structure in relativistic heavy-ion collisions
+- [2206.05332](../papers/2206.05332.md) (2022) [1] Impact of nuclear deformation on collective flow observables in relativistic U+U collisions
+- [2206.01943](../papers/2206.01943.md) (2022) [1] Ratios of collective flow observables in high-energy isobar collisions are insensitive to final state interactions
+- [2205.02409](../papers/2205.02409.md) (2022) [2] Evolution of global polarization in relativistic heavy-ion collisions within a perturbative approach
+- [2205.00120](../papers/2205.00120.md) (2022) [2] Implications of the isobar run results for chiral magnetic effect in heavy ion collisions
+- [2204.01038](../papers/2204.01038.md) (2022) [1] Multiparticle azimuthal cumulants from transverse momentum conservation and collective flow
+- [2202.08732](../papers/2202.08732.md) (2022) [2] In-medium hadronization of heavy quarks and its effect on charmed meson and baryon distributions in heavy-ion collisions
+- [2201.08486](../papers/2201.08486.md) (2022) [2] Critical point particle number fluctuations from molecular dynamics
+- [2111.08963](../papers/2111.08963.md) (2021) [1] Effects of hydrodynamic and initial longitudinal fluctuations on rapidity decorrelation of collective flow
+- [2111.02908](../papers/2111.02908.md) (2021) [2] Constraining the nucleon size with relativistic nuclear collisions
+- [2110.03590](../papers/2110.03590.md) (2021) [1] Jet Drift and Collective Flow in Heavy-Ion Collisions
+- [2109.07594](../papers/2109.07594.md) (2021) [1] Mean-field update in the JAM microscopic model: Mean-field effects on collective flow in high-energy heavy-ion collision...
+- [2104.09513](../papers/2104.09513.md) (2021) [1] Ab Initio Coupling of Jets to Collective Flow in the Opacity Expansion Approach
+- [2104.08179](../papers/2104.08179.md) (2021) [1] Collective flow in single-hit QCD kinetic theory
+- [2104.05551](../papers/2104.05551.md) (2021) [2] Interpreting the charge-dependent flow and constraining the chiral magnetic wave with event shape engineering
+- [2012.11454](../papers/2012.11454.md) (2020) [1] Collective flow at SIS energies within a hadronic transport approach: Influence of light nuclei formation and equation o...
+- [2012.04352](../papers/2012.04352.md) (2020) [2] On nuclear coalescence in small interacting systems
+- [2009.09586](../papers/2009.09586.md) (2020) [2] Collectivity in large and small systems formed in ultrarelativistic collisions
+- [2008.11540](../papers/2008.11540.md) (2020) [2] Application of artificial intelligence in the determination of impact parameter in heavy-ion collisions at intermediate ...
+- [2008.08623](../papers/2008.08623.md) (2020) [2] Charge Conservation and Higher Moments of Charge Fluctuations
+- [2004.11737](../papers/2004.11737.md) (2020) [2] Application of microscopic transport model in the study of nuclear equation of state from heavy ion collisions at interm...
+- [2004.00528](../papers/2004.00528.md) (2020) [2] On nonlinearity in hydrodynamic response to the initial geometry in relativistic heavy-ion collisions
+- [2002.06058](../papers/2002.06058.md) (2020) [2] Clustering structure effect on Hanbury-Brown-Twiss correlation in $^{12}$C + $^{197}$Au collisions at 200 GeV}
+- [2001.10260](../papers/2001.10260.md) (2020) [2] Flow in collisions of light nuclei
+- [2001.03669](../papers/2001.03669.md) (2020) [2] Bayesian inference of the incompressibility, skewness and kurtosis of nuclear matter from empirical pressures in relativ...
+- [1912.02115](../papers/1912.02115.md) (2019) [2] Heavy quark flow as better probes of QGP properties
+- [1911.03370](../papers/1911.03370.md) (2019) [2] Photon production and elliptic flow from momentum-anisotropic quark-gluon plasma
+- [1911.00826](../papers/1911.00826.md) (2019) [2] Probing the partonic degrees of freedom in high multiplicity p-Pb collisions at $\sqrt{s_{NN}}=$ 5.02 TeV
+- [1910.10500](../papers/1910.10500.md) (2019) [2] Spinodal Instability at the Onset of Collective Expansion in Nuclear Collisions
+- [1910.09489](../papers/1910.09489.md) (2019) [2] Glauber Monte Carlo predictions for ultra-relativistic collisions with ${}^{16}{\rm O}$
+- [1909.06616](../papers/1909.06616.md) (2019) [2] Symmetry energy of super-dense neutron-rich matter from integrating barotropic pressures in neutron stars and heavy-ion ...
+- [1908.00451](../papers/1908.00451.md) (2019) [2] PHSD -- a microscopic transport approach for strongly interacting systems
+- [1906.03537](../papers/1906.03537.md) (2019) [1] Sensitivity of the excitation functions of collective flow to relativistic scalar and vector meson interactions in the r...
+- [1906.01422](../papers/1906.01422.md) (2019) [2] Influence of initial-state momentum anisotropy on the final-state collectivity in small collision systems
+- [1905.12492](../papers/1905.12492.md) (2019) [1] The effect of internal magnetic field on collective flow in heavy ion collisions at intermediate energies
+- [1905.09774](../papers/1905.09774.md) (2019) [2] Charmed hadron production in an improved quark coalescence model
+- [1905.05139](../papers/1905.05139.md) (2019) [2] Flow in AA and pA as an interplay of fluid-like and non-fluid like excitations
+- [1903.09833](../papers/1903.09833.md) (2019) [1] Principal Component Analysis of collective flow in Relativistic Heavy-Ion Collisions
+- [1902.11290](../papers/1902.11290.md) (2019) [2] Examination of Flow and Non-Flow Factorization Methods in Small Collision Systems
+- [1809.04237](../papers/1809.04237.md) (2018) [2] The enhancement of $v_4$ in nuclear collisions at the highest densities signals a first order phase transition
+- [1808.10265](../papers/1808.10265.md) (2018) [2] Collective flows of $α$-clustering $^{12}\mathrm{C}$ + $^{197}\mathrm{Au}$ by using different flow analysis methods
+- [1808.04896](../papers/1808.04896.md) (2018) [2] Multiparticle Production at Mid-Rapidity in the Color-Glass Condensate
+- [1808.04248](../papers/1808.04248.md) (2018) [1] Angle and magnitude decorrelation in the factorization breaking of collective flow
+- [1808.03775](../papers/1808.03775.md) (2018) [2] On the peripheral-tube description of the two-particle correlations in nuclear collisions
+- [1807.06388](../papers/1807.06388.md) (2018) [2] Signature of gluon saturation in forward di-hadron correlations at the Large Hadron Collider
+- [1805.04763](../papers/1805.04763.md) (2018) [2] Dissociation of heavy quarkonia in an anisotropic hot QCD medium in a Quasi-Particle Model
+- [1804.06781](../papers/1804.06781.md) (2018) [2] Pion-kaon femtoscopy in Pb--Pb collisions at $\sqrt{s_{\rm NN}}=2.76$ TeV modeled in (3+1)D hydrodynamics coupled to The...
+- [1804.04288](../papers/1804.04288.md) (2018) [1] Effects of in-medium nucleon-nucleon cross section on collective flow and nuclear stopping in heavy-ion collisions in th...
+- [1804.04294](../papers/1804.04294.md) (2018) [2] The effect of Lorentz-like force on collective flows of K$^{+}$ in Au+Au collisions at 1.5 GeV/nucleon}{The effect of Lo...
+- [1804.03530](../papers/1804.03530.md) (2018) [2] Heavy-quark dynamics in a hydrodynamically evolving medium
+- [1710.03050](../papers/1710.03050.md) (2017) [1] Effects of initial-state dynamics on collective flow within a coupled transport and viscous hydrodynamic approach
+- [1707.04420](../papers/1707.04420.md) (2017) [2] Transverse Momentum Fluctuations and Correlations
+- [1704.05118](../papers/1704.05118.md) (2017) [2] Jet modifications in event-by-event hydrodynamically evolving media
+- [1704.03576](../papers/1704.03576.md) (2017) [1] Collective flow from AA, pA to pp collisions - Toward a unified paradigm
+- [1704.02777](../papers/1704.02777.md) (2017) [2] Pseudorapidity profile of transverse momentum fluctuations in heavy ion collisions
+- [1703.10792](../papers/1703.10792.md) (2017) [1] Collective flow in 2.76 A TeV and 5.02 A TeV Pb+Pb collisions
+- [1703.09628](../papers/1703.09628.md) (2017) [2] Correlation femtoscopy study at NICA and STAR energies within a viscous hydrodynamic plus cascade model
+- [1703.00670](../papers/1703.00670.md) (2017) [1] Collective flow and hydrodynamics in large and small systems at the LHC
+- [1702.02507](../papers/1702.02507.md) (2017) [2] Nuclear cluster structure effect on elliptic and triangular flows in heavy-ion collisions
+- [1701.03830](../papers/1701.03830.md) (2017) [2] Revealing long-range multi-particle collectivity in small collision systems via subevent cumulants
+- [1701.03323](../papers/1701.03323.md) (2017) [1] Transverse Energy per Charged Particle in Heavy-Ion Collisions: Role of Collective Flow
+- [1610.08269](../papers/1610.08269.md) (2016) [2] Open charm physics with Heavy Ions: theoretical overview
+- [1609.06449](../papers/1609.06449.md) (2016) [2] Medium effects on heavy-flavour observables in high-energy nuclear collisions
+- [1608.06018](../papers/1608.06018.md) (2016) [2] Quark self-energy in an ellipsoidally anisotropic quark-gluon plasma
+- [1606.06906](../papers/1606.06906.md) (2016) [2] Limiting Fragmentation in a Thermal Model with Flow
+- [1604.07387](../papers/1604.07387.md) (2016) [2] Origin of the mass splitting of azimuthal anisotropies in a multi-phase transport model
+- [1603.08149](../papers/1603.08149.md) (2016) [2] Understanding transport simulations of heavy-ion collisions at 100 and 400 AMeV: Comparison of heavy ion transport codes...
+- [1601.05390](../papers/1601.05390.md) (2016) [2] Origin of the mass splitting of elliptic anisotropy in a multiphase transport model
+- [1512.08444](../papers/1512.08444.md) (2015) [2] Lambda-Lambda interaction from two-particle intensity correlation in relativistic heavy-ion collisions
+- [1512.06949](../papers/1512.06949.md) (2015) [2] Exploring the Beam Energy Dependence of Flow-Like Signatures in Small System $d+$Au Collisions
+- [1512.06465](../papers/1512.06465.md) (2015) [2] Elliptic Anisotropy $v_2$ May Be Dominated by Particle Escape instead of Hydrodynamic Flow
+- [1512.05354](../papers/1512.05354.md) (2015) [2] Testing Hydrodynamic Descriptions of of p+p Collisions at \sqrt{s}=7 TeV
+- [1509.04124](../papers/1509.04124.md) (2015) [2] Two-particle correlations in pseudorapidity in a hydrodynamic model
+- [1508.06160](../papers/1508.06160.md) (2015) [2] Is hadronic flow produced in p--Pb collisions at the Large Hadron Collider?
+- [1507.08434](../papers/1507.08434.md) (2015) [2] Radial Flow in Non-Extensive Thermodynamics and Study of Particle Spectra at LHC in the Limit of Small $(q-1)$
+- [1505.04155](../papers/1505.04155.md) (2015) [2] Manifestation of proton structure in the initial-state anisotropies in high-energy proton-proton collisions
+- [1504.06906](../papers/1504.06906.md) (2015) [2] Hydrodynamics with chiral anomaly and charge separation in relativistic heavy ion collisions
+- [1504.02529](../papers/1504.02529.md) (2015) [1] Collective flow without hydrodynamics: simulation results for relativistic ion collisions
+- [1503.06986](../papers/1503.06986.md) (2015) [2] Hadronic "flow" in p--Pb collisions at the Large Hadron Collider?

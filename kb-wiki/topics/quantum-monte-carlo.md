@@ -1,0 +1,110 @@
+# Quantum Monte Carlo
+
+**PhySH lineage:** [Monte Carlo methods](monte-carlo-methods.md) > Quantum Monte Carlo
+
+**Broader:** [Monte Carlo methods](monte-carlo-methods.md)
+
+**Narrower:** [Diffusion quantum Monte Carlo](diffusion-quantum-monte-carlo.md)
+
+**Papers:** 274 (showing first 100 of 274)
+
+- [2306.13579](../papers/2306.13579.md) (2023) [2] Maximally local two-nucleon interactions at N$^3$LO in $Δ$-less chiral effective field theory
+- [2306.11439](../papers/2306.11439.md) (2023) [1] Floating block method for quantum Monte Carlo simulations
+- [2305.01685](../papers/2305.01685.md) (2023) [2] Baryons, multi-hadron systems, and composite dark matter in non-relativistic QCD
+- [2302.07285](../papers/2302.07285.md) (2023) [1] Second-Order Perturbation Theory in Continuum Quantum Monte Carlo Calculations
+- [2212.14880](../papers/2212.14880.md) (2022) [2] Pseudogap effects in the strongly correlated regime of the two-dimensional Fermi gas
+- [2212.08654](../papers/2212.08654.md) (2022) [1] A Stable, Recursive Auxiliary Field Quantum Monte Carlo Algorithm in the Canonical Ensemble: Applications to Thermometry...
+- [2211.13998](../papers/2211.13998.md) (2022) [2] Deep-neural-network approach to solving the ab initio nuclear structure problem
+- [2210.08843](../papers/2210.08843.md) (2022) [2] Ab initio single-neutron spectroscopic overlaps in lithium isotopes
+- [2209.00093](../papers/2209.00093.md) (2022) [2] Variational Monte Carlo Calculations of n+3H Scattering
+- [2207.11179](../papers/2207.11179.md) (2022) [2] Ab initio calculation of the $β$ decay spectrum of $^6$He
+- [2207.07246](../papers/2207.07246.md) (2022) [1] Path Integral Quantum Monte Carlo Method for Light Nuclei
+- [2206.14235](../papers/2206.14235.md) (2022) [2] Isospin-symmetry implications for nuclear two-body distributions and short-range correlations
+- [2206.10021](../papers/2206.10021.md) (2022) [2] Hidden-nucleons neural-network quantum states for the nuclear many-body problem
+- [2204.10458](../papers/2204.10458.md) (2022) [1] Path Integral Quantum Monte Carlo Calculations of Light Nuclei
+- [2203.16167](../papers/2203.16167.md) (2022) [1] Quantum Monte Carlo in Configuration Space with Three-Nucleon Forces
+- [2201.01308](../papers/2201.01308.md) (2022) [2] The $^1$S$_0$ pairing gap in neutron matter
+- [2112.14253](../papers/2112.14253.md) (2021) [2] Nuclear level densities: from empirical models to microscopic methods
+- [2112.08146](../papers/2112.08146.md) (2021) [1] Neutrinoless double-beta decay: combining quantum Monte Carlo and the nuclear shell model with the generalized contact f...
+- [2111.14191](../papers/2111.14191.md) (2021) [1] Perturbative quantum Monte Carlo method for nuclear physics
+- [2108.10452](../papers/2108.10452.md) (2021) [1] Chiral Effective Field Theory's Impact on Advancing Quantum Monte Carlo Methods
+- [2108.10824](../papers/2108.10824.md) (2021) [1] Electron scattering on ${\mathbf{A=3}}$ nuclei from quantum Monte Carlo based approaches
+- [2107.06697](../papers/2107.06697.md) (2021) [2] Hot and Dense Matter Equation of State Probability Distributions for Astrophysical Simulations
+- [2106.09880](../papers/2106.09880.md) (2021) [1] Accelerated quantum Monte Carlo with mitigated error on noisy quantum computer
+- [2106.09058](../papers/2106.09058.md) (2021) [1] Quantum Monte Carlo studies of a trimer scaling function with microscopic two- and three-body interactions
+- [2106.07439](../papers/2106.07439.md) (2021) [2] Comparative study of ${}^6$He $β$-decay based on different similarity-renormalization-group evolved chiral interactions
+- [2105.11072](../papers/2105.11072.md) (2021) [2] Complex Langevin study for polarons in an attractively interacting one-dimensional two-component Fermi gas
+- [2101.11903](../papers/2101.11903.md) (2021) [2] Low-density neutron matter and the unitary limit
+- [2101.02941](../papers/2101.02941.md) (2021) [2] Fermi polaron in low-density spin-polarized neutron matter
+- [2012.15451](../papers/2012.15451.md) (2020) [2] Fermions with long and finite range interactions on a quantum ring
+- [2012.03627](../papers/2012.03627.md) (2020) [2] Cooper Triples in Attractive Three-Component Fermions: Implication for Hadron-Quark Crossover
+- [2011.02105](../papers/2011.02105.md) (2020) [2] Constrained extrapolation problem and order-dependent mappings
+- [2010.13194](../papers/2010.13194.md) (2020) [2] Variational and parquet-diagram calculations for neutron matter. III. S-wave pairing
+- [2010.12680](../papers/2010.12680.md) (2020) [1] Spin Susceptibility in Neutron Matter from Quantum Monte Carlo Calculations
+- [2010.12703](../papers/2010.12703.md) (2020) [2] Machine learning-based inversion of nuclear responses
+- [2010.09632](../papers/2010.09632.md) (2020) [2] Pairing in pure neutron matter
+- [2007.15570](../papers/2007.15570.md) (2020) [1] A quantum Monte Carlo based approach to intranuclear cascades
+- [2007.11237](../papers/2007.11237.md) (2020) [2] Comment on "Quasielastic lepton scattering and back-to-back nucleons in the short-time approximation", by S. Pastore et ...
+- [2007.06589](../papers/2007.06589.md) (2020) [2] Satisfying the compressibility sum rule in neutron matter
+- [2007.04427](../papers/2007.04427.md) (2020) [2] The Equation of State of Nuclear Matter : from Finite Nuclei to Neutron Stars
+- [2006.01429](../papers/2006.01429.md) (2020) [2] From weak to strong: constrained extrapolation of perturbation series with applications to dilute Fermi systems
+- [2005.12124](../papers/2005.12124.md) (2020) [2] Low-Dimensional Fluctuations and Pseudogap in Gaudin-Yang Fermi Gases
+- [2004.07744](../papers/2004.07744.md) (2020) [2] Direct Astrophysical Tests of Chiral Effective Field Theory at Supranuclear Densities
+- [2004.05263](../papers/2004.05263.md) (2020) [2] Chiral Effective Field Theory Calculations of Weak Transitions in Light Nuclei
+- [2004.05014](../papers/2004.05014.md) (2020) [2] Emergence of a pseudogap in the BCS-BEC crossover
+- [2003.07710](../papers/2003.07710.md) (2020) [2] Ab initio study of $\boldsymbol{(ν_\ell,\ell^-)}$ and $\boldsymbol{(\overlineν_\ell,\ell^+)}$ inclusive scattering in $^...
+- [2001.01374](../papers/2001.01374.md) (2020) [1] Atomic nuclei from quantum Monte Carlo calculations with chiral EFT interactions
+- [1912.09411](../papers/1912.09411.md) (2019) [2] Nuclear and neutron-star matter from local chiral interactions
+- [1908.04288](../papers/1908.04288.md) (2019) [2] Clustering of Four-Component Unitary Fermions
+- [1908.00174](../papers/1908.00174.md) (2019) [2] The virial expansion of attractively interacting Fermi gases in 1D, 2D, and 3D, up to fifth order
+- [1907.12527](../papers/1907.12527.md) (2019) [2] Theory of strongly paired fermions with arbitrary short-range interactions
+- [1907.10596](../papers/1907.10596.md) (2019) [1] Reducing the complexity of finite-temperature auxiliary-field quantum Monte Carlo
+- [1907.03658](../papers/1907.03658.md) (2019) [2] Scale and Scheme Independence and Position-Momentum Equivalence of Nuclear Short-Range Correlations
+- [1906.10117](../papers/1906.10117.md) (2019) [2] The contact in the unitary Fermi gas across the superfluid phase transition
+- [1906.01674](../papers/1906.01674.md) (2019) [2] Neutron matter at the interface(s): static response and effective mass
+- [1905.02172](../papers/1905.02172.md) (2019) [2] Comment on "Searching for flavor dependence in nuclear quark behavior
+- [1904.04233](../papers/1904.04233.md) (2019) [2] Constraining the neutron-matter equation of state with gravitational waves
+- [1904.00925](../papers/1904.00925.md) (2019) [2] Comment on "Is a Trineutron Resonance Lower in Energy than a Tetraneutron Resonance?" [arXiv:1612.01502]
+- [1903.08078](../papers/1903.08078.md) (2019) [1] Muon capture in nuclei: an ab initio approach based on quantum Monte Carlo methods
+- [1903.05215](../papers/1903.05215.md) (2019) [2] Local chiral EFT potentials in nuclei and neutron matter: results and issues
+- [1901.04868](../papers/1901.04868.md) (2019) [1] Quantum Monte Carlo Methods in Nuclear Physics: Recent Advances
+- [1901.00870](../papers/1901.00870.md) (2019) [2] Non-perturbative Extraction of the Effective Mass in Neutron Matter
+- [1812.08444](../papers/1812.08444.md) (2018) [2] Dilute Fermi gas at fourth order in effective field theory
+- [1811.01843](../papers/1811.01843.md) (2018) [1] Quantum Monte Carlo calculations of dark matter scattering off light nuclei
+- [1810.00640](../papers/1810.00640.md) (2018) [2] Many-body effects in (p,pN) reactions within a unified approach
+- [1808.00518](../papers/1808.00518.md) (2018) [1] Exact restoration of Galilei invariance in density functional calculations with quantum Monte Carlo
+- [1807.03913](../papers/1807.03913.md) (2018) [2] The pseudogap regime in the unitary Fermi gas
+- [1806.08635](../papers/1806.08635.md) (2018) [2] Gap equation with pairing correlations beyond mean field and its equivalence to a Hugenholtz-Pines condition for fermion...
+- [1804.08027](../papers/1804.08027.md) (2018) [2] Single- and two-nucleon momentum distributions for local chiral interactions
+- [1803.10725](../papers/1803.10725.md) (2018) [1] Quantum Monte Carlo formalism for dynamical pions and nucleons
+- [1802.08932](../papers/1802.08932.md) (2018) [2] Auxiliary field diffusion Monte Carlo calculations of light and medium-mass nuclei with local chiral interactions
+- [1801.09977](../papers/1801.09977.md) (2018) [2] Comparing many-body approaches against the helium atom exact solution
+- [1801.06163](../papers/1801.06163.md) (2018) [2] Pairing correlations across the superfluid phase transition in the unitary Fermi gas
+- [1712.09412](../papers/1712.09412.md) (2017) [1] Semigroup approach to the sign problem in quantum Monte Carlo simulations
+- [1711.07521](../papers/1711.07521.md) (2017) [2] Medium-mass hypernuclei and the nucleon-isospin dependence of the three-body hyperon-nucleon-nucleon force
+- [1710.02840](../papers/1710.02840.md) (2017) [2] Nuclear Axial Currents from Scale-Chiral Effective Field Theory
+- [1710.00072](../papers/1710.00072.md) (2017) [2] Nuclear deformation in the laboratory frame
+- [1709.09143](../papers/1709.09143.md) (2017) [2] Properties of nuclei up to $A=16$ using local chiral interactions
+- [1709.03592](../papers/1709.03592.md) (2017) [1] Quantum Monte Carlo calculations of weak transitions in $A\,$=$\,$6--10 nuclei
+- [1708.08771](../papers/1708.08771.md) (2017) [2] A Minimal Nuclear Energy Density Functional
+- [1708.03661](../papers/1708.03661.md) (2017) [1] Revisiting the Hybrid Quantum Monte Carlo Method for Hubbard and Electron-Phonon Models
+- [1707.09810](../papers/1707.09810.md) (2017) [1] Lattice Quantum Monte Carlo Study of Chiral Magnetic Effect in Dirac Semimetals
+- [1707.02883](../papers/1707.02883.md) (2017) [2] Light-nuclei spectra from chiral dynamics
+- [1706.07668](../papers/1706.07668.md) (2017) [1] Quantum Monte Carlo calculations of light nuclei with local chiral two- and three-nucleon interactions
+- [1706.06494](../papers/1706.06494.md) (2017) [2] Sampling General N-Body Interactions with Auxiliary Fields
+- [1705.06192](../papers/1705.06192.md) (2017) [2] Microscopic Clustering in Light Nuclei
+- [1704.00622](../papers/1704.00622.md) (2017) [2] Analytical approach to the Bose polaron problem in one dimension
+- [1701.06516](../papers/1701.06516.md) (2017) [2] Ground-State Properties of $^{4}$He and $^{16}$O Extrapolated from Lattice QCD with Pionless EFT
+- [1612.01502](../papers/1612.01502.md) (2016) [2] Is a Trineutron Resonance Lower in Energy than a Tetraneutron Resonance?
+- [1611.07643](../papers/1611.07643.md) (2016) [2] On the Statistics of Baryon Correlation Functions in Lattice QCD
+- [1608.08411](../papers/1608.08411.md) (2016) [2] From resonantly interacting fermions with effective range to neutron matter
+- [1607.01870](../papers/1607.01870.md) (2016) [1] Auxiliary-field quantum Monte Carlo methods in nuclei
+- [1606.06335](../papers/1606.06335.md) (2016) [2] Local chiral potentials and the structure of light nuclei
+- [1604.07509](../papers/1604.07509.md) (2016) [2] The Operator Product Expansion Beyond Leading Order for Two-Component Fermions
+- [1604.01387](../papers/1604.01387.md) (2016) [1] Quantum Monte Carlo calculations of two neutrons in finite volume
+- [1602.07665](../papers/1602.07665.md) (2016) [2] Hot and dense matter beyond relativistic mean field theory
+- [1512.06832](../papers/1512.06832.md) (2015) [2] The EOS of neutron matter and the effect of $Λ$ hyperons to neutron star structure
+- [1512.06011](../papers/1512.06011.md) (2015) [1] Constrained-Path Quantum Monte-Carlo Approach for Non-Yrast States Within the Shell Model
+- [1510.06417](../papers/1510.06417.md) (2015) [2] Static Response of Neutron Matter
+- [1510.02980](../papers/1510.02980.md) (2015) [2] Harmonically trapped fermions in two dimensions: ground-state energy and contact of SU(2) and SU(4) systems via nonunifo...
+- [1510.01381](../papers/1510.01381.md) (2015) [2] Liquid-gas phase transition in strange hadronic matter with relativistic models

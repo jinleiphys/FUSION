@@ -1,0 +1,106 @@
+# Shell model
+
+**PhySH lineage:** Shell model
+
+**Papers:** 2308 (showing first 100 of 2308)
+
+- [2307.14827](../papers/2307.14827.md) (2023) [1] Triaxial projected shell model approach for negative parity states in even-even nuclei
+- [2307.11577](../papers/2307.11577.md) (2023) [2] Hyperon-Nucleon Interaction Constrained by Light Hypernuclei
+- [2307.11861](../papers/2307.11861.md) (2023) [2] $ T=1 $ Pairing Along the $ N=Z $ Line
+- [2307.09445](../papers/2307.09445.md) (2023) [1] Study of $β^- $ decays for sd model space with Shell model
+- [2307.07332](../papers/2307.07332.md) (2023) [2] Nuclear Physics in the Era of Quantum Computing and Quantum Machine Learning
+- [2307.06670](../papers/2307.06670.md) (2023) [2] Fingerprints of the triaxial deformation from energies and $B(E2)$ transition probabilities of $γ$-bands in transitional...
+- [2307.07077](../papers/2307.07077.md) (2023) [2] Level Structures of $^{56,58}$Ca Cast Doubt on a doubly magic $^{60}$Ca
+- [2307.05197](../papers/2307.05197.md) (2023) [1] Quantum entanglement patterns in the structure of atomic nuclei within the nuclear shell model
+- [2307.04656](../papers/2307.04656.md) (2023) [2] A new approach to two-level model calculation of isospin mixing in nuclei
+- [2307.00202](../papers/2307.00202.md) (2023) [2] Ab initio translationally invariant nucleon-nucleus optical potentials
+- [2306.17289](../papers/2306.17289.md) (2023) [2] Improved sd shell effective interactions from Daejeon16
+- [2306.16189](../papers/2306.16189.md) (2023) [2] Intruder configurations in $^{29}$Ne at the transition into the island of inversion: Detailed structure study of $^{28}$...
+- [2306.14368](../papers/2306.14368.md) (2023) [2] Understanding Excitations in $^{59,61}$Co, $^{59}$Ni
+- [2306.14441](../papers/2306.14441.md) (2023) [2] Revisiting Theoretical Analysis of Electric Dipole Moment of $^{129}$Xe
+- [2306.11996](../papers/2306.11996.md) (2023) [2] Structure of Heavy Nuclei Based on Nucleon Quartets
+- [2306.08885](../papers/2306.08885.md) (2023) [1] Shadow-based quantum subspace algorithm for the nuclear shell model
+- [2306.06692](../papers/2306.06692.md) (2023) [2] Complex valence-space effective operators for observables: the Gamow-Teller transition
+- [2306.06432](../papers/2306.06432.md) (2023) [2] Prediction of the neutron drip line in oxygen isotopes using quantum computation
+- [2306.06099](../papers/2306.06099.md) (2023) [2] NuCLR: Nuclear Co-Learned Representations
+- [2306.05192](../papers/2306.05192.md) (2023) [2] Description of the proton-decaying 0$^+_2$ resonance of the $α$ particle
+- [2306.05215](../papers/2306.05215.md) (2023) [1] Description of $^7$Be and $^7$Li within the Gamow Shell Model
+- [2306.02033](../papers/2306.02033.md) (2023) [2] Isomeric excitation energy for $^{99}$In$^{m}$ from mass spectrometry reveals constant trend next to doubly magic $^{100...
+- [2306.02058](../papers/2306.02058.md) (2023) [1] Shell model study of first-forbidden beta decay around $^{208}$Pb
+- [2306.01842](../papers/2306.01842.md) (2023) [2] 133In: A Rosetta Stone for decays of r-process nuclei
+- [2306.00277](../papers/2306.00277.md) (2023) [2] Neutrino-induced reactions on 18O and implications of 18O mixture in water Cherenkov detectors on supernova neutrino eve...
+- [2305.15131](../papers/2305.15131.md) (2023) [1] Systematic shell-model study for structure and isomeric states in $^{200-210}$Po isotopes
+- [2305.09182](../papers/2305.09182.md) (2023) [2] Evidence of bicluster structure in the ground state of $^{20}$Ne
+- [2305.05414](../papers/2305.05414.md) (2023) [1] Investigation of unbound hydrogen isotopes with the Gamow shell model
+- [2305.00371](../papers/2305.00371.md) (2023) [2] New 26P(p,γ)27S thermonuclear reaction rate and its astrophysical implication in rp-process
+- [2304.11780](../papers/2304.11780.md) (2023) [2] Shape transition of Nd and Sm isotopes and neutrinoless double-beta decay nuclear matrix element of $^{150}$Nd
+- [2304.11358](../papers/2304.11358.md) (2023) [2] Neutrino-induced neutral- and charged-current reactions on $^{40}$Ar
+- [2304.10361](../papers/2304.10361.md) (2023) [2] Study of S, Cl and Ar isotopes with $N \geq Z$ using microscopic effective $sd$-shell interactions
+- [2304.07662](../papers/2304.07662.md) (2023) [1] Structure of neutron-rich He $Λ$ hypernuclei using the cluster orbital shell model
+- [2304.01719](../papers/2304.01719.md) (2023) [2] Investigation of the cause of the discrepancies between calculated running sums for nuclear matrix elements of two-neutr...
+- [2304.00834](../papers/2304.00834.md) (2023) [2] Allowed $β^-$ decay of bare atoms with A$\sim$ 60-80 in stellar environments
+- [2304.01389](../papers/2304.01389.md) (2023) [2] Magnetic moments of $A = 3$ nuclei with chiral effective field theory operators
+- [2304.00602](../papers/2304.00602.md) (2023) [1] Gamow Shell Model description of $^7$Li and elastic scattering reaction $^4$He($^3$H, $^3$H)$^4$He
+- [2303.16483](../papers/2303.16483.md) (2023) [2] Low-energy quadrupole collectivity of Sn nuclei in self-consistent calculations with a semi-realistic interaction
+- [2303.11085](../papers/2303.11085.md) (2023) [1] Investigation of spectroscopic factors of deeply-bound nucleons in drip-line nuclei with the Gamow shell model
+- [2303.09039](../papers/2303.09039.md) (2023) [2] Classification of pairing phase transition in the hot nucleus
+- [2303.06525](../papers/2303.06525.md) (2023) [2] Finding the best basis states for the variation after projection nuclear wave functions
+- [2303.06521](../papers/2303.06521.md) (2023) [2] Removal of $K$-mixing in angular momentum projected nuclear wave functions
+- [2303.04168](../papers/2303.04168.md) (2023) [2] Neutrinoless double-beta decay in the neutrino-extended Standard Model
+- [2303.00588](../papers/2303.00588.md) (2023) [2] Coexistence of single particle and collective excitation in $^{61}$Ni
+- [2303.00667](../papers/2303.00667.md) (2023) [2] Ab Initio Symmetry-Adapted Emulator for Studying Emergent Collectivity and Clustering in Nuclei
+- [2302.08382](../papers/2302.08382.md) (2023) [2] Cross-shell states in $^{15}$C: a test for p-sd interactions
+- [2302.07514](../papers/2302.07514.md) (2023) [1] Systematic shell-model study of $^{98-130}$Cd isotopes and $8^+$ isomeric states
+- [2302.07962](../papers/2302.07962.md) (2023) [2] \texttt{NuHamil}: A numerical code to generate nuclear two- and three-body matrix elements from chiral effective field t...
+- [2302.07295](../papers/2302.07295.md) (2023) [2] Differential charge radii: self-consistency and proton-neutron interaction effects
+- [2302.07394](../papers/2302.07394.md) (2023) [2] First Evidence of Axial Shape Asymmetry and Configuration Coexistence in $^{74}$Zn: Suggestion for a Northern Extension ...
+- [2302.03641](../papers/2302.03641.md) (2023) [1] Nuclear shell-model simulation in digital quantum computers
+- [2302.03664](../papers/2302.03664.md) (2023) [2] Predicting the neutrinoless double-beta decay matrix element of $^{136}$Xe using a statistical approach
+- [2302.00554](../papers/2302.00554.md) (2023) [2] Anomaly-Induced Quenching of ${g_A}$ in Nuclear Matter and Impact on Search for Neutrinoless $ββ$ Decay
+- [2301.12002](../papers/2301.12002.md) (2023) [2] New isomeric transition in $^{36}$Mg: Bridging the N=20 and N=28 islands of inversion
+- [2301.05405](../papers/2301.05405.md) (2023) [2] Imprints of $α$ clustering in the density profiles of $^{12}$C and $^{16}$O
+- [2301.05419](../papers/2301.05419.md) (2023) [1] Gamow Shell Model description of ${ { }^{ 40 } }$Ca(d,p) transfer reaction
+- [2301.03836](../papers/2301.03836.md) (2023) [2] Multiple Mechanisms in Proton-Induced Nucleon Removal at $\sim$100 MeV/Nucleon
+- [2301.03463](../papers/2301.03463.md) (2023) [1] Analysis of realistic and empirical multipole interactions for shell-model calculations
+- [2301.01878](../papers/2301.01878.md) (2023) [2] Cluster-shell competition and effect of adding hyperons
+- [2301.01951](../papers/2301.01951.md) (2023) [2] Ab initio descriptions of $A=16$ mirror nuclei with resonance and continuum coupling
+- [2212.13870](../papers/2212.13870.md) (2022) [1] Forbidden beta decay properties of $^{135,137}$Te using shell-model
+- [2212.12997](../papers/2212.12997.md) (2022) [1] Unbound states in 17C and p-sd shell-model interactions
+- [2212.13172](../papers/2212.13172.md) (2022) [1] Gamow shell model description of the radiative capture reaction $^8$B$(p,γ)$$^9$C
+- [2212.08494](../papers/2212.08494.md) (2022) [2] The proxy-SU(3) symmetry in atomic nuclei
+- [2212.08002](../papers/2212.08002.md) (2022) [2] Coexistence of quartets and pairs in even-even $N>Z$ nuclei
+- [2212.04146](../papers/2212.04146.md) (2022) [2] Nuclear chiral rotation induced by superfluidity
+- [2212.04337](../papers/2212.04337.md) (2022) [2] Symplectic symmetry and clustering in atomic nuclei
+- [2211.17122](../papers/2211.17122.md) (2022) [2] Lifetime of the hypertriton
+- [2212.00160](../papers/2212.00160.md) (2022) [2] Ab initio investigations of A=8 nuclei: $α{-}α$ scattering, deformation in $^8$He, radiative capture of protons on $^7$B...
+- [2211.10545](../papers/2211.10545.md) (2022) [2] Projection algorithm for state preparation on quantum computers
+- [2211.03986](../papers/2211.03986.md) (2022) [2] PANDORA project: photo-nuclear reactions below $A=60$
+- [2211.04133](../papers/2211.04133.md) (2022) [2] Study of structure and radii for $^{20-31}$Na isotopes using microscopic interactions
+- [2211.03764](../papers/2211.03764.md) (2022) [2] Two-neutrino $ββ$ decay of $^{136}$Xe to the first excited $0^+$ state in $^{136}$Ba
+- [2211.02555](../papers/2211.02555.md) (2022) [2] Near-threshold resonances in 11C and the 10B(p,α)7Be aneutronic reaction cross section
+- [2211.01693](../papers/2211.01693.md) (2022) [2] Study on $Λnn$ Bound State and Resonance
+- [2211.02164](../papers/2211.02164.md) (2022) [2] Review of Gamow-Teller and Fermi Transition Strength Functions
+- [2211.00281](../papers/2211.00281.md) (2022) [1] Ab initio no-core shell model description of $^{10-14}$C isotopes
+- [2211.00395](../papers/2211.00395.md) (2022) [2] Efficient few-body calculations in finite volume
+- [2210.15866](../papers/2210.15866.md) (2022) [2] $β^{+}$ Gamow-Teller strengths from unstable $^{14}$O via the $(d,{}^2\text{He})$ reaction in inverse kinematics
+- [2210.15227](../papers/2210.15227.md) (2022) [1] Ab initio no-core shell model study of neutron-rich $^{18,19,20}$C isotopes
+- [2210.14336](../papers/2210.14336.md) (2022) [2] Understanding the cosmic abundance of $^{22}$Na: lifetime measurements in $^{23}$Mg
+- [2210.14338](../papers/2210.14338.md) (2022) [1] Proton-neutron entanglement in the nuclear shell model
+- [2210.12779](../papers/2210.12779.md) (2022) [2] Islands of shape coexistence in proxy-SU(3) symmetry and in covariant density functional theory
+- [2210.08843](../papers/2210.08843.md) (2022) [2] Ab initio single-neutron spectroscopic overlaps in lithium isotopes
+- [2210.08498](../papers/2210.08498.md) (2022) [2] Constraints on the nuclear Schiff moment from its correlation with electromagnetic properties
+- [2210.05904](../papers/2210.05904.md) (2022) [2] A Problem in the Statistical Description of Beta-Delayed Neutron Emission
+- [2210.05172](../papers/2210.05172.md) (2022) [2] Density profiles near nuclear surface of $^{44,52}$Ti: An indication of $α$ clustering
+- [2210.03387](../papers/2210.03387.md) (2022) [2] Ab initio calculation of charge symmetry breaking in $A=7$ and $8$ $Λ$-hypernuclei
+- [2210.02022](../papers/2210.02022.md) (2022) [1] Parity-doublet bands in the odd-\bm{$A$} isotones \element{237}U and \element{239}Pu by a particle-number-conserving met...
+- [2209.15250](../papers/2209.15250.md) (2022) [1] Impact of nuclear structure from shell model calculations on nuclear responses to WIMP elastic scattering for $^{19}$F a...
+- [2209.06298](../papers/2209.06298.md) (2022) [2] E2 Rotational Invariants of $0^+_1$ and $2^+_1$ states for $^{106}$Cd: the Emergence of Collective Rotation
+- [2209.04718](../papers/2209.04718.md) (2022) [2] Microscopic aspects of $γ$-softness in atomic nuclei
+- [2209.03424](../papers/2209.03424.md) (2022) [2] Rooting the EDF method into the ab initio framework. PGCM-PT formalism based on MR-IMSRG pre-processed Hamiltonians
+- [2209.02162](../papers/2209.02162.md) (2022) [2] The Core of $^{25}$F studied by the $^{25}$F(-1p)$^{24}$O reaction
+- [2209.00722](../papers/2209.00722.md) (2022) [2] Proton distribution radii of $^{16-24}$O: signatures of new shell closures and neutron skin
+- [2208.10535](../papers/2208.10535.md) (2022) [2] An Alternative Approach to Quantum Imaginary Time Evolution
+- [2208.02079](../papers/2208.02079.md) (2022) [1] Nucleon-pair truncation of the shell model for medium-heavy nuclei
+- [2208.02176](../papers/2208.02176.md) (2022) [2] Nuclear physics uncertainties in light hypernuclei
+- [2208.00816](../papers/2208.00816.md) (2022) [1] Ab-initio no-core shell model study of $^{18-24}$Ne isotopes
+- [2207.13804](../papers/2207.13804.md) (2022) [2] Coulomb Form Factors of $^{27}$Al and $^{31}$P Nuclei Using Coulomb valance Tassie model and Bohr-Mottelson Collective M...

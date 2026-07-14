@@ -1,0 +1,108 @@
+# Nuclear reactions
+
+**PhySH lineage:** Nuclear reactions
+
+**Narrower:** [QCD in nuclear reactions](qcd-in-nuclear-reactions.md), [Coulomb excitation](coulomb-excitation.md), [Breakup reactions](breakup-reactions.md), [Nuclear fragmentation](nuclear-fragmentation.md), [Meson & hyperon induced nuclear reactions](meson-hyperon-induced-nuclear-reactions.md), [Unstable nuclei induced nuclear reactions](unstable-nuclei-induced-nuclear-reactions.md), [Low & intermediate energy heavy-ion reactions](low-intermediate-energy-heavy-ion-reactions.md), [Inelastic scattering reactions](inelastic-scattering-reactions.md), [Elastic scattering reactions](elastic-scattering-reactions.md), [Direct reactions](direct-reactions.md), [Electron-ion collisions](electron-ion-collisions.md), [Gamma-ray strength functions](gamma-ray-strength-functions.md), [Fission](fission.md), [Coulomb dissociation](coulomb-dissociation.md), [Polarization phenomena](polarization-phenomena.md), [Nuclear reaction rates](nuclear-reaction-rates.md), [Photonuclear reactions](photonuclear-reactions.md), [Models & methods for nuclear reactions](models-methods-for-nuclear-reactions.md), [Nuclear transition rates](nuclear-transition-rates.md), [Charge-exchange reactions](charge-exchange-reactions.md), [Lepton induced nuclear reactions](lepton-induced-nuclear-reactions.md), [H & He induced nuclear reactions](h-he-induced-nuclear-reactions.md), [Radiative capture](radiative-capture.md), [Transfer reactions](transfer-reactions.md), [Statistical phenomena & chaos](statistical-phenomena-chaos.md), [Resonance reactions](resonance-reactions.md), [S-factor](s-factor.md), [Nucleon induced nuclear reactions](nucleon-induced-nuclear-reactions.md), [Nuclear fusion](nuclear-fusion.md)
+
+**Papers:** 535 (showing first 100 of 535)
+
+- [2307.14391](../papers/2307.14391.md) (2023) [1] Nuclear Reactions in Evolving Stars
+- [2307.06798](../papers/2307.06798.md) (2023) [2] Current status and desired accuracy of the isotopic production cross-sections relevant to astrophysics of cosmic rays II...
+- [2307.05636](../papers/2307.05636.md) (2023) [2] Impact of the $^6$Li asymptotic normalization constant onto $α$-induced reactions of astrophysical interest
+- [2307.01835](../papers/2307.01835.md) (2023) [2] Reaction dynamics in clustered nuclear systems
+- [2306.01682](../papers/2306.01682.md) (2023) [2] Impacts of the $^{12}\rm{C}\left(α,γ\right)^{16}\!\rm{O}$ reaction rate on $^{56}{\rm Ni}$ nucleosynthesis in pair-insta...
+- [2305.15849](../papers/2305.15849.md) (2023) [2] The electromagnetic fine-structure constant in primordial nucleosynthesis revisited
+- [2305.06742](../papers/2305.06742.md) (2023) [2] Screening of electric field and nuclear EDM in non-stationary states of atoms and molecules
+- [2304.02400](../papers/2304.02400.md) (2023) [2] A+2n compound nuclei and the unitary limit in nuclear physics
+- [2302.09984](../papers/2302.09984.md) (2023) [2] Pion production in intermediate-energy heavy-ion collisions with a relativistic quantum molecular dynamics model
+- [2302.10102](../papers/2302.10102.md) (2023) [2] Revisiting the Gamow Factor of Reactions on Light Nuclei
+- [2302.06734](../papers/2302.06734.md) (2023) [1] A quantum-classical co-processing protocol towards simulating nuclear reactions on contemporary quantum hardware
+- [2302.02697](../papers/2302.02697.md) (2023) [2] Cross section measurement of the 144Sm(alpha,n)147Gd reaction for studying the alpha-nucleus optical potential at astrop...
+- [2301.06396](../papers/2301.06396.md) (2023) [2] Machine learning in nuclear physics at low and intermediate energies
+- [2212.03648](../papers/2212.03648.md) (2022) [1] Understanding globular cluster abundances through nuclear reactions
+- [2212.03650](../papers/2212.03650.md) (2022) [2] Transfer Reactions in Nuclear Astrophysics
+- [2211.03986](../papers/2211.03986.md) (2022) [1] PANDORA project: photo-nuclear reactions below $A=60$
+- [2210.11848](../papers/2210.11848.md) (2022) [2] Core-collapse supernova simulations with reduced nucleosynthesis networks
+- [2210.07293](../papers/2210.07293.md) (2022) [2] Optical potentials for the rare-isotope beam era
+- [2210.03567](../papers/2210.03567.md) (2022) [2] Towards a unified treatment of $ΔS=0$ parity violation in low-energy nuclear processes
+- [2208.10568](../papers/2208.10568.md) (2022) [2] Quantifying uncertainties due to irreducible three-body forces in deuteron-nucleus reactions
+- [2207.13327](../papers/2207.13327.md) (2022) [2] Impact of tensor force on quantum shell effects in quasifission reactions
+- [2207.10176](../papers/2207.10176.md) (2022) [2] Theoretical evaluation of solar proton-proton fusion reaction rate and its uncertainties
+- [2207.01357](../papers/2207.01357.md) (2022) [1] Multipole decomposition of tensor interactions of fermionic probes with composite particles and BSM signatures in nuclea...
+- [2206.09948](../papers/2206.09948.md) (2022) [2] Green's Function Knockout Formalism
+- [2205.13895](../papers/2205.13895.md) (2022) [2] Quantum design in study of pycnonuclear reactions in compact stars and new quasibound states
+- [2204.01187](../papers/2204.01187.md) (2022) [2] Ab Initio Nuclear Reaction Theory with Applications to Astrophysics
+- [2203.14735](../papers/2203.14735.md) (2022) [2] Partially accreted crusts of neutron stars
+- [2203.13074](../papers/2203.13074.md) (2022) [2] Theory of Halo Nuclei
+- [2203.13365](../papers/2203.13365.md) (2022) [2] Comprehensive Analyses of the Neutrino-Process in the Core-collapsing Supernova
+- [2203.12079](../papers/2203.12079.md) (2022) [2] Entanglement entropy, single-particle occupation probabilities, and short-range correlations
+- [2203.07396](../papers/2203.07396.md) (2022) [2] Heavy Elements -- They came out of the blue
+- [2202.01576](../papers/2202.01576.md) (2022) [2] Formulating bulk viscosity for neutron star simulations
+- [2201.09512](../papers/2201.09512.md) (2022) [1] Coupled-channels calculations for nuclear reactions: from exotic nuclei to superheavy elements
+- [2201.00433](../papers/2201.00433.md) (2022) [1] Direct Nuclear Reactions
+- [2112.11544](../papers/2112.11544.md) (2021) [2] The Impact of Neutron Transfer Reactions on Heating and Cooling of Accreted Neutron Star Crusts
+- [2110.11701](../papers/2110.11701.md) (2021) [2] Multi-Particle Tunneling Transport at Strongly-Correlated Interfaces
+- [2109.10741](../papers/2109.10741.md) (2021) [1] Combining Halo-EFT descriptions of nuclei and precise models of nuclear reactions
+- [2109.08558](../papers/2109.08558.md) (2021) [2] The Radioactive Nuclei $^{\textbf{26}}$Al and $^{\textbf{60}}$Fe in the Cosmos and in the Solar System
+- [2109.06614](../papers/2109.06614.md) (2021) [2] Nonequilibrium thermodynamics of accreted neutron-star crust
+- [2109.06924](../papers/2109.06924.md) (2021) [2] From Nuclear to Unnuclear Physics
+- [2108.08269](../papers/2108.08269.md) (2021) [1] Toward emulating nuclear reactions using eigenvector continuation
+- [2108.07592](../papers/2108.07592.md) (2021) [2] Description of isospin mixing by a generator coordinate method
+- [2108.03814](../papers/2108.03814.md) (2021) [2] Progress in Nuclear Astrophysics of East and Southeast Asia
+- [2106.13091](../papers/2106.13091.md) (2021) [2] Study of fusion reactions of light nuclei at low energies using complex nucleon-nucleus potential function
+- [2105.09844](../papers/2105.09844.md) (2021) [2] Considering non-locality in the optical potentials within eikonal models
+- [2105.01991](../papers/2105.01991.md) (2021) [2] Deep crustal heating for realistic compositions of thermonuclear ashes
+- [2104.05472](../papers/2104.05472.md) (2021) [2] Nuclear Matrix Elements for Heavy Ion Sequential Double Charge Exchange Reactions
+- [2103.12610](../papers/2103.12610.md) (2021) [2] Unnuclear physics
+- [2103.11973](../papers/2103.11973.md) (2021) [2] Direct and sequential four-body recombination rates at low temperatures
+- [2103.06729](../papers/2103.06729.md) (2021) [1] Search for a viable nucleus-nucleus potential for heavy-ion nuclear reactions
+- [2103.01469](../papers/2103.01469.md) (2021) [2] Proton-induced activation cross sections in the energy range below 1 GeV
+- [2102.10380](../papers/2102.10380.md) (2021) [2] Elastic scattering of twisted neutrons by nuclei
+- [2102.03846](../papers/2102.03846.md) (2021) [2] Isochronic evolution and the radioactive decay of r-process nuclei
+- [2101.07584](../papers/2101.07584.md) (2021) [2] Nuclear ground states in a consistent implementation of the time-dependent density matrix approach
+- [2101.03901](../papers/2101.03901.md) (2021) [1] Nuclear reactions in artificial traps
+- [2101.03077](../papers/2101.03077.md) (2021) [1] The relevance of nuclear reactions for Standard Solar Models construction
+- [2012.13422](../papers/2012.13422.md) (2020) [2] Fission fragments intrinsic spins and their correlations
+- [2012.12553](../papers/2012.12553.md) (2020) [2] Quenching of single-particle strength from direct reactions with stable and rare-isotope beams
+- [2012.09012](../papers/2012.09012.md) (2020) [2] Recent advances in the quantification of uncertainties in reaction theory
+- [2012.08431](../papers/2012.08431.md) (2020) [1] Theoretical calculation of nuclear reactions of interest for Big Bang Nucleosynthesis
+- [2012.06653](../papers/2012.06653.md) (2020) [2] Statistical tools for a better optical model
+- [2012.04282](../papers/2012.04282.md) (2020) [2] Electric dipole response of low-lying excitations in the two-neutron halo nucleus $\boldsymbol{^{29}}$F
+- [2011.09354](../papers/2011.09354.md) (2020) [2] Heat release in accreting neutron stars
+- [2011.07904](../papers/2011.07904.md) (2020) [2] Skyrme-Hartree-Fock-Bogoliubov mass models on a 3D Mesh: Effect of triaxial shape
+- [2011.07207](../papers/2011.07207.md) (2020) [1] Cluster effective field theory and nuclear reactions
+- [2011.06470](../papers/2011.06470.md) (2020) [2] Nonclassical trajectories in head-on collisions
+- [2010.12790](../papers/2010.12790.md) (2020) [2] Investigating High-Energy Proton-Induced Reactions on Spherical Nuclei: Implications for the Pre-Equilibrium Exciton Mod...
+- [2010.06114](../papers/2010.06114.md) (2020) [2] Effects of Pycnonuclear Reactions on White Dwarf Stellar Evolution
+- [2009.03530](../papers/2009.03530.md) (2020) [2] Jet charge modification in dense QCD matter
+- [2009.01814](../papers/2009.01814.md) (2020) [2] The importance of charged particle reactions in the r-process on supernovae and neutron stars
+- [2008.11160](../papers/2008.11160.md) (2020) [2] Nuclear matrix elements from lattice QCD for electroweak and beyond-Standard-Model processes
+- [2008.06075](../papers/2008.06075.md) (2020) [2] Following nuclei through nucleosynthesis: a novel tracing technique
+- [2008.03291](../papers/2008.03291.md) (2020) [2] Nuclear and dark matter heating in massive white dwarf stars
+- [2007.11913](../papers/2007.11913.md) (2020) [2] Coupled-cluster computations of optical potential for medium-mass nuclei
+- [2006.14839](../papers/2006.14839.md) (2020) [2] Asymptotic characteristics of decay channels of light nuclei states in the ab initio approach
+- [2006.12168](../papers/2006.12168.md) (2020) [1] Modeling Nuclear Reactions for PET/MRI MultiModal Imaging: the innovative use of 52gMn
+- [2006.08043](../papers/2006.08043.md) (2020) [2] Neutrino mixing in nuclear rapid neutron-capture processes
+- [2006.03125](../papers/2006.03125.md) (2020) [1] Upgrade of IAEA recommended data of selected nuclear reactions for production of PET and SPECT isotopes
+- [2006.00722](../papers/2006.00722.md) (2020) [2] Two-proton momentum correlation from photondisintegration of $α$-clustering light nuclei in the quasi-deuteron region
+- [2004.10147](../papers/2004.10147.md) (2020) [2] The time-dependent generator coordinate method in nuclear physics
+- [2003.11321](../papers/2003.11321.md) (2020) [2] Self-consistent Green's function theory for atomic nuclei
+- [2003.08060](../papers/2003.08060.md) (2020) [2] Coulomb screening correction to the $Q$ value of the triple alpha process in thermal plasmas
+- [2003.06144](../papers/2003.06144.md) (2020) [1] TDHF and a macroscopic aspect of low-energy nuclear reactions
+- [2003.05344](../papers/2003.05344.md) (2020) [2] Optical potentials, retarded Green's functions and nonorthogonality
+- [2002.01937](../papers/2002.01937.md) (2020) [2] Universality and Non-Universality in Distributed Nuclear Burning in Homogeneous Isotropic Turbulence
+- [2001.09739](../papers/2001.09739.md) (2020) [2] Equation of state and composition of the inner crust of an accreting neutron star: multicomponent model
+- [2001.07842](../papers/2001.07842.md) (2020) [1] Collective inertial masses in nuclear reactions
+- [2001.00976](../papers/2001.00976.md) (2020) [2] First Exploration of Neutron Shell Structure Below Lead and Beyond $\boldsymbol{N=126}$
+- [1912.12092](../papers/1912.12092.md) (2019) [1] Bremsstrahlung emission from nuclear reactions in compact stars
+- [1912.03932](../papers/1912.03932.md) (2019) [2] An overview of the scientific contribution of Andrea Vitturi to Nuclear Physics (being an account of the recent TNP19 me...
+- [1912.01265](../papers/1912.01265.md) (2019) [2] Crystallization of the inner crust of a neutron star and the influence of shell effects
+- [1911.03284](../papers/1911.03284.md) (2019) [2] Pairing dynamics in low energy nuclear collisions
+- [1910.14094](../papers/1910.14094.md) (2019) [2] Indirect methods in nuclear astrophysics with relativistic radioactive beams
+- [1910.06311](../papers/1910.06311.md) (2019) [2] Quantum Tomography Measures Entanglement in Collider Reactions
+- [1910.03932](../papers/1910.03932.md) (2019) [2] Crust of accreting neutron stars within simplified reaction network
+- [1910.03000](../papers/1910.03000.md) (2019) [2] 20Ne + 76Ge elastic and inelastic scattering at 306 MeV
+- [1910.00307](../papers/1910.00307.md) (2019) [2] Reaction Theory and Advanced CDCC
+- [1910.00638](../papers/1910.00638.md) (2019) [1] New symmetry-adapted ab initio approach to nuclear reactions for intermediate-mass nuclei
+- [1909.13750](../papers/1909.13750.md) (2019) [1] Combining nuclear reactions and structure with the dispersive optical model
+- [1909.12781](../papers/1909.12781.md) (2019) [1] Simulation of fusion and quasi-fission in nuclear reactions leading to production of superheavy elements using the Const...

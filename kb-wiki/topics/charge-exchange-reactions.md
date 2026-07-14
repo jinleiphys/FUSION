@@ -1,0 +1,87 @@
+# Charge-exchange reactions
+
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Charge-exchange reactions
+
+**Broader:** [Nuclear reactions](nuclear-reactions.md)
+
+**Papers:** 79
+
+- [2303.17752](../papers/2303.17752.md) (2023) [2] Interaction of solar neutrinos with $^{98,100}$Mo isotopes and the influence of nuclear resonances
+- [2202.13146](../papers/2202.13146.md) (2022) [2] Effective field theory of pairing rotations
+- [2112.14256](../papers/2112.14256.md) (2021) [1] Prediction of (p,n) Charge-Exchange Reactions with Uncertainty Quantification
+- [2111.07641](../papers/2111.07641.md) (2021) [1] Systematic study of Δ(1232) resonance excitations using single isobaric charge-exchange reactions induced by medium-mass...
+- [2110.10642](../papers/2110.10642.md) (2021) [2] Study of one-proton transfer reaction for the $^{18}$O + $^{48}$Ti system at 275 MeV
+- [2104.08990](../papers/2104.08990.md) (2021) [1] Novel method for producing very-neutron-rich hypernuclei via charge-exchange reactions with heavy ion projectiles
+- [2104.05472](../papers/2104.05472.md) (2021) [1] Nuclear Matrix Elements for Heavy Ion Sequential Double Charge Exchange Reactions
+- [2101.05659](../papers/2101.05659.md) (2021) [2] Transfer reactions between odd-odd and even-even nuclei by using IBFFM
+- [2010.16343](../papers/2010.16343.md) (2020) [1] Study of ($p,n$)IAS and ($^3$He,$t$)IAS charge-exchange reactions with the $G$-matrix folding method
+- [2009.01750](../papers/2009.01750.md) (2020) [2] Electron capture in stars
+- [2006.08579](../papers/2006.08579.md) (2020) [2] Influence of pairing and deformation on charge exchange transitions
+- [2004.06404](../papers/2004.06404.md) (2020) [1] Study of $Δ$ excitations in medium-mass nuclei with peripheral heavy ion charge-exchange reactions
+- [2003.14059](../papers/2003.14059.md) (2020) [2] Study of $n+{}^3$H, $p+{}^3$He, $p+{}^3$H, and $n+{}^3$He scattering with the HH method
+- [1912.03043](../papers/1912.03043.md) (2019) [1] Sequential Heavy Ion Double Charge Exchange Reactions and the Link to Double $β$-decay
+- [1911.09269](../papers/1911.09269.md) (2019) [2] Axial-vector weak coupling at medium momentum for astro neutrinos and double beta decays
+- [1909.09800](../papers/1909.09800.md) (2019) [2] Antiproton production in heavy-ion collisions at subthreshold energies
+- [1907.11764](../papers/1907.11764.md) (2019) [2] Coherent-Nuclear Pion Photoproduction and Neutron Radii
+- [1905.07106](../papers/1905.07106.md) (2019) [2] A new combined analysis of elastic and charge exchange $K N(\bar{K}N)$ scatterings in the Regge realm
+- [1903.05441](../papers/1903.05441.md) (2019) [1] Heavy ion charge exchange reactions and the link with beta decay processes
+- [1804.02102](../papers/1804.02102.md) (2018) [2] Towards Reliable Nuclear Matrix Elements for Neutrinoless $ββ$ Decay
+- [1803.06290](../papers/1803.06290.md) (2018) [2] Theory of Single Charge Exchange Heavy Ion Reactions
+- [1712.08691](../papers/1712.08691.md) (2017) [2] Is it possible to study neutrinoless $ββ$ decay by measuring double Gamow-Teller transitions?
+- [1712.07802](../papers/1712.07802.md) (2017) [2] Modification of $Δ(1232)$ in the neutrino nucleus reaction
+- [1712.01565](../papers/1712.01565.md) (2017) [2] Value of the axial-vector coupling strength in $β$ and $ββ$ decays: A review
+- [1708.03768](../papers/1708.03768.md) (2017) [1] Theoretical investigation of two-particle two-hole effect on spin-isospin excitations through charge-exchange reactions
+- [1705.02847](../papers/1705.02847.md) (2017) [1] Single Charge-Exchange Reactions and the Neutron Density at the Surface of the Nucleus
+- [1611.08495](../papers/1611.08495.md) (2016) [1] Nuclear fragmentation and charge-exchange reactions induced by pions in the $Δ$-resonance region
+- [1610.00534](../papers/1610.00534.md) (2016) [1] Spin dipole nuclear matrix elements for double beta decay nuclei by charge-exchange reactions
+- [1609.05648](../papers/1609.05648.md) (2016) [2] Nuclear structure calculations for two-neutrino double-beta decay
+- [1512.07589](../papers/1512.07589.md) (2015) [2] Isovector spin-singlet (T=1, S=0) and isoscalar spin-triplet (T=0, S=1) pairing interactions and spin-isospin response
+- [1511.08859](../papers/1511.08859.md) (2015) [2] Indirect methods in nuclear astrophysics
+- [1510.00491](../papers/1510.00491.md) (2015) [1] Electron capture rates in stars studied with heavy ion charge exchange reactions
+- [1503.08095](../papers/1503.08095.md) (2015) [2] Neutrino-nucleus reactions and their role for supernova dynamics and nucleosynthesis
+- [1503.03824](../papers/1503.03824.md) (2015) [1] Proton-${}^3$H scattering calculation: Elastic and charge-exchange reactions up to 30 MeV
+- [1502.05889](../papers/1502.05889.md) (2015) [2] Gamow-Teller properties of the double beta-decay partners 116Cd(Sn) and 150Nd(Sm)
+- [1401.5517](../papers/1401.5517.md) (2014) [2] Gamov-Teller transitions from 14N ground to 14C ground and excited states
+- [1307.0534](../papers/1307.0534.md) (2013) [2] Folding model study of the charge-exchange scattering to the isobaric analog state and implication for the nuclear symme...
+- [1304.2155](../papers/1304.2155.md) (2013) [2] Stellar electron-capture rates in pf-shell nuclei from quasiparticle random-phase approximation calculations
+- [1206.0491](../papers/1206.0491.md) (2012) [2] Relation of isospin-symmetry breaking correction for superallowed beta decay to energy of charge-exchange giant monopole...
+- [1205.4561](../papers/1205.4561.md) (2012) [2] Gamow-Teller Strength distributions in $^{76}\textrm{Ge}$, $^{76,82}\textrm{Se}$, and $^{90,92}\textrm{Zr}$ by the Defor...
+- [1205.3958](../papers/1205.3958.md) (2012) [2] A new Skyrme interaction with improved spin-isospin properties
+- [1204.1994](../papers/1204.1994.md) (2012) [2] GT strengths and electron-capture rates for pf-shell nuclei of relevance for late stellar evolution
+- [1203.3687](../papers/1203.3687.md) (2012) [2] Role of momentum transfer in the quenching of Gamow-Teller strength
+- [1108.5108](../papers/1108.5108.md) (2011) [2] On the possibility to measure nuclear matrix element for neutrinoless double beta decay of Ca48
+- [1108.4229](../papers/1108.4229.md) (2011) [2] Neutrino induced reactions related to the $ν$-process nucleosynthesis of ${}^{92}$Nb and ${}^{98}$Tc
+- [1012.5176](../papers/1012.5176.md) (2010) [1] On the possibility to measure nuclear matrix elements of neutrinoless double beta decay in charge-exchange reactions
+- [1006.4321](../papers/1006.4321.md) (2010) [2] Nuclear symmetry energy and its density slope at normal density extracted from global nucleon optical potentials
+- [1005.2134](../papers/1005.2134.md) (2010) [1] Neutrino and antineutrino charge-exchange reactions on 12C
+- [0906.1759](../papers/0906.1759.md) (2009) [2] Can one measure nuclear matrix elements of neutrinoless double beta decay?
+- [0901.0875](../papers/0901.0875.md) (2009) [2] Three-body Faddeev-Alt-Grassberger-Sandhas approach to direct nuclear reactions
+- [0809.4772](../papers/0809.4772.md) (2008) [2] Big-Bang Nucleosynthesis Reactions Catalyzed by a Long-Lived Negatively Charged Leptonic Particle
+- [0706.2523](../papers/0706.2523.md) (2007) [1] An in-medium full-folding model approach to quasielastic (p,n) charge-exchange reactions
+- [2403.06455](../papers/2403.06455.md) (0000) [2] 2403.06455
+- [2403.18629](../papers/2403.18629.md) (0000) [2] 2403.18629
+- [2405.04978](../papers/2405.04978.md) (0000) [1] 2405.04978
+- [2405.13523](../papers/2405.13523.md) (0000) [1] 2405.13523
+- [2405.13700](../papers/2405.13700.md) (0000) [1] 2405.13700
+- [2410.20376](../papers/2410.20376.md) (0000) [1] 2410.20376
+- [2410.20554](../papers/2410.20554.md) (0000) [1] 2410.20554
+- [2504.11736](../papers/2504.11736.md) (0000) [1] 2504.11736
+- [2505.02341](../papers/2505.02341.md) (0000) [1] 2505.02341
+- [2505.24753](../papers/2505.24753.md) (0000) [1] 2505.24753
+- [2509.09776](../papers/2509.09776.md) (0000) [2] 2509.09776
+- [2603.19793](../papers/2603.19793.md) (0000) [1] 2603.19793
+- [2603.21997](../papers/2603.21997.md) (0000) [1] 2603.21997
+- [nucl-th/0008012](../papers/nucl-th/0008012.md) (0000) [2] nucl-th/0008012
+- [nucl-th/0106055](../papers/nucl-th/0106055.md) (0000) [1] nucl-th/0106055
+- [nucl-th/0210080](../papers/nucl-th/0210080.md) (0000) [2] nucl-th/0210080
+- [nucl-th/0303015](../papers/nucl-th/0303015.md) (0000) [2] nucl-th/0303015
+- [nucl-th/0305055](../papers/nucl-th/0305055.md) (0000) [2] nucl-th/0305055
+- [nucl-th/0506051](../papers/nucl-th/0506051.md) (0000) [1] nucl-th/0506051
+- [nucl-th/0510048](../papers/nucl-th/0510048.md) (0000) [2] nucl-th/0510048
+- [nucl-th/0607016](../papers/nucl-th/0607016.md) (0000) [1] nucl-th/0607016
+- [nucl-th/0610064](../papers/nucl-th/0610064.md) (0000) [2] nucl-th/0610064
+- [nucl-th/0702016](../papers/nucl-th/0702016.md) (0000) [2] nucl-th/0702016
+- [nucl-th/9510030](../papers/nucl-th/9510030.md) (0000) [2] nucl-th/9510030
+- [nucl-th/9604005](../papers/nucl-th/9604005.md) (0000) [2] nucl-th/9604005
+- [nucl-th/9705002](../papers/nucl-th/9705002.md) (0000) [1] nucl-th/9705002
+- [nucl-th/9808019](../papers/nucl-th/9808019.md) (0000) [2] nucl-th/9808019

@@ -1,0 +1,108 @@
+# Breakup reactions
+
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Breakup reactions
+
+**Broader:** [Nuclear reactions](nuclear-reactions.md)
+
+**Papers:** 377 (showing first 100 of 377)
+
+- [2307.01660](../papers/2307.01660.md) (2023) [3] How to extract the electromagnetic response of $^6$He in relativistic collisions
+- [2307.00202](../papers/2307.00202.md) (2023) [2] Ab initio translationally invariant nucleon-nucleus optical potentials
+- [2306.06621](../papers/2306.06621.md) (2023) [3] Continuum-discretized coupled-channel calculations for $^{6}$Li fusion reactions with closed channels
+- [2305.14111](../papers/2305.14111.md) (2023) [2] Advancing the IAV Model with CDCC Wave Functions for Realistic Descriptions of Two-Body Projectile Breakup
+- [2303.10595](../papers/2303.10595.md) (2023) [1] Systematic analysis of $t$ and $^3$He breakup reactions
+- [2302.09980](../papers/2302.09980.md) (2023) [3] Study of the threshold anomaly in the elastic scattering of d+$^{197}$Au
+- [2301.06444](../papers/2301.06444.md) (2023) [2] Effective field theory analysis of the Coulomb breakup of the one-neutron halo nucleus 19C
+- [2212.00218](../papers/2212.00218.md) (2022) [2] Secondary Neutron Production from Thick Target Deuteron Breakup
+- [2211.12113](../papers/2211.12113.md) (2022) [2] Role of neutron transfer in the reaction mechanism of $^9$Be+$^{169}$Tm, $^{181}$Ta, $^{187}$Re and $^{197}$Au systems
+- [2211.06281](../papers/2211.06281.md) (2022) [3] Perspectives on few-body cluster structures in exotic nuclei
+- [2211.01748](../papers/2211.01748.md) (2022) [3] Electron and neutrino scattering off the deuteron in a relativistic framework
+- [2210.07293](../papers/2210.07293.md) (2022) [3] Optical potentials for the rare-isotope beam era
+- [2207.10865](../papers/2207.10865.md) (2022) [2] Study of elastic and inelastic scattering of $^7$Be + $^{12}$C at 35 MeV
+- [2206.07546](../papers/2206.07546.md) (2022) [3] Calculation of Coulomb breakup cross sections using a new Coulomb dynamical polarization potential
+- [2205.07119](../papers/2205.07119.md) (2022) [1] Uncertainty Quantification in Breakup Reactions
+- [2202.05918](../papers/2202.05918.md) (2022) [3] Multi-channel experimental and theoretical constraints for the $^{116}$Cd($^{20}$Ne,$^{20}$F)$^{116}$In charge exchange ...
+- [2201.12694](../papers/2201.12694.md) (2022) [2] Coulomb-nuclear dynamics in the weakly-bound 8Li breakup
+- [2201.09512](../papers/2201.09512.md) (2022) [2] Coupled-channels calculations for nuclear reactions: from exotic nuclei to superheavy elements
+- [2201.00433](../papers/2201.00433.md) (2022) [2] Direct Nuclear Reactions
+- [2111.04285](../papers/2111.04285.md) (2021) [3] Dineutron in the $2^+_1$ state of $^6$He
+- [2109.10741](../papers/2109.10741.md) (2021) [3] Combining Halo-EFT descriptions of nuclei and precise models of nuclear reactions
+- [2109.10959](../papers/2109.10959.md) (2021) [2] Application of the Lagrange mesh method in continuum-discretized coupled-channels calculations
+- [2106.16030](../papers/2106.16030.md) (2021) [3] Inclusive $α$ Production for $^{6}$Li+$^{51}$V System
+- [2106.16184](../papers/2106.16184.md) (2021) [3] Investigation of neutron transfer in $^{7}$Li+$^{124}$Sn reaction
+- [2104.04712](../papers/2104.04712.md) (2021) [2] Detailed Study of the Eikonal Reaction Theory for the breakup of one-neutron halo nuclei
+- [2104.03049](../papers/2104.03049.md) (2021) [3] Single-nucleon removal cross sections on nucleon and nuclear targets
+- [2104.01200](../papers/2104.01200.md) (2021) [2] Exploring the structure of $^{29}$Ne
+- [2103.15866](../papers/2103.15866.md) (2021) [3] Models of breakup: a final state interaction problem. In memory of Mahir Hussein
+- [2103.09511](../papers/2103.09511.md) (2021) [1] Three-body description of $^9$C: Role of low-lying resonances in breakup reactions
+- [2102.09863](../papers/2102.09863.md) (2021) [3] Comprehensive investigation of the symmetric space-star configuration in the nucleon-deuteron breakup
+- [2101.09497](../papers/2101.09497.md) (2021) [1] The Hussein-McVoy formula for inclusive breakup revisited. A Tribute to Mahir Hussein
+- [2101.02885](../papers/2101.02885.md) (2021) [3] A unified description of the structure and electromagnetic breakup of $^{\bf 11}$Be
+- [2012.14805](../papers/2012.14805.md) (2020) [1] Inclusive Breakup Cross Sections in Reactions Induced by the Nuclides $^6$He and $^{6,7}$Li in the Two-Body Cluster Mode...
+- [2012.12553](../papers/2012.12553.md) (2020) [3] Quenching of single-particle strength from direct reactions with stable and rare-isotope beams
+- [2012.12396](../papers/2012.12396.md) (2020) [2] Light nuclei with semilocal momentum-space regularized chiral interactions up to third order
+- [2012.06885](../papers/2012.06885.md) (2020) [2] Comparison of semiclassical transfer to continuum model with Ichimura-Austern-Vincent model in medium energy knockout re...
+- [2012.04282](../papers/2012.04282.md) (2020) [3] Electric dipole response of low-lying excitations in the two-neutron halo nucleus $\boldsymbol{^{29}}$F
+- [2011.01327](../papers/2011.01327.md) (2020) [3] Complete and incomplete fusion of $^{7}$Li projectiles on heavy targets
+- [2010.14435](../papers/2010.14435.md) (2020) [2] Investigation of low-lying resonances in breakup of halo nuclei within the time-dependent approach
+- [2010.00833](../papers/2010.00833.md) (2020) [3] Semi-classical approaches to heavy-ion reactions: fusion, rainbow, and glory
+- [2009.12624](../papers/2009.12624.md) (2020) [3] Study of Cluster Structures in Nuclei through the Ratio Method. A Tribute to Mahir Hussein
+- [2008.13125](../papers/2008.13125.md) (2020) [2] Practical method for decomposing discretized breakup cross sections into components of each channel
+- [2008.10408](../papers/2008.10408.md) (2020) [2] The total reaction cross section of heavy-ion reactions induced by stable and unstable exotic beams: The low-energy regi...
+- [2008.08531](../papers/2008.08531.md) (2020) [2] Neutron capture cross sections of radioactive nuclei
+- [2008.05898](../papers/2008.05898.md) (2020) [1] Simulating core excitation in breakup reactions of halo nuclei using an effective three-body force
+- [2007.14836](../papers/2007.14836.md) (2020) [2] Applications of the chiral potential with the semi-local regularization in momentum space to the disintegration processe...
+- [2007.12172](../papers/2007.12172.md) (2020) [3] Complex scaling : physics of unbound light nuclei and perspective
+- [2007.09020](../papers/2007.09020.md) (2020) [2] Breakup mechanisms in the 6He+64Zn reaction at near-barrier energies
+- [2006.01548](../papers/2006.01548.md) (2020) [2] Low-energy 11Li + p and 11Li + d scattering in a multicluster model
+- [2005.05605](../papers/2005.05605.md) (2020) [3] Systematic study on the role of various higher-order processes in the breakup of weakly-bound projectiles
+- [2004.14612](../papers/2004.14612.md) (2020) [3] Determining $B(E1)$ distributions of weakly bound nuclei from breakup cross sections using Continuum Discretized Coupled...
+- [2004.13588](../papers/2004.13588.md) (2020) [2] The Lagrange-mesh R-matrix method for inhomogenous equations
+- [2003.06175](../papers/2003.06175.md) (2020) [3] Uncertainty of three-nucleon continuum observables arising from uncertainties of two-nucleon potential parameters
+- [2003.05123](../papers/2003.05123.md) (2020) [3] Investigation of contributions of the $2_2^+$ resonance in $^6$He via analysis of $^6$He($p$, $p'$)
+- [2002.06087](../papers/2002.06087.md) (2020) [3] Three-nucleon force effects in inclusive spectra of the neutron-deuteron breakup reaction
+- [2001.09019](../papers/2001.09019.md) (2020) [3] Deuteron-induced reactions on manganese at low energies
+- [2001.07230](../papers/2001.07230.md) (2020) [3] Probing few-body nuclear dynamics via 3H and 3He (e,e'p)pn cross-section measurements
+- [1911.11446](../papers/1911.11446.md) (2019) [3] The eikonal model of reactions involving exotic nuclei; Roy Glauber's legacy in today's nuclear physics
+- [1911.11021](../papers/1911.11021.md) (2019) [3] Recent advances in the description of reactions involving exotic nuclei
+- [1911.08269](../papers/1911.08269.md) (2019) [2] Simplified dynamical eikonal approximation
+- [1911.01489](../papers/1911.01489.md) (2019) [2] Sensitivity of one-neutron knockout of halo nuclei to their nuclear structure
+- [1910.14094](../papers/1910.14094.md) (2019) [3] Indirect methods in nuclear astrophysics with relativistic radioactive beams
+- [1910.07925](../papers/1910.07925.md) (2019) [3] Quantum theory of complete and incomplete fusion in collisions of weakly bound nuclei
+- [1910.06625](../papers/1910.06625.md) (2019) [2] Unraveling the reaction mechanisms leading to partial fusion of weakly bound nuclei
+- [1910.07006](../papers/1910.07006.md) (2019) [2] Three-Nucleon Force Effects in the FSI configuration of the d(n, nn)p Breakup Reaction
+- [1910.00307](../papers/1910.00307.md) (2019) [3] Reaction Theory and Advanced CDCC
+- [1909.05439](../papers/1909.05439.md) (2019) [1] Effect of the repulsive core in the proton-neutron potential on deuteron elastic breakup cross sections
+- [1909.02315](../papers/1909.02315.md) (2019) [1] Microscopic analysis of quasielastic scattering and breakup reactions of neutron-rich nuclei $^{12,14}$Be
+- [1907.11753](../papers/1907.11753.md) (2019) [3] $^{15}$C: from Halo-EFT structure to the study of transfer, breakup and radiative-capture reactions
+- [1907.01836](../papers/1907.01836.md) (2019) [2] Introduction to Nuclear-Reaction Theory
+- [1907.01587](../papers/1907.01587.md) (2019) [3] Deuteron-alpha scattering: separable vs nonseparable Faddeev approach
+- [1906.07660](../papers/1906.07660.md) (2019) [2] Sensitivity of one-neutron knockout to the nuclear structure of halo nuclei
+- [1904.05978](../papers/1904.05978.md) (2019) [3] Merging ab initio theory and few-body approach for $(d,p)$ reactions
+- [1904.00974](../papers/1904.00974.md) (2019) [2] Halo breakup and the Coulomb-nuclear interference problem
+- [1902.03872](../papers/1902.03872.md) (2019) [1] Core-excitation effects in three-body breakup reactions studied using the Faddeev formalism
+- [1812.11248](../papers/1812.11248.md) (2018) [2] The puzzle of complete fusion suppression in weakly-bound nuclei: a Trojan Horse effect?
+- [1812.08482](../papers/1812.08482.md) (2018) [3] Low-lying dipole strengths for probable $p$-wave one-neutron halos in the medium mass region
+- [1812.07622](../papers/1812.07622.md) (2018) [3] Linking nuclear reactions and nuclear structure to study exotic nuclei using the dispersive optical model
+- [1811.03111](../papers/1811.03111.md) (2018) [3] Recent developments for the optical model of nuclei
+- [1811.01231](../papers/1811.01231.md) (2018) [1] Inclusive breakup reaction of a two-cluster projectile on a two-fragment target: A genuine four-body problem
+- [1810.04751](../papers/1810.04751.md) (2018) [2] Non-local interactions in the $(d,p)$ surrogate method for $(n,γ)$ reactions
+- [1809.04964](../papers/1809.04964.md) (2018) [3] On the eikonal approach to nuclear diffraction dissociation
+- [1807.07877](../papers/1807.07877.md) (2018) [3] Low-energy corrections to the eikonal description of elastic scattering and breakup of one-neutron halo nuclei in nuclea...
+- [1807.07537](../papers/1807.07537.md) (2018) [3] Reliable extraction of the $dB({\rm E1})/dE$ for $^{11}$Be from its breakup at 520 MeV/nucleon
+- [1807.04947](../papers/1807.04947.md) (2018) [3] Role of breakup processes in deuteron-induced spallation reactions at 100-200 MeV/nucleon
+- [1807.04349](../papers/1807.04349.md) (2018) [2] Models for nuclear reactions with weakly bound systems
+- [1806.06278](../papers/1806.06278.md) (2018) [2] Four-body eikonal approach to three-body halo nuclei scattering
+- [1806.02712](../papers/1806.02712.md) (2018) [3] Dissecting reaction calculations using Halo EFT and ab initio input
+- [1806.01679](../papers/1806.01679.md) (2018) [3] Semiclassical calculations of complete and incomplete fusion in collisions of weakly bound nuclei
+- [1805.01204](../papers/1805.01204.md) (2018) [2] Extension of the ratio method to proton-rich nuclei
+- [1804.00416](../papers/1804.00416.md) (2018) [3] Microscopic optical potentials including breakup effects for elastic scattering
+- [1802.08584](../papers/1802.08584.md) (2018) [2] Few- and many-nucleon systems with semilocal coordinate-space regularized chiral nucleon-nucleon forces
+- [1802.01181](../papers/1802.01181.md) (2018) [3] Effects of unconventional breakup modes on incomplete fusion of weakly bound nuclei
+- [1801.06996](../papers/1801.06996.md) (2018) [3] Investigation of complete and incomplete fusion in $^{7}$Li+$^{124}$Sn reaction around Coulomb barrier energies
+- [1712.01433](../papers/1712.01433.md) (2017) [1] Inclusive breakup calculations in angular momentum basis: application to $^7$Li+$^{58}$Ni
+- [1712.01966](../papers/1712.01966.md) (2017) [1] On the Relativistic Separable Functions for the Breakup Reactions
+- [1712.00639](../papers/1712.00639.md) (2017) [3] Neutron Removal from the Deformed Halo 31Ne Nucleus
+- [1711.07540](../papers/1711.07540.md) (2017) [2] Post-prior equivalence for transfer reactions with complex potentials
+- [1708.07152](../papers/1708.07152.md) (2017) [3] Determination of the $^{36}$Mg($n,γ$)$^{37}$Mg reaction rate from Coulomb dissociation of $^{37}$Mg
+- [1707.06072](../papers/1707.06072.md) (2017) [3] Low-lying electric-dipole strengths of Ca, Ni, and Sn isotopes imprinted on total reaction cross sections

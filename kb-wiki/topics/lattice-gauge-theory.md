@@ -1,0 +1,106 @@
+# Lattice gauge theory
+
+**PhySH lineage:** Lattice gauge theory
+
+**Papers:** 154 (showing first 100 of 154)
+
+- [2307.07999](../papers/2307.07999.md) (2023) [2] Heavy quark $κ$ and jet $\hat{q}$ transport coefficients in the Glasma early stage of heavy-ion collisions
+- [2307.00045](../papers/2307.00045.md) (2023) [1] Simple Hamiltonian for Quantum Simulation of Strongly Coupled 2+1D SU(2) Lattice Gauge Theory on a Honeycomb Lattice
+- [2306.10199](../papers/2306.10199.md) (2023) [2] Quark mass difference effects in hadronic Fermi matrix elements from first principles
+- [2303.15519](../papers/2303.15519.md) (2023) [2] Randomized measurement protocols for lattice gauge theories
+- [2303.14264](../papers/2303.14264.md) (2023) [2] SU(2) Gauge Theory in $2+1$ Dimensions on a Plaquette Chain Obeys the Eigenstate Thermalization Hypothesis
+- [2303.08618](../papers/2303.08618.md) (2023) [2] Probing universal dynamics with topological data analysis in a gluonic plasma
+- [2303.05599](../papers/2303.05599.md) (2023) [2] Simulating jets and heavy quarks in the Glasma using the colored particle-in-cell method
+- [2212.14030](../papers/2212.14030.md) (2022) [1] General quantum algorithms for Hamiltonian simulation with applications to a non-Abelian lattice gauge theory
+- [2212.09691](../papers/2212.09691.md) (2022) [2] Monopole and instanton effects on connected and disconnected correlations for scalar density
+- [2210.03089](../papers/2210.03089.md) (2022) [1] Quantum computation of dynamical quantum phase transitions and entanglement tomography in a lattice gauge theory
+- [2209.15309](../papers/2209.15309.md) (2022) [2] NLO finite system size corrections to $2\to2$ scattering in $ϕ^4$ theory using newly derived sum of sinc functions
+- [2209.10758](../papers/2209.10758.md) (2022) [1] Report of the Snowmass 2021 Topical Group on Lattice Gauge Theory
+- [2204.03816](../papers/2204.03816.md) (2022) [2] Emergent phenomena from centre vortices
+- [2203.12169](../papers/2203.12169.md) (2022) [2] Neutrinoless Double-Beta Decay: A Roadmap for Matching Theory to Experiment
+- [2203.08905](../papers/2203.08905.md) (2022) [1] Probing confinement in a $\mathbb{Z}_2$ lattice gauge theory on a quantum computer
+- [2202.03054](../papers/2202.03054.md) (2022) [2] Heavy quarks at finite temperature
+- [2112.14262](../papers/2112.14262.md) (2021) [2] Digital Quantum Simulation of the Schwinger Model and Symmetry Protection with Trapped Ions
+- [2110.02241](../papers/2110.02241.md) (2021) [2] Analytical structure of the equation of state at finite density: Resummation versus expansion in a low energy model
+- [2108.01022](../papers/2108.01022.md) (2021) [2] Engineering an Effective Three-spin Hamiltonian in Trapped-ion Systems for Applications in Quantum Simulation
+- [2103.02602](../papers/2103.02602.md) (2021) [1] Real-time lattice gauge theory actions: unitarity, convergence, and path integral contour deformations
+- [2101.12668](../papers/2101.12668.md) (2021) [2] Path integral contour deformations for observables in $SU(N)$ gauge theory
+- [2101.10227](../papers/2101.10227.md) (2021) [1] A Trailhead for Quantum Simulation of SU(3) Yang-Mills Lattice Gauge Theory in the Local Multiplet Basis
+- [2009.13969](../papers/2009.13969.md) (2020) [1] Cold Atom Quantum Simulator for String and Hadron Dynamics in Non-Abelian Lattice Gauge Theory
+- [2002.07202](../papers/2002.07202.md) (2020) [2] Strings of diquark-quark (QQ)Q baryon before phase transition
+- [2001.04203](../papers/2001.04203.md) (2020) [2] On QCD strings beyond non-interacting model
+- [2001.02392](../papers/2001.02392.md) (2020) [2] Quantum delocalization of strings with boundary action in Yang-Mills theory
+- [1911.04685](../papers/1911.04685.md) (2019) [2] Pion Beta Decay and CKM Unitarity
+- [1908.09835](../papers/1908.09835.md) (2019) [2] Thermal free energy of large Nf QED in 2+1 dimensions from weak to strong coupling
+- [1905.09789](../papers/1905.09789.md) (2019) [1] A qubit model for U(1) lattice gauge theory
+- [1904.04267](../papers/1904.04267.md) (2019) [2] Simulations of the Glasma in 3+1D
+- [1904.00022](../papers/1904.00022.md) (2019) [2] Charting the coming synergy between lattice QCD and high-energy phenomenology
+- [1901.03878](../papers/1901.03878.md) (2019) [2] First 4D lattice calculation of transport coefficient $\hat{q}$ for pure gluon plasma
+- [1811.01329](../papers/1811.01329.md) (2018) [2] First calculation of $\hat{q}$ on a quenched SU(3) plasma
+- [1810.01609](../papers/1810.01609.md) (2018) [2] Simulating the weak death of the neutron in a femtoscale universe with near-Exascale computing
+- [1804.01995](../papers/1804.01995.md) (2018) [1] Implicit schemes for real-time lattice gauge theory
+- [1803.05656](../papers/1803.05656.md) (2018) [2] Distribution of Stress Tensor around Static Quark--Anti-Quark from Yang-Mills Gradient Flow
+- [1801.06118](../papers/1801.06118.md) (2018) [2] Dynamical AdS/Yang-Mills Model
+- [1712.09298](../papers/1712.09298.md) (2017) [2] Evolution of Charge Fluctuations and Correlations in the Hydrodynamic Stage of Heavy Ion Collisions
+- [1708.08462](../papers/1708.08462.md) (2017) [2] Nucleon Axial Radius and Muonic Hydrogen - A New Analysis and Review
+- [1612.07347](../papers/1612.07347.md) (2016) [1] Deconfinement, gradient and cooling scales for pure SU(2) lattice gauge theory
+- [1607.05833](../papers/1607.05833.md) (2016) [2] On the thermodynamically consistent quasiparticle model of quark gluon plasma
+- [1511.03009](../papers/1511.03009.md) (2015) [2] (2+1)-flavor QCD Thermodynamics from the Gradient Flow
+- [1509.00160](../papers/1509.00160.md) (2015) [2] Glueballs amass at RHIC and LHC Colliders! - The early quarkless 1st order phase transition at $T=270$ MeV - from pure Y...
+- [1508.07031](../papers/1508.07031.md) (2015) [2] Production of Charge in Heavy Ion Collisions
+- [1508.04165](../papers/1508.04165.md) (2015) [2] Finite Volume Corrections to the Electromagnetic Mass of Composite Particles
+- [1502.02296](../papers/1502.02296.md) (2015) [2] Lattice QCD Thermodynamics with Physical Quark Masses
+- [1501.04042](../papers/1501.04042.md) (2015) [2] Constraining the Eq. of State of Super-Hadronic Matter from Heavy-Ion Collisions
+- [1409.2164](../papers/1409.2164.md) (2014) [2] Chemical properties of super-hadronic matter created in relativistic heavy ion collisions
+- [1407.2473](../papers/1407.2473.md) (2014) [2] Some Applications of Hard Thermal Loop Perturbation Theory in Quark Gluon Plasma
+- [1405.4762](../papers/1405.4762.md) (2014) [2] Phase structure of three and four flavor QCD
+- [1404.7471](../papers/1404.7471.md) (2014) [2] Probing the QCD phase diagram with fluctuations
+- [1403.2102](../papers/1403.2102.md) (2014) [2] QCD thermodynamics on the lattice
+- [1312.7492](../papers/1312.7492.md) (2013) [2] Thermodynamics of SU(3) Gauge Theory from Gradient Flow
+- [1311.3005](../papers/1311.3005.md) (2013) [2] Universal attractor in a highly occupied non-Abelian plasma
+- [1303.0318](../papers/1303.0318.md) (2013) [2] Estimating $\hat{q}$ in Quenched Lattice SU(2) Gauge Theory
+- [1302.6645](../papers/1302.6645.md) (2013) [2] Chiral Symmetry Restoration from a Boundary
+- [1210.3352](../papers/1210.3352.md) (2012) [1] Calculating the Jet Transport Coefficient $\hat{q}$ in Lattice Gauge Theory
+- [1209.3468](../papers/1209.3468.md) (2012) [1] Lattice Gauge Theory and the Origin of Mass
+- [1207.1450](../papers/1207.1450.md) (2012) [2] Turbulent thermalization of weakly coupled non-abelian plasmas
+- [1203.1204](../papers/1203.1204.md) (2012) [1] Twenty-first Century Lattice Gauge Theory: Results from the QCD Lagrangian
+- [1202.5295](../papers/1202.5295.md) (2012) [1] Calculating the Jet Quenching Parameter $\hat{q}$ in Lattice Gauge Theory
+- [1109.2542](../papers/1109.2542.md) (2011) [2] Beyond the Standard Model with Precision Nucleon Matrix Elements on the Lattice
+- [1106.1608](../papers/1106.1608.md) (2011) [2] Review of Baryon Spectroscopy in Lattice QCD
+- [1105.1931](../papers/1105.1931.md) (2011) [1] Polyakov Loop Behavior in Non-Extensive SU(2) Lattice Gauge Theory
+- [1104.0522](../papers/1104.0522.md) (2011) [2] Topological Fluctuations in Dense Matter with Two Colors
+- [1101.4961](../papers/1101.4961.md) (2011) [2] Lattice Study of Dense Matter with Two Colors and Four Flavors
+- [1012.0116](../papers/1012.0116.md) (2010) [2] Non-conformal Holography of Heavy Quark Quenching
+- [1010.2169](../papers/1010.2169.md) (2010) [2] Low Mass Dilepton Rate from the Deconfined Phase
+- [1009.2774](../papers/1009.2774.md) (2010) [2] Anomaly and a QCD-like phase diagram with massive bosonic baryons
+- [1005.2686](../papers/1005.2686.md) (2010) [1] Lattice Gauge Theory Sum Rule for the Shear Channel
+- [1004.2100](../papers/1004.2100.md) (2010) [2] Exploring the Nucleon Structure from First Principles of QCD
+- [0902.2856](../papers/0902.2856.md) (2009) [1] Heavy Quark Thermalization in Classical Lattice Gauge Theory: Lessons for Strongly-Coupled QCD
+- [0812.3859](../papers/0812.3859.md) (2008) [2] Simulating plasma instabilities in SU(3) gauge theory
+- [0805.0784](../papers/0805.0784.md) (2008) [2] Thermalization in SU(3) gauge theory after a deconfining quench
+- [0804.2371](../papers/0804.2371.md) (2008) [2] Constraints on the IR behavior of the ghost propagator in Yang-Mills theories
+- [0801.3823](../papers/0801.3823.md) (2008) [2] Role of the $σ$-resonance in determining the convergence of chiral perturbation theory
+- [0712.3514](../papers/0712.3514.md) (2007) [1] Bottom-up isotropization in classical-statistical lattice gauge theory
+- [0711.2322](../papers/0711.2322.md) (2007) [2] Relativistic corrections to the static potential at O(1/m) and O(1/m^2)
+- [0711.0699](../papers/0711.0699.md) (2007) [1] Lattice gauge theory with staggered fermions: how, where, and why (not)
+- [0710.1966](../papers/0710.1966.md) (2007) [2] Hadron Spectrum in a Two-Colour Baryon-Rich Medium
+- [2308.16202](../papers/2308.16202.md) (0000) [1] 2308.16202
+- [2312.00780](../papers/2312.00780.md) (0000) [1] 2312.00780
+- [2312.02726](../papers/2312.02726.md) (0000) [2] 2312.02726
+- [2312.03063](../papers/2312.03063.md) (0000) [1] 2312.03063
+- [2312.13408](../papers/2312.13408.md) (0000) [2] 2312.13408
+- [2402.00840](../papers/2402.00840.md) (0000) [2] 2402.00840
+- [2404.02965](../papers/2404.02965.md) (0000) [2] 2404.02965
+- [2407.09253](../papers/2407.09253.md) (0000) [2] 2407.09253
+- [2408.00069](../papers/2408.00069.md) (0000) [1] 2408.00069
+- [2408.09007](../papers/2408.09007.md) (0000) [2] 2408.09007
+- [2409.03030](../papers/2409.03030.md) (0000) [2] 2409.03030
+- [2409.03123](../papers/2409.03123.md) (0000) [2] 2409.03123
+- [2409.10564](../papers/2409.10564.md) (0000) [2] 2409.10564
+- [2410.13815](../papers/2410.13815.md) (0000) [2] 2410.13815
+- [2410.14580](../papers/2410.14580.md) (0000) [1] 2410.14580
+- [2411.05582](../papers/2411.05582.md) (0000) [2] 2411.05582
+- [2501.11603](../papers/2501.11603.md) (0000) [2] 2501.11603
+- [2502.17551](../papers/2502.17551.md) (0000) [2] 2502.17551
+- [2503.03828](../papers/2503.03828.md) (0000) [1] 2503.03828
+- [2504.02297](../papers/2504.02297.md) (0000) [2] 2504.02297

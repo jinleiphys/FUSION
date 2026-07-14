@@ -1,0 +1,84 @@
+# Hydrodynamic models
+
+**PhySH lineage:** Hydrodynamic models
+
+**Papers:** 78
+
+- [2305.11050](../papers/2305.11050.md) (2023) [2] Production of $p$-nuclei from $r$-process seeds: the $νr$-process
+- [2304.12711](../papers/2304.12711.md) (2023) [2] Random model of flow decorrelation
+- [2211.14379](../papers/2211.14379.md) (2022) [2] Opacity dependence of transverse flow, pre-equilibrium and applicability of hydrodynamics in heavy-ion collisions
+- [2211.13651](../papers/2211.13651.md) (2022) [2] Transverse momentum decorrelation of the flow vector in Pb-Pb collisions at $\sqrt{s_{\rm NN}}$ = 5.02 TeV
+- [2205.00964](../papers/2205.00964.md) (2022) [2] Pre-hydrodynamic evolution and its impact on quark-gluon plasma signatures
+- [2112.15531](../papers/2112.15531.md) (2021) [2] Hydrodynamic helicity polarization in relativistic heavy ion collisions
+- [2105.06007](../papers/2105.06007.md) (2021) [2] Far-from-equilibrium hydrodynamic simulations of ultrarelativistic nuclear collisions
+- [2104.10422](../papers/2104.10422.md) (2021) [2] Investigations on mixed harmonic cumulants in heavy-ion collisions at the LHC
+- [2101.04963](../papers/2101.04963.md) (2021) [1] Vorticity and Polarization in Heavy Ion Collisions: Hydrodynamic Models
+- [2007.00780](../papers/2007.00780.md) (2020) [2] Possible octupole deformation of $^{208}$Pb and the ultracentral $v_2$ to $v_3$ puzzle
+- [2004.09799](../papers/2004.09799.md) (2020) [2] Skewness of mean transverse momentum fluctuations in heavy-ion collisions
+- [1906.03045](../papers/1906.03045.md) (2019) [2] $p_T$-Dependent Particle Number Fluctuations From Principal Component Analyses in Hydrodynamic Simulations of Heavy-Ion ...
+- [1904.12711](../papers/1904.12711.md) (2019) [2] Extracting the strangeness freeze-out temperature from net-Kaon data at RHIC
+- [1811.08906](../papers/1811.08906.md) (2018) [2] Hypermassive Neutron Star Disk Outflows and Blue Kilonovae
+- [1808.00461](../papers/1808.00461.md) (2018) [2] Long-term GRMHD Simulations of Neutron Star Merger Accretion Disks: Implications for Electromagnetic Counterparts
+- [1807.07191](../papers/1807.07191.md) (2018) [2] Small system studies: A theory overview
+- [1806.10329](../papers/1806.10329.md) (2018) [2] Enhancement of strange baryons in high-multiplicity proton-proton and proton-nucleus collisions
+- [1805.11689](../papers/1805.11689.md) (2018) [2] Universal behaviour, transients and attractors in supersymmetric Yang-Mills plasma
+- [1804.06781](../papers/1804.06781.md) (2018) [2] Pion-kaon femtoscopy in Pb--Pb collisions at $\sqrt{s_{\rm NN}}=2.76$ TeV modeled in (3+1)D hydrodynamics coupled to The...
+- [1801.00637](../papers/1801.00637.md) (2018) [2] Radiative heavy quark energy loss in an expanding viscous QCD plasma
+- [1712.05162](../papers/1712.05162.md) (2017) [2] Hydrodynamic description of ultrarelativistic heavy-ion collisions
+- [1710.09726](../papers/1710.09726.md) (2017) [2] Study of Lambda polarization at RHIC BES and LHC energies
+- [1703.09628](../papers/1703.09628.md) (2017) [2] Correlation femtoscopy study at NICA and STAR energies within a viscous hydrodynamic plus cascade model
+- [1612.05593](../papers/1612.05593.md) (2016) [2] Studies of three-particle correlations and reaction-plane correlators from STAR
+- [1510.00539](../papers/1510.00539.md) (2015) [2] Chemically non-equilibrated QGP and thermal photon elliptic flow
+- [1410.1704](../papers/1410.1704.md) (2014) [2] Applications of dissipative and anisotropic hydrodynamics in description of early stages of relativistic heavy-ion colli...
+- [1408.3519](../papers/1408.3519.md) (2014) [2] Quantitative extraction of the jet transport parameter from combined data at RHIC and LHC
+- [1408.1410](../papers/1408.1410.md) (2014) [2] Medium-induced optical effects for prompt photons
+- [1405.7825](../papers/1405.7825.md) (2014) [2] Non-Abelian Bremsstrahlung and Azimuthal Asymmetries in High Energy p+A Reactions
+- [1403.6042](../papers/1403.6042.md) (2014) [1] Hydrodynamic models of ultrarelativistic collisions
+- [1312.5003](../papers/1312.5003.md) (2013) [2] Extracting jet transport coefficient from jet quenching at RHIC and LHC
+- [1310.3529](../papers/1310.3529.md) (2013) [2] On the origin of long-range azimuthal correlations in hadronic collisions
+- [1309.7782](../papers/1309.7782.md) (2013) [1] Hydrodynamic models of particle production
+- [1305.1755](../papers/1305.1755.md) (2013) [2] Nucleosynthesis in the accretion disks of Type II collapsars
+- [1302.1955](../papers/1302.1955.md) (2013) [2] Dissipative hydrodynamic evolution of hot quark matter at finite baryon density
+- [1208.4683](../papers/1208.4683.md) (2012) [1] Time evolution of the sQGP with hydrodynamic models
+- [1208.0897](../papers/1208.0897.md) (2012) [2] Constraining the initial temperature and shear viscosity in a hybrid hydrodynamic model of $\sqrt{s_{NN}}$=200 GeV Au+Au...
+- [1207.0629](../papers/1207.0629.md) (2012) [2] Collective phenomena in the early stages of relativistic heavy-ion collisions
+- [1204.1981](../papers/1204.1981.md) (2012) [2] Sensitivity study of explosive nucleosynthesis in Type Ia supernovae: I. Modification of individual thermonuclear reacti...
+- [1010.3672](../papers/1010.3672.md) (2010) [2] Thermal photon production in Au+Au collisions: viscous corrections in two different hydrodynamic formalisms
+- [1010.1635](../papers/1010.1635.md) (2010) [2] A systematic comparison of jet quenching in different fluid-dynamical models
+- [1008.5162](../papers/1008.5162.md) (2010) [2] Initial Conditions and Global Event Properties from Color Glass Condensate
+- [1005.4767](../papers/1005.4767.md) (2010) [1] Hydrodynamic Models of Type I X-Ray Bursts: Metallicity Effects
+- [0908.4100](../papers/0908.4100.md) (2009) [2] Relativistic Heavy Ion Collisions: Viscous Hydrodynamic Simulations and Final State Interactions
+- [0907.3592](../papers/0907.3592.md) (2009) [2] Describing transverse dynamics and space-time evolution at RHIC in a hydrodynamic model with statistical hadronization
+- [0907.1094](../papers/0907.1094.md) (2009) [2] The Long Slow Death of the HBT Puzzle, Proceedings for QM 2009
+- [0903.1469](../papers/0903.1469.md) (2009) [2] Universal Flow in the Early Stages at RHIC
+- [0812.4714](../papers/0812.4714.md) (2008) [2] The Long Slow Death of the HBT Puzzle
+- [0811.3363](../papers/0811.3363.md) (2008) [2] Resolving the HBT Puzzle in Relativistic Heavy Ion Collision
+- [0806.1013](../papers/0806.1013.md) (2008) [2] Heavy flavor in heavy-ion collisions at RHIC and RHIC II
+- [0709.3366](../papers/0709.3366.md) (2007) [2] Jozso's Legacy: Chemical and Kinetic Freeze-out in Heavy-Ion Collisions
+- [2311.02913](../papers/2311.02913.md) (0000) [2] 2311.02913
+- [2401.09571](../papers/2401.09571.md) (0000) [2] 2401.09571
+- [2403.03743](../papers/2403.03743.md) (0000) [2] 2403.03743
+- [2404.14091](../papers/2404.14091.md) (0000) [1] 2404.14091
+- [2407.10634](../papers/2407.10634.md) (0000) [1] 2407.10634
+- [2409.16093](../papers/2409.16093.md) (0000) [2] 2409.16093
+- [2411.06249](../papers/2411.06249.md) (0000) [2] 2411.06249
+- [2501.19240](../papers/2501.19240.md) (0000) [2] 2501.19240
+- [2504.03516](../papers/2504.03516.md) (0000) [2] 2504.03516
+- [2504.19208](../papers/2504.19208.md) (0000) [2] 2504.19208
+- [2507.19463](../papers/2507.19463.md) (0000) [2] 2507.19463
+- [2601.15023](../papers/2601.15023.md) (0000) [2] 2601.15023
+- [2601.19475](../papers/2601.19475.md) (0000) [2] 2601.19475
+- [2602.22490](../papers/2602.22490.md) (0000) [1] 2602.22490
+- [hep-ph/0111114](../papers/hep-ph/0111114.md) (0000) [2] hep-ph/0111114
+- [hep-ph/0507134](../papers/hep-ph/0507134.md) (0000) [2] hep-ph/0507134
+- [hep-ph/9811459](../papers/hep-ph/9811459.md) (0000) [1] hep-ph/9811459
+- [nucl-th/0010107](../papers/nucl-th/0010107.md) (0000) [1] nucl-th/0010107
+- [nucl-th/0112011](../papers/nucl-th/0112011.md) (0000) [2] nucl-th/0112011
+- [nucl-th/0403042](../papers/nucl-th/0403042.md) (0000) [1] nucl-th/0403042
+- [nucl-th/0507057](../papers/nucl-th/0507057.md) (0000) [2] nucl-th/0507057
+- [nucl-th/0602023](../papers/nucl-th/0602023.md) (0000) [2] nucl-th/0602023
+- [nucl-th/0605008](../papers/nucl-th/0605008.md) (0000) [1] nucl-th/0605008
+- [nucl-th/0609021](../papers/nucl-th/0609021.md) (0000) [2] nucl-th/0609021
+- [nucl-th/0702082](../papers/nucl-th/0702082.md) (0000) [2] nucl-th/0702082
+- [nucl-th/9602011](../papers/nucl-th/9602011.md) (0000) [2] nucl-th/9602011
+- [nucl-th/9708001](../papers/nucl-th/9708001.md) (0000) [2] nucl-th/9708001

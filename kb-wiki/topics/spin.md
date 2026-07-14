@@ -1,0 +1,108 @@
+# Spin
+
+**PhySH lineage:** Spin
+
+**Narrower:** [Nucleon spin structure](nucleon-spin-structure.md)
+
+**Papers:** 5935 (showing first 100 of 5935)
+
+- [2307.14827](../papers/2307.14827.md) (2023) [2] Triaxial projected shell model approach for negative parity states in even-even nuclei
+- [2308.00075](../papers/2308.00075.md) (2023) [1] Dynamical induced quark spin polarization by magnetic field at the early stage of heavy-ion collisions
+- [2307.14455](../papers/2307.14455.md) (2023) [2] Spatial orientation of the fission fragment intrinsic spins and their correlations
+- [2307.13469](../papers/2307.13469.md) (2023) [2] Dispersion effects in elastic electron scattering from $^{208}$Pb
+- [2307.13561](../papers/2307.13561.md) (2023) [1] Linearly stable and causal relativistic first-order spin hydrodynamics
+- [2307.13076](../papers/2307.13076.md) (2023) [2] ALP contributions to $μ\to e$ conversion
+- [2307.12250](../papers/2307.12250.md) (2023) [1] Spin polarization of heavy quarks in matter: predictions from effective field theories
+- [2307.12436](../papers/2307.12436.md) (2023) [1] Polarization of spin-1/2 particles with effective spacetime dependent masses
+- [2307.11165](../papers/2307.11165.md) (2023) [2] Synchronization effects on rest frame energy and momentum densities in the proton
+- [2307.09953](../papers/2307.09953.md) (2023) [1] Bulk viscosity of rotating, hot and dense spin 1/2 fermionic systems from correlation functions
+- [2307.10413](../papers/2307.10413.md) (2023) [2] Two-pole nature of the $Λ(1405)$ from lattice QCD
+- [2307.09272](../papers/2307.09272.md) (2023) [2] Quantum binding energies in the Skyrme model
+- [2307.05755](../papers/2307.05755.md) (2023) [2] QCD on Rotating Lattice with Staggered Fermions
+- [2307.04299](../papers/2307.04299.md) (2023) [2] Schiff moments of deformed nuclei
+- [2307.04432](../papers/2307.04432.md) (2023) [2] Density-dependent relativistic mean field approach and its application to single-$Λ$ hypernuclei in Oxygen isotopes
+- [2307.04939](../papers/2307.04939.md) (2023) [2] Masses and radiative decay widths of S- and P-wave singly-, doubly- and triply-heavy charm and bottom baryons
+- [2307.05516](../papers/2307.05516.md) (2023) [2] Spectroscopy and femtoscopic correlation function of the $B\bar{D}$, $B=(N, Δ)$ system in quark delocalization color scr...
+- [2307.02102](../papers/2307.02102.md) (2023) [2] Femtoscopy of $D$ mesons and light mesons upon unitarized effective field theories
+- [2307.00661](../papers/2307.00661.md) (2023) [2] Neutral current neutrino and antineutrino scattering off the polarized nucleon
+- [2306.17673](../papers/2306.17673.md) (2023) [1] Properties of the $T_{cc}(3875)^+$ and $T_{\bar c\bar c}(3875)^-$ (and their heavy-quark spin partners) in nuclear matte...
+- [2307.00045](../papers/2307.00045.md) (2023) [2] Simple Hamiltonian for Quantum Simulation of Strongly Coupled 2+1D SU(2) Lattice Gauge Theory on a Honeycomb Lattice
+- [2306.16189](../papers/2306.16189.md) (2023) [2] Intruder configurations in $^{29}$Ne at the transition into the island of inversion: Detailed structure study of $^{28}$...
+- [2306.16535](../papers/2306.16535.md) (2023) [2] Multi-Body Entanglement and Information Rearrangement in Nuclear Many-Body Systems
+- [2306.15558](../papers/2306.15558.md) (2023) [2] Collider constraints on massive gravitons coupling to photons
+- [2306.14368](../papers/2306.14368.md) (2023) [2] Understanding Excitations in $^{59,61}$Co, $^{59}$Ni
+- [2306.14811](../papers/2306.14811.md) (2023) [1] In-medium Electromagnetic Form Factors and Spin Polarizations
+- [2306.14190](../papers/2306.14190.md) (2023) [2] Universal relations for compact stars with heavy baryons
+- [2306.13880](../papers/2306.13880.md) (2023) [1] Causality and stability analysis for the minimal causal spin hydrodynamics
+- [2306.13884](../papers/2306.13884.md) (2023) [2] Impact of Multiple Phase Transitions in Dense QCD on Compact Stars
+- [2306.13900](../papers/2306.13900.md) (2023) [2] Electromagnetic Transition Form Factors of Baryon Resonances
+- [2306.11775](../papers/2306.11775.md) (2023) [2] Superfluid Rivers in Spinning-down Neutron Stars
+- [2306.10361](../papers/2306.10361.md) (2023) [2] Helicity of Quarks and Gluons at Small Bjorken $x$
+- [2306.08721](../papers/2306.08721.md) (2023) [2] Higher Order Corrections to the Effective Field Theory of Low-energy Axions
+- [2306.05936](../papers/2306.05936.md) (2023) [2] Quantum kinetic theory with interactions for massive vector bosons
+- [2306.04918](../papers/2306.04918.md) (2023) [1] Spin entanglement in neutron-proton scattering
+- [2306.04992](../papers/2306.04992.md) (2023) [2] The hadronic equation of state of HESS J1731-347 from the relativistic mean-field model with tensor coupling
+- [2306.05280](../papers/2306.05280.md) (2023) [2] Chiral EFT calculation of neutrino reactions in warm neutron-rich matter
+- [2306.04500](../papers/2306.04500.md) (2023) [2] Structure Factors for Hot Neutron Matter from Ab Initio Lattice Simulations with High-Fidelity Chiral Interactions
+- [2306.02540](../papers/2306.02540.md) (2023) [1] Normal single-spin asymmetries in electron-proton scattering: two-photon exchange with intermediate state resonances
+- [2306.02829](../papers/2306.02829.md) (2023) [1] Dynamic Calculations of Magnetic Field and Implications on Spin Polarization and Spin Alignment in Heavy Ion Collisions
+- [2306.03274](../papers/2306.03274.md) (2023) [2] All-Orders Evolution of Parton Distributions: Principle, Practice, and Predictions
+- [2306.00277](../papers/2306.00277.md) (2023) [2] Neutrino-induced reactions on 18O and implications of 18O mixture in water Cherenkov detectors on supernova neutrino eve...
+- [2306.00097](../papers/2306.00097.md) (2023) [2] Complete Formalism of Cross Sections and Asymmetries for Longitudinally and Transversely Polarized Leptons and Hadrons i...
+- [2305.18336](../papers/2305.18336.md) (2023) [2] A study of medium effects in elastic $πN$ and $πA$ scatterings
+- [2305.15397](../papers/2305.15397.md) (2023) [2] Extraction of the Parton Momentum-Fraction Dependence of Generalized Parton Distributions from Exclusive Photoproduction
+- [2305.14430](../papers/2305.14430.md) (2023) [2] Unraveling the nature of the novel $\mathbf{T_{cs}}$ and $\mathbf{T_{c\bar s}}$ tetraquark candidates
+- [2305.10916](../papers/2305.10916.md) (2023) [2] Microscopic Encoding of Macroscopic Universality: Scaling Properties of Dirac Eigenspectra near QCD Chiral Phase Transit...
+- [2305.11117](../papers/2305.11117.md) (2023) [2] Moments of proton GPDs from the OPE of nonlocal quark bilinears up to NNLO
+- [2305.09114](../papers/2305.09114.md) (2023) [1] Global spin alignment of vector mesons and strong force fields in heavy- ion collisions
+- [2305.09633](../papers/2305.09633.md) (2023) [2] Chiral perturbation theory of the hyperfine splitting in (muonic) hydrogen
+- [2305.09716](../papers/2305.09716.md) (2023) [2] Towards Double Parton Distributions from First Principles using Large Momentum Effective Theory
+- [2305.09831](../papers/2305.09831.md) (2023) [2] $Δ$-baryon axialvector and pseudoscalar form factors, and associated PCAC relations
+- [2305.08690](../papers/2305.08690.md) (2023) [1] Exploring $^3P_0$ Superfluid in Dilute Spin-Polarized Neutron Matter
+- [2305.08831](../papers/2305.08831.md) (2023) [2] Neural-network quantum states for ultra-cold Fermi gases
+- [2305.08991](../papers/2305.08991.md) (2023) [2] Uncertainties on the EFT coupling limits for direct dark matter detection experiments stemming from uncertainties of tar...
+- [2305.06700](../papers/2305.06700.md) (2023) [2] Elastic proton-neutron and antiproton-neutron scattering in holographic QCD
+- [2305.04482](../papers/2305.04482.md) (2023) [2] Stability of interlinked neutron vortex and proton flux-tube arrays in a neutron star -- III. Proton feedback
+- [2305.02628](../papers/2305.02628.md) (2023) [1] Exotic spin-dependent interactions through unparticle exchange
+- [2305.02716](../papers/2305.02716.md) (2023) [2] Bound state solutions of the Schrödinger equation for dibaryons via asymptotic iteration method
+- [2305.02985](../papers/2305.02985.md) (2023) [1] Quarkonium spin alignment in a vortical medium
+- [2305.01894](../papers/2305.01894.md) (2023) [2] Sea contribution to the charge radii and quadrupole moment of $J^P=\frac{1}{2}^+, \frac{3}{2}^+$ baryons
+- [2304.14173](../papers/2304.14173.md) (2023) [2] U(1) quasi-hydrodynamics: Schwinger-Keldysh effective field theory and holography
+- [2304.13515](../papers/2304.13515.md) (2023) [2] Heavy- and light-flavor symmetry partners of the $T_{cc}^+(3875)$, the $X(3872)$ and the $X(3960)$ from light-meson exch...
+- [2304.13877](../papers/2304.13877.md) (2023) [2] Short-range baryon-baryon potentials in constituent quark model revisited
+- [2304.11903](../papers/2304.11903.md) (2023) [2] QCD bound states in motion
+- [2304.12469](../papers/2304.12469.md) (2023) [1] Polarised parton distribution functions and proton spin
+- [2304.11358](../papers/2304.11358.md) (2023) [2] Neutrino-induced neutral- and charged-current reactions on $^{40}$Ar
+- [2304.10187](../papers/2304.10187.md) (2023) [2] $ Δ$ baryon spectroscopy in lattice QCD
+- [2304.09814](../papers/2304.09814.md) (2023) [2] Transvese momentum dependent parton distributions of pion at leading twist
+- [2304.08776](../papers/2304.08776.md) (2023) [2] Hot and highly magnetized neutron star matter properties with Skyrme interactions
+- [2304.08777](../papers/2304.08777.md) (2023) [2] Probing vortical structures in heavy-ion collisions at RHIC-BES energies through helicity polarization
+- [2304.05190](../papers/2304.05190.md) (2023) [2] Thermodynamics of a rotating hadron resonance gas with van der Waals interaction
+- [2304.04181](../papers/2304.04181.md) (2023) [1] Spin alignment of vector mesons by glasma fields
+- [2304.03719](../papers/2304.03719.md) (2023) [2] One-loop fermion-photon vertex in arbitrary gauge and dimensions: a novel approach
+- [2304.03229](../papers/2304.03229.md) (2023) [2] Mitigating Green's function Monte Carlo signal-to-noise problems using contour deformations
+- [2304.03302](../papers/2304.03302.md) (2023) [2] TMD Handbook
+- [2304.02276](../papers/2304.02276.md) (2023) [1] Exact spin polarization of massive and massless particles in relativistic fluids at global equilibrium
+- [2304.01817](../papers/2304.01817.md) (2023) [2] Relativistic Hartree-Fock Chiral Lagrangians with confinement, nucleon finite size and short-range effects
+- [2304.02060](../papers/2304.02060.md) (2023) [1] Spin-Dependent Interactions and Heavy-Quark Transport in the QGP
+- [2304.01009](../papers/2304.01009.md) (2023) [1] Relativistic second-order spin hydrodynamics: an entropy-current analysis
+- [2304.00535](../papers/2304.00535.md) (2023) [2] Polaronic Proton and Diproton Clustering in Neutron-Rich Matter
+- [2303.17532](../papers/2303.17532.md) (2023) [1] Small-$x$ Quark and Gluon Helicity Contributions to the Proton Spin Puzzle
+- [2303.15388](../papers/2303.15388.md) (2023) [2] Charmoniumlike tetraquarks in a chiral quark model
+- [2303.15567](../papers/2303.15567.md) (2023) [2] Wormhole Model for Neon-20
+- [2303.14264](../papers/2303.14264.md) (2023) [2] SU(2) Gauge Theory in $2+1$ Dimensions on a Plaquette Chain Obeys the Eigenstate Thermalization Hypothesis
+- [2303.14130](../papers/2303.14130.md) (2023) [2] A tight universal relation between the shape eccentricity and the moment of inertia for rotating neutron stars
+- [2303.12681](../papers/2303.12681.md) (2023) [1] Target normal single-spin asymmetry in inclusive electron-nucleon scattering in the 1/Nc expansion
+- [2303.11538](../papers/2303.11538.md) (2023) [2] Gravitational transverse-momentum distributions
+- [2303.11006](../papers/2303.11006.md) (2023) [2] Radial Oscillations in Neutron Stars with Delta Baryons
+- [2303.10529](../papers/2303.10529.md) (2023) [2] Diproton correlation and two-proton emission from proton-rich nuclei
+- [2303.10219](../papers/2303.10219.md) (2023) [2] Three relativistic neutrons in a finite volume
+- [2303.06518](../papers/2303.06518.md) (2023) [2] Mixing of one-particle-one-hole projected states with the variation after projection wave functions
+- [2303.06521](../papers/2303.06521.md) (2023) [2] Removal of $K$-mixing in angular momentum projected nuclear wave functions
+- [2303.04990](../papers/2303.04990.md) (2023) [1] Deformed ground state of $^{32}$Mg and breaking of pseudo-spin symmetry
+- [2303.05271](../papers/2303.05271.md) (2023) [1] Pseudogauge freedom and the SO(3) algebra of spin operators
+- [2303.04326](../papers/2303.04326.md) (2023) [2] A possibility of existence of a pseudovector-type quark-antiquark condensate in the quark matter and Nambu-Goldstone mod...
+- [2303.03629](../papers/2303.03629.md) (2023) [2] Molecular states in $D_s^{(*)+}Ξ_c^{(',*)}$ systems
+- [2303.01915](../papers/2303.01915.md) (2023) [1] Investigating the impact of spin effects at the high-energy neutrino-nucleon interactions while it crosses the Earth's c...
+- [2303.00472](../papers/2303.00472.md) (2023) [2] Proton \textit{s}-resonance states of $^{12}$C and $^{14,15}$O within the Skyrme Hartree-Fock mean-field framework
+- [2303.00588](../papers/2303.00588.md) (2023) [2] Coexistence of single particle and collective excitation in $^{61}$Ni

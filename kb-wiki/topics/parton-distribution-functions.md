@@ -1,0 +1,110 @@
+# Parton distribution functions
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > [Quantum chromodynamics](quantum-chromodynamics.md) > Parton distribution functions
+
+**Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
+
+**Narrower:** [Fragmentation functions](fragmentation-functions.md), [Spin-dependent parton distribution functions](spin-dependent-parton-distribution-functions.md), [Transverse momentum dependent distribution](transverse-momentum-dependent-distribution.md)
+
+**Papers:** 521 (showing first 100 of 521)
+
+- [2307.10505](../papers/2307.10505.md) (2023) [2] Analytic Solution for the Revised Helicity Evolution at Small $x$ and Large $N_c$: New Resummed Gluon-Gluon Polarized An...
+- [2307.01573](../papers/2307.01573.md) (2023) [2] Collider physics with no PDFs
+- [2306.14960](../papers/2306.14960.md) (2023) [2] Parton Distributions from Boosted Fields in the Coulomb Gauge
+- [2306.09317](../papers/2306.09317.md) (2023) [2] QCD resummation of dijet azimuthal decorrelations in pp and pA collisions
+- [2306.03274](../papers/2306.03274.md) (2023) [2] All-Orders Evolution of Parton Distributions: Principle, Practice, and Predictions
+- [2305.09716](../papers/2305.09716.md) (2023) [2] Towards Double Parton Distributions from First Principles using Large Momentum Effective Theory
+- [2305.05212](../papers/2305.05212.md) (2023) [2] Leading Power Accuracy in Lattice Calculations of Parton Distributions
+- [2305.04416](../papers/2305.04416.md) (2023) [2] Threshold resummation for computing large-$x$ parton distribution through large-momentum effective theory
+- [2304.14552](../papers/2304.14552.md) (2023) [2] Superfast Quarks in Deuterium
+- [2304.12469](../papers/2304.12469.md) (2023) [1] Polarised parton distribution functions and proton spin
+- [2304.12475](../papers/2304.12475.md) (2023) [2] Ultra-peripheral nuclear collisions
+- [2304.06998](../papers/2304.06998.md) (2023) [2] Evolution of structure functions in momentum space
+- [2304.06161](../papers/2304.06161.md) (2023) [2] Analytic Solution for the Revised Helicity Evolution at Small $x$ and Large $N_c$: New Resummed Gluon-Gluon Polarized An...
+- [2304.03847](../papers/2304.03847.md) (2023) [2] Light-front puzzles
+- [2304.03302](../papers/2304.03302.md) (2023) [2] TMD Handbook
+- [2304.00154](../papers/2304.00154.md) (2023) [2] Hadron Structure using Continuum Schwinger Function Methods
+- [2303.13607](../papers/2303.13607.md) (2023) [2] High-energy neutrino deep inelastic scattering cross sections
+- [2303.11509](../papers/2303.11509.md) (2023) [2] Light quark and antiquark constraints from new electroweak data
+- [2303.01789](../papers/2303.01789.md) (2023) [1] The valence quark, sea, and gluon content of the pion from the parton distribution functions and the electromagnetic for...
+- [2302.07279](../papers/2302.07279.md) (2023) [2] Generalized parton distributions through universal moment parameterization: non-zero skewness case
+- [2302.06502](../papers/2302.06502.md) (2023) [2] Universality of the Collins-Soper kernel in lattice calculations
+- [2302.05566](../papers/2302.05566.md) (2023) [2] Updated analyses of gluon distribution functions for the pion and kaon from the gauge-invariant nonlocal chiral quark mo...
+- [2302.01192](../papers/2302.01192.md) (2023) [2] Tomography of pions and protons via transverse momentum dependent distributions
+- [2301.12994](../papers/2301.12994.md) (2023) [2] Transverse structure of the pion beyond leading twist with basis light-front quantization
+- [2301.12517](../papers/2301.12517.md) (2023) [2] Revealing a deep connection between factorization and saturation: New insight into modeling high-energy proton-proton an...
+- [2212.14415](../papers/2212.14415.md) (2022) [2] Connecting Euclidean to light-cone correlations: From flavor nonsinglet in forward kinematics to flavor singlet in non-f...
+- [2212.11952](../papers/2212.11952.md) (2022) [2] Resonant contributions to polarized proton structure functions
+- [2212.02432](../papers/2212.02432.md) (2022) [2] Neutrino-tagged jets at the Electron-Ion Collider
+- [2211.08341](../papers/2211.08341.md) (2022) [2] Transverse momentum dependent distribution functions in the threshold limit
+- [2210.06450](../papers/2210.06450.md) (2022) [2] Machine learning-based jet and event classification at the Electron-Ion Collider with applications to hadron structure a...
+- [2209.14285](../papers/2209.14285.md) (2022) [2] Polarized gluon distribution in the proton from holographic light-front QCD
+- [2209.09332](../papers/2209.09332.md) (2022) [2] Large-Momentum Effective Theory vs. Short-Distance Operator Expansion: Contrast and Complementarity
+- [2209.08327](../papers/2209.08327.md) (2022) [2] Exclusive $J/ψ$ production in ultraperipheral Pb+Pb collisions to NLO pQCD
+- [2209.05443](../papers/2209.05443.md) (2022) [2] Gluon Transverse-Momentum-Dependent Distributions from Large-Momentum Effective Theory
+- [2209.04072](../papers/2209.04072.md) (2022) [2] Fixed-target charmonium production and pion parton distributions
+- [2209.01236](../papers/2209.01236.md) (2022) [2] Resumming Quark's Longitudinal Momentum Logarithms in LaMET Expansion of Lattice PDFs
+- [2208.14620](../papers/2208.14620.md) (2022) [2] Towards three-dimensional nucleon structures at the Electron-Ion Collider in China: A study of the Sivers function
+- [2208.13590](../papers/2208.13590.md) (2022) [2] Bayesian inference of real-time dynamics from lattice QCD
+- [2207.06550](../papers/2207.06550.md) (2022) [2] Pseudo-scalar mesons: light front wave functions, GPDs and PDFs
+- [2207.05768](../papers/2207.05768.md) (2022) [2] Generalized parton distributions through universal moment parameterization: zero skewness case
+- [2206.10782](../papers/2206.10782.md) (2022) [2] On the determination of uncertainties in parton densities
+- [2205.08060](../papers/2205.08060.md) (2022) [2] Semi-inclusive Diffractive Deep Inelastic Scattering at Small-$x$
+- [2205.04477](../papers/2205.04477.md) (2022) [2] Gauge Invariance of Non-Abelian Field Strength Correlators: the Axial Gauge Puzzle
+- [2205.02757](../papers/2205.02757.md) (2022) [2] Transverse momentum distributions of valence quark in light and heavy vector mesons
+- [2204.13157](../papers/2204.13157.md) (2022) [1] Compatibility of Neutrino DIS Data and Its Impact on Nuclear Parton Distribution Functions
+- [2204.00543](../papers/2204.00543.md) (2022) [2] Complementarity of experimental and lattice QCD data on pion parton distributions
+- [2203.07333](../papers/2203.07333.md) (2022) [2] Nuclear effects in the deuteron and global QCD analyses
+- [2202.11892](../papers/2202.11892.md) (2022) [2] Nuclear medium effects in lepton-nucleus DIS in the region of $x \gtrsim 1$
+- [2202.03372](../papers/2202.03372.md) (2022) [2] Polarized Antimatter in the Proton from Global QCD Analysis
+- [2201.08401](../papers/2201.08401.md) (2022) [2] Factorization connecting continuum and lattice TMDs
+- [2201.05397](../papers/2201.05397.md) (2022) [2] TMDs for spin-1 hadrons
+- [2201.04875](../papers/2201.04875.md) (2022) [2] Gluon transversity and TMDs for spin-1 hadrons
+- [2201.02075](../papers/2201.02075.md) (2022) [2] How well do we know the gluon polarization in the proton?
+- [2201.00884](../papers/2201.00884.md) (2022) [2] Emergence of pion parton distributions
+- [2112.15586](../papers/2112.15586.md) (2021) [2] Meson structure on the light-front III : The Hamiltonian, heavy quarkonia, spin and orbit mixing
+- [2112.13218](../papers/2112.13218.md) (2021) [1] Equation-of-motion and Lorentz-invariance relations for tensor-polarized parton distribution functions of spin-1 hadrons
+- [2112.11605](../papers/2112.11605.md) (2021) [2] Parton distribution function uncertainties in theoretical predictions for far-forward tau neutrinos at the Large Hadron ...
+- [2112.11819](../papers/2112.11819.md) (2021) [2] Imaging nuclear modifications on parton distributions with triple-differential dijet cross sections in proton-nucleus co...
+- [2112.09038](../papers/2112.09038.md) (2021) [2] Hadron spin structure from lattice QCD
+- [2112.02208](../papers/2112.02208.md) (2021) [1] Lattice QCD Determination of the Bjorken-$x$ Dependence of Parton Distribution Functions at Next-to-next-to-leading Orde...
+- [2111.07609](../papers/2111.07609.md) (2021) [2] Nuclear medium effects in the deep inelastic $ν_τ/\barν_τ-^{40}Ar$ scattering at DUNE energies
+- [2111.07087](../papers/2111.07087.md) (2021) [2] Light-front wavefunctions of mesons by design
+- [2110.06052](../papers/2110.06052.md) (2021) [2] Pion GPDs: A path toward phenomenology
+- [2109.11686](../papers/2109.11686.md) (2021) [2] Revealing pion and kaon structure via generalised parton distributions
+- [2109.05597](../papers/2109.05597.md) (2021) [2] Impacts of EMC effects on the D meson modification factor in equilibrating QGP
+- [2108.03909](../papers/2108.03909.md) (2021) [2] Nucleon structure from basis light-front quantization
+- [2108.03667](../papers/2108.03667.md) (2021) [2] Quark Sivers Function at Small $x$: Spin-Dependent Odderon and the Sub-Eikonal Evolution
+- [2108.03073](../papers/2108.03073.md) (2021) [2] Application of the constituent quark exchange model to the parton distributions and the EMC ratios of $^{12}C$ and $^{14...
+- [2108.01381](../papers/2108.01381.md) (2021) [1] Transverse-momentum-dependent parton distribution functions for spin-1 hadrons
+- [2107.14514](../papers/2107.14514.md) (2021) [2] Constraining the nuclear gluon PDF with inclusive hadron production data
+- [2107.13235](../papers/2107.13235.md) (2021) [1] Impact of W and Z Production Data and Compatibility of Neutrino DIS Data in Nuclear Parton Distribution Functions
+- [2107.11930](../papers/2107.11930.md) (2021) [2] Lattice QCD calculation of the Collins-Soper kernel from quasi TMDPDFs
+- [2107.12401](../papers/2107.12401.md) (2021) [2] Three-dimensional imaging in nuclei
+- [2106.15849](../papers/2106.15849.md) (2021) [1] Twist-2 relation and sum rule for tensor-polarized parton distribution functions of spin-1 hadrons
+- [2106.16065](../papers/2106.16065.md) (2021) [1] Flavor decomposition of the nucleon unpolarized, helicity and transversity parton distribution functions from lattice QC...
+- [2106.15624](../papers/2106.15624.md) (2021) [2] Spin asymmetries in electron-jet production at the future electron ion collider
+- [2106.04954](../papers/2106.04954.md) (2021) [2] Light mesons with one dynamical gluon on the light front
+- [2106.03865](../papers/2106.03865.md) (2021) [2] Partonic collinear structure by quantum computing
+- [2105.09873](../papers/2105.09873.md) (2021) [2] Impact of inclusive hadron production data on nuclear gluon PDFs
+- [2105.09388](../papers/2105.09388.md) (2021) [2] Interpolating 't Hooft model between instant and front forms
+- [2104.14903](../papers/2104.14903.md) (2021) [2] Centrality dependence of electroweak boson production in PbPb collisions at the LHC
+- [2104.13345](../papers/2104.13345.md) (2021) [2] Renormalization and Mixing of Staple-Shaped Wilson Line Operators on the Lattice Revisited
+- [2104.06946](../papers/2104.06946.md) (2021) [2] Isovector EMC effect from global QCD analysis with MARATHON data
+- [2103.09529](../papers/2103.09529.md) (2021) [2] Parton physics from a heavy-quark operator product expansion: Formalism and Wilson coefficients
+- [2103.02159](../papers/2103.02159.md) (2021) [2] Towards the three-dimensional parton structure of the pion: Integrating transverse momentum data into global QCD analysi...
+- [2102.12916](../papers/2102.12916.md) (2021) [2] Factorization and transverse phase-space parton distributions
+- [2102.00608](../papers/2102.00608.md) (2021) [2] Neutrino-nucleon DIS from Holographic QCD: PDFs of sea and valence quarks, form factors, and structure functions of the ...
+- [2102.01101](../papers/2102.01101.md) (2021) [2] Origin and Resummation of Threshold Logarithms in the Lattice QCD Calculations of PDFs
+- [2102.01107](../papers/2102.01107.md) (2021) [2] Deuterium scattering experiments in CTEQ global QCD analyses: a comparative investigation
+- [2101.05243](../papers/2101.05243.md) (2021) [2] Novel twist-three transverse-spin sum rule for the proton and related generalized parton distributions
+- [2101.04664](../papers/2101.04664.md) (2021) [2] Simultaneous Monte Carlo analysis of parton densities and fragmentation functions
+- [2012.14030](../papers/2012.14030.md) (2020) [2] Residual Mean Field Model of Valence Quarks in the Nucleon
+- [2012.11566](../papers/2012.11566.md) (2020) [2] nCTEQ15HIX -- Extending nPDF Analyses into the High-$x$, Low $Q^2$ Region
+- [2012.03256](../papers/2012.03256.md) (2020) [2] Unpolarized Quark and Gluon TMD PDFs and FFs at N$^3$LO
+- [2012.01457](../papers/2012.01457.md) (2020) [2] Jet radiation in a longitudinally expanding medium
+- [2012.01532](../papers/2012.01532.md) (2020) [2] Gluon distributions and their applications to Ioffe-time distributions
+- [2011.14971](../papers/2011.14971.md) (2020) [2] Lattice Nucleon Isovector Unpolarized Parton Distribution in the Physical-Continuum Limit
+- [2011.11470](../papers/2011.11470.md) (2020) [2] Impact of scale, nuclear PDF and temperature variations on the interpretation of medium-modified jet production data fro...
+- [2011.08583](../papers/2011.08583.md) (2020) [1] Transverse-momentum-dependent parton distribution functions up to twist 4 for spin-1 hadrons
+- [2011.00964](../papers/2011.00964.md) (2020) [2] Lattice continuum-limit study of nucleon quasi-PDFs

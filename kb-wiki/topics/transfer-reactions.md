@@ -1,0 +1,110 @@
+# Transfer reactions
+
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Transfer reactions
+
+**Broader:** [Nuclear reactions](nuclear-reactions.md)
+
+**Narrower:** [Knockout reactions](knockout-reactions.md)
+
+**Papers:** 214 (showing first 100 of 214)
+
+- [2307.05910](../papers/2307.05910.md) (2023) [2] Short-range expansion for the quantum many-body problem
+- [2305.19945](../papers/2305.19945.md) (2023) [1] Transfer reactions of exotic nuclei including core deformations: $^{11}$Be and $^{17}$C
+- [2303.01176](../papers/2303.01176.md) (2023) [1] Single-particle spectroscopic strength from nucleon transfer reactions with a three-nucleon force contribution
+- [2303.00519](../papers/2303.00519.md) (2023) [1] The optimal detection angles for producing N=126 neutron-rich isotones in the multinucleon transfer reactions
+- [2302.14214](../papers/2302.14214.md) (2023) [2] Higgs response and pair condensation energy in superfluid nuclei
+- [2302.07544](../papers/2302.07544.md) (2023) [1] Preequilibrium cluster emission in massive transfer reactions near Coulomb barrier energy
+- [2301.05419](../papers/2301.05419.md) (2023) [2] Gamow Shell Model description of ${ { }^{ 40 } }$Ca(d,p) transfer reaction
+- [2212.10698](../papers/2212.10698.md) (2022) [1] The complete quantification of parametric uncertainties in (d,p) transfer reactions
+- [2212.03650](../papers/2212.03650.md) (2022) [1] Transfer Reactions in Nuclear Astrophysics
+- [2208.12107](../papers/2208.12107.md) (2022) [1] Production of neutron-rich actinide nuclides in isobaric collisions via multinucleon transfer reactions
+- [2208.10710](../papers/2208.10710.md) (2022) [1] Influence of entrance channel on production cross section of exotic actinides in multinucleon transfer reactions
+- [2207.13582](../papers/2207.13582.md) (2022) [1] Production of proton-rich nuclei in the vicinity of 100Sn via multinucleon transfer reactions
+- [2207.05253](../papers/2207.05253.md) (2022) [1] Deep insight into charge equilibration and the effects on producing neutron-rich isotopes around N = 126 in the multinuc...
+- [2206.09948](../papers/2206.09948.md) (2022) [2] Green's Function Knockout Formalism
+- [2205.03985](../papers/2205.03985.md) (2022) [2] The Big Bang Nucleosynthesis abundances of the light elements using improved thermonuclear reaction rates
+- [2204.11739](../papers/2204.11739.md) (2022) [2] Pairing enhancement in a two-neutron transfer process through the continuum
+- [2204.01187](../papers/2204.01187.md) (2022) [2] Ab Initio Nuclear Reaction Theory with Applications to Astrophysics
+- [2202.13146](../papers/2202.13146.md) (2022) [2] Effective field theory of pairing rotations
+- [2201.10077](../papers/2201.10077.md) (2022) [1] Rare Isotope Formation in Complete Fusion and Multinucleon Transfer Reactions in Collisions of 48Ca +248Cm around Coulom...
+- [2201.01513](../papers/2201.01513.md) (2022) [2] The structure of $^{36}$Ca under the Coulomb magnifying glass
+- [2201.00433](../papers/2201.00433.md) (2022) [2] Direct Nuclear Reactions
+- [2112.11544](../papers/2112.11544.md) (2021) [1] The Impact of Neutron Transfer Reactions on Heating and Cooling of Accreted Neutron Star Crusts
+- [2110.10975](../papers/2110.10975.md) (2021) [2] Analysis of two-proton transfer in the 40Ca(18O,20Ne)38Ar reaction at 270 MeV incident energy
+- [2110.10642](../papers/2110.10642.md) (2021) [2] Study of one-proton transfer reaction for the $^{18}$O + $^{48}$Ti system at 275 MeV
+- [2110.07254](../papers/2110.07254.md) (2021) [2] Neutron transfer in $^{9}$Be + $^{159}$Tb system
+- [2109.00674](../papers/2109.00674.md) (2021) [2] Reaction mechanism study for multinucleon transfer processes in collisions of spherical and deformed nuclei at energies ...
+- [2108.13598](../papers/2108.13598.md) (2021) [1] Production of neutron-rich heavy nuclei around N = 162 in multinucleon transfer reactions
+- [2108.02386](../papers/2108.02386.md) (2021) [2] Elastic $α$-$^{12}$C scattering at low energies with the resonant $2_2^+$ and $2_3^+$ states of $^{16}$O
+- [2106.16030](../papers/2106.16030.md) (2021) [2] Inclusive $α$ Production for $^{6}$Li+$^{51}$V System
+- [2103.05357](../papers/2103.05357.md) (2021) [2] Experimental study of intruder components in light neutron-rich nuclei via single-nucleon transfer reaction
+- [2101.05659](../papers/2101.05659.md) (2021) [1] Transfer reactions between odd-odd and even-even nuclei by using IBFFM
+- [2012.12553](../papers/2012.12553.md) (2020) [2] Quenching of single-particle strength from direct reactions with stable and rare-isotope beams
+- [2011.14659](../papers/2011.14659.md) (2020) [1] Alpha-induced inelastic scattering and alpha-transfer reactions in $^{12}$C and $^{16}$O within the Algebraic Cluster Mo...
+- [2011.14953](../papers/2011.14953.md) (2020) [2] Neutron tunneling: A new mechanism to power explosive phenomena in neutron stars, magnetars, and neutron star mergers
+- [2010.07617](../papers/2010.07617.md) (2020) [2] Sensitivity of transfer cross sections to the bound-state wave functions
+- [2010.06102](../papers/2010.06102.md) (2020) [2] Quantum entanglement in nuclear Cooper pair tunneling with $γ$-rays
+- [2007.13370](../papers/2007.13370.md) (2020) [1] Multi-step processes in heavy-ion induced single-nucleon transfer reactions
+- [2007.12629](../papers/2007.12629.md) (2020) [1] Two-neutron transfer reactions as a tool to study the interplay between shape coexistence and quantum phase transitions
+- [2006.14530](../papers/2006.14530.md) (2020) [2] Bayesian Analysis of the $^{70}$Zn$(d, ^3\!\text{He}) ^{69}$Cu Transfer Reaction
+- [2006.02260](../papers/2006.02260.md) (2020) [1] Production mechanism of neutron-deficient actinide isotopes in complete fusion reactions and multinucleon transfer react...
+- [2004.13588](../papers/2004.13588.md) (2020) [2] The Lagrange-mesh R-matrix method for inhomogenous equations
+- [2004.06346](../papers/2004.06346.md) (2020) [2] Scission configuration of $^{239}$U from yields and kinetic information of fission fragments
+- [2003.07786](../papers/2003.07786.md) (2020) [2] Quantal diffusion approach for multinucleon transfer processes in the $^{58,64}$Ni+$^{208}$Pb reactions: Toward the prod...
+- [2003.06144](../papers/2003.06144.md) (2020) [2] TDHF and a macroscopic aspect of low-energy nuclear reactions
+- [2003.05721](../papers/2003.05721.md) (2020) [1] Dispersion (asymptotic) theory of charged particle transfer reactions at low energies and nuclear astrophysics: II. the ...
+- [2003.06296](../papers/2003.06296.md) (2020) [1] Dispersion (asymptotic) theory of charged particle transfer reactions at low energies and nuclear astrophysics: I. the "...
+- [2001.08316](../papers/2001.08316.md) (2020) [1] Constraining the $^{22}$Ne($α$,$γ$)$^{26}$Mg and $^{22}$Ne($α$,n)$^{25}$Mg reaction rates using sub-Coulomb $α$-transfer...
+- [1912.03932](../papers/1912.03932.md) (2019) [2] An overview of the scientific contribution of Andrea Vitturi to Nuclear Physics (being an account of the recent TNP19 me...
+- [1909.13431](../papers/1909.13431.md) (2019) [1] To reach neutron-rich heavy and superheavy nuclei by multinucleon transfer reactions with radioactive isotopes
+- [1909.02311](../papers/1909.02311.md) (2019) [1] Transfer reactions with the Lagrange-mesh method
+- [1907.09761](../papers/1907.09761.md) (2019) [1] Selection of projectiles for producing trans-uranium nuclei in transfer reactions within an improved dinuclear system mo...
+- [1907.04581](../papers/1907.04581.md) (2019) [2] Microscopic studies of production cross sections in multinucleon transfer reaction $^{58}$Ni+$^{124}$Sn
+- [1905.12976](../papers/1905.12976.md) (2019) [2] Two-particle transfer processes as a signature of shape phase transition in Zirconium isotopes
+- [1905.13071](../papers/1905.13071.md) (2019) [2] Effects of an induced three-body force in the incident channel of (d,p) reactions
+- [1905.03664](../papers/1905.03664.md) (2019) [1] Characterization of vorticity in pygmy resonances and soft-dipole modes with two-nucleon transfer reactions
+- [1905.01339](../papers/1905.01339.md) (2019) [2] The Giant Pairing Vibration in Heavy Nuclei: Present Status and Future Studies
+- [1905.00103](../papers/1905.00103.md) (2019) [2] Point-Particle Catalysis
+- [1904.01347](../papers/1904.01347.md) (2019) [1] Two-neutron transfer reactions and quantum-chaos measure of nuclear spectra
+- [1904.00398](../papers/1904.00398.md) (2019) [1] Production of the exotic neutron-deficient isotopes near N, Z = 50 in multinucleon transfer reactions
+- [1902.03872](../papers/1902.03872.md) (2019) [2] Core-excitation effects in three-body breakup reactions studied using the Faddeev formalism
+- [1812.09152](../papers/1812.09152.md) (2018) [1] Neutron transfer reactions in halo effective field theory
+- [1812.08051](../papers/1812.08051.md) (2018) [2] Nucleon-nucleon correlations and the single-particle strength in atomic nuclei
+- [1812.05197](../papers/1812.05197.md) (2018) [1] Two-neutron transfer reactions and shape phase transitions in the microscopically-formulated interacting boson model
+- [1811.09175](../papers/1811.09175.md) (2018) [1] Asymptotic theory of charged particle transfer reactions at low energies and nuclear astrophysics
+- [1811.08845](../papers/1811.08845.md) (2018) [1] Neutron transfer reactions in accreting neutron stars
+- [1810.06129](../papers/1810.06129.md) (2018) [2] Uncertainty quantification due to optical potentials in models for (d,p) reactions
+- [1810.04751](../papers/1810.04751.md) (2018) [2] Non-local interactions in the $(d,p)$ surrogate method for $(n,γ)$ reactions
+- [1810.04025](../papers/1810.04025.md) (2018) [1] Analysis of multinucleon transfer reactions involving spherical and statically deformed nuclei using a Langevin-type app...
+- [1810.02663](../papers/1810.02663.md) (2018) [1] Advantages of the multinucleon transfer reactions based on 238U target for producing neutron-rich isotopes around N = 12...
+- [1809.11139](../papers/1809.11139.md) (2018) [2] Binding-energy independence of reduced single particle strengths derived from $(p,d)$ reactions
+- [1810.00053](../papers/1810.00053.md) (2018) [2] High-resolution (p,t) reaction measurements as spectroscopic tests of {\it ab-initio} theory in the mid $pf$-shell
+- [1809.08373](../papers/1809.08373.md) (2018) [1] Production of new neutron-rich heavy nuclei with $Z=56-80$ in the multinucleon transfer reactions of $^{136}$Xe+$^{198}$...
+- [1809.04980](../papers/1809.04980.md) (2018) [1] Investigation of spatial manifestation of $α$ clusters in $^{16}$O via $α$-transfer reactions
+- [1809.01775](../papers/1809.01775.md) (2018) [1] Production cross sections for exotic nuclei with multinucleon transfer reactions
+- [1808.09742](../papers/1808.09742.md) (2018) [2] Weak sensitivity of three-body ($d,p$) reactions to $np$ force models
+- [1806.00298](../papers/1806.00298.md) (2018) [2] Comment on "Sensitivity of ($d,p$) Reactions to High $n$-$p$ Momenta and the Consequences for Nuclear Spectroscopy Studi...
+- [1803.04704](../papers/1803.04704.md) (2018) [1] Gamow-Teller transitions and neutron-proton-pair transfer reactions
+- [1803.02958](../papers/1803.02958.md) (2018) [2] Three-body Faddeev equations in two-particle Alt-Grassberger-Sandhas form with Distorted-Wave-Born-approximation amplitu...
+- [1801.06096](../papers/1801.06096.md) (2018) [2] Constraining Transfer Cross Sections Using Bayes' Theorem
+- [1712.08822](../papers/1712.08822.md) (2017) [1] Neutron Transfer Reactions for Deformed Nuclei Using Sturmian Basis States
+- [1711.07540](../papers/1711.07540.md) (2017) [1] Post-prior equivalence for transfer reactions with complex potentials
+- [1707.05583](../papers/1707.05583.md) (2017) [2] Multinucleon transfer dynamics in heavy-ion collisions near Coulomb barrier energies
+- [1703.09289](../papers/1703.09289.md) (2017) [1] Core-excitation effects in ${}^{20}\mathrm{O}(d,p){}^{21}\mathrm{O}$ transfer reactions: Suppression or enhancement?
+- [1702.04954](../papers/1702.04954.md) (2017) [1] Influence of target deformation and deuteron breakup in (d,p) transfer reactions
+- [1702.04576](../papers/1702.04576.md) (2017) [2] ${}^{7}$Li($d$,$p$)${}^{8}$Li transfer reaction in the NCSM/RGM approach
+- [1702.03135](../papers/1702.03135.md) (2017) [2] Examination of the adiabatic approximation for $(d,p)$ reactions
+- [1702.01034](../papers/1702.01034.md) (2017) [2] Four-body calculation of ${}^2\mathrm{H}(d,p){}^3\mathrm{H}$ and ${}^2\mathrm{H}(d,n){}^3\mathrm{He}$ reactions above br...
+- [1612.08788](../papers/1612.08788.md) (2016) [1] Time-dependent mean field determination of the excitation energy in transfer reactions: application to the reaction $^{2...
+- [1612.00579](../papers/1612.00579.md) (2016) [1] Production of neutron-rich isotopes around N=126 in multinucleon transfer reactions
+- [1611.02489](../papers/1611.02489.md) (2016) [2] Calculation of three-body nuclear reactions with angular-momentum and parity-dependent optical potentials
+- [1610.04448](../papers/1610.04448.md) (2016) [1] Role of core excitation in (d,p) transfer reactions
+- [1609.07303](../papers/1609.07303.md) (2016) [2] Sensitivity of (d,p) reactions to high n-p momenta and the consequences for nuclear spectroscopy studies
+- [1609.06428](../papers/1609.06428.md) (2016) [2] Coupled-channels description of the 40Ca+58,64Ni transfer and fusion reactions
+- [1606.07564](../papers/1606.07564.md) (2016) [2] Dynamical effects in fusion with exotic nuclei
+- [1606.07341](../papers/1606.07341.md) (2016) [2] Transfer reaction code with nonlocal interactions
+- [1606.07344](../papers/1606.07344.md) (2016) [1] Examining the effect of nonlocality in $(d,n)$ transfer reactions
+- [1604.00094](../papers/1604.00094.md) (2016) [1] Effects of Nonlocality on Transfer Reactions
+- [1602.04404](../papers/1602.04404.md) (2016) [1] Deuteron-induced nucleon transfer reactions within an ab initio framework: First application to p-shell nuclei
+- [1601.03765](../papers/1601.03765.md) (2016) [2] Unified ab initio approaches to nuclear structure and reactions
+- [1601.01338](../papers/1601.01338.md) (2016) [1] Explicit inclusion of nonlocality in (d,p) transfer reactions

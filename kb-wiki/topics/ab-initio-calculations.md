@@ -1,0 +1,106 @@
+# Ab initio calculations
+
+**PhySH lineage:** Ab initio calculations
+
+**Papers:** 311 (showing first 100 of 311)
+
+- [2307.15156](../papers/2307.15156.md) (2023) [1] Ab initio calculations of neutrinoless $ββ$ decay refine neutrino mass limits
+- [2307.06416](../papers/2307.06416.md) (2023) [2] What is ab initio?
+- [2306.12597](../papers/2306.12597.md) (2023) [2] Nuclear structure and elastic scattering observables obtained consistently with different NN interactions
+- [2305.16058](../papers/2305.16058.md) (2023) [2] Equation of state of nuclear matter and neutron stars: Quark mean-field model versus relativistic mean-field model
+- [2304.13333](../papers/2304.13333.md) (2023) [2] Neutron-proton effective mass splitting in neutron-rich matter
+- [2304.03800](../papers/2304.03800.md) (2023) [2] Towards $\it{ab}$-$\it{initio}$ nuclear theory calculations of $δ_\mathrm{C}$
+- [2303.11022](../papers/2303.11022.md) (2023) [1] Investigation of isospin-symmetry-breaking in mirror energy difference and nuclear mass with ab initio calculations
+- [2302.07962](../papers/2302.07962.md) (2023) [2] \texttt{NuHamil}: A numerical code to generate nuclear two- and three-body matrix elements from chiral effective field t...
+- [2211.16262](../papers/2211.16262.md) (2022) [1] Normal ordering of three-nucleon interactions for ab initio calculations of heavy nuclei
+- [2211.07986](../papers/2211.07986.md) (2022) [2] Perturbed nuclear matter studied within Density Functional Theory with a finite number of particles
+- [2211.00395](../papers/2211.00395.md) (2022) [2] Efficient few-body calculations in finite volume
+- [2210.17488](../papers/2210.17488.md) (2022) [2] Wavefunction matching for solving quantum many-body problems
+- [2210.08438](../papers/2210.08438.md) (2022) [2] ARIEL experiments and theory
+- [2210.04632](../papers/2210.04632.md) (2022) [2] Uncertainty quantification in electromagnetic observables of nuclei
+- [2209.13170](../papers/2209.13170.md) (2022) [2] Local position-space two-nucleon potentials from leading to fourth order of chiral effective field theory
+- [2209.00722](../papers/2209.00722.md) (2022) [2] Proton distribution radii of $^{16-24}$O: signatures of new shell closures and neutron skin
+- [2208.03086](../papers/2208.03086.md) (2022) [2] QCD in the cores of neutron stars
+- [2207.01438](../papers/2207.01438.md) (2022) [2] Combining the in-medium similarity renormalization group with the density matrix renormalization group: Shell structure ...
+- [2205.13798](../papers/2205.13798.md) (2022) [2] Two-dimensional extrapolation procedure for ab initio study of nuclear size parameters and the properties of halo nucleu...
+- [2204.12971](../papers/2204.12971.md) (2022) [2] Ab initio studies of double Gamow-Teller transition and its correlation with neutrinoless double beta decay
+- [2204.11877](../papers/2204.11877.md) (2022) [2] Ab-initio QCD calculations impact the inference of the neutron-star-matter equation of state
+- [2204.09566](../papers/2204.09566.md) (2022) [1] Summit of the N=40 Island of Inversion: precision mass measurements and ab initio calculations of neutron-rich chromium ...
+- [2204.01187](../papers/2204.01187.md) (2022) [2] Ab Initio Nuclear Reaction Theory with Applications to Astrophysics
+- [2203.13513](../papers/2203.13513.md) (2022) [2] Zero- and finite-temperature electromagnetic strength distributions in closed- and open-shell nuclei from first principl...
+- [2203.10141](../papers/2203.10141.md) (2022) [2] Mapping the $N = 40$ Island of Inversion: Precision Mass Measurements of Neutron-rich Fe Isotopes
+- [2203.05397](../papers/2203.05397.md) (2022) [2] Asymmetric Nuclear Matter and Neutron Star Properties in Relativistic ab initio Theory in the Full Dirac Space
+- [2202.11897](../papers/2202.11897.md) (2022) [2] Deep learning on nuclear mass and $α$ decay half-lives
+- [2202.11759](../papers/2202.11759.md) (2022) [2] Ab initio informed evaluation of the radiative capture of protons on $^7$Be
+- [2202.05035](../papers/2202.05035.md) (2022) [2] Isospin symmetry breaking in the charge radius difference of mirror nuclei
+- [2201.04578](../papers/2201.04578.md) (2022) [2] Theoretical Methods for Giant Resonances
+- [2201.01308](../papers/2201.01308.md) (2022) [2] The $^1$S$_0$ pairing gap in neutron matter
+- [2112.09595](../papers/2112.09595.md) (2021) [2] A Bayesian analysis of the properties of hybrid stars with the NJL model
+- [2112.01392](../papers/2112.01392.md) (2021) [2] Ab initio nuclear thermodynamics from lattice effective field theory
+- [2111.11360](../papers/2111.11360.md) (2021) [2] Partial muon capture rates in $A=3$ and $A=6$ nuclei with chiral effective field theory
+- [2111.01461](../papers/2111.01461.md) (2021) [1] Multi-reference many-body perturbation theory for nuclei III -- Ab initio calculations at second order in PGCM-PT
+- [2110.15737](../papers/2110.15737.md) (2021) [2] Multi-reference many-body perturbation theory for nuclei I -- Novel PGCM-PT formalism
+- [2110.11321](../papers/2110.11321.md) (2021) [2] Nuclear medium effects in neutrino- and antineutrino-nucleus scattering
+- [2109.13462](../papers/2109.13462.md) (2021) [2] Beta Decay in Medium-Mass Nuclei with the In-Medium Similarity Renormalization Group
+- [2109.13550](../papers/2109.13550.md) (2021) [2] Multinucleon excitations in neutrino-nucleus scattering: connecting different microscopic models for the correlations
+- [2109.07312](../papers/2109.07312.md) (2021) [2] First Measurement of the $B(E2; 3/2^- \rightarrow 1/2^-)$ Transition Strength in $^7$Be: Testing Ab Initio Predictions f...
+- [2109.00193](../papers/2109.00193.md) (2021) [2] Ab initio structure factors for spin-dependent dark matter direct detection
+- [2108.11805](../papers/2108.11805.md) (2021) [2] Neutrinoless double-beta decay from an effective field theory for heavy nuclei
+- [2108.03771](../papers/2108.03771.md) (2021) [2] A brief account of Steven Weinberg's legacy in ab initio many-body theory
+- [2108.01232](../papers/2108.01232.md) (2021) [2] Exposing minimal composition of Kohn-Sham theory and its extendability
+- [2107.14436](../papers/2107.14436.md) (2021) [2] Toward ab initio charge symmetry breaking in nuclear energy density functionals
+- [2107.10212](../papers/2107.10212.md) (2021) [1] Nuclear ab initio calculations of 6He $β$-decay for beyond the Standard Model studies
+- [2107.10389](../papers/2107.10389.md) (2021) [2] Impact of clustering on the $^8$Li $β$ decay and recoil form factors
+- [2106.12128](../papers/2106.12128.md) (2021) [2] Quadrupole moments and proton-neutron structure in p-shell mirror nuclei
+- [2105.03471](../papers/2105.03471.md) (2021) [2] Application of efficient generator-coordinate subspace-selection algorithm to neutrinoless double-$β$ decay
+- [2104.07808](../papers/2104.07808.md) (2021) [2] The X17 boson and the $^3$H$(p,e^+ e^-)^4$He and $^3$He$(n,e^+ e^-)^4$He processes: a theoretical analysis
+- [2104.04688](../papers/2104.04688.md) (2021) [1] Converged ab initio calculations of heavy nuclei
+- [2103.14480](../papers/2103.14480.md) (2021) [1] Nuclear energy density functionals grounded in ab initio calculations
+- [2103.14544](../papers/2103.14544.md) (2021) [2] Importance truncation in non-perturbative many-body techniques
+- [2103.06365](../papers/2103.06365.md) (2021) [1] Ab initio calculations of electric dipole moments of light nuclei
+- [2102.10889](../papers/2102.10889.md) (2021) [2] ADG: Automated generation and evaluation of many-body diagrams III. Bogoliubov in-medium similarity renormalization grou...
+- [2102.10120](../papers/2102.10120.md) (2021) [2] In-medium $k$-body reduction of $n$-body operators
+- [2101.03901](../papers/2101.03901.md) (2021) [2] Nuclear reactions in artificial traps
+- [2009.11505](../papers/2009.11505.md) (2020) [2] Proximity effect of pair correlation in the inner crust of neutron stars
+- [2009.09001](../papers/2009.09001.md) (2020) [2] SU(3)-guided Realistic Nucleon-nucleon Interactions for Large-scale Calculations
+- [2009.01829](../papers/2009.01829.md) (2020) [2] Moving away from singly-magic nuclei with Gorkov Green's function theory
+- [2008.13249](../papers/2008.13249.md) (2020) [2] Advances in modeling nuclear matrix elements of neutrinoless double beta decay
+- [2007.11913](../papers/2007.11913.md) (2020) [2] Coupled-cluster computations of optical potential for medium-mass nuclei
+- [2006.02712](../papers/2006.02712.md) (2020) [2] Examining the $N$ = 28 shell closure through high-precision mass measurements of $^{46-48}$Ar
+- [2005.07837](../papers/2005.07837.md) (2020) [2] Role of chiral two-body currents in $^6$Li magnetic properties in light of a new precision measurement with the relative...
+- [2005.01621](../papers/2005.01621.md) (2020) [2] Extracing the number of short-range corerlated nucleon pairs from inclusive electron scattering data
+- [2004.13575](../papers/2004.13575.md) (2020) [1] Ab initio calculations of low-energy nuclear scattering using confining potential traps
+- [2002.04814](../papers/2002.04814.md) (2020) [2] Testing ab initio nuclear structure in neutron-rich nuclei: lifetime measurements of second 2+ states in 16C and 20O
+- [2002.02626](../papers/2002.02626.md) (2020) [1] Comparing event generator predictions and ab-initio calculations of $ν$-$^{12}$C neutral current quasi-elastic scatterin...
+- [2002.02724](../papers/2002.02724.md) (2020) [2] Bogoliubov many-body perturbation theory under constraint
+- [2002.02214](../papers/2002.02214.md) (2020) [2] Ab initio computation of charge densities for Sn and Xe isotopes
+- [2001.07230](../papers/2001.07230.md) (2020) [2] Probing few-body nuclear dynamics via 3H and 3He (e,e'p)pn cross-section measurements
+- [2001.05615](../papers/2001.05615.md) (2020) [2] Can chiral EFT give us satisfaction?
+- [2001.01689](../papers/2001.01689.md) (2020) [1] Ab initio calculations of reactor antineutrino fluxes with exact lepton wave functions
+- [1912.05978](../papers/1912.05978.md) (2019) [2] $^{78}$Ni revealed as a doubly magic stronghold against nuclear deformation
+- [1912.05105](../papers/1912.05105.md) (2019) [2] Ab initio nuclear thermodynamics
+- [1912.02884](../papers/1912.02884.md) (2019) [2] Electromagnetic properties of $^{21}$O for benchmarking nuclear Hamiltonians
+- [1911.09637](../papers/1911.09637.md) (2019) [2] NN scattering and nuclear uncertainties
+- [1911.09020](../papers/1911.09020.md) (2019) [2] A dispersive optical model analysis of $^{208}$Pb generating a neutron-skin prediction beyond the mean field
+- [1909.13417](../papers/1909.13417.md) (2019) [2] Robust ab initio predictions for nuclear rotational structure in the Be isotopes
+- [1909.08446](../papers/1909.08446.md) (2019) [2] Eigenvector Continuation as an Efficient and Accurate Emulator for Uncertainty Quantification
+- [1908.11842](../papers/1908.11842.md) (2019) [1] Constraints on Skyrme Equations of State from Doubly Magic Nuclei, Ab-Initio Calculations of Low-Density Neutron Matter,...
+- [1908.08090](../papers/1908.08090.md) (2019) [1] Skyrme Functional with Tensor Terms from ab initio Calculations: Results for the Spin-Orbit Splittings
+- [1908.05424](../papers/1908.05424.md) (2019) [2] Ab Initio Treatment of Collective Correlations and the Neutrinoless Double Beta Decay of $^{48}$Ca
+- [1908.00765](../papers/1908.00765.md) (2019) [2] Normal-ordered $k$-body approximation in particle-number-breaking theories
+- [1907.11254](../papers/1907.11254.md) (2019) [2] A renormalized approach to neutrinoless double-beta decay
+- [1907.07259](../papers/1907.07259.md) (2019) [2] Isospin composition of the high-momentum fluctuations in nuclei from asymptotic momentum distributions
+- [1906.10539](../papers/1906.10539.md) (2019) [2] Ab initio Gamow in-medium similarity renormalization group with resonance and continuum
+- [1906.06662](../papers/1906.06662.md) (2019) [2] Comparison between Variational Monte Carlo and Shell Model Calculations of Neutrinoless Double Beta Decay Matrix Element...
+- [1906.03703](../papers/1906.03703.md) (2019) [1] Ab initio calculations of p-shell nuclei up to N2LO in chiral Effective Field Theory
+- [1905.10475](../papers/1905.10475.md) (2019) [2] Ab initio limits of atomic nuclei
+- [1904.08290](../papers/1904.08290.md) (2019) [2] Initial conditions of bulk matter in ultrarelativistic nuclear collisions
+- [1904.04977](../papers/1904.04977.md) (2019) [2] Towards an ab initio covariant density functional for nuclear structure
+- [1904.00924](../papers/1904.00924.md) (2019) [2] ${\it Ab~initio}$ constraints on thermal effects of the nuclear equation of state
+- [1903.12587](../papers/1903.12587.md) (2019) [2] Ab initio short-range-correlation scaling factors from light to medium-mass nuclei
+- [1903.09121](../papers/1903.09121.md) (2019) [2] Evidence for quark-matter cores in massive neutron stars
+- [1903.05938](../papers/1903.05938.md) (2019) [2] Symmetry energy at supra-saturation densities via the Gravitational Waves from GW170817
+- [1903.01280](../papers/1903.01280.md) (2019) [2] Note on neutron star equation of state in the light of GW170817
+- [1902.10553](../papers/1902.10553.md) (2019) [1] Ab initio calculations of 5H resonant states
+- [1901.01741](../papers/1901.01741.md) (2019) [2] Observation of excited states in $^{20}$Mg sheds light on nuclear forces and shell evolution
+- [1812.10928](../papers/1812.10928.md) (2018) [2] Essential elements for nuclear binding

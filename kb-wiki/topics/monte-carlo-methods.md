@@ -1,0 +1,93 @@
+# Monte Carlo methods
+
+**PhySH lineage:** Monte Carlo methods
+
+**Narrower:** [Metropolis algorithm](metropolis-algorithm.md), [Path-integral Monte Carlo](path-integral-monte-carlo.md), [Entropic sampling methods](entropic-sampling-methods.md), [Heatbath algorithm](heatbath-algorithm.md), [Simulated annealing](simulated-annealing.md), [Langevin algorithm](langevin-algorithm.md), [Quantum Monte Carlo](quantum-monte-carlo.md), [Hybrid Monte Carlo algorithm](hybrid-monte-carlo-algorithm.md)
+
+**Papers:** 85
+
+- [2306.13579](../papers/2306.13579.md) (2023) [2] Maximally local two-nucleon interactions at N$^3$LO in $Δ$-less chiral effective field theory
+- [2305.08831](../papers/2305.08831.md) (2023) [2] Neural-network quantum states for ultra-cold Fermi gases
+- [2305.01685](../papers/2305.01685.md) (2023) [2] Baryons, multi-hadron systems, and composite dark matter in non-relativistic QCD
+- [2207.11179](../papers/2207.11179.md) (2022) [2] Ab initio calculation of the $β$ decay spectrum of $^6$He
+- [2207.07246](../papers/2207.07246.md) (2022) [2] Path Integral Quantum Monte Carlo Method for Light Nuclei
+- [2205.02252](../papers/2205.02252.md) (2022) [2] Parton physics of the large-$N_c$ mesons
+- [2203.16167](../papers/2203.16167.md) (2022) [2] Quantum Monte Carlo in Configuration Space with Three-Nucleon Forces
+- [2112.08146](../papers/2112.08146.md) (2021) [2] Neutrinoless double-beta decay: combining quantum Monte Carlo and the nuclear shell model with the generalized contact f...
+- [2108.10452](../papers/2108.10452.md) (2021) [1] Chiral Effective Field Theory's Impact on Advancing Quantum Monte Carlo Methods
+- [2103.09824](../papers/2103.09824.md) (2021) [2] Implications of Lithium to Oxygen AMS-02 spectra on our understanding of cosmic-ray diffusion
+- [2102.07497](../papers/2102.07497.md) (2021) [2] A new mass model for nuclear astrophysics: crossing 200 keV accuracy
+- [2010.12703](../papers/2010.12703.md) (2020) [2] Machine learning-based inversion of nuclear responses
+- [2008.08623](../papers/2008.08623.md) (2020) [2] Charge Conservation and Higher Moments of Charge Fluctuations
+- [2007.03802](../papers/2007.03802.md) (2020) [2] Correlated Energy Uncertainties in Reaction Rate Calculations
+- [2003.07710](../papers/2003.07710.md) (2020) [2] Ab initio study of $\boldsymbol{(ν_\ell,\ell^-)}$ and $\boldsymbol{(\overlineν_\ell,\ell^+)}$ inclusive scattering in $^...
+- [2001.01374](../papers/2001.01374.md) (2020) [2] Atomic nuclei from quantum Monte Carlo calculations with chiral EFT interactions
+- [1912.11365](../papers/1912.11365.md) (2019) [2] Impact of statistical uncertainties on the composition of the outer crust of a neutron star
+- [1908.04288](../papers/1908.04288.md) (2019) [2] Clustering of Four-Component Unitary Fermions
+- [1906.01046](../papers/1906.01046.md) (2019) [2] Adiabatic projection method with Euclidean time subspace projection
+- [1903.08078](../papers/1903.08078.md) (2019) [1] Muon capture in nuclei: an ab initio approach based on quantum Monte Carlo methods
+- [1901.04868](../papers/1901.04868.md) (2019) [1] Quantum Monte Carlo Methods in Nuclear Physics: Recent Advances
+- [1811.09883](../papers/1811.09883.md) (2018) [2] Comparing a few distributions of transverse momenta in high energy collisions
+- [1811.01843](../papers/1811.01843.md) (2018) [2] Quantum Monte Carlo calculations of dark matter scattering off light nuclei
+- [1805.00125](../papers/1805.00125.md) (2018) [2] Spin Polarized Non-Relativistic Fermions in 1+1 Dimensions
+- [1802.08932](../papers/1802.08932.md) (2018) [2] Auxiliary field diffusion Monte Carlo calculations of light and medium-mass nuclei with local chiral interactions
+- [1705.10612](../papers/1705.10612.md) (2017) [2] Correlated Uncertainties in Monte Carlo Reaction Rate Calculations
+- [1607.01870](../papers/1607.01870.md) (2016) [1] Auxiliary-field quantum Monte Carlo methods in nuclei
+- [1511.09361](../papers/1511.09361.md) (2015) [2] Ground state of the two-dimensional attractive Fermi gas: essential properties from few- to many-body
+- [1509.00451](../papers/1509.00451.md) (2015) [2] Ab initio calculation of the electromagnetic and neutral-weak response functions of 4He and 12C
+- [1506.05458](../papers/1506.05458.md) (2015) [2] Unitary fermions and Luscher's formula on a crystal
+- [1501.04596](../papers/1501.04596.md) (2015) [2] Non-Global Logarithms, Factorization, and the Soft Substructure of Jets
+- [1412.3081](../papers/1412.3081.md) (2014) [1] Quantum Monte Carlo methods for nuclear physics
+- [1411.6347](../papers/1411.6347.md) (2014) [2] Universality in molecular halo clusters
+- [1406.6109](../papers/1406.6109.md) (2014) [2] Pairing and superfluidity of nucleons in neutron stars
+- [1406.2787](../papers/1406.2787.md) (2014) [2] Quantum Monte Carlo Calculations of Light Nuclei Using Chiral Potentials
+- [1402.3585](../papers/1402.3585.md) (2014) [2] Stabilizing Canonical-Ensemble Calculations in the Auxiliary-Field Monte Carlo Method
+- [1402.2393](../papers/1402.2393.md) (2014) [2] Stochastic quantum dynamics beyond mean-field
+- [1311.4966](../papers/1311.4966.md) (2013) [2] Effective Field Theory for Lattice Nuclei
+- [1304.4900](../papers/1304.4900.md) (2013) [2] Fermion Bag Approach to Fermion Sign Problems
+- [1212.1105](../papers/1212.1105.md) (2012) [2] Electromagnetic structure of A=2 and 3 nuclei in chiral effective field theory
+- [1210.6659](../papers/1210.6659.md) (2012) [2] Quantum Monte Carlo approaches to nuclear and atomic physics
+- [1209.5638](../papers/1209.5638.md) (2012) [2] Dynamical Structure Factors in Quantum Many-Body Systems from Quantum Monte Carlo Calculations
+- [1206.0036](../papers/1206.0036.md) (2012) [2] Real-Space Imaginary-Time Propagators for Non-Local Nucleon-Nucleon Potentials
+- [0911.3907](../papers/0911.3907.md) (2009) [2] Low-density neutron matter
+- [0901.3148](../papers/0901.3148.md) (2009) [2] Heavy-Light Fermion Mixtures at Unitarity
+- [0711.1500](../papers/0711.1500.md) (2007) [2] Quantum Monte Carlo Calculations of Light Nuclei
+- [0710.4103](../papers/0710.4103.md) (2007) [2] Path Integrals in Lattice Quantum Chromodynamics
+- [0704.1774](../papers/0704.1774.md) (2007) [2] Auxiliary Field Diffusion Monte Carlo calculation of nuclei with A<40 with tensor interactions
+- [2310.18756](../papers/2310.18756.md) (0000) [2] 2310.18756
+- [2402.06602](../papers/2402.06602.md) (0000) [1] 2402.06602
+- [2403.00287](../papers/2403.00287.md) (0000) [2] 2403.00287
+- [2405.04203](../papers/2405.04203.md) (0000) [2] 2405.04203
+- [2405.18464](../papers/2405.18464.md) (0000) [2] 2405.18464
+- [2407.04744](../papers/2407.04744.md) (0000) [1] 2407.04744
+- [2502.03680](../papers/2502.03680.md) (0000) [2] 2502.03680
+- [2503.20699](../papers/2503.20699.md) (0000) [2] 2503.20699
+- [2503.23840](../papers/2503.23840.md) (0000) [2] 2503.23840
+- [2506.02313](../papers/2506.02313.md) (0000) [2] 2506.02313
+- [2510.24875](../papers/2510.24875.md) (0000) [2] 2510.24875
+- [2511.19209](../papers/2511.19209.md) (0000) [2] 2511.19209
+- [2511.20599](../papers/2511.20599.md) (0000) [2] 2511.20599
+- [2602.13826](../papers/2602.13826.md) (0000) [2] 2602.13826
+- [2602.18561](../papers/2602.18561.md) (0000) [2] 2602.18561
+- [2602.22515](../papers/2602.22515.md) (0000) [2] 2602.22515
+- [cond-mat/9804290](../papers/cond-mat/9804290.md) (0000) [2] cond-mat/9804290
+- [hep-ph/0101186](../papers/hep-ph/0101186.md) (0000) [1] hep-ph/0101186
+- [nucl-th/0003015](../papers/nucl-th/0003015.md) (0000) [1] nucl-th/0003015
+- [nucl-th/0009005](../papers/nucl-th/0009005.md) (0000) [1] nucl-th/0009005
+- [nucl-th/0106047](../papers/nucl-th/0106047.md) (0000) [2] nucl-th/0106047
+- [nucl-th/0308020](../papers/nucl-th/0308020.md) (0000) [2] nucl-th/0308020
+- [nucl-th/0403069](../papers/nucl-th/0403069.md) (0000) [2] nucl-th/0403069
+- [nucl-th/0508016](../papers/nucl-th/0508016.md) (0000) [2] nucl-th/0508016
+- [nucl-th/0508048](../papers/nucl-th/0508048.md) (0000) [2] nucl-th/0508048
+- [nucl-th/0604069](../papers/nucl-th/0604069.md) (0000) [2] nucl-th/0604069
+- [nucl-th/0605033](../papers/nucl-th/0605033.md) (0000) [1] nucl-th/0605033
+- [nucl-th/9210014](../papers/nucl-th/9210014.md) (0000) [1] nucl-th/9210014
+- [nucl-th/9305002](../papers/nucl-th/9305002.md) (0000) [2] nucl-th/9305002
+- [nucl-th/9405012](../papers/nucl-th/9405012.md) (0000) [2] nucl-th/9405012
+- [nucl-th/9504027](../papers/nucl-th/9504027.md) (0000) [2] nucl-th/9504027
+- [nucl-th/9509038](../papers/nucl-th/9509038.md) (0000) [1] nucl-th/9509038
+- [nucl-th/9510022](../papers/nucl-th/9510022.md) (0000) [2] nucl-th/9510022
+- [nucl-th/9602006](../papers/nucl-th/9602006.md) (0000) [1] nucl-th/9602006
+- [nucl-th/9812031](../papers/nucl-th/9812031.md) (0000) [1] nucl-th/9812031
+- [nucl-th/9907116](../papers/nucl-th/9907116.md) (0000) [2] nucl-th/9907116
+- [nucl-th/9910038](../papers/nucl-th/9910038.md) (0000) [2] nucl-th/9910038

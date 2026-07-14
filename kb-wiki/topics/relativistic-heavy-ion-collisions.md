@@ -1,0 +1,108 @@
+# Relativistic heavy-ion collisions
+
+**PhySH lineage:** Relativistic heavy-ion collisions
+
+**Narrower:** [Jet quenching](jet-quenching.md), [Photon, lepton & quark production](photon-lepton-quark-production.md), [Collective flow](collective-flow.md), [Transport in heavy-ion collisions](transport-in-heavy-ion-collisions.md), [Jets & heavy flavor physics](jets-heavy-flavor-physics.md), [Particle correlations & fluctuations](particle-correlations-fluctuations.md), [Quark-gluon plasma](quark-gluon-plasma.md), [Particle & resonance production](particle-resonance-production.md), [Hard scattering](hard-scattering.md), [Charged-particle multiplicity](charged-particle-multiplicity.md), [QCD phase transitions](qcd-phase-transitions.md)
+
+**Papers:** 1969 (showing first 100 of 1969)
+
+- [2307.06502](../papers/2307.06502.md) (2023) [1] $Ω^-$ production as a probe of equation of state of dense matter near the QCD phase transition in relativistic heavy-ion...
+- [2307.08498](../papers/2307.08498.md) (2023) [2] Illuminating early-stage dynamics of heavy-ion collisions through photons at RHIC BES energies
+- [2306.15976](../papers/2306.15976.md) (2023) [2] A method for probing the formation of quark matter
+- [2306.16005](../papers/2306.16005.md) (2023) [2] Phase diagram determination at fivefold nuclear compression
+- [2306.13742](../papers/2306.13742.md) (2023) [2] Linear Boltzmann transport for jet propagation in the quark-gluon plasma: Inelastic processes and jet modification
+- [2306.10596](../papers/2306.10596.md) (2023) [2] Effect of finite volume on thermodynamics of quark-hadron matter
+- [2306.10307](../papers/2306.10307.md) (2023) [1] Polarized Photons from the Early Stages of Relativistic Heavy-Ion Collisions
+- [2306.09494](../papers/2306.09494.md) (2023) [2] The paradox of coherent photoproduction in incoherent interactions
+- [2306.09514](../papers/2306.09514.md) (2023) [1] Open charm phenomenology with a multi-stage approach to relativistic heavy-ion collisions
+- [2306.07704](../papers/2306.07704.md) (2023) [1] Born-Infeld nonlinear electromagnetism in relativistic heavy ion collisions
+- [2306.04896](../papers/2306.04896.md) (2023) [2] The 3+1D initialization and evolution of the Glasma
+- [2306.02530](../papers/2306.02530.md) (2023) [2] Heavy quark drag and diffusion coefficients in the pre-hydrodynamic QCD plasma
+- [2305.17114](../papers/2305.17114.md) (2023) [2] Impact of initial fluctuations and nuclear deformations in isobar collisions
+- [2305.10371](../papers/2305.10371.md) (2023) [2] Baryon diffusion coefficient of the strongly interacting medium
+- [2305.03687](../papers/2305.03687.md) (2023) [2] Multi-charmed and singled charmed hadrons from coalescence: yields and ratios in different collision systems at LHC
+- [2305.00493](../papers/2305.00493.md) (2023) [2] Estimation of collision centrality in terms of the number of participating nucleons in heavy-ion collisions using deep l...
+- [2304.14658](../papers/2304.14658.md) (2023) [2] Conserved number fluctuations under global rotation in a hadron resonance gas model
+- [2304.12643](../papers/2304.12643.md) (2023) [2] An Augmented QCD Phase Portrait: Mapping Quark-Hadron Deconfinement for Hot, Dense, Rotating Matter under Magnetic Field
+- [2304.12711](../papers/2304.12711.md) (2023) [2] Random model of flow decorrelation
+- [2304.05190](../papers/2304.05190.md) (2023) [2] Thermodynamics of a rotating hadron resonance gas with van der Waals interaction
+- [2304.04181](../papers/2304.04181.md) (2023) [2] Spin alignment of vector mesons by glasma fields
+- [2304.02953](../papers/2304.02953.md) (2023) [2] B meson production in Pb+Pb at 5.02 ATeV at LHC: estimating the diffusion coefficient in the infinite mass limit
+- [2304.03241](../papers/2304.03241.md) (2023) [2] Glasma properties in small proper time expansion
+- [2304.02276](../papers/2304.02276.md) (2023) [2] Exact spin polarization of massive and massless particles in relativistic fluids at global equilibrium
+- [2304.00403](../papers/2304.00403.md) (2023) [2] On statistical fluctuations in collective flows
+- [2303.17417](../papers/2303.17417.md) (2023) [2] Cumulants from fluctuating width of rapidity distribution
+- [2303.16462](../papers/2303.16462.md) (2023) [2] Effect of Coriolis force on the shear viscosity of quark matter: A nonrelativistic description
+- [2303.13068](../papers/2303.13068.md) (2023) [2] Effects of magnetic field on the evolution of energy density fluctuations
+- [2303.12262](../papers/2303.12262.md) (2023) [1] Non-thermal distributions of charm and charmonium in relativistic heavy-ion collisions
+- [2303.12485](../papers/2303.12485.md) (2023) [2] Flavor hierarchy of parton energy loss in quark-gluon plasma from a Bayesian analysis
+- [2303.06655](../papers/2303.06655.md) (2023) [1] Single-Particle Spectra in Relativistic Heavy-Ion Collisions Within the Thermal Quantum Field Theory
+- [2303.03773](../papers/2303.03773.md) (2023) [2] Search for jet quenching effects on the plain jet mass in Pb+Pb collisions at the LHC with a multiphase transport model
+- [2303.02279](../papers/2303.02279.md) (2023) [1] Dynamical mechanisms for deuteron production at mid-rapidity in relativistic heavy-ion collisions from SIS to RHIC energ...
+- [2303.01587](../papers/2303.01587.md) (2023) [2] Functional Ideal Hydrodynamics incorporating Quantum-Field Theoretical Fluctuation
+- [2302.14184](../papers/2302.14184.md) (2023) [2] Bayesian calibration of viscous anisotropic hydrodynamic simulations of heavy-ion collisions
+- [2302.11511](../papers/2302.11511.md) (2023) [1] Recombination of $B_c$ mesons in ultra-relativistic heavy-ion collisions
+- [2302.10611](../papers/2302.10611.md) (2023) [2] Dissociation rates and recombination likelihood of bottomonium states in heavy-ion collisions at $\sqrt{s_{\rm NN}}$ = 5...
+- [2302.11065](../papers/2302.11065.md) (2023) [1] Probing the incompressibility of dense hadronic matter near QCD phase transition in relativistic heavy-ion collisions
+- [2302.08299](../papers/2302.08299.md) (2023) [2] Collective Excitation in High-Energy Nuclear Collisions -- In Memory of Professor Lianshou Liu
+- [2302.06179](../papers/2302.06179.md) (2023) [1] Bottom energy loss and non-prompt $J/ψ$ production in relativistic heavy ion collisions
+- [2302.03867](../papers/2302.03867.md) (2023) [1] Thermodynamic and hydrodynamic characteristics of interacting system formed in relativistic heavy ion collisions
+- [2302.03191](../papers/2302.03191.md) (2023) [2] Enhancement of dilepton production rate and electric conductivity around QCD critical point
+- [2301.12076](../papers/2301.12076.md) (2023) [2] Difference between signal and background of the chiral magnetic effect relative to spectator and participant planes in i...
+- [2301.07893](../papers/2301.07893.md) (2023) [1] Measuring deformed neutron skin with free spectator nucleons in relativistic heavy-ion collisions
+- [2301.08251](../papers/2301.08251.md) (2023) [1] Collision geometry effect on free spectator nucleons in relativistic heavy-ion collisions
+- [2301.07356](../papers/2301.07356.md) (2023) [1] Core-corona approach to describe hyperon global polarization in semi-central relativistic heavy-ion collisions
+- [2301.02846](../papers/2301.02846.md) (2023) [1] Simulations of momentum correlation functions of light (anti)nuclei in relativistic heavy-ion collisions at $\sqrt{s_{NN...
+- [2301.01408](../papers/2301.01408.md) (2023) [2] Challenges to the Good-Walker paradigm in coherent and incoherent photoproduction
+- [2301.00588](../papers/2301.00588.md) (2023) [2] Hydrodynamic model of heavy-ion collisions with low momentum components
+- [2212.09288](../papers/2212.09288.md) (2022) [2] Bose-Einstein Condensation and Dissipative Dynamics in a Relativistic Pion Gas
+- [2212.04087](../papers/2212.04087.md) (2022) [1] Revisiting the centrality definition and observable centrality dependence of relativistic heavy-ion collisions in PACIAE...
+- [2212.02451](../papers/2212.02451.md) (2022) [2] Metric anisotropies and nonequilibrium attractor for expanding plasma
+- [2211.16821](../papers/2211.16821.md) (2022) [1] Medium Response and Jet-Hadron Correlations in Relativistic Heavy-Ion Collisions
+- [2211.16265](../papers/2211.16265.md) (2022) [2] Quark-Hadron Transition and Entanglement
+- [2211.10676](../papers/2211.10676.md) (2022) [2] Open-quantum-systems approach to in-medium heavy quarkonium dynamics
+- [2211.04978](../papers/2211.04978.md) (2022) [1] Testing the phase transition parameters inside neutron stars with the production of protons and lambdas in relativistic ...
+- [2211.03968](../papers/2211.03968.md) (2022) [1] Electromagnetic fields in ultra-peripheral relativistic heavy-ion collisions
+- [2211.01896](../papers/2211.01896.md) (2022) [2] $X(3872)$, $X(4014)$, and their bottom partners at finite temperature
+- [2210.17125](../papers/2210.17125.md) (2022) [2] Probing fluctuations and correlations of strangeness by net-kaon cumulants in Au+Au collisions at $\sqrt{s_{NN}} = 7.7$ ...
+- [2210.12056](../papers/2210.12056.md) (2022) [2] The exploration of hot and dense nuclear matter: Introduction to relativistic heavy-ion physics
+- [2210.07334](../papers/2210.07334.md) (2022) [2] Light-nuclei production in heavy-ion collisions within a thermodynamical approach
+- [2210.03186](../papers/2210.03186.md) (2022) [1] Studying the impact of the nucleon size in relativistic heavy-ion collisions
+- [2210.00739](../papers/2210.00739.md) (2022) [2] From lattice to observables: Real and virtual experiments for exploring hot and dense QCD
+- [2209.13795](../papers/2209.13795.md) (2022) [2] Charmonium, $B_c$ and X(3872) Transport at the LHC
+- [2209.11996](../papers/2209.11996.md) (2022) [1] Anisotropic flows of charmonium in the relativistic heavy-ion collisions
+- [2209.06879](../papers/2209.06879.md) (2022) [2] Polarization in heavy ion collisions: a theoretical review
+- [2209.06166](../papers/2209.06166.md) (2022) [2] Investigating the role of partonic and hadronic dynamics in mass splitting of elliptic anisotropy in p-Pb collisions at ...
+- [2209.04143](../papers/2209.04143.md) (2022) [2] Interactions between heavy quarks and tilted QGP fireballs in 200 AGeV Au+Au collisions
+- [2209.04239](../papers/2209.04239.md) (2022) [2] Heavy-flavor meson and baryon production in high-energy nucleus-nucleus collisions
+- [2209.03689](../papers/2209.03689.md) (2022) [1] Spin polarization measurements in relativistic heavy-ion collisions
+- [2209.03106](../papers/2209.03106.md) (2022) [1] Free spectator nucleons in ultracentral relativistic heavy-ion collisions as a probe of neutron skin
+- [2208.14792](../papers/2208.14792.md) (2022) [2] Applicability of Hydrodynamics in Hadronic Phase of Heavy-Ion Collisions
+- [2208.14419](../papers/2208.14419.md) (2022) [2] Global constraint on the jet transport coefficient from single hadron, dihadron and $γ$-hadron spectra in high-energy he...
+- [2208.13440](../papers/2208.13440.md) (2022) [2] Dynamics of Hot QCD Matter -- Current Status and Developments
+- [2208.12750](../papers/2208.12750.md) (2022) [2] Rescattering effect on the measurement of K* spin alignment in heavy-ion collisions
+- [2208.09874](../papers/2208.09874.md) (2022) [2] Local equilibrium and Lambda polarization in high energy heavy ion collisions
+- [2208.09605](../papers/2208.09605.md) (2022) [2] Hadro-chemistry effects on charm decayed leptons in heavy-ion collisions
+- [2208.06149](../papers/2208.06149.md) (2022) [1] Constraints on neutron skin thickness and nuclear deformations using relativistic heavy-ion collisions from STAR
+- [2208.04368](../papers/2208.04368.md) (2022) [2] Hadronic $J/ψ$ Regeneration in Pb+Pb Collisions
+- [2208.01884](../papers/2208.01884.md) (2022) [2] Longitudinal spin polarization of $Λ-$hyperons in a thermal model
+- [2208.00468](../papers/2208.00468.md) (2022) [2] Effect of global momentum conservation on longitudinal flow decorrelation
+- [2208.00321](../papers/2208.00321.md) (2022) [2] Impact of Symmetry Energy on Sound Speed and Spinodal Decomposition in Dense Neutron-Rich Matter
+- [2207.14814](../papers/2207.14814.md) (2022) [2] Improved background subtraction and a fresh look at jet sub-structure in JEWEL
+- [2207.13534](../papers/2207.13534.md) (2022) [2] Bayesian Inference of the Specific Shear and Bulk Viscosities of the Quark-Gluon Plasma at Crossover from $ϕ$ and $Ω$ Ob...
+- [2207.13576](../papers/2207.13576.md) (2022) [2] Structure of $^{128,129,130}$Xe through multi-reference energy density functional calculations
+- [2207.12452](../papers/2207.12452.md) (2022) [1] Multi-Stage Heavy Quark Transport in Ultra-relativistic Heavy-ion Collisions
+- [2207.12532](../papers/2207.12532.md) (2022) [1] Unveiling the dynamics of nucleosynthesis in relativistic heavy-ion collisions
+- [2207.11736](../papers/2207.11736.md) (2022) [2] Dynamical development of proton cumulants and correlation functions in Au+Au collisions at $\sqrt{s_{NN}} = 7.7$ GeV fro...
+- [2207.10044](../papers/2207.10044.md) (2022) [2] CME -- Experimental Results and Interpretation
+- [2207.05310](../papers/2207.05310.md) (2022) [2] Second order hydrodynamics based on effective kinetic theory and electromagnetic signals from QGP
+- [2207.05595](../papers/2207.05595.md) (2022) [2] Energy Dependence of the Breit-Wheeler process in Heavy-Ion Collisions and its Application to Nuclear Charge Radius Meas...
+- [2207.04927](../papers/2207.04927.md) (2022) [1] Splitting of proton-antiproton directed flow in relativistic heavy-ion collisions
+- [2207.03563](../papers/2207.03563.md) (2022) [2] Principal Component Analysis of Azimuthal Flow in Intermediate-Energy Heavy-Ion Reactions
+- [2207.01111](../papers/2207.01111.md) (2022) [2] Generating Tensor Polarization from Shear Stress
+- [2206.10449](../papers/2206.10449.md) (2022) [2] Separating the impact of nuclear skin and nuclear deformation in high-energy isobar collisions
+- [2206.08218](../papers/2206.08218.md) (2022) [1] Influence of nuclear structure in relativistic heavy-ion collisions
+- [2205.15551](../papers/2205.15551.md) (2022) [2] Simulation of Lindblad equations for quarkonium in the quark-gluon plasma
+- [2205.15797](../papers/2205.15797.md) (2022) [1] Generalized Effective String Rope Model for the initial stages of Ultra-Relativistic Heavy Ion Collisions
+- [2205.14302](../papers/2205.14302.md) (2022) [1] Examination of background effects on light-nuclei yield ratio in relativistic heavy-ion collisions
+- [2205.14469](../papers/2205.14469.md) (2022) [2] The effects of the QCD critical point on the spectra and flow coefficients of hadrons

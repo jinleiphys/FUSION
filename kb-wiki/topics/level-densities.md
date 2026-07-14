@@ -1,0 +1,108 @@
+# Level densities
+
+**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Level densities
+
+**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+
+**Papers:** 150 (showing first 100 of 150)
+
+- [2307.14391](../papers/2307.14391.md) (2023) [2] Nuclear Reactions in Evolving Stars
+- [2307.13437](../papers/2307.13437.md) (2023) [2] Multi-step particle emission probabilities in superheavy nuclei at moderate excitation energies
+- [2305.03664](../papers/2305.03664.md) (2023) [1] Impact of level densities and $γ$-strength functions on $r$-process simulations
+- [2301.11013](../papers/2301.11013.md) (2023) [2] Comprehensive test of nuclear level density models
+- [2209.11480](../papers/2209.11480.md) (2022) [2] Stellar neutron capture reactions at low and high temperature
+- [2209.07820](../papers/2209.07820.md) (2022) [2] Variance minimisation on a quantum computer for nuclear structure
+- [2206.14246](../papers/2206.14246.md) (2022) [1] Microscopic-macroscopic level densities for low excitation energies
+- [2204.00402](../papers/2204.00402.md) (2022) [2] The innovative $^{52g}$Mn for PET imaging: production cross section modeling and dosimetric evaluation
+- [2203.14220](../papers/2203.14220.md) (2022) [1] Astrophysical reaction rates with realistic nuclear level densities
+- [2203.10141](../papers/2203.10141.md) (2022) [2] Mapping the $N = 40$ Island of Inversion: Precision Mass Measurements of Neutron-rich Fe Isotopes
+- [2201.12509](../papers/2201.12509.md) (2022) [2] Statistical Nuclear Spectroscopy with $q$-normal and bivariate $q$-normal distributions and $q$-Hermite polynomials
+- [2112.14253](../papers/2112.14253.md) (2021) [1] Nuclear level densities: from empirical models to microscopic methods
+- [2112.09563](../papers/2112.09563.md) (2021) [1] Nuclear level densities away from line of $β$-stability
+- [2111.14980](../papers/2111.14980.md) (2021) [2] Statistical Hauser-Feshbach model description of $(n,α)$ reaction cross sections for the weak s-process
+- [2109.01830](../papers/2109.01830.md) (2021) [1] Shell-structure and asymmetry effects in level densities
+- [2109.00332](../papers/2109.00332.md) (2021) [2] The intermediate neutron capture process II.Nuclear uncertainties
+- [2108.12484](../papers/2108.12484.md) (2021) [2] Energy dependent ratios of level-density parameters in superheavy nuclei
+- [2108.11222](../papers/2108.11222.md) (2021) [2] Role of quadrupole deformation and continuum effects in the "island of inversion'' nuclei $^{28,29,31}$F
+- [2107.13773](../papers/2107.13773.md) (2021) [1] New results on proton-induced reactions on Vanadium for $^{47}$Sc production and the impact of level densities on theore...
+- [2106.09088](../papers/2106.09088.md) (2021) [1] Level Densities from 0-30 MeV
+- [2105.07249](../papers/2105.07249.md) (2021) [2] Measurements of $^{160}$Dy($p,γ$) at energies relevant for astrophysical $γ$ process
+- [2104.02693](../papers/2104.02693.md) (2021) [2] Spin/Parity Dependent Level Density
+- [2103.07129](../papers/2103.07129.md) (2021) [2] Systematics of semi-microscopic proton-nucleus optical potential at low energies relevant to nuclear astrophysics
+- [2011.12736](../papers/2011.12736.md) (2020) [2] Shell-model based study of the direct capture in neutron-rich nuclei
+- [2010.01698](../papers/2010.01698.md) (2020) [2] Propagation of Hauser-Feshbach uncertainty estimates to r-process nucleosynthesis: Benchmark of statistical property mod...
+- [2008.09745](../papers/2008.09745.md) (2020) [1] Microscopic model for the collective enhancement of nuclear level densities
+- [2005.09988](../papers/2005.09988.md) (2020) [2] Correlation studies of fission fragment neutron multiplicities
+- [2005.08685](../papers/2005.08685.md) (2020) [2] Level-density parameters in superheavy nuclei
+- [1912.08973](../papers/1912.08973.md) (2019) [1] Microscopic calculations of nuclear level densities with the Lanczos method
+- [1909.09660](../papers/1909.09660.md) (2019) [1] Constraining level densities through quantitative correlations with cross-section data
+- [1907.09764](../papers/1907.09764.md) (2019) [2] Trees and Islands -- Machine learning approach to nuclear physics
+- [1907.09770](../papers/1907.09770.md) (2019) [2] Ignatyuk damping factor: A semiclassical formula
+- [1905.13461](../papers/1905.13461.md) (2019) [1] Nuclear level densities and gamma-ray strength functions in samarium isotopes
+- [1905.09194](../papers/1905.09194.md) (2019) [1] Constraining level densities using spectral data
+- [1903.11159](../papers/1903.11159.md) (2019) [2] Electric and magnetic dipole modes in high-resolution inelastic proton scattering at $0^\circ$
+- [1812.09208](../papers/1812.09208.md) (2018) [2] Energy dependence of fission-fragment neutron multiplicity in $^{235}\textrm{U}(n,f)$
+- [1811.02283](../papers/1811.02283.md) (2018) [2] Microscopic treatment of energy partition in fission
+- [1810.02527](../papers/1810.02527.md) (2018) [2] Cross sections of $α$-induced reactions slightly below doubly-magic $^{40}$Ca from the statistical model
+- [1807.05156](../papers/1807.05156.md) (2018) [2] Impact of alternative transmission coefficient parameterizations on Hauser-Feshbach theory
+- [1804.01617](../papers/1804.01617.md) (2018) [2] Statistical theory of deformation distributions in nuclear spectra
+- [1712.04999](../papers/1712.04999.md) (2017) [2] Experimental signals for broken axial symmetry in excited heavy nuclei from the valley of stability
+- [1710.02885](../papers/1710.02885.md) (2017) [2] Level density of the $sd$-nuclei $-$ statistical shell-model predictions
+- [1710.00752](../papers/1710.00752.md) (2017) [1] Constant temperature description of the nuclear level densities
+- [1710.00107](../papers/1710.00107.md) (2017) [2] Correlated Prompt Fission Data in Transport Simulations
+- [1709.10403](../papers/1709.10403.md) (2017) [2] Semiclassical catastrophe theory of simple bifurcations
+- [1609.00937](../papers/1609.00937.md) (2016) [2] Gamma strength function and level density of $^{208}$Pb from forward-angle proton scattering at 295 MeV
+- [1607.06103](../papers/1607.06103.md) (2016) [2] Nuclear shape transitions, level density, and underlying interactions
+- [1606.02575](../papers/1606.02575.md) (2016) [2] Landau theory of nuclear level density and its application in description of nuclear level density in the region of disc...
+- [1605.04522](../papers/1605.04522.md) (2016) [2] Thermal fission rates with temperature dependent fission barriers
+- [1601.00107](../papers/1601.00107.md) (2016) [1] The shell model Monte Carlo approach to level densities: recent developments and perspectives
+- [1601.00118](../papers/1601.00118.md) (2016) [1] Microsopic nuclear level densities by the shell model Monte Carlo method
+- [1512.03773](../papers/1512.03773.md) (2015) [1] Benchmarking mean-field approximations to level densities
+- [1511.06840](../papers/1511.06840.md) (2015) [2] Stochastic Estimation of Nuclear Level Density in the Nuclear Shell Model: An Application to Parity-Dependent Level Dens...
+- [1510.04385](../papers/1510.04385.md) (2015) [2] Pairing reentrance in warm rotating $^{104}$Pd nucleus
+- [1505.02076](../papers/1505.02076.md) (2015) [2] Studying the entropy excess and entropy excess ratio in (105,106,107)Pd within BCS model
+- [1503.06011](../papers/1503.06011.md) (2015) [2] Reappraisal of the limit on the variation in $α$ implied by Oklo
+- [1501.01568](../papers/1501.01568.md) (2015) [2] Predicting the production of neutron rich heavy nuclei in multi-nucleon transfer reactions using GRAZING-F
+- [1412.6990](../papers/1412.6990.md) (2014) [2] Quantification of nuclear uncertainties in nucleosynthesis of elements beyond Iron
+- [1411.2403](../papers/1411.2403.md) (2014) [2] Semiclassical treatment of symmetry breaking and bifurcations in a non-integrable potential
+- [1408.6905](../papers/1408.6905.md) (2014) [2] Thermal pairing and giant dipole resonance in highly excited nuclei
+- [1408.5985](../papers/1408.5985.md) (2014) [1] Shell-gap reduced level densities in $^{89,90}$Y
+- [1408.6173](../papers/1408.6173.md) (2014) [1] Level densities and thermodynamical properties of Pt and Au isotopes
+- [1406.2642](../papers/1406.2642.md) (2014) [2] Observation of a first-order pairing phase transition in atomic nuclei
+- [1403.7652](../papers/1403.7652.md) (2014) [1] Fine structure of the isovector giant dipole resonance in 208Pb: Characteristic scales and level densities
+- [1401.4729](../papers/1401.4729.md) (2014) [1] Combinatorial level densities by the real-time method
+- [1401.0236](../papers/1401.0236.md) (2014) [1] Recent Advances in the Microscopic Calculations of Level Densities by the Shell Model Monte Carlo Method
+- [1312.6787](../papers/1312.6787.md) (2013) [2] Collectivity in Heavy Nuclei in the Shell Model Monte Carlo Approach
+- [1307.0400](../papers/1307.0400.md) (2013) [1] Nuclear Level Densities at High Excitation Energies and for Large Particle Numbers
+- [1306.6241](../papers/1306.6241.md) (2013) [2] Nuclear Level Density within Extended Superfluid Model with Collective State Enhancement
+- [1305.5605](../papers/1305.5605.md) (2013) [1] Level Densities of Heavy Nuclei by the Shell Model Monte Carlo Method
+- [1305.0250](../papers/1305.0250.md) (2013) [1] Level densities of nickel isotopes: microscopic theory versus experiment
+- [1304.7258](../papers/1304.7258.md) (2013) [1] Direct microscopic calculations of nuclear level densities in the shell model Monte Carlo approach
+- [1302.3775](../papers/1302.3775.md) (2013) [2] Rotational constants of multi-phonon bands in an effective theory for deformed nuclei
+- [1301.1461](../papers/1301.1461.md) (2013) [2] Evolution of Surface Deformations of Weakly-Bound Nuclei in the Continuum
+- [1212.0628](../papers/1212.0628.md) (2012) [2] Databases and tools for nuclear astrophysics applications BRUSsels Nuclear LIBrary (BRUSLIB), Nuclear Astrophysics Compi...
+- [1210.3643](../papers/1210.3643.md) (2012) [2] Signatures of phase transitions in nuclei at finite excitation energies
+- [1206.4583](../papers/1206.4583.md) (2012) [1] A High-Performance Fortran Code to Calculate Spin- and Parity-Dependent Nuclear Level Densities
+- [1206.1542](../papers/1206.1542.md) (2012) [1] Nuclear Level Densities in the Constant-Spacing Model
+- [1111.3425](../papers/1111.3425.md) (2011) [2] Pairing reentrance in hot rotating nuclei
+- [1102.0940](../papers/1102.0940.md) (2011) [1] High-Performance Algorithm for Calculating Non-Spurious Spin- and Parity-Dependent Nuclear Level Densities
+- [1010.0760](../papers/1010.0760.md) (2010) [2] Thermodynamic properties of hot nuclei within the self-consistent quasiparticle random-phase approximation
+- [1004.5027](../papers/1004.5027.md) (2010) [1] A High-Performance Algorithm to Calculate Spin- and Parity-Dependent Nuclear Level Densities
+- [0901.1087](../papers/0901.1087.md) (2009) [2] Combinatorial nuclear level-density model
+- [0809.4072](../papers/0809.4072.md) (2008) [1] Isospin-projected nuclear level densities by the shell model Monte Carlo method
+- [0809.0447](../papers/0809.0447.md) (2008) [2] Further explorations of Skyrme-Hartree-Fock-Bogoliubov mass formulas. IX: Constraint of pairing force to $^1S_0$ neutron...
+- [0804.4402](../papers/0804.4402.md) (2008) [1] Complete inclusion of parity-dependent level densities in the statistical description of astrophysical reaction rates
+- [2309.00354](../papers/2309.00354.md) (0000) [1] 2309.00354
+- [2310.08694](../papers/2310.08694.md) (0000) [2] 2310.08694
+- [2311.08864](../papers/2311.08864.md) (0000) [2] 2311.08864
+- [2402.08889](../papers/2402.08889.md) (0000) [2] 2402.08889
+- [2402.11535](../papers/2402.11535.md) (0000) [2] 2402.11535
+- [2405.09013](../papers/2405.09013.md) (0000) [1] 2405.09013
+- [2408.11639](../papers/2408.11639.md) (0000) [2] 2408.11639
+- [2410.07279](../papers/2410.07279.md) (0000) [2] 2410.07279
+- [2411.01279](../papers/2411.01279.md) (0000) [2] 2411.01279
+- [2411.19940](../papers/2411.19940.md) (0000) [2] 2411.19940
+- [2412.05844](../papers/2412.05844.md) (0000) [2] 2412.05844
+- [2501.07118](../papers/2501.07118.md) (0000) [2] 2501.07118
+- [2503.05517](../papers/2503.05517.md) (0000) [2] 2503.05517
+- [2505.06674](../papers/2505.06674.md) (0000) [2] 2505.06674
