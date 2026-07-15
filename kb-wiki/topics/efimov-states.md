@@ -6,6 +6,13 @@
 
 **Papers:** 63
 
+- [2604.04435](../papers/2604.04435.md) (2026) [2] Neural-network quantum states for solving few-body problems: application to Efimov physics
+- [2506.12531](../papers/2506.12531.md) (2025) [2] Exact Renormalization Relation and Binding Energies for Three Identical Bosons
+- [2506.07721](../papers/2506.07721.md) (2025) [2] Universal Efimov spectra and fermionic doublets in highly mass-imbalanced cold-atom mixtures with van der Waals and dipo...
+- [2503.19709](../papers/2503.19709.md) (2025) [1] Exploring Efimov states in $D^*D^*D^*$ and $DD^*D^*$ three-body systems
+- [2404.02441](../papers/2404.02441.md) (2024) [1] Universality of Efimov states in highly mass-imbalanced cold-atom mixtures with van der Waals and dipole interactions
+- [2309.04131](../papers/2309.04131.md) (2023) [1] Efimov states in excited nuclear halos
+- [2309.01732](../papers/2309.01732.md) (2023) [1] Evolution of Efimov States
 - [2303.03845](../papers/2303.03845.md) (2023) [1] Tuning of Efimov states in non-integer dimensions
 - [2302.08716](../papers/2302.08716.md) (2023) [1] Universal geometry of two-neutron halos and Borromean Efimov states close to dissociation
 - [2111.14545](../papers/2111.14545.md) (2021) [2] Efimovian states of three charged particles
@@ -52,13 +59,6 @@
 - [0807.3258](../papers/0807.3258.md) (2008) [2] Universal properties and structure of halo nuclei
 - [0712.1231](../papers/0712.1231.md) (2007) [1] Trajectory of virtual, bound and resonant Efimov states
 - [0711.3684](../papers/0711.3684.md) (2007) [1] Comment on "Efimov States and their Fano Resonances in a Neutron-Rich Nucleus
-- [2309.01732](../papers/2309.01732.md) (0000) [1] 2309.01732
-- [2309.04131](../papers/2309.04131.md) (0000) [1] 2309.04131
-- [2404.02441](../papers/2404.02441.md) (0000) [1] 2404.02441
-- [2503.19709](../papers/2503.19709.md) (0000) [1] 2503.19709
-- [2506.07721](../papers/2506.07721.md) (0000) [2] 2506.07721
-- [2506.12531](../papers/2506.12531.md) (0000) [2] 2506.12531
-- [2604.04435](../papers/2604.04435.md) (0000) [2] 2604.04435
 - [cond-mat/0201281](../papers/cond-mat/0201281.md) (0000) [1] cond-mat/0201281
 - [cond-mat/0206232](../papers/cond-mat/0206232.md) (0000) [1] cond-mat/0206232
 - [cond-mat/0303249](../papers/cond-mat/0303249.md) (0000) [2] cond-mat/0303249

@@ -6,6 +6,17 @@
 
 **Papers:** 58
 
+- [2603.08140](../papers/2603.08140.md) (2026) [1] s-process nucleosynthesis in low-mass AGB stars by the $^{13}$C($α$,n)$^{16}$O neutron source
+- [2602.10634](../papers/2602.10634.md) (2026) [2] Constraining cross sections for unstable $^{153,159}$Gd$(n,γ)$ and their astrophysical implications
+- [2509.24549](../papers/2509.24549.md) (2025) [2] Anomaly in first-forbidden transitions of $^{176}$Lu
+- [2505.14563](../papers/2505.14563.md) (2025) [2] Classifying metal-poor stars with machine learning using nucleosynthesis calculations
+- [2504.13766](../papers/2504.13766.md) (2025) [1] The impact of new ($α$, n) reaction rates on the weak s-process in metal-poor massive stars
+- [2503.18990](../papers/2503.18990.md) (2025) [2] Tables of Neutron Thermal Cross Sections, Westcott Factors, Resonance Integrals, Maxwellian Averaged Cross Sections, Ast...
+- [2410.06603](../papers/2410.06603.md) (2024) [1] Investigation of 90,92Zr(n,γ) 91,93Zr in the s process nucleosynthesis
+- [2410.07279](../papers/2410.07279.md) (2024) [1] Re-investigation of neutron capture by 84Kr and 86Kr in the s-process nucleosynthesis
+- [2409.02704](../papers/2409.02704.md) (2024) [1] Calculation of The Abundance of $^{187}$Re-$^{187}$Os Nuclear Clock Nuclides in S-process and Sensitivity Analysis of Ma...
+- [2404.15897](../papers/2404.15897.md) (2024) [2] Calculations of bound-state $β^-$-decay half-lives of highly ionized $^{163}$Dy$^{66+}$, $^{187}$Re$^{75+}$ and $^{205}$...
+- [2311.11687](../papers/2311.11687.md) (2023) [1] Stellar $β$-decay rate of $s$-process branching-point $^{204}$Tl: forbidden transitions
 - [2305.01549](../papers/2305.01549.md) (2023) [2] Production of n-rich nuclei in red giant stars
 - [2304.00834](../papers/2304.00834.md) (2023) [2] Allowed $β^-$ decay of bare atoms with A$\sim$ 60-80 in stellar environments
 - [2209.11480](../papers/2209.11480.md) (2022) [2] Stellar neutron capture reactions at low and high temperature
@@ -47,17 +58,6 @@
 - [1106.1728](../papers/1106.1728.md) (2011) [1] Opportunities to constrain astrophysical reaction rates for the s-process through determination of the ground state cros...
 - [1005.2151](../papers/1005.2151.md) (2010) [1] Modification of nuclear transitions in stellar plasma by electronic processes: K-isomers in 176Lu and 180Ta under s-proc...
 - [0804.0223](../papers/0804.0223.md) (2008) [2] Thermal Equilibration of 176-Lu via K-Mixing
-- [2311.11687](../papers/2311.11687.md) (0000) [1] 2311.11687
-- [2404.15897](../papers/2404.15897.md) (0000) [2] 2404.15897
-- [2409.02704](../papers/2409.02704.md) (0000) [1] 2409.02704
-- [2410.06603](../papers/2410.06603.md) (0000) [1] 2410.06603
-- [2410.07279](../papers/2410.07279.md) (0000) [1] 2410.07279
-- [2503.18990](../papers/2503.18990.md) (0000) [2] 2503.18990
-- [2504.13766](../papers/2504.13766.md) (0000) [1] 2504.13766
-- [2505.14563](../papers/2505.14563.md) (0000) [2] 2505.14563
-- [2509.24549](../papers/2509.24549.md) (0000) [2] 2509.24549
-- [2602.10634](../papers/2602.10634.md) (0000) [2] 2602.10634
-- [2603.08140](../papers/2603.08140.md) (0000) [1] 2603.08140
 - [astro-ph/0006350](../papers/astro-ph/0006350.md) (0000) [2] astro-ph/0006350
 - [astro-ph/0301461](../papers/astro-ph/0301461.md) (0000) [2] astro-ph/0301461
 - [astro-ph/9608125](../papers/astro-ph/9608125.md) (0000) [2] astro-ph/9608125

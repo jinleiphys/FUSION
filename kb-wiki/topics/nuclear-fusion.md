@@ -8,103 +8,103 @@
 
 **Papers:** 1624 (showing first 100 of 1624)
 
-- [2307.13437](../papers/2307.13437.md) (2023) [3] Multi-step particle emission probabilities in superheavy nuclei at moderate excitation energies
-- [2307.12387](../papers/2307.12387.md) (2023) [2] Unveiling the properties of the dimuonium at the energies available at the Large Hadron Collider at CERN
-- [2307.11264](../papers/2307.11264.md) (2023) [3] Electron-positron plasma in BBN: damped-dynamic screening
-- [2307.08963](../papers/2307.08963.md) (2023) [1] Proton 0.01 MeV resonance width and low-energy $S$-factor of p+10B fusion
-- [2307.06875](../papers/2307.06875.md) (2023) [1] Simultaneous calculation of elastic scattering, fusion, and direct cross sections for reactions of weakly-bound projecti...
-- [2307.06172](../papers/2307.06172.md) (2023) [1] State dependence of tunneling processes and thermonuclear fusion
-- [2307.06427](../papers/2307.06427.md) (2023) [1] Photon and neutron production as in-situ diagnostics of proton-boron fusion
-- [2307.05636](../papers/2307.05636.md) (2023) [3] Impact of the $^6$Li asymptotic normalization constant onto $α$-induced reactions of astrophysical interest
-- [2307.05652](../papers/2307.05652.md) (2023) [1] Simultaneous study of scattering and fusion hindrance near Coulomb barrier in $F+Pb$ systems
-- [2307.02095](../papers/2307.02095.md) (2023) [3] Laser-assisted deformed $α$ decay of the ground state even-even nuclei
-- [2306.14368](../papers/2306.14368.md) (2023) [2] Understanding Excitations in $^{59,61}$Co, $^{59}$Ni
-- [2306.12838](../papers/2306.12838.md) (2023) [3] Detailed study of the astrophysical direct capture reaction $^{6}{\rm Li}(p, γ)^{7}{\rm Be}$ in a potential model approa...
-- [2306.12451](../papers/2306.12451.md) (2023) [1] Impact of Pycnonuclear Fusion Uncertainties on the Cooling of Accreting Neutron Star Crusts
-- [2306.11236](../papers/2306.11236.md) (2023) [1] Constraining the Woods-Saxon potential in fusion reactions based on the neural network
-- [2306.11422](../papers/2306.11422.md) (2023) [2] Bulk and neutron-proton asymmetry coefficients of the semi-empirical mass formula tuned to ground state mass excess of A...
-- [2306.10642](../papers/2306.10642.md) (2023) [1] Two and three photon fusion into charmonium in ultra-peripheral nuclear collisions
-- [2306.06621](../papers/2306.06621.md) (2023) [1] Continuum-discretized coupled-channel calculations for $^{6}$Li fusion reactions with closed channels
-- [2305.17752](../papers/2305.17752.md) (2023) [2] Cluster model of 12C in density functional theory framework
-- [2305.17792](../papers/2305.17792.md) (2023) [2] A schematic model for the direct cross-section in reactions induced by exotic and stable projectiles
-- [2305.14111](../papers/2305.14111.md) (2023) [3] Advancing the IAV Model with CDCC Wave Functions for Realistic Descriptions of Two-Body Projectile Breakup
-- [2305.09389](../papers/2305.09389.md) (2023) [3] Synthesis of elements in compact stars in pycnonuclear reactions with Carbon isotopes: Quasibound states versus states o...
-- [2305.08382](../papers/2305.08382.md) (2023) [1] Systematic study of fusion barriers with energy dependent barrier radius
-- [2305.02065](../papers/2305.02065.md) (2023) [3] Impacts of dark matter interaction on nuclear and neutron star matter within the relativistic mean-field model
-- [2305.00647](../papers/2305.00647.md) (2023) [1] DT fusion through the $^5$He $3/2+$ "Bretscher state" accounts for $\ge 25\%$ of our existence via nucleosynthesis and f...
-- [2304.13489](../papers/2304.13489.md) (2023) [1] On Sequential Single-Pion Production in Double-Pionic Fusion
-- [2304.08032](../papers/2304.08032.md) (2023) [3] Revisiting the Lithium abundance problem in Big-Bang nucleosynthesis
-- [2304.03327](../papers/2304.03327.md) (2023) [1] Revisiting proton-proton fusion in chiral effective field theory
-- [2303.17390](../papers/2303.17390.md) (2023) [3] Examination of cluster production in excited light systems at Fermi energies from new experimental data and comparison w...
-- [2303.15136](../papers/2303.15136.md) (2023) [3] Exploring QCD matter in extreme conditions with Machine Learning
-- [2303.15567](../papers/2303.15567.md) (2023) [3] Wormhole Model for Neon-20
-- [2303.14680](../papers/2303.14680.md) (2023) [3] The astrophysical $S-$factor and reaction rate for $^{15}$N($p,γ$)$^{16}$O within the modified potential cluster model
-- [2303.13107](../papers/2303.13107.md) (2023) [2] Examination of promising reactions with $^{241}$Am and $^{244}$Cm targets for the synthesis of new superheavy elements w...
-- [2303.12156](../papers/2303.12156.md) (2023) [2] Neutron Skin Thickness Dependence of Astrophysical $S$-factor
-- [2303.10480](../papers/2303.10480.md) (2023) [3] Pair production as a probe for the dynamics of nuclear fission and $α$ decay
-- [2303.07323](../papers/2303.07323.md) (2023) [2] Constraint of the Nuclear Dissipation Coefficient in Fission of Hypernuclei
-- [2303.00588](../papers/2303.00588.md) (2023) [2] Coexistence of single particle and collective excitation in $^{61}$Ni
-- [2302.13856](../papers/2302.13856.md) (2023) [3] Experimental evidence of the effect of nuclear shells on fission dissipation and time
-- [2302.10102](../papers/2302.10102.md) (2023) [2] Revisiting the Gamow Factor of Reactions on Light Nuclei
-- [2302.06938](../papers/2302.06938.md) (2023) [2] Time-dependent Hartree-Fock study of quasifission trajectories in reactions forming $^{294}$Og
-- [2302.07365](../papers/2302.07365.md) (2023) [2] Prospects for ditauonium discovery at colliders
-- [2302.02165](../papers/2302.02165.md) (2023) [3] Opportunities for Fundamental Physics Research with Radioactive Molecules
-- [2302.01272](../papers/2302.01272.md) (2023) [1] Thermal and atomic effects on coupled-channels heavy-ion fusion
-- [2301.12691](../papers/2301.12691.md) (2023) [1] A new dynamical mechanism of incomplete fusion in heavy-ion collision
-- [2301.06835](../papers/2301.06835.md) (2023) [3] Measurement of the $^{236}$U fission cross section and angular distributions of fragments from fission of $^{235}$U and ...
-- [2301.04363](../papers/2301.04363.md) (2023) [1] Systematic study of the effect of individual rotational energy levels on the fusion cross-section of \texorpdfstring{$^{...
-- [2301.01500](../papers/2301.01500.md) (2023) [2] The Langevin approach for fission of heavy and super-heavy nuclei
-- [2212.13411](../papers/2212.13411.md) (2022) [3] Correlation between the nuclear structure and reaction dynamics of Ar-isotopes as projectile using the relativistic mean...
-- [2212.01840](../papers/2212.01840.md) (2022) [1] Fusion Reactivities with Drift bi-Maxwellian Ion Velocity Distributions
-- [2212.00397](../papers/2212.00397.md) (2022) [1] Fusion systematics for weakly bound nuclei using neutron flow and collective degrees of freedom
-- [2211.14550](../papers/2211.14550.md) (2022) [3] Toward nuclear physics from lattice QCD on quantum computers
-- [2211.12113](../papers/2211.12113.md) (2022) [2] Role of neutron transfer in the reaction mechanism of $^9$Be+$^{169}$Tm, $^{181}$Ta, $^{187}$Re and $^{197}$Au systems
-- [2211.07071](../papers/2211.07071.md) (2022) [2] Azimuthal decorrelation for photon induced dijet production in ultra-peripheral collisions of heavy ions
-- [2211.06281](../papers/2211.06281.md) (2022) [3] Perspectives on few-body cluster structures in exotic nuclei
-- [2211.04008](../papers/2211.04008.md) (2022) [1] A Toy Model for Low Energy Nuclear Fusion
-- [2211.02555](../papers/2211.02555.md) (2022) [2] Near-threshold resonances in 11C and the 10B(p,α)7Be aneutronic reaction cross section
-- [2211.01879](../papers/2211.01879.md) (2022) [2] $^{178}$Hg and asymmetric fission of neutron-deficient pre-actinides
-- [2211.01050](../papers/2211.01050.md) (2022) [3] Nuclei in Core-Collapse Supernovae Engine
-- [2210.17214](../papers/2210.17214.md) (2022) [1] The Fusion-by-Diffusion model as a tool to calculate cross sections for the production of superheavy nuclei
-- [2210.16821](../papers/2210.16821.md) (2022) [1] Production cross-sections of new superheavy elements with Z = 119-120 in fusion-evaporation reactions
-- [2210.08941](../papers/2210.08941.md) (2022) [1] Prediction for the synthesis cross sections of new moscovium isotopes in fusion-evaporation reactions
-- [2210.09106](../papers/2210.09106.md) (2022) [3] Multinucleon transfer mechanism in ${}^{250}\text{Cf}+{}^{232}\text{Th}$
-- [2210.08609](../papers/2210.08609.md) (2022) [2] Probing gluon TMDs with reconstructed and tagged heavy flavor hadron pairs at EIC
-- [2210.03031](../papers/2210.03031.md) (2022) [2] Microscopic nucleus-nucleus optical potentials from nuclear matter with uncertainty analysis from chiral forces
-- [2210.00369](../papers/2210.00369.md) (2022) [2] Electro-Weak Transitions in A=2,3 Nuclei in Pionless Effective Field Theory
-- [2209.14832](../papers/2209.14832.md) (2022) [3] Solar neutrino physics
-- [2209.10459](../papers/2209.10459.md) (2022) [2] Reply to "Comment on Sequential Single-pion Production Explaining the dibaryon $d^*(2380)$ peak''
-- [2209.02376](../papers/2209.02376.md) (2022) [1] On the influence of Maxwell--Chern--Simons electrodynamics in nuclear fusion involving electronic and muonic molecules
-- [2207.13536](../papers/2207.13536.md) (2022) [1] Microscopic study on fusion reactions $^{40,48}\mathrm{Ca}+{}^{78}\mathrm{Ni}$ and the effect of tensor force
-- [2207.13582](../papers/2207.13582.md) (2022) [2] Production of proton-rich nuclei in the vicinity of 100Sn via multinucleon transfer reactions
-- [2207.12918](../papers/2207.12918.md) (2022) [1] Effects of the tensor force on low-energy heavy-ion fusion reactions: A mini review
-- [2207.12924](../papers/2207.12924.md) (2022) [1] Microscopic study of the compound nucleus formation in cold-fusion reactions
-- [2207.09753](../papers/2207.09753.md) (2022) [1] Investigating the muon catalyzed fusion in muonic lithium hydride
-- [2207.10176](../papers/2207.10176.md) (2022) [1] Theoretical evaluation of solar proton-proton fusion reaction rate and its uncertainties
-- [2207.08704](../papers/2207.08704.md) (2022) [3] Stability and instability of strange dwarfs
-- [2207.06900](../papers/2207.06900.md) (2022) [2] Dynamical Pair Production at Sub-Barrier Energies for Light Nuclei
-- [2207.04919](../papers/2207.04919.md) (2022) [1] Nuclear fission and fusion in a random-walk model
-- [2207.04241](../papers/2207.04241.md) (2022) [1] Renormalization of proton-proton fusion in chiral effective field theory
-- [2207.03012](../papers/2207.03012.md) (2022) [2] gamma-UPC: Automated generation of exclusive photon-photon processes in ultraperipheral proton and nuclear collisions wi...
-- [2207.01433](../papers/2207.01433.md) (2022) [3] Theoretical study of the d(d,p)3H and d(d,n)3He processes at low energies
-- [2206.15087](../papers/2206.15087.md) (2022) [1] Sub-barrier fusion hindrance and absence of neutron transfer channels
-- [2207.00033](../papers/2207.00033.md) (2022) [3] Equation of state in neutron stars and supernovae
-- [2206.13792](../papers/2206.13792.md) (2022) [3] Neutrinos and their interactions with matter
-- [2206.13201](../papers/2206.13201.md) (2022) [2] Potential energy surface and formation of superheavy nuclei with the Skyrme energy-density functional
-- [2206.11446](../papers/2206.11446.md) (2022) [2] Formation of large chunk of nuclear matter in heavy-ion collisions
-- [2206.09271](../papers/2206.09271.md) (2022) [3] Nuclei near and at the proton dripline
-- [2206.07858](../papers/2206.07858.md) (2022) [3] Driving Potential and Fission-Fragment Charge Distributions
-- [2206.06436](../papers/2206.06436.md) (2022) [1] Proton and neutron exchange as a prelude to fusion at near-barrier energies
-- [2206.04150](../papers/2206.04150.md) (2022) [1] Theoretical Uncertainty Quantification for Heavy-ion Fusion
-- [2206.02202](../papers/2206.02202.md) (2022) [3] Relativistic Mean Field Study of Neutron Stars and Hyperon Stars
-- [2205.15035](../papers/2205.15035.md) (2022) [1] Systematic study of fusion barrier characteristics within the relativistic mean-field formalism
-- [2205.13895](../papers/2205.13895.md) (2022) [3] Quantum design in study of pycnonuclear reactions in compact stars and new quasibound states
-- [2205.12497](../papers/2205.12497.md) (2022) [3] Influence of the Pauli exclusion principle on the alpha decay
-- [2205.10171](../papers/2205.10171.md) (2022) [3] First results from the INDRA-FAZIA apparatus on isospin diffusion in $^{58,64}$Ni+$^{58,64}$Ni systems at Fermi energies
-- [2205.07996](../papers/2205.07996.md) (2022) [3] Horizons: Nuclear Astrophysics in the 2020s and Beyond
-- [2205.05968](../papers/2205.05968.md) (2022) [2] Analysis of 2-Body Central Events for $^{129}Xe+^{nat}Sn$ from $8A$ $MeV$ up to $18A$ $MeV$ and for $^{129}Xe+^{197}Au$ ...
-- [2205.00478](../papers/2205.00478.md) (2022) [2] Investigating Possible Existence of Hyper-Heavy Nuclei in Neutron Star Environment
-- [2204.12677](../papers/2204.12677.md) (2022) [1] Simulating fusion reactions from Coulomb explosions within a transport approach
-- [2204.08667](../papers/2204.08667.md) (2022) [1] Enhanced proton-boron nuclear fusion cross sections in intense high-frequency laser
-- [2204.08555](../papers/2204.08555.md) (2022) [3] Constraining the equation of state of neutron stars using multimessenger observations
-- [2204.05993](../papers/2204.05993.md) (2022) [1] Medium dependent relativistic NN potential: Application to the fusion dynamics
+- [2606.07077](../papers/2606.07077.md) (2026) [1] External-Field-Assisted Muon Reactivation in Muon-Catalyzed Fusion: A Rate-Network Criterion for Reducing Alpha Sticking
+- [2606.06773](../papers/2606.06773.md) (2026) [3] Lepton interactions from GeV to EeV
+- [2606.03272](../papers/2606.03272.md) (2026) [2] How long can an atomic nucleus remain standing ? -- a fundamental quantum question
+- [2606.01551](../papers/2606.01551.md) (2026) [1] A semi-classical study of muon-enhanced proton-boron-11 fusion
+- [2605.26432](../papers/2605.26432.md) (2026) [1] Muon-Catalyzed Nuclear Fusion: Physical Mechanism, Bottleneck Breakthroughs, and an Engineering Pathway
+- [2605.26561](../papers/2605.26561.md) (2026) [1] Spin-Dependent Nucleon-Nucleus Interactions Constrained by Neutron Observables and Their Impact on Near-Barrier Proton F...
+- [2605.25879](../papers/2605.25879.md) (2026) [2] Core-collapse supernovae and supernova neutrinos
+- [2605.24121](../papers/2605.24121.md) (2026) [3] Solar Axions from Nuclear Transitions
+- [2605.18090](../papers/2605.18090.md) (2026) [1] Proton-to-Alpha Branching Ratio in the $^{12}$C+$^{12}$C fusion reaction at Astrophysical Energies
+- [2605.19062](../papers/2605.19062.md) (2026) [2] Coulomb Corrections to Three-Nucleon Moments
+- [2605.10869](../papers/2605.10869.md) (2026) [1] New perspective on cold fusion reactions: A microscopic description
+- [2605.11252](../papers/2605.11252.md) (2026) [2] Quantum tunneling, global phases and the limits of classical action reconstructions
+- [2605.03342](../papers/2605.03342.md) (2026) [3] Inclusive breakup of three-body projectiles: A unified four-body framework for pair-detected and single-particle observa...
+- [2604.27020](../papers/2604.27020.md) (2026) [3] Chiral-Transport-Induced Collective Modes in Strong Magnetic Fields and Their Implications for Neutron Star Phenomenolog...
+- [2604.22537](../papers/2604.22537.md) (2026) [1] Fusion of light nuclei in a multicluster realization of the three-body problem
+- [2604.18928](../papers/2604.18928.md) (2026) [1] A novel approach to proton-boron-11 fusion
+- [2604.19325](../papers/2604.19325.md) (2026) [2] Theoretical estimates for the synthesis of $Z=119$ superheavy nuclei with Ca, Ti, V, and Cr projectiles: effects of reac...
+- [2604.11226](../papers/2604.11226.md) (2026) [3] Inclusive breakup reactions with non-spectator fragments: Generalization of the IAV sum rules
+- [2604.09287](../papers/2604.09287.md) (2026) [2] Synthesis mechanism of superheavy element 120: a dinuclear system model approach with microscopic inputs
+- [2604.05600](../papers/2604.05600.md) (2026) [1] Channel couplings redirect absorbed flux from peripheral loss to fusion in weakly bound nuclear reactions
+- [2603.24964](../papers/2603.24964.md) (2026) [1] Photon production from gluon splitting and fusion induced by a magnetic field in heavy-ion collisions
+- [2603.25081](../papers/2603.25081.md) (2026) [3] Extracting Resonance Width from Lattice Quantum Monte Carlo Simulations Using Analytical Continuation Method
+- [2603.25465](../papers/2603.25465.md) (2026) [1] Bayesian analysis of proton-proton fusion in chiral effective field theory
+- [2603.22788](../papers/2603.22788.md) (2026) [1] Production probability of super-heavy nuclei in fusion
+- [2603.16580](../papers/2603.16580.md) (2026) [2] Fission mode identification in the 180Hg region: derivative analysis approach
+- [2603.09360](../papers/2603.09360.md) (2026) [1] Microscopic Investigation of Fusion and Quasifission Dynamics
+- [2603.08140](../papers/2603.08140.md) (2026) [3] s-process nucleosynthesis in low-mass AGB stars by the $^{13}$C($α$,n)$^{16}$O neutron source
+- [2603.08479](../papers/2603.08479.md) (2026) [2] Microscopic quasifission dynamics of the ${}^{54}\text{Cr}+{}^{243}\text{Am}$ reaction
+- [2603.02652](../papers/2603.02652.md) (2026) [3] Weinberg Angle, Neutron Abundance in BBN, and Lifetime
+- [2603.01794](../papers/2603.01794.md) (2026) [3] Sensitivity of Isotopic Fission Yields in Actinides to the Macroscopic Liquid-Drop Model: LSD vs ISOLDA
+- [2602.22763](../papers/2602.22763.md) (2026) [1] Towards a microscopic description of 12C+12C fusion at stellar energies
+- [2602.22464](../papers/2602.22464.md) (2026) [3] The 2027-2034 Vision for Nuclear Physics in Canada, with an outlook to 2041
+- [2602.15492](../papers/2602.15492.md) (2026) [2] Description of nucleon elastic scattering off $^6$Li with the four-body continuum-discretized coupled-channels method
+- [2602.15100](../papers/2602.15100.md) (2026) [2] Dispersive analysis of the $\boldsymbol{ϕ\to γπ^0 π^0}$ process
+- [2601.16600](../papers/2601.16600.md) (2026) [3] Nuclear molecule of heavy nuclei
+- [2601.08245](../papers/2601.08245.md) (2026) [3] Coherent Absorption Dynamics: The Dual Role of Off-Diagonal Couplings in Weakly Bound Nuclei
+- [2601.00241](../papers/2601.00241.md) (2026) [1] Revisiting p-$^{11}$B Fusion: Updated Cross-sections, Reactivity, and Energy Balance
+- [2512.24358](../papers/2512.24358.md) (2025) [3] Big Bang Nucleosynthesis results refined via the Trojan Horse Method
+- [2512.11172](../papers/2512.11172.md) (2025) [1] Study of few $^3$He-induced nuclear fusion reactions using density-dependent double-folding complex potential
+- [2512.09429](../papers/2512.09429.md) (2025) [1] Determination of nuclear deformations with an emulator for sub-barrier fusion reactions
+- [2512.01808](../papers/2512.01808.md) (2025) [2] Pair Transfer and Reaction Dynamics in $^{40,48}$Ca + $^{96}$Zr Collisions Below the Coulomb Barrier
+- [2511.18337](../papers/2511.18337.md) (2025) [2] Systematic investigation on the superheavy nucleus formation in the reactions of $^{48}$Ca, $^{50}$Ti, $^{51}$V and $^{5...
+- [2511.14705](../papers/2511.14705.md) (2025) [3] Systematic Study on the $α$-particle preformation factor in the theory of $α$-decay based on the Tabular Prior-data Fitt...
+- [2511.10536](../papers/2511.10536.md) (2025) [3] Non-Resonant Alpha-Induced Neutron-Emission: A Multi- Method Comparison Of Nuclear Reaction Rates
+- [2511.09078](../papers/2511.09078.md) (2025) [2] Nuclear shape dynamics in low-energy heavy-ion reactions
+- [2511.09259](../papers/2511.09259.md) (2025) [2] Strongly intensive quantities for rapidity correlations of multiplicities
+- [2511.06657](../papers/2511.06657.md) (2025) [2] The Non-thermal Energy Window for Laser-Driven Nuclear Reactions
+- [2510.26072](../papers/2510.26072.md) (2025) [1] Sub-barrier fusion enhancement due to positive Q-value four-neutron transfer
+- [2510.23030](../papers/2510.23030.md) (2025) [3] Calculation of Particle Pair Correlation Functions with Classical Trajectory Approximation
+- [2510.21102](../papers/2510.21102.md) (2025) [3] Paths to Superheavy Nuclei
+- [2510.19940](../papers/2510.19940.md) (2025) [3] Computing nuclear response functions with time-dependent coupled-cluster theory
+- [2510.11038](../papers/2510.11038.md) (2025) [3] Microscopic description of the proton halo in $^{12}$N
+- [2510.10794](../papers/2510.10794.md) (2025) [2] Realizing the Scientific Program with Polarized Ion Beams at EIC
+- [2510.05726](../papers/2510.05726.md) (2025) [2] Microscopic study of nuclei synthesis in pycnonuclear reaction $^{12}$C + $^{12}$C in neutron stars
+- [2510.05953](../papers/2510.05953.md) (2025) [3] Low lying isomers in the region of superheavy nuclei
+- [2510.02764](../papers/2510.02764.md) (2025) [2] Role of universal function of the nuclear proximity potential: A systematic study on the alpha-decay of heavy/super-heav...
+- [2509.22006](../papers/2509.22006.md) (2025) [3] Isoenergetic description of induced fission pathways within energy-density functional theory
+- [2509.14717](../papers/2509.14717.md) (2025) [3] Refining the deep sub-barrier 12C+12C excitation function with STELLA
+- [2509.10721](../papers/2509.10721.md) (2025) [2] SIV Guided Resolution of the Lithium-7 BBN Problem
+- [2509.03684](../papers/2509.03684.md) (2025) [3] Light nuclei under magnetic field and the lithium problem
+- [2509.02228](../papers/2509.02228.md) (2025) [2] Polarized tau decay and CP violation in ultraperipheral heavy-ion collisions
+- [2508.18686](../papers/2508.18686.md) (2025) [2] A New Evidence of Interplay Between Tetrahedral and Octahedral Symmetries and Symmetry Breaking: Exotic Rotational Bands...
+- [2508.12783](../papers/2508.12783.md) (2025) [1] Reaction processes of muon-catalyzed fusion in the muonic molecule $ddμ$ studied with the tractable $T$-matrix model
+- [2508.09431](../papers/2508.09431.md) (2025) [1] Extracting temperature of plasma through fusion reactions within a transport approach
+- [2508.07584](../papers/2508.07584.md) (2025) [2] Exact Treatment of Continuum Couplings in Nuclear Optical Potentials via Feshbach Theory
+- [2508.05125](../papers/2508.05125.md) (2025) [2] Probing surface vibration of spherical nuclei in relativistic heavy-ion collisions
+- [2508.05456](../papers/2508.05456.md) (2025) [3] Weak interaction rates of $sd$-shell Urca pairs in stellar environment using a shell-model approach
+- [2508.05814](../papers/2508.05814.md) (2025) [3] Wigner Phase-Space Densities of Nuclear Clusters and Hypernuclei
+- [2508.04879](../papers/2508.04879.md) (2025) [2] Ab Initio Study of $^7$Li with Coupled $^6$Li + $n$ and $^6$He + $p$ Mass Partitions
+- [2508.02428](../papers/2508.02428.md) (2025) [3] Coulomb-Corrected Wormhole Model for Neon-20
+- [2507.21498](../papers/2507.21498.md) (2025) [3] Heavy flavored hydrogen molecule systems
+- [2507.18065](../papers/2507.18065.md) (2025) [1] Re-examination of fusion hindrance in astrophysical $^{12}$C+$^{12}$C and $^{12}$C+$^{13}$C reactions
+- [2507.18234](../papers/2507.18234.md) (2025) [1] New superconvergence relations for spin and tensor structure functions of $γγ$ fusion
+- [2507.11050](../papers/2507.11050.md) (2025) [2] Nucleus-nucleus potentials in the scattering of tightly and weakly bound systems
+- [2507.00074](../papers/2507.00074.md) (2025) [3] Studying few cluster resonances with quantum neural network driven iterative Harrow-Hassidim-Lloyd algorithm
+- [2506.20929](../papers/2506.20929.md) (2025) [3] Iterative Harrow-Hassidim-Lloyd quantum algorithm for solving resonances with eigenvector continuation
+- [2506.16865](../papers/2506.16865.md) (2025) [3] Photon Emission from Nucleon-Nucleon Bremsstrahlung in Fermi-energy Heavy-Ion Collisions
+- [2506.16632](../papers/2506.16632.md) (2025) [2] An unusual type-I X-ray burst from the neutron star X-ray binary IGR J17591-2342: a double-photospheric-radius-expansion...
+- [2506.13354](../papers/2506.13354.md) (2025) [2] Hot pygmy dipole strength in nickel isotopes
+- [2506.12889](../papers/2506.12889.md) (2025) [2] Studying Maximal Entanglement and Bell Nonlocality at an Electron-Ion Collider
+- [2506.13823](../papers/2506.13823.md) (2025) [1] KHIFC-user friendly program for studying Heavy ion fusion barrier characteristics
+- [2506.08044](../papers/2506.08044.md) (2025) [3] Estimation of Electron Screening Potential in the 6Li(d,α)4He Reaction Using Multi-Layer Perceptron Neural Network
+- [2506.04261](../papers/2506.04261.md) (2025) [2] Nuclear Quantum Many-Body Dynamics: From Collective Vibrations to Heavy-Ion Collisions (2nd edition)
+- [2505.15390](../papers/2505.15390.md) (2025) [1] Enhancing the creation of elements in laser-assisted heavy-ion fusion reactions
+- [2505.10237](../papers/2505.10237.md) (2025) [2] Competition between the neutron-proton pair break-ups delineating the level structure of 202Po
+- [2505.07551](../papers/2505.07551.md) (2025) [2] Astrophysical $S$ factor and reaction rate of the direct $^{12}{\rm C}(p, γ)^{13}{\rm N}$ capture process within a poten...
+- [2505.08019](../papers/2505.08019.md) (2025) [1] Influence of effective interactions and nuclear densities on the dynamics of heavy-ion fusion
+- [2505.05754](../papers/2505.05754.md) (2025) [2] Synthesis of the superheavy elements beyond Og: extrapolating from ${}^{48}\mathrm{Ca}$ to ${}^{54}\mathrm{Cr}$
+- [2505.02371](../papers/2505.02371.md) (2025) [1] Exploring the role of low-lying intrinsic degrees of freedom and their impact on fusion cross-sections
+- [2505.03849](../papers/2505.03849.md) (2025) [1] Improved Dimensionality Reduction for Inverse Problems in Nuclear Fusion and High-Energy Astrophysics
+- [2504.19650](../papers/2504.19650.md) (2025) [2] Investigation of the formation of superheavy elements with atomic numbers 116 and 120 through $^{50}$Ti-induced reaction
+- [2504.18342](../papers/2504.18342.md) (2025) [3] Probing Quantum Phenomena through Photoproduction in Relativistic Heavy-Ion Collisions
+- [2504.15016](../papers/2504.15016.md) (2025) [3] Probing high-order deformation effects in neutron-deficient nuclei $^{246,248}$No with improved potential-energy-surface...
+- [2504.10420](../papers/2504.10420.md) (2025) [2] Role of Coulomb-nuclear breakup of 6,7Li projectiles with heavy deformed 232Th target
+- [2504.20057](../papers/2504.20057.md) (2025) [1] Can 1957 cold-fusion explain 1989 cold-fusion?
+- [2504.07648](../papers/2504.07648.md) (2025) [3] Simultaneous calculation of elastic scattering, transfer, breakup, and other direct cross sections for $d$+$^{197}$Au re...
+- [2504.05003](../papers/2504.05003.md) (2025) [3] The role of the screening potential in the deuteron-deuteron thermonuclear reaction rates
+- [2504.03112](../papers/2504.03112.md) (2025) [3] Numerical Assessment of Convergence in the Post Form Ichimura-Austern-Vincent model
+- [2504.02491](../papers/2504.02491.md) (2025) [3] ToMCCA-3: A realistic 3-body coalescence model
+- [2504.01371](../papers/2504.01371.md) (2025) [1] A simple schematic model for a cross section deficit in $^{12}$C+$^{12}$C fusion reactions

@@ -8,6 +8,11 @@
 
 **Papers:** 25
 
+- [2507.03592](../papers/2507.03592.md) (2025) [2] Nuclear $β^{-}$-decay with statistical de-excitation
+- [2506.13555](../papers/2506.13555.md) (2025) [2] Joint analysis of reactor and accelerator CE$ν$NS data on germanium: implications for the Standard Model and nuclear phy...
+- [2402.03431](../papers/2402.03431.md) (2024) [1] Probing Earth-Bound Dark Matter with Nuclear Reactors
+- [2312.07111](../papers/2312.07111.md) (2023) [2] $g_{\rm A}$-sensitive $β$ spectral shapes in the mass $A=86-99$ region assessed by the nuclear shell model
+- [2311.06177](../papers/2311.06177.md) (2023) [2] Quantum Fluctuations Drive Angular Momenta in Nuclear Fission
 - [2209.14403](../papers/2209.14403.md) (2022) [2] A novel Machine-Learning method for spin classification of neutron resonances
 - [2203.02382](../papers/2203.02382.md) (2022) [2] Can decay heat measurements tell us something about the Reactor Antineutrino Anomaly?
 - [2201.04958](../papers/2201.04958.md) (2022) [2] Model-based quantitative methods to predict irradiation-induced swelling in alloys
@@ -27,9 +32,4 @@
 - [1106.0687](../papers/1106.0687.md) (2011) [1] On the determination of anti-neutrino spectra from nuclear reactors
 - [1105.1659](../papers/1105.1659.md) (2011) [2] Superheavies: Theoretical incitements and predictions
 - [0908.3275](../papers/0908.3275.md) (2009) [2] Nuclear Reactions
-- [2311.06177](../papers/2311.06177.md) (0000) [2] 2311.06177
-- [2312.07111](../papers/2312.07111.md) (0000) [2] 2312.07111
-- [2402.03431](../papers/2402.03431.md) (0000) [1] 2402.03431
-- [2506.13555](../papers/2506.13555.md) (0000) [2] 2506.13555
-- [2507.03592](../papers/2507.03592.md) (0000) [2] 2507.03592
 - [hep-ph/0107277](../papers/hep-ph/0107277.md) (0000) [2] hep-ph/0107277

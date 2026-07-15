@@ -22,12 +22,11 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 
 ## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki)
 
-- [ ] **Morning verification of tonight's full run** (armed 2026-07-09 16:23, PID under caffeinate; window 00:30-08:25): check kb-wiki/full-run-*.log + kb-wiki/batch-summary.json, random-sample cross-review, cost reconciliation; re-arm next evening if incomplete
 - [ ] Abstract-only pages for the ~1,655 corpus papers without fulltext (lighter template, separate small batch)
-- [ ] L0: physh-nuclear.yaml (176 concepts + neighbor whitelist [user input]) with FTS match rules; add negative filters against hep-ph/astro leakage (pilot finding)
-- [ ] L1: run classification, write concept tags into page frontmatter + build 176 topic pages; hook monthly re-run into the corpus-update launchd job
-- [ ] L2: within-corpus citation graph from raw .tex (needs KINGSTON mounted; fulfills literature-corpus Tier 2 cites/cited-by); add cites/cited-by links into paper pages
-- [ ] 176 topic landscape syntheses (DeepSeek, after L1)
+- [ ] 109+ topic landscape syntheses (DeepSeek, one per topic page)
+- [ ] Widen neighbor whitelist to cut the 36.4% unclassified rate (hadron structure, heavy-ion subconcepts; sampled unclassified = mix of true out-of-scope and concept gaps)
+- [ ] Tier-B citation edges (111k author-year heuristic edges) deserve a false-positive audit pass
+- [ ] Hook monthly re-run (digest new papers + kb_classify + build_wiki_layers + kb_citegraph + inject) into the corpus-update launchd job
 - [x] Distribution decision for kb-wiki: user decided 2026-07-10, pages live directly in the main repo (night-1 19,202 pages pushed in a1c4357; final ~250 MB, revisit only if GitHub complains)
 - [ ] Licensing decision for the public artifact: abstracts included vs snippets vs fetch-on-first-run [user decision]
 - [ ] Optional later: MCP server exposing kb_search/kb_browse (demoted from load-bearing to sugar, per 2026-07-09 revision)
@@ -49,6 +48,7 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 
 ## Completed
 
+- [x] 2026-07-15: Phase 3 CORE COMPLETE. Full corpus digested (61,059/61,059 pages over 4 off-peak windows, zero API failures, ~$120 total). Cross-link layers built by DeepSeek v4-pro on the deepseek-crosslink.md brief and Claude cross-reviewed: L0 physh-nuclear.yaml (180 concepts, tiered matching, negative filters), L1 classification 38,824 papers tagged + 109 topic pages + index tree, L2 citation graph 351,338 in-corpus edges (calibration edge 1711.07540->1511.03214 verified; Tier A edge spot-checked in raw .tex; 81.2% of papers have >= 1 edge). All 61,059 pages carry concepts frontmatter + In-corpus citations sections. Final QC: 13 defect pages regenerated, 0 em-dash, 0 malformed
 - [x] 2026-07-14: Phase 2 first per-code skill landed in-repo: `skills/fresco/` real self-contained copy (establishes skills/ layer) + binary auto-install (install_fresco.sh clones+builds I-Thompson/fresco when ~/bin/PATH lack it, run_fresco.sh auto-wires); gfortran build reproduces B1-elastic sigma_R = 1575.17495 (ref 1575.175). Codex cross-checked; caught the cp -R symlink trap (see devlog 2026-07-14), applied fixes #1/#12/#4/#16/#17
 - [x] 2026-07-09: Phase 0 quality gate, all items: opencode 1.17.15 + DeepSeek/Qwen keys + 36 skills symlinked (pre-existing); 3 real-case tests vs Claude references (litsearch exact BibTeX; fresco 4-5 sig figs; prc-writing 10/10 verified citations); user verdict = proceed (phase0/report.md)
 - [x] 2026-07-09: Phase 1 fork created: github.com/jinleiphys/fusion-core @ v1.17.16, default branch fusion-brand, dev = pristine upstream mirror

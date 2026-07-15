@@ -6,6 +6,22 @@
 
 **Papers:** 85
 
+- [2602.22515](../papers/2602.22515.md) (2026) [2] Confined and Deconfined Phases of Qubit Regularized Lattice Gauge Theories
+- [2602.18561](../papers/2602.18561.md) (2026) [2] Analytic continuation of Green's functions with a neural network
+- [2602.13826](../papers/2602.13826.md) (2026) [2] Neural-network quantum states for the nuclear many-body problem
+- [2511.20599](../papers/2511.20599.md) (2025) [2] Precision thermodynamics of the strongly interacting Fermi gas in two dimensions
+- [2511.19209](../papers/2511.19209.md) (2025) [2] Projected Density Matrix Sampling for Lattice Hamiltonians
+- [2510.24875](../papers/2510.24875.md) (2025) [2] A Euclidean Monte-Carlo-informed route to ground-state preparation for quantum simulation of scalar field theory
+- [2506.02313](../papers/2506.02313.md) (2025) [2] Euclidean-Monte-Carlo-informed ground-state preparation for quantum simulation of scalar field theory
+- [2503.23840](../papers/2503.23840.md) (2025) [2] Investigating nuclear beta decay using lattice quantum Monte Carlo approach
+- [2503.20699](../papers/2503.20699.md) (2025) [2] Quantum decoherence in the Caldeira-Leggett model by the real-time path integral on a computer
+- [2502.03680](../papers/2502.03680.md) (2025) [2] Emulators for Scarce and Noisy Data: Application to Auxiliary-Field Diffusion Monte Carlo for Neutron Matter
+- [2407.04744](../papers/2407.04744.md) (2024) [1] Magnetic structure of $A \le 10$ nuclei using the Norfolk nuclear models with quantum Monte Carlo methods
+- [2405.18464](../papers/2405.18464.md) (2024) [2] Ab-initio electroweak corrections to superallowed $β$ decays and their impact on $V_{ud}$
+- [2405.04203](../papers/2405.04203.md) (2024) [2] Reconciling light nuclei and nuclear matter: relativistic $ab\ initio$ calculations
+- [2403.00287](../papers/2403.00287.md) (2024) [2] Neural Simulation-Based Inference of the Neutron Star Equation of State directly from Telescope Spectra
+- [2402.06602](../papers/2402.06602.md) (2024) [1] Recent progress in the electroweak structure of light nuclei using quantum Monte Carlo methods
+- [2310.18756](../papers/2310.18756.md) (2023) [2] Uncertainty Quantification-Enabled Inversion of Nuclear Euclidean Responses
 - [2306.13579](../papers/2306.13579.md) (2023) [2] Maximally local two-nucleon interactions at N$^3$LO in $Δ$-less chiral effective field theory
 - [2305.08831](../papers/2305.08831.md) (2023) [2] Neural-network quantum states for ultra-cold Fermi gases
 - [2305.01685](../papers/2305.01685.md) (2023) [2] Baryons, multi-hadron systems, and composite dark matter in non-relativistic QCD
@@ -54,22 +70,6 @@
 - [0711.1500](../papers/0711.1500.md) (2007) [2] Quantum Monte Carlo Calculations of Light Nuclei
 - [0710.4103](../papers/0710.4103.md) (2007) [2] Path Integrals in Lattice Quantum Chromodynamics
 - [0704.1774](../papers/0704.1774.md) (2007) [2] Auxiliary Field Diffusion Monte Carlo calculation of nuclei with A<40 with tensor interactions
-- [2310.18756](../papers/2310.18756.md) (0000) [2] 2310.18756
-- [2402.06602](../papers/2402.06602.md) (0000) [1] 2402.06602
-- [2403.00287](../papers/2403.00287.md) (0000) [2] 2403.00287
-- [2405.04203](../papers/2405.04203.md) (0000) [2] 2405.04203
-- [2405.18464](../papers/2405.18464.md) (0000) [2] 2405.18464
-- [2407.04744](../papers/2407.04744.md) (0000) [1] 2407.04744
-- [2502.03680](../papers/2502.03680.md) (0000) [2] 2502.03680
-- [2503.20699](../papers/2503.20699.md) (0000) [2] 2503.20699
-- [2503.23840](../papers/2503.23840.md) (0000) [2] 2503.23840
-- [2506.02313](../papers/2506.02313.md) (0000) [2] 2506.02313
-- [2510.24875](../papers/2510.24875.md) (0000) [2] 2510.24875
-- [2511.19209](../papers/2511.19209.md) (0000) [2] 2511.19209
-- [2511.20599](../papers/2511.20599.md) (0000) [2] 2511.20599
-- [2602.13826](../papers/2602.13826.md) (0000) [2] 2602.13826
-- [2602.18561](../papers/2602.18561.md) (0000) [2] 2602.18561
-- [2602.22515](../papers/2602.22515.md) (0000) [2] 2602.22515
 - [cond-mat/9804290](../papers/cond-mat/9804290.md) (0000) [2] cond-mat/9804290
 - [hep-ph/0101186](../papers/hep-ph/0101186.md) (0000) [1] hep-ph/0101186
 - [nucl-th/0003015](../papers/nucl-th/0003015.md) (0000) [1] nucl-th/0003015

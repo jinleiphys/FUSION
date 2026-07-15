@@ -6,6 +6,20 @@
 
 **Papers:** 204 (showing first 100 of 204)
 
+- [2604.07229](../papers/2604.07229.md) (2026) [1] Nuclear giant resonances from first principles
+- [2603.27243](../papers/2603.27243.md) (2026) [1] Microscopic theory of the $γ$ decay of giant resonances in superfluid nuclei
+- [2512.20694](../papers/2512.20694.md) (2025) [1] Isoscalar Giant Resonances in Highly-Deformed $^{172}$Yb
+- [2510.05745](../papers/2510.05745.md) (2025) [1] Fragmentation patterns of nuclear response: low-spin giant resonances and soft modes
+- [2504.18239](../papers/2504.18239.md) (2025) [2] Continuum quasiparticle random-phase approximation for $(n,γ)$ reactions on neutron-rich nuclei: collectivity and resona...
+- [2410.17436](../papers/2410.17436.md) (2024) [2] Subshell gaps and onsets of collectivity from proton and neutron pairing gap correlations
+- [2407.01325](../papers/2407.01325.md) (2024) [2] Ab initio description of monopole resonances in light- and medium-mass nuclei: IV. Angular momentum projection and rotat...
+- [2406.16217](../papers/2406.16217.md) (2024) [2] Monopole Excitation and Nuclear Compressibility: Present and Future Perspectives
+- [2406.05414](../papers/2406.05414.md) (2024) [1] Angular Momentum-Resolved Inelastic Electron Scattering for Nuclear Giant Resonances
+- [2404.14154](../papers/2404.14154.md) (2024) [2] Ab initio description of monopole resonances in light- and medium-mass nuclei: III. Moments evaluation in ab initio PGCM...
+- [2404.13266](../papers/2404.13266.md) (2024) [2] The axially-deformed relativistic quasiparticle random phase approximation based on point-coupling interactions
+- [2402.15901](../papers/2402.15901.md) (2024) [2] Ab initio description of monopole resonances in light- and medium-mass nuclei: II. Ab initio PGCM calculations in $^{46}...
+- [2402.02228](../papers/2402.02228.md) (2024) [2] Ab initio description of monopole resonances in light- and medium-mass nuclei: I. Technical aspects and uncertainties of...
+- [2309.04016](../papers/2309.04016.md) (2023) [2] Fine structure of the isoscalar giant monopole resonance in $^{58}$Ni, $^{90}$Zr, $^{120}$Sn and $^{208}$Pb
 - [2306.08377](../papers/2306.08377.md) (2023) [2] Manipulation of Giant Multipole Resonances via Vortex $γ$ Photons
 - [2304.13333](../papers/2304.13333.md) (2023) [2] Neutron-proton effective mass splitting in neutron-rich matter
 - [2304.13369](../papers/2304.13369.md) (2023) [2] Generalized time-dependent generator coordinate method for small and large amplitude collective motion
@@ -92,17 +106,3 @@
 - [1202.3902](../papers/1202.3902.md) (2012) [2] Skyrme Interaction and Nuclear Matter Constraints
 - [1201.5723](../papers/1201.5723.md) (2012) [1] Study of nuclear giant resonances using a Fermi-liquid method
 - [1111.0619](../papers/1111.0619.md) (2011) [1] Microscopic theory of the γ-decay of nuclear giant resonances
-- [1009.0624](../papers/1009.0624.md) (2010) [2] Exploration of a modified density dependence in the Skyrme functional
-- [1008.3030](../papers/1008.3030.md) (2010) [1] Relativistic effective interaction for nuclei, giant resonances, and neutron stars
-- [1005.2349](../papers/1005.2349.md) (2010) [2] Particle-Hole Optical Model: Fantasy or Reality?
-- [1003.1683](../papers/1003.1683.md) (2010) [2] Nuclear collective excitations in Landau Fermi liquid theory
-- [1003.0547](../papers/1003.0547.md) (2010) [2] Solutions of the dispersion equation in the region of overlapping of zero-sound and particle-hole modes
-- [0912.3858](../papers/0912.3858.md) (2009) [1] Microscopic study of the isoscalar giant resonances in 208Pb induced by inelastic alpha scattering
-- [0912.3594](../papers/0912.3594.md) (2009) [1] Time scales in nuclear giant resonances
-- [0911.2410](../papers/0911.2410.md) (2009) [1] Skyrme-Random-Phase-Approximation description of spin-flip and orbital giant resonances
-- [0910.1674](../papers/0910.1674.md) (2009) [2] Large-scale second RPA calculations with finite-range interactions
-- [0909.1276](../papers/0909.1276.md) (2009) [2] Particle vibrational coupling in covariant density functional theory
-- [0903.0130](../papers/0903.0130.md) (2009) [2] Mass distributions in a variational model
-- [0807.0089](../papers/0807.0089.md) (2008) [1] A dependence of the enhancement factor in energy-weighted sums for isovector giant resonances
-- [0806.2886](../papers/0806.2886.md) (2008) [2] Nuclear symmetry energy probed by neutron skin thickness of nuclei
-- [0804.3385](../papers/0804.3385.md) (2008) [2] Variations on a theme by Skyrme

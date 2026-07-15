@@ -6,6 +6,41 @@
 
 **Papers:** 79
 
+- [2606.07829](../papers/2606.07829.md) (2026) [2] Clustering in hadrons and light nuclei from Lorentz boosted form factors
+- [2605.13985](../papers/2605.13985.md) (2026) [2] Taming nuclear size and shape effects in superallowed beta-decay
+- [2605.09139](../papers/2605.09139.md) (2026) [1] Nuclear charge radii of aluminium isotopes at the proton drip line
+- [2605.08413](../papers/2605.08413.md) (2026) [2] Charge radii of Cl isotopes from x-ray spectroscopy of muonic atoms
+- [2604.08985](../papers/2604.08985.md) (2026) [1] Towards better nuclear charge radii
+- [2601.09614](../papers/2601.09614.md) (2026) [2] Ab initio charge form factors and radii of light isoscalar nuclei: Role of the two-body charge density
+- [2512.06683](../papers/2512.06683.md) (2025) [2] Understanding Charge Radii with Machine Learning: Discovering Physics Expressions
+- [2511.15346](../papers/2511.15346.md) (2025) [2] Comprehensive Assessment of $\mathrm{Th}^{3+}$ Properties for Nuclear Clock and Fundamental Physics Applications
+- [2510.27427](../papers/2510.27427.md) (2025) [1] Model-independent determination of nuclear charge radii from Li-like ions
+- [2510.08362](../papers/2510.08362.md) (2025) [2] Hartree-Fock emulators for nuclei: Application to charge radii of $^{48,52}$Ca
+- [2506.20414](../papers/2506.20414.md) (2025) [1] Shell effects in nuclear charge radii based on Skyrme density functionals
+- [2506.08804](../papers/2506.08804.md) (2025) [2] Modern approach to muonic x-ray spectroscopy demonstrated through the measurement of stable Cl radii
+- [2505.22412](../papers/2505.22412.md) (2025) [1] Neutron Magic Numbers in $sd$ Shell from Nuclear Charge Radii within Neutron-Proton Correction around the Fermi Surface
+- [2504.17060](../papers/2504.17060.md) (2025) [2] Charge Radii Measurements of Exotic Tin Isotopes in the Proximity of $N=50$ and $N=82$
+- [2504.12001](../papers/2504.12001.md) (2025) [2] Charge radii of neutron-rich scandium isotopes and the seniority symmetry in the $0f_{7/2}$ shell
+- [2504.09871](../papers/2504.09871.md) (2025) [2] Implication of shell quenching in scandium isotopes around N=20
+- [2504.01438](../papers/2504.01438.md) (2025) [2] Precise Determination of Electric Quadrupole Moments and Isotope Shift Constants of Yb$^+$ in Pursuance of Probing Funda...
+- [2502.20363](../papers/2502.20363.md) (2025) [2] Global Framework for Emulation of Nuclear Calculations
+- [2411.05621](../papers/2411.05621.md) (2024) [2] Second-order hyperfine correction to H, D, and $^3$He energy levels
+- [2411.03076](../papers/2411.03076.md) (2024) [1] Potential signature of new magicity from universal aspects of nuclear charge radii
+- [2410.15784](../papers/2410.15784.md) (2024) [1] Shell quenching in nuclear charge radii based on Monte Carlo dropout Bayesian neural network
+- [2408.09959](../papers/2408.09959.md) (2024) [2] Recent advancements in atomic many-body methods for high-precision studies of isotope shifts
+- [2407.10199](../papers/2407.10199.md) (2024) [2] Charge radii of $^{11-16}$C, $^{13-17}$N and $^{15-18}$O determined from their charge-changing cross-sections and the mi...
+- [2405.12936](../papers/2405.12936.md) (2024) [2] Improved predictions of phenomenological nuclear charge radius formulae with Bayesian optimization approach
+- [2404.13369](../papers/2404.13369.md) (2024) [2] Isotope-shift factors with quantum electrodynamics effects for many-electron systems: A study of the nuclear charge radi...
+- [2404.12609](../papers/2404.12609.md) (2024) [2] Nuclear charge radius predictions by kernel ridge regression with odd-even effects
+- [2404.06046](../papers/2404.06046.md) (2024) [1] Nuclear charge radii of germanium isotopes around $N$ = 40
+- [2403.18377](../papers/2403.18377.md) (2024) [2] Nuclear shape evolution of neutron-deficient Au and kink structure of Pb isotopes
+- [2312.15983](../papers/2312.15983.md) (2023) [1] Effects of center-of-mass correction and nucleon anomalous magnetic moments on nuclear charge radii
+- [2312.04912](../papers/2312.04912.md) (2023) [1] Improved description of nuclear charge radii: Global trends beyond $N=28$ shell closure
+- [2310.15093](../papers/2310.15093.md) (2023) [2] Electromagnetic Properties of Indium Isotopes Elucidate the Doubly Magic Character of $^{100}$Sn
+- [2310.13936](../papers/2310.13936.md) (2023) [2] Isospin-dependence of the charge-changing cross-section shaped by the charged-particle evaporation process
+- [2310.09546](../papers/2310.09546.md) (2023) [2] The extraction of higher-order radial moments of nuclear charge density from muonic atom spectroscopy
+- [2310.03846](../papers/2310.03846.md) (2023) [2] Towards Precision Muonic X-Ray Measurements of Charge Radii of Light Nuclei
+- [2309.02037](../papers/2309.02037.md) (2023) [1] Nuclear charge radii of silicon isotopes
 - [2306.09026](../papers/2306.09026.md) (2023) [2] Revisiting the extraction of charge radii of $^{40}$Ca and $^{208}$Pb with muonic atom spectroscopy
 - [2306.06099](../papers/2306.06099.md) (2023) [2] NuCLR: Nuclear Co-Learned Representations
 - [2301.11064](../papers/2301.11064.md) (2023) [2] King-plot analysis of isotope shifts in simple diatomic molecules
@@ -44,41 +79,6 @@
 - [0912.0503](../papers/0912.0503.md) (2009) [1] Garvey-Kelson Relations for Nuclear Charge Radii
 - [0911.0987](../papers/0911.0987.md) (2009) [2] Masses and Radii of the Nuclei with N>=Z in an Alpha-Cluster Model
 - [2204.01625](../papers/2204.01625.md) (0000) [2] Tomography of Ultra-relativistic Nuclei with Polarized Photon-gluon Collisions
-- [2309.02037](../papers/2309.02037.md) (0000) [1] 2309.02037
-- [2310.03846](../papers/2310.03846.md) (0000) [2] 2310.03846
-- [2310.09546](../papers/2310.09546.md) (0000) [2] 2310.09546
-- [2310.13936](../papers/2310.13936.md) (0000) [2] 2310.13936
-- [2310.15093](../papers/2310.15093.md) (0000) [2] 2310.15093
-- [2312.04912](../papers/2312.04912.md) (0000) [1] 2312.04912
-- [2312.15983](../papers/2312.15983.md) (0000) [1] 2312.15983
-- [2403.18377](../papers/2403.18377.md) (0000) [2] 2403.18377
-- [2404.06046](../papers/2404.06046.md) (0000) [1] 2404.06046
-- [2404.12609](../papers/2404.12609.md) (0000) [2] 2404.12609
-- [2404.13369](../papers/2404.13369.md) (0000) [2] 2404.13369
-- [2405.12936](../papers/2405.12936.md) (0000) [2] 2405.12936
-- [2407.10199](../papers/2407.10199.md) (0000) [2] 2407.10199
-- [2408.09959](../papers/2408.09959.md) (0000) [2] 2408.09959
-- [2410.15784](../papers/2410.15784.md) (0000) [1] 2410.15784
-- [2411.03076](../papers/2411.03076.md) (0000) [1] 2411.03076
-- [2411.05621](../papers/2411.05621.md) (0000) [2] 2411.05621
-- [2502.20363](../papers/2502.20363.md) (0000) [2] 2502.20363
-- [2504.01438](../papers/2504.01438.md) (0000) [2] 2504.01438
-- [2504.09871](../papers/2504.09871.md) (0000) [2] 2504.09871
-- [2504.12001](../papers/2504.12001.md) (0000) [2] 2504.12001
-- [2504.17060](../papers/2504.17060.md) (0000) [2] 2504.17060
-- [2505.22412](../papers/2505.22412.md) (0000) [1] 2505.22412
-- [2506.08804](../papers/2506.08804.md) (0000) [2] 2506.08804
-- [2506.20414](../papers/2506.20414.md) (0000) [1] 2506.20414
-- [2510.08362](../papers/2510.08362.md) (0000) [2] 2510.08362
-- [2510.27427](../papers/2510.27427.md) (0000) [1] 2510.27427
-- [2511.15346](../papers/2511.15346.md) (0000) [2] 2511.15346
-- [2512.06683](../papers/2512.06683.md) (0000) [2] 2512.06683
-- [2601.09614](../papers/2601.09614.md) (0000) [2] 2601.09614
-- [2604.08985](../papers/2604.08985.md) (0000) [1] 2604.08985
-- [2605.08413](../papers/2605.08413.md) (0000) [2] 2605.08413
-- [2605.09139](../papers/2605.09139.md) (0000) [1] 2605.09139
-- [2605.13985](../papers/2605.13985.md) (0000) [2] 2605.13985
-- [2606.07829](../papers/2606.07829.md) (0000) [2] 2606.07829
 - [nucl-th/0107040](../papers/nucl-th/0107040.md) (0000) [1] nucl-th/0107040
 - [nucl-th/0402083](../papers/nucl-th/0402083.md) (0000) [2] nucl-th/0402083
 - [nucl-th/0508026](../papers/nucl-th/0508026.md) (0000) [2] nucl-th/0508026

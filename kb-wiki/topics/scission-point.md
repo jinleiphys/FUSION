@@ -6,6 +6,15 @@
 
 **Papers:** 40
 
+- [2604.19576](../papers/2604.19576.md) (2026) [2] Shell effects and the neutron emission within the multi-dimensional Langevin model for nuclear fission
+- [2603.03519](../papers/2603.03519.md) (2026) [2] Microscopic description of cluster radioactivity fission valleys along isotopic and isotonic chains
+- [2512.21619](../papers/2512.21619.md) (2025) [2] Shell effects in quasifission toward $^{180} \mathrm{Hg}$: insights into fission asymmetric modes
+- [2510.19291](../papers/2510.19291.md) (2025) [2] Kinetic energy of fission fragments within a dynamical model
+- [2510.18205](../papers/2510.18205.md) (2025) [2] Neutron emission during fission and its impact on fission-fragment mass distribution studied by Langevin model
+- [2411.04505](../papers/2411.04505.md) (2024) [2] Dumbbell shapes in the super-asymmetric fission of heavy nuclei
+- [2410.09565](../papers/2410.09565.md) (2024) [2] Fission fragment distributions within time-dependent density functional theory
+- [2410.02187](../papers/2410.02187.md) (2024) [2] On the extraction of fission mode properties from fragment mass distributions
+- [2404.19355](../papers/2404.19355.md) (2024) [2] Statistical Theory of Neutron-Induced Nuclear Fission and of Heavy-Ion Fusion
 - [2211.14135](../papers/2211.14135.md) (2022) [2] Microscopic description of $α$, $2α$, and cluster decays of $^{216-220}$Rn and $^{220-224}$Ra
 - [2209.10759](../papers/2209.10759.md) (2022) [2] Microscopic description of the torque acting on fission fragments
 - [2111.02487](../papers/2111.02487.md) (2021) [2] Stochastic features of dissipative large-amplitude dynamics and nuclear fission
@@ -31,15 +40,6 @@
 - [1203.2606](../papers/1203.2606.md) (2012) [2] Dynamical approach to heavy-ion induced fission using actinide target nuclei at energies around the Coulomb barrier
 - [1112.2798](../papers/1112.2798.md) (2011) [2] Mass distributions for induced fission of different Hg isotopes
 - [1107.1478](../papers/1107.1478.md) (2011) [2] Microscopic description of cluster radioactivity in actinide nuclei
-- [2404.19355](../papers/2404.19355.md) (0000) [2] 2404.19355
-- [2410.02187](../papers/2410.02187.md) (0000) [2] 2410.02187
-- [2410.09565](../papers/2410.09565.md) (0000) [2] 2410.09565
-- [2411.04505](../papers/2411.04505.md) (0000) [2] 2411.04505
-- [2510.18205](../papers/2510.18205.md) (0000) [2] 2510.18205
-- [2510.19291](../papers/2510.19291.md) (0000) [2] 2510.19291
-- [2512.21619](../papers/2512.21619.md) (0000) [2] 2512.21619
-- [2603.03519](../papers/2603.03519.md) (0000) [2] 2603.03519
-- [2604.19576](../papers/2604.19576.md) (0000) [2] 2604.19576
 - [nucl-th/0203057](../papers/nucl-th/0203057.md) (0000) [2] nucl-th/0203057
 - [nucl-th/0204052](../papers/nucl-th/0204052.md) (0000) [2] nucl-th/0204052
 - [nucl-th/0609034](../papers/nucl-th/0609034.md) (0000) [2] nucl-th/0609034

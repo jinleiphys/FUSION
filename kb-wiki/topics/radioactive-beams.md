@@ -4,6 +4,7 @@
 
 **Papers:** 60
 
+- [2311.03180](../papers/2311.03180.md) (2023) [2] Measurement of the energy of the 8.3-eV isomer of 229mTh with photoelectric effect
 - [2210.10924](../papers/2210.10924.md) (2022) [2] Nuclear Equation of State and Single-nucleon Potential from Gogny-like Energy Density Functionals Encapsulating Effects ...
 - [2108.13717](../papers/2108.13717.md) (2021) [2] Three-body optical potentials in $(d,p)$ reactions and their influence on indirect study of stellar nucleosynthesis
 - [2010.15587](../papers/2010.15587.md) (2020) [2] Important Influence of Entrance Channel Reorientation Coupling on Proton Stripping
@@ -37,7 +38,6 @@
 - [0710.5714](../papers/0710.5714.md) (2007) [2] Fusion of neutron rich oxygen isotopes in the crust of accreting neutron stars
 - [0704.2340](../papers/0704.2340.md) (2007) [2] Probing the Nuclear Symmetry Energy with Heavy-Ion Reactions Induced by Neutron-Rich Nuclei
 - [0704.0496](../papers/0704.0496.md) (2007) [2] Fusion process studied with preequilibrium giant dipole resonance in time dependent Hartree-Fock theory
-- [2311.03180](../papers/2311.03180.md) (0000) [2] 2311.03180
 - [nucl-ex/0010014](../papers/nucl-ex/0010014.md) (0000) [1] nucl-ex/0010014
 - [nucl-ex/0508031](../papers/nucl-ex/0508031.md) (0000) [2] nucl-ex/0508031
 - [nucl-ex/9712002](../papers/nucl-ex/9712002.md) (0000) [1] nucl-ex/9712002

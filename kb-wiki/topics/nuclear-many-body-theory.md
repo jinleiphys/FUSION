@@ -4,6 +4,10 @@
 
 **Papers:** 33
 
+- [2606.07035](../papers/2606.07035.md) (2026) [2] Solution of the Equation-of-Motion Phonon Method eigenvalue problems on the D-Wave quantum annealer
+- [2604.24577](../papers/2604.24577.md) (2026) [2] Neutrino Cross Sections: Low Energy
+- [2512.23644](../papers/2512.23644.md) (2025) [2] Recent advancements in the strongly coupled many-body theory for nuclear spectral computation
+- [2512.18650](../papers/2512.18650.md) (2025) [2] Neural Network Construction of the Equation of State from Relativistic ab initio Calculations
 - [2306.01367](../papers/2306.01367.md) (2023) [1] Testing the Paradigm of Nuclear Many-Body Theory
 - [2212.13412](../papers/2212.13412.md) (2022) [2] On nuclear short-range correlations and the zero-energy eigenstates of the Schrodinger equation
 - [2211.01305](../papers/2211.01305.md) (2022) [1] Modewise Johnson-Lindenstrauss Embeddings for Nuclear Many-Body Theory
@@ -27,10 +31,6 @@
 - [0812.1819](../papers/0812.1819.md) (2008) [2] Recent progress in Hamiltonian light-front QCD
 - [0805.2318](../papers/0805.2318.md) (2008) [2] Liquid-gas phase transition in nuclear matter from realistic many-body approaches
 - [0804.3098](../papers/0804.3098.md) (2008) [2] Nuclear Structure and the Search for Collective Enhancement of P,T-Violation
-- [2512.18650](../papers/2512.18650.md) (0000) [2] 2512.18650
-- [2512.23644](../papers/2512.23644.md) (0000) [2] 2512.23644
-- [2604.24577](../papers/2604.24577.md) (0000) [2] 2604.24577
-- [2606.07035](../papers/2606.07035.md) (0000) [2] 2606.07035
 - [nucl-th/0009055](../papers/nucl-th/0009055.md) (0000) [2] nucl-th/0009055
 - [nucl-th/0012082](../papers/nucl-th/0012082.md) (0000) [2] nucl-th/0012082
 - [nucl-th/0107066](../papers/nucl-th/0107066.md) (0000) [2] nucl-th/0107066

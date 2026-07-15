@@ -4,103 +4,103 @@
 
 **Papers:** 2018 (showing first 100 of 2018)
 
-- [2307.14827](../papers/2307.14827.md) (2023) [1] Triaxial projected shell model approach for negative parity states in even-even nuclei
-- [2307.13469](../papers/2307.13469.md) (2023) [2] Dispersion effects in elastic electron scattering from $^{208}$Pb
-- [2307.10413](../papers/2307.10413.md) (2023) [2] Two-pole nature of the $Λ(1405)$ from lattice QCD
-- [2307.05516](../papers/2307.05516.md) (2023) [2] Spectroscopy and femtoscopic correlation function of the $B\bar{D}$, $B=(N, Δ)$ system in quark delocalization color scr...
-- [2306.16189](../papers/2306.16189.md) (2023) [2] Intruder configurations in $^{29}$Ne at the transition into the island of inversion: Detailed structure study of $^{28}$...
-- [2306.16294](../papers/2306.16294.md) (2023) [2] Corrections to the Forward Limit Dispersion Relations for $γZ$-Exchange Contributions
-- [2306.14368](../papers/2306.14368.md) (2023) [2] Understanding Excitations in $^{59,61}$Co, $^{59}$Ni
-- [2306.14441](../papers/2306.14441.md) (2023) [2] Revisiting Theoretical Analysis of Electric Dipole Moment of $^{129}$Xe
-- [2306.10596](../papers/2306.10596.md) (2023) [2] Effect of finite volume on thermodynamics of quark-hadron matter
-- [2306.07670](../papers/2306.07670.md) (2023) [2] Rotation of pear-shaped $^{100}$Ru nucleus
-- [2306.08140](../papers/2306.08140.md) (2023) [1] Neutron star matter based on a parity doublet model including the $a_0(980)$ meson
-- [2306.04704](../papers/2306.04704.md) (2023) [1] Signals of strong parity violation in deep inelastic scattering
-- [2306.02540](../papers/2306.02540.md) (2023) [2] Normal single-spin asymmetries in electron-proton scattering: two-photon exchange with intermediate state resonances
-- [2306.00337](../papers/2306.00337.md) (2023) [1] Low-lying odd-parity nucleon resonances as quark-model like states
-- [2305.14430](../papers/2305.14430.md) (2023) [2] Unraveling the nature of the novel $\mathbf{T_{cs}}$ and $\mathbf{T_{c\bar s}}$ tetraquark candidates
-- [2305.09730](../papers/2305.09730.md) (2023) [2] Axial anomaly effect to the chiral-partner structure of diquarks at high temperature
-- [2305.05937](../papers/2305.05937.md) (2023) [2] CREX- and PREX-II-motivated relativistic interactions and their implications for the bulk properties of nuclear matter a...
-- [2305.02628](../papers/2305.02628.md) (2023) [2] Exotic spin-dependent interactions through unparticle exchange
-- [2305.00015](../papers/2305.00015.md) (2023) [2] Determination of the neutron skin of $^{208}$Pb from ultrarelativistic nuclear collisions
-- [2304.12052](../papers/2304.12052.md) (2023) [2] Coexisting single-particle excitations and octupole correlations in transitional nucleus $\mathbf{^{217}Ra}$
-- [2304.10187](../papers/2304.10187.md) (2023) [2] $ Δ$ baryon spectroscopy in lattice QCD
-- [2304.01813](../papers/2304.01813.md) (2023) [1] $γZ$-Exchange Contributions in Low-Energy Parity-Violating $ep$ Scattering
-- [2304.01264](../papers/2304.01264.md) (2023) [2] Novel transition dynamics of topological solitons
-- [2304.00655](../papers/2304.00655.md) (2023) [2] Semiclassical origin of nuclear ground-state octupole deformations
-- [2303.15388](../papers/2303.15388.md) (2023) [2] Charmoniumlike tetraquarks in a chiral quark model
-- [2303.12543](../papers/2303.12543.md) (2023) [2] Cross sections for inelastic $K$+$ϕ$ scattering
-- [2303.10084](../papers/2303.10084.md) (2023) [2] Momentum dependent nucleon-nucleon contact interaction from a relativistic Lagrangian
-- [2303.09360](../papers/2303.09360.md) (2023) [1] Nuclear neutron radius and weak mixing angle measurements from latest COHERENT CsI and atomic parity violation Cs data
-- [2303.08332](../papers/2303.08332.md) (2023) [2] Electron wave functions in beta-decay formulas revisited (II): Completion including recoil-order and induced currents
-- [2303.06518](../papers/2303.06518.md) (2023) [2] Mixing of one-particle-one-hole projected states with the variation after projection wave functions
-- [2303.04987](../papers/2303.04987.md) (2023) [1] Unified mechanism behind the even-parity ground state and neutron halo of $^{11}$Be
-- [2303.05425](../papers/2303.05425.md) (2023) [2] P-even and -odd asymmetries on $^{117}$Sn at the vicinity of the p-resonance E$_\mathrm{p}$=1.33 eV
-- [2303.00588](../papers/2303.00588.md) (2023) [2] Coexistence of single particle and collective excitation in $^{61}$Ni
-- [2302.07610](../papers/2302.07610.md) (2023) [2] Quadrupole and octupole states in $^{152}$Sm using the proton-neutron interacting boson model
-- [2302.06254](../papers/2302.06254.md) (2023) [1] Localization measures of parity adapted U($D$)-spin coherent states applied to the phase space analysis of the $D$-level...
-- [2302.00825](../papers/2302.00825.md) (2023) [1] Chiral restoration of nucleons in neutron star matter: studies based on a parity doublet model
-- [2302.00214](../papers/2302.00214.md) (2023) [2] Enhanced Schiff and magnetic quadrupole moments in deformed nuclei and their connection to the search for axion dark mat...
-- [2301.13503](../papers/2301.13503.md) (2023) [2] Identical Bands Around the Isobaric Rare Earth Even-Even Nuclei with the Mass Number A = 164
-- [2301.09866](../papers/2301.09866.md) (2023) [2] Fluctuations near the liquid-gas and chiral phase transitions in hadronic matter
-- [2301.08615](../papers/2301.08615.md) (2023) [2] Photo-production of lowest $Σ^*_{1/2^-}$ state within the Regge-effective Lagrangian approach
-- [2301.07885](../papers/2301.07885.md) (2023) [2] Nucleon form factors and the pion-nucleon sigma term
-- [2212.12997](../papers/2212.12997.md) (2022) [2] Unbound states in 17C and p-sd shell-model interactions
-- [2212.08943](../papers/2212.08943.md) (2022) [1] Consideration of memory of spin and parity in the fissioning compound nucleus by applying the Hauser-Feshbach fission fr...
-- [2212.07856](../papers/2212.07856.md) (2022) [2] Can the two-pole structure of the $D_0^*(2300)$ be understood from recent lattice data?
-- [2212.05655](../papers/2212.05655.md) (2022) [2] Spectral function of the $η'$ meson in nuclear medium based on phenomenological models
-- [2211.16781](../papers/2211.16781.md) (2022) [2] Dissipative reactions with intermediate-energy beams -- a novel approach to populate complex-structure states in rare is...
-- [2211.12029](../papers/2211.12029.md) (2022) [2] Pseudoscalar and Scalar Meson Photoproduction Interpreted by Regge Phenomenology
-- [2211.10214](../papers/2211.10214.md) (2022) [2] Dispersive formalism for the nuclear structure correction $δ_\mathrm{NS}$ to the $β$ decay rate
-- [2211.10286](../papers/2211.10286.md) (2022) [2] A new avenue in the search for CP violation: Moessbauer spectroscopy of 227-Ac
-- [2211.09356](../papers/2211.09356.md) (2022) [2] The interplay of single-particle and collective motions in the low-lying states of $^{21}_Λ$Ne with quadrupole-octupole ...
-- [2211.04652](../papers/2211.04652.md) (2022) [2] Resolving the spurious-state problem in the Dirac equation with finite difference method
-- [2211.03948](../papers/2211.03948.md) (2022) [2] Neutron skin of $^{27}$Al with Skyrme and Korea-IBS-Daegu-SKKU density functionals
-- [2211.01789](../papers/2211.01789.md) (2022) [2] Probing the hadron mass spectrum in dense two-color QCD with the linear sigma model
-- [2211.00281](../papers/2211.00281.md) (2022) [2] Ab initio no-core shell model description of $^{10-14}$C isotopes
-- [2210.16067](../papers/2210.16067.md) (2022) [2] Islands of shape coexistence from single-particle spectra in covariant density functional theory
-- [2210.14285](../papers/2210.14285.md) (2022) [2] Bulk and decay properties of neutron-deficient odd-mass Hg isotopes around A = 185
-- [2210.14336](../papers/2210.14336.md) (2022) [2] Understanding the cosmic abundance of $^{22}$Na: lifetime measurements in $^{23}$Mg
-- [2210.11181](../papers/2210.11181.md) (2022) [2] Restoring broken symmetries using oracles
-- [2210.08853](../papers/2210.08853.md) (2022) [2] Hidden bottom pentaquark in the SU(5) version of the flavor-spin model
-- [2210.08498](../papers/2210.08498.md) (2022) [2] Constraints on the nuclear Schiff moment from its correlation with electromagnetic properties
-- [2210.07042](../papers/2210.07042.md) (2022) [2] Competition between pairing and tripling in one-dimensional fermions with coexistent s- and p-wave interactions
-- [2210.03567](../papers/2210.03567.md) (2022) [1] Towards a unified treatment of $ΔS=0$ parity violation in low-energy nuclear processes
-- [2210.02022](../papers/2210.02022.md) (2022) [1] Parity-doublet bands in the odd-\bm{$A$} isotones \element{237}U and \element{239}Pu by a particle-number-conserving met...
-- [2209.06602](../papers/2209.06602.md) (2022) [2] Compact Star Twins with a Dark Matter Core
-- [2209.05099](../papers/2209.05099.md) (2022) [2] Empirical determination of the Bohr-Weisskopf effect in cesium and improved tests of precision atomic theory in searches...
-- [2209.00198](../papers/2209.00198.md) (2022) [2] Amplitude/Operator Basis in Chiral Perturbation Theory
-- [2208.14858](../papers/2208.14858.md) (2022) [2] Molecular $Ω_{cc}$ , $Ω_{bb}$ and $Ω_{bc}$ states
-- [2208.12353](../papers/2208.12353.md) (2022) [2] Wave functions of $(I,J^P) = (\tfrac{1}{2},\tfrac{3}{2}^\mp)$ baryons
-- [2208.03933](../papers/2208.03933.md) (2022) [2] Reconciling Multi-messenger Constraints with Chiral Symmetry Restoration
-- [2207.14504](../papers/2207.14504.md) (2022) [2] Spin alignment from turbulent color fields
-- [2207.13623](../papers/2207.13623.md) (2022) [2] The two-photon decay of X(6900) from light-by-light scattering at the LHC
-- [2207.12794](../papers/2207.12794.md) (2022) [2] New developments in relativistic magnetohydrodynamics
-- [2207.12875](../papers/2207.12875.md) (2022) [1] $X$ and $Z_{cs}$ in $B^+\to J/ψϕK^+$ as $s$-wave threshold cusps and alternative spin-parity assignments to $X(4274)$ an...
-- [2207.11295](../papers/2207.11295.md) (2022) [1] Measurement of the Parity-Odd Angular Distribution of Gamma Rays From Polarized Neutron Capture on $^{35}$Cl
-- [2207.07360](../papers/2207.07360.md) (2022) [2] SS-HORSE Extension of the No-Core Shell Model: Application to Resonances in $^7{\mathrm He}$
-- [2207.07639](../papers/2207.07639.md) (2022) [2] Systematic Trends of 0$^+_2$, 1$^-_1$, 3$^-_1$ and 2$^+_1$ Excited States in Even-Even Nuclei
-- [2207.05970](../papers/2207.05970.md) (2022) [1] Impacts of anomaly on nuclear and neutron star equation of state based on a parity doublet model
-- [2207.00274](../papers/2207.00274.md) (2022) [2] Anomaly-induced Chiral Mixing in Cold and Dense Matter
-- [2206.15184](../papers/2206.15184.md) (2022) [2] Effect of configuration mixing on quadrupole and octupole collective states of transitional nuclei
-- [2206.11432](../papers/2206.11432.md) (2022) [2] Complete experiment problem for photoproduction of two pseudoscalar mesons on a nucleon in a truncated partial-wave anal...
-- [2206.10021](../papers/2206.10021.md) (2022) [2] Hidden-nucleons neural-network quantum states for the nuclear many-body problem
-- [2206.06527](../papers/2206.06527.md) (2022) [1] Implications of parity-violating electron scattering experiments on $^{48}$Ca (CREX) and $^{208}$Pb (PREX-II) for nuclea...
-- [2206.03134](../papers/2206.03134.md) (2022) [1] Combined theoretical analysis of the parity-violating asymmetry for ${}^{48}$Ca and ${}^{208}Pb$
-- [2206.01631](../papers/2206.01631.md) (2022) [2] Axion effects in the stability of hybrid stars
-- [2205.15649](../papers/2205.15649.md) (2022) [2] Calibration of nuclear charge density distribution by back-propagation neural networks
-- [2205.13590](../papers/2205.13590.md) (2022) [2] Light- and heavy-quark symmetries and the $Y(4230)$, $Y(4360)$, $Y(4500)$, $Y(4620)$ and $X(4630)$ resonances
-- [2205.11548](../papers/2205.11548.md) (2022) [2] Fully-charm and -bottom pentaquarks in a Lattice-QCD inspired quark model
-- [2205.11593](../papers/2205.11593.md) (2022) [2] Precision Determination of the Neutral Weak Form Factor of $^{48}$Ca
-- [2205.10335](../papers/2205.10335.md) (2022) [2] Numerical Simulation of Shell Model Single Particle Energy States using Matrix Numerov Method in Gnumeric Worksheet
-- [2205.01911](../papers/2205.01911.md) (2022) [1] Constraints on the dark photon from parity violation and the $W$ mass
-- [2205.00728](../papers/2205.00728.md) (2022) [2] Regarding the possibility to observe the LHCb hidden-charm strange pentaquark $P_{cs}(4459)^0$ in antikaon-induced $J/ψ$...
-- [2204.08556](../papers/2204.08556.md) (2022) [2] Bottomonium-like tetraquarks in a chiral quark model
-- [2204.05083](../papers/2204.05083.md) (2022) [2] Chiral spin symmetry and the QCD phase diagram
-- [2204.01961](../papers/2204.01961.md) (2022) [2] Molecular states from $\bar{B}^{(*)}N$ interactions
-- [2204.02006](../papers/2204.02006.md) (2022) [2] Octupole correlations in collective excitations of neutron-rich $N\approx56$ nuclei
-- [2204.01290](../papers/2204.01290.md) (2022) [2] Enhanced Magnetic Quadrupole Moments in Nuclei with Octupole Deformation and their CP-violating effects in molecules
-- [2204.01658](../papers/2204.01658.md) (2022) [2] Kaon, Nucleon and $Δ^*$ Resonances with Hidden Charm
-- [2203.14723](../papers/2203.14723.md) (2022) [2] $R$-matrix analysis of $^{22}$Ne($α$, n)$^{25}$Mg and $^{22}$Ne($α$, $γ$)$^{26}$Mg reaction
-- [2203.09753](../papers/2203.09753.md) (2022) [2] Neutron skin systematics from microscopic equations of state
-- [2203.05647](../papers/2203.05647.md) (2022) [2] Excited states and precision results for nucleon charges and form factors
+- [2606.18165](../papers/2606.18165.md) (2026) [2] Observation of a dominant $\boldsymbol{0f_{7/2}}$ neutron configuration in the $\boldsymbol{^{32}}$Si $\boldsymbol{J^π=5...
+- [2606.11143](../papers/2606.11143.md) (2026) [2] Hindered $ΔK=1$ Dipole Strength in octupole bands in $N=90$ $^{154}$Gd from Lifetime Measurements with $γ-γ$ fast timing...
+- [2606.06263](../papers/2606.06263.md) (2026) [2] Spin-orbit correlation of quarks within quarkonium
+- [2606.05297](../papers/2606.05297.md) (2026) [2] Continuous-variable ADAPT-VQE for bosonic lattice models
+- [2605.26877](../papers/2605.26877.md) (2026) [2] Azimuthal asymmetry in exclusive quasi-elastic neutrino-nucleus interactions
+- [2605.22318](../papers/2605.22318.md) (2026) [2] Shielded inner-shell transitions in atomic samarium for tests of fundamental physics
+- [2605.17059](../papers/2605.17059.md) (2026) [1] Parity violation in atoms: neutrino-mediated long range forces and finite nuclear size
+- [2605.11353](../papers/2605.11353.md) (2026) [2] Ab initio calculation of symmetry-breaking observables
+- [2605.07826](../papers/2605.07826.md) (2026) [1] Hadronic parity violation: successes, challenges, and future prospects
+- [2604.27982](../papers/2604.27982.md) (2026) [2] Chiral Symmetry and Its Restoration in QCD
+- [2604.26876](../papers/2604.26876.md) (2026) [2] Neutron Stars and Neutron Skins: Connecting Finite Nuclei to Dense Matter
+- [2604.22330](../papers/2604.22330.md) (2026) [1] The parity-violating asymmetry including QED corrections in high-energy electron-nucleus collisions
+- [2604.22719](../papers/2604.22719.md) (2026) [2] Mechanisms of high energy polarized photoproduction of $π^{-}Δ^{++}$
+- [2604.21245](../papers/2604.21245.md) (2026) [2] Octupole correlation effects on two-neutron transfer intensity in rare-earth nuclei
+- [2604.17756](../papers/2604.17756.md) (2026) [2] Polarization, Maximal Concurrence, and Pure States in High-Energy Collisions
+- [2604.13766](../papers/2604.13766.md) (2026) [2] Spectroscopy of $^{11}$Be from the $^{10}$Be($d,p$) reaction measured in inverse kinematics by the AT-TPC in SOLARIS
+- [2604.11265](../papers/2604.11265.md) (2026) [2] $Δl =1$ coupling of single-particle orbitals in octupole deformed nuclei
+- [2604.10038](../papers/2604.10038.md) (2026) [2] Understanding the structure of nucleon excitations from their wavefunctions
+- [2604.00465](../papers/2604.00465.md) (2026) [1] Gravitational wave spectrum from first-order QCD phase transitions based on a parity doublet model
+- [2604.00959](../papers/2604.00959.md) (2026) [2] Baryonic form factors of light pseudoscalar mesons
+- [2603.29433](../papers/2603.29433.md) (2026) [2] Nuclear shapes of Nb isotopes
+- [2603.28337](../papers/2603.28337.md) (2026) [2] Combined analysis of the data on cross sections and spin density matrix elements for $K^*Σ$ photoproduction reactions
+- [2603.27657](../papers/2603.27657.md) (2026) [2] Magnetic moments of open bottom--charm molecular pentaquark octets
+- [2603.22581](../papers/2603.22581.md) (2026) [1] Electroweak Radiative Corrections to Parity-Violating Electron-Nucleus Scattering
+- [2603.11983](../papers/2603.11983.md) (2026) [2] The Matter Radius of 132Sn and the CREX-PREX Dilemma
+- [2603.09747](../papers/2603.09747.md) (2026) [2] Architecture as physical prior: cooperative neural network for nuclear masses
+- [2603.06978](../papers/2603.06978.md) (2026) [2] Ab initio study of the halo structure in $^{11}$Be
+- [2603.06789](../papers/2603.06789.md) (2026) [1] Enhanced Neutrino Cooling from Parity-Doubled Nucleons in Neutron Star Cooling Simulations
+- [2603.02979](../papers/2603.02979.md) (2026) [2] Scattering and Femtoscopic Correlation Functions of the $Σ_c^{++}π^{+}$, $Σ_c^{0}π^{-}$ and $Σ_b^{+}π^{+}$ Systems
+- [2603.03044](../papers/2603.03044.md) (2026) [2] Effects of isovector spin-orbit interaction on the charge-weak form factor difference in $^{48}$Ca, $^{208}$Pb, $^{90}$Z...
+- [2603.00274](../papers/2603.00274.md) (2026) [2] Spin-2 Mesons in a Relativistic Hartree Description of Nuclei
+- [2602.21705](../papers/2602.21705.md) (2026) [2] Phase diagram of the single-flavor Gross--Neveu--Wilson model from the Grassmann corner transfer matrix renormalization ...
+- [2602.20436](../papers/2602.20436.md) (2026) [2] Probing Neutron Skins with KDAR Neutrinos: From Coherent to Diffractive Elastic Neutrino--Nucleus Scattering
+- [2602.17611](../papers/2602.17611.md) (2026) [2] Evidence for Multimodal Superfluidity of Neutrons
+- [2602.12503](../papers/2602.12503.md) (2026) [2] Chiral symmetry restoration and hyperon suppression in neutron stars
+- [2602.01759](../papers/2602.01759.md) (2026) [2] Fully strange tetra- and penta-quarks in a chiral quark model
+- [2602.02429](../papers/2602.02429.md) (2026) [2] Radiative decay and electromagnetic moments in $^{229}$Th determined within nuclear DFT
+- [2601.22234](../papers/2601.22234.md) (2026) [2] Low-energy 17O(n,g)18O reaction within the microscopic potential model and its role for the weak r-process
+- [2601.20329](../papers/2601.20329.md) (2026) [1] From first to second minimum: Parity-dependent level densities in $^{240,242}$Pu
+- [2601.13819](../papers/2601.13819.md) (2026) [2] $\mathbf{γZ}$ Box at Low Energy
+- [2601.09424](../papers/2601.09424.md) (2026) [2] Shell and cluster structures in $^{20}$Ne in the variation of multiple bases of the antisymmetrized molecular dynamics
+- [2601.06582](../papers/2601.06582.md) (2026) [2] Lattice QCD determination of the $γZ$ box contribution to the proton weak charge
+- [2601.03692](../papers/2601.03692.md) (2026) [2] Role of $Σ(1660)$ in the $K^- p \toπ^0π^0Σ^0$ reaction
+- [2601.03804](../papers/2601.03804.md) (2026) [2] Improved microscopic nuclear level densities within the triaxial Hartree-Fock-Bogoliubov plus combinatorial method
+- [2601.04346](../papers/2601.04346.md) (2026) [2] Experimental study of $^{53}$Cr via the $(d,pγ)$ reaction
+- [2601.01615](../papers/2601.01615.md) (2026) [1] Comment on QED Corrections to the Parity Violating Asymmetry in High-Energy Electron-Nucleus Scattering
+- [2512.22057](../papers/2512.22057.md) (2025) [2] Unified Royer law revision for alpha-decay half-lives: shell corrections, pairing,and orbital-angular-momentum
+- [2512.20258](../papers/2512.20258.md) (2025) [2] Proton-neutron correlations in baryon-number fluctuations near the liquid-gas transition
+- [2512.18074](../papers/2512.18074.md) (2025) [2] Octupole deformation in quasiparticle states of odd-mass and odd-odd nuclei
+- [2512.16773](../papers/2512.16773.md) (2025) [2] Comparing invariant-mass spectroscopy of 8B with ab initio predictions
+- [2512.15865](../papers/2512.15865.md) (2025) [2] Weak Charge Form Factor Determination at the Electron-Ion Collider
+- [2512.13824](../papers/2512.13824.md) (2025) [2] Generalized relativistic second order magnetohydrodynamics: A correlation function approach using Zubarev's nonequilibri...
+- [2512.07172](../papers/2512.07172.md) (2025) [1] Chiral, parity-doublet, effective-Lagrangian mean-field theories for nuclear and astrophysical phenomenology
+- [2512.03776](../papers/2512.03776.md) (2025) [2] Impact of octupole deformation on the nuclear electromagnetic response
+- [2512.03894](../papers/2512.03894.md) (2025) [1] Kinetic Mixing and Axial Charges in the Parity-Doublet Model
+- [2512.01192](../papers/2512.01192.md) (2025) [1] Linear realization of SU(3) parity doublet model for octet baryons with bad diquark
+- [2512.01468](../papers/2512.01468.md) (2025) [1] Probing the three-body force in hadronic systems with specific charge parity
+- [2511.21141](../papers/2511.21141.md) (2025) [2] A Bottom-Up EFT Approach To Superdense Baryonic Matter
+- [2511.15385](../papers/2511.15385.md) (2025) [2] Resolving the PREX-CREX puzzle in covariant density functional theory
+- [2511.14674](../papers/2511.14674.md) (2025) [2] Deviations from the Isobaric Multiplet Mass Equation due to threshold states
+- [2511.10955](../papers/2511.10955.md) (2025) [2] Constraining Neutron Capture Cross Sections for $^{88}\mathrm{Y}$ with Gamma-ray Strength Function in $(p,p^\primeγ)$ Su...
+- [2511.10145](../papers/2511.10145.md) (2025) [2] Possible $K \bar{K}^*$ and $D \bar{D}^*$ resonances by solving Schrödinger equation
+- [2511.09739](../papers/2511.09739.md) (2025) [2] CP violation
+- [2511.07226](../papers/2511.07226.md) (2025) [1] Renormalization-Group Invariant Parity-Doublet Model for Nuclear and Neutron-Star Matter
+- [2510.27125](../papers/2510.27125.md) (2025) [2] First evidence for the J$>$1 components of the pygmy dipole resonance in neutron-rich nuclei
+- [2510.24894](../papers/2510.24894.md) (2025) [2] Isotensor $πππ$ scattering with a $ρ$ resonant subsystem from QCD
+- [2510.23779](../papers/2510.23779.md) (2025) [2] Microscopic study of the low-energy enhancement in the gamma-decay strength of \(^{50}\)V
+- [2510.14933](../papers/2510.14933.md) (2025) [2] Nucleon Electric Dipole Moments in Paramagnetic Molecules through Effective Field Theory
+- [2509.20468](../papers/2509.20468.md) (2025) [2] Roles of $U(1)$ axial anomaly effects in cold and dense two-color QCD with $2+2$ flavors
+- [2509.15897](../papers/2509.15897.md) (2025) [2] Effects of energy levels on the double-differential cross sections of outgoing charged particles for the n+19F reaction ...
+- [2509.13630](../papers/2509.13630.md) (2025) [2] $Δ(1232)$ production in the $γp \to ϕπp$ reaction
+- [2509.04854](../papers/2509.04854.md) (2025) [2] Dissipative contributions to spin polarization
+- [2509.03008](../papers/2509.03008.md) (2025) [2] Origin of nucleon mass in the light of PSR J0614-3329 with quark-hadron crossover
+- [2509.03138](../papers/2509.03138.md) (2025) [2] Suppression of dynamical momentum-space shell by chiral symmetry
+- [2508.18686](../papers/2508.18686.md) (2025) [2] A New Evidence of Interplay Between Tetrahedral and Octahedral Symmetries and Symmetry Breaking: Exotic Rotational Bands...
+- [2508.11937](../papers/2508.11937.md) (2025) [2] Cluster-breaking and reconfiguration effects in $_Λ^{12}\rm{B}$ hypernucleus
+- [2508.11251](../papers/2508.11251.md) (2025) [2] Low-lying level structures in $^{162}$Lu
+- [2508.00243](../papers/2508.00243.md) (2025) [2] Implication of neutron star observations to the origin of nucleon mass
+- [2507.23282](../papers/2507.23282.md) (2025) [2] Mapped $spdf$ interacting boson model for quadrupole-octupole collective states in nuclei
+- [2507.21498](../papers/2507.21498.md) (2025) [2] Heavy flavored hydrogen molecule systems
+- [2507.21806](../papers/2507.21806.md) (2025) [2] Shape evolution in neutron-rich odd-even $^{105-109}$Nb isotopes
+- [2507.19811](../papers/2507.19811.md) (2025) [2] Nuclear Schiff moment of fluorine isotope $^{19}$F
+- [2507.15380](../papers/2507.15380.md) (2025) [1] Radiative corrections to the parity-violating spin asymmetry
+- [2507.13728](../papers/2507.13728.md) (2025) [2] Triply heavy tetraquarks $\bar{b}c\bar{q}c$ and $\bar{c}b\bar{q}b$ in a constituent quark model
+- [2507.10505](../papers/2507.10505.md) (2025) [1] Signatures of Odd-Parity $s$-wave $Ξ^*$ States in Femtoscopic Correlation Functions
+- [2507.10660](../papers/2507.10660.md) (2025) [1] Lattice QCD Study of Positive Parity Dibaryons with Maximal Charm and Strangeness
+- [2507.08466](../papers/2507.08466.md) (2025) [2] Spectroscopic and femtoscopic insights into vector-baryon interactions in the strangeness $-1$ sector
+- [2507.05224](../papers/2507.05224.md) (2025) [2] Laser spectroscopy and CP-violation sensitivity of actinium monofluoride
+- [2507.01369](../papers/2507.01369.md) (2025) [2] Effects of beyond-mean-field correlations on nuclear Schiff moments
+- [2506.18964](../papers/2506.18964.md) (2025) [2] Novel Phases of a Baryon-Dense QCD-like Theory
+- [2506.16684](../papers/2506.16684.md) (2025) [1] Chiral Invariant Mass Constraints from HESS J1731 347 in an Extended Parity Doublet Model with Isovector Scalar Meson
+- [2506.07764](../papers/2506.07764.md) (2025) [2] Level order of quark systems: The puzzle of the Roper resonance, and related questions
+- [2505.24674](../papers/2505.24674.md) (2025) [2] Review on recent progress in the study of the $N^*(920)$ subthreshold singularity and the $σ/f_0(500)$ meson
+- [2505.21970](../papers/2505.21970.md) (2025) [2] Constraints on the strength of first-order phase transition and its relation to nucleon mass
+- [2505.10237](../papers/2505.10237.md) (2025) [2] Competition between the neutron-proton pair break-ups delineating the level structure of 202Po
+- [2505.06844](../papers/2505.06844.md) (2025) [2] Continuum Lambda spectra for a 6Li_Lambda hypernucleus in the 6Li(K-, pi-) reaction
+- [2505.05230](../papers/2505.05230.md) (2025) [2] Theoretical characterisation of the barium II and radium II ions
+- [2505.04191](../papers/2505.04191.md) (2025) [2] Heisenberg Uncertainty Inequality and Breaking of Isospin Symmetry in Atomic Nuclei
+- [2505.02067](../papers/2505.02067.md) (2025) [2] Tilted-axis-cranking covariant density functional theory for the high-spin spectroscopy in $^{69}$Ga
+- [2504.20604](../papers/2504.20604.md) (2025) [2] Investigation of the properties of $1^-_1$ excited states of even-even nuclei

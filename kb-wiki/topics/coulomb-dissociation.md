@@ -6,6 +6,9 @@
 
 **Papers:** 91
 
+- [2407.16775](../papers/2407.16775.md) (2024) [2] Investigating the rate of $^{10}$Be(n,$γ$)$^{11}$Be radiative capture reaction within the FRDWBA framework
+- [2407.03044](../papers/2407.03044.md) (2024) [2] Two-cluster approach to the properties of one- and two-neutron-halo nuclei
+- [2402.06755](../papers/2402.06755.md) (2024) [1] Radiative neutron capture rate of $^{11}$B$(n,γ)^{12}$B reaction from the Coulomb dissociation of $^{12}$B
 - [2211.03968](../papers/2211.03968.md) (2022) [2] Electromagnetic fields in ultra-peripheral relativistic heavy-ion collisions
 - [2206.07546](../papers/2206.07546.md) (2022) [2] Calculation of Coulomb breakup cross sections using a new Coulomb dynamical polarization potential
 - [2009.00658](../papers/2009.00658.md) (2020) [2] Microscopic investigation of the $^8$Li($n, γ$)$^9$Li reaction
@@ -35,9 +38,6 @@
 - [0710.4944](../papers/0710.4944.md) (2007) [2] Evidence for higher order QED in e+ e- pair production at RHIC
 - [0707.0687](../papers/0707.0687.md) (2007) [2] The Dissociation of 8B in the Coulomb Field and the Validity of the CD Method
 - [0705.3307](../papers/0705.3307.md) (2007) [1] Coulomb dissociation, a tool for nuclear astrophysics
-- [2402.06755](../papers/2402.06755.md) (0000) [1] 2402.06755
-- [2407.03044](../papers/2407.03044.md) (0000) [2] 2407.03044
-- [2407.16775](../papers/2407.16775.md) (0000) [2] 2407.16775
 - [astro-ph/0107226](../papers/astro-ph/0107226.md) (0000) [2] astro-ph/0107226
 - [astro-ph/9909317](../papers/astro-ph/9909317.md) (0000) [1] astro-ph/9909317
 - [nucl-ex/0010014](../papers/nucl-ex/0010014.md) (0000) [2] nucl-ex/0010014

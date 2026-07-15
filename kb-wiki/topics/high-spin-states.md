@@ -6,6 +6,10 @@
 
 **Papers:** 72
 
+- [2601.18688](../papers/2601.18688.md) (2026) [2] First observation of multi-phonon $γ$-vibrations in an odd-odd nuclear system
+- [2502.06184](../papers/2502.06184.md) (2025) [2] Octupole correlations in superdeformed bands of $^{56}$Ni
+- [2405.13856](../papers/2405.13856.md) (2024) [2] In-beam $γ-$spectroscopy of the transitional nucleus $^{217}$Ac
+- [2312.01593](../papers/2312.01593.md) (2023) [2] Impacts of hexadecapole deformations on the collective energy spectra of axially deformed nuclei
 - [2306.14368](../papers/2306.14368.md) (2023) [2] Understanding Excitations in $^{59,61}$Co, $^{59}$Ni
 - [2303.06521](../papers/2303.06521.md) (2023) [2] Removal of $K$-mixing in angular momentum projected nuclear wave functions
 - [2303.00588](../papers/2303.00588.md) (2023) [2] Coexistence of single particle and collective excitation in $^{61}$Ni
@@ -56,10 +60,6 @@
 - [0908.4486](../papers/0908.4486.md) (2009) [2] Global nuclear structure effects of tensor interaction
 - [0801.0296](../papers/0801.0296.md) (2008) [2] Triaxial projected shell model study of gamma-vibrational bands in even-even Er isotopes
 - [0706.3288](../papers/0706.3288.md) (2007) [2] Alternative experimental evidence for chiral restoration in excited baryons
-- [2312.01593](../papers/2312.01593.md) (0000) [2] 2312.01593
-- [2405.13856](../papers/2405.13856.md) (0000) [2] 2405.13856
-- [2502.06184](../papers/2502.06184.md) (0000) [2] 2502.06184
-- [2601.18688](../papers/2601.18688.md) (0000) [2] 2601.18688
 - [nucl-th/0004009](../papers/nucl-th/0004009.md) (0000) [2] nucl-th/0004009
 - [nucl-th/0204041](../papers/nucl-th/0204041.md) (0000) [2] nucl-th/0204041
 - [nucl-th/0211033](../papers/nucl-th/0211033.md) (0000) [2] nucl-th/0211033

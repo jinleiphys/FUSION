@@ -8,6 +8,10 @@
 
 **Papers:** 27
 
+- [2606.13908](../papers/2606.13908.md) (2026) [2] Anomalies, Topology, and Hadron Structure in QCD
+- [2603.11704](../papers/2603.11704.md) (2026) [2] Energy-momentum tensor form factors and spin density distribution in the nucleon calculated in a quantized Skyrme model ...
+- [2512.06801](../papers/2512.06801.md) (2025) [2] Nucleon 3D intrinsic spin structure from the weak-neutral axial-vector form factors
+- [2308.16833](../papers/2308.16833.md) (2023) [1] Resonance contributions to nucleon spin structure in Holographic QCD
 - [2211.15587](../papers/2211.15587.md) (2022) [2] Gluon helicity distribution in the nucleon from lattice QCD and machine learning
 - [2209.09995](../papers/2209.09995.md) (2022) [1] Theoretical discrepancies in the nucleon spin structure and the hyperfine splitting of muonic hydrogen
 - [2205.10076](../papers/2205.10076.md) (2022) [2] The proton structure in and out of muonic hydrogen
@@ -24,10 +28,6 @@
 - [1203.5579](../papers/1203.5579.md) (2012) [2] Azimuthal asymmetries in lepton-pair production at a fixed-target experiment using the LHC beams (AFTER)
 - [0807.4207](../papers/0807.4207.md) (2008) [2] High-energy hadron physics at J-PARC
 - [0711.1703](../papers/0711.1703.md) (2007) [2] Probing the nucleon structure with CLAS
-- [2308.16833](../papers/2308.16833.md) (0000) [1] 2308.16833
-- [2512.06801](../papers/2512.06801.md) (0000) [2] 2512.06801
-- [2603.11704](../papers/2603.11704.md) (0000) [2] 2603.11704
-- [2606.13908](../papers/2606.13908.md) (0000) [2] 2606.13908
 - [hep-ph/0106225](../papers/hep-ph/0106225.md) (0000) [1] hep-ph/0106225
 - [hep-ph/0109046](../papers/hep-ph/0109046.md) (0000) [2] hep-ph/0109046
 - [hep-ph/0110128](../papers/hep-ph/0110128.md) (0000) [1] hep-ph/0110128

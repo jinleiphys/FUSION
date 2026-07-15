@@ -6,6 +6,25 @@
 
 **Papers:** 146 (showing first 100 of 146)
 
+- [2606.09247](../papers/2606.09247.md) (2026) [1] Bayesian analysis of the shear modulus in the neutron-star crust
+- [2606.10090](../papers/2606.10090.md) (2026) [1] Thermodynamic versus Dynamical Description of the Neutron-Star Crust-Core Instability: Implications for Crustal Observab...
+- [2601.07722](../papers/2601.07722.md) (2026) [1] Multi-Physics Bayesian Analysis of Neutron Star Crust Using Relativistic Mean-Field Model
+- [2512.19593](../papers/2512.19593.md) (2025) [1] Neutron star crust and outer core equation of state from chiral effective field theory with quantified uncertainties
+- [2512.12866](../papers/2512.12866.md) (2025) [2] Local Quantum Friction with Pairing: Unitary Dissipation in Large Fermi Systems
+- [2507.06837](../papers/2507.06837.md) (2025) [2] Does HESS J1731-347 have a thick crust ?
+- [2507.05746](../papers/2507.05746.md) (2025) [2] Dynamical scheme for computing the mass parameter of a system in a medium
+- [2506.05603](../papers/2506.05603.md) (2025) [1] Bayesian inference of neutron star crust properties using an ab initio-benchmarked meta-model
+- [2505.16929](../papers/2505.16929.md) (2025) [1] Properties of the neutron star crust informed by nuclear structure data
+- [2505.13691](../papers/2505.13691.md) (2025) [1] Unified nonparametric equation-of-state inference from the neutron-star crust to perturbative-QCD densities
+- [2501.12064](../papers/2501.12064.md) (2025) [2] Light clusters as a possible source of crustal impurities: a quasi-particle approach
+- [2409.14482](../papers/2409.14482.md) (2024) [2] Finite-Element Simulations of Rotating Neutron Stars with Anisotropic Crusts and Continuous Gravitational Waves
+- [2408.11639](../papers/2408.11639.md) (2024) [2] Capture Rates of Highly Degenerate Neutrons
+- [2406.05680](../papers/2406.05680.md) (2024) [2] Thermodynamically consistent accreted crust of neutron stars: The role of proton shell effects
+- [2405.11858](../papers/2405.11858.md) (2024) [1] Magnetar QPOs and neutron star crust elasticity
+- [2401.13590](../papers/2401.13590.md) (2024) [1] Effects of dilute neutron matter on the neutron star crust equation of state
+- [2309.04855](../papers/2309.04855.md) (2023) [1] Anisotropic neutron star crust, solar system mountains, and gravitational waves
+- [2309.01533](../papers/2309.01533.md) (2023) [2] Light clusters in the liquid proto-neutron star inner crust
+- [2309.00893](../papers/2309.00893.md) (2023) [1] Electrical conductivity of warm neutron star crust in magnetic fields: Neutron-drip regime
 - [2306.12451](../papers/2306.12451.md) (2023) [2] Impact of Pycnonuclear Fusion Uncertainties on the Cooling of Accreting Neutron Star Crusts
 - [2211.10263](../papers/2211.10263.md) (2022) [2] Dark particle mass effects on neutron star properties from a short-range correlated hadronic model
 - [2211.07339](../papers/2211.07339.md) (2022) [1] Magnetised neutron star crust within effective relativistic mean-field model
@@ -87,22 +106,3 @@
 - [1302.3776](../papers/1302.3776.md) (2013) [2] Some aspects of the phase diagram of nuclear matter relevant to compact stars
 - [1212.6405](../papers/1212.6405.md) (2012) [2] Review of Multi-messenger observations of neutron rich matter
 - [1212.4539](../papers/1212.4539.md) (2012) [2] Constraints on the symmetry energy from neutron star observations
-- [1212.0393](../papers/1212.0393.md) (2012) [1] Neutron resonances in few-body systems and the EOS of neutron star crust
-- [1211.2352](../papers/1211.2352.md) (2012) [2] Charged Ising Model of Neutron Star Matter
-- [1209.0270](../papers/1209.0270.md) (2012) [2] Phase diagram of neutron-rich nuclear matter and its impact on astrophysics
-- [1207.6064](../papers/1207.6064.md) (2012) [1] Neutron degeneracy and plasma physics effects on radiative neutron captures in neutron star crust
-- [1205.6368](../papers/1205.6368.md) (2012) [1] Systematic analysis of symmetry energy effects in the neutron star crust properties
-- [1203.5565](../papers/1203.5565.md) (2012) [1] Microscopic sub-barrier fusion calculations for the neutron star crust
-- [1202.5701](../papers/1202.5701.md) (2012) [2] Multi-messenger probes of neutron rich matter
-- [1202.3378](../papers/1202.3378.md) (2012) [1] Deep Crustal Heating in a Multicomponent Accreted Neutron Star Crust
-- [1109.5095](../papers/1109.5095.md) (2011) [1] Neutron Star Crust and Molecular Dynamics Simulation
-- [1107.2638](../papers/1107.2638.md) (2011) [1] Proton fraction in the inner neutron-star crust
-- [1106.1661](../papers/1106.1661.md) (2011) [2] Multi-messenger observations of neutron rich matter
-- [1104.1194](../papers/1104.1194.md) (2011) [2] Nuclear Density Functional Theory and the Equation of State
-- [1102.5379](../papers/1102.5379.md) (2011) [1] A low energy theory for superfluid and solid matter and its application to the neutron star crust
-- [1011.2928](../papers/1011.2928.md) (2010) [1] Towards a quantal dynamical simulation of the neutron-star crust
-- [1008.0402](../papers/1008.0402.md) (2010) [2] Neutron rich matter, neutron stars, and their crusts
-- [1006.2916](../papers/1006.2916.md) (2010) [1] Wigner-Seitz cells in neutron star crust with finite range interactions
-- [1004.0926](../papers/1004.0926.md) (2010) [2] Electronic screening and damping in magnetars
-- [1002.3705](../papers/1002.3705.md) (2010) [1] Unified description of neutron superfluidity in the neutron-star crust with analogy to anisotropic multi-band BCS superc...
-- [0912.1491](../papers/0912.1491.md) (2009) [2] Gravitational Waves From Low Mass Neutron Stars

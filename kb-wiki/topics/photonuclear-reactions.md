@@ -6,6 +6,8 @@
 
 **Papers:** 36
 
+- [2606.08830](../papers/2606.08830.md) (2026) [2] Nuclear parton distributions and nuclear shadowing
+- [2308.14094](../papers/2308.14094.md) (2023) [2] Production of various elements in ultraperipheral $^{208}$Pb-$^{208}$Pb collisions at the LHC
 - [2306.08377](../papers/2306.08377.md) (2023) [2] Manipulation of Giant Multipole Resonances via Vortex $γ$ Photons
 - [2212.08943](../papers/2212.08943.md) (2022) [1] Consideration of memory of spin and parity in the fissioning compound nucleus by applying the Hauser-Feshbach fission fr...
 - [2206.03447](../papers/2206.03447.md) (2022) [2] Evaluations of uncertainties in simulations of propagation of ultrahigh-energy cosmic-ray nuclei derived from microscopi...
@@ -20,8 +22,6 @@
 - [0912.2264](../papers/0912.2264.md) (2009) [1] Relativistic corrections of one-nucleon current in low-energy three-nucleon photonuclear reactions
 - [0911.0064](../papers/0911.0064.md) (2009) [1] Photonuclear reactions of actinides in the giant dipole resonance region
 - [0709.4155](../papers/0709.4155.md) (2007) [1] Photonuclear reactions of actinide and pre-actinide nuclei at intermediate energies
-- [2308.14094](../papers/2308.14094.md) (0000) [2] 2308.14094
-- [2606.08830](../papers/2606.08830.md) (0000) [2] 2606.08830
 - [hep-ph/9804348](../papers/hep-ph/9804348.md) (0000) [2] hep-ph/9804348
 - [nucl-th/0006069](../papers/nucl-th/0006069.md) (0000) [1] nucl-th/0006069
 - [nucl-th/0007005](../papers/nucl-th/0007005.md) (0000) [2] nucl-th/0007005

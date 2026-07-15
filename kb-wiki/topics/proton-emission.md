@@ -6,6 +6,29 @@
 
 **Papers:** 99
 
+- [2603.09777](../papers/2603.09777.md) (2026) [2] Overview of recent UPC measurements
+- [2512.15879](../papers/2512.15879.md) (2025) [1] Two-proton emission as source of spin-entangled proton pairs
+- [2512.01663](../papers/2512.01663.md) (2025) [1] Nanosecond-Scale Proton Emission from Triaxially Deformed Lu-148 Predicted with High Accuracy Qp Value via Novel Bayesia...
+- [2511.00866](../papers/2511.00866.md) (2025) [1] Proton emission systematics along proton drip line
+- [2509.14717](../papers/2509.14717.md) (2025) [2] Refining the deep sub-barrier 12C+12C excitation function with STELLA
+- [2505.00143](../papers/2505.00143.md) (2025) [2] Enhanced Nuclear Binding Near the Proton Dripline Opens Possible Bypass of the $^{64}{\rm Ge}$ rp-process Waiting Point
+- [2501.11458](../papers/2501.11458.md) (2025) [2] Beta-delayed particle emission and collective rotations
+- [2412.16362](../papers/2412.16362.md) (2024) [2] B(E2) strength in $^{36,38}$Ca and in mirror nuclei 36S, 38Ar
+- [2411.17462](../papers/2411.17462.md) (2024) [2] Lattice simulation of nucleon distribution and shell closure in the proton-rich nucleus $^{22}$Si
+- [2411.10700](../papers/2411.10700.md) (2024) [1] Direct correlation between the near-proton-emission threshold resonance in $^{11}$B and the branching ratio of beta-dela...
+- [2411.03539](../papers/2411.03539.md) (2024) [2] A pathway to unveiling neutrinoless $ββ$ decay nuclear matrix elements via $γγ$ decay
+- [2411.00509](../papers/2411.00509.md) (2024) [2] Isospin breaking in the $^{71}$Kr and $^{71}$Br mirror system
+- [2410.23418](../papers/2410.23418.md) (2024) [1] One-proton emission of $^{102}$Sb and its sensitivity to proton-neutron interaction
+- [2407.11136](../papers/2407.11136.md) (2024) [1] Spin correlation in two-proton emission from $^6$Be
+- [2407.04487](../papers/2407.04487.md) (2024) [1] Observation of near-scission "polar" and "equatorial" proton emission in heavy-ion induced fission
+- [2406.09803](../papers/2406.09803.md) (2024) [2] Triaxial shape of the one-proton emitter $^{149}$Lu
+- [2405.14190](../papers/2405.14190.md) (2024) [2] Strangelets at finite temperature
+- [2405.12095](../papers/2405.12095.md) (2024) [2] $ {}^{164} \mathrm{Pb} $: A possible heaviest $ N = Z $ doubly magic nucleus
+- [2403.04251](../papers/2403.04251.md) (2024) [1] Theoretical calculations of proton emission half-lives based on a deformed Gamow-like model
+- [2312.15017](../papers/2312.15017.md) (2023) [1] Interference of resonances in two-proton emission of $^{16}$Ne
+- [2310.14323](../papers/2310.14323.md) (2023) [2] Strangelets at finite temperature: nucleon emission rates, interface and shell effects
+- [2308.14094](../papers/2308.14094.md) (2023) [2] Production of various elements in ultraperipheral $^{208}$Pb-$^{208}$Pb collisions at the LHC
+- [2308.01942](../papers/2308.01942.md) (2023) [1] One-proton emission from 148,149,150,151Lu in the DRHBc plus WKB approach
 - [2306.05192](../papers/2306.05192.md) (2023) [2] Description of the proton-decaying 0$^+_2$ resonance of the $α$ particle
 - [2304.13391](../papers/2304.13391.md) (2023) [1] Two-proton emission and related phenomena
 - [2303.10529](../papers/2303.10529.md) (2023) [1] Diproton correlation and two-proton emission from proton-rich nuclei
@@ -58,29 +81,6 @@
 - [0802.3606](../papers/0802.3606.md) (2008) [2] Effects of the triaxial deformation and pairing correlation on the proton emitter 145Tm
 - [0801.0784](../papers/0801.0784.md) (2008) [2] Blurred femtoscopy in two-proton decay
 - [0709.3797](../papers/0709.3797.md) (2007) [2] Two-proton radioactivity
-- [2308.01942](../papers/2308.01942.md) (0000) [1] 2308.01942
-- [2308.14094](../papers/2308.14094.md) (0000) [2] 2308.14094
-- [2310.14323](../papers/2310.14323.md) (0000) [2] 2310.14323
-- [2312.15017](../papers/2312.15017.md) (0000) [1] 2312.15017
-- [2403.04251](../papers/2403.04251.md) (0000) [1] 2403.04251
-- [2405.12095](../papers/2405.12095.md) (0000) [2] 2405.12095
-- [2405.14190](../papers/2405.14190.md) (0000) [2] 2405.14190
-- [2406.09803](../papers/2406.09803.md) (0000) [2] 2406.09803
-- [2407.04487](../papers/2407.04487.md) (0000) [1] 2407.04487
-- [2407.11136](../papers/2407.11136.md) (0000) [1] 2407.11136
-- [2410.23418](../papers/2410.23418.md) (0000) [1] 2410.23418
-- [2411.00509](../papers/2411.00509.md) (0000) [2] 2411.00509
-- [2411.03539](../papers/2411.03539.md) (0000) [2] 2411.03539
-- [2411.10700](../papers/2411.10700.md) (0000) [1] 2411.10700
-- [2411.17462](../papers/2411.17462.md) (0000) [2] 2411.17462
-- [2412.16362](../papers/2412.16362.md) (0000) [2] 2412.16362
-- [2501.11458](../papers/2501.11458.md) (0000) [2] 2501.11458
-- [2505.00143](../papers/2505.00143.md) (0000) [2] 2505.00143
-- [2509.14717](../papers/2509.14717.md) (0000) [2] 2509.14717
-- [2511.00866](../papers/2511.00866.md) (0000) [1] 2511.00866
-- [2512.01663](../papers/2512.01663.md) (0000) [1] 2512.01663
-- [2512.15879](../papers/2512.15879.md) (0000) [1] 2512.15879
-- [2603.09777](../papers/2603.09777.md) (0000) [2] 2603.09777
 - [nucl-th/0105029](../papers/nucl-th/0105029.md) (0000) [2] nucl-th/0105029
 - [nucl-th/0109013](../papers/nucl-th/0109013.md) (0000) [2] nucl-th/0109013
 - [nucl-th/0201039](../papers/nucl-th/0201039.md) (0000) [1] nucl-th/0201039

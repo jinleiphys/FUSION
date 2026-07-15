@@ -4,6 +4,9 @@
 
 **Papers:** 29
 
+- [2604.22599](../papers/2604.22599.md) (2026) [2] The 0+-spectrum in rare earth nuclei within the pseudo-SU(3) shell model
+- [2512.11555](../papers/2512.11555.md) (2025) [2] The $B(E2)$ anomaly: Evidence for a low-lying mixed-symmetry collective excitation mode
+- [2508.09643](../papers/2508.09643.md) (2025) [2] Coulomb excitation of $^{124}$Te: Emerging collectivity and persisting seniority structure in the $6_1^+$ level
 - [2304.10873](../papers/2304.10873.md) (2023) [2] Moments of inertia in light deformed nuclei: pairing and mean-field impacts
 - [2207.13804](../papers/2207.13804.md) (2022) [1] Coulomb Form Factors of $^{27}$Al and $^{31}$P Nuclei Using Coulomb valance Tassie model and Bohr-Mottelson Collective M...
 - [2102.04044](../papers/2102.04044.md) (2021) [2] Variation after projection calculations for high-spin states
@@ -21,9 +24,6 @@
 - [0903.4639](../papers/0903.4639.md) (2009) [1] On the asymptotic methods for nuclear collective models
 - [0807.4410](../papers/0807.4410.md) (2008) [1] Unified description of 0+ states in a large class of nuclear collective models
 - [0805.4787](../papers/0805.4787.md) (2008) [2] Skyrme-Rpa Description of Dipole Giant Resonance in Heavy and Superheavy Nuclei
-- [2508.09643](../papers/2508.09643.md) (0000) [2] 2508.09643
-- [2512.11555](../papers/2512.11555.md) (0000) [2] 2512.11555
-- [2604.22599](../papers/2604.22599.md) (0000) [2] 2604.22599
 - [nucl-th/0312109](../papers/nucl-th/0312109.md) (0000) [2] nucl-th/0312109
 - [nucl-th/0409050](../papers/nucl-th/0409050.md) (0000) [2] nucl-th/0409050
 - [nucl-th/0510029](../papers/nucl-th/0510029.md) (0000) [2] nucl-th/0510029

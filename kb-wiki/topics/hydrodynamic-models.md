@@ -4,6 +4,20 @@
 
 **Papers:** 78
 
+- [2602.22490](../papers/2602.22490.md) (2026) [1] The shape of transverse momentum spectra in hybrid hydrodynamic models
+- [2601.19475](../papers/2601.19475.md) (2026) [2] How transverse momentum conservation breaks azimuthal correlation factorization
+- [2601.15023](../papers/2601.15023.md) (2026) [2] Carroll hydrodynamics with spin
+- [2507.19463](../papers/2507.19463.md) (2025) [2] Initial conditions and bulk viscosity effects on $Λ$ polarization in high-energy heavy ion collisions
+- [2504.19208](../papers/2504.19208.md) (2025) [2] Impact of Initial-State Nuclear and Sub-Nucleon Structures on Ultra-Central Puzzle in Heavy Ion Collisions
+- [2504.03516](../papers/2504.03516.md) (2025) [2] Supercooled Goldstone Bosons at the QCD Chiral Phase Transition
+- [2501.19240](../papers/2501.19240.md) (2025) [2] Hydrodynamic attractor in periodically driven ultracold quantum gases
+- [2411.06249](../papers/2411.06249.md) (2024) [2] Dynamical constraints on pseudo-gauge transformations
+- [2409.16093](../papers/2409.16093.md) (2024) [2] Going against the flow: Revealing the QCD degrees of freedom in hadronic collisions
+- [2407.10634](../papers/2407.10634.md) (2024) [1] Comparing matching prescriptions between pre-equilibrium and hydrodynamic models in high-energy nuclear collisions
+- [2404.14091](../papers/2404.14091.md) (2024) [1] Local univalence versus stability and causality in hydrodynamic models
+- [2403.03743](../papers/2403.03743.md) (2024) [2] Do not forget the electrons: Extending moderately-sized nuclear networks for multidimensional hydrodynamic codes
+- [2401.09571](../papers/2401.09571.md) (2024) [2] Hadronisation in event generators from small to large systems
+- [2311.02913](../papers/2311.02913.md) (2023) [2] The study on the multiplicity dependence of ridge behavior in $pp$ collisions at $\sqrt{s}=13$ TeV at the LHC
 - [2305.11050](../papers/2305.11050.md) (2023) [2] Production of $p$-nuclei from $r$-process seeds: the $νr$-process
 - [2304.12711](../papers/2304.12711.md) (2023) [2] Random model of flow decorrelation
 - [2211.14379](../papers/2211.14379.md) (2022) [2] Opacity dependence of transverse flow, pre-equilibrium and applicability of hydrodynamics in heavy-ion collisions
@@ -55,20 +69,6 @@
 - [0811.3363](../papers/0811.3363.md) (2008) [2] Resolving the HBT Puzzle in Relativistic Heavy Ion Collision
 - [0806.1013](../papers/0806.1013.md) (2008) [2] Heavy flavor in heavy-ion collisions at RHIC and RHIC II
 - [0709.3366](../papers/0709.3366.md) (2007) [2] Jozso's Legacy: Chemical and Kinetic Freeze-out in Heavy-Ion Collisions
-- [2311.02913](../papers/2311.02913.md) (0000) [2] 2311.02913
-- [2401.09571](../papers/2401.09571.md) (0000) [2] 2401.09571
-- [2403.03743](../papers/2403.03743.md) (0000) [2] 2403.03743
-- [2404.14091](../papers/2404.14091.md) (0000) [1] 2404.14091
-- [2407.10634](../papers/2407.10634.md) (0000) [1] 2407.10634
-- [2409.16093](../papers/2409.16093.md) (0000) [2] 2409.16093
-- [2411.06249](../papers/2411.06249.md) (0000) [2] 2411.06249
-- [2501.19240](../papers/2501.19240.md) (0000) [2] 2501.19240
-- [2504.03516](../papers/2504.03516.md) (0000) [2] 2504.03516
-- [2504.19208](../papers/2504.19208.md) (0000) [2] 2504.19208
-- [2507.19463](../papers/2507.19463.md) (0000) [2] 2507.19463
-- [2601.15023](../papers/2601.15023.md) (0000) [2] 2601.15023
-- [2601.19475](../papers/2601.19475.md) (0000) [2] 2601.19475
-- [2602.22490](../papers/2602.22490.md) (0000) [1] 2602.22490
 - [hep-ph/0111114](../papers/hep-ph/0111114.md) (0000) [2] hep-ph/0111114
 - [hep-ph/0507134](../papers/hep-ph/0507134.md) (0000) [2] hep-ph/0507134
 - [hep-ph/9811459](../papers/hep-ph/9811459.md) (0000) [1] hep-ph/9811459

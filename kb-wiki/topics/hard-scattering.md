@@ -6,6 +6,37 @@
 
 **Papers:** 119 (showing first 100 of 119)
 
+- [2604.20780](../papers/2604.20780.md) (2026) [2] Probing QCD instantons using jet correlation observables in proton-proton collisions at the LHC
+- [2604.13157](../papers/2604.13157.md) (2026) [2] Proton Structure from Neural Simulation-Based Inference at the LHC
+- [2604.11616](../papers/2604.11616.md) (2026) [2] Quantum simulating multi-particle processes in high energy nuclear physics: dijet production and color (de)coherence
+- [2603.23596](../papers/2603.23596.md) (2026) [2] A Breath of Fresh Air for Molière: Detecting Molière Scattering using Jet Substructure Observables in Oxygen Collisions
+- [2603.08776](../papers/2603.08776.md) (2026) [2] Sensitivity of Jet Observables to Molière Scattering Off Quasiparticles in Quark-Gluon Plasma
+- [2602.17860](../papers/2602.17860.md) (2026) [2] Producing and Studying Rare Isotopes in $e+A$ Collisions at the Electron-Ion Collider
+- [2511.14105](../papers/2511.14105.md) (2025) [2] Inclusive $J/ψ$ productions in pp collisions at $\sqrt{s}=$ 5.02, 7, and 13 TeV with the PACIAE model
+- [2511.09019](../papers/2511.09019.md) (2025) [2] The color force acting on a quark in the pion and nucleon
+- [2510.24847](../papers/2510.24847.md) (2025) [2] Heavy Quark Energy Loss in the Hybrid Model
+- [2507.09744](../papers/2507.09744.md) (2025) [2] Fragmentation of fully heavy tetraquarks: The TQ4Q1.1 functions as a case study
+- [2506.13889](../papers/2506.13889.md) (2025) [2] Deep-Inelastic Scattering at TeV Energies with LHC Muons
+- [2506.07426](../papers/2506.07426.md) (2025) [2] Tracing the Evolution of Nuclear Excitation at the Electron-Ion Collider
+- [2505.10663](../papers/2505.10663.md) (2025) [2] Distribution Functions of $Λ$ and $Σ^0$ Baryons
+- [2504.07372](../papers/2504.07372.md) (2025) [2] Empirical Determination of the Kaon Distribution Amplitude
+- [2502.18887](../papers/2502.18887.md) (2025) [2] A hybrid model for multi-particle production and multi-fragment emission in electron-nucleus collisions at the forthcomi...
+- [2412.19738](../papers/2412.19738.md) (2024) [2] Hard Photon Triggered Jets in $p$-$p$ and $A$-$A$ Collisions
+- [2412.14026](../papers/2412.14026.md) (2024) [2] Dynamics of Hot QCD Matter 2024 -- Hard Probes
+- [2412.14247](../papers/2412.14247.md) (2024) [2] Secondary Lund jet plane as a gluon enriched sample
+- [2412.05661](../papers/2412.05661.md) (2024) [2] On the quarkonium-in-jet collinear fragmentation at moderate-to-large transverse momentum
+- [2408.06871](../papers/2408.06871.md) (2024) [2] Pion to photon transition form factor: Beyond valence quarks
+- [2407.19966](../papers/2407.19966.md) (2024) [2] QCD jets in a hot and dense medium: a study of shower formation time and collision kernels
+- [2407.17443](../papers/2407.17443.md) (2024) [2] A soft-hard framework with exact four momentum conservation for small systems
+- [2406.10779](../papers/2406.10779.md) (2024) [2] Quarkonium fragmentation in a variable-flavor number scheme: Towards NRFF1.0
+- [2406.10129](../papers/2406.10129.md) (2024) [2] Investigating the Role of Quantum Entanglement in Heavy Ion Collisions through Elliptic Flow
+- [2405.20660](../papers/2405.20660.md) (2024) [2] Factorization of photon induced processes in ultra-peripheral heavy ion collisions
+- [2405.19399](../papers/2405.19399.md) (2024) [2] Hard processes in multi-TeV ion collisions
+- [2403.01224](../papers/2403.01224.md) (2024) [2] Study of identified particle production as a function of transverse event activity classifier, $S_{T}$ in p$-$p collisio...
+- [2402.06095](../papers/2402.06095.md) (2024) [2] Contact interaction study of proton parton distributions
+- [2401.06895](../papers/2401.06895.md) (2024) [2] Mini-jet Clustering Algorithm Using Transverse-momentum Seeds in High-energy Nuclear Collisions
+- [2310.15159](../papers/2310.15159.md) (2023) [2] Probing Transverse Momentum Dependent Structures with Azimuthal Dependence of Energy Correlators
+- [2309.03346](../papers/2309.03346.md) (2023) [2] On the definition of fragmentation functions and the violation of sum rules
 - [2307.07890](../papers/2307.07890.md) (2023) [2] Comparative multi-probe study of jet energy-loss in QGP
 - [2212.05944](../papers/2212.05944.md) (2022) [2] Comparing the MARTINI and CUJET models for jet-quenching: Medium modification of jets and jet substructure
 - [2211.13674](../papers/2211.13674.md) (2022) [2] Jet radius and momentum splitting fraction with dynamical grooming in heavy-ion collisions
@@ -75,34 +106,3 @@
 - [0711.2475](../papers/0711.2475.md) (2007) [2] Photon bremsstrahlung and diffusive broadening of a hard jet
 - [0709.1684](../papers/0709.1684.md) (2007) [2] Thermal Charm Production in Quark-Gluon Plasma at LHC
 - [0708.1508](../papers/0708.1508.md) (2007) [1] Elliptic Flow arising from Ridges due to Semi-hard Scattering
-- [2309.03346](../papers/2309.03346.md) (0000) [2] 2309.03346
-- [2310.15159](../papers/2310.15159.md) (0000) [2] 2310.15159
-- [2401.06895](../papers/2401.06895.md) (0000) [2] 2401.06895
-- [2402.06095](../papers/2402.06095.md) (0000) [2] 2402.06095
-- [2403.01224](../papers/2403.01224.md) (0000) [2] 2403.01224
-- [2405.19399](../papers/2405.19399.md) (0000) [2] 2405.19399
-- [2405.20660](../papers/2405.20660.md) (0000) [2] 2405.20660
-- [2406.10129](../papers/2406.10129.md) (0000) [2] 2406.10129
-- [2406.10779](../papers/2406.10779.md) (0000) [2] 2406.10779
-- [2407.17443](../papers/2407.17443.md) (0000) [2] 2407.17443
-- [2407.19966](../papers/2407.19966.md) (0000) [2] 2407.19966
-- [2408.06871](../papers/2408.06871.md) (0000) [2] 2408.06871
-- [2412.05661](../papers/2412.05661.md) (0000) [2] 2412.05661
-- [2412.14026](../papers/2412.14026.md) (0000) [2] 2412.14026
-- [2412.14247](../papers/2412.14247.md) (0000) [2] 2412.14247
-- [2412.19738](../papers/2412.19738.md) (0000) [2] 2412.19738
-- [2502.18887](../papers/2502.18887.md) (0000) [2] 2502.18887
-- [2504.07372](../papers/2504.07372.md) (0000) [2] 2504.07372
-- [2505.10663](../papers/2505.10663.md) (0000) [2] 2505.10663
-- [2506.07426](../papers/2506.07426.md) (0000) [2] 2506.07426
-- [2506.13889](../papers/2506.13889.md) (0000) [2] 2506.13889
-- [2507.09744](../papers/2507.09744.md) (0000) [2] 2507.09744
-- [2510.24847](../papers/2510.24847.md) (0000) [2] 2510.24847
-- [2511.09019](../papers/2511.09019.md) (0000) [2] 2511.09019
-- [2511.14105](../papers/2511.14105.md) (0000) [2] 2511.14105
-- [2602.17860](../papers/2602.17860.md) (0000) [2] 2602.17860
-- [2603.08776](../papers/2603.08776.md) (0000) [2] 2603.08776
-- [2603.23596](../papers/2603.23596.md) (0000) [2] 2603.23596
-- [2604.11616](../papers/2604.11616.md) (0000) [2] 2604.11616
-- [2604.13157](../papers/2604.13157.md) (0000) [2] 2604.13157
-- [2604.20780](../papers/2604.20780.md) (0000) [2] 2604.20780

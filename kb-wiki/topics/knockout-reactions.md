@@ -6,6 +6,23 @@
 
 **Papers:** 113 (showing first 100 of 113)
 
+- [2604.00880](../papers/2604.00880.md) (2026) [2] Predicting reaction observables for the two-neutron halo candidates $^{31}$F and $^{39}$Na
+- [2603.17797](../papers/2603.17797.md) (2026) [2] Spectroscopic factors as a probe of nuclear shape in $^{44}$S via one-neutron knockout reaction
+- [2602.12690](../papers/2602.12690.md) (2026) [1] Dynamical Origin of Spectroscopic Quenching in Knockout Reactions
+- [2601.14596](../papers/2601.14596.md) (2026) [1] How Threshold Effects in Spectroscopic Factors Influence Heavy-Ion Knockout Reactions
+- [2601.01049](../papers/2601.01049.md) (2026) [2] Neutron skins probed in proton knockout from neutron-rich nuclei
+- [2512.18849](../papers/2512.18849.md) (2025) [2] Multi-neutron correlations in light nuclei via ab-initio lattice simulations
+- [2512.17236](../papers/2512.17236.md) (2025) [1] Systematic analysis of proton- and deuteron-induced one-proton knockout reactions
+- [2511.16899](../papers/2511.16899.md) (2025) [2] Maris polarization in the ($p,pd$) reaction
+- [2508.21497](../papers/2508.21497.md) (2025) [2] A Benchmark Study of the Relativistic Plane Wave Impulse Approximation for Polarized ($\vec{p},2\vec{p}\,$) Reactions on...
+- [2503.01259](../papers/2503.01259.md) (2025) [2] Description of nucleon transfer reactions at intermediate energies within the impulse picture
+- [2501.15909](../papers/2501.15909.md) (2025) [1] Core screening effect in knockout reactions
+- [2412.16972](../papers/2412.16972.md) (2024) [2] Competition of the shell closure and deformations across the doubly magic $^{78}$Ni
+- [2412.16649](../papers/2412.16649.md) (2024) [2] Reaction mechanism of quasi-free knockout processes in exotic RI beam era
+- [2410.09287](../papers/2410.09287.md) (2024) [1] Learning from knockout reactions using a dispersive optical model
+- [2311.10830](../papers/2311.10830.md) (2023) [2] Sensitivity of one-neutron knockout observables of loosely- to more deeply-bound nuclei
+- [2309.03902](../papers/2309.03902.md) (2023) [2] Universality of $nn$ distributions of $s$-wave $2n$ halos and the unitary limit
+- [2308.13675](../papers/2308.13675.md) (2023) [1] Core destruction in knockout reactions
 - [2307.07077](../papers/2307.07077.md) (2023) [2] Level Structures of $^{56,58}$Ca Cast Doubt on a doubly magic $^{60}$Ca
 - [2304.10787](../papers/2304.10787.md) (2023) [2] Quasiparticle resonance in decay spectrum of unbound nuclei near neutron drip-line
 - [2303.13841](../papers/2303.13841.md) (2023) [2] Systematic analysis of the nuclear absorption effect on the cross section of the knockout reaction
@@ -72,23 +89,6 @@
 - [0801.2304](../papers/0801.2304.md) (2008) [1] Recent Advances in the Description of Electromagnetic Two-Nucleon Knockout Reactions
 - [0710.5884](../papers/0710.5884.md) (2007) [2] Neutrino Interaction Calculations from MeV to GeV Region
 - [0706.0636](../papers/0706.0636.md) (2007) [2] Electromagnetic proton-neutron knockout off 16O: new achievements in theory
-- [2308.13675](../papers/2308.13675.md) (0000) [1] 2308.13675
-- [2309.03902](../papers/2309.03902.md) (0000) [2] 2309.03902
-- [2311.10830](../papers/2311.10830.md) (0000) [2] 2311.10830
-- [2410.09287](../papers/2410.09287.md) (0000) [1] 2410.09287
-- [2412.16649](../papers/2412.16649.md) (0000) [2] 2412.16649
-- [2412.16972](../papers/2412.16972.md) (0000) [2] 2412.16972
-- [2501.15909](../papers/2501.15909.md) (0000) [1] 2501.15909
-- [2503.01259](../papers/2503.01259.md) (0000) [2] 2503.01259
-- [2508.21497](../papers/2508.21497.md) (0000) [2] 2508.21497
-- [2511.16899](../papers/2511.16899.md) (0000) [2] 2511.16899
-- [2512.17236](../papers/2512.17236.md) (0000) [1] 2512.17236
-- [2512.18849](../papers/2512.18849.md) (0000) [2] 2512.18849
-- [2601.01049](../papers/2601.01049.md) (0000) [2] 2601.01049
-- [2601.14596](../papers/2601.14596.md) (0000) [1] 2601.14596
-- [2602.12690](../papers/2602.12690.md) (0000) [1] 2602.12690
-- [2603.17797](../papers/2603.17797.md) (0000) [2] 2603.17797
-- [2604.00880](../papers/2604.00880.md) (0000) [2] 2604.00880
 - [nucl-th/0101034](../papers/nucl-th/0101034.md) (0000) [1] nucl-th/0101034
 - [nucl-th/0107019](../papers/nucl-th/0107019.md) (0000) [2] nucl-th/0107019
 - [nucl-th/0107052](../papers/nucl-th/0107052.md) (0000) [1] nucl-th/0107052

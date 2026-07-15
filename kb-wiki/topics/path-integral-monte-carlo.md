@@ -6,6 +6,8 @@
 
 **Papers:** 16
 
+- [2511.19209](../papers/2511.19209.md) (2025) [2] Projected Density Matrix Sampling for Lattice Hamiltonians
+- [2412.00812](../papers/2412.00812.md) (2024) [2] Toward extracting scattering phase shift from integrated correlation functions III: coupled-channels
 - [2302.03509](../papers/2302.03509.md) (2023) [2] Thermal fading of the $1/k^4$-tail of the momentum distribution induced by the hole anomaly
 - [2007.04863](../papers/2007.04863.md) (2020) [1] Nucleon clustering at kinetic freezeout of heavy-ion collisions via path-integral Monte Carlo
 - [1707.01113](../papers/1707.01113.md) (2017) [1] Path Integral Monte Carlo study of particles obeying quantum mechanics and classical statistics
@@ -20,5 +22,3 @@
 - [0912.0373](../papers/0912.0373.md) (2009) [2] Quantum Monte Carlo study of dilute neutron matter at finite temperatures
 - [0905.0324](../papers/0905.0324.md) (2009) [1] Equation of state of strongly coupled quark--gluon plasma -- Path integral Monte Carlo results
 - [0707.3500](../papers/0707.3500.md) (2007) [1] Coulomb tunneling for fusion reactions in dense matter: Path integral Monte Carlo versus mean field
-- [2412.00812](../papers/2412.00812.md) (0000) [2] 2412.00812
-- [2511.19209](../papers/2511.19209.md) (0000) [2] 2511.19209

@@ -6,6 +6,28 @@
 
 **Papers:** 171 (showing first 100 of 171)
 
+- [2605.11252](../papers/2605.11252.md) (2026) [2] Quantum tunneling, global phases and the limits of classical action reconstructions
+- [2604.04187](../papers/2604.04187.md) (2026) [1] Nonlocality Effect in the Alpha decay half-lives of superheavy nuclei with XGBRegressor
+- [2603.16199](../papers/2603.16199.md) (2026) [1] Prediction of Alpha-Decay Half-Lives of Actinide Nuclei Using the DDM3Y Effective Interaction Potential
+- [2602.09480](../papers/2602.09480.md) (2026) [1] Three-Body Barrier Dynamics of Double-Alpha Decay in Heavy Nuclei
+- [2601.22234](../papers/2601.22234.md) (2026) [2] Low-energy 17O(n,g)18O reaction within the microscopic potential model and its role for the weak r-process
+- [2512.22057](../papers/2512.22057.md) (2025) [1] Unified Royer law revision for alpha-decay half-lives: shell corrections, pairing,and orbital-angular-momentum
+- [2510.22194](../papers/2510.22194.md) (2025) [1] Enhancement of Alpha Decay due to Medium Effects
+- [2510.18199](../papers/2510.18199.md) (2025) [2] Nonlocality Effect in the Tunneling of Alpha Radioactivity with the Aid of Machine Learning
+- [2510.02764](../papers/2510.02764.md) (2025) [1] Role of universal function of the nuclear proximity potential: A systematic study on the alpha-decay of heavy/super-heav...
+- [2509.01343](../papers/2509.01343.md) (2025) [1] The nuclear surface diffuseness effects on the alpha decay of heavy and super heavy nuclei
+- [2506.02684](../papers/2506.02684.md) (2025) [2] Deformed magic numbers at $N=$178 and $Z=$120, 124 in the 112 $\leq N \leq $ 190 superheavy region from Skyrme mean-fiel...
+- [2505.04975](../papers/2505.04975.md) (2025) [2] The candidates of 2$α$ condensate around the 16O nucleus studied by the real-time evolution method
+- [2410.21096](../papers/2410.21096.md) (2024) [2] Angular momentum dependence of $α$-decay spectroscopic factors
+- [2410.15157](../papers/2410.15157.md) (2024) [2] Superheavy Magic Nuclei: Ground-State Properties, Bubble Structure and α-Decay Chains
+- [2409.06761](../papers/2409.06761.md) (2024) [1] Alpha decay law of excited nuclei and its role in stellar decay rates
+- [2407.19647](../papers/2407.19647.md) (2024) [1] Correlation between alpha-decay half-lives and symmetry energy
+- [2407.18025](../papers/2407.18025.md) (2024) [1] Alpha-decay from $^{44}$Ti: Microscopic alpha half-life calculation using normalized spectroscopic factor
+- [2405.13856](../papers/2405.13856.md) (2024) [2] In-beam $γ-$spectroscopy of the transitional nucleus $^{217}$Ac
+- [2405.12095](../papers/2405.12095.md) (2024) [2] $ {}^{164} \mathrm{Pb} $: A possible heaviest $ N = Z $ doubly magic nucleus
+- [2403.04450](../papers/2403.04450.md) (2024) [2] Cluster radioactivity preformation probability of trans-lead nuclei in the scheme of NpNn
+- [2403.02748](../papers/2403.02748.md) (2024) [1] Relativistic mean-field study of alpha decay in superheavy isotopes with 100 \texorpdfstring{$\leq$ Z $\leq$}-120
+- [2310.13428](../papers/2310.13428.md) (2023) [1] Alpha-decay from $^{44}$Ti: A study of the microscopic clusterization
 - [2212.03983](../papers/2212.03983.md) (2022) [1] Alpha decay of thermally excited nuclei
 - [2211.14135](../papers/2211.14135.md) (2022) [2] Microscopic description of $α$, $2α$, and cluster decays of $^{216-220}$Rn and $^{220-224}$Ra
 - [2211.09452](../papers/2211.09452.md) (2022) [2] Cluster mean field description of alpha emission
@@ -84,25 +106,3 @@
 - [1110.6688](../papers/1110.6688.md) (2011) [1] Alpha decay chains study for the recently observed superheavy element Z=117 within the Isospin Cluster Model
 - [1110.5822](../papers/1110.5822.md) (2011) [1] Alpha Decay Processes under a Diproton, Dineutron and Deuteron Pairing Scheme
 - [1108.3508](../papers/1108.3508.md) (2011) [2] Quasiparticle-vibration coupling in relativistic framework: shell structure of Z=120 isotopes
-- [1106.3271](../papers/1106.3271.md) (2011) [2] Heavy particle radioactivities of superheavy nuclei
-- [1104.0066](../papers/1104.0066.md) (2011) [2] Further improvements on a global nuclear mass model
-- [1009.2162](../papers/1009.2162.md) (2010) [2] Orbital dependent nucleonic pairing in the lightest known isotopes of tin
-- [1008.2115](../papers/1008.2115.md) (2010) [2] Mirror nuclei constraint in mass formula
-- [1007.1524](../papers/1007.1524.md) (2010) [2] A new phenomenological formula for ground state binding energies
-- [1004.4523](../papers/1004.4523.md) (2010) [1] Abrupt changes in alpha decay systematics as a manifestation of collective nuclear modes
-- [1004.2309](../papers/1004.2309.md) (2010) [1] Alpha-decay half-lives and Q_alpha values of superheavy nuclei
-- [1003.5761](../papers/1003.5761.md) (2010) [2] Magic radioactivity of 252Cf
-- [0912.2934](../papers/0912.2934.md) (2009) [2] Concepts of alpha-particle condensation
-- [0909.1602](../papers/0909.1602.md) (2009) [1] A new barrier penetration formula and its application to alpha-decay half-lives
-- [0908.2678](../papers/0908.2678.md) (2009) [2] Superheavy nuclei with the vector self-coupling of the $ω$-meson in the relativistic mean-field theory
-- [0907.3347](../papers/0907.3347.md) (2009) [2] Microscopic description of Cf-252 cold fission yields
-- [0906.0432](../papers/0906.0432.md) (2009) [2] Proton radioactivity within a generalized liquid drop model
-- [0902.4628](../papers/0902.4628.md) (2009) [1] Possible stimulation of nuclear alpha-decay by superfluid helium
-- [0902.0677](../papers/0902.0677.md) (2009) [1] Alpha-decay half-lives, alpha-capture and alpha-nucleus potential
-- [0811.1619](../papers/0811.1619.md) (2008) [1] Alpha decay chains from superheavy nuclei
-- [0806.1903](../papers/0806.1903.md) (2008) [2] Quantum time scales in alpha tunneling
-- [0806.0713](../papers/0806.0713.md) (2008) [1] Spectroscopic factors for alpha decay in the $N_pN_n$ scheme
-- [0802.4161](../papers/0802.4161.md) (2008) [2] Nuclear Half-Lives for Alpha Radioactivity of Elements with 100 $\leq$ Z $\leq$ 130
-- [0708.4355](../papers/0708.4355.md) (2007) [1] Quantum tunneling in ^{277}112 and its alpha-decay chain
-- [0706.2109](../papers/0706.2109.md) (2007) [1] Bremsstrahlung in alpha-Decay Reexamined
-- [0704.3927](../papers/0704.3927.md) (2007) [1] Alpha decay chains from element 113

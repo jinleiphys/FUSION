@@ -4,6 +4,11 @@
 
 **Papers:** 82
 
+- [2507.02707](../papers/2507.02707.md) (2025) [2] Statistical shell model for neutrinoless double $β$-decay nuclear transition matrix elements: Results for $^{76}$Ge, $^{...
+- [2501.18027](../papers/2501.18027.md) (2025) [2] Spectral-statistics properties of the experimental and theoretical light baryon and meson spectra
+- [2404.19355](../papers/2404.19355.md) (2024) [2] Statistical Theory of Neutron-Induced Nuclear Fission and of Heavy-Ion Fusion
+- [2309.05154](../papers/2309.05154.md) (2023) [2] The functional generalization of the Boltzmann-Vlasov equation and its Gauge-like symmetry
+- [2308.16202](../papers/2308.16202.md) (2023) [2] Eigenstate Thermalization in 2+1 dimensional SU(2) Lattice Gauge Theory
 - [2306.01821](../papers/2306.01821.md) (2023) [2] Missing levels in intermediate spectra
 - [2212.03322](../papers/2212.03322.md) (2022) [2] Monopoles, spectra of overlap fermions, and eta-prime meson in external magnetic fields
 - [2106.06311](../papers/2106.06311.md) (2021) [2] Tests of the Porter-Thomas Distribution for Reduced Partial Neutron Widths
@@ -50,11 +55,6 @@
 - [0807.1070](../papers/0807.1070.md) (2008) [2] Random Matrices and Chaos in Nuclear Physics
 - [0711.2806](../papers/0711.2806.md) (2007) [1] Perturbative Treatment of Symmetry Breaking Within Random Matrix Theory
 - [0706.3897](../papers/0706.3897.md) (2007) [2] Romanovski polynomials in selected physics problems
-- [2308.16202](../papers/2308.16202.md) (0000) [2] 2308.16202
-- [2309.05154](../papers/2309.05154.md) (0000) [2] 2309.05154
-- [2404.19355](../papers/2404.19355.md) (0000) [2] 2404.19355
-- [2501.18027](../papers/2501.18027.md) (0000) [2] 2501.18027
-- [2507.02707](../papers/2507.02707.md) (0000) [2] 2507.02707
 - [chao-dyn/9901002](../papers/chao-dyn/9901002.md) (0000) [2] chao-dyn/9901002
 - [chao-dyn/9909046](../papers/chao-dyn/9909046.md) (0000) [2] chao-dyn/9909046
 - [cond-mat/0102268](../papers/cond-mat/0102268.md) (0000) [2] cond-mat/0102268

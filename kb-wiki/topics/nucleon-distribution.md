@@ -6,6 +6,11 @@
 
 **Papers:** 29
 
+- [2606.09254](../papers/2606.09254.md) (2026) [2] Meson-Nucleus Bound States with Neural-Network Quantum States
+- [2506.16865](../papers/2506.16865.md) (2025) [2] Photon Emission from Nucleon-Nucleon Bremsstrahlung in Fermi-energy Heavy-Ion Collisions
+- [2506.04961](../papers/2506.04961.md) (2025) [2] Toward an advanced phenomenology of $πN$ transition distribution amplitudes
+- [2411.17462](../papers/2411.17462.md) (2024) [1] Lattice simulation of nucleon distribution and shell closure in the proton-rich nucleus $^{22}$Si
+- [2404.07496](../papers/2404.07496.md) (2024) [2] Multifractal Dimension Spectrum Analysis for Nuclear Density Distribution
 - [2301.03910](../papers/2301.03910.md) (2023) [1] Examination of nucleon distribution with Bayesian imaging for isobar collisions
 - [2211.01971](../papers/2211.01971.md) (2022) [2] Detecting nuclear mass distribution in isobar collisions via charmonium
 - [2112.08617](../papers/2112.08617.md) (2021) [2] System dependence of away-side broadening and $α$-clustering light nuclei structure effect in dihadron azimuthal correla...
@@ -22,11 +27,6 @@
 - [1010.5103](../papers/1010.5103.md) (2010) [2] Giant neutron halo in nuclei beyond beta-stability line
 - [0903.1723](../papers/0903.1723.md) (2009) [1] The Nucleon Distribution Amplitudes and their application to nucleon form factors and the $N \to Δ$ transition at interm...
 - [0807.4861](../papers/0807.4861.md) (2008) [2] Nucleon to Pion Transition Distribution Amplitudes in a Light-Cone Quark Model
-- [2404.07496](../papers/2404.07496.md) (0000) [2] 2404.07496
-- [2411.17462](../papers/2411.17462.md) (0000) [1] 2411.17462
-- [2506.04961](../papers/2506.04961.md) (0000) [2] 2506.04961
-- [2506.16865](../papers/2506.16865.md) (0000) [2] 2506.16865
-- [2606.09254](../papers/2606.09254.md) (0000) [2] 2606.09254
 - [hep-ph/0101279](../papers/hep-ph/0101279.md) (0000) [2] hep-ph/0101279
 - [hep-ph/0311082](../papers/hep-ph/0311082.md) (0000) [2] hep-ph/0311082
 - [hep-ph/0604050](../papers/hep-ph/0604050.md) (0000) [2] hep-ph/0604050

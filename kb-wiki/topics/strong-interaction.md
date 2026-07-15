@@ -6,103 +6,103 @@
 
 **Papers:** 951 (showing first 100 of 951)
 
-- [2307.14601](../papers/2307.14601.md) (2023) [3] Effects of Critical Point on Quark Gluon Plasma
-- [2307.08593](../papers/2307.08593.md) (2023) [2] Artificial Intelligence for the Electron Ion Collider (AI4EIC)
-- [2307.08842](../papers/2307.08842.md) (2023) [3] A view of Coherent Elastic Neutrino-Nucleus Scattering
-- [2307.05751](../papers/2307.05751.md) (2023) [3] Exponential Resummation of QCD at finite chemical potential
-- [2307.02102](../papers/2307.02102.md) (2023) [3] Femtoscopy of $D$ mesons and light mesons upon unitarized effective field theories
-- [2306.16005](../papers/2306.16005.md) (2023) [2] Phase diagram determination at fivefold nuclear compression
-- [2306.09317](../papers/2306.09317.md) (2023) [3] QCD resummation of dijet azimuthal decorrelations in pp and pA collisions
-- [2306.08097](../papers/2306.08097.md) (2023) [3] Lectures on Field Theory and the Standard Model: A Symmetry-Oriented Approach
-- [2306.02478](../papers/2306.02478.md) (2023) [2] Role of three-body dynamics in nucleon-deuteron correlation functions
-- [2305.19388](../papers/2305.19388.md) (2023) [3] A closer look at the Yukawa's interaction from a symmetry group perspective
-- [2305.14295](../papers/2305.14295.md) (2023) [3] Vector quarkonia at the LHC with JETHAD: A high-energy viewpoint
-- [2305.10916](../papers/2305.10916.md) (2023) [2] Microscopic Encoding of Macroscopic Universality: Scaling Properties of Dirac Eigenspectra near QCD Chiral Phase Transit...
-- [2305.09114](../papers/2305.09114.md) (2023) [1] Global spin alignment of vector mesons and strong force fields in heavy- ion collisions
-- [2305.08401](../papers/2305.08401.md) (2023) [2] Resolving phase transition properties of dense matter through tidal-excited g-mode from inspiralling neutron stars
-- [2304.04404](../papers/2304.04404.md) (2023) [3] Rotation and vibration in tetraquarks
-- [2304.03302](../papers/2304.03302.md) (2023) [3] TMD Handbook
-- [2304.01850](../papers/2304.01850.md) (2023) [3] Nucleosynthesis and observation of the heaviest elements
-- [2304.00154](../papers/2304.00154.md) (2023) [2] Hadron Structure using Continuum Schwinger Function Methods
-- [2303.17254](../papers/2303.17254.md) (2023) [2] Hot QCD White Paper
-- [2303.17021](../papers/2303.17021.md) (2023) [3] Theoretical and Experimental Constraints for the Equation of State of Dense and Hot Matter
-- [2303.10734](../papers/2303.10734.md) (2023) [3] QCD Phase Diagrams via QHD and MIT-Based Models
-- [2303.06079](../papers/2303.06079.md) (2023) [2] Femtoscopic correlation function for the $T_{cc}(3875)^+$ state
-- [2303.04826](../papers/2303.04826.md) (2023) [2] Exciting Ions: a Systematic Treatment of Ultraperipheral Heavy Ion Collisions with Nuclear Breakup
-- [2303.04917](../papers/2303.04917.md) (2023) [1] Strong Interaction Dynamics and Fermi $β$ decay in the nucleon and the nucleus
-- [2302.13818](../papers/2302.13818.md) (2023) [2] Proton Charge Radius from Lepton Scattering
-- [2302.13879](../papers/2302.13879.md) (2023) [2] The Spectrum of Low-$p_T$ $J/ψ$ in Heavy-Ion Collisions in a Statistical Two-Body Fractal Model
-- [2302.13202](../papers/2302.13202.md) (2023) [2] New type of hydrogenlike charm-pion or charm-kaon matter
-- [2302.08421](../papers/2302.08421.md) (2023) [2] Effects of Coulomb and isospin symmetry breaking interactions on neutron-skin thickness
-- [2302.02165](../papers/2302.02165.md) (2023) [3] Opportunities for Fundamental Physics Research with Radioactive Molecules
-- [2302.00701](../papers/2302.00701.md) (2023) [1] Viewpoint: Vector meson spin alignment by the strong force field
-- [2301.10721](../papers/2301.10721.md) (2023) [2] Causality violation and the speed of sound of hot and dense quark matter in the Nambu--Jona-Lasinio model
-- [2301.07777](../papers/2301.07777.md) (2023) [2] Nucleon Resonance Electroexcitation Amplitudes and Emergent Hadron Mass
-- [2301.00630](../papers/2301.00630.md) (2023) [3] Tribaryons with lattice QCD and one-boson exchange potentials
-- [2212.09043](../papers/2212.09043.md) (2022) [2] Equation of state and speed of sound of (2+1)-flavor QCD in strangeness-neutral matter at non-vanishing net baryon-numbe...
-- [2212.02273](../papers/2212.02273.md) (2022) [2] Influence of hyperon-hyperon interaction on the properties of neutron stars
-- [2212.00763](../papers/2212.00763.md) (2022) [2] A Strong-QCD Regime Measurement of the Proton's Spin Structure
-- [2211.17153](../papers/2211.17153.md) (2022) [3] The baryon coupling scheme in an unified SU(3) and SU(6) symmetry formalism
-- [2211.15587](../papers/2211.15587.md) (2022) [2] Gluon helicity distribution in the nucleon from lattice QCD and machine learning
-- [2211.15746](../papers/2211.15746.md) (2022) [3] Precision Studies of QCD in the Low Energy Domain of the EIC
-- [2211.14550](../papers/2211.14550.md) (2022) [2] Toward nuclear physics from lattice QCD on quantum computers
-- [2211.11529](../papers/2211.11529.md) (2022) [2] Probing phase transition in neutron stars via the crust-core interfacial mode
-- [2211.09905](../papers/2211.09905.md) (2022) [2] Origin of the Proton Mass
-- [2211.02785](../papers/2211.02785.md) (2022) [3] The Electron-Ion Collider -- A U.S. facility for the European community to explore the mysteries of the building blocks ...
-- [2211.01748](../papers/2211.01748.md) (2022) [2] Electron and neutrino scattering off the deuteron in a relativistic framework
-- [2210.11461](../papers/2210.11461.md) (2022) [2] Measured proton electromagnetic structure deviates from theoretical predictions
-- [2210.02906](../papers/2210.02906.md) (2022) [2] Nuclear binding energies in artificial neural networks
-- [2210.03186](../papers/2210.03186.md) (2022) [3] Studying the impact of the nucleon size in relativistic heavy-ion collisions
-- [2209.15336](../papers/2209.15336.md) (2022) [3] Hadron productions and jet substructures associated with $Z^0/γ$ in Pb+Pb collisions at the LHC
-- [2209.14872](../papers/2209.14872.md) (2022) [3] Precision QCD, Hadronic Structure & Forward QCD, Heavy Ions: Report of Energy Frontier Topical Groups 5, 6, 7 submitted ...
-- [2209.14400](../papers/2209.14400.md) (2022) [2] Searching for an Enhanced Signal of the onset of Color Transparency in Baryons with D(e,e'p)n scattering
-- [2209.12657](../papers/2209.12657.md) (2022) [3] Role of vector self-interaction in Neutron Star properties
-- [2209.02471](../papers/2209.02471.md) (2022) [2] Cross-channel constraints on resonant antikaon-nucleon scattering
-- [2209.01872](../papers/2209.01872.md) (2022) [3] Mass splitting and spin alignment for $ϕ$ mesons in a magnetic field in NJL model
-- [2208.14943](../papers/2208.14943.md) (2022) [3] Report on Progress in Physics: Observation of the Breit-Wheeler Process and Vacuum Birefringence in Heavy-Ion Collisions
-- [2208.14946](../papers/2208.14946.md) (2022) [2] First application of a microscopic $K^-NN$ absorption model in calculations of kaonic atoms
-- [2208.13300](../papers/2208.13300.md) (2022) [3] Nuclear fragmentation reactions as a probe of neutron skins in nuclei
-- [2208.08372](../papers/2208.08372.md) (2022) [2] Evidence for intrinsic charm quarks in the proton
-- [2208.07029](../papers/2208.07029.md) (2022) [3] Unified description of high-energy nuclear collisions based on dynamical core--corona picture
-- [2207.10752](../papers/2207.10752.md) (2022) [3] Effective-theory description of heavy-flavored hadrons and their properties in a hot medium
-- [2207.05927](../papers/2207.05927.md) (2022) [2] Uncertainty Quantification for Neutrino Opacities in Core-Collapse Supernovae and Neutron Star Mergers
-- [2207.03712](../papers/2207.03712.md) (2022) [2] Nuclear geometry at high energy from exclusive vector meson production
-- [2207.03878](../papers/2207.03878.md) (2022) [3] Phase transitions and latent heat in magnetized matter
-- [2207.03212](../papers/2207.03212.md) (2022) [2] Structure formation during phase transitions in strongly interacting matter
-- [2206.13792](../papers/2206.13792.md) (2022) [3] Neutrinos and their interactions with matter
-- [2206.09407](../papers/2206.09407.md) (2022) [2] Oscillation Modes and Gravitational Waves from Strangeon Stars
-- [2206.05868](../papers/2206.05868.md) (2022) [2] Relativistic spin dynamics for vector mesons
-- [2206.06328](../papers/2206.06328.md) (2022) [1] Speed of sound in dense strong-interaction matter
-- [2206.02106](../papers/2206.02106.md) (2022) [2] Do we need dense matter equation of state in curved spacetime for neutron stars?
-- [2206.02202](../papers/2206.02202.md) (2022) [3] Relativistic Mean Field Study of Neutron Stars and Hyperon Stars
-- [2206.01834](../papers/2206.01834.md) (2022) [3] A holographic bottom-up description of light nuclide spectroscopy and stability
-- [2205.15689](../papers/2205.15689.md) (2022) [2] Spin alignment of vector mesons in heavy-ion collisions
-- [2205.14441](../papers/2205.14441.md) (2022) [2] Comment on "A phenomenological $π^- p$ scattering length from pionic hydrogen''
-- [2205.13642](../papers/2205.13642.md) (2022) [2] Heavy + heavy and heavy + light pseudoscalar to vector semileptonic transitions
-- [2205.12767](../papers/2205.12767.md) (2022) [2] Variational thermal quantum simulation of the lattice Schwinger model
-- [2205.12795](../papers/2205.12795.md) (2022) [3] Machine learning the deuteron: new architectures and uncertainty quantification
-- [2205.09827](../papers/2205.09827.md) (2022) [3] Exploring the effects of Delta Baryons in magnetars
-- [2205.01195](../papers/2205.01195.md) (2022) [2] Exotic heavy hadrons with a three-body nature
-- [2204.10093](../papers/2204.10093.md) (2022) [2] Medium modification of the nucleon mechanical properties: Abel tomography case
-- [2204.05568](../papers/2204.05568.md) (2022) [2] Chiral symmetry restoration at high matter density observed in pionic atoms
-- [2204.05418](../papers/2204.05418.md) (2022) [2] Hadron and light nucleus radii from electron scattering
-- [2204.03381](../papers/2204.03381.md) (2022) [3] Quantum Simulation for High Energy Physics
-- [2204.01187](../papers/2204.01187.md) (2022) [3] Ab Initio Nuclear Reaction Theory with Applications to Astrophysics
-- [2204.00358](../papers/2204.00358.md) (2022) [1] Zero-temperature thermodynamics of dense asymmetric strong-interaction matter
-- [2203.16549](../papers/2203.16549.md) (2022) [3] Exponential Approach to the Hydrodynamic Attractor in Yang-Mills Kinetic Theory
-- [2203.15225](../papers/2203.15225.md) (2022) [3] An accurate relativistic chiral nucleon-nucleon interaction up to the next-to-next-to-leading order
-- [2203.14447](../papers/2203.14447.md) (2022) [3] Chiral sum rule on the light front and the 3D image of the pion
-- [2203.13199](../papers/2203.13199.md) (2022) [3] Snowmass 2021 White Paper: Electron Ion Collider for High Energy Physics
-- [2203.10141](../papers/2203.10141.md) (2022) [2] Mapping the $N = 40$ Island of Inversion: Precision Mass Measurements of Neutron-rich Fe Isotopes
-- [2203.07817](../papers/2203.07817.md) (2022) [2] Search for the QCD Critical Point in High Energy Nuclear Collisions
-- [2203.04778](../papers/2203.04778.md) (2022) [2] Special Issue on Advances in Chiral Quark Models
-- [2202.13300](../papers/2202.13300.md) (2022) [2] A topological realization of spin polarization through vortex formation in collisions of Bose-Einstein condensates
-- [2202.09133](../papers/2202.09133.md) (2022) [3] Bjorken flow revisited: analytic and numerical solutions in flat space-time coordinates
-- [2202.06181](../papers/2202.06181.md) (2022) [2] Theory of kaon-nuclear systems
-- [2202.06051](../papers/2202.06051.md) (2022) [2] Artificial Dynamical Effects in Quantum Field Theory
-- [2202.05794](../papers/2202.05794.md) (2022) [3] Transport coefficients of magnetized neutron star cores
-- [2202.02284](../papers/2202.02284.md) (2022) [2] Two-current transition amplitudes with two-body final states
-- [2201.09980](../papers/2201.09980.md) (2022) [2] Color-flavor dependence of the Nambu-Jona-Lasinio model and QCD phase diagram
-- [2201.09158](../papers/2201.09158.md) (2022) [3] $Υ$ and $η_{b}$ mass shifts in nuclear matter and the nucleus bound states
-- [2112.13195](../papers/2112.13195.md) (2021) [2] Effects of variation of the fine structure constant $α$ and quark mass $m_q$ in Mössbauer nuclear transitions
-- [2112.12539](../papers/2112.12539.md) (2021) [2] Bose-Einstein condensation in finite drops of alpha particles
+- [2606.13908](../papers/2606.13908.md) (2026) [2] Anomalies, Topology, and Hadron Structure in QCD
+- [2606.06553](../papers/2606.06553.md) (2026) [2] Hyperon-Nucleon Spectrometer
+- [2606.06773](../papers/2606.06773.md) (2026) [3] Lepton interactions from GeV to EeV
+- [2606.03703](../papers/2606.03703.md) (2026) [1] Phase structure of strong interaction matter from Functional QCD
+- [2605.26308](../papers/2605.26308.md) (2026) [3] Nuclear Physics of Binary Neutron Star Mergers
+- [2605.14737](../papers/2605.14737.md) (2026) [2] NA61/SHINE results on search for critical point
+- [2605.07826](../papers/2605.07826.md) (2026) [2] Hadronic parity violation: successes, challenges, and future prospects
+- [2605.00339](../papers/2605.00339.md) (2026) [2] Evidence for Quark Confinement in the Proton
+- [2604.27020](../papers/2604.27020.md) (2026) [3] Chiral-Transport-Induced Collective Modes in Strong Magnetic Fields and Their Implications for Neutron Star Phenomenolog...
+- [2604.13769](../papers/2604.13769.md) (2026) [3] Fully Heavy Pentaquarks with JETHAD: A High-Energy Viewpoint
+- [2604.11646](../papers/2604.11646.md) (2026) [3] All-charm tetraquarks at hadron colliders: A high-precision fragmentation perspective
+- [2604.07229](../papers/2604.07229.md) (2026) [3] Nuclear giant resonances from first principles
+- [2604.01865](../papers/2604.01865.md) (2026) [3] Tetraquark-Jet Systems at the High-Luminosity LHC
+- [2604.01871](../papers/2604.01871.md) (2026) [3] Triply Heavy $Ω$ Baryons with JETHAD: A High-Energy Viewpoint
+- [2603.19793](../papers/2603.19793.md) (2026) [2] Probing short range correlations in Heavy-Ion Double Charge Exchange reactions
+- [2603.17797](../papers/2603.17797.md) (2026) [2] Spectroscopic factors as a probe of nuclear shape in $^{44}$S via one-neutron knockout reaction
+- [2603.15135](../papers/2603.15135.md) (2026) [3] A systematic study of global spin polarizations and correlations of hadrons with different spins in relativistic heavy i...
+- [2603.13474](../papers/2603.13474.md) (2026) [2] Critical slowing down and bulk viscosity in binary neutron star mergers
+- [2603.04794](../papers/2603.04794.md) (2026) [3] Exploring Nucleon Structure and the Proton Mass Problem through Holographic QCD
+- [2603.02979](../papers/2603.02979.md) (2026) [2] Scattering and Femtoscopic Correlation Functions of the $Σ_c^{++}π^{+}$, $Σ_c^{0}π^{-}$ and $Σ_b^{+}π^{+}$ Systems
+- [2603.01819](../papers/2603.01819.md) (2026) [2] Recent developments and applications of the relativistic chiral nuclear force
+- [2602.22464](../papers/2602.22464.md) (2026) [3] The 2027-2034 Vision for Nuclear Physics in Canada, with an outlook to 2041
+- [2602.21294](../papers/2602.21294.md) (2026) [3] Shock-induced chiral magnetic effect
+- [2602.18080](../papers/2602.18080.md) (2026) [3] Observation of Robust and Coherent Non-Abelian Hadron Dynamics on Noisy Quantum Processors
+- [2602.11027](../papers/2602.11027.md) (2026) [2] Strong potential in a box for applications to femtoscopy
+- [2602.05824](../papers/2602.05824.md) (2026) [2] Mesoscopic chemical potentials across the (hyper)nuclear landscape
+- [2602.07004](../papers/2602.07004.md) (2026) [3] Asymptotic Freedom and Vacuum Polarization Determine the Astrophysical End State of Relativistic Gravitational Collapse:...
+- [2601.19374](../papers/2601.19374.md) (2026) [3] Green's Function Formalism for Impurity-Induced Resonances in Sub-barrier Proton-Nucleus Scattering
+- [2602.06058](../papers/2602.06058.md) (2026) [2] Observations on the possible electromagnetic nature of nucleon interactions and pions" -- historical manuscript from 196...
+- [2601.13733](../papers/2601.13733.md) (2026) [3] Structure of Bound States with Coulomb plus Short-range Interaction
+- [2601.13076](../papers/2601.13076.md) (2026) [3] Heavy Quarks in the initial stages of Proton-Ion Collisions
+- [2601.12438](../papers/2601.12438.md) (2026) [3] Revisiting $^7$Be Weak and Radiative Transition Rates in Big Bang Nucleosynthesis: Implications for the Primordial Lithi...
+- [2512.17219](../papers/2512.17219.md) (2025) [2] A Brief History and Outlook of Hadronic Physics in Indonesia
+- [2512.15064](../papers/2512.15064.md) (2025) [3] Three-dimensional imaging of hadrons with hard exclusive reactions: advances in experiment, theory, phenomenology, and l...
+- [2512.15986](../papers/2512.15986.md) (2025) [2] Hadron Physics Opportunities at FAIR
+- [2512.22155](../papers/2512.22155.md) (2025) [3] Anomalous Transport In Low Dimension Materials
+- [2512.11515](../papers/2512.11515.md) (2025) [2] An anlaysis on $J/ψ\toπ^0γ^*$ within resonance chiral theory
+- [2512.10760](../papers/2512.10760.md) (2025) [2] Equation of state, QCD phase diagram: predictions from lattice QCD
+- [2512.07956](../papers/2512.07956.md) (2025) [2] Theory of inverse beta decay for reactor antineutrinos
+- [2512.05874](../papers/2512.05874.md) (2025) [2] Topical issue on the intersection of low-energy nuclear structure and high-energy nuclear collisions
+- [2512.01468](../papers/2512.01468.md) (2025) [2] Probing the three-body force in hadronic systems with specific charge parity
+- [2511.21916](../papers/2511.21916.md) (2025) [3] Energy-momentum tensor form factor D(t) of proton and neutron
+- [2511.15493](../papers/2511.15493.md) (2025) [2] First observation of deuteron-Λ correlations at RHIC
+- [2511.07226](../papers/2511.07226.md) (2025) [2] Renormalization-Group Invariant Parity-Doublet Model for Nuclear and Neutron-Star Matter
+- [2511.00149](../papers/2511.00149.md) (2025) [3] Energy Correlators from Partons to Hadrons: Unveiling the Dynamics of the Strong Interactions with Archival ALEPH Data
+- [2510.24325](../papers/2510.24325.md) (2025) [2] Emergent Bell-Triplet State in Proton-Proton Scattering
+- [2510.22449](../papers/2510.22449.md) (2025) [3] Heavy-Flavor Fragmentation and Jet Structure from HF-NRevo: Bridging to Heavy-Ion Collisions
+- [2510.10794](../papers/2510.10794.md) (2025) [3] Realizing the Scientific Program with Polarized Ion Beams at EIC
+- [2510.08077](../papers/2510.08077.md) (2025) [3] Determining the Ξ-Nucleus Potential from the Measured Binding Energies of ^15_Ξ^C
+- [2510.01066](../papers/2510.01066.md) (2025) [2] Nonperturbative fluctuation effects of charged bosonic fields: A quark-diquark model study at nonzero density
+- [2509.25838](../papers/2509.25838.md) (2025) [3] Bulk viscosity from neutron decays to dark baryons in neutron star matter
+- [2509.08648](../papers/2509.08648.md) (2025) [3] Light Meson Resonances
+- [2509.04240](../papers/2509.04240.md) (2025) [2] Neutrino absorption in two-flavor color-superconducting quark matter
+- [2509.02974](../papers/2509.02974.md) (2025) [1] Revisiting the first-order QCD phase transition in dense strong interaction matter
+- [2509.01311](../papers/2509.01311.md) (2025) [3] Hadronic vacuum polarization effect in muonic atoms
+- [2508.15203](../papers/2508.15203.md) (2025) [2] High-precision determination of radiative corrections to superallowed nuclear beta decays
+- [2508.14837](../papers/2508.14837.md) (2025) [3] The Renormalized Yukawa Hamiltonian: Spectrum, Parton Distribution Functions, and Resource Estimates for Quantum Simulat...
+- [2508.12193](../papers/2508.12193.md) (2025) [3] From Hyperons to Hypernuclei: A New Route to Unravel Proton Spin Polarization
+- [2508.03496](../papers/2508.03496.md) (2025) [2] Hyperon spin correlation in high-energy heavy-ion collisions
+- [2508.02653](../papers/2508.02653.md) (2025) [3] Bound states of $_{c\bar{c}}^{9}$Be within $c\bar{c}+α+α$ cluster models based on state-of-the-art HAL QCD charmonium-nu...
+- [2507.22593](../papers/2507.22593.md) (2025) [2] Kaon-deuteron femtoscopy from unitarized chiral interactions
+- [2507.20823](../papers/2507.20823.md) (2025) [3] Rotating Proto-Neutron Stars Admixed with Mirror Dark Matter: A two fluid approach
+- [2507.19422](../papers/2507.19422.md) (2025) [2] Adressing the pΩ- interaction and di-baryonic states via femtoscopy
+- [2507.18507](../papers/2507.18507.md) (2025) [2] Probing Spin and Lifetime Correlations in Entangled Hyperon-AntiHyperon Pairs
+- [2507.13935](../papers/2507.13935.md) (2025) [2] Strangeon Matter: from Stars to Nuggets
+- [2507.08466](../papers/2507.08466.md) (2025) [3] Spectroscopic and femtoscopic insights into vector-baryon interactions in the strangeness $-1$ sector
+- [2507.04989](../papers/2507.04989.md) (2025) [3] Spin alignment of vector mesons in heavy-ion collision
+- [2506.15974](../papers/2506.15974.md) (2025) [2] Bound Deuteron-Antideuteron System (Deuteronium): Leading Radiative and Internal-Structure Corrections to Bound-State En...
+- [2506.10702](../papers/2506.10702.md) (2025) [2] Extraction of Effective Parameters from Transverse Momentum Spectra of Heavy Quarkonia in Proton-Proton Collisions at th...
+- [2506.08946](../papers/2506.08946.md) (2025) [3] Heavy-heavy and heavy-light mesons in cold nuclear matter
+- [2506.09119](../papers/2506.09119.md) (2025) [3] Energy Correlators: A Journey From Theory to Experiment
+- [2506.06983](../papers/2506.06983.md) (2025) [2] New Types of Hydrogenlike matter Composed of Electron(s) and Meson(s)
+- [2506.06465](../papers/2506.06465.md) (2025) [3] Perturbative QCD reveals the softening of matter in the cores of massive neutron stars
+- [2506.05025](../papers/2506.05025.md) (2025) [2] Mapping Parton Distributions of Hadrons with Lattice QCD
+- [2506.05499](../papers/2506.05499.md) (2025) [2] Measuring spin correlation between quarks during QCD confinement
+- [2506.02223](../papers/2506.02223.md) (2025) [2] Investigating the inclusive $D^0$ photoproduction in ultraperipheral $PbPb$ collisions at the Large Hadron Collider
+- [2505.23550](../papers/2505.23550.md) (2025) [2] Electroexcitation of Nucleon Resonances and the Emergence of Hadron Mass
+- [2505.19906](../papers/2505.19906.md) (2025) [2] Ab initio many-fermion structure calculations on a quantum computer
+- [2505.13691](../papers/2505.13691.md) (2025) [3] Unified nonparametric equation-of-state inference from the neutron-star crust to perturbative-QCD densities
+- [2505.01719](../papers/2505.01719.md) (2025) [1] Realization of all-to-all fermion propagator for the first principle high accuracy strong interaction prediction
+- [2505.01211](../papers/2505.01211.md) (2025) [2] Effect of the Coulomb interaction on nuclear deformation and drip lines
+- [2504.18279](../papers/2504.18279.md) (2025) [2] Charm-hadron reconstruction through three body decay in hadronic collisions using Machine Learning
+- [2504.18342](../papers/2504.18342.md) (2025) [3] Probing Quantum Phenomena through Photoproduction in Relativistic Heavy-Ion Collisions
+- [2504.09148](../papers/2504.09148.md) (2025) [3] From spin to pseudospin symmetry: The origin of magic numbers in nuclear structure
+- [2504.08631](../papers/2504.08631.md) (2025) [3] Can the strong interactions between hadrons be determined using femtoscopy?
+- [2504.08720](../papers/2504.08720.md) (2025) [2] The Early History of the Quark-Gluon Plasma
+- [2504.05745](../papers/2504.05745.md) (2025) [2] Reflections on Chiral Symmetry within QCD
+- [2504.04655](../papers/2504.04655.md) (2025) [3] Examination of the lattice QCD-motivated strong attractive $ΩN$ potentials in the $Ω^- n p$ system
+- [2504.02491](../papers/2504.02491.md) (2025) [2] ToMCCA-3: A realistic 3-body coalescence model
+- [2503.23919](../papers/2503.23919.md) (2025) [3] Production of $K^+K^-$ Pairs Through Decay of $ϕ$ Meson
+- [2503.22453](../papers/2503.22453.md) (2025) [1] Studying the $KΛ$ strong interaction with femtoscopic correlation functions and the $N^*(1535)$
+- [2503.22766](../papers/2503.22766.md) (2025) [3] Crossover between the zeptosecond and attosecond physics
+- [2503.18710](../papers/2503.18710.md) (2025) [2] Femtoscopy correlation functions and hadron-hadron scattering amplitudes in presence of Coulomb potential
+- [2503.18103](../papers/2503.18103.md) (2025) [2] In-medium nucleon-nucleon cross sections from relativistic ab initio calculations
+- [2503.16173](../papers/2503.16173.md) (2025) [3] Precision cross-sections for advancing cosmic-ray physics and other applications: a comprehensive programme for the next...
+- [2503.15376](../papers/2503.15376.md) (2025) [2] Study of hadron interactions and compositeness
+- [2503.08313](../papers/2503.08313.md) (2025) [3] Suppressed Drell-Yan process by an external magnetic field
+- [2503.05984](../papers/2503.05984.md) (2025) [2] Hadron Structure: Perspective and Insights
+- [2502.20329](../papers/2502.20329.md) (2025) [2] Long-range interactions in double heavy tetraquarks $\bar Q \bar Q qq$
+- [2502.17192](../papers/2502.17192.md) (2025) [3] Stability conditions for bound states in antiprotonic atoms

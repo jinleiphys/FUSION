@@ -6,6 +6,30 @@
 
 **Papers:** 150 (showing first 100 of 150)
 
+- [2606.04606](../papers/2606.04606.md) (2026) [2] Physics of many-body resonances with complex scaling and applications to light unstable nuclei
+- [2605.30828](../papers/2605.30828.md) (2026) [2] Dynamical selection of fragment shell effects in spontaneous fission of $^{240}$Pu, $^{232}$Th, and $^{264}$Fm
+- [2605.04862](../papers/2605.04862.md) (2026) [1] Nuclear level densities in the relativistic Hartree-Bogoliubov plus combinatorial framework
+- [2604.09935](../papers/2604.09935.md) (2026) [2] From credible shell model interactions to neutron-capture uncertainties
+- [2602.22669](../papers/2602.22669.md) (2026) [2] Symmetry-imposed correlation in nuclear level statistics: The spin distribution
+- [2602.10634](../papers/2602.10634.md) (2026) [2] Constraining cross sections for unstable $^{153,159}$Gd$(n,γ)$ and their astrophysical implications
+- [2601.20329](../papers/2601.20329.md) (2026) [1] From first to second minimum: Parity-dependent level densities in $^{240,242}$Pu
+- [2601.03804](../papers/2601.03804.md) (2026) [1] Improved microscopic nuclear level densities within the triaxial Hartree-Fock-Bogoliubov plus combinatorial method
+- [2509.26571](../papers/2509.26571.md) (2025) [1] Nuclear state and level densities of actinides with the shell-model Monte Carlo
+- [2509.09776](../papers/2509.09776.md) (2025) [2] Extraction of neutron-capture cross sections on $^{92}$Zr using the charge-exchange Oslo method
+- [2505.06674](../papers/2505.06674.md) (2025) [2] Temperature-dependent nuclear partition functions and abundances in stellar interior
+- [2503.05517](../papers/2503.05517.md) (2025) [2] Mass fractions in stellar interior during presupernova evolution
+- [2501.07118](../papers/2501.07118.md) (2025) [2] Energy partition between splitting fission fragments
+- [2412.05844](../papers/2412.05844.md) (2024) [2] Large-scale shell-model study of 2$ν$ECEC process in $^{78}$Kr
+- [2411.19940](../papers/2411.19940.md) (2024) [2] Direct local parametrization of nuclear state densities using the back-shifted Bethe formula
+- [2411.01279](../papers/2411.01279.md) (2024) [2] Proton induced reaction on $^{108}$Cd for astrophysical p-process studies
+- [2410.07279](../papers/2410.07279.md) (2024) [2] Re-investigation of neutron capture by 84Kr and 86Kr in the s-process nucleosynthesis
+- [2408.11639](../papers/2408.11639.md) (2024) [2] Capture Rates of Highly Degenerate Neutrons
+- [2405.09013](../papers/2405.09013.md) (2024) [1] Determination of pairing matrix elements from average single particle level densities
+- [2402.11535](../papers/2402.11535.md) (2024) [2] Bayesian uncertainty quantification on nuclear level density data and their impact on $(p,γ)$ reactions of astrophysical...
+- [2402.08889](../papers/2402.08889.md) (2024) [2] Indispensability of cross-shell contributions in neutron resonance spacing
+- [2311.08864](../papers/2311.08864.md) (2023) [2] Systematic study of the low-lying electric dipole strength in Sn isotopes and its astrophysical implications
+- [2310.08694](../papers/2310.08694.md) (2023) [2] The intermediate neutron capture process: IV. Impact of nuclear model and parameter uncertainties
+- [2309.00354](../papers/2309.00354.md) (2023) [1] Calculation of microscopic nuclear level densities based on covariant density functional theory
 - [2307.14391](../papers/2307.14391.md) (2023) [2] Nuclear Reactions in Evolving Stars
 - [2307.13437](../papers/2307.13437.md) (2023) [2] Multi-step particle emission probabilities in superheavy nuclei at moderate excitation energies
 - [2305.03664](../papers/2305.03664.md) (2023) [1] Impact of level densities and $γ$-strength functions on $r$-process simulations
@@ -82,27 +106,3 @@
 - [1301.1461](../papers/1301.1461.md) (2013) [2] Evolution of Surface Deformations of Weakly-Bound Nuclei in the Continuum
 - [1212.0628](../papers/1212.0628.md) (2012) [2] Databases and tools for nuclear astrophysics applications BRUSsels Nuclear LIBrary (BRUSLIB), Nuclear Astrophysics Compi...
 - [1210.3643](../papers/1210.3643.md) (2012) [2] Signatures of phase transitions in nuclei at finite excitation energies
-- [1206.4583](../papers/1206.4583.md) (2012) [1] A High-Performance Fortran Code to Calculate Spin- and Parity-Dependent Nuclear Level Densities
-- [1206.1542](../papers/1206.1542.md) (2012) [1] Nuclear Level Densities in the Constant-Spacing Model
-- [1111.3425](../papers/1111.3425.md) (2011) [2] Pairing reentrance in hot rotating nuclei
-- [1102.0940](../papers/1102.0940.md) (2011) [1] High-Performance Algorithm for Calculating Non-Spurious Spin- and Parity-Dependent Nuclear Level Densities
-- [1010.0760](../papers/1010.0760.md) (2010) [2] Thermodynamic properties of hot nuclei within the self-consistent quasiparticle random-phase approximation
-- [1004.5027](../papers/1004.5027.md) (2010) [1] A High-Performance Algorithm to Calculate Spin- and Parity-Dependent Nuclear Level Densities
-- [0901.1087](../papers/0901.1087.md) (2009) [2] Combinatorial nuclear level-density model
-- [0809.4072](../papers/0809.4072.md) (2008) [1] Isospin-projected nuclear level densities by the shell model Monte Carlo method
-- [0809.0447](../papers/0809.0447.md) (2008) [2] Further explorations of Skyrme-Hartree-Fock-Bogoliubov mass formulas. IX: Constraint of pairing force to $^1S_0$ neutron...
-- [0804.4402](../papers/0804.4402.md) (2008) [1] Complete inclusion of parity-dependent level densities in the statistical description of astrophysical reaction rates
-- [2309.00354](../papers/2309.00354.md) (0000) [1] 2309.00354
-- [2310.08694](../papers/2310.08694.md) (0000) [2] 2310.08694
-- [2311.08864](../papers/2311.08864.md) (0000) [2] 2311.08864
-- [2402.08889](../papers/2402.08889.md) (0000) [2] 2402.08889
-- [2402.11535](../papers/2402.11535.md) (0000) [2] 2402.11535
-- [2405.09013](../papers/2405.09013.md) (0000) [1] 2405.09013
-- [2408.11639](../papers/2408.11639.md) (0000) [2] 2408.11639
-- [2410.07279](../papers/2410.07279.md) (0000) [2] 2410.07279
-- [2411.01279](../papers/2411.01279.md) (0000) [2] 2411.01279
-- [2411.19940](../papers/2411.19940.md) (0000) [2] 2411.19940
-- [2412.05844](../papers/2412.05844.md) (0000) [2] 2412.05844
-- [2501.07118](../papers/2501.07118.md) (0000) [2] 2501.07118
-- [2503.05517](../papers/2503.05517.md) (0000) [2] 2503.05517
-- [2505.06674](../papers/2505.06674.md) (0000) [2] 2505.06674

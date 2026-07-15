@@ -6,6 +6,28 @@
 
 **Papers:** 113 (showing first 100 of 113)
 
+- [2603.13819](../papers/2603.13819.md) (2026) [2] Electromagnetic structure of Bc and heavy quarkonia in the light-front quark model
+- [2602.07501](../papers/2602.07501.md) (2026) [2] Comprehensive Table of Calculated Huff Factors
+- [2509.03778](../papers/2509.03778.md) (2025) [2] Mechanism of the quasi-elastic scattering based on the dinuclear system concept
+- [2509.02216](../papers/2509.02216.md) (2025) [2] Softening holographic nuclear matter
+- [2508.20791](../papers/2508.20791.md) (2025) [2] Impact of new results from the ultraperipheral collision on modeling the proton and neutron emission in photon-induced n...
+- [2508.08616](../papers/2508.08616.md) (2025) [2] Impact of shape coexistence on the symmetric to asymmetric fission mode transition in Th isotopes
+- [2502.16539](../papers/2502.16539.md) (2025) [2] Effect of potential-energy-model inaccuracies on predictions of fission-fragment mass distributions based on the Brownia...
+- [2502.16562](../papers/2502.16562.md) (2025) [2] Limiting fragmentation in the dilute Glasma
+- [2412.04545](../papers/2412.04545.md) (2024) [2] Ab initio calculations of overlap integrals for $μ\to e$ conversion in nuclei
+- [2410.09565](../papers/2410.09565.md) (2024) [2] Fission fragment distributions within time-dependent density functional theory
+- [2410.09577](../papers/2410.09577.md) (2024) [2] Role of the tensor force in induced fission of 240Pu
+- [2406.17394](../papers/2406.17394.md) (2024) [2] Moments of the charge distribution observed through electron scattering in H3 and He3
+- [2406.06677](../papers/2406.06677.md) (2024) [1] Uncertainty quantification for $μ\to e$ conversion in nuclei: charge distributions
+- [2406.05267](../papers/2406.05267.md) (2024) [2] Characterizing the nuclear models informed by PREX and CREX: a view from Bayesian inference
+- [2405.09648](../papers/2405.09648.md) (2024) [2] BSQ Conserved Charges in Relativistic Viscous Hydrodynamics solved with Smoothed Particle Hydrodynamics
+- [2403.11628](../papers/2403.11628.md) (2024) [2] Characteristics of the fission fragments in the three-body model of binary fission
+- [2402.02935](../papers/2402.02935.md) (2024) [2] Nuclear mass table in deformed relativistic Hartree-Bogoliubov theory in continuum, II: Even-$Z$ nuclei
+- [2312.15008](../papers/2312.15008.md) (2023) [2] Toward Initial Conditions of Conserved Charges
+- [2310.04083](../papers/2310.04083.md) (2023) [2] The Dilatonic Dynamics of Baryonic Crystals, Branes and Spheres
+- [2309.16893](../papers/2309.16893.md) (2023) [2] Data-driven reevaluation of $ft$-values in superallowed $β$ decays
+- [2309.06371](../papers/2309.06371.md) (2023) [2] Nuclear ground-state properties probed by the relativistic Hartree-Bogoliubov approach
+- [2308.04852](../papers/2308.04852.md) (2023) [2] A novel approach to light cluster production in heavy-ion collisions
 - [2302.08171](../papers/2302.08171.md) (2023) [2] Spontaneous fission half-lives of actinides and super-heavy elements
 - [2212.02124](../papers/2212.02124.md) (2022) [2] Charge-dependent anisotropic flow in high-energy heavy-ion collisions from relativistic resistive magneto-hydrodynamic e...
 - [2207.14323](../papers/2207.14323.md) (2022) [2] Crystallization in single and multicomponent Neutron Star crusts
@@ -80,28 +102,6 @@
 - [0903.3304](../papers/0903.3304.md) (2009) [2] Interaction between Interpenetrating Charge Clouds and Collision of High-Energy Particles
 - [0810.0925](../papers/0810.0925.md) (2008) [2] Charge distribution and radii in clusters from nuclear pasta models
 - [0807.2173](../papers/0807.2173.md) (2008) [2] Symmetry interaction and many-body correlations
-- [2308.04852](../papers/2308.04852.md) (0000) [2] 2308.04852
-- [2309.06371](../papers/2309.06371.md) (0000) [2] 2309.06371
-- [2309.16893](../papers/2309.16893.md) (0000) [2] 2309.16893
-- [2310.04083](../papers/2310.04083.md) (0000) [2] 2310.04083
-- [2312.15008](../papers/2312.15008.md) (0000) [2] 2312.15008
-- [2402.02935](../papers/2402.02935.md) (0000) [2] 2402.02935
-- [2403.11628](../papers/2403.11628.md) (0000) [2] 2403.11628
-- [2405.09648](../papers/2405.09648.md) (0000) [2] 2405.09648
-- [2406.05267](../papers/2406.05267.md) (0000) [2] 2406.05267
-- [2406.06677](../papers/2406.06677.md) (0000) [1] 2406.06677
-- [2406.17394](../papers/2406.17394.md) (0000) [2] 2406.17394
-- [2410.09565](../papers/2410.09565.md) (0000) [2] 2410.09565
-- [2410.09577](../papers/2410.09577.md) (0000) [2] 2410.09577
-- [2412.04545](../papers/2412.04545.md) (0000) [2] 2412.04545
-- [2502.16539](../papers/2502.16539.md) (0000) [2] 2502.16539
-- [2502.16562](../papers/2502.16562.md) (0000) [2] 2502.16562
-- [2508.08616](../papers/2508.08616.md) (0000) [2] 2508.08616
-- [2508.20791](../papers/2508.20791.md) (0000) [2] 2508.20791
-- [2509.02216](../papers/2509.02216.md) (0000) [2] 2509.02216
-- [2509.03778](../papers/2509.03778.md) (0000) [2] 2509.03778
-- [2602.07501](../papers/2602.07501.md) (0000) [2] 2602.07501
-- [2603.13819](../papers/2603.13819.md) (0000) [2] 2603.13819
 - [nucl-th/0002046](../papers/nucl-th/0002046.md) (0000) [2] nucl-th/0002046
 - [nucl-th/0005023](../papers/nucl-th/0005023.md) (0000) [2] nucl-th/0005023
 - [nucl-th/0108065](../papers/nucl-th/0108065.md) (0000) [1] nucl-th/0108065

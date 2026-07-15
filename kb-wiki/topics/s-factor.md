@@ -6,6 +6,36 @@
 
 **Papers:** 200 (showing first 100 of 200)
 
+- [2605.19927](../papers/2605.19927.md) (2026) [1] A new analysis of the "hep" S-factor and the "hen" cross section
+- [2603.28383](../papers/2603.28383.md) (2026) [2] Study of radiative proton capture by the 7Be nucleus with the use of ab initio approaches
+- [2603.25465](../papers/2603.25465.md) (2026) [2] Bayesian analysis of proton-proton fusion in chiral effective field theory
+- [2603.07056](../papers/2603.07056.md) (2026) [1] $^{14}$N(p,$γ)^{15}$O $S$ factor and the puzzling solar composition problem
+- [2602.23794](../papers/2602.23794.md) (2026) [1] $S$ factor of $^{13}$C($α$,$n$)$^{16}$O at low energies in cluster effective field theory
+- [2602.22763](../papers/2602.22763.md) (2026) [2] Towards a microscopic description of 12C+12C fusion at stellar energies
+- [2602.12423](../papers/2602.12423.md) (2026) [2] Low-energy $^{3}$He($α,γ$)$^{7}$Be reaction within the Skyrme potential framework
+- [2601.16551](../papers/2601.16551.md) (2026) [2] Analysis of $M1$ capture in the $α(d,γ)^6$Li reaction
+- [2601.11180](../papers/2601.11180.md) (2026) [2] Fine-tunings in radiative $α$-particle capture on $^{12}$C at astrophysical energies
+- [2512.11172](../papers/2512.11172.md) (2025) [2] Study of few $^3$He-induced nuclear fusion reactions using density-dependent double-folding complex potential
+- [2509.24931](../papers/2509.24931.md) (2025) [2] Precision calculation of $^3$He$(α,γ)^7$Be for solar physics
+- [2509.14717](../papers/2509.14717.md) (2025) [2] Refining the deep sub-barrier 12C+12C excitation function with STELLA
+- [2506.20349](../papers/2506.20349.md) (2025) [1] Resonant Structures in $p{}^7\mathrm{Be}$ Scattering and Their Connection to the Astrophysical $S$-Factor
+- [2506.08044](../papers/2506.08044.md) (2025) [2] Estimation of Electron Screening Potential in the 6Li(d,α)4He Reaction Using Multi-Layer Perceptron Neural Network
+- [2505.07551](../papers/2505.07551.md) (2025) [1] Astrophysical $S$ factor and reaction rate of the direct $^{12}{\rm C}(p, γ)^{13}{\rm N}$ capture process within a poten...
+- [2504.05003](../papers/2504.05003.md) (2025) [2] The role of the screening potential in the deuteron-deuteron thermonuclear reaction rates
+- [2501.15974](../papers/2501.15974.md) (2025) [1] The correlation between the $α$-cluster separation and the neutron S-factor in $^{12}$Be
+- [2412.12205](../papers/2412.12205.md) (2024) [2] Radiative Capture Reaction $d(α,γ)^{6}\mathrm{Li} $ in Cluster Effective Field Theory
+- [2411.01444](../papers/2411.01444.md) (2024) [2] Radiative Capture of proton 14N(p,γ) 15O at Low Energy
+- [2411.01279](../papers/2411.01279.md) (2024) [2] Proton induced reaction on $^{108}$Cd for astrophysical p-process studies
+- [2409.09515](../papers/2409.09515.md) (2024) [1] Ab initio calculation of the $^3$He$(α,γ)^7$Be astrophysical S factor with chiral two- and three-nucleon forces
+- [2409.07059](../papers/2409.07059.md) (2024) [2] Neutron skin and its effects in heavy-ion collisions
+- [2407.21089](../papers/2407.21089.md) (2024) [2] Determination of electron screening potential of 6 Li(p,α)3 He reaction using MultiLayer Perceptron based neural network
+- [2407.08015](../papers/2407.08015.md) (2024) [2] Radiative corrections to proton-proton fusion in pionless EFT
+- [2405.07935](../papers/2405.07935.md) (2024) [2] Study of the direct $^{16}{\rm O}(p, γ)^{17}{\rm F}$ astrophysical capture reaction within a potential model approach
+- [2405.06470](../papers/2405.06470.md) (2024) [2] Solar fusion III: New data and theory for hydrogen-burning stars
+- [2401.04281](../papers/2401.04281.md) (2024) [2] Comments to the paper "Detailed study of the astrophysical direct capture reaction $^6$Li($p,γ$)$^7$Be in a potential mo...
+- [2310.20255](../papers/2310.20255.md) (2023) [1] Asymptotic normalization coefficients for $α+ {}^{12}{\rm C}$ synthesis and the $S$-factor for ${}^{12}{\rm C}(α, \,γ){}...
+- [2310.02099](../papers/2310.02099.md) (2023) [2] Re-evaluation of the $^{22}$Ne($p$,$γ$)$^{23}$Na reaction rate: $R-$matrix analysis of the non-resonant capture and effe...
+- [2309.01929](../papers/2309.01929.md) (2023) [2] Clustering effects in the $^6$Li(p,$^3$He)$^4$He reaction at astrophysical energies
 - [2307.08963](../papers/2307.08963.md) (2023) [1] Proton 0.01 MeV resonance width and low-energy $S$-factor of p+10B fusion
 - [2306.12838](../papers/2306.12838.md) (2023) [2] Detailed study of the astrophysical direct capture reaction $^{6}{\rm Li}(p, γ)^{7}{\rm Be}$ in a potential model approa...
 - [2304.03327](../papers/2304.03327.md) (2023) [2] Revisiting proton-proton fusion in chiral effective field theory
@@ -76,33 +106,3 @@
 - [1603.04946](../papers/1603.04946.md) (2016) [2] Mean-field study of $^{12}$C+$^{12}$C fusion
 - [1603.01593](../papers/1603.01593.md) (2016) [2] Uncertainty quantification for proton-proton fusion in chiral effective field theory
 - [1601.06660](../papers/1601.06660.md) (2016) [2] Gamow shell model description of radiative capture reactions $^6$Li$(p,γ)$$^7$Be and $^6$Li$(n,γ)$$^7$Li
-- [1510.07877](../papers/1510.07877.md) (2015) [2] Implication of the proton-deuteron radiative capture for Big Bang Nucleosynthesis
-- [1510.00786](../papers/1510.00786.md) (2015) [1] Astrophysical S-factor for $^6$Li$(p,γ)$$^7$Be in the coupled-channel Gamow shell model
-- [1510.00806](../papers/1510.00806.md) (2015) [2] Systematic investigations of deep sub-barrier fusion reactions using an adiabatic approach
-- [1509.04816](../papers/1509.04816.md) (2015) [2] Effects of $NN$ potentials on $p$ nuclides in the A$\sim$100-120 region
-- [1509.00725](../papers/1509.00725.md) (2015) [1] Astrophysical S factor of {$^{12}$C($α,γ$)$^{16}$O} Calculated with the Reduced R-matrix Theory
-- [1508.06935](../papers/1508.06935.md) (2015) [2] How well do we understand Beryllium-7 + proton -> Boron-8 + photon? An Effective Field Theory perspective
-- [1507.08675](../papers/1507.08675.md) (2015) [2] Range corrections in Proton Halo Nuclei
-- [1507.07239](../papers/1507.07239.md) (2015) [2] Halo effective field theory constrains the solar Beryllium-7 + proton -> Boron-8 + photon rate
-- [1501.06250](../papers/1501.06250.md) (2015) [2] Theoretical reaction rates of the $^{12}$C($α$,$γ$)$^{16}$O reaction from the potential model
-- [1411.5480](../papers/1411.5480.md) (2014) [2] Astrophysical implications of the proton-proton cross section updates
-- [1406.6908](../papers/1406.6908.md) (2014) [2] Constraining Low-Energy Proton Capture on Beryllium-7 through Charge Radius Measurements
-- [1406.5735](../papers/1406.5735.md) (2014) [1] Low-energy R-matrix fits for the 6Li(d,a)4He S factor
-- [1406.2928](../papers/1406.2928.md) (2014) [1] Theoretical analysis of the astrophysical S-factor for the alpha+d -->6Li + gamma capture reaction in the two body model
-- [1404.3966](../papers/1404.3966.md) (2014) [2] Additional resonant contribution to the potential model for the 12C(alpha,gamma)16O reaction
-- [1403.6311](../papers/1403.6311.md) (2014) [2] Strangeness enhancement at the hadronic chemical freeze-out
-- [1401.4482](../papers/1401.4482.md) (2014) [2] Marrying ab initio calculations and Halo EFT: the case of ${}^7{\rm Be} + p \rightarrow {}^8{\rm B} + γ$
-- [1309.7539](../papers/1309.7539.md) (2013) [1] The Astrophysical S-factor of the 12C(α,γ)16O Reaction at Solar Energies
-- [1308.5975](../papers/1308.5975.md) (2013) [2] Effective field theory for proton halo nuclei
-- [1308.3594](../papers/1308.3594.md) (2013) [2] Chemical Freeze-out of Strange Particles and Possible Root of Strangeness Suppression
-- [1307.6449](../papers/1307.6449.md) (2013) [2] Clusters, Halos, And S-Factors In Fermionic Molecular Dynamics
-- [1305.2105](../papers/1305.2105.md) (2013) [2] Gamow peak approximation near strong resonances
-- [1303.3124](../papers/1303.3124.md) (2013) [2] The proton-proton weak capture in chiral effective field theory
-- [1209.2552](../papers/1209.2552.md) (2012) [2] Near Threshold Proton-Proton Fusion in Effective Field Theory
-- [1110.0460](../papers/1110.0460.md) (2011) [2] Ab initio many-body calculations of the 3H(d,n)4He and 3He(d,p)4He fusion
-- [1105.5977](../papers/1105.5977.md) (2011) [2] Ab initio many-body calculation of the 7Be(p,gamma)8B radiative capture
-- [1103.0453](../papers/1103.0453.md) (2011) [1] {Once more about astrophysical $S$ factor for the $α+ d \to {}^{6}{\rm Li} + γ$ reaction
-- [1101.1924](../papers/1101.1924.md) (2011) [1] Astrophysical $S$ factor for the ${}^{15}{\rm N}(p,γ){}^{16}{\rm O}$ reaction from $R$-matrix analysis and asymptotic no...
-- [1012.4970](../papers/1012.4970.md) (2010) [2] Microscopic Nuclear Structure and Reaction Calculations in the FMD Approach
-- [1011.2869](../papers/1011.2869.md) (2010) [2] Microscopic calculation of the 3He(alpha,gamma)7Be and 3H(alpha,gamma)7Li capture cross sections using realistic interac...
-- [1011.2341](../papers/1011.2341.md) (2010) [2] Towards Microscopic Ab Initio Calculations of Astrophysical S-Factors

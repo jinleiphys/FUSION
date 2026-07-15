@@ -4,6 +4,27 @@
 
 **Papers:** 171 (showing first 100 of 171)
 
+- [2604.16600](../papers/2604.16600.md) (2026) [2] A data-driven prediction for the primordial deuterium abundance
+- [2603.18717](../papers/2603.18717.md) (2026) [2] Primordial deuterium abundance from calculations of $p(n,γ)$ and $d(p,γ)$ reactions within potential-model approach
+- [2603.02652](../papers/2603.02652.md) (2026) [2] Weinberg Angle, Neutron Abundance in BBN, and Lifetime
+- [2602.12423](../papers/2602.12423.md) (2026) [2] Low-energy $^{3}$He($α,γ$)$^{7}$Be reaction within the Skyrme potential framework
+- [2601.12438](../papers/2601.12438.md) (2026) [1] Revisiting $^7$Be Weak and Radiative Transition Rates in Big Bang Nucleosynthesis: Implications for the Primordial Lithi...
+- [2601.05935](../papers/2601.05935.md) (2026) [2] Gravitational Ionization by Schwarzschild Primordial Black Holes
+- [2512.24358](../papers/2512.24358.md) (2025) [1] Big Bang Nucleosynthesis results refined via the Trojan Horse Method
+- [2509.10721](../papers/2509.10721.md) (2025) [2] SIV Guided Resolution of the Lithium-7 BBN Problem
+- [2508.07266](../papers/2508.07266.md) (2025) [2] Constraints on the Variation of the QCD Interaction Scale $Λ_{\text{QCD}}$
+- [2504.05003](../papers/2504.05003.md) (2025) [2] The role of the screening potential in the deuteron-deuteron thermonuclear reaction rates
+- [2502.15409](../papers/2502.15409.md) (2025) [1] Bounds on variations of the strange quark mass from Big Bang nucleosynthesis
+- [2409.20299](../papers/2409.20299.md) (2024) [2] Big Bang: a theory or fact
+- [2409.06015](../papers/2409.06015.md) (2024) [1] Big Bang Nucleosynthesis
+- [2407.10560](../papers/2407.10560.md) (2024) [2] Confronting the low-scale seesaw and leptogenesis with neutrinoless double beta decay
+- [2406.13055](../papers/2406.13055.md) (2024) [2] Self-consistent strong screening applied to thermonuclear reactions
+- [2405.03210](../papers/2405.03210.md) (2024) [2] Magnetic dipole transition in proton-deuteron radiative capture at BBN energies within potential model
+- [2404.15832](../papers/2404.15832.md) (2024) [2] Primordial Nucleosynthesis with Non-Extensive Statistics
+- [2403.09325](../papers/2403.09325.md) (2024) [1] Improved Constraints on the Variation of the Weak Scale from Big Bang Nucleosynthesis
+- [2402.08626](../papers/2402.08626.md) (2024) [1] Constraints on Variation of the Weak Scale from Big Bang Nucleosynthesis
+- [2402.01210](../papers/2402.01210.md) (2024) [1] Big Bang Nucleosynthesis constraints on the Energy-Momentum Squared Gravity: The $\mathbb{T}^{2}$ model
+- [2401.00687](../papers/2401.00687.md) (2024) [1] Constraining MeV to 10 GeV majoron by Big Bang Nucleosynthesis
 - [2307.11264](../papers/2307.11264.md) (2023) [2] Electron-positron plasma in BBN: damped-dynamic screening
 - [2307.07061](../papers/2307.07061.md) (2023) [2] PRyMordial: The First Three Minutes, Within and Beyond the Standard Model
 - [2307.04269](../papers/2307.04269.md) (2023) [1] Big-Bang Nucleosynthesis within the Scale Invariant Vacuum Paradigm
@@ -83,24 +104,3 @@
 - [1303.2291](../papers/1303.2291.md) (2013) [1] A Big-Bang Nucleosynthesis Limit on the Neutral Fermion Decays into Neutrinos
 - [1301.1738](../papers/1301.1738.md) (2013) [1] Varying the light quark mass: impact on the nuclear force and Big Bang nucleosynthesis
 - [1301.1474](../papers/1301.1474.md) (2013) [2] Influence of the variation of fundamental constants on the primordial nucleosynthesis
-- [1210.0235](../papers/1210.0235.md) (2012) [1] Dark/Visible Parallel Universes and Big Bang Nucleosynthesis
-- [1209.3743](../papers/1209.3743.md) (2012) [2] Neutrino Astrophysics
-- [1208.3009](../papers/1208.3009.md) (2012) [2] Variations of nuclear binding with quark masses
-- [1208.0032](../papers/1208.0032.md) (2012) [1] Neutrinos And Big Bang Nucleosynthesis
-- [1205.4000](../papers/1205.4000.md) (2012) [1] Big Bang nucleosynthesis with a non-Maxwellian distribution
-- [1203.3551](../papers/1203.3551.md) (2012) [2] The Primordial Lithium Problem
-- [1202.5603](../papers/1202.5603.md) (2012) [1] Solution to Big-Bang Nucleosynthesis in Hybrid Axion Dark Matter Model
-- [1202.5232](../papers/1202.5232.md) (2012) [2] The cosmological 7Li problem from a nuclear physics perspective
-- [1112.2683](../papers/1112.2683.md) (2011) [2] An analysis of constraints on relativistic species from primordial nucleosynthesis and the cosmic microwave background
-- [1111.3577](../papers/1111.3577.md) (2011) [2] Towards Nuclear Physics of OHe Dark Matter
-- [1110.0460](../papers/1110.0460.md) (2011) [2] Ab initio many-body calculations of the 3H(d,n)4He and 3He(d,p)4He fusion
-- [1106.2972](../papers/1106.2972.md) (2011) [2] Nuclear reaction rates and the primordial nucleosynthesis
-- [1105.1431](../papers/1105.1431.md) (2011) [1] Big-bang nucleosynthesis with a long-lived charged massive particle including $^4$He spallation processes
-- [1012.3840](../papers/1012.3840.md) (2010) [1] Quark mass variation constraints from Big Bang nucleosynthesis
-- [1012.0934](../papers/1012.0934.md) (2010) [2] The dark atoms of dark matter
-- [1011.4586](../papers/1011.4586.md) (2010) [2] Dark Atoms of the Universe: towards OHe nuclear physics
-- [1011.0722](../papers/1011.0722.md) (2010) [2] Resonant Destruction as a Possible Solution to the Cosmological Lithium Problem
-- [1010.1565](../papers/1010.1565.md) (2010) [1] Electron screening and its effects on Big-Bang nucleosynthesis
-- [1009.5514](../papers/1009.5514.md) (2010) [2] Varying constants, Gravitation and Cosmology
-- [1009.4666](../papers/1009.4666.md) (2010) [2] Neutrinos, WMAP, and BBN
-- [1009.3932](../papers/1009.3932.md) (2010) [2] Time of primordial Be-7 conversion into Li-7, energy release and doublet of narrow cosmological neutrino lines

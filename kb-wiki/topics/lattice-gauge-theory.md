@@ -4,6 +4,46 @@
 
 **Papers:** 154 (showing first 100 of 154)
 
+- [2605.15076](../papers/2605.15076.md) (2026) [1] Deforming the Trail: Baseline Quantum Circuitry for $\text{SU(2)}_k$ Lattice Gauge Theory
+- [2604.06716](../papers/2604.06716.md) (2026) [1] Quantum simulation of baryon scattering in SU(2) lattice gauge theory
+- [2603.24698](../papers/2603.24698.md) (2026) [1] String-breaking statics and dynamics in a (1+1)D SU(2) lattice gauge theory
+- [2603.12194](../papers/2603.12194.md) (2026) [2] Schwinger Model with a Dynamical Axion
+- [2603.01215](../papers/2603.01215.md) (2026) [1] Continuum limit of a qubit-regularized SU(3) lattice gauge theory with glueballs
+- [2602.22121](../papers/2602.22121.md) (2026) [1] Trade-offs in Gauss's law error correction for lattice gauge theory quantum simulations
+- [2602.18080](../papers/2602.18080.md) (2026) [2] Observation of Robust and Coherent Non-Abelian Hadron Dynamics on Noisy Quantum Processors
+- [2602.04948](../papers/2602.04948.md) (2026) [2] Towards $2+1$D quantum electrodynamics on a cold-atom quantum simulator
+- [2602.02436](../papers/2602.02436.md) (2026) [2] Wilson loops with neural networks
+- [2512.11068](../papers/2512.11068.md) (2025) [2] Asymptotic-freedom and massive glueballs in a qubit-regularized SU(2) gauge theory
+- [2512.05210](../papers/2512.05210.md) (2025) [1] A Framework for Quantum Simulations of Energy-Loss and Hadronization in Non-Abelian Gauge Theories: SU(2) Lattice Gauge ...
+- [2511.02904](../papers/2511.02904.md) (2025) [2] Classical shadows for sample-efficient measurements of gauge-invariant observables
+- [2511.00154](../papers/2511.00154.md) (2025) [1] Hadronic scattering in (1+1)D SU(2) lattice gauge theory from tensor networks
+- [2508.03126](../papers/2508.03126.md) (2025) [1] New computational methods in lattice gauge theory -- quantum computation and tensor networks
+- [2508.00061](../papers/2508.00061.md) (2025) [2] Truncation uncertainties for accurate quantum simulations of lattice gauge theories
+- [2507.17200](../papers/2507.17200.md) (2025) [2] Novel insight into centre-vortex geometry in four dimensions
+- [2507.15840](../papers/2507.15840.md) (2025) [2] TASI/CERN/KITP Lecture Notes on "Toward Quantum Computing Gauge Theories of Nature
+- [2506.10945](../papers/2506.10945.md) (2025) [2] Non-Abelian dynamics on a cube: improving quantum compilation through qudit-based simulations
+- [2505.20387](../papers/2505.20387.md) (2025) [1] Observation of hadron scattering in a lattice gauge theory on a quantum computer
+- [2505.20408](../papers/2505.20408.md) (2025) [1] Quantum computation of hadron scattering in a lattice gauge theory
+- [2504.02297](../papers/2504.02297.md) (2025) [2] The temperature dependence of fractional topological charge objects
+- [2503.03828](../papers/2503.03828.md) (2025) [1] Constrained many-body phases in a $\mathbb{Z}_2$-Higgs lattice gauge theory
+- [2502.17551](../papers/2502.17551.md) (2025) [2] Emergent Hydrodynamic Mode on SU(2) Plaquette Chains and Quantum Simulation
+- [2501.11603](../papers/2501.11603.md) (2025) [2] QCD Equation of State with $N_f=3$ Flavors up to the Electroweak Scale
+- [2411.05582](../papers/2411.05582.md) (2024) [2] Condensation and prescaling in spatial Polyakov loop correlations far from equilibrium
+- [2410.14580](../papers/2410.14580.md) (2024) [1] Quantum computation of SU(2) lattice gauge theory with continuous variables
+- [2410.13815](../papers/2410.13815.md) (2024) [2] Observation of string-breaking dynamics in a quantum simulator
+- [2409.10564](../papers/2409.10564.md) (2024) [2] The impact of glasma on heavy flavor azimuthal correlations and spectra
+- [2409.03030](../papers/2409.03030.md) (2024) [2] JuliaQCD: Portable lattice QCD package in Julia language
+- [2409.03123](../papers/2409.03123.md) (2024) [2] High Energy Physics from Low Energy Physics
+- [2408.09007](../papers/2408.09007.md) (2024) [2] Coulomb confinement in the Hamiltonian limit
+- [2408.00069](../papers/2408.00069.md) (2024) [1] Quantum Computing Universal Thermalization Dynamics in a (2+1)D Lattice Gauge Theory
+- [2407.09253](../papers/2407.09253.md) (2024) [2] Understanding the approach to thermalization from the eigenspectrum of non-Abelian gauge theories
+- [2404.02965](../papers/2404.02965.md) (2024) [2] Quantum thermodynamics of nonequilibrium processes in lattice gauge theories
+- [2402.00840](../papers/2402.00840.md) (2024) [2] Scattering wave packets of hadrons in gauge theories: Preparation on a quantum computer
+- [2312.13408](../papers/2312.13408.md) (2023) [2] Testing Eigenstate Thermalization Hypothesis for Non-Abelian Gauge Theories
+- [2312.02726](../papers/2312.02726.md) (2023) [2] Conserved energy-momentum tensor for real-time lattice simulations
+- [2312.03063](../papers/2312.03063.md) (2023) [1] Real-time correlators in 3+1D thermal lattice gauge theory
+- [2312.00780](../papers/2312.00780.md) (2023) [1] Theoretical Developments in Lattice Gauge Theory for Applications in Double-beta Decay Processes and Quantum Simulation
+- [2308.16202](../papers/2308.16202.md) (2023) [1] Eigenstate Thermalization in 2+1 dimensional SU(2) Lattice Gauge Theory
 - [2307.07999](../papers/2307.07999.md) (2023) [2] Heavy quark $κ$ and jet $\hat{q}$ transport coefficients in the Glasma early stage of heavy-ion collisions
 - [2307.00045](../papers/2307.00045.md) (2023) [1] Simple Hamiltonian for Quantum Simulation of Strongly Coupled 2+1D SU(2) Lattice Gauge Theory on a Honeycomb Lattice
 - [2306.10199](../papers/2306.10199.md) (2023) [2] Quark mass difference effects in hadronic Fermi matrix elements from first principles
@@ -64,43 +104,3 @@
 - [1209.3468](../papers/1209.3468.md) (2012) [1] Lattice Gauge Theory and the Origin of Mass
 - [1207.1450](../papers/1207.1450.md) (2012) [2] Turbulent thermalization of weakly coupled non-abelian plasmas
 - [1203.1204](../papers/1203.1204.md) (2012) [1] Twenty-first Century Lattice Gauge Theory: Results from the QCD Lagrangian
-- [1202.5295](../papers/1202.5295.md) (2012) [1] Calculating the Jet Quenching Parameter $\hat{q}$ in Lattice Gauge Theory
-- [1109.2542](../papers/1109.2542.md) (2011) [2] Beyond the Standard Model with Precision Nucleon Matrix Elements on the Lattice
-- [1106.1608](../papers/1106.1608.md) (2011) [2] Review of Baryon Spectroscopy in Lattice QCD
-- [1105.1931](../papers/1105.1931.md) (2011) [1] Polyakov Loop Behavior in Non-Extensive SU(2) Lattice Gauge Theory
-- [1104.0522](../papers/1104.0522.md) (2011) [2] Topological Fluctuations in Dense Matter with Two Colors
-- [1101.4961](../papers/1101.4961.md) (2011) [2] Lattice Study of Dense Matter with Two Colors and Four Flavors
-- [1012.0116](../papers/1012.0116.md) (2010) [2] Non-conformal Holography of Heavy Quark Quenching
-- [1010.2169](../papers/1010.2169.md) (2010) [2] Low Mass Dilepton Rate from the Deconfined Phase
-- [1009.2774](../papers/1009.2774.md) (2010) [2] Anomaly and a QCD-like phase diagram with massive bosonic baryons
-- [1005.2686](../papers/1005.2686.md) (2010) [1] Lattice Gauge Theory Sum Rule for the Shear Channel
-- [1004.2100](../papers/1004.2100.md) (2010) [2] Exploring the Nucleon Structure from First Principles of QCD
-- [0902.2856](../papers/0902.2856.md) (2009) [1] Heavy Quark Thermalization in Classical Lattice Gauge Theory: Lessons for Strongly-Coupled QCD
-- [0812.3859](../papers/0812.3859.md) (2008) [2] Simulating plasma instabilities in SU(3) gauge theory
-- [0805.0784](../papers/0805.0784.md) (2008) [2] Thermalization in SU(3) gauge theory after a deconfining quench
-- [0804.2371](../papers/0804.2371.md) (2008) [2] Constraints on the IR behavior of the ghost propagator in Yang-Mills theories
-- [0801.3823](../papers/0801.3823.md) (2008) [2] Role of the $σ$-resonance in determining the convergence of chiral perturbation theory
-- [0712.3514](../papers/0712.3514.md) (2007) [1] Bottom-up isotropization in classical-statistical lattice gauge theory
-- [0711.2322](../papers/0711.2322.md) (2007) [2] Relativistic corrections to the static potential at O(1/m) and O(1/m^2)
-- [0711.0699](../papers/0711.0699.md) (2007) [1] Lattice gauge theory with staggered fermions: how, where, and why (not)
-- [0710.1966](../papers/0710.1966.md) (2007) [2] Hadron Spectrum in a Two-Colour Baryon-Rich Medium
-- [2308.16202](../papers/2308.16202.md) (0000) [1] 2308.16202
-- [2312.00780](../papers/2312.00780.md) (0000) [1] 2312.00780
-- [2312.02726](../papers/2312.02726.md) (0000) [2] 2312.02726
-- [2312.03063](../papers/2312.03063.md) (0000) [1] 2312.03063
-- [2312.13408](../papers/2312.13408.md) (0000) [2] 2312.13408
-- [2402.00840](../papers/2402.00840.md) (0000) [2] 2402.00840
-- [2404.02965](../papers/2404.02965.md) (0000) [2] 2404.02965
-- [2407.09253](../papers/2407.09253.md) (0000) [2] 2407.09253
-- [2408.00069](../papers/2408.00069.md) (0000) [1] 2408.00069
-- [2408.09007](../papers/2408.09007.md) (0000) [2] 2408.09007
-- [2409.03030](../papers/2409.03030.md) (0000) [2] 2409.03030
-- [2409.03123](../papers/2409.03123.md) (0000) [2] 2409.03123
-- [2409.10564](../papers/2409.10564.md) (0000) [2] 2409.10564
-- [2410.13815](../papers/2410.13815.md) (0000) [2] 2410.13815
-- [2410.14580](../papers/2410.14580.md) (0000) [1] 2410.14580
-- [2411.05582](../papers/2411.05582.md) (0000) [2] 2411.05582
-- [2501.11603](../papers/2501.11603.md) (0000) [2] 2501.11603
-- [2502.17551](../papers/2502.17551.md) (0000) [2] 2502.17551
-- [2503.03828](../papers/2503.03828.md) (0000) [1] 2503.03828
-- [2504.02297](../papers/2504.02297.md) (0000) [2] 2504.02297

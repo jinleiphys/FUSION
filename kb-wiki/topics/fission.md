@@ -8,103 +8,103 @@
 
 **Papers:** 1446 (showing first 100 of 1446)
 
-- [2307.14276](../papers/2307.14276.md) (2023) [2] Skyrme-Hartree-Fock-Bogoliubov mass models on a 3D mesh: III. From atomic nuclei to neutron stars
-- [2307.14391](../papers/2307.14391.md) (2023) [2] Nuclear Reactions in Evolving Stars
-- [2307.14455](../papers/2307.14455.md) (2023) [1] Spatial orientation of the fission fragment intrinsic spins and their correlations
-- [2307.13437](../papers/2307.13437.md) (2023) [3] Multi-step particle emission probabilities in superheavy nuclei at moderate excitation energies
-- [2307.13132](../papers/2307.13132.md) (2023) [1] Neck Rupture and Scission Neutrons in Nuclear Fission
-- [2307.08971](../papers/2307.08971.md) (2023) [2] Postfission properties of uranium isotopes: A hybrid method with Langevin dynamics and the Hauser-Feshbach statistical m...
-- [2307.02095](../papers/2307.02095.md) (2023) [3] Laser-assisted deformed $α$ decay of the ground state even-even nuclei
-- [2307.00220](../papers/2307.00220.md) (2023) [1] Solving one-dimensional penetration problem for fission channel in the statistical Hauser-Feshbach theory
-- [2306.11314](../papers/2306.11314.md) (2023) [2] Analysis of a Skyrme energy density functional with deep learning
-- [2306.11422](../papers/2306.11422.md) (2023) [2] Bulk and neutron-proton asymmetry coefficients of the semi-empirical mass formula tuned to ground state mass excess of A...
-- [2306.11581](../papers/2306.11581.md) (2023) [2] Decay properties of undetected superheavy nuclei with Z>110
-- [2306.08348](../papers/2306.08348.md) (2023) [2] Generative deep-learning reveals collective variables of Fermionic systems
-- [2306.07299](../papers/2306.07299.md) (2023) [3] Additive Multi-Index Gaussian process modeling, with application to multi-physics surrogate modeling of the quark-gluon ...
-- [2305.15037](../papers/2305.15037.md) (2023) [3] Ab initio study of nuclear clustering in hot dilute nuclear matter
-- [2305.05209](../papers/2305.05209.md) (2023) [2] Decay of superheavy nuclei based on the random forest algorithm
-- [2304.13369](../papers/2304.13369.md) (2023) [2] Generalized time-dependent generator coordinate method for small and large amplitude collective motion
-- [2304.13391](../papers/2304.13391.md) (2023) [3] Two-proton emission and related phenomena
-- [2304.12655](../papers/2304.12655.md) (2023) [3] Accurate relativistic density functional for exchange energy of atomic nuclei
-- [2304.12475](../papers/2304.12475.md) (2023) [3] Ultra-peripheral nuclear collisions
-- [2304.06657](../papers/2304.06657.md) (2023) [1] Least action description of dynamic pairing correlations in the fission of Curium and Californium isotopes based on the ...
-- [2304.01850](../papers/2304.01850.md) (2023) [3] Nucleosynthesis and observation of the heaviest elements
-- [2304.00912](../papers/2304.00912.md) (2023) [3] Sterile neutrino searches with reactor antineutrinos using coherent neutrino-nucleus scattering experiments
-- [2304.00655](../papers/2304.00655.md) (2023) [3] Semiclassical origin of nuclear ground-state octupole deformations
-- [2303.17976](../papers/2303.17976.md) (2023) [1] The influence of the boundary conditions on characteristics of nuclear fission
-- [2303.16488](../papers/2303.16488.md) (2023) [1] Schematic model for induced fission in a configuration-interaction approach
-- [2303.13118](../papers/2303.13118.md) (2023) [1] Ground state and fission properties of even-$A$ uranium isotopes from multidimensionally-constrained relativistic mean f...
-- [2303.11299](../papers/2303.11299.md) (2023) [3] Prevailing Triaxial Shapes in Atomic Nuclei and a Quantum Theory of Rotation of Composite Objects
-- [2303.10529](../papers/2303.10529.md) (2023) [3] Diproton correlation and two-proton emission from proton-rich nuclei
-- [2303.10480](../papers/2303.10480.md) (2023) [1] Pair production as a probe for the dynamics of nuclear fission and $α$ decay
-- [2303.07969](../papers/2303.07969.md) (2023) [3] Properties of hot finite nuclei and associated correlations with infinite nuclear matter
-- [2303.07323](../papers/2303.07323.md) (2023) [1] Constraint of the Nuclear Dissipation Coefficient in Fission of Hypernuclei
-- [2303.05528](../papers/2303.05528.md) (2023) [3] Towards Resolving the Gallium Anomaly
-- [2303.02701](../papers/2303.02701.md) (2023) [3] Octupole deformation of nuclei near the spherical closed-shell configurations
-- [2303.02774](../papers/2303.02774.md) (2023) [1] Fourier-over-Spheroid shape parametrization applied to nuclear fission dynamics
-- [2302.13856](../papers/2302.13856.md) (2023) [1] Experimental evidence of the effect of nuclear shells on fission dissipation and time
-- [2302.11193](../papers/2302.11193.md) (2023) [3] Manifestation of pairing modes in nuclear collisions
-- [2302.11237](../papers/2302.11237.md) (2023) [1] Hartree-Fock-Bogoliubov study of quantum shell effects on the path to fission in $^{180}$Hg, $^{236}$U and $^{256}$Fm
-- [2302.08965](../papers/2302.08965.md) (2023) [3] Multi-body wave function of ground and low-lying excited states using unornamented deep neural networks
-- [2302.08171](../papers/2302.08171.md) (2023) [1] Spontaneous fission half-lives of actinides and super-heavy elements
-- [2302.06938](../papers/2302.06938.md) (2023) [2] Time-dependent Hartree-Fock study of quasifission trajectories in reactions forming $^{294}$Og
-- [2302.07792](../papers/2302.07792.md) (2023) [1] Generation, dynamics, and correlations of the fission fragments' angular momenta
-- [2302.03864](../papers/2302.03864.md) (2023) [1] Three-dimensional potential energy surface for fission of $^{236}$U within covariant density functional theory
-- [2302.03097](../papers/2302.03097.md) (2023) [1] Skyrme-Hartree-Fock-Bogoliubov mass models on a 3D mesh. IIb. Fission properties of BSkG2
-- [2302.03129](../papers/2302.03129.md) (2023) [2] The Los Alamos evaluation of $^{239}$Pu neutron-induced reactions in the fast energy range
-- [2304.03678](../papers/2304.03678.md) (2023) [3] TOUCANS: a versatile Monte Carlo neutron transport code based on Geant4
-- [2302.00572](../papers/2302.00572.md) (2023) [1] Modeling barrier-top fission dynamics in a discrete-basis formalism
-- [2301.13461](../papers/2301.13461.md) (2023) [1] Investigating the fission dynamics of the following neutron shell closed nuclei within a stochastic dynamical approach: ...
-- [2301.13123](../papers/2301.13123.md) (2023) [2] Exploring Current Constraints on Antineutrino Production by $^{241}$Pu and Paths Towards the Precision Reactor Flux Era
-- [2301.06835](../papers/2301.06835.md) (2023) [1] Measurement of the $^{236}$U fission cross section and angular distributions of fragments from fission of $^{235}$U and ...
-- [2301.06396](../papers/2301.06396.md) (2023) [3] Machine learning in nuclear physics at low and intermediate energies
-- [2301.03210](../papers/2301.03210.md) (2023) [1] Probing the structural evolution along the fission path in the superheavy nucleus $^{256}$Sg
-- [2301.01500](../papers/2301.01500.md) (2023) [1] The Langevin approach for fission of heavy and super-heavy nuclei
-- [2301.00202](../papers/2301.00202.md) (2022) [2] A transport model description of Time-Dependent Generator Coordinate under Gaussian overlap approximation
-- [2212.11416](../papers/2212.11416.md) (2022) [1] Microscopic Calculation of Fission Product Yields for Odd-Mass Nuclei
-- [2212.08943](../papers/2212.08943.md) (2022) [1] Consideration of memory of spin and parity in the fissioning compound nucleus by applying the Hauser-Feshbach fission fr...
-- [2212.05703](../papers/2212.05703.md) (2022) [3] Possible neutron halo in triaxial nucleus 42Al
-- [2212.06258](../papers/2212.06258.md) (2022) [2] Overview of Seniority Isomers
-- [2211.13492](../papers/2211.13492.md) (2022) [1] Employing ternary fission of $^{242}$Pu as a probe of very neutron rich matter
-- [2211.03325](../papers/2211.03325.md) (2022) [3] Space-time variation of the s and c quark masses
-- [2211.03592](../papers/2211.03592.md) (2022) [2] Progress on Brussels-Skyrme atomic mass models on a grid: stiff neutron matter equation of state
-- [2211.01879](../papers/2211.01879.md) (2022) [1] $^{178}$Hg and asymmetric fission of neutron-deficient pre-actinides
-- [2211.00026](../papers/2211.00026.md) (2022) [2] The Width of a Beta-decay-induced Antineutrino Wavepacket
-- [2211.00197](../papers/2211.00197.md) (2022) [1] New developments in fission studies within the time-dependent density functional theory framework
-- [2210.12136](../papers/2210.12136.md) (2022) [2] Nuclear data activities for medium mass and heavy nuclei at Los Alamos
-- [2210.09637](../papers/2210.09637.md) (2022) [1] Fission Fragments Mass Yields of Actinide Nuclei
-- [2210.08199](../papers/2210.08199.md) (2022) [3] Intense X-ray laser-induced proton emission from halo nuclei
-- [2210.05904](../papers/2210.05904.md) (2022) [2] A Problem in the Statistical Description of Beta-Delayed Neutron Emission
-- [2210.00818](../papers/2210.00818.md) (2022) [3] Preformation Probability and Kinematics of Clusters Emission yielding Pb-daughters
-- [2210.00460](../papers/2210.00460.md) (2022) [1] Extended time-dependent generator coordinate method study of induced fission (II): total kinetic energy distribution
-- [2209.14403](../papers/2209.14403.md) (2022) [3] A novel Machine-Learning method for spin classification of neutron resonances
-- [2209.10759](../papers/2209.10759.md) (2022) [1] Microscopic description of the torque acting on fission fragments
-- [2209.08905](../papers/2209.08905.md) (2022) [3] Shape evolution in the rapidly rotating $^{140}$Gd nucleus
-- [2209.05851](../papers/2209.05851.md) (2022) [3] Stability of spherical nuclei in the inner crust of neutron stars
-- [2209.02419](../papers/2209.02419.md) (2022) [1] Fission dynamics, dissipation and clustering at finite temperature
-- [2209.02467](../papers/2209.02467.md) (2022) [2] Building Surrogate Models of Nuclear Density Functional Theory with Gaussian Processesand Autoencoders
-- [2208.14941](../papers/2208.14941.md) (2022) [1] Coupled fission fragment angular momenta
-- [2208.11815](../papers/2208.11815.md) (2022) [1] A tensor decomposition model for evaluating isotopic yield in neutron-induced fission
-- [2208.10710](../papers/2208.10710.md) (2022) [2] Influence of entrance channel on production cross section of exotic actinides in multinucleon transfer reactions
-- [2208.10105](../papers/2208.10105.md) (2022) [3] Models for Pairing Phenomena
-- [2208.10394](../papers/2208.10394.md) (2022) [3] Recent Progress in Two-proton Radioactivity
-- [2208.09511](../papers/2208.09511.md) (2022) [2] Application of the cranking method to the semimicroscopic algebraic cluster model and nuclear molecules
-- [2208.06455](../papers/2208.06455.md) (2022) [2] Skyrme-Hartree-Fock-Bogoliubov mass models on a 3D mesh: II. Time-reversal symmetry breaking
-- [2208.03691](../papers/2208.03691.md) (2022) [3] An effective and efficient algorithm for the Wigner rotation matrix at high angular momenta
-- [2208.00053](../papers/2208.00053.md) (2022) [1] Ignition of carbon burning from nuclear fission in compact stars
-- [2207.07239](../papers/2207.07239.md) (2022) [3] Collective model for cluster motion in $^8$Be, $^{12}$C, and $^{16}$O systems
-- [2207.07421](../papers/2207.07421.md) (2022) [2] Impact of systematic nuclear uncertainties on composition and decay heat of dynamical and disk ejecta in compact binary ...
-- [2207.04919](../papers/2207.04919.md) (2022) [1] Nuclear fission and fusion in a random-walk model
-- [2206.14246](../papers/2206.14246.md) (2022) [3] Microscopic-macroscopic level densities for low excitation energies
-- [2206.07858](../papers/2206.07858.md) (2022) [1] Driving Potential and Fission-Fragment Charge Distributions
-- [2205.13058](../papers/2205.13058.md) (2022) [3] Structural analysis of a collective subspace in the dynamical generator coordinate method
-- [2205.07996](../papers/2205.07996.md) (2022) [3] Horizons: Nuclear Astrophysics in the 2020s and Beyond
-- [2205.07080](../papers/2205.07080.md) (2022) [2] Modeling survival probabilities of superheavy nuclei at high excitations
-- [2205.05968](../papers/2205.05968.md) (2022) [2] Analysis of 2-Body Central Events for $^{129}Xe+^{nat}Sn$ from $8A$ $MeV$ up to $18A$ $MeV$ and for $^{129}Xe+^{197}Au$ ...
-- [2204.14246](../papers/2204.14246.md) (2022) [1] The fast neutron induced fission of $^{240}$Pu and $^{242}$Pu
-- [2204.12476](../papers/2204.12476.md) (2022) [1] The Fission Barrier of Heaviest Nuclei From a Macroscopic-Microscopic Perspective
-- [2204.08667](../papers/2204.08667.md) (2022) [3] Enhanced proton-boron nuclear fusion cross sections in intense high-frequency laser
-- [2204.07355](../papers/2204.07355.md) (2022) [3] Visualization of nuclear many-body correlations with the most probable configuration of nucleons
-- [2204.11998](../papers/2204.11998.md) (2022) [3] BeAGLE: Benchmark $e$A Generator for LEptoproduction in high energy lepton-nucleus collisions
-- [2204.01995](../papers/2204.01995.md) (2022) [3] Applications of the dynamical generator coordinate method to quadrupole excitations
-- [2203.13736](../papers/2203.13736.md) (2022) [3] Interplay between surface and volume instabilities in heavy-ion collisions examined within mean-field extensions
+- [2606.15440](../papers/2606.15440.md) (2026) [2] Fast-reactor neutron sources in evaluated nuclear data library validation
+- [2606.12681](../papers/2606.12681.md) (2026) [3] Analytic calculator for determination of $γ$-ray angular distribution coefficients and tensors in aligned and partially-...
+- [2606.09656](../papers/2606.09656.md) (2026) [2] Angular and Kinetic Properties of Scission Neutrons within Time-dependent Density Functional Theory
+- [2606.07827](../papers/2606.07827.md) (2026) [1] Improving the Predictive Capability of the Fission Reaction Event Yield Algorithm ($\mathtt{FREYA}$)
+- [2606.03272](../papers/2606.03272.md) (2026) [2] How long can an atomic nucleus remain standing ? -- a fundamental quantum question
+- [2606.03720](../papers/2606.03720.md) (2026) [1] Nuclear Reaction Data for Fission Products Off Stability
+- [2605.30669](../papers/2605.30669.md) (2026) [2] Optimized basis of covariant density functional theory: point coupling functionals and excited states
+- [2605.30828](../papers/2605.30828.md) (2026) [1] Dynamical selection of fragment shell effects in spontaneous fission of $^{240}$Pu, $^{232}$Th, and $^{264}$Fm
+- [2605.29404](../papers/2605.29404.md) (2026) [1] Narrowing the Gap Between Theory and Evaluations: Angular Momentum Distributions in Fission Fragments
+- [2605.27940](../papers/2605.27940.md) (2026) [2] A Question of Shape: New Mechanism Governing Superheavy Nuclei Survival
+- [2605.28783](../papers/2605.28783.md) (2026) [3] Three-dimensional orbital-free density functional theory description of nuclear pasta in the inner crust of neutron star...
+- [2605.26432](../papers/2605.26432.md) (2026) [2] Muon-Catalyzed Nuclear Fusion: Physical Mechanism, Bottleneck Breakthroughs, and an Engineering Pathway
+- [2605.26308](../papers/2605.26308.md) (2026) [3] Nuclear Physics of Binary Neutron Star Mergers
+- [2605.21037](../papers/2605.21037.md) (2026) [3] Configuration-interaction time-dependent density functional theory for nuclear dynamics
+- [2605.17213](../papers/2605.17213.md) (2026) [2] Identifying observable MeV lines from the decays of weak and main $r$-process isotopes in mergers
+- [2605.16014](../papers/2605.16014.md) (2026) [3] Advances in laser-assisted nuclear decay and nuclear excitation
+- [2605.10869](../papers/2605.10869.md) (2026) [3] New perspective on cold fusion reactions: A microscopic description
+- [2605.02618](../papers/2605.02618.md) (2026) [1] New Procedure for the Evaluation of Fission Product Yields: Application to the Spontaneous Fission of $^{252}$Cf
+- [2605.01308](../papers/2605.01308.md) (2026) [3] Multireference Covariant Density Functional Theory with Stochastic Basis
+- [2605.00586](../papers/2605.00586.md) (2026) [1] Comparative Study of Langevin and Random Walk Models for Nuclear Fission in the Overdamped Regime
+- [2604.24174](../papers/2604.24174.md) (2026) [1] Survival of Pairing Correlations and Shell Effects at Scission in Finite-Temperature Nuclear Fission: Implications for O...
+- [2604.19576](../papers/2604.19576.md) (2026) [1] Shell effects and the neutron emission within the multi-dimensional Langevin model for nuclear fission
+- [2604.17790](../papers/2604.17790.md) (2026) [1] A microscopic analysis of sub-barrier photo-induced fission in $^{236}$U$(γ,f)$ based on the non-equilibrium Green funct...
+- [2604.16996](../papers/2604.16996.md) (2026) [1] Machine Learning Insights into Discrepancies Between Theoretical and Experimental Fission Barrier Heights
+- [2604.12203](../papers/2604.12203.md) (2026) [3] Spherical-tensor description of the Jahn--Teller--Hubbard molecule and local electron--phonon entanglement
+- [2604.10790](../papers/2604.10790.md) (2026) [1] Catapult neutrons from neck snapping in fission
+- [2604.09287](../papers/2604.09287.md) (2026) [2] Synthesis mechanism of superheavy element 120: a dinuclear system model approach with microscopic inputs
+- [2604.07982](../papers/2604.07982.md) (2026) [3] Memory effect on the heavy quark dynamics in hot QCD matter
+- [2604.04350](../papers/2604.04350.md) (2026) [1] Generation of fission yield covariance matrices and its application in uncertainty analysis of decay heat
+- [2603.29100](../papers/2603.29100.md) (2026) [1] Multi-task deep neural network for predicting both nuclear fission yields and their experimental errors in peak-shaped d...
+- [2603.22788](../papers/2603.22788.md) (2026) [2] Production probability of super-heavy nuclei in fusion
+- [2603.16580](../papers/2603.16580.md) (2026) [1] Fission mode identification in the 180Hg region: derivative analysis approach
+- [2603.13164](../papers/2603.13164.md) (2026) [3] Parameter adjustment of nuclear leading-order local pairing energy density functionals
+- [2603.10304](../papers/2603.10304.md) (2026) [3] Effective theory of surface oscillations in self-bound superfluid droplets
+- [2603.09360](../papers/2603.09360.md) (2026) [2] Microscopic Investigation of Fusion and Quasifission Dynamics
+- [2603.04789](../papers/2603.04789.md) (2026) [3] Bayesian Learning of (n,p) Reaction Cross Sections with Quantified Uncertainties
+- [2603.03519](../papers/2603.03519.md) (2026) [1] Microscopic description of cluster radioactivity fission valleys along isotopic and isotonic chains
+- [2603.01794](../papers/2603.01794.md) (2026) [1] Sensitivity of Isotopic Fission Yields in Actinides to the Macroscopic Liquid-Drop Model: LSD vs ISOLDA
+- [2602.23642](../papers/2602.23642.md) (2026) [2] Particle number projected energies at finite temperature
+- [2602.24175](../papers/2602.24175.md) (2026) [2] Theoretical Studies of alpha Clustering in Nuclei and Beyond
+- [2602.21692](../papers/2602.21692.md) (2026) [1] Isotope-Resolved Ba and Xe Yields in Actinide Fission and Correlated Heavy--Light Fragment Systematics
+- [2602.22464](../papers/2602.22464.md) (2026) [3] The 2027-2034 Vision for Nuclear Physics in Canada, with an outlook to 2041
+- [2602.06580](../papers/2602.06580.md) (2026) [3] Quasi-elastic scattering for the nuclear ground state structure: An intriguing case of $^{30}$Si
+- [2602.01808](../papers/2602.01808.md) (2026) [2] Physics Informed Bayesian Machine Learning of Sparse and Imperfect Nuclear Data
+- [2601.21317](../papers/2601.21317.md) (2026) [2] Competing decay modes and stability analysis of superheavy nuclei with Z = 120 using relativistic mean-field approach
+- [2601.20329](../papers/2601.20329.md) (2026) [2] From first to second minimum: Parity-dependent level densities in $^{240,242}$Pu
+- [2601.18488](../papers/2601.18488.md) (2026) [2] Probability distribution of observables from a Bogoliubov vacuum projected onto good particle number: application to sci...
+- [2601.18688](../papers/2601.18688.md) (2026) [2] First observation of multi-phonon $γ$-vibrations in an odd-odd nuclear system
+- [2601.16600](../papers/2601.16600.md) (2026) [2] Nuclear molecule of heavy nuclei
+- [2601.13667](../papers/2601.13667.md) (2026) [3] Pairing correlations, orientations and quantum fluctuations in one- and two-nucleon transfer reactions at sub-barrier en...
+- [2601.09993](../papers/2601.09993.md) (2026) [2] Average pairing correlation properties and effective pairing residual interactions
+- [2601.10052](../papers/2601.10052.md) (2026) [3] Revisiting the nuclear island of negative hexadecapole deformations in A$\approx$180 mass region: focusing on moments of...
+- [2601.05935](../papers/2601.05935.md) (2026) [2] Gravitational Ionization by Schwarzschild Primordial Black Holes
+- [2601.05968](../papers/2601.05968.md) (2026) [2] Skyrme-Hartree-Fock-Bogoliubov mass models on a 3D mesh: V. The N2LO extension of the Skyrme EDF
+- [2601.03804](../papers/2601.03804.md) (2026) [2] Improved microscopic nuclear level densities within the triaxial Hartree-Fock-Bogoliubov plus combinatorial method
+- [2601.01151](../papers/2601.01151.md) (2026) [1] Microscopic Description of Rotational Nuclear Fission Elucidates Fragment Spin Generation and Scission Mechanism
+- [2512.21453](../papers/2512.21453.md) (2025) [1] Spontaneous fission half-lives for heavy and super-heavy nuclei from phenomenological models
+- [2512.21619](../papers/2512.21619.md) (2025) [1] Shell effects in quasifission toward $^{180} \mathrm{Hg}$: insights into fission asymmetric modes
+- [2512.19254](../papers/2512.19254.md) (2025) [1] Probing the delicate balance of the spontaneous fission instability in sub-μs superheavy nucleus 252Rf
+- [2512.12866](../papers/2512.12866.md) (2025) [3] Local Quantum Friction with Pairing: Unitary Dissipation in Large Fermi Systems
+- [2512.11212](../papers/2512.11212.md) (2025) [1] Correlated fission fragment spin dynamics
+- [2512.04739](../papers/2512.04739.md) (2025) [1] Static Fission Properties of Even-Even Actinides within the Warsaw Macroscopic-Microscopic Model Using Fourier-over-Sphe...
+- [2512.03776](../papers/2512.03776.md) (2025) [3] Impact of octupole deformation on the nuclear electromagnetic response
+- [2512.04206](../papers/2512.04206.md) (2025) [3] Nucleon Short-Range Correlations and High-Momentum Dynamics: Implications on the Equation of State of Dense Matter
+- [2512.01808](../papers/2512.01808.md) (2025) [3] Pair Transfer and Reaction Dynamics in $^{40,48}$Ca + $^{96}$Zr Collisions Below the Coulomb Barrier
+- [2512.02207](../papers/2512.02207.md) (2025) [1] Uncertainty Principle and Angular Momentum Generation in Microscopic Fission Models
+- [2511.18896](../papers/2511.18896.md) (2025) [2] Impact of finite-range spin-orbit and tensor terms in Gogny EDF
+- [2511.18337](../papers/2511.18337.md) (2025) [2] Systematic investigation on the superheavy nucleus formation in the reactions of $^{48}$Ca, $^{50}$Ti, $^{51}$V and $^{5...
+- [2511.09359](../papers/2511.09359.md) (2025) [3] Nuclear surface energy solving Hartree-Fock equations with Gogny interactions using Lagrange mesh
+- [2511.02999](../papers/2511.02999.md) (2025) [2] Large-Scale Calculations of $β$-Decay Rates and Implications for $r$-Process Nucleosynthesis
+- [2510.24946](../papers/2510.24946.md) (2025) [1] Updating GEANIE $^{239}$Pu prompt $γ$-ray experimental data using modern Hauser-Feshbach fission fragment decay model
+- [2510.22382](../papers/2510.22382.md) (2025) [2] Investigation of evaluated nuclear data in the prediction of inherent neutron sources
+- [2510.21102](../papers/2510.21102.md) (2025) [3] Paths to Superheavy Nuclei
+- [2510.19291](../papers/2510.19291.md) (2025) [1] Kinetic energy of fission fragments within a dynamical model
+- [2510.20014](../papers/2510.20014.md) (2025) [2] Nuclear Fragmentation at the Future Electron-Ion Collider
+- [2510.18205](../papers/2510.18205.md) (2025) [1] Neutron emission during fission and its impact on fission-fragment mass distribution studied by Langevin model
+- [2510.10896](../papers/2510.10896.md) (2025) [3] Laser-assisted α decay of actinide nuclei in bichromatic fields
+- [2510.10741](../papers/2510.10741.md) (2025) [3] Cluster and Halo Structures of Light Nuclei within the NUCLEI-PACK Framework
+- [2510.08560](../papers/2510.08560.md) (2025) [3] Gamma-Ray Spectra of $R$-Process Nuclei
+- [2510.06701](../papers/2510.06701.md) (2025) [1] Excitation energy of fission fragments within nuclear time-dependent density functional theory
+- [2510.07410](../papers/2510.07410.md) (2025) [3] Superfluidity in Fermi systems within the framework of Density Functional Theory
+- [2510.05953](../papers/2510.05953.md) (2025) [3] Low lying isomers in the region of superheavy nuclei
+- [2509.26571](../papers/2509.26571.md) (2025) [2] Nuclear state and level densities of actinides with the shell-model Monte Carlo
+- [2509.22006](../papers/2509.22006.md) (2025) [1] Isoenergetic description of induced fission pathways within energy-density functional theory
+- [2509.18914](../papers/2509.18914.md) (2025) [2] Stochastic Mean-Field Theory and Applications to Multinucleon Transfer and Kinetic Energy Dissipation Processes in Heavy...
+- [2509.13750](../papers/2509.13750.md) (2025) [3] Global Trends of Nuclear Radii and Binding Energies from the NUCLEI-PACK Framework
+- [2509.00267](../papers/2509.00267.md) (2025) [3] Multi-messengers from the radioactive decay of $r$-process nuclei
+- [2508.19474](../papers/2508.19474.md) (2025) [2] Reducing parametric uncertainties through information geometry methods
+- [2508.16240](../papers/2508.16240.md) (2025) [1] Accurate spontaneous fission half-lives from a microscopic large-scale nuclear structure model
+- [2508.08616](../papers/2508.08616.md) (2025) [1] Impact of shape coexistence on the symmetric to asymmetric fission mode transition in Th isotopes
+- [2508.07266](../papers/2508.07266.md) (2025) [3] Constraints on the Variation of the QCD Interaction Scale $Λ_{\text{QCD}}$
+- [2508.06067](../papers/2508.06067.md) (2025) [2] Examining potential energy surface through Chebyshev shape parametrization
+- [2507.21806](../papers/2507.21806.md) (2025) [2] Shape evolution in neutron-rich odd-even $^{105-109}$Nb isotopes
+- [2507.17955](../papers/2507.17955.md) (2025) [3] Constraints on millicharged particles from nuclear gamma-decays
+- [2507.05208](../papers/2507.05208.md) (2025) [3] Extraction of ground-state nuclear deformations from ultra-relativistic heavy-ion collisions: Nuclear structure physics ...
+- [2507.01451](../papers/2507.01451.md) (2025) [1] Bremsstrahlung emission accompanying ternary fission of \isotope[252]{Cf}
+- [2507.02191](../papers/2507.02191.md) (2025) [1] Muon-induced fission as a probe of the underlying dynamics in nuclear fission
+- [2507.00450](../papers/2507.00450.md) (2025) [1] Shell effects in quasi-fission for calcium induced reactions forming thorium isotopes
+- [2507.00664](../papers/2507.00664.md) (2025) [1] Microscopic pairing in fission dynamics
+- [2507.00758](../papers/2507.00758.md) (2025) [3] Collectivity of rotational motion in $^{220}$Rn and $^{226}$Ra

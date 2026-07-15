@@ -6,6 +6,45 @@
 
 **Papers:** 452 (showing first 100 of 452)
 
+- [2606.08250](../papers/2606.08250.md) (2026) [2] On the effect of higher order symmetry energy corrections in Skyrme models for neutron star matter
+- [2604.25449](../papers/2604.25449.md) (2026) [2] A study of $J/ψ$ mass shift and bound states: Impact of $D D$ and $DD^*$ meson loops
+- [2602.19465](../papers/2602.19465.md) (2026) [2] Microscopic Optical Potential from Brueckner-Hartree-Fock Theory
+- [2602.12726](../papers/2602.12726.md) (2026) [1] Phase diagrams of BCS-BEC crossover in asymmetric nuclear matter
+- [2601.12043](../papers/2601.12043.md) (2026) [2] Nucleon Resonances in Nuclear Matter and Finite Nuclei
+- [2512.19593](../papers/2512.19593.md) (2025) [2] Neutron star crust and outer core equation of state from chiral effective field theory with quantified uncertainties
+- [2512.04820](../papers/2512.04820.md) (2025) [1] Thermodynamic and Transport properties of hot asymmetric nuclear matter within a chiral SU(3) model
+- [2512.04206](../papers/2512.04206.md) (2025) [2] Nucleon Short-Range Correlations and High-Momentum Dynamics: Implications on the Equation of State of Dense Matter
+- [2511.07226](../papers/2511.07226.md) (2025) [2] Renormalization-Group Invariant Parity-Doublet Model for Nuclear and Neutron-Star Matter
+- [2510.09337](../papers/2510.09337.md) (2025) [2] Revealing the temperature effect on the nucleon-nucleon inelastic cross section in isospin-asymmetric nuclear medium
+- [2508.03114](../papers/2508.03114.md) (2025) [1] Response of asymmetric nuclear matter studied with a finite number of particles
+- [2507.01398](../papers/2507.01398.md) (2025) [1] Pion properties in isospin-asymmetric nuclear matter using in-medium chiral perturbation theory
+- [2505.03437](../papers/2505.03437.md) (2025) [1] Thermal properties of zero sound in asymmetric nuclear matter
+- [2504.21392](../papers/2504.21392.md) (2025) [2] Impact of isospin asymmetric nuclear medium on pseudoscalar and vector $B$ mesons
+- [2504.18701](../papers/2504.18701.md) (2025) [2] Asymmetric warm nuclear matter described by Gogny and Skyrme-version models
+- [2504.01758](../papers/2504.01758.md) (2025) [2] Isospin asymmetry and neutron stars in V-QCD
+- [2504.00442](../papers/2504.00442.md) (2025) [1] Transition magnetic moments for $Δ\rightarrow p$ transition in asymmetric nuclear matter
+- [2502.08320](../papers/2502.08320.md) (2025) [2] $ϕ$ meson in nuclear matter and atomic nuclei
+- [2501.16706](../papers/2501.16706.md) (2025) [2] Effect of nuclear medium on the spatial distribution of pions
+- [2411.19052](../papers/2411.19052.md) (2024) [1] Phase diagrams of neutron-proton superfluid in asymmetric nuclear matter
+- [2411.13210](../papers/2411.13210.md) (2024) [1] Novel features of asymmetric nuclear matter from terrestrial experiments and astrophysical observations of neutron stars
+- [2411.08007](../papers/2411.08007.md) (2024) [2] Skyrme-Hartree-Fock-Bogoliubov mass models on a 3D mesh: IV. Improved description of the isospin dependence of pairing
+- [2411.06960](../papers/2411.06960.md) (2024) [1] Collective modes in relativistic cold asymmetric nuclear matter within the covariant Vlasov approach
+- [2410.15898](../papers/2410.15898.md) (2024) [2] Heavy Quarkonium-nuclear bound states within a generalized linear sigma model
+- [2409.14764](../papers/2409.14764.md) (2024) [2] Effect of isoscalar and isovector scalar fields on baryon semileptonic decays in nuclear matter
+- [2409.07059](../papers/2409.07059.md) (2024) [2] Neutron skin and its effects in heavy-ion collisions
+- [2409.05394](../papers/2409.05394.md) (2024) [2] Does nuclear medium affect the transverse momentum-dependent parton distributions of valence quark of pions?
+- [2408.07334](../papers/2408.07334.md) (2024) [1] Pions valence quark distributions in asymmetric nuclear matter at finite temperature
+- [2407.08412](../papers/2407.08412.md) (2024) [2] Neutron star calculations with the phenomenological three-nucleon force
+- [2404.08982](../papers/2404.08982.md) (2024) [2] Correlation between the charge radii difference in mirror partner nuclei and the symmetry energy slope
+- [2404.03583](../papers/2404.03583.md) (2024) [2] Nuclear Matter Equation of State in the Brueckner-Hartree-Fock Approach and Standard Skyrme Energy-Density Functionals
+- [2402.16339](../papers/2402.16339.md) (2024) [2] Microscopic optical potential from the relativistic Brueckner-Hartree-Fock theory: Proton-nucleus scattering
+- [2402.15963](../papers/2402.15963.md) (2024) [1] Transport properties of asymmetric nuclear matter in the spinodal region
+- [2401.13461](../papers/2401.13461.md) (2024) [2] Neutron star matter as a dilute solution of protons in neutrons
+- [2401.07318](../papers/2401.07318.md) (2024) [2] Isospin splitting of the Dirac mass probed by the relativistic Brueckner-Hartree-Fock theory in the full Dirac space
+- [2312.17105](../papers/2312.17105.md) (2023) [2] Extended Skyrme effective interactions for transport model and neutron stars
+- [2312.15434](../papers/2312.15434.md) (2023) [2] New quantification of symmetry energy from neutron skin thicknesses of $^{48}$Ca and $^{208}$Pb
+- [2311.04026](../papers/2311.04026.md) (2023) [1] An extended Skyrme momentum dependent potential in asymmetric nuclear matter and transport models
+- [2310.03336](../papers/2310.03336.md) (2023) [1] Open Strange and Open Heavy Flavour mesons in Asymmetric Nuclear Matter within Quark Meson Coupling model
 - [2303.14667](../papers/2303.14667.md) (2023) [2] Constraining nuclear symmetry energy with the charge radii of mirror-pair nuclei
 - [2303.07974](../papers/2303.07974.md) (2023) [1] Thermal effects in hot and dilute homogeneous asymmetric nuclear matter
 - [2212.14186](../papers/2212.14186.md) (2022) [2] Properties of $^{208}$Pb predicted from the relativistic equation of state in the full Dirac space
@@ -67,42 +106,3 @@
 - [1811.12570](../papers/1811.12570.md) (2018) [2] Light vector mesons ($ω$, $ρ$ and $ϕ$) in strong magnetic fields: A QCD sum rule approach
 - [1810.07854](../papers/1810.07854.md) (2018) [1] Effect of energy conservation on in-medium $\mbox{NN}\to \mbox{N}Δ$ cross section in isospin-asymmetric nuclear matter
 - [1810.07640](../papers/1810.07640.md) (2018) [2] Non-congruent phase transitions in strongly interacting matter within the Quantum van der Waals model
-- [1809.04021](../papers/1809.04021.md) (2018) [1] Rho Meson spectral function in hot asymmetric nuclear matter
-- [1808.09138](../papers/1808.09138.md) (2018) [2] Relativistic Brueckner-Hartree-Fock in nuclear matter without the average momentum approximation
-- [1808.05301](../papers/1808.05301.md) (2018) [2] Proton spectral functions in finite nuclei based on the extended Brueckner-Hartree-Fock approach
-- [1807.09580](../papers/1807.09580.md) (2018) [2] Zero-sound in nuclear matter with the asymmetry parameter $-1\leq β\leq 1$
-- [1806.03278](../papers/1806.03278.md) (2018) [2] Extended Skyrme interactions for transport model simulations of heavy-ion collisions
-- [1806.01668](../papers/1806.01668.md) (2018) [2] QCD sum rules for the $Δ$ isobar in neutron matter
-- [1805.01709](../papers/1805.01709.md) (2018) [1] Spectral function for $\bar{D}_{0}^{\ast}$ $(0^+)$ meson in isospin asymmetric nuclear matter with chiral partner struct...
-- [1804.04827](../papers/1804.04827.md) (2018) [2] On the spin-isospin decomposition of nuclear symmetry energy
-- [1803.09120](../papers/1803.09120.md) (2018) [2] The nuclear symmetry energy and the breaking of the isospin symmetry: how do they reconcile with each other?
-- [1803.08819](../papers/1803.08819.md) (2018) [2] Phase transitions and symmetry energy in nuclear pasta
-- [1803.04322](../papers/1803.04322.md) (2018) [2] Charmonium states in strong magnetic fields
-- [1803.01836](../papers/1803.01836.md) (2018) [2] Phases of dense matter in compact stars
-- [1801.05960](../papers/1801.05960.md) (2018) [1] In-medium $\mbox{NN}\to \mbox{N}Δ$ cross section and its dependence on effective Lagrange parameters in isospin-asymmetr...
-- [1801.06405](../papers/1801.06405.md) (2018) [1] Open bottom mesons in asymmetric nuclear matter in presence of strong magnetic fields
-- [1712.07997](../papers/1712.07997.md) (2017) [1] D mesons in strongly magnetized asymmetric nuclear matter
-- [1712.03286](../papers/1712.03286.md) (2017) [1] Effects of energy conservation on equilibrium properties of hot asymmetric nuclear matter
-- [1710.08328](../papers/1710.08328.md) (2017) [1] Octet Baryon Masses and Magnetic Moments in Hot and Dense Isospin Asymmetric Nuclear Matter
-- [1707.09215](../papers/1707.09215.md) (2017) [2] Multicomponent van der Waals equation of state: Applications in nuclear and hadronic physics
-- [1707.04381](../papers/1707.04381.md) (2017) [2] Neutron-skin thickness determines the surface tension of a compressible nuclear droplet
-- [1706.05024](../papers/1706.05024.md) (2017) [1] Transport properties of isospin asymmetric nuclear matter using TDHF
-- [1705.02096](../papers/1705.02096.md) (2017) [1] Warm unstable asymmetric nuclear matter: critical properties and the density dependence of the symmetry energy
-- [1704.03860](../papers/1704.03860.md) (2017) [2] Deformation properties with a finite range simple effective interaction
-- [1704.02687](../papers/1704.02687.md) (2017) [2] How tightly is nuclear symmetry energy constrained by unitary Fermi gas?
-- [1703.00866](../papers/1703.00866.md) (2017) [2] Nuclear dipole polarizability from mean-field modeling constrained by chiral effective field theory
-- [1610.07568](../papers/1610.07568.md) (2016) [2] Functional renormalization group studies of nuclear and neutron matter
-- [1610.06344](../papers/1610.06344.md) (2016) [2] Strong correlations of neutron star radii with the slopes of nuclear matter incompressibility and symmetry energy at sat...
-- [1607.08531](../papers/1607.08531.md) (2016) [2] Exact versus Taylor-expanded energy density in the study of the neutron star crust-core transition
-- [1607.04307](../papers/1607.04307.md) (2016) [2] Density-dependent effective baryon-baryon interaction from chiral three-baryon forces
-- [1605.07778](../papers/1605.07778.md) (2016) [2] Global analysis of isospin dependent microscopic nucleon-nucleus optical potential in Dirac Bruckner Hartree-Fock approa...
-- [1603.02774](../papers/1603.02774.md) (2016) [2] Mean-field study of hot beta-stable protoneutron star matter: Impact of the symmetry energy and nucleon effective mass
-- [1602.04639](../papers/1602.04639.md) (2016) [1] Medium polarization in asymmetric nuclear matter
-- [1512.02392](../papers/1512.02392.md) (2015) [2] QMC approach based on the Bogoliubov independent quark model of the nucleon
-- [1512.02395](../papers/1512.02395.md) (2015) [2] Nuclear symmetry energy in a modified quark meson coupling model
-- [1511.01557](../papers/1511.01557.md) (2015) [2] Properties of nuclear matter from macroscopic-microscopic mass formulas
-- [1510.06728](../papers/1510.06728.md) (2015) [1] Asymmetric nuclear matter based on chiral two- and three-nucleon interactions
-- [1510.06459](../papers/1510.06459.md) (2015) [2] Extended Skyrme interactions for nuclear matter, finite nuclei and neutron stars
-- [1509.07896](../papers/1509.07896.md) (2015) [2] Asymmetry energy of nuclear matter: Temperature and density dependence, and validity of semi-empirical formula
-- [1509.05744](../papers/1509.05744.md) (2015) [1] Extended Skyrme Equation of State in asymmetric nuclear matter
-- [1509.00347](../papers/1509.00347.md) (2015) [2] On growth of spinodal instabilities in nuclear matter-II:asymmetric matter

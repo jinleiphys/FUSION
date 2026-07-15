@@ -6,6 +6,23 @@
 
 **Papers:** 117 (showing first 100 of 117)
 
+- [2604.10972](../papers/2604.10972.md) (2026) [2] Microscopic investigation of $E2$ matrix elements in atomic nuclei -- II
+- [2603.24022](../papers/2603.24022.md) (2026) [1] Precision Tests of Isospin Symmetry through Coulomb excitation of A = 62 Nuclei
+- [2603.24341](../papers/2603.24341.md) (2026) [2] The dipole strength distribution of $^8$He and decay characteristics
+- [2603.17414](../papers/2603.17414.md) (2026) [2] Resolving anomalous collectivity in the $4_1^+$ to $2_1^+$ transition of $^{58}$Fe
+- [2601.12829](../papers/2601.12829.md) (2026) [2] Electric dipole strength in $sd$-shell nuclei from small-angle proton scattering
+- [2508.09643](../papers/2508.09643.md) (2025) [1] Coulomb excitation of $^{124}$Te: Emerging collectivity and persisting seniority structure in the $6_1^+$ level
+- [2506.03236](../papers/2506.03236.md) (2025) [2] Extremely large oblate deformation of the first excited state in $^{12}$C: a new challenge to modern nuclear theory
+- [2505.19229](../papers/2505.19229.md) (2025) [2] Electric dipole polarizability constraints on neutron skin and symmetry energy
+- [2503.22766](../papers/2503.22766.md) (2025) [2] Crossover between the zeptosecond and attosecond physics
+- [2502.18076](../papers/2502.18076.md) (2025) [2] Microscopic investigation of $E2$ matrix elements in atomic nuclei
+- [2411.10598](../papers/2411.10598.md) (2024) [2] Large quadrupole deformation in $^{20}$Ne challenges rotor model and modern theory: urging for $α$ clusters in nuclei
+- [2408.08410](../papers/2408.08410.md) (2024) [1] Coulomb Excitation of $^{80}$Sr and the limits of the $N = Z = 40$ island of deformation
+- [2408.06940](../papers/2408.06940.md) (2024) [2] Spherical-oblate shape coexistence in $^{94}$Zr from a model-independent analysis
+- [2407.03503](../papers/2407.03503.md) (2024) [2] Suppressed Electric Quadrupole Collectivity in $^{49}$Ti
+- [2311.14525](../papers/2311.14525.md) (2023) [2] Systematics of the low-energy electric dipole strength in the Sn isotopic chain
+- [2311.08864](../papers/2311.08864.md) (2023) [2] Systematic study of the low-lying electric dipole strength in Sn isotopes and its astrophysical implications
+- [2309.09445](../papers/2309.09445.md) (2023) [2] Suppression of the elastic scattering cross section for 17Ne + 208Pb system
 - [2307.05079](../papers/2307.05079.md) (2023) [2] Decay Pattern of Pygmy States Observed in Neutron-Rich 26 Ne
 - [2209.06298](../papers/2209.06298.md) (2022) [2] E2 Rotational Invariants of $0^+_1$ and $2^+_1$ states for $^{106}$Cd: the Emergence of Collective Rotation
 - [2207.13576](../papers/2207.13576.md) (2022) [2] Structure of $^{128,129,130}$Xe through multi-reference energy density functional calculations
@@ -62,23 +79,6 @@
 - [0708.3007](../papers/0708.3007.md) (2007) [1] On the measurement of B(E2, 0+ -> 2+) using intermediate-energy Coulomb excitation
 - [0705.1313](../papers/0705.1313.md) (2007) [2] Study of $^{64}$Ni+$^{132}$Sn Fusion with Density Constrained TDHF Formalism
 - [0704.0060](../papers/0704.0060.md) (2007) [1] Coulomb excitation of unstable nuclei at intermediate energies
-- [2309.09445](../papers/2309.09445.md) (0000) [2] 2309.09445
-- [2311.08864](../papers/2311.08864.md) (0000) [2] 2311.08864
-- [2311.14525](../papers/2311.14525.md) (0000) [2] 2311.14525
-- [2407.03503](../papers/2407.03503.md) (0000) [2] 2407.03503
-- [2408.06940](../papers/2408.06940.md) (0000) [2] 2408.06940
-- [2408.08410](../papers/2408.08410.md) (0000) [1] 2408.08410
-- [2411.10598](../papers/2411.10598.md) (0000) [2] 2411.10598
-- [2502.18076](../papers/2502.18076.md) (0000) [2] 2502.18076
-- [2503.22766](../papers/2503.22766.md) (0000) [2] 2503.22766
-- [2505.19229](../papers/2505.19229.md) (0000) [2] 2505.19229
-- [2506.03236](../papers/2506.03236.md) (0000) [2] 2506.03236
-- [2508.09643](../papers/2508.09643.md) (0000) [1] 2508.09643
-- [2601.12829](../papers/2601.12829.md) (0000) [2] 2601.12829
-- [2603.17414](../papers/2603.17414.md) (0000) [2] 2603.17414
-- [2603.24022](../papers/2603.24022.md) (0000) [1] 2603.24022
-- [2603.24341](../papers/2603.24341.md) (0000) [2] 2603.24341
-- [2604.10972](../papers/2604.10972.md) (0000) [2] 2604.10972
 - [hep-ph/0112363](../papers/hep-ph/0112363.md) (0000) [1] hep-ph/0112363
 - [hep-ph/9611270](../papers/hep-ph/9611270.md) (0000) [2] hep-ph/9611270
 - [nucl-ex/9803009](../papers/nucl-ex/9803009.md) (0000) [2] nucl-ex/9803009

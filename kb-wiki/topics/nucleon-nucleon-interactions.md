@@ -6,6 +6,33 @@
 
 **Papers:** 305 (showing first 100 of 305)
 
+- [2604.13766](../papers/2604.13766.md) (2026) [2] Spectroscopy of $^{11}$Be from the $^{10}$Be($d,p$) reaction measured in inverse kinematics by the AT-TPC in SOLARIS
+- [2603.08908](../papers/2603.08908.md) (2026) [2] Mass measurements of $^{179-184}$Yb identify an anomalous proton-neutron interaction
+- [2602.24175](../papers/2602.24175.md) (2026) [2] Theoretical Studies of alpha Clustering in Nuclei and Beyond
+- [2602.00341](../papers/2602.00341.md) (2026) [2] The Role of Ab Initio Beta-Decay Calculations in Light Nuclei for Probes of Physics Beyond the Standard Model
+- [2511.22894](../papers/2511.22894.md) (2025) [2] Constraining of Nuclear Matter Equations of State With Rotating Neutron Stars
+- [2512.00099](../papers/2512.00099.md) (2025) [2] Triplet pairing in neutron matter in a comprehensive diagrammatic approach
+- [2511.08366](../papers/2511.08366.md) (2025) [2] Finite-range pairing in nuclear density functional theory
+- [2509.01539](../papers/2509.01539.md) (2025) [2] Physics-Guided Neural Networks for Constructing Nucleon-Nucleon Inverse Potentials
+- [2509.00315](../papers/2509.00315.md) (2025) [2] Impacts of isolated nucleon-nucleon correlations in relativistic $^{16}$O+$^{16}$O collisions
+- [2508.09890](../papers/2508.09890.md) (2025) [2] Separable character of ab initio No-Core Shell Model one-body densities
+- [2506.10745](../papers/2506.10745.md) (2025) [2] HFB3: an axial HFB solver with Gogny forces using a 2-center HO basis (C++/Python)
+- [2505.24753](../papers/2505.24753.md) (2025) [2] Heavy Ion Double Charge Exchange Reactions as Probes for Two-Body Transition Densities
+- [2505.06713](../papers/2505.06713.md) (2025) [2] Half-vortex states in the rotating outer core of neutron stars
+- [2503.05253](../papers/2503.05253.md) (2025) [2] Electromagnetic emission from strongly interacting hadronic and partonic matter created in heavy-ion collisions
+- [2502.11240](../papers/2502.11240.md) (2025) [2] Quantum Dynamical Microscopic Approach to Stellar Carbon Burning
+- [2501.17185](../papers/2501.17185.md) (2025) [2] Relativistic chiral nuclear forces: status and prospects
+- [2501.09542](../papers/2501.09542.md) (2025) [2] Exploring the possible two-proton radioactivity of $^{38,39}$Ti
+- [2501.00682](../papers/2501.00682.md) (2024) [2] Unexpected Rise in Nuclear Collectivity from Short-Range Physics
+- [2412.03692](../papers/2412.03692.md) (2024) [2] Robustness of the proxy-SU(3) symmetry in atomic nuclei and the role of the next highest weight irreducible representati...
+- [2411.03076](../papers/2411.03076.md) (2024) [2] Potential signature of new magicity from universal aspects of nuclear charge radii
+- [2409.10342](../papers/2409.10342.md) (2024) [2] Ab initio calculations of anomalous seniority breaking in the $πg_{9/2}$ shell for the $N=50$ isotones
+- [2407.17962](../papers/2407.17962.md) (2024) [2] Probing coalescence of light nuclei via femtoscopy and azimuthal anisotropies
+- [2406.01292](../papers/2406.01292.md) (2024) [2] Reexamination of antinucleon-nucleon interactions in covariant chiral effective field theory
+- [2403.14474](../papers/2403.14474.md) (2024) [2] Tensor-force effects on nuclear matter in relativistic ab initio theory
+- [2402.02677](../papers/2402.02677.md) (2024) [2] Tunable-fidelity wave functions for the \textit{ab initio} description of scattering and reactions
+- [2309.09488](../papers/2309.09488.md) (2023) [2] Generator coordinate method for nuclear octupole excitations: status and perspectives
+- [2308.00873](../papers/2308.00873.md) (2023) [2] Variational and parquet-diagram calculations for neutron matter. V. Triplet pairing
 - [2307.11836](../papers/2307.11836.md) (2023) [2] Hard probes in isobar collisions as a probe of the neutron skin
 - [2306.13007](../papers/2306.13007.md) (2023) [1] Generative modeling of nucleon-nucleon interactions
 - [2305.13968](../papers/2305.13968.md) (2023) [2] Nucleon-Nucleon elastic and inelastic scattering using quantum field theory: a comparative study
@@ -79,30 +106,3 @@
 - [1608.08127](../papers/1608.08127.md) (2016) [2] Realistic calculations for $c$-coefficients of the isobaric mass multiplet equation in $1p0f$ shell nuclei
 - [1608.05680](../papers/1608.05680.md) (2016) [2] Formation of hypernuclei in heavy-ion collisions around the threshold energies
 - [1608.01241](../papers/1608.01241.md) (2016) [2] Role of nuclear physics in oscillations of magnetars
-- [1607.04409](../papers/1607.04409.md) (2016) [2] Polarized proton-deuteron scattering as a test of time-reversal invariance
-- [1606.00066](../papers/1606.00066.md) (2016) [2] How many-body correlations and $α$-clustering shape $^6$He
-- [1605.08677](../papers/1605.08677.md) (2016) [1] Induced Hyperon-Nucleon-Nucleon Interactions and the Hyperon Puzzle
-- [1605.02819](../papers/1605.02819.md) (2016) [2] Ab initio no-core solutions for $^6$Li
-- [1603.07375](../papers/1603.07375.md) (2016) [2] Glauber modeling of high-energy nuclear collisions at sub-nucleon level
-- [1602.04539](../papers/1602.04539.md) (2016) [2] Nuclear binding near a quantum phase transition
-- [1602.00156](../papers/1602.00156.md) (2016) [2] Ab initio no-core properties of 7Li and 7Be with JISP16 and NNLO_opt interactions
-- [1601.02956](../papers/1601.02956.md) (2016) [2] Partial wave decomposition of finite-range effective tensor interaction
-- [1601.01600](../papers/1601.01600.md) (2016) [2] Pairing in high-density neutron matter including short- and long-range correlations
-- [1512.03111](../papers/1512.03111.md) (2015) [1] Probing short-range nucleon-nucleon interactions with an Electron-Ion Collider
-- [1510.04432](../papers/1510.04432.md) (2015) [2] Introduction to low-momentum effective interactions with Brown-Rho scaling and three-nucleon forces
-- [1510.05450](../papers/1510.05450.md) (2015) [2] Green's Function Monte Carlo Calculations with Two- and Three-Nucleon Interactions from Chiral Effective Field Theory
-- [1508.07583](../papers/1508.07583.md) (2015) [2] Two Nucleon Systems at $m_π\sim 450~{\rm MeV}$ from Lattice QCD
-- [1506.02237](../papers/1506.02237.md) (2015) [2] Short-range correlations in nuclei with similarity renormalization group transformations
-- [1412.2077](../papers/1412.2077.md) (2014) [2] Unitary neutron matter in the on-shell limit
-- [1412.0071](../papers/1412.0071.md) (2014) [2] Nucleon-nucleon scattering with the Complex Scaling Method and realistic interactions
-- [1411.5804](../papers/1411.5804.md) (2014) [2] Nuclear Electric Dipole Moments in Chiral Effective Field Theory
-- [1410.2258](../papers/1410.2258.md) (2014) [1] Giant and pigmy dipole resonances in 4He, 16,22O, and 40Ca from chiral nucleon-nucleon interactions
-- [1409.0826](../papers/1409.0826.md) (2014) [2] Collective excitations in deformed sd-shell nuclei from realistic interactions
-- [1408.4892](../papers/1408.4892.md) (2014) [1] Medium-heavy nuclei from nucleon-nucleon interactions in lattice QCD
-- [1408.3368](../papers/1408.3368.md) (2014) [2] Charged-current reactions in the supernova neutrino-sphere
-- [1408.0252](../papers/1408.0252.md) (2014) [2] Infrared extrapolations for atomic nuclei
-- [1406.6109](../papers/1406.6109.md) (2014) [2] Pairing and superfluidity of nucleons in neutron stars
-- [1404.1960](../papers/1404.1960.md) (2014) [2] $^4{\rm He}$+$n$+$n$ continuum within an ab initio framework
-- [1403.4422](../papers/1403.4422.md) (2014) [2] Nucleon form factors for the elastic electron-deuteron scattering at high momentum transfer
-- [1403.4114](../papers/1403.4114.md) (2014) [2] Supernova matter at subnuclear densities as a resonant Fermi gas: Enhancement of neutrino rates
-- [1403.3067](../papers/1403.3067.md) (2014) [2] Ab Initio Description of p-Shell Hypernuclei

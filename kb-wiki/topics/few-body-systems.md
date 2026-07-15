@@ -8,6 +8,25 @@
 
 **Papers:** 141 (showing first 100 of 141)
 
+- [2604.25792](../papers/2604.25792.md) (2026) [1] Exact emulation of few-body systems at low cost
+- [2604.13430](../papers/2604.13430.md) (2026) [2] Quantum computing for effective nuclear lattice model
+- [2604.06139](../papers/2604.06139.md) (2026) [2] Uncertainty quantified three-body model applied to the two-neutron halo $^{22}$C
+- [2602.18162](../papers/2602.18162.md) (2026) [2] Light antiproton-nucleus systems at low energies with the ab initio NCSM/RGM method
+- [2602.15765](../papers/2602.15765.md) (2026) [2] Development of an accurate formalism to predict properties of two-neutron halo nuclei: case study of $^{22}$C
+- [2601.19408](../papers/2601.19408.md) (2026) [2] Short-distance production of three particles with large scattering length
+- [2511.14155](../papers/2511.14155.md) (2025) [2] Cluster phenomena using few-body and Lattice QCD theories
+- [2509.13967](../papers/2509.13967.md) (2025) [2] Dilated coordinate method for solving nuclear lattice effective field theory
+- [2509.02953](../papers/2509.02953.md) (2025) [2] Observation of renormalization group invariance in symmetry-restored nuclear lattice effective field theory
+- [2508.05814](../papers/2508.05814.md) (2025) [2] Wigner Phase-Space Densities of Nuclear Clusters and Hypernuclei
+- [2508.03575](../papers/2508.03575.md) (2025) [2] Machine learning the single-$Λ$ hypernuclei with neural-network quantum states
+- [2502.00438](../papers/2502.00438.md) (2025) [2] Effect of a repulsive three-body interaction on the $DD^{(*)}K$ molecule
+- [2408.10052](../papers/2408.10052.md) (2024) [1] Comparison of renormalized interactions using one-dimensional few-body systems as a testbed
+- [2407.17221](../papers/2407.17221.md) (2024) [2] Explicitly correlated Gaussians with tensor pre-factors: analytic matrix elements
+- [2407.17668](../papers/2407.17668.md) (2024) [2] Resonances and collisional properties of neutron-rich helium isotopes in the adiabatic hyperspherical representation
+- [2407.02135](../papers/2407.02135.md) (2024) [1] The role of the effective range in strongly-interacting few-body systems
+- [2405.10258](../papers/2405.10258.md) (2024) [2] The 3He(\vec n,p)3H parity-conserving asymmetry
+- [2309.16385](../papers/2309.16385.md) (2023) [2] Radiative Corrections and the Renormalization Group for the Two-Nucleon Interaction in Effective Field Theory
+- [2308.00136](../papers/2308.00136.md) (2023) [2] Magnetic dipole operator from chiral effective field theory for many-body expansion methods
 - [2304.10478](../papers/2304.10478.md) (2023) [2] Real and Imaginary Phase Shifts for Nucleon-Deuteron Scattering using Phase Function Method
 - [2303.01312](../papers/2303.01312.md) (2023) [1] Unitary interaction geometries in few-body systems
 - [2211.00395](../papers/2211.00395.md) (2022) [2] Efficient few-body calculations in finite volume
@@ -85,25 +104,6 @@
 - [0712.0039](../papers/0712.0039.md) (2007) [2] Dynamical coupled-channels: the key to understanding resonances
 - [0711.3846](../papers/0711.3846.md) (2007) [1] Similarity Renormalization Group for Few-Body Systems
 - [0704.3439](../papers/0704.3439.md) (2007) [2] The symmetric heavy-light ansatz
-- [2308.00136](../papers/2308.00136.md) (0000) [2] 2308.00136
-- [2309.16385](../papers/2309.16385.md) (0000) [2] 2309.16385
-- [2405.10258](../papers/2405.10258.md) (0000) [2] 2405.10258
-- [2407.02135](../papers/2407.02135.md) (0000) [1] 2407.02135
-- [2407.17221](../papers/2407.17221.md) (0000) [2] 2407.17221
-- [2407.17668](../papers/2407.17668.md) (0000) [2] 2407.17668
-- [2408.10052](../papers/2408.10052.md) (0000) [1] 2408.10052
-- [2502.00438](../papers/2502.00438.md) (0000) [2] 2502.00438
-- [2508.03575](../papers/2508.03575.md) (0000) [2] 2508.03575
-- [2508.05814](../papers/2508.05814.md) (0000) [2] 2508.05814
-- [2509.02953](../papers/2509.02953.md) (0000) [2] 2509.02953
-- [2509.13967](../papers/2509.13967.md) (0000) [2] 2509.13967
-- [2511.14155](../papers/2511.14155.md) (0000) [2] 2511.14155
-- [2601.19408](../papers/2601.19408.md) (0000) [2] 2601.19408
-- [2602.15765](../papers/2602.15765.md) (0000) [2] 2602.15765
-- [2602.18162](../papers/2602.18162.md) (0000) [2] 2602.18162
-- [2604.06139](../papers/2604.06139.md) (0000) [2] 2604.06139
-- [2604.13430](../papers/2604.13430.md) (0000) [2] 2604.13430
-- [2604.25792](../papers/2604.25792.md) (0000) [1] 2604.25792
 - [chao-dyn/9701008](../papers/chao-dyn/9701008.md) (0000) [1] chao-dyn/9701008
 - [cond-mat/0308481](../papers/cond-mat/0308481.md) (0000) [2] cond-mat/0308481
 - [cond-mat/0410049](../papers/cond-mat/0410049.md) (0000) [2] cond-mat/0410049

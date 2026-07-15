@@ -6,6 +6,19 @@
 
 **Papers:** 79
 
+- [2603.21997](../papers/2603.21997.md) (2026) [1] Lepton Double Charge Exchange Reactions as Probes for Lepton Number Violation
+- [2603.19793](../papers/2603.19793.md) (2026) [1] Probing short range correlations in Heavy-Ion Double Charge Exchange reactions
+- [2509.09776](../papers/2509.09776.md) (2025) [2] Extraction of neutron-capture cross sections on $^{92}$Zr using the charge-exchange Oslo method
+- [2505.24753](../papers/2505.24753.md) (2025) [1] Heavy Ion Double Charge Exchange Reactions as Probes for Two-Body Transition Densities
+- [2505.02341](../papers/2505.02341.md) (2025) [1] Probing the neutron-skin thickness via the double-charge exchange reactions in pion-nucleus collisions
+- [2504.11736](../papers/2504.11736.md) (2025) [1] Low-energy neutrino responses for 71Ga by electron capture rates, charge exchange reactions and shell model calculations
+- [2410.20376](../papers/2410.20376.md) (2024) [1] Medium recoil mode of $Δ$ production in single isobaric charge-exchange reactions
+- [2410.20554](../papers/2410.20554.md) (2024) [1] Revisiting $KN$ elastic and charge exchange reactions in search of the pentaquark $Θ^+$ baryon
+- [2405.13523](../papers/2405.13523.md) (2024) [1] Induced Isotensor Interactions in Heavy-Ion Double-Charge-Exchange Reactions and the Role of Initial and Final State Int...
+- [2405.13700](../papers/2405.13700.md) (2024) [1] Theory of Majorana-Type Heavy Ion Double Charge Exchange Reactions by Pion--Nucleon Isotensor Interactions
+- [2405.04978](../papers/2405.04978.md) (2024) [1] Formal Theory of Heavy Ion Double Charge Exchange Reactions
+- [2403.18629](../papers/2403.18629.md) (2024) [2] Uncertainty quantification in $(p,n)$ reactions
+- [2403.06455](../papers/2403.06455.md) (2024) [2] Neutrinoless double-$β$ decay and double Gamow-Teller transitions
 - [2303.17752](../papers/2303.17752.md) (2023) [2] Interaction of solar neutrinos with $^{98,100}$Mo isotopes and the influence of nuclear resonances
 - [2202.13146](../papers/2202.13146.md) (2022) [2] Effective field theory of pairing rotations
 - [2112.14256](../papers/2112.14256.md) (2021) [1] Prediction of (p,n) Charge-Exchange Reactions with Uncertainty Quantification
@@ -58,19 +71,6 @@
 - [0901.0875](../papers/0901.0875.md) (2009) [2] Three-body Faddeev-Alt-Grassberger-Sandhas approach to direct nuclear reactions
 - [0809.4772](../papers/0809.4772.md) (2008) [2] Big-Bang Nucleosynthesis Reactions Catalyzed by a Long-Lived Negatively Charged Leptonic Particle
 - [0706.2523](../papers/0706.2523.md) (2007) [1] An in-medium full-folding model approach to quasielastic (p,n) charge-exchange reactions
-- [2403.06455](../papers/2403.06455.md) (0000) [2] 2403.06455
-- [2403.18629](../papers/2403.18629.md) (0000) [2] 2403.18629
-- [2405.04978](../papers/2405.04978.md) (0000) [1] 2405.04978
-- [2405.13523](../papers/2405.13523.md) (0000) [1] 2405.13523
-- [2405.13700](../papers/2405.13700.md) (0000) [1] 2405.13700
-- [2410.20376](../papers/2410.20376.md) (0000) [1] 2410.20376
-- [2410.20554](../papers/2410.20554.md) (0000) [1] 2410.20554
-- [2504.11736](../papers/2504.11736.md) (0000) [1] 2504.11736
-- [2505.02341](../papers/2505.02341.md) (0000) [1] 2505.02341
-- [2505.24753](../papers/2505.24753.md) (0000) [1] 2505.24753
-- [2509.09776](../papers/2509.09776.md) (0000) [2] 2509.09776
-- [2603.19793](../papers/2603.19793.md) (0000) [1] 2603.19793
-- [2603.21997](../papers/2603.21997.md) (0000) [1] 2603.21997
 - [nucl-th/0008012](../papers/nucl-th/0008012.md) (0000) [2] nucl-th/0008012
 - [nucl-th/0106055](../papers/nucl-th/0106055.md) (0000) [1] nucl-th/0106055
 - [nucl-th/0210080](../papers/nucl-th/0210080.md) (0000) [2] nucl-th/0210080

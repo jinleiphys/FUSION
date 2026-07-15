@@ -6,6 +6,71 @@
 
 **Papers:** 409 (showing first 100 of 409)
 
+- [2605.02826](../papers/2605.02826.md) (2026) [2] Structure of the $^8$B and $^8$Li nuclei and the astrophysical $S_{17}(0)$-factor of the $^7$Be($p,γ$)$^8$B direct captu...
+- [2604.22727](../papers/2604.22727.md) (2026) [2] Ab initio short-range nuclear matrix elements for neutrinoless double-beta decay
+- [2604.02612](../papers/2604.02612.md) (2026) [2] Halo Nuclei from Ab Initio Nuclear Theory
+- [2603.26905](../papers/2603.26905.md) (2026) [2] Linking Electromagnetic Moments to Nuclear Interactions with a Global Physics-Driven Machine-Learning Emulator
+- [2603.04311](../papers/2603.04311.md) (2026) [1] Similarity renormalization group for nuclear forces
+- [2603.01819](../papers/2603.01819.md) (2026) [2] Recent developments and applications of the relativistic chiral nuclear force
+- [2603.00274](../papers/2603.00274.md) (2026) [2] Spin-2 Mesons in a Relativistic Hartree Description of Nuclei
+- [2601.16168](../papers/2601.16168.md) (2026) [2] \textit{Ab initio} Gamow density matrix renormalization group for broad nuclear many-body resonances
+- [2601.08199](../papers/2601.08199.md) (2026) [2] Chiral three-nucleon forces for the new local position-space two-nucleon potential in $\textit{ab initio}$ many-body cal...
+- [2512.05874](../papers/2512.05874.md) (2025) [2] Topical issue on the intersection of low-energy nuclear structure and high-energy nuclear collisions
+- [2511.21916](../papers/2511.21916.md) (2025) [2] Energy-momentum tensor form factor D(t) of proton and neutron
+- [2511.12522](../papers/2511.12522.md) (2025) [1] Simplification of chiral nuclear forces near the unitarity limit
+- [2511.01844](../papers/2511.01844.md) (2025) [2] Accurate and Efficient Emulation of Proton-Deuteron Scattering via the Reduced Basis Method and Active Learning
+- [2509.24671](../papers/2509.24671.md) (2025) [1] Uncertainties with low-resolution nuclear forces
+- [2509.23354](../papers/2509.23354.md) (2025) [2] Ab initio study of island of inversion in odd-$A$ nuclei: Structure of $^{31,33}$Mg
+- [2509.08552](../papers/2509.08552.md) (2025) [2] A comprehensive view of nuclear shapes, rotations and vibrations from fully quantum mechanical perspectives
+- [2509.06812](../papers/2509.06812.md) (2025) [2] Ab initio calculations of beta-decay half-lives for $N=50$ neutron-rich nuclei
+- [2509.01303](../papers/2509.01303.md) (2025) [2] Zemach radii and nuclear structure effects in hyperfine splitting of Lithium
+- [2509.00315](../papers/2509.00315.md) (2025) [2] Impacts of isolated nucleon-nucleon correlations in relativistic $^{16}$O+$^{16}$O collisions
+- [2508.09252](../papers/2508.09252.md) (2025) [2] $\textit{Ab initio}$ Exact Calculation of Strongly-Correlated Nucleonic Matter
+- [2508.06838](../papers/2508.06838.md) (2025) [1] Perturbative renormalization of chiral nuclear forces at subleading order in 3S1-3D1 channel
+- [2508.06221](../papers/2508.06221.md) (2025) [2] Realistic shell model for ordinary muon capture of sd-shell nuclei
+- [2507.01257](../papers/2507.01257.md) (2025) [2] From bare two-nucleon interaction to nuclear matter and finite nuclei in a relativistic framework
+- [2506.19437](../papers/2506.19437.md) (2025) [2] Study of entanglement in Ne, Mg, and Si isotopic chains
+- [2506.18519](../papers/2506.18519.md) (2025) [2] Nuclear and neutron matter in the relativistic Brueckner-Hartree-Fock theory with next-to-leading order covariant chiral...
+- [2506.16947](../papers/2506.16947.md) (2025) [2] Impact of pion tensor force on alpha clustering in $^{20}$Ne
+- [2505.00828](../papers/2505.00828.md) (2025) [2] Connecting Relativistic Density Functional Theory to Microscopic Calculations
+- [2504.15598](../papers/2504.15598.md) (2025) [2] Charge dependent nucleon-nucleon potentials in covariant chiral effective field theory
+- [2504.09148](../papers/2504.09148.md) (2025) [2] From spin to pseudospin symmetry: The origin of magic numbers in nuclear structure
+- [2504.06518](../papers/2504.06518.md) (2025) [2] Non Nucleonic Components in Short Nuclear Distances
+- [2503.18017](../papers/2503.18017.md) (2025) [2] Charge-dependent nucleon-nucleon interaction at N$^3$LO in nuclear lattice effective field theory
+- [2502.13565](../papers/2502.13565.md) (2025) [1] Perturbative quantum Monte Carlo calculation with high-fidelity nuclear forces
+- [2502.03989](../papers/2502.03989.md) (2025) [2] Radii of light nuclei from the Jacobi No-Core Shell Model
+- [2501.17185](../papers/2501.17185.md) (2025) [1] Relativistic chiral nuclear forces: status and prospects
+- [2412.18037](../papers/2412.18037.md) (2024) [2] Alpha-Particle Monopole Form Factors with Ab Initio No-Core Shell Model
+- [2412.09219](../papers/2412.09219.md) (2024) [2] Exploring nuclear force with pulsar glitch observation
+- [2412.03265](../papers/2412.03265.md) (2024) [1] Evolution of shell structure at $\mathbf{N=32}$ and 34: Insights from realistic nuclear forces
+- [2411.19613](../papers/2411.19613.md) (2024) [2] Non-perturbative three-nucleon simulation using chiral lattice EFT
+- [2411.18943](../papers/2411.18943.md) (2024) [2] Enhanced nuclear Schiff and electric dipole moments in nuclei with an octupole deformation
+- [2411.16014](../papers/2411.16014.md) (2024) [2] Improved structure of calcium isotopes from ab initio calculations
+- [2410.05962](../papers/2410.05962.md) (2024) [2] 16O electroweak response functions from first principles
+- [2408.13209](../papers/2408.13209.md) (2024) [2] Statistical uncertainty quantification for multireference covariant density functional theory
+- [2407.17069](../papers/2407.17069.md) (2024) [1] Enhancement of deltaful two-pion exchange nuclear forces
+- [2407.10219](../papers/2407.10219.md) (2024) [1] Nuclear forces and nuclear excited states
+- [2407.09734](../papers/2407.09734.md) (2024) [2] Ab initio study of Z(N) = 6 magicity
+- [2407.08342](../papers/2407.08342.md) (2024) [2] Contact operators in renormalization of attractive singular potentials
+- [2406.17638](../papers/2406.17638.md) (2024) [2] Towards Hypernuclei from Nuclear Lattice Effective Field Theory
+- [2406.12980](../papers/2406.12980.md) (2024) [1] Parity and time-reversal violating nuclear forces with explicit $Δ$-excitations
+- [2406.10980](../papers/2406.10980.md) (2024) [2] Density-dependent relativistic mean-field model for $ Ξ^{-} $ hypernuclei
+- [2405.17119](../papers/2405.17119.md) (2024) [2] Isoscalar, isovector and orbital contributions in $M1$ transitions from analogous $M1$ and Gamow-Teller transitions in $...
+- [2405.15386](../papers/2405.15386.md) (2024) [2] Exploring Baryon Resonances with Transition Generalized Parton Distributions: Status and Perspectives
+- [2404.12668](../papers/2404.12668.md) (2024) [2] Nucleon microscopy in proton-nucleus scattering via analysis of bremsstrahlung emission: role of incoherent emission
+- [2404.09116](../papers/2404.09116.md) (2024) [2] Spin entanglement of multinucleons: experimental prospects
+- [2404.00058](../papers/2404.00058.md) (2024) [2] Multiscale physics of atomic nuclei from first principles
+- [2402.14032](../papers/2402.14032.md) (2024) [1] Recent advances in chiral EFT based nuclear forces and their applications
+- [2402.11759](../papers/2402.11759.md) (2024) [2] Lattice QCD and Baryon-Baryon Interactions
+- [2401.06625](../papers/2401.06625.md) (2024) [2] Imaging Shapes of Atomic Nuclei in High-Energy Nuclear Collisions
+- [2401.06675](../papers/2401.06675.md) (2024) [2] Neutron-rich nuclei and neutron skins from chiral low-resolution interactions
+- [2312.13932](../papers/2312.13932.md) (2023) [2] Towards consistent nuclear interactions from chiral Lagrangians II: Symmetry preserving regularization
+- [2312.08228](../papers/2312.08228.md) (2023) [2] Leveraging neural control variates for enhanced precision in lattice field theory
+- [2311.10893](../papers/2311.10893.md) (2023) [2] Towards consistent nuclear interactions from chiral Lagrangians I: The path-integral approach
+- [2311.02539](../papers/2311.02539.md) (2023) [2] The neutron skin of 48Ca and 208Pb: a critical analysis
+- [2310.03109](../papers/2310.03109.md) (2023) [2] $^{40}$Ca transverse response function from coupled-cluster theory
+- [2309.02293](../papers/2309.02293.md) (2023) [1] Acceleration of a polarized neutron by internal weak nuclear forces
+- [2309.02314](../papers/2309.02314.md) (2023) [2] The role of three-nucleon potentials within the shell model: past and present
 - [2307.13568](../papers/2307.13568.md) (2023) [2] Optimized nuclear energy density functionals including long-range pion contributions
 - [2306.07268](../papers/2306.07268.md) (2023) [2] Derivation of transition density from the observed 4He(e,e')4He(0^+_2) form factor raising the alpha-particle monopole p...
 - [2306.04918](../papers/2306.04918.md) (2023) [2] Spin entanglement in neutron-proton scattering
@@ -41,68 +106,3 @@
 - [2108.10452](../papers/2108.10452.md) (2021) [2] Chiral Effective Field Theory's Impact on Advancing Quantum Monte Carlo Methods
 - [2108.03771](../papers/2108.03771.md) (2021) [2] A brief account of Steven Weinberg's legacy in ab initio many-body theory
 - [2107.08968](../papers/2107.08968.md) (2021) [1] Highest weight irreducible representations favored by nuclear forces within SU(3)-symmetric fermionic systems
-- [2107.06697](../papers/2107.06697.md) (2021) [2] Hot and Dense Matter Equation of State Probability Distributions for Astrophysical Simulations
-- [2107.03558](../papers/2107.03558.md) (2021) [1] What hath Weinberg wrought? Reflections on what Weinberg's papers on 'Nuclear Forces from Chiral Lagrangians' did and di...
-- [2103.14386](../papers/2103.14386.md) (2021) [2] Numerical Study of Stellar Core Collapse and Neutrino Emission Using the Nuclear Equation of State Obtained by the Varia...
-- [2103.13352](../papers/2103.13352.md) (2021) [2] Pions and Contacts at N4LO: Some details on the chiral nuclear force
-- [2102.04409](../papers/2102.04409.md) (2021) [1] Why nuclear forces favor the highest weight irreducible representations of the fermionic SU(3) symmetry
-- [2102.02726](../papers/2102.02726.md) (2021) [2] Normalizing flows for microscopic many-body calculations: an application to the nuclear equation of state
-- [2011.13186](../papers/2011.13186.md) (2020) [2] Perturbative chiral nucleon-nucleon potential for the $^3P_0$ partial wave
-- [2010.09420](../papers/2010.09420.md) (2020) [2] Hidden spin-isospin exchange symmetry
-- [2010.07652](../papers/2010.07652.md) (2020) [2] Proton and neutron skins and symmetry energy of mirror nuclei
-- [2010.02785](../papers/2010.02785.md) (2020) [2] Many-body forces and nucleon clustering near the QCD critical point
-- [2009.07992](../papers/2009.07992.md) (2020) [2] Effects of $CP$-violating internucleon interactions in paramagnetic molecules
-- [2009.08436](../papers/2009.08436.md) (2020) [2] A global microscopic description of nucleon-nucleus scattering with quantified uncertainties
-- [2008.01978](../papers/2008.01978.md) (2020) [2] The $\boldsymbol{^{29}}$F nucleus as a lighthouse on the coast of the island of inversion
-- [2008.00974](../papers/2008.00974.md) (2020) [2] Nuclear Currents in Chiral Effective Field Theory
-- [2007.06926](../papers/2007.06926.md) (2020) [2] James Chadwick: ahead of his time
-- [2007.04927](../papers/2007.04927.md) (2020) [2] Strong CP violation in nuclear physics
-- [2006.15360](../papers/2006.15360.md) (2020) [2] Precision determination of pion-nucleon coupling constants using effective field theory
-- [2006.02906](../papers/2006.02906.md) (2020) [2] A Bayesian Analysis of Nuclear Deformation Properties with Skyrme Energy Functionals
-- [2005.14706](../papers/2005.14706.md) (2020) [2] Probing short-range correlations in the deuteron via incoherent diffractive $J/ψ$ production with spectator tagging at t...
-- [2005.07837](../papers/2005.07837.md) (2020) [2] Role of chiral two-body currents in $^6$Li magnetic properties in light of a new precision measurement with the relative...
-- [2005.07433](../papers/2005.07433.md) (2020) [2] Subleading contributions to the nuclear scalar isoscalar currents
-- [2004.14659](../papers/2004.14659.md) (2020) [2] QCD Hidden-Color Hexa-diquark in the Central Core of Nuclei
-- [2004.14896](../papers/2004.14896.md) (2020) [2] Quantifying alpha clustering in light nuclei from binding energies
-- [2004.05814](../papers/2004.05814.md) (2020) [2] Calculation of the ${}^6$Li ground state within the hyperspherical harmonic basis
-- [2003.10730](../papers/2003.10730.md) (2020) [2] Lattice QCD and baryon-baryon interactions: HAL QCD method
-- [2003.06721](../papers/2003.06721.md) (2020) [1] The Problem of Renormalization of Chiral Nuclear Forces
-- [2003.04313](../papers/2003.04313.md) (2020) [2] Resonant and Scattering States in the $α+α$ System from the Non-Localized Cluster Model
-- [2001.09050](../papers/2001.09050.md) (2020) [1] Parity- and time-reversal-violating nuclear forces
-- [2001.05615](../papers/2001.05615.md) (2020) [2] Can chiral EFT give us satisfaction?
-- [2001.03906](../papers/2001.03906.md) (2020) [2] Elastic pion-nucleon scattering in chiral perturbation theory: Explicit $Δ$(1232) degrees of freedom
-- [2001.03334](../papers/2001.03334.md) (2020) [1] New Ideas in Constraining Nuclear Forces
-- [1912.12461](../papers/1912.12461.md) (2019) [2] Hadron properties in a nuclear medium and effective nuclear force from quarks: the quark-meson coupling model
-- [1912.12092](../papers/1912.12092.md) (2019) [2] Bremsstrahlung emission from nuclear reactions in compact stars
-- [1912.07385](../papers/1912.07385.md) (2019) [2] Antiproton physics
-- [1912.02884](../papers/1912.02884.md) (2019) [2] Electromagnetic properties of $^{21}$O for benchmarking nuclear Hamiltonians
-- [1911.11875](../papers/1911.11875.md) (2019) [1] High-precision nuclear forces from chiral EFT: State-of-the-art, challenges and outlook
-- [1909.09089](../papers/1909.09089.md) (2019) [1] Enhanced adiabatic index for hot neutron-rich matter from microscopic nuclear forces
-- [1909.08446](../papers/1909.08446.md) (2019) [2] Eigenvector Continuation as an Efficient and Accurate Emulator for Uncertainty Quantification
-- [1908.09349](../papers/1908.09349.md) (2019) [1] Towards high-precision nuclear forces from chiral effective field theory
-- [1908.02638](../papers/1908.02638.md) (2019) [2] Spin-polarized neutron matter, the maximum mass of neutron stars, and GW170817
-- [1908.01538](../papers/1908.01538.md) (2019) [2] Electroweak Current Operators in Chiral Effective Field Theory
-- [1907.08091](../papers/1907.08091.md) (2019) [2] Nuclear electric dipole moment in the cluster model with a triton: $^7$Li and $^{11}$B
-- [1907.07438](../papers/1907.07438.md) (2019) [2] Enhanced nuclear Schiff moment in stable and metastable nuclei
-- [1906.11487](../papers/1906.11487.md) (2019) [2] Theoretical study of $^{173}$YbOH to search for the nuclear magnetic quadrupole moment
-- [1906.06491](../papers/1906.06491.md) (2019) [2] Heavy hadron molecules in effective field theory: the emergence of exotic nuclear landscapes
-- [1906.01674](../papers/1906.01674.md) (2019) [2] Neutron matter at the interface(s): static response and effective mass
-- [1905.04142](../papers/1905.04142.md) (2019) [2] Is the structure of 42Si understood?
-- [1904.12269](../papers/1904.12269.md) (2019) [2] Neutron skins of atomic nuclei: per aspera ad astra
-- [1904.11449](../papers/1904.11449.md) (2019) [2] Dense matter equation of state and neutron star properties from nuclear theory and experiment
-- [1904.06566](../papers/1904.06566.md) (2019) [2] Study of the core-crust transition in neutron stars with finite-range interactions: the dynamical method
-- [1904.00974](../papers/1904.00974.md) (2019) [2] Halo breakup and the Coulomb-nuclear interference problem
-- [1903.08937](../papers/1903.08937.md) (2019) [2] Time reversal invariance violation in neutron-nucleus scattering
-- [1903.08537](../papers/1903.08537.md) (2019) [2] Microscopically based energy density functionals for nuclei using the density matrix expansion
-- [1903.04981](../papers/1903.04981.md) (2019) [2] Unified equations of state for cold non-accreting neutron stars with Brussels-Montreal functionals. I. Role of symmetry ...
-- [1902.05502](../papers/1902.05502.md) (2019) [2] Bayesian modeling of the nuclear equation of state for neutron star tidal deformabilities and GW170817
-- [1902.04959](../papers/1902.04959.md) (2019) [2] Light Nuclei from Lattice QCD: Spectrum, Structure and Reactions
-- [1901.09652](../papers/1901.09652.md) (2019) [2] The APR equation of state for simulations of supernovae, neutron stars and binary mergers
-- [1901.01741](../papers/1901.01741.md) (2019) [1] Observation of excited states in $^{20}$Mg sheds light on nuclear forces and shell evolution
-- [1901.01473](../papers/1901.01473.md) (2019) [1] What is wrong with our current nuclear forces?
-- [1812.10928](../papers/1812.10928.md) (2018) [2] Essential elements for nuclear binding
-- [1811.09682](../papers/1811.09682.md) (2018) [2] From QCD Symmetries to Nuclei and Neutron Stars
-- [1811.06628](../papers/1811.06628.md) (2018) [2] Parameter Optimisation for the Latest Quark-Meson Coupling Energy Density Functional
-- [1809.10403](../papers/1809.10403.md) (2018) [1] Manifestation of important role of nuclear forces in emission of photons in scattering of pions off nuclei
-- [1809.08812](../papers/1809.08812.md) (2018) [2] Skyrme-RPA study of charged-current neutrino opacity in hot and dense supernova matter
-- [1808.03629](../papers/1808.03629.md) (2018) [2] Enhanced nuclear Schiff moment and time reversal violation in 229Th-containing molecules

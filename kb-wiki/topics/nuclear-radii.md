@@ -6,6 +6,19 @@
 
 **Papers:** 57
 
+- [2605.08413](../papers/2605.08413.md) (2026) [2] Charge radii of Cl isotopes from x-ray spectroscopy of muonic atoms
+- [2604.09010](../papers/2604.09010.md) (2026) [2] Shape transitions and ground-state properties of tungsten isotopes in covariant density functional theory
+- [2512.22709](../papers/2512.22709.md) (2025) [2] Elucidating the role of the surface energy in density functional theory
+- [2509.13750](../papers/2509.13750.md) (2025) [1] Global Trends of Nuclear Radii and Binding Energies from the NUCLEI-PACK Framework
+- [2509.01311](../papers/2509.01311.md) (2025) [2] Hadronic vacuum polarization effect in muonic atoms
+- [2507.05680](../papers/2507.05680.md) (2025) [2] The nuclear charge radius of $^{13}\mathrm{C}$
+- [2506.10745](../papers/2506.10745.md) (2025) [2] HFB3: an axial HFB solver with Gogny forces using a 2-center HO basis (C++/Python)
+- [2504.01438](../papers/2504.01438.md) (2025) [1] Precise Determination of Electric Quadrupole Moments and Isotope Shift Constants of Yb$^+$ in Pursuance of Probing Funda...
+- [2502.04999](../papers/2502.04999.md) (2025) [2] Nuclear size, electric monopole transitions, and the location of $0^+_2$ states
+- [2410.10202](../papers/2410.10202.md) (2024) [2] Universal laws for nuclear contacts
+- [2403.09737](../papers/2403.09737.md) (2024) [2] Effects of Finite Temperature and Pairing Correlations in Multi-$Λ$ Hypernuclei
+- [2310.15300](../papers/2310.15300.md) (2023) [2] Effects of nuclear structure and quantum interference on diffractive vector meson production in ultra-peripheral nuclear...
+- [2309.07426](../papers/2309.07426.md) (2023) [2] At the borderline of shape coexistence: Mo and Ru
 - [2304.06238](../papers/2304.06238.md) (2023) [2] Enlarged deformation region in neutron-rich Zr isotopes by the second intruder orbit
 - [2304.03800](../papers/2304.03800.md) (2023) [2] Towards $\it{ab}$-$\it{initio}$ nuclear theory calculations of $δ_\mathrm{C}$
 - [2301.05355](../papers/2301.05355.md) (2023) [2] Possible interpretation of the complex expectation values associated with resonances
@@ -38,19 +51,6 @@
 - [0806.3655](../papers/0806.3655.md) (2008) [2] Correlating radii and electric monopole transitions of atomic nuclei
 - [0709.3525](../papers/0709.3525.md) (2007) [2] Parameterization of the Woods-Saxon Potential for Shell-Model Calculations
 - [2204.01625](../papers/2204.01625.md) (0000) [2] Tomography of Ultra-relativistic Nuclei with Polarized Photon-gluon Collisions
-- [2309.07426](../papers/2309.07426.md) (0000) [2] 2309.07426
-- [2310.15300](../papers/2310.15300.md) (0000) [2] 2310.15300
-- [2403.09737](../papers/2403.09737.md) (0000) [2] 2403.09737
-- [2410.10202](../papers/2410.10202.md) (0000) [2] 2410.10202
-- [2502.04999](../papers/2502.04999.md) (0000) [2] 2502.04999
-- [2504.01438](../papers/2504.01438.md) (0000) [1] 2504.01438
-- [2506.10745](../papers/2506.10745.md) (0000) [2] 2506.10745
-- [2507.05680](../papers/2507.05680.md) (0000) [2] 2507.05680
-- [2509.01311](../papers/2509.01311.md) (0000) [2] 2509.01311
-- [2509.13750](../papers/2509.13750.md) (0000) [1] 2509.13750
-- [2512.22709](../papers/2512.22709.md) (0000) [2] 2512.22709
-- [2604.09010](../papers/2604.09010.md) (0000) [2] 2604.09010
-- [2605.08413](../papers/2605.08413.md) (0000) [2] 2605.08413
 - [hep-ph/0301028](../papers/hep-ph/0301028.md) (0000) [2] hep-ph/0301028
 - [nucl-th/0111036](../papers/nucl-th/0111036.md) (0000) [2] nucl-th/0111036
 - [nucl-th/0203062](../papers/nucl-th/0203062.md) (0000) [2] nucl-th/0203062

@@ -6,6 +6,26 @@
 
 **Papers:** 206 (showing first 100 of 206)
 
+- [2602.12423](../papers/2602.12423.md) (2026) [2] Low-energy $^{3}$He($α,γ$)$^{7}$Be reaction within the Skyrme potential framework
+- [2601.22234](../papers/2601.22234.md) (2026) [2] Low-energy 17O(n,g)18O reaction within the microscopic potential model and its role for the weak r-process
+- [2601.16551](../papers/2601.16551.md) (2026) [2] Analysis of $M1$ capture in the $α(d,γ)^6$Li reaction
+- [2601.11180](../papers/2601.11180.md) (2026) [2] Fine-tunings in radiative $α$-particle capture on $^{12}$C at astrophysical energies
+- [2509.24931](../papers/2509.24931.md) (2025) [2] Precision calculation of $^3$He$(α,γ)^7$Be for solar physics
+- [2503.11708](../papers/2503.11708.md) (2025) [2] Radiative corrections for the two-nucleon interaction in effective field theory
+- [2502.17634](../papers/2502.17634.md) (2025) [2] Renormalization group analysis of electromagnetic properties of the deuteron
+- [2501.17646](../papers/2501.17646.md) (2025) [2] Electric dipole response of sd-shell nuclei within the Configuration-Interaction Shell Model approach
+- [2412.12205](../papers/2412.12205.md) (2024) [1] Radiative Capture Reaction $d(α,γ)^{6}\mathrm{Li} $ in Cluster Effective Field Theory
+- [2411.01444](../papers/2411.01444.md) (2024) [1] Radiative Capture of proton 14N(p,γ) 15O at Low Energy
+- [2410.20086](../papers/2410.20086.md) (2024) [2] Re analysis of Temperature Dependent Neutron Capture Rates and Stellar \b{eta} decay Rates of 95 98Mo
+- [2410.11245](../papers/2410.11245.md) (2024) [2] Calculable Microscopic Theory for $^{12}$C($α$, $γ$)$^{16}$O Cross Section near Gamow Window II
+- [2410.07279](../papers/2410.07279.md) (2024) [2] Re-investigation of neutron capture by 84Kr and 86Kr in the s-process nucleosynthesis
+- [2409.09515](../papers/2409.09515.md) (2024) [2] Ab initio calculation of the $^3$He$(α,γ)^7$Be astrophysical S factor with chiral two- and three-nucleon forces
+- [2407.16775](../papers/2407.16775.md) (2024) [1] Investigating the rate of $^{10}$Be(n,$γ$)$^{11}$Be radiative capture reaction within the FRDWBA framework
+- [2405.20223](../papers/2405.20223.md) (2024) [2] Astrophysical aspects of $^{12}$C$(p,γ)^{13}$N reaction
+- [2405.09971](../papers/2405.09971.md) (2024) [1] A study of the fine-structure constant dependence of radiative capture in Halo-EFT
+- [2405.03210](../papers/2405.03210.md) (2024) [1] Magnetic dipole transition in proton-deuteron radiative capture at BBN energies within potential model
+- [2312.11040](../papers/2312.11040.md) (2023) [2] Benchmark of many-body approaches for magnetic dipole transition strength
+- [2310.20255](../papers/2310.20255.md) (2023) [1] Asymptotic normalization coefficients for $α+ {}^{12}{\rm C}$ synthesis and the $S$-factor for ${}^{12}{\rm C}(α, \,γ){}...
 - [2306.05215](../papers/2306.05215.md) (2023) [2] Description of $^7$Be and $^7$Li within the Gamow Shell Model
 - [2304.02821](../papers/2304.02821.md) (2023) [2] Asymptotic normalization coefficients of alpha-particle removal from $^{16}$O($3^-,2^+,1^-$)
 - [2302.06986](../papers/2302.06986.md) (2023) [2] The $^{19}$N($n$,$γ)^{20}$N capture rate in light of the probable bubble nature of $^{20}$N
@@ -86,23 +106,3 @@
 - [1311.6407](../papers/1311.6407.md) (2013) [2] Gadolinium in water Cherenkov detectors improves detection of supernova $ν_e$
 - [1310.7099](../papers/1310.7099.md) (2013) [2] NACRE II: an update of the NACRE compilation of charged-particle-induced thermonuclear reaction rates for nuclei with ma...
 - [1309.7539](../papers/1309.7539.md) (2013) [2] The Astrophysical S-factor of the 12C(α,γ)16O Reaction at Solar Energies
-- [1303.4252](../papers/1303.4252.md) (2013) [2] Electromagnetic Decay of Molecular States
-- [1302.4158](../papers/1302.4158.md) (2013) [1] Radiative capture reactions in lattice effective field theory
-- [1207.7039](../papers/1207.7039.md) (2012) [2] Parity violation in radiative neutron capture on deuteron
-- [1207.6064](../papers/1207.6064.md) (2012) [2] Neutron degeneracy and plasma physics effects on radiative neutron captures in neutron star crust
-- [1205.6525](../papers/1205.6525.md) (2012) [1] Testing Parity with Atomic Radiative Capture of $μ^-$
-- [1204.4408](../papers/1204.4408.md) (2012) [2] Radiative Neutron Capture on Carbon-14 in Effective Field Theory
-- [1202.3309](../papers/1202.3309.md) (2012) [1] Imaginary-time method for radiative capture reaction rate
-- [1111.3577](../papers/1111.3577.md) (2011) [2] Towards Nuclear Physics of OHe Dark Matter
-- [1111.2838](../papers/1111.2838.md) (2011) [2] Physics of Dark Matter in the Light of Dark Atoms
-- [1111.2887](../papers/1111.2887.md) (2011) [2] Dark Atoms of Dark Matter and their Stable Charged Constituents
-- [1110.0460](../papers/1110.0460.md) (2011) [2] Ab initio many-body calculations of the 3H(d,n)4He and 3He(d,p)4He fusion
-- [1108.4811](../papers/1108.4811.md) (2011) [2] Direct and sequential radiative three-body reaction rates at low temperatures
-- [1108.4265](../papers/1108.4265.md) (2011) [2] Dilepton production in pp and np collisions at 1.25 GeV
-- [1105.5977](../papers/1105.5977.md) (2011) [1] Ab initio many-body calculation of the 7Be(p,gamma)8B radiative capture
-- [1105.4942](../papers/1105.4942.md) (2011) [2] Coulomb breakup of $^6\rm{Li}$ into $α\,+\,\rm{d}$ in the field of ion $^{208}\rm{Pb}$
-- [1103.2630](../papers/1103.2630.md) (2011) [2] Impact of the phonon coupling on the dipole strength and radiative neutron capture
-- [1103.0453](../papers/1103.0453.md) (2011) [2] {Once more about astrophysical $S$ factor for the $α+ d \to {}^{6}{\rm Li} + γ$ reaction
-- [1012.4970](../papers/1012.4970.md) (2010) [2] Microscopic Nuclear Structure and Reaction Calculations in the FMD Approach
-- [1012.4310](../papers/1012.4310.md) (2010) [1] Calculations of Branching Ratios for Radiative-Capture, One-Proton, and Two-Neutron Channels in the Fusion Reaction $^{2...
-- [1011.4919](../papers/1011.4919.md) (2010) [2] Effective Field Theory and High-Precision Calculations of Nuclear Electroweak Processes

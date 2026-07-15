@@ -6,6 +6,29 @@
 
 **Papers:** 141 (showing first 100 of 141)
 
+- [2604.05307](../papers/2604.05307.md) (2026) [2] Equilibrated fraction of QCD matter in high-energy oxygen--oxygen collisions
+- [2603.13203](../papers/2603.13203.md) (2026) [2] $π$, K, and p production in high-multiplicity pp collisions at $\sqrt{s} = 13$ TeV
+- [2603.13217](../papers/2603.13217.md) (2026) [2] Measurement of correlations between elliptic flow and mean transverse momentum in pp, p-Pb, and Pb-Pb collisions at the ...
+- [2602.11452](../papers/2602.11452.md) (2026) [1] A study of charged-particle multiplicity distribution in high energy p-O collisions
+- [2601.20505](../papers/2601.20505.md) (2026) [2] Bjorken Initial Energy Density and Viscous Longitudinal Hydrodynamic Evolution in Xe-Xe Collisions
+- [2601.06856](../papers/2601.06856.md) (2026) [2] Probing the microscopic origin of prompt and non-prompt $D^{0}$ production through event-shape engineering in proton-pro...
+- [2512.18728](../papers/2512.18728.md) (2025) [2] Dissociation-driven quarkonium spin alignment in Pb--Pb collisions at $\sqrt{s_{\rm NN}} = 5.02$ TeV
+- [2512.15178](../papers/2512.15178.md) (2025) [2] The domain of soft hadrons in transverse momentum space in high energy collisions
+- [2512.10193](../papers/2512.10193.md) (2025) [2] Impact of the in-medium cross section on cluster spectra in ${}^{40,48}\mathrm{Ca}+{}^{58,64}\mathrm{Ni}$ collisions at ...
+- [2511.13163](../papers/2511.13163.md) (2025) [2] A deep learning approach for predicting multiple observables in Au+Au collisions at RHIC
+- [2509.06158](../papers/2509.06158.md) (2025) [2] Multiplicity distributions in QCD jets and jet topics
+- [2507.14262](../papers/2507.14262.md) (2025) [2] Deciphering the dynamics of nuclear collisions with elongated structure of $^{20}$Ne
+- [2507.07369](../papers/2507.07369.md) (2025) [2] Thermodynamic Analysis of Transverse Momentum Spectra in Pb-Pb Collisions at 2.76 TeV: Centrality Dependence of Temperat...
+- [2506.07941](../papers/2506.07941.md) (2025) [1] Model Comparisons of Transverse Energy and Charged-Particle Multiplicity in A+A Collisions at Midrapidity from $\sqrt{s_...
+- [2506.03782](../papers/2506.03782.md) (2025) [2] Event Topology Classifiers at the Large Hadron Collider
+- [2411.06496](../papers/2411.06496.md) (2024) [2] Heavy Flavor Production at the Large Hadron Collider: A Machine Learning Approach
+- [2410.00821](../papers/2410.00821.md) (2024) [2] Recent $J/ψ$ measurements at the PHENIX experiment
+- [2404.02602](../papers/2404.02602.md) (2024) [2] Deep learning for flow observables in high energy heavy-ion collisions
+- [2403.03598](../papers/2403.03598.md) (2024) [2] Controlling volume fluctuations for studies of critical phenomena in nuclear collisions
+- [2402.03692](../papers/2402.03692.md) (2024) [2] On the non-universality of heavy quark hadronization in elementary high-energy collisions
+- [2401.00596](../papers/2401.00596.md) (2023) [2] Bulk medium properties of heavy-ion collisions from the beam energy scan with a multistage hydrodynamic model
+- [2311.00946](../papers/2311.00946.md) (2023) [2] Study of bulk properties of the system formed in U+U collisions at $\sqrt{s_{\mathrm NN}}$ =~2.12~GeV using JAM model
+- [2308.15151](../papers/2308.15151.md) (2023) [2] $J/ψ$ and $ψ$(2S) polarization in proton-proton collisions at energies available at the CERN Large Hadron Collider using...
 - [2305.10371](../papers/2305.10371.md) (2023) [2] Baryon diffusion coefficient of the strongly interacting medium
 - [2303.03696](../papers/2303.03696.md) (2023) [2] The study on the structure of exotic states $χ_{c 1}(3872)$ via beauty-hadron decays in $pp$ collisions at $\sqrt{s}=8\,...
 - [2301.04038](../papers/2301.04038.md) (2023) [2] Role of chemical potential at kinetic freeze-out using Tsallis non-extensive statistics in proton-proton collisions at t...
@@ -83,26 +106,3 @@
 - [1308.4736](../papers/1308.4736.md) (2013) [2] Comparison of the Color Glass Condensate to multiplicity dependence of the average transverse momentum in p+p, p+Pb and ...
 - [1304.2969](../papers/1304.2969.md) (2013) [2] Selected Experimental Results from Heavy Ion Collisions at LHC
 - [1303.0675](../papers/1303.0675.md) (2013) [2] Characterizing quark gluon plasma by thermal photons and lepton pairs
-- [1210.7588](../papers/1210.7588.md) (2012) [2] Forward-backward correlations between multiplicities in windows separated in azimuth and rapidity
-- [1210.1323](../papers/1210.1323.md) (2012) [2] Wounded Quarks and Multiplicity at Relativistic Ion Colliders
-- [1209.5315](../papers/1209.5315.md) (2012) [2] Universal Centrality Dependence of Particle Multiplicities in Heavy-Ion Collisions
-- [1209.0042](../papers/1209.0042.md) (2012) [2] UrQMD calculations of two-pion HBT correlations in p+p and Pb+Pb collisions at LHC energies
-- [1204.1457](../papers/1204.1457.md) (2012) [2] Multiplicity in pp and AA collisions: the same power law from energy-momentum constraints in string production
-- [1203.5936](../papers/1203.5936.md) (2012) [2] High multiplicity pp events and J/ψ production at LHC
-- [1203.4421](../papers/1203.4421.md) (2012) [2] Formation time dependence of femtoscopic $ππ$ correlations in p+p collisions at $\sqrt{s_{NN}}$=7 TeV
-- [1203.4071](../papers/1203.4071.md) (2012) [1] Examination of scaling of Hanbury-Brown--Twiss radii with charged particle multiplicity
-- [1112.2340](../papers/1112.2340.md) (2011) [2] Multiplicity, average transverse momentum and azimuthal anisotropy in U+U collisions at $\sqrt{s_{NN}}$ = 200 GeV using ...
-- [1111.6537](../papers/1111.6537.md) (2011) [2] Bottomonia in the Quark-Gluon Plasma and their Production at RHIC and LHC
-- [1110.0294](../papers/1110.0294.md) (2011) [2] Effects of equation of state on nuclear suppression and the initial entropy density of quark gluon plasma
-- [1104.4958](../papers/1104.4958.md) (2011) [2] The Surprising Transparency of the sQGP at LHC
-- [1103.5187](../papers/1103.5187.md) (2011) [2] Triangular flow in heavy ion collisions in a multiphase transport model
-- [1102.4936](../papers/1102.4936.md) (2011) [2] Hydrodynamical analysis of centrality dependence of charged particle's multiplicity in $\sqrt{s}_{NN}$=2.76 TeV Pb+Pb co...
-- [1008.3846](../papers/1008.3846.md) (2010) [2] Medium-modified Jets and Initial State Fluctuations as Sources of Charge Correlations Measured at RHIC
-- [0903.0915](../papers/0903.0915.md) (2009) [2] Centrality bin size dependence of multiplicity correlation in central Au+Au collisions at $\sqrt{s_NN}$=200 GeV}
-- [0712.2044](../papers/0712.2044.md) (2007) [2] Multiplicity Fluctuations in Nucleus-Nucleus Collisions: Dependence on Energy and Atomic Number
-- [0710.2187](../papers/0710.2187.md) (2007) [2] Theoretical analysis for the apparent discrepancy between pbarp and pp data in charged particle forward-backward multipl...
-- [0707.1870](../papers/0707.1870.md) (2007) [2] Melting the Color Glass Condensate at the LHC
-- [1412.8437](../papers/1412.8437.md) (0000) [2] Effect of event selection on jetlike correlation measurement in $d$+Au collisions at $\sqrt{s_{\rm{NN}}}=200$ GeV
-- [1901.08155](../papers/1901.08155.md) (0000) [2] Azimuthal harmonics in small and large collision systems at RHIC top energies
-- [2209.08058](../papers/2209.08058.md) (0000) [2] Beam Energy Dependence of Triton Production and Yield Ratio ($\mathrm{N}_t \times \mathrm{N}_p/\mathrm{N}_d^2$) in Au+Au...
-- [2308.15151](../papers/2308.15151.md) (0000) [2] 2308.15151

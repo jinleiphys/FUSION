@@ -6,6 +6,17 @@
 
 **Papers:** 103 (showing first 100 of 103)
 
+- [2605.13903](../papers/2605.13903.md) (2026) [2] Radiative decays of the 1$P$, 1$D$, 2$S$, and 2$P$ $Λ_c$ and 1$D$, 2$S$, and 2$P$ $Ξ_c$ charmed baryons
+- [2512.11515](../papers/2512.11515.md) (2025) [2] An anlaysis on $J/ψ\toπ^0γ^*$ within resonance chiral theory
+- [2512.07601](../papers/2512.07601.md) (2025) [2] Generalised Bohr Hamiltonian for Gogny interactions
+- [2510.27293](../papers/2510.27293.md) (2025) [2] Double pole $S$-matrix singularity in the continuum of $^7$Be
+- [2507.16885](../papers/2507.16885.md) (2025) [2] Angular correlations in neutron-gamma reactions
+- [2405.15591](../papers/2405.15591.md) (2024) [2] Constraints for rare electron-capture decays mimicking detection of dark-matter particles in nuclear transitions
+- [2405.05052](../papers/2405.05052.md) (2024) [2] Ab initio computations of strongly deformed nuclei around $^{80}$Zr
+- [2402.18723](../papers/2402.18723.md) (2024) [2] Spectroscopy of N=50 isotones with the valence-space density matrix renormalization group
+- [2312.09782](../papers/2312.09782.md) (2023) [2] Response functions and giant monopole resonances for light to medium-mass nuclei from the \textit{ab initio} symmetry-ad...
+- [2310.09039](../papers/2310.09039.md) (2023) [2] Finite temperature effects in magnetic dipole transitions
+- [2308.04773](../papers/2308.04773.md) (2023) [2] Meson cloud contributions to the Dalitz decays of decuplet to octet baryons
 - [2306.08377](../papers/2306.08377.md) (2023) [2] Manipulation of Giant Multipole Resonances via Vortex $γ$ Photons
 - [2208.07191](../papers/2208.07191.md) (2022) [1] Information entropy of nuclear electromagnetic transitions in AdS/QCD
 - [2205.15939](../papers/2205.15939.md) (2022) [2] Effective operators for valence space calculations from the {\itshape ab initio} No-Core Shell Mode
@@ -67,17 +78,6 @@
 - [1005.2151](../papers/1005.2151.md) (2010) [2] Modification of nuclear transitions in stellar plasma by electronic processes: K-isomers in 176Lu and 180Ta under s-proc...
 - [0802.3316](../papers/0802.3316.md) (2008) [2] Negative-Parity States and beta-decays in odd Ho and Dy Nuclei with A=151,153
 - [0707.1212](../papers/0707.1212.md) (2007) [2] Extended Cluster Model for Light, and Medium Nuclei
-- [2308.04773](../papers/2308.04773.md) (0000) [2] 2308.04773
-- [2310.09039](../papers/2310.09039.md) (0000) [2] 2310.09039
-- [2312.09782](../papers/2312.09782.md) (0000) [2] 2312.09782
-- [2402.18723](../papers/2402.18723.md) (0000) [2] 2402.18723
-- [2405.05052](../papers/2405.05052.md) (0000) [2] 2405.05052
-- [2405.15591](../papers/2405.15591.md) (0000) [2] 2405.15591
-- [2507.16885](../papers/2507.16885.md) (0000) [2] 2507.16885
-- [2510.27293](../papers/2510.27293.md) (0000) [2] 2510.27293
-- [2512.07601](../papers/2512.07601.md) (0000) [2] 2512.07601
-- [2512.11515](../papers/2512.11515.md) (0000) [2] 2512.11515
-- [2605.13903](../papers/2605.13903.md) (0000) [2] 2605.13903
 - [cond-mat/0603487](../papers/cond-mat/0603487.md) (0000) [2] cond-mat/0603487
 - [hep-lat/0309013](../papers/hep-lat/0309013.md) (0000) [1] hep-lat/0309013
 - [hep-lat/0406011](../papers/hep-lat/0406011.md) (0000) [2] hep-lat/0406011

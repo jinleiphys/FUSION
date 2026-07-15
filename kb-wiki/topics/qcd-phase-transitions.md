@@ -8,6 +8,14 @@
 
 **Papers:** 31
 
+- [2604.00465](../papers/2604.00465.md) (2026) [1] Gravitational wave spectrum from first-order QCD phase transitions based on a parity doublet model
+- [2603.29772](../papers/2603.29772.md) (2026) [2] Revisiting QCD-induced little inflation with chiral density wave state and its implications on pulsar timing array gravi...
+- [2509.02974](../papers/2509.02974.md) (2025) [2] Revisiting the first-order QCD phase transition in dense strong interaction matter
+- [2504.12964](../papers/2504.12964.md) (2025) [2] Lee Yang edge singularities of QCD in association with Roberge-Weiss phase transition and chiral phase transition
+- [2502.06216](../papers/2502.06216.md) (2025) [2] Pseudoscalar Screening Mass at Finite Temperature and Magnetic Field from Lattice QCD with Physical Quark Masses
+- [2501.15810](../papers/2501.15810.md) (2025) [1] Towards constraining QCD phase transitions in neutron star interiors: Bayesian Inference with TOV linear response analys...
+- [2410.20704](../papers/2410.20704.md) (2024) [2] Fluctuations and correlations of quark spin in hot and dense QCD matter
+- [2403.05946](../papers/2403.05946.md) (2024) [1] Shear viscosity and electric conductivity of quark matter at finite temperature and chemical potential with QCD phase tr...
 - [2301.04282](../papers/2301.04282.md) (2023) [2] Speed of sound in QCD matter at finite temperature and density]{Speed of sound in QCD matter at finite temperature and d...
 - [2209.07412](../papers/2209.07412.md) (2022) [1] Snowmass 2021 Cosmic Frontier White Paper: The Dense Matter Equation of State and QCD Phase Transitions
 - [2201.03304](../papers/2201.03304.md) (2022) [1] Impact of slow conversions on hybrid stars with sequential QCD phase transitions
@@ -26,14 +34,6 @@
 - [1107.1581](../papers/1107.1581.md) (2011) [2] Surface tension in the cold and dense chiral transition and astrophysical applications
 - [1003.4169](../papers/1003.4169.md) (2010) [1] Chiral Magnetic Effect and QCD Phase Transitions with Effective Models
 - [0709.2487](../papers/0709.2487.md) (2007) [2] Exploring the QCD phase structure with density fluctuations
-- [2403.05946](../papers/2403.05946.md) (0000) [1] 2403.05946
-- [2410.20704](../papers/2410.20704.md) (0000) [2] 2410.20704
-- [2501.15810](../papers/2501.15810.md) (0000) [1] 2501.15810
-- [2502.06216](../papers/2502.06216.md) (0000) [2] 2502.06216
-- [2504.12964](../papers/2504.12964.md) (0000) [2] 2504.12964
-- [2509.02974](../papers/2509.02974.md) (0000) [2] 2509.02974
-- [2603.29772](../papers/2603.29772.md) (0000) [2] 2603.29772
-- [2604.00465](../papers/2604.00465.md) (0000) [1] 2604.00465
 - [hep-ph/9411391](../papers/hep-ph/9411391.md) (0000) [1] hep-ph/9411391
 - [hep-ph/9603403](../papers/hep-ph/9603403.md) (0000) [1] hep-ph/9603403
 - [hep-ph/9807550](../papers/hep-ph/9807550.md) (0000) [1] hep-ph/9807550

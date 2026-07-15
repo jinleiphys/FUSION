@@ -4,6 +4,38 @@
 
 **Papers:** 153 (showing first 100 of 153)
 
+- [2605.26088](../papers/2605.26088.md) (2026) [2] Multipole tomography of atomic nuclei with conserved symmetries
+- [2605.15623](../papers/2605.15623.md) (2026) [2] Microscopic derivation of the interacting boson model parameters with machine learning
+- [2605.11256](../papers/2605.11256.md) (2026) [1] Rigorous proof of the Strutinsky energy theorem and foundations of nuclear density functional theory
+- [2604.25759](../papers/2604.25759.md) (2026) [1] Neural-Network-Based Variational Method in Nuclear Density Functional Theory: Application to the Extended Thomas-Fermi M...
+- [2604.21245](../papers/2604.21245.md) (2026) [2] Octupole correlation effects on two-neutron transfer intensity in rare-earth nuclei
+- [2604.20725](../papers/2604.20725.md) (2026) [2] Interaction between nuclear clusters and superfluid phonons in the neutron-star inner crust
+- [2604.11358](../papers/2604.11358.md) (2026) [2] Emulator-Assisted Nuclear DFT Inference and Its Consequences for the Structure of Neutron Stars
+- [2603.20090](../papers/2603.20090.md) (2026) [2] Interrogating the composition and distribution of nuclear magnetization via the hyperfine anomaly: experiment meets nucl...
+- [2603.18862](../papers/2603.18862.md) (2026) [2] Matter radii from interaction cross sections using microscopic nuclear densities
+- [2511.08366](../papers/2511.08366.md) (2025) [1] Finite-range pairing in nuclear density functional theory
+- [2511.04632](../papers/2511.04632.md) (2025) [2] Electromagnetic and Exotic Moments in Nuclear DFT
+- [2510.11815](../papers/2510.11815.md) (2025) [2] The mass of $^{101}$Sn and Bayesian extrapolations to the proton drip line
+- [2506.02919](../papers/2506.02919.md) (2025) [2] Testing Variational Perturbation Theory for Effective Actions Using the Gaudin-Yang Model
+- [2505.15375](../papers/2505.15375.md) (2025) [2] Quadrupole Strength in Isobaric Triplets
+- [2505.01072](../papers/2505.01072.md) (2025) [2] Nuclear structure study using a hybrid approach of shell model and Gogny-type density functionals
+- [2504.17060](../papers/2504.17060.md) (2025) [2] Charge Radii Measurements of Exotic Tin Isotopes in the Proximity of $N=50$ and $N=82$
+- [2411.01262](../papers/2411.01262.md) (2024) [2] Role of octupole shape degree of freedom in neutron-rich odd-mass xenon isotopes
+- [2410.18598](../papers/2410.18598.md) (2024) [2] Impact of ground-state properties and collective excitations on the Skyrme ansatz: a Bayesian study
+- [2409.04620](../papers/2409.04620.md) (2024) [2] Weak decays in superheavy nuclei
+- [2408.14760](../papers/2408.14760.md) (2024) [2] Interrelation between $\bar{p}$-Ca Atom Spectra and Nuclear Density Profiles
+- [2406.12545](../papers/2406.12545.md) (2024) [2] Two-center harmonic oscillator basis for Skyrme-DFT calculations (I): formalism and Proof of Principle
+- [2406.11124](../papers/2406.11124.md) (2024) [2] Time-dependent density functional theory study of induced-fission dynamics of $^{226}$Th
+- [2404.05944](../papers/2404.05944.md) (2024) [2] Shape transition and coexistence in Te isotopes studied with the quadrupole collective Hamiltonian based on a relativist...
+- [2404.06046](../papers/2404.06046.md) (2024) [2] Nuclear charge radii of germanium isotopes around $N$ = 40
+- [2403.19288](../papers/2403.19288.md) (2024) [2] Entanglement in multinucleon transfer reactions
+- [2402.15380](../papers/2402.15380.md) (2024) [2] Extended Fayans energy density functional: optimization and analysis
+- [2312.17456](../papers/2312.17456.md) (2023) [2] Low-energy structure and $β$ decay properties of neutron-rich nuclei in the region of a shape phase transition
+- [2311.12011](../papers/2311.12011.md) (2023) [2] Multimodal fission from self-consistent calculations
+- [2310.01608](../papers/2310.01608.md) (2023) [2] Neural Network Emulation of Spontaneous Fission
+- [2309.03461](../papers/2309.03461.md) (2023) [2] Covariant density functional theory for nuclear fission based on two-center harmonic oscillator basis
+- [2309.01348](../papers/2309.01348.md) (2023) [1] $ΛΛ$ Interaction in a Nuclear Density Functional Theory and Hyperon Puzzle of the Neutron Star
+- [2308.15425](../papers/2308.15425.md) (2023) [1] A Quantum Simulation Approach to Implementing Nuclear Density Functional Theory via Imaginary Time Evolution
 - [2304.13369](../papers/2304.13369.md) (2023) [2] Generalized time-dependent generator coordinate method for small and large amplitude collective motion
 - [2211.00279](../papers/2211.00279.md) (2022) [2] Microscopic formulation of the interacting boson model for reflection asymmetric nuclei
 - [2210.01924](../papers/2210.01924.md) (2022) [2] Charge radii of $^{55,56}$Ni reveal a surprisingly similar behavior at $N=28$ in Ca and Ni isotopes
@@ -72,35 +104,3 @@
 - [1503.05894](../papers/1503.05894.md) (2015) [1] Uncertainty Quantification and Propagation in Nuclear Density Functional Theory
 - [1501.06994](../papers/1501.06994.md) (2015) [1] Complex-energy approach to sum rules within nuclear density functional theory
 - [1501.03572](../papers/1501.03572.md) (2015) [1] Uncertainty Quantification for Nuclear Density Functional Theory and Information Content of New Measurements
-- [1411.0360](../papers/1411.0360.md) (2014) [1] Semi-contact 3-body interaction for nuclear density functional theory
-- [1410.1264](../papers/1410.1264.md) (2014) [2] Pairing-induced speedup of nuclear spontaneous fission
-- [1409.1413](../papers/1409.1413.md) (2014) [2] Propagation of uncertainties in the nuclear DFT models
-- [1407.3848](../papers/1407.3848.md) (2014) [2] Adaptive Multi-resolution 3D Hartree-Fock-Bogoliubov Solver for Nuclear Structure
-- [1406.6955](../papers/1406.6955.md) (2014) [2] Excitation energy dependence of fission in the mercury region
-- [1406.5464](../papers/1406.5464.md) (2014) [2] Derivative-free optimization for parameter estimation in computational nuclear physics
-- [1406.4374](../papers/1406.4374.md) (2014) [1] Quantification of Uncertainties in Nuclear Density Functional theory
-- [1406.4383](../papers/1406.4383.md) (2014) [1] Error Analysis in Nuclear Density Functional Theory
-- [1312.1746](../papers/1312.1746.md) (2013) [2] Nuclear energy density optimization: Shell structure
-- [1311.2616](../papers/1311.2616.md) (2013) [2] Description of Induced Nuclear Fission with Skyrme Energy Functionals: I. Static Potential Energy Surfaces and Fission F...
-- [1311.2620](../papers/1311.2620.md) (2013) [2] Description of Induced Nuclear Fission with Skyrme Energy Functionals: II. Finite Temperature Effects
-- [1310.3936](../papers/1310.3936.md) (2013) [2] Isospin mixing within the symmetry restored density functional theory and beyond
-- [1310.2003](../papers/1310.2003.md) (2013) [2] Spontaneous fission lifetimes from the minimization of self-consistent collective action
-- [1309.3311](../papers/1309.3311.md) (2013) [1] Description of 158Er at ultrahigh spin in nuclear density functional theory
-- [1308.1659](../papers/1308.1659.md) (2013) [2] Information content of the weak-charge form factor
-- [1308.0904](../papers/1308.0904.md) (2013) [2] Microscopic analysis of the octupole phase transition in Th isotopes
-- [1307.5782](../papers/1307.5782.md) (2013) [1] Symmetry energy in nuclear density functional theory
-- [1307.1550](../papers/1307.1550.md) (2013) [1] Isospin mixing within the multi-reference nuclear density functional theory and beyond - selected aspects
-- [1304.4008](../papers/1304.4008.md) (2013) [2] Low energy collective modes of deformed superfluid nuclei within the finite amplitude method
-- [1304.3766](../papers/1304.3766.md) (2013) [2] Simultaneous quadrupole and octupole shape phase transitions in Thorium
-- [1303.1164](../papers/1303.1164.md) (2013) [2] The landscape of two-proton radioactivity
-- [1303.0604](../papers/1303.0604.md) (2013) [2] Reflection-asymmetric nuclear deformations within the Density Functional Theory
-- [1302.1165](../papers/1302.1165.md) (2013) [2] Third minima in thorium and uranium isotopes in a self-consistent theory
-- [1211.6292](../papers/1211.6292.md) (2012) [2] Energy density functional for nuclei and neutron stars
-- [1211.1649](../papers/1211.1649.md) (2012) [2] Information content of the low-energy electric dipole strength: correlation analysis
-- [1210.1128](../papers/1210.1128.md) (2012) [1] Isospin-breaking corrections to superallowed Fermi beta-decay in isospin- and angular-momentum-projected nuclear Density...
-- [1209.5385](../papers/1209.5385.md) (2012) [2] Density functional approaches to nuclear dynamics
-- [1208.1525](../papers/1208.1525.md) (2012) [1] Correlation Testing in Nuclear Density Functional Theory
-- [1208.1215](../papers/1208.1215.md) (2012) [1] Spontaneous fission modes and lifetimes of super-heavy elements in the nuclear density functional theory
-- [1205.5797](../papers/1205.5797.md) (2012) [2] Fission modes of mercury isotopes
-- [1201.3807](../papers/1201.3807.md) (2012) [2] Electric dipole polarizability and the neutron skin
-- [1109.3869](../papers/1109.3869.md) (2011) [2] Microscopic calculations of isospin mixing in N~Z nuclei and isospin-symmetry-breaking corrections to the superallowed b...

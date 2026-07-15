@@ -6,6 +6,10 @@
 
 **Papers:** 32
 
+- [2602.12263](../papers/2602.12263.md) (2026) [2] Systematic Operator Construction for Non-relativistic Effective Field Theories: Hilbert Series versus Young Tensor
+- [2601.12189](../papers/2601.12189.md) (2026) [2] Asymptotic Long-Distance Expansion of Euclidean Correlators in Lattice Parton Applications
+- [2510.16653](../papers/2510.16653.md) (2025) [2] Heavy flavor transport in the QGP medium
+- [2510.13013](../papers/2510.13013.md) (2025) [2] A short review on QCD sum rule studies of P-wave single heavy baryons
 - [2011.09653](../papers/2011.09653.md) (2020) [2] Mixing Angle of $\varXi_Q-\varXi_Q'$ in Heavy Quark Effective Therory
 - [2008.09619](../papers/2008.09619.md) (2020) [2] Distribution Amplitudes of Heavy Mesons and Quarkonia on the Light Front
 - [2007.07706](../papers/2007.07706.md) (2020) [2] Doubly Heavy Baryon Xi_cc Production in Upsilon (1S) Decay
@@ -19,10 +23,6 @@
 - [1104.3815](../papers/1104.3815.md) (2011) [2] Charm diffusion in a pion gas implementing unitarity, chiral and heavy quark symmetries
 - [1005.2262](../papers/1005.2262.md) (2010) [2] $D\bar{D}$ production and their interactions
 - [0901.1195](../papers/0901.1195.md) (2009) [2] A way to estimate the heavy quark thermalization rate from the lattice
-- [2510.13013](../papers/2510.13013.md) (0000) [2] 2510.13013
-- [2510.16653](../papers/2510.16653.md) (0000) [2] 2510.16653
-- [2601.12189](../papers/2601.12189.md) (0000) [2] 2601.12189
-- [2602.12263](../papers/2602.12263.md) (0000) [2] 2602.12263
 - [hep-lat/0205021](../papers/hep-lat/0205021.md) (0000) [2] hep-lat/0205021
 - [hep-lat/0210019](../papers/hep-lat/0210019.md) (0000) [2] hep-lat/0210019
 - [hep-ph/0010321](../papers/hep-ph/0010321.md) (0000) [2] hep-ph/0010321

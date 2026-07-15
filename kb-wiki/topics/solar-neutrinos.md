@@ -6,6 +6,12 @@
 
 **Papers:** 91
 
+- [2510.12873](../papers/2510.12873.md) (2025) [2] New Spallation Background Rejection Techniques to Greatly Improve the Solar Neutrino Sensitivity of JUNO
+- [2504.11736](../papers/2504.11736.md) (2025) [2] Low-energy neutrino responses for 71Ga by electron capture rates, charge exchange reactions and shell model calculations
+- [2502.17546](../papers/2502.17546.md) (2025) [2] Determining the Density of the Sun with Neutrinos
+- [2410.00330](../papers/2410.00330.md) (2024) [2] Enhancing DUNE's solar neutrino capabilities with neutral-current detection
+- [2409.09515](../papers/2409.09515.md) (2024) [2] Ab initio calculation of the $^3$He$(α,γ)^7$Be astrophysical S factor with chiral two- and three-nucleon forces
+- [2408.06041](../papers/2408.06041.md) (2024) [1] Logic and numbers related to solar neutrinos
 - [2303.17752](../papers/2303.17752.md) (2023) [1] Interaction of solar neutrinos with $^{98,100}$Mo isotopes and the influence of nuclear resonances
 - [2209.14832](../papers/2209.14832.md) (2022) [2] Solar neutrino physics
 - [2206.13570](../papers/2206.13570.md) (2022) [2] Towards solar measurements of nuclear reaction rates
@@ -47,12 +53,6 @@
 - [0808.0735](../papers/0808.0735.md) (2008) [2] Neutrino Astrophysics
 - [0805.2013](../papers/0805.2013.md) (2008) [1] CN-Cycle Solar Neutrinos and Sun's Primordial Core Metalicity
 - [0710.2295](../papers/0710.2295.md) (2007) [1] Solar Neutrinos: Models, Observations, and New Opportunities
-- [2408.06041](../papers/2408.06041.md) (0000) [1] 2408.06041
-- [2409.09515](../papers/2409.09515.md) (0000) [2] 2409.09515
-- [2410.00330](../papers/2410.00330.md) (0000) [2] 2410.00330
-- [2502.17546](../papers/2502.17546.md) (0000) [2] 2502.17546
-- [2504.11736](../papers/2504.11736.md) (0000) [2] 2504.11736
-- [2510.12873](../papers/2510.12873.md) (0000) [2] 2510.12873
 - [astro-ph/0210032](../papers/astro-ph/0210032.md) (0000) [2] astro-ph/0210032
 - [astro-ph/0312629](../papers/astro-ph/0312629.md) (0000) [2] astro-ph/0312629
 - [astro-ph/0412096](../papers/astro-ph/0412096.md) (0000) [2] astro-ph/0412096

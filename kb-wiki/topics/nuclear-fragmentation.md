@@ -6,6 +6,12 @@
 
 **Papers:** 58
 
+- [2602.13360](../papers/2602.13360.md) (2026) [1] Nuclear Fragmentation at Intermediate Energies in the DCM-QGSM-SMM Model
+- [2510.20014](../papers/2510.20014.md) (2025) [1] Nuclear Fragmentation at the Future Electron-Ion Collider
+- [2503.19395](../papers/2503.19395.md) (2025) [2] Quantum molecular dynamics model based on relativistic mean field theory for light nucleus fragmentation in hadron thera...
+- [2502.18887](../papers/2502.18887.md) (2025) [2] A hybrid model for multi-particle production and multi-fragment emission in electron-nucleus collisions at the forthcomi...
+- [2408.10157](../papers/2408.10157.md) (2024) [1] Nuclear Fragmentation at the Future Electron-Ion Collider
+- [2408.01399](../papers/2408.01399.md) (2024) [2] Cluster production and the chemical freeze-out in expanding hot dense matter
 - [2209.02596](../papers/2209.02596.md) (2022) [1] Synthesis of cold and trappable fully stripped HCI's via antiproton-induced nuclear fragmentation in traps
 - [2208.13300](../papers/2208.13300.md) (2022) [1] Nuclear fragmentation reactions as a probe of neutron skins in nuclei
 - [2206.09690](../papers/2206.09690.md) (2022) [1] Prospects of searching for unstable nucleus states in relativistic nuclear fragmentation
@@ -21,12 +27,6 @@
 - [1212.5364](../papers/1212.5364.md) (2012) [1] Fluctuations and Symmetry Energy in Nuclear Fragmentation Dynamics
 - [1106.1344](../papers/1106.1344.md) (2011) [2] Transport-theoretical Description of Nuclear Reactions
 - [0706.2952](../papers/0706.2952.md) (2007) [2] Mass distributions for nuclear disintegration from fission to evaporation
-- [2408.01399](../papers/2408.01399.md) (0000) [2] 2408.01399
-- [2408.10157](../papers/2408.10157.md) (0000) [1] 2408.10157
-- [2502.18887](../papers/2502.18887.md) (0000) [2] 2502.18887
-- [2503.19395](../papers/2503.19395.md) (0000) [2] 2503.19395
-- [2510.20014](../papers/2510.20014.md) (0000) [1] 2510.20014
-- [2602.13360](../papers/2602.13360.md) (0000) [1] 2602.13360
 - [nucl-th/0009079](../papers/nucl-th/0009079.md) (0000) [1] nucl-th/0009079
 - [nucl-th/0009081](../papers/nucl-th/0009081.md) (0000) [1] nucl-th/0009081
 - [nucl-th/0102012](../papers/nucl-th/0102012.md) (0000) [1] nucl-th/0102012

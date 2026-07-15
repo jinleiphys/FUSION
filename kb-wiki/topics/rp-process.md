@@ -6,6 +6,12 @@
 
 **Papers:** 43
 
+- [2512.14145](../papers/2512.14145.md) (2025) [1] Impact of experimental mass of $^{70}$Kr on the $^{68}$Se waiting-point in $rp$-process
+- [2505.03502](../papers/2505.03502.md) (2025) [1] Nuclear structure and weak rates of heavy waiting point nuclei under rp-process conditions
+- [2505.00143](../papers/2505.00143.md) (2025) [1] Enhanced Nuclear Binding Near the Proton Dripline Opens Possible Bypass of the $^{64}{\rm Ge}$ rp-process Waiting Point
+- [2504.12639](../papers/2504.12639.md) (2025) [2] Precision mass measurements around ${}^{84}$Mo rule out ZrNb cycle formation in the rapid proton-capture process at type...
+- [2502.17953](../papers/2502.17953.md) (2025) [1] Stellar weak rates of the $rp$-process waiting points: Effects of strong magnetic fields
+- [2308.11297](../papers/2308.11297.md) (2023) [1] Stellar weak-interaction rates for $rp$-process waiting-point nuclei from projected shell model
 - [2305.00371](../papers/2305.00371.md) (2023) [1] New 26P(p,γ)27S thermonuclear reaction rate and its astrophysical implication in rp-process
 - [2108.13717](../papers/2108.13717.md) (2021) [2] Three-body optical potentials in $(d,p)$ reactions and their influence on indirect study of stellar nucleosynthesis
 - [2105.01991](../papers/2105.01991.md) (2021) [2] Deep crustal heating for realistic compositions of thermonuclear ashes
@@ -29,12 +35,6 @@
 - [1005.4767](../papers/1005.4767.md) (2010) [2] Hydrodynamic Models of Type I X-Ray Bursts: Metallicity Effects
 - [0910.1021](../papers/0910.1021.md) (2009) [1] Weak interaction rates for Kr and Sr waiting-point nuclei under rp-process conditions
 - [0907.1055](../papers/0907.1055.md) (2009) [1] Evidence of double magicity of N=Z nuclei near the rp-process path
-- [2308.11297](../papers/2308.11297.md) (0000) [1] 2308.11297
-- [2502.17953](../papers/2502.17953.md) (0000) [1] 2502.17953
-- [2504.12639](../papers/2504.12639.md) (0000) [2] 2504.12639
-- [2505.00143](../papers/2505.00143.md) (0000) [1] 2505.00143
-- [2505.03502](../papers/2505.03502.md) (0000) [1] 2505.03502
-- [2512.14145](../papers/2512.14145.md) (0000) [1] 2512.14145
 - [astro-ph/0102418](../papers/astro-ph/0102418.md) (0000) [1] astro-ph/0102418
 - [nucl-ex/0206002](../papers/nucl-ex/0206002.md) (0000) [2] nucl-ex/0206002
 - [nucl-ex/0302009](../papers/nucl-ex/0302009.md) (0000) [2] nucl-ex/0302009

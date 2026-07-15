@@ -6,6 +6,30 @@
 
 **Papers:** 189 (showing first 100 of 189)
 
+- [2606.12166](../papers/2606.12166.md) (2026) [1] Saturation of Nuclear Binding from Lattice Hamiltonians
+- [2603.28872](../papers/2603.28872.md) (2026) [2] Quark-Mass Dependence of Light-Nuclei Masses from Lattice QCD and Trace-Anomaly Contributions to Nuclear Bindings
+- [2602.23032](../papers/2602.23032.md) (2026) [1] Nuclear binding, correlations, and the $A$-dependence of the EMC effect
+- [2601.19789](../papers/2601.19789.md) (2026) [2] Equation of State of Highly Asymmetric Neutron-Star Matter from Liquid Drop Model and Meson Polytropes
+- [2508.08370](../papers/2508.08370.md) (2025) [2] The DNA of nuclear models: How AI predicts nuclear masses
+- [2508.01001](../papers/2508.01001.md) (2025) [1] Criticality analysis of nuclear binding energy neural networks
+- [2507.08495](../papers/2507.08495.md) (2025) [2] Ab initio lattice study of neutron-alpha scattering with chiral forces at N3LO
+- [2507.00664](../papers/2507.00664.md) (2025) [2] Microscopic pairing in fission dynamics
+- [2506.16947](../papers/2506.16947.md) (2025) [2] Impact of pion tensor force on alpha clustering in $^{20}$Ne
+- [2505.00143](../papers/2505.00143.md) (2025) [1] Enhanced Nuclear Binding Near the Proton Dripline Opens Possible Bypass of the $^{64}{\rm Ge}$ rp-process Waiting Point
+- [2504.20843](../papers/2504.20843.md) (2025) [2] A nuclear mass model rooted in chiral effective field theory
+- [2504.09013](../papers/2504.09013.md) (2025) [1] Quantifying uncertainty in machine learning on nuclear binding energy
+- [2504.00539](../papers/2504.00539.md) (2025) [2] Illustrating the liquid gas transition of nuclear matter in QCD
+- [2503.19348](../papers/2503.19348.md) (2025) [1] Deep learning approaches for nuclear binding energy prediction: a comparative study of RNN, GRU and LSTM Models
+- [2502.20363](../papers/2502.20363.md) (2025) [2] Global Framework for Emulation of Nuclear Calculations
+- [2412.08077](../papers/2412.08077.md) (2024) [2] Ground-state properties and structure evolutions of odd-$A$ transuranium Bk isotopes from deformed relativistic Hartree-...
+- [2411.19470](../papers/2411.19470.md) (2024) [2] Deep learning for nuclear masses in deformed relativistic Hartree-Bogoliubov theory in continuum
+- [2407.20737](../papers/2407.20737.md) (2024) [1] From Complexity to Clarity: Kolmogorov-Arnold Networks in Nuclear Binding Energy Prediction
+- [2406.03545](../papers/2406.03545.md) (2024) [1] Impact of correlations on nuclear binding energies
+- [2404.11477](../papers/2404.11477.md) (2024) [2] Discovering Nuclear Models from Symbolic Machine Learning
+- [2404.00058](../papers/2404.00058.md) (2024) [2] Multiscale physics of atomic nuclei from first principles
+- [2310.05090](../papers/2310.05090.md) (2023) [2] Impact of choices for center-of-mass correction energy on the surface energy of Skyrme energy density functionals
+- [2308.16533](../papers/2308.16533.md) (2023) [1] Influence of the symmetry energy on the nuclear binding energies and the neutron drip line position
+- [2308.16266](../papers/2308.16266.md) (2023) [1] Distilling the essential elements of nuclear binding via neural-network quantum states
 - [2307.02554](../papers/2307.02554.md) (2023) [2] Viscous hydrodynamic evolution of neutron star merger accretion disks: a code comparison
 - [2305.09158](../papers/2305.09158.md) (2023) [2] Statistical approach of nuclear multifragmentation with realistic nuclear equation of state
 - [2303.09865](../papers/2303.09865.md) (2023) [2] Nuclear decay anomalies as a signature of axion dark matter
@@ -82,27 +106,3 @@
 - [1212.2050](../papers/1212.2050.md) (2012) [2] Fluctuating parts of nuclear ground state correlation energies
 - [1210.2702](../papers/1210.2702.md) (2012) [2] Double binding energy differences: Mean-field or pairing effect?
 - [1209.3468](../papers/1209.3468.md) (2012) [2] Lattice Gauge Theory and the Origin of Mass
-- [1208.3009](../papers/1208.3009.md) (2012) [1] Variations of nuclear binding with quark masses
-- [1207.4595](../papers/1207.4595.md) (2012) [1] Nuclear binding, correlations and the origin of EMC effect
-- [1206.3508](../papers/1206.3508.md) (2012) [1] Nuclear Binding Energies and NN uncertainties
-- [1205.0857](../papers/1205.0857.md) (2012) [2] Generic Constraints on the Relativistic Mean-Field and Skyrme-Hartree-Fock Models from the Pure Neutron Matter Equation ...
-- [1202.6624](../papers/1202.6624.md) (2012) [1] Error estimates on Nuclear Binding Energies from Nucleon-Nucleon uncertainties
-- [1110.6093](../papers/1110.6093.md) (2011) [1] Proton dripline in a new formula for nuclear binding energy
-- [1108.5790](../papers/1108.5790.md) (2011) [1] Neutron Skin size dependence of the nuclear binding energy
-- [1011.6322](../papers/1011.6322.md) (2010) [2] Meson Assisted Strange Dibaryons
-- [1011.4280](../papers/1011.4280.md) (2010) [2] Scalar field in nuclear matter: the roles of spontaneous chiral symmetry breaking and nucleon structure
-- [1008.1313](../papers/1008.1313.md) (2010) [2] Clustering aspects in nuclear structure functions
-- [1004.3062](../papers/1004.3062.md) (2010) [2] Structure functions for light nuclei
-- [1004.1265](../papers/1004.1265.md) (2010) [2] Scalar response of the nucleon chiral symmetry and nuclear matter properties
-- [0911.0987](../papers/0911.0987.md) (2009) [2] Masses and Radii of the Nuclei with N>=Z in an Alpha-Cluster Model
-- [0911.0634](../papers/0911.0634.md) (2009) [1] Odd-even staggering in nuclear binding and the liquid-drop model
-- [0908.4486](../papers/0908.4486.md) (2009) [2] Global nuclear structure effects of tensor interaction
-- [0901.2479](../papers/0901.2479.md) (2009) [2] Relativistic Chiral Theory of Nuclear Matter and QCD Constraints
-- [0812.2006](../papers/0812.2006.md) (2008) [1] Whence the odd-even staggering in nuclear binding?
-- [0812.0747](../papers/0812.0747.md) (2008) [2] Odd-even mass differences from self-consistent mean-field theory
-- [0811.0279](../papers/0811.0279.md) (2008) [2] Shell-structure fingerprints of tensor interaction
-- [0810.0925](../papers/0810.0925.md) (2008) [2] Charge distribution and radii in clusters from nuclear pasta models
-- [0807.4943](../papers/0807.4943.md) (2008) [2] Enhanced effect of quark mass variation in 229Th and limits from Oklo data
-- [0804.2750](../papers/0804.2750.md) (2008) [2] Neutrino-induced pion production from nuclei at medium energies
-- [0803.1719](../papers/0803.1719.md) (2008) [2] Relativistic Chiral Hartree-Fock description of nuclear matter with constraints from nucleon structure and confinement
-- [0801.0924](../papers/0801.0924.md) (2008) [2] Spin-orbit and tensor mean-field effects on spin-orbit splitting including self-consistent core polarizations

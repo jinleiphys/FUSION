@@ -6,6 +6,65 @@
 
 **Papers:** 306 (showing first 100 of 306)
 
+- [2604.26004](../papers/2604.26004.md) (2026) [2] Revisiting Turner Window Axions: The Untapped Potential of NaI Dark Matter Detectors
+- [2604.03410](../papers/2604.03410.md) (2026) [1] Precise determination of electron-capture $Q$ value of $^{113}$Sn decay related to electron neutrino mass measurements
+- [2603.22901](../papers/2603.22901.md) (2026) [2] Finite-nuclear-size effect for hydrogenlike ions under high external pressure
+- [2602.19018](../papers/2602.19018.md) (2026) [2] Evidence of Nuclear Urca Process in the Ocean of Neutron-Star Superburst MAXI J1752$-$457
+- [2601.22417](../papers/2601.22417.md) (2026) [2] Enhanced Yield Rate of \textsuperscript{229m}Th via Cascade Decay in Storage Rings and Electron Beam Ion Traps
+- [2601.12438](../papers/2601.12438.md) (2026) [2] Revisiting $^7$Be Weak and Radiative Transition Rates in Big Bang Nucleosynthesis: Implications for the Primordial Lithi...
+- [2601.10247](../papers/2601.10247.md) (2026) [2] Updated Results for Kinematic Factors in Double Beta Decays
+- [2601.06248](../papers/2601.06248.md) (2026) [2] Hadronic Probes of Non-Standard Neutrino Interactions
+- [2511.21567](../papers/2511.21567.md) (2025) [2] Enhanced antineutrino emission from $β$ decay in core-collapse supernovae with self-consistent weak decay rates
+- [2511.00862](../papers/2511.00862.md) (2025) [2] Investigation of $2ν$ECEC in $^{132}$Ba and revisited for $^{78}$Kr
+- [2510.08212](../papers/2510.08212.md) (2025) [1] Charge state regulation of nuclear excitation by electron capture in $^{229}$Th ions
+- [2508.18562](../papers/2508.18562.md) (2025) [2] Contribution of Subthreshold States to the Residual Energy Distribution of $^{159}$Dy
+- [2508.05456](../papers/2508.05456.md) (2025) [2] Weak interaction rates of $sd$-shell Urca pairs in stellar environment using a shell-model approach
+- [2507.14086](../papers/2507.14086.md) (2025) [2] Quantifying neutron-proton interactions in $N=51$ isotones: from NEEC candidate $^{93}$Mo to $^{99}$Cd
+- [2507.08199](../papers/2507.08199.md) (2025) [2] Evaluation of bound-state $β^-$-decay half-lives of fully ionized atoms
+- [2505.06672](../papers/2505.06672.md) (2025) [2] Unique first-forbidden $β$-decay transitions in odd-odd and even-even heavy nuclei
+- [2505.03488](../papers/2505.03488.md) (2025) [2] Gamow-Teller strength and lepton captures rates on 66-71Ni in stellar matter
+- [2505.03502](../papers/2505.03502.md) (2025) [2] Nuclear structure and weak rates of heavy waiting point nuclei under rp-process conditions
+- [2505.01024](../papers/2505.01024.md) (2025) [1] Expanded calculations of pn-QRPA electron capture rates on $^{55}$Co for presupernova and supernova physics
+- [2505.01025](../papers/2505.01025.md) (2025) [1] Study of electron capture rates on chromium isotopes for core-collapse simulations
+- [2505.01029](../papers/2505.01029.md) (2025) [2] Gamma Ray Heating and Neutrino Cooling Rates due to Weak Interaction Processes on sd-shell Nuclei in Stellar Cores
+- [2504.18199](../papers/2504.18199.md) (2025) [2] Study of Gamow-Teller strength and associated weak-rates on odd-A nuclei in stellar matter
+- [2504.18282](../papers/2504.18282.md) (2025) [2] Investigation of Gamow Teller Transition Properties in 56-64Ni Isotopes Using QRPA Methods
+- [2504.16428](../papers/2504.16428.md) (2025) [2] Energy Rates Due to Weak Decay Rates of Vanadium Isotopes in Stellar Environment
+- [2504.11736](../papers/2504.11736.md) (2025) [1] Low-energy neutrino responses for 71Ga by electron capture rates, charge exchange reactions and shell model calculations
+- [2504.09220](../papers/2504.09220.md) (2025) [1] Nuclear Structure Properties of even-even Chromium Isotopes and the E ect of Deformation on Calculated Electron Capture ...
+- [2504.09266](../papers/2504.09266.md) (2025) [2] Nuclear structure properties and decay rates of molybdenum isotopes
+- [2504.02320](../papers/2504.02320.md) (2025) [2] $β$-decay properties of some astrophysically important Sc-isotopes
+- [2503.14010](../papers/2503.14010.md) (2025) [1] Electron capture and \b{eta}-decay rates for nuclei with A=65-80
+- [2503.14613](../papers/2503.14613.md) (2025) [1] Electron capture of superheavy nuclei with realistic lepton wave functions
+- [2503.10951](../papers/2503.10951.md) (2025) [2] Energy rates due to Fe isotopes during presupernova evolution of massive stars
+- [2503.08070](../papers/2503.08070.md) (2025) [2] Nuclear Structure Properties and Stellar Weak Rates for 76Se: Unblocking of the Gamow Teller Strength
+- [2503.07165](../papers/2503.07165.md) (2025) [1] Effect of Nuclear Deformation on Electron Capture Cross-section on Chromium Isotopes
+- [2503.06148](../papers/2503.06148.md) (2025) [1] Electron capture cross sections and nuclear partition functions for fp-shell nuclei
+- [2502.19813](../papers/2502.19813.md) (2025) [1] Beta decay and electron capture rates on manganese isotopes in astrophysical environments
+- [2502.17953](../papers/2502.17953.md) (2025) [2] Stellar weak rates of the $rp$-process waiting points: Effects of strong magnetic fields
+- [2502.04490](../papers/2502.04490.md) (2025) [1] High-precision direct decay energy measurements of the electron-capture decay of $^{97}$Tc
+- [2501.07370](../papers/2501.07370.md) (2025) [2] Novel way of evaluating $g_A$ quenching in $β^+$/EC decays : Introducing the Branching-Ratio Method (BRM)
+- [2501.05217](../papers/2501.05217.md) (2025) [1] Probing Nuclear Excitation by Electron Capture in an Electron Beam Ion Trap with Non-destructive Isomer Detection via Pr...
+- [2501.03528](../papers/2501.03528.md) (2025) [2] The Gallium Solar Neutrino Capture Cross Section Revisited
+- [2501.00796](../papers/2501.00796.md) (2025) [2] Stellar Weak Rates and Mass Fractions of 20 Most Important $fp$-shell Nuclei with $A < 65$
+- [2412.20932](../papers/2412.20932.md) (2024) [2] Weak nuclear decays deep-underground as a probe of axion dark matter
+- [2412.00650](../papers/2412.00650.md) (2024) [2] Self-consistent microscopic calculations for electron captures on nuclei in core-collapse supernovae
+- [2411.01436](../papers/2411.01436.md) (2024) [2] Impact of the Brink Axel Hypothesis on Unique First Forbidden \b{eta} transitions for r process nuclei
+- [2410.07578](../papers/2410.07578.md) (2024) [2] Investigation of Nuclear Structure and $β$-decay Properties of As Isotopes
+- [2410.06747](../papers/2410.06747.md) (2024) [2] Study of $β^+$/EC-decay properties of $sd$ shell nuclei using nuclear shell model
+- [2409.09423](../papers/2409.09423.md) (2024) [2] Effect of Magnetic Fields on Urca Rates in Neutron Star Mergers
+- [2409.04620](../papers/2409.04620.md) (2024) [2] Weak decays in superheavy nuclei
+- [2408.11999](../papers/2408.11999.md) (2024) [2] Layers of electron captures in the crust of accreting neutron stars
+- [2407.12493](../papers/2407.12493.md) (2024) [2] Bulk viscosity of two-color superconducting quark matter in neutron star mergers
+- [2407.01787](../papers/2407.01787.md) (2024) [1] Electron Capture and Bound-State $β$ Decays in Ions and Plasma
+- [2406.12497](../papers/2406.12497.md) (2024) [1] Efficient production of $^{229m}$Th via nuclear excitation by electron capture
+- [2406.05273](../papers/2406.05273.md) (2024) [1] High-precision measurements of the atomic mass and electron-capture decay $Q$ value of $^{95}$Tc
+- [2405.15591](../papers/2405.15591.md) (2024) [1] Constraints for rare electron-capture decays mimicking detection of dark-matter particles in nuclear transitions
+- [2404.19746](../papers/2404.19746.md) (2024) [1] The Width of an Electron-Capture Neutrino Wave Packet
+- [2404.13266](../papers/2404.13266.md) (2024) [2] The axially-deformed relativistic quasiparticle random phase approximation based on point-coupling interactions
+- [2402.13784](../papers/2402.13784.md) (2024) [1] Theoretical analysis and predictions for the double electron capture of $^{124}$Xe
+- [2312.07988](../papers/2312.07988.md) (2023) [2] Neutrinos from pre-supernova in the framework of TQRPA method
+- [2308.11297](../papers/2308.11297.md) (2023) [2] Stellar weak-interaction rates for $rp$-process waiting-point nuclei from projected shell model
 - [2306.03299](../papers/2306.03299.md) (2023) [2] The Gallium Anomaly
 - [2305.05209](../papers/2305.05209.md) (2023) [2] Decay of superheavy nuclei based on the random forest algorithm
 - [2304.10373](../papers/2304.10373.md) (2023) [1] Self-consistent calculations for atomic electron capture
@@ -47,62 +106,3 @@
 - [1907.06877](../papers/1907.06877.md) (2019) [2] Microscopic calculations of weak decays in superheavy nuclei
 - [1906.10980](../papers/1906.10980.md) (2019) [2] The gallium anomaly revisited
 - [1906.05114](../papers/1906.05114.md) (2019) [1] Impact of electron capture rates on nuclei far from stability on core-collapse supernovae
-- [1906.03414](../papers/1906.03414.md) (2019) [2] Overlap of electron shells in $β$ and double-$β$ decays
-- [1905.10400](../papers/1905.10400.md) (2019) [1] Electron-capture Rates in $^{20}$Ne for a Forbidden Transition to the Ground State of $^{20}$F Relevant to Final Evoluti...
-- [1905.09407](../papers/1905.09407.md) (2019) [2] Discovery of an Exceptionally Strong $β$-Decay Transition of $^{20}$F and Implications for the Fate of Intermediate-Mass...
-- [1904.00809](../papers/1904.00809.md) (2019) [1] $^{93m}$Mo isomer depletion via beam-based nuclear excitation by electron capture
-- [1903.08344](../papers/1903.08344.md) (2019) [1] Sensitivity of Type Ia supernovae to electron capture rates
-- [1903.08418](../papers/1903.08418.md) (2019) [1] Thermal quasiparticle random-phase approximation calculations of stellar electron capture rates with the Skyrme effectiv...
-- [1811.05183](../papers/1811.05183.md) (2018) [2] New targets for relic antineutrino capture
-- [1810.09896](../papers/1810.09896.md) (2018) [1] Neutrino recoil force in electron-capture decay of polarized nuclei: measurement prospects and potential applications
-- [1809.04443](../papers/1809.04443.md) (2018) [1] Two-neutrino double electron capture on $^{124}$Xe based on an effective theory and the nuclear shell model
-- [1804.03694](../papers/1804.03694.md) (2018) [1] Nuclear excitation by electron capture in optical-laser-generated plasmas
-- [1801.04859](../papers/1801.04859.md) (2018) [2] $Ab~initio$ calculations for Gamow-Teller strengths in $sd$ shell
-- [1711.10309](../papers/1711.10309.md) (2017) [1] $\textit{Ab initio}$ calculation of the calorimetric electron capture spectrum of $^{163}$Holmium: Intra-atomic decay in...
-- [1708.04826](../papers/1708.04826.md) (2017) [1] Tailoring laser-generated plasmas for efficient nuclear excitation by electron capture
-- [1707.06410](../papers/1707.06410.md) (2017) [2] A new equation of state for core-collapse supernovae based on realistic nuclear forces and including a full nuclear ense...
-- [1707.03504](../papers/1707.03504.md) (2017) [1] Strongly screening electron capture rates of chromium isotopes in presupernova
-- [1707.02550](../papers/1707.02550.md) (2017) [2] Heavy sterile neutrino in dark matter searches
-- [1703.07837](../papers/1703.07837.md) (2017) [2] Experimentally Study the Deep Dirac Levels with High-Intensity Lasers
-- [1703.06318](../papers/1703.06318.md) (2017) [1] Can one determine the neutrino mass by electron capture?
-- [1701.08414](../papers/1701.08414.md) (2017) [2] Dependence of weak interaction rates on the nuclear composition during stellar core collapse
-- [1701.05771](../papers/1701.05771.md) (2017) [1] Strongly screening on electron capture for Nuclides $^{52, 53, 59, 60}$Fe by the Shell-Model Monte Carlo method in pre-s...
-- [1612.02570](../papers/1612.02570.md) (2016) [2] Nuclear excitation by two-photon electron transition
-- [1612.00510](../papers/1612.00510.md) (2016) [2] Anomalies in weak decays of H-like ions
-- [1611.09399](../papers/1611.09399.md) (2016) [2] Testing the formation scenarios of binary neutron star systems with measurements of the neutron star moment of inertia
-- [1611.01744](../papers/1611.01744.md) (2016) [1] Stellar electron capture rates on neutron-rich nuclei and their impact on core-collapse
-- [1611.00325](../papers/1611.00325.md) (2016) [1] Neutrino Mass, Electron Capture and the Shake-off Contributions
-- [1610.06992](../papers/1610.06992.md) (2016) [1] Sensitivity of stellar electron-capture rates to parent neutron number: A case study on a continuous chain of twenty Van...
-- [1607.04426](../papers/1607.04426.md) (2016) [2] New phase space calculations for beta-decay half-lives
-- [1607.01448](../papers/1607.01448.md) (2016) [2] Nuclear neutrino energy spectra in high temperature astrophysical environments
-- [1606.02908](../papers/1606.02908.md) (2016) [2] Statistical analysis of beta decays and the effective value of g_A in the proton-neutron quasiparticle random-phase appr...
-- [1605.02488](../papers/1605.02488.md) (2016) [2] Contribution of excited states to stellar weak-interaction rates in odd-A nuclei
-- [1604.03197](../papers/1604.03197.md) (2016) [2] Frontiers in Nuclear Astrophysics
-- [1603.01898](../papers/1603.01898.md) (2016) [1] A new insight into neutrino energy loss by electron capture of iron group nuclei in magnetars surface
-- [1602.07875](../papers/1602.07875.md) (2016) [1] The Skyrme-TQRPA calculations of electron capture on hot nuclei in pre-supernova environment
-- [1602.07052](../papers/1602.07052.md) (2016) [2] $β$-decay half-lives and nuclear structure of exotic proton-rich waiting point nuclei under $rp$-process conditions
-- [1602.06385](../papers/1602.06385.md) (2016) [2] Gamow-Teller strength distributions and neutrino energy loss rates due to chromium isotopes in stellar matter
-- [1602.06387](../papers/1602.06387.md) (2016) [2] Gamow-Teller (GT$\pm$) strength distributions of $^{56}Ni$ for ground and excited states
-- [1602.06083](../papers/1602.06083.md) (2016) [2] Charge-changing transitions and capture strengths of pf-shell nuclei with $T_{z} = -2$ at proton drip-line
-- [1602.06134](../papers/1602.06134.md) (2016) [2] Spin-isospin transitions in chromium isotopes within the quasiparticle random phase approximation
-- [1601.04990](../papers/1601.04990.md) (2016) [1] The calorimetric spectrum of the electron-capture decay of $^{163}$Ho. The spectral endpoint region
-- [1512.00132](../papers/1512.00132.md) (2015) [1] Electron capture and beta-decay rates for sd-shell nuclei in stellar environments relevant to high density O-Ne-Mg cores
-- [1511.02820](../papers/1511.02820.md) (2015) [2] Presupernova neutrinos: realistic emissivities from stellar evolution
-- [1511.01221](../papers/1511.01221.md) (2015) [1] Level-resolved quantum statistical theory of electron capture into many-electron compound resonances in highly charged i...
-- [1510.05462](../papers/1510.05462.md) (2015) [1] The calorimetric spectrum of the electron-capture decay of $^{163}$Ho. A preliminary analysis of the preliminary data
-- [1510.04517](../papers/1510.04517.md) (2015) [1] Modification of magicity towards the dripline and its impact on electron-capture rates for stellar core-collapse
-- [1510.03310](../papers/1510.03310.md) (2015) [2] Evidence for the virtual beta-gamma transition in 59Ni
-- [1510.01510](../papers/1510.01510.md) (2015) [2] Mass measurement of 56Sc reveals a small A=56 odd-even mass staggering, implying a cooler accreted neutron star crust
-- [1510.00491](../papers/1510.00491.md) (2015) [1] Electron capture rates in stars studied with heavy ion charge exchange reactions
-- [1509.05157](../papers/1509.05157.md) (2015) [1] Neutrinoless double positron decay and positron emitting electron capture in the interacting boson model
-- [1509.01927](../papers/1509.01927.md) (2015) [1] Neutrinoless double electron capture
-- [1508.07348](../papers/1508.07348.md) (2015) [1] The Sensitivity of Core-Collapse Supernovae to Nuclear Electron Capture
-- [1508.07264](../papers/1508.07264.md) (2015) [2] Direct and secondary nuclear excitation with x-ray free-electron lasers
-- [1506.07883](../papers/1506.07883.md) (2015) [2] Electromagnetic modulation of monochromatic neutrino beams
-- [1506.05400](../papers/1506.05400.md) (2015) [2] Detailed description of exclusive muon capture rates using realistic two-body forces
-- [1503.08095](../papers/1503.08095.md) (2015) [2] Neutrino-nucleus reactions and their role for supernova dynamics and nucleosynthesis
-- [1503.02282](../papers/1503.02282.md) (2015) [1] Determination of the neutrino mass by electron capture in 163 Holmium and the role of the three-hole states in 163 Dyspr...
-- [1502.07225](../papers/1502.07225.md) (2015) [1] Electron capture cross sections for stellar nucleosynthesis
-- [1502.06473](../papers/1502.06473.md) (2015) [1] Testing Lorentz invariance in orbital electron capture
-- [1411.2906](../papers/1411.2906.md) (2014) [1] Examination of the calorimetric spectrum to determine the neutrino mass in low-energy electron capture decay
-- [1409.5344](../papers/1409.5344.md) (2014) [1] Electron Capture in a Fully Ionized Plasma

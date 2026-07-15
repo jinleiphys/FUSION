@@ -6,6 +6,13 @@
 
 **Papers:** 40
 
+- [2603.01819](../papers/2603.01819.md) (2026) [2] Recent developments and applications of the relativistic chiral nuclear force
+- [2602.07004](../papers/2602.07004.md) (2026) [2] Asymptotic Freedom and Vacuum Polarization Determine the Astrophysical End State of Relativistic Gravitational Collapse:...
+- [2601.12189](../papers/2601.12189.md) (2026) [2] Asymptotic Long-Distance Expansion of Euclidean Correlators in Lattice Parton Applications
+- [2502.06260](../papers/2502.06260.md) (2025) [2] Axialvector diqaurk Mass and quark-diquark potential in Sigma_c
+- [2405.19892](../papers/2405.19892.md) (2024) [2] Hyperon-Nucleus/Nucleon Scattering at BESIII
+- [2311.14093](../papers/2311.14093.md) (2023) [1] Color Confinement and Random Matrices -- A random walk down group manifold toward Casimir scaling --
+- [2310.09010](../papers/2310.09010.md) (2023) [2] Lattice computation of the Kugo-Ojima correlation function
 - [2212.05485](../papers/2212.05485.md) (2022) [2] Dynamical solution of the strong CP problem within QCD ?
 - [2212.03322](../papers/2212.03322.md) (2022) [2] Monopoles, spectra of overlap fermions, and eta-prime meson in external magnetic fields
 - [2204.11520](../papers/2204.11520.md) (2022) [2] Impact of Charge Symmetry Breaking on Gluon and Sea Quark Distributions in the Pion and Kaon
@@ -26,13 +33,6 @@
 - [1202.4167](../papers/1202.4167.md) (2012) [2] X(1835), X(2120) and X(2370) in a flux tube model
 - [1109.5607](../papers/1109.5607.md) (2011) [2] The effect of hidden color channels on nucleon-nucleon interaction in quark model
 - [1008.5247](../papers/1008.5247.md) (2010) [1] Unitarity and the color confinement
-- [2310.09010](../papers/2310.09010.md) (0000) [2] 2310.09010
-- [2311.14093](../papers/2311.14093.md) (0000) [1] 2311.14093
-- [2405.19892](../papers/2405.19892.md) (0000) [2] 2405.19892
-- [2502.06260](../papers/2502.06260.md) (0000) [2] 2502.06260
-- [2601.12189](../papers/2601.12189.md) (0000) [2] 2601.12189
-- [2602.07004](../papers/2602.07004.md) (0000) [2] 2602.07004
-- [2603.01819](../papers/2603.01819.md) (0000) [2] 2603.01819
 - [hep-lat/0007006](../papers/hep-lat/0007006.md) (0000) [2] hep-lat/0007006
 - [hep-lat/0503030](../papers/hep-lat/0503030.md) (0000) [2] hep-lat/0503030
 - [hep-lat/0503035](../papers/hep-lat/0503035.md) (0000) [1] hep-lat/0503035

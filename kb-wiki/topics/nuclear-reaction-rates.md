@@ -6,6 +6,15 @@
 
 **Papers:** 63
 
+- [2511.10536](../papers/2511.10536.md) (2025) [1] Non-Resonant Alpha-Induced Neutron-Emission: A Multi- Method Comparison Of Nuclear Reaction Rates
+- [2511.06657](../papers/2511.06657.md) (2025) [2] The Non-thermal Energy Window for Laser-Driven Nuclear Reactions
+- [2511.01859](../papers/2511.01859.md) (2025) [2] Uncertainties in the production of iron-group nuclides in core-collapse supernovae from Monte Carlo variations of reacti...
+- [2510.27125](../papers/2510.27125.md) (2025) [2] First evidence for the J$>$1 components of the pygmy dipole resonance in neutron-rich nuclei
+- [2411.01444](../papers/2411.01444.md) (2024) [2] Radiative Capture of proton 14N(p,γ) 15O at Low Energy
+- [2409.11710](../papers/2409.11710.md) (2024) [1] Photo-nuclear reaction rates of $^{157,159}$Ho and $^{163,165}$Tm and their impact in the $γ$--process
+- [2405.20223](../papers/2405.20223.md) (2024) [2] Astrophysical aspects of $^{12}$C$(p,γ)^{13}$N reaction
+- [2311.17357](../papers/2311.17357.md) (2023) [2] pynucastro 2.1: an update on the development of a python library for nuclear astrophysics
+- [2310.08694](../papers/2310.08694.md) (2023) [2] The intermediate neutron capture process: IV. Impact of nuclear model and parameter uncertainties
 - [2307.14391](../papers/2307.14391.md) (2023) [2] Nuclear Reactions in Evolving Stars
 - [2305.15849](../papers/2305.15849.md) (2023) [2] The electromagnetic fine-structure constant in primordial nucleosynthesis revisited
 - [2305.00371](../papers/2305.00371.md) (2023) [2] New 26P(p,γ)27S thermonuclear reaction rate and its astrophysical implication in rp-process
@@ -45,15 +54,6 @@
 - [0710.4854](../papers/0710.4854.md) (2007) [2] Big bang nucleosynthesis as a probe of fundamental "constants
 - [0708.2239](../papers/0708.2239.md) (2007) [2] Extension of thermonuclear functions through the pathway model including Maxwell-Boltzmann and Tsallis distributions
 - [0707.3500](../papers/0707.3500.md) (2007) [2] Coulomb tunneling for fusion reactions in dense matter: Path integral Monte Carlo versus mean field
-- [2310.08694](../papers/2310.08694.md) (0000) [2] 2310.08694
-- [2311.17357](../papers/2311.17357.md) (0000) [2] 2311.17357
-- [2405.20223](../papers/2405.20223.md) (0000) [2] 2405.20223
-- [2409.11710](../papers/2409.11710.md) (0000) [1] 2409.11710
-- [2411.01444](../papers/2411.01444.md) (0000) [2] 2411.01444
-- [2510.27125](../papers/2510.27125.md) (0000) [2] 2510.27125
-- [2511.01859](../papers/2511.01859.md) (0000) [2] 2511.01859
-- [2511.06657](../papers/2511.06657.md) (0000) [2] 2511.06657
-- [2511.10536](../papers/2511.10536.md) (0000) [1] 2511.10536
 - [astro-ph/0010452](../papers/astro-ph/0010452.md) (0000) [2] astro-ph/0010452
 - [astro-ph/0405568](../papers/astro-ph/0405568.md) (0000) [2] astro-ph/0405568
 - [astro-ph/0608341](../papers/astro-ph/0608341.md) (0000) [1] astro-ph/0608341

@@ -4,6 +4,17 @@
 
 **Papers:** 68
 
+- [2605.21228](../papers/2605.21228.md) (2026) [1] Minimal Wigner-$SU(4)$ Interaction in Microscopic Cluster Models for $α$-Conjugate Nuclei
+- [2604.27652](../papers/2604.27652.md) (2026) [1] Examination of the $c\bar{c}+n+^{10}$Be bound-state problem within three cluster models based on QCD charmonium-nucleon ...
+- [2603.03842](../papers/2603.03842.md) (2026) [2] From Orthogonalizing Pseudopotential to the Feshbach-Schur Projection
+- [2512.24079](../papers/2512.24079.md) (2025) [2] Initial spin fluctuations as a probe of cluster spin structure in $^{16}\mathrm{O}$ and $^{20}\mathrm{Ne}$ nuclei
+- [2508.02653](../papers/2508.02653.md) (2025) [1] Bound states of $_{c\bar{c}}^{9}$Be within $c\bar{c}+α+α$ cluster models based on state-of-the-art HAL QCD charmonium-nu...
+- [2506.15590](../papers/2506.15590.md) (2025) [2] Extended multiconfigurational dynamical symmetry
+- [2502.13724](../papers/2502.13724.md) (2025) [2] Nuclear $α$-cluster structures from valence-space microscopic cluster model
+- [2412.20928](../papers/2412.20928.md) (2024) [2] The reduced-width amplitude in nuclear cluster physics
+- [2408.13415](../papers/2408.13415.md) (2024) [1] Bound states of $^{9}_ϕ$Be and $^{6}_{ϕϕ}$He nuclei with $ϕ$+$α$+$α$ and $ϕ$+$ϕ$+$α$ cluster models
+- [2404.11930](../papers/2404.11930.md) (2024) [1] Study of structure of deuteron from analysis of bremsstrahlung emission in proton-deuteron scattering in cluster models
+- [2312.08318](../papers/2312.08318.md) (2023) [2] $^{12}$C and $α$-clusters, $0^+$ spectrum, and Hoyle-state candidates in $^{24}$Mg
 - [2306.05660](../papers/2306.05660.md) (2023) [1] Resonances and scattering in microscopic cluster models with the complex-scaled generator coordinate method
 - [2304.04082](../papers/2304.04082.md) (2023) [1] Systematic study of bremsstrahlung emission in reactions with light nuclei in cluster models
 - [2205.10388](../papers/2205.10388.md) (2022) [2] Magnetic dipole moments as a strong signature for $α$-clustering in even-even self-conjugate nuclei
@@ -51,17 +62,6 @@
 - [0812.4732](../papers/0812.4732.md) (2008) [2] A microscopic cluster model study of $^3$He+$p$ scatterings
 - [0811.3156](../papers/0811.3156.md) (2008) [1] Light $Ξ$ hypernuclei in four-body cluster models
 - [0712.2081](../papers/0712.2081.md) (2007) [2] Missing monopole strength of the Hoyle state in the inelastic $α$+$^{12}$C scattering
-- [2312.08318](../papers/2312.08318.md) (0000) [2] 2312.08318
-- [2404.11930](../papers/2404.11930.md) (0000) [1] 2404.11930
-- [2408.13415](../papers/2408.13415.md) (0000) [1] 2408.13415
-- [2412.20928](../papers/2412.20928.md) (0000) [2] 2412.20928
-- [2502.13724](../papers/2502.13724.md) (0000) [2] 2502.13724
-- [2506.15590](../papers/2506.15590.md) (0000) [2] 2506.15590
-- [2508.02653](../papers/2508.02653.md) (0000) [1] 2508.02653
-- [2512.24079](../papers/2512.24079.md) (0000) [2] 2512.24079
-- [2603.03842](../papers/2603.03842.md) (0000) [2] 2603.03842
-- [2604.27652](../papers/2604.27652.md) (0000) [1] 2604.27652
-- [2605.21228](../papers/2605.21228.md) (0000) [1] 2605.21228
 - [astro-ph/0402668](../papers/astro-ph/0402668.md) (0000) [2] astro-ph/0402668
 - [nucl-th/0007018](../papers/nucl-th/0007018.md) (0000) [1] nucl-th/0007018
 - [nucl-th/0010053](../papers/nucl-th/0010053.md) (0000) [2] nucl-th/0010053

@@ -6,6 +6,7 @@
 
 **Papers:** 12
 
+- [2511.18337](../papers/2511.18337.md) (2025) [2] Systematic investigation on the superheavy nucleus formation in the reactions of $^{48}$Ca, $^{50}$Ti, $^{51}$V and $^{5...
 - [2306.14368](../papers/2306.14368.md) (2023) [2] Understanding Excitations in $^{59,61}$Co, $^{59}$Ni
 - [2210.16821](../papers/2210.16821.md) (2022) [1] Production cross-sections of new superheavy elements with Z = 119-120 in fusion-evaporation reactions
 - [2210.08941](../papers/2210.08941.md) (2022) [1] Prediction for the synthesis cross sections of new moscovium isotopes in fusion-evaporation reactions
@@ -17,4 +18,3 @@
 - [1611.10046](../papers/1611.10046.md) (2016) [1] Production of proton-rich nuclei around Z=84-90 in fusion-evaporation reactions
 - [1606.00699](../papers/1606.00699.md) (2016) [2] Fusion and quasifission dynamics in the reactions $^{48}$Ca+$^{249}$Bk and $^{50}$Ti+$^{249}$Bk using TDHF
 - [1309.0323](../papers/1309.0323.md) (2013) [2] Probing the statistical decay and alpha-clustering effects in 12c+12c and 14n+10b reactions
-- [2511.18337](../papers/2511.18337.md) (0000) [2] 2511.18337

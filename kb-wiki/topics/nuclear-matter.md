@@ -8,103 +8,103 @@
 
 **Papers:** 4107 (showing first 100 of 4107)
 
-- [2307.14276](../papers/2307.14276.md) (2023) [2] Skyrme-Hartree-Fock-Bogoliubov mass models on a 3D mesh: III. From atomic nuclei to neutron stars
-- [2307.14418](../papers/2307.14418.md) (2023) [2] Heavy neutron stars from light scalars
-- [2307.13532](../papers/2307.13532.md) (2023) [2] Quantum van der Waals theory meets quarkyonic matter
-- [2307.12600](../papers/2307.12600.md) (2023) [1] The baryon number fluctuation $κσ^2$ as a probe of nuclear matter phase transition at high baryon density
-- [2307.12817](../papers/2307.12817.md) (2023) [2] Recent astrophysical observations reproduced by a short-range correlated van der Waals-type model?
-- [2307.12364](../papers/2307.12364.md) (2023) [2] Generalised description of Neutron Star matter with nucleonic Relativistic Density Functional
-- [2307.11313](../papers/2307.11313.md) (2023) [2] Dark matter effects on the properties of neutron stars: optical radii
-- [2307.11886](../papers/2307.11886.md) (2023) [2] Neutron stars in the Witten-Sakai-Sugimoto model
-- [2307.09418](../papers/2307.09418.md) (2023) [2] Influence of the tetraneutron on the EoS under core-collapse supernovae and heavy-ion collisions conditions
-- [2307.05086](../papers/2307.05086.md) (2023) [2] Neutron star equation of state: identifying hadronic matter characteristics
-- [2307.05848](../papers/2307.05848.md) (2023) [2] Empirical radius formulas for canonical neutron stars from bidirectionally selecting EOS features in extended Bayesian a...
-- [2307.04432](../papers/2307.04432.md) (2023) [2] Density-dependent relativistic mean field approach and its application to single-$Λ$ hypernuclei in Oxygen isotopes
-- [2307.03484](../papers/2307.03484.md) (2023) [2] The Interrelated Roles of Correlations in the Nuclear Equation of State and in Response Functions: Application to a Chir...
-- [2307.03032](../papers/2307.03032.md) (2023) [2] Quarkyonic matter and quarkyonic stars in an extended RMF model
-- [2307.01745](../papers/2307.01745.md) (2023) [2] Holographic baryons, dense matter and neutron star mergers
-- [2307.01792](../papers/2307.01792.md) (2023) [2] Quantum simulation of in-medium QCD jets: momentum broadening, gluon production, and entropy growth
-- [2307.00338](../papers/2307.00338.md) (2023) [2] Light projectile elastic scattering by nuclei described by the Gogny interaction
-- [2306.17673](../papers/2306.17673.md) (2023) [1] Properties of the $T_{cc}(3875)^+$ and $T_{\bar c\bar c}(3875)^-$ (and their heavy-quark spin partners) in nuclear matte...
-- [2306.16005](../papers/2306.16005.md) (2023) [2] Phase diagram determination at fivefold nuclear compression
-- [2306.13591](../papers/2306.13591.md) (2023) [2] Bulk viscosity from Urca processes: $npeμ$ matter in the neutrino-transparent regime
-- [2306.13007](../papers/2306.13007.md) (2023) [2] Generative modeling of nucleon-nucleon interactions
-- [2306.11989](../papers/2306.11989.md) (2023) [2] Superheavy Elements and Ultradense Matter
-- [2306.09277](../papers/2306.09277.md) (2023) [2] Robust universal relations in neutron star asteroseismology
-- [2306.08140](../papers/2306.08140.md) (2023) [2] Neutron star matter based on a parity doublet model including the $a_0(980)$ meson
-- [2306.08174](../papers/2306.08174.md) (2023) [2] Classical and Bayesian error analysis of the relativistic mean-field model for doubly magic nuclei
-- [2306.06973](../papers/2306.06973.md) (2023) [2] $Λ$ hypernuclear potentials beyond linear density dependence
-- [2306.07299](../papers/2306.07299.md) (2023) [2] Additive Multi-Index Gaussian process modeling, with application to multi-physics surrogate modeling of the quark-gluon ...
-- [2306.06218](../papers/2306.06218.md) (2023) [2] Evidence against a strong first-order phase transition in neutron star cores: impact of new data
-- [2306.05097](../papers/2306.05097.md) (2023) [2] Observational constraint from the heaviest pulsar PSR J0952-0607 on the equation of state of dense matter in relativisti...
-- [2306.05110](../papers/2306.05110.md) (2023) [2] Relativistic Mean Field Model parameterizations in the light of GW170817, GW190814, and PSR J0740 + 6620
-- [2306.05280](../papers/2306.05280.md) (2023) [2] Chiral EFT calculation of neutrino reactions in warm neutron-rich matter
-- [2306.04304](../papers/2306.04304.md) (2023) [2] Momentum Shell in Quarkyonic Matter from Explicit Duality: A Dual Model for Cold, Dense QCD
-- [2306.03327](../papers/2306.03327.md) (2023) [2] Superfluid extension of the self-consistent time-dependent band theory for neutron star matter: Anti-entrainment versus ...
-- [2306.01351](../papers/2306.01351.md) (2023) [1] Properties of Hot Nuclear Matter
-- [2306.01367](../papers/2306.01367.md) (2023) [2] Testing the Paradigm of Nuclear Many-Body Theory
-- [2306.00192](../papers/2306.00192.md) (2023) [2] Holographic neutrino transport in dense strongly-coupled matter
-- [2305.19388](../papers/2305.19388.md) (2023) [2] A closer look at the Yukawa's interaction from a symmetry group perspective
-- [2305.17481](../papers/2305.17481.md) (2023) [2] QCD-based charge symmetry breaking interaction and the Okamoto-Nolen-Schiffer anomaly
-- [2305.16686](../papers/2305.16686.md) (2023) [2] Machine learning transforms the inference of the nuclear equation of state
-- [2305.15724](../papers/2305.15724.md) (2023) [2] The Impact of Anisotropy on Neutron Star Properties: Insights from I-f-C Universal Relations
-- [2305.16058](../papers/2305.16058.md) (2023) [1] Equation of state of nuclear matter and neutron stars: Quark mean-field model versus relativistic mean-field model
-- [2305.15037](../papers/2305.15037.md) (2023) [1] Ab initio study of nuclear clustering in hot dilute nuclear matter
-- [2305.11007](../papers/2305.11007.md) (2023) [1] Direct mapping of tidal deformability to the iso-scalar and iso-vector nuclear matter parameters
-- [2305.09499](../papers/2305.09499.md) (2023) [2] Energy and Angle Dependence of Neutrino Scattering Rates in Proto-Neutron Star and Supernova Matter within Skyrme RPA
-- [2305.07411](../papers/2305.07411.md) (2023) [2] Phase Transition Phenomenology with Nonparametric Representations of the Neutron Star Equation of State
-- [2305.06639](../papers/2305.06639.md) (2023) [1] Skyrme crystals, nuclear matter and compact stars
-- [2305.06667](../papers/2305.06667.md) (2023) [2] Relativistic approach for the determination of nuclear and neutron star properties in consideration of PREX-II results
-- [2305.05937](../papers/2305.05937.md) (2023) [1] CREX- and PREX-II-motivated relativistic interactions and their implications for the bulk properties of nuclear matter a...
-- [2305.02065](../papers/2305.02065.md) (2023) [2] Impacts of dark matter interaction on nuclear and neutron star matter within the relativistic mean-field model
-- [2304.14644](../papers/2304.14644.md) (2023) [2] Gravitational waves from non-radial perturbations in glitching pulsars
-- [2304.14715](../papers/2304.14715.md) (2023) [2] Finite temperature description of Fermi gases with in-medium effective mass
-- [2304.13333](../papers/2304.13333.md) (2023) [2] Neutron-proton effective mass splitting in neutron-rich matter
-- [2304.10171](../papers/2304.10171.md) (2023) [2] Probing the nucleon effective mass splitting with the light particle emission
-- [2304.07836](../papers/2304.07836.md) (2023) [2] Tabulated Equations of State From Models Informed by Chiral Effective Field Theory
-- [2304.05100](../papers/2304.05100.md) (2023) [2] Investigating Dark Matter-Admixed Neutron Stars with NITR Equation of State in Light of PSR J0952-0607
-- [2304.03929](../papers/2304.03929.md) (2023) [2] Bottomonium transport in p-Pb and Pb-Pb collisions at the LHC
-- [2304.01546](../papers/2304.01546.md) (2023) [2] Nuclear mass table in density functional approach inspired by neutron-star observations
-- [2304.01817](../papers/2304.01817.md) (2023) [2] Relativistic Hartree-Fock Chiral Lagrangians with confinement, nucleon finite size and short-range effects
-- [2304.01036](../papers/2304.01036.md) (2023) [2] Constraints on the in-medium nuclear interaction from chiral symmetry and Lattice-QCD
-- [2304.00296](../papers/2304.00296.md) (2023) [2] Center-of-mass momentum dependence of short-range correlations with the coarse-grained Granada potential
-- [2303.17254](../papers/2303.17254.md) (2023) [2] Hot QCD White Paper
-- [2303.17518](../papers/2303.17518.md) (2023) [2] Constraining a relativistic mean field model using neutron star mass-radius measurements I: Nucleonic models
-- [2303.14927](../papers/2303.14927.md) (2023) [1] $α$ + core structure described with an additional interaction in the nuclear matter saturation region
-- [2303.14667](../papers/2303.14667.md) (2023) [2] Constraining nuclear symmetry energy with the charge radii of mirror-pair nuclei
-- [2303.14201](../papers/2303.14201.md) (2023) [2] Centrality-dependent modification of hadron and jet production in electron-nucleus collisions
-- [2303.12485](../papers/2303.12485.md) (2023) [2] Flavor hierarchy of parton energy loss in quark-gluon plasma from a Bayesian analysis
-- [2303.11356](../papers/2303.11356.md) (2023) [2] Strongly interacting matter exhibits deconfined behavior in massive neutron stars
-- [2303.10474](../papers/2303.10474.md) (2023) [2] Bayesian inference of in-medium baryon-baryon scattering cross sections from HADES proton flow data
-- [2303.09414](../papers/2303.09414.md) (2023) [2] Hydrodynamic Attractors in Ultrarelativistic Nuclear Collisions
-- [2303.07969](../papers/2303.07969.md) (2023) [1] Properties of hot finite nuclei and associated correlations with infinite nuclear matter
-- [2303.07974](../papers/2303.07974.md) (2023) [1] Thermal effects in hot and dilute homogeneous asymmetric nuclear matter
-- [2303.08004](../papers/2303.08004.md) (2023) [1] Critical Properties of Symmetric Nuclear Matter in Low-Density Regime Using Effective-Relativistic Mean Field Formalism
-- [2303.07086](../papers/2303.07086.md) (2023) [2] Non-radial oscillations and gravitational wave emission of hybrid neutron stars
-- [2303.07323](../papers/2303.07323.md) (2023) [2] Constraint of the Nuclear Dissipation Coefficient in Fission of Hypernuclei
-- [2303.05452](../papers/2303.05452.md) (2023) [2] Probing spherical outbursts of neutron star mergers from an equation of state with composite nucleons
-- [2303.03994](../papers/2303.03994.md) (2023) [2] Towards a universal description of hadronic phase of QCD
-- [2303.03150](../papers/2303.03150.md) (2023) [2] Neutron star mass-radius constraints using the high-frequency QPOs of GRB 200415A
-- [2303.03206](../papers/2303.03206.md) (2023) [2] Quasielastic (p, n) reactions described by a microscopic optical model based on the Gogny force
-- [2302.14537](../papers/2302.14537.md) (2023) [2] Signatures of quark deconfinement through the r-modes of twin stars
-- [2302.13852](../papers/2302.13852.md) (2023) [2] Rapidity scan with multistage hydrodynamic and statistical thermal models
-- [2302.12382](../papers/2302.12382.md) (2023) [2] In-medium properties of the light and heavy-light mesons in a light-front quark model
-- [2302.12463](../papers/2302.12463.md) (2023) [2] Pairing properties of semilocal coordinate&momentum-space regularized chiral interactions
-- [2302.11469](../papers/2302.11469.md) (2023) [2] Frequencies of $f$- and $p$-oscillation modes in cold and hot compact stars
-- [2302.08372](../papers/2302.08372.md) (2023) [2] Properties of Infinite Nuclear Medium from QCD Sum Rules and the Neutron Star-Black Hole Mass Gap
-- [2302.08482](../papers/2302.08482.md) (2023) [2] Confronting the nucleonic hypothesis with current neutron star observations from GW170817 and PSR J0740+6620
-- [2302.07037](../papers/2302.07037.md) (2023) [2] Directed and elliptic flows of protons and deuterons in HADES Au+Au collisions at $\sqrt{s_{\rm NN}}=2.4$ GeV
-- [2302.06179](../papers/2302.06179.md) (2023) [2] Bottom energy loss and non-prompt $J/ψ$ production in relativistic heavy ion collisions
-- [2302.06734](../papers/2302.06734.md) (2023) [2] A quantum-classical co-processing protocol towards simulating nuclear reactions on contemporary quantum hardware
-- [2302.03906](../papers/2302.03906.md) (2023) [2] Systematic analysis of the impacts of symmetry energy parameters on neutron star properties
-- [2302.02989](../papers/2302.02989.md) (2023) [2] Nuclear and Hybrid Equations of State in Light of the Low-Mass Compact Star in HESS J1731-347
-- [2302.02329](../papers/2302.02329.md) (2023) [1] Probing the jet transport coefficient of cold nuclear matter in electron-ion collisions
-- [2302.00825](../papers/2302.00825.md) (2023) [2] Chiral restoration of nucleons in neutron star matter: studies based on a parity doublet model
-- [2302.01453](../papers/2302.01453.md) (2023) [1] Studies of the equation-of-state of nuclear matter by heavy-ion collisions at intermediate energy in the multi-messenger...
-- [2302.00554](../papers/2302.00554.md) (2023) [1] Anomaly-Induced Quenching of ${g_A}$ in Nuclear Matter and Impact on Search for Neutrinoless $ββ$ Decay
-- [2301.13253](../papers/2301.13253.md) (2023) [1] Dense Nuclear Matter Equation of State from Heavy-Ion Collisions
-- [2301.08385](../papers/2301.08385.md) (2023) [2] Computational budget optimization for Bayesian parameter estimation in heavy ion collisions
-- [2301.07884](../papers/2301.07884.md) (2023) [2] Bayesian inference of nucleus resonance and neutron skin
-- [2301.07904](../papers/2301.07904.md) (2023) [2] Bayesian inference of neutron-star observables based on effective nuclear interactions
-- [2301.07922](../papers/2301.07922.md) (2023) [1] Shear viscosity of nuclear matter in the spinodal region
-- [2301.08169](../papers/2301.08169.md) (2023) [2] Spanning the full range of neutron star properties within a microscopic description
+- [2606.14018](../papers/2606.14018.md) (2026) [2] Energy and centrality dependence of thermodynamical observables from multiplicity in Pb+Pb and Au+Au collisions
+- [2606.13333](../papers/2606.13333.md) (2026) [2] Hadron polarization and equation of state at FAIR/RHIC-BES energies
+- [2606.08250](../papers/2606.08250.md) (2026) [2] On the effect of higher order symmetry energy corrections in Skyrme models for neutron star matter
+- [2606.06553](../papers/2606.06553.md) (2026) [2] Hyperon-Nucleon Spectrometer
+- [2606.03633](../papers/2606.03633.md) (2026) [2] Mechanical properties of the nucleon in the chiral confining model. II -- in-medium evolution of the nucleon properties
+- [2605.23433](../papers/2605.23433.md) (2026) [2] Quasiradial oscillations of rotating hybrid neutron stars
+- [2605.07951](../papers/2605.07951.md) (2026) [1] Quasiparticle properties of a single $Λ$ impurity in symmetric nuclear matter with a regulated $NΛ$ interaction
+- [2605.04814](../papers/2605.04814.md) (2026) [1] Charged current neutrino processes in hot nuclear matter with a recent Skyrme parametrization constrained by microscopic...
+- [2605.04862](../papers/2605.04862.md) (2026) [2] Nuclear level densities in the relativistic Hartree-Bogoliubov plus combinatorial framework
+- [2604.27652](../papers/2604.27652.md) (2026) [2] Examination of the $c\bar{c}+n+^{10}$Be bound-state problem within three cluster models based on QCD charmonium-nucleon ...
+- [2604.27678](../papers/2604.27678.md) (2026) [2] Proton and kaon production in Au+Au collisions at $\sqrt{s_{\rm NN}}=3$ GeV
+- [2604.27982](../papers/2604.27982.md) (2026) [2] Chiral Symmetry and Its Restoration in QCD
+- [2604.25449](../papers/2604.25449.md) (2026) [2] A study of $J/ψ$ mass shift and bound states: Impact of $D D$ and $DD^*$ meson loops
+- [2604.24577](../papers/2604.24577.md) (2026) [2] Neutrino Cross Sections: Low Energy
+- [2604.20681](../papers/2604.20681.md) (2026) [2] Cutoff-independent predictions from nuclear lattice effective field theory
+- [2604.15989](../papers/2604.15989.md) (2026) [2] Charged-current quasielastic-like neutrino scattering from $^{12}$C in the coherent density fluctuation model with two-n...
+- [2604.11046](../papers/2604.11046.md) (2026) [2] Sensitivity of Neutron Star Observables to Transition Density in Hybrid Equation-of-State Models
+- [2604.11358](../papers/2604.11358.md) (2026) [2] Emulator-Assisted Nuclear DFT Inference and Its Consequences for the Structure of Neutron Stars
+- [2604.09154](../papers/2604.09154.md) (2026) [1] From binding and saturation to criticality in nuclear matter with lattice effective field theory
+- [2604.07949](../papers/2604.07949.md) (2026) [2] Wave-Function Femtometry: Hypertriton - The Ultimate Halo Nucleus
+- [2604.05410](../papers/2604.05410.md) (2026) [1] Impact of neutron-proton pairing on the nucleon high-momentum distribution in symmetric nuclear matter
+- [2604.05612](../papers/2604.05612.md) (2026) [2] Deuteron normalization and channel-dependent formation dynamics in pion and kaon color transparency
+- [2604.04560](../papers/2604.04560.md) (2026) [2] Neutron star with dark matter using vector portal
+- [2604.01660](../papers/2604.01660.md) (2026) [2] Femtoscopy of Strange Baryons in Heavy-ion Collisions at RHIC-STAR
+- [2604.02098](../papers/2604.02098.md) (2026) [2] Chiral-scale effective field theory for dense and thermal systems
+- [2603.29325](../papers/2603.29325.md) (2026) [1] Baryonic vortices in rotating nuclear matter
+- [2604.00196](../papers/2604.00196.md) (2026) [2] An Asymptotically Causal Metamodel for Neutron Star Equations of State
+- [2603.27568](../papers/2603.27568.md) (2026) [2] Quark-meson coupling model and heavy-ion collision
+- [2603.27578](../papers/2603.27578.md) (2026) [2] Heavy-ion collision simulation with high performance computer
+- [2603.26205](../papers/2603.26205.md) (2026) [1] Neutron star structure and nuclear matter properties from a general Walecka-type model with Bayesian analysis
+- [2603.23904](../papers/2603.23904.md) (2026) [2] Impact of muons on the bulk viscosity of neutron star matter metamodels
+- [2603.24532](../papers/2603.24532.md) (2026) [2] Many-body perturbation theory for the nuclear equation of state up to fifth order
+- [2603.19839](../papers/2603.19839.md) (2026) [2] A dual description of quarks and baryons: Quarkyonic matter within a relativistic quark model
+- [2603.19892](../papers/2603.19892.md) (2026) [1] Renormalization group evolution and power counting in nuclear matter
+- [2603.15971](../papers/2603.15971.md) (2026) [1] Polarization-dependent mass modifications of $ϕ$ meson with finite momentum in nuclear matter
+- [2603.13164](../papers/2603.13164.md) (2026) [2] Parameter adjustment of nuclear leading-order local pairing energy density functionals
+- [2603.12456](../papers/2603.12456.md) (2026) [1] How well known is the compressibility of nuclear matter?
+- [2603.03849](../papers/2603.03849.md) (2026) [1] Nuclear matter properties and neutron star structures from an extended linear sigma model
+- [2603.01819](../papers/2603.01819.md) (2026) [2] Recent developments and applications of the relativistic chiral nuclear force
+- [2603.01933](../papers/2603.01933.md) (2026) [1] Hadronic description of nuclear matter and neutron star properties
+- [2603.02060](../papers/2603.02060.md) (2026) [1] Spinodal instability in nuclear matter with light cluster degrees of freedom
+- [2603.00265](../papers/2603.00265.md) (2026) [2] Physics Opportunities with a Fixed-Target Program at the Electron-Ion Collider
+- [2602.22722](../papers/2602.22722.md) (2026) [2] CREX and PREX-II reconciled within energy-density functional theory
+- [2602.23433](../papers/2602.23433.md) (2026) [2] Hyperon-Induced Inhomogeneous Pion Condensation and Moat Regimes in Neutron Star Cores
+- [2602.19465](../papers/2602.19465.md) (2026) [2] Microscopic Optical Potential from Brueckner-Hartree-Fock Theory
+- [2602.19072](../papers/2602.19072.md) (2026) [2] Charmonium suppression in fixed target proton-nucleus collisions
+- [2602.16786](../papers/2602.16786.md) (2026) [2] From $χ$EFT to Multi-Region Modeling: Neutron star structure with a polytropic extension of $χ$EFT and MUSES Calculation...
+- [2602.15928](../papers/2602.15928.md) (2026) [1] A compendium of cold-nuclear matter baseline predictions in light-ion collisions
+- [2602.14353](../papers/2602.14353.md) (2026) [2] Estimation of neutron star mass and radius of FRB 20240114A by identification of crustal oscillations
+- [2602.13991](../papers/2602.13991.md) (2026) [2] Bayesian Analyses of Proton Multiple Flow Components in Intermediate Heavy Ion Collisions with Momentum-Dependent Intera...
+- [2602.12495](../papers/2602.12495.md) (2026) [2] Dark matter effects on the properties of hybrid neutron stars
+- [2602.12726](../papers/2602.12726.md) (2026) [1] Phase diagrams of BCS-BEC crossover in asymmetric nuclear matter
+- [2602.09916](../papers/2602.09916.md) (2026) [1] Liquid-gas phase transition of nuclear matter
+- [2602.06815](../papers/2602.06815.md) (2026) [2] Many-body effects on dense matter with hyperons at finite temperature
+- [2602.04148](../papers/2602.04148.md) (2026) [2] Mapping Nuclear Deformation with Differential Radial Flow in Heavy-Ion Collisions
+- [2602.04281](../papers/2602.04281.md) (2026) [1] Hyperon single-particle potentials in nuclear matter based on baryon-baryon interactions derived within chiral effective...
+- [2602.04477](../papers/2602.04477.md) (2026) [2] Neutron Dark Decay and Exotic Compact Objects
+- [2601.19545](../papers/2601.19545.md) (2026) [2] Radial Oscillations and Stability of Neutron Stars with Antikaon Condensates
+- [2601.19564](../papers/2601.19564.md) (2026) [1] Octet baryon electroweak form factors in dense nuclear matter
+- [2601.18421](../papers/2601.18421.md) (2026) [2] Meson-exchange currents and nuclear correlations in neutrino and electron scattering with nuclei
+- [2601.18752](../papers/2601.18752.md) (2026) [2] Role of the symmetry energy on hybrid stars
+- [2601.17822](../papers/2601.17822.md) (2026) [2] The role of the surface energy in nuclear octupole excitations
+- [2601.14194](../papers/2601.14194.md) (2026) [2] Influence of Finite-Nuclei Constraints on High-Density Transitions and Neutron Star Properties
+- [2601.12043](../papers/2601.12043.md) (2026) [1] Nucleon Resonances in Nuclear Matter and Finite Nuclei
+- [2601.08145](../papers/2601.08145.md) (2026) [2] Light Nuclei embedded in a Nuclear Medium: Clustering and Mott Transitions
+- [2601.08199](../papers/2601.08199.md) (2026) [2] Chiral three-nucleon forces for the new local position-space two-nucleon potential in $\textit{ab initio}$ many-body cal...
+- [2601.07570](../papers/2601.07570.md) (2026) [2] EPOS4 Model Predictions for Global Observables in Pb-Pb Collisions at $\sqrt{s_{NN}}$ = 5.36 TeV
+- [2601.07722](../papers/2601.07722.md) (2026) [2] Multi-Physics Bayesian Analysis of Neutron Star Crust Using Relativistic Mean-Field Model
+- [2601.07727](../papers/2601.07727.md) (2026) [1] Learning the relations between neutron star and nuclear matter properties with symbolic regression
+- [2601.03763](../papers/2601.03763.md) (2026) [1] Gorkov algebraic diagrammatic construction for infinite nuclear matter
+- [2512.23455](../papers/2512.23455.md) (2025) [2] Neutron Star Equation of State with Nucleon Short-Range Correlations: A Concise Review and Open Issues
+- [2512.23577](../papers/2512.23577.md) (2025) [2] Limits on dark matter existence in neutron stars from recent astrophysical observations and mass correlation analysis
+- [2512.23692](../papers/2512.23692.md) (2025) [2] The Effect of Hadronic Matter on Parton Energy Loss
+- [2512.22709](../papers/2512.22709.md) (2025) [2] Elucidating the role of the surface energy in density functional theory
+- [2512.19593](../papers/2512.19593.md) (2025) [2] Neutron star crust and outer core equation of state from chiral effective field theory with quantified uncertainties
+- [2512.18549](../papers/2512.18549.md) (2025) [2] Superfluid fraction in the crystal phase of the inner crust of neutron stars
+- [2512.18650](../papers/2512.18650.md) (2025) [2] Neural Network Construction of the Equation of State from Relativistic ab initio Calculations
+- [2512.16078](../papers/2512.16078.md) (2025) [2] Investigation of Nuclear Modification Factor from RHIC to LHC energies using Boltzmann Transport equation in conjunction...
+- [2512.16847](../papers/2512.16847.md) (2025) [2] Exploring nuclear modification using one-point energy correlator at the electron-ion collider
+- [2512.16971](../papers/2512.16971.md) (2025) [2] ESO Expanding Horizon White Paper: Revealing the properties of matter at supranuclear densities with gravitational waves
+- [2512.15094](../papers/2512.15094.md) (2025) [2] Crossover or First-Order: Impacts of Regularization
+- [2512.14117](../papers/2512.14117.md) (2025) [2] Scrutiny of the new class of three-nucleon forces
+- [2512.12866](../papers/2512.12866.md) (2025) [2] Local Quantum Friction with Pairing: Unitary Dissipation in Large Fermi Systems
+- [2512.11723](../papers/2512.11723.md) (2025) [2] The neutron dripline in calcium isotopes from a chiral interaction
+- [2512.11952](../papers/2512.11952.md) (2025) [2] Renormalization Group Evolution for In-medium Energy Correlators
+- [2512.09252](../papers/2512.09252.md) (2025) [2] Thermal liquid-gas phase transition in a quasi-one-dimensional dipolar Fermi gas
+- [2512.08911](../papers/2512.08911.md) (2025) [2] A Bayesian Approach Study of Hybrid Neutron Stars
+- [2512.05566](../papers/2512.05566.md) (2025) [2] Machine and Deep Learning Regression for Compact Object Equations of State
+- [2512.04505](../papers/2512.04505.md) (2025) [2] A Quarkyonic Quark-Meson Coupling Model for Nuclear and Neutron Matter
+- [2512.04820](../papers/2512.04820.md) (2025) [1] Thermodynamic and Transport properties of hot asymmetric nuclear matter within a chiral SU(3) model
+- [2512.05295](../papers/2512.05295.md) (2025) [2] Production of Light Nuclei in Au+Au Collisions at $\sqrt{s_{\rm NN}} = 7.7-27$ GeV from STAR BES-II
+- [2512.05315](../papers/2512.05315.md) (2025) [2] Nuclear parameter inference with semi-agnostic priors
+- [2512.03776](../papers/2512.03776.md) (2025) [2] Impact of octupole deformation on the nuclear electromagnetic response
+- [2512.03876](../papers/2512.03876.md) (2025) [2] Generalized Beth--Uhlenbeck entropy formula from the $Φ-$derivable approach
+- [2512.04206](../papers/2512.04206.md) (2025) [2] Nucleon Short-Range Correlations and High-Momentum Dynamics: Implications on the Equation of State of Dense Matter
+- [2512.01503](../papers/2512.01503.md) (2025) [2] Bayesian inferences on covariant density functionals from multimessenger astrophysical data: Influences of parametrizati...
+- [2511.22894](../papers/2511.22894.md) (2025) [1] Constraining of Nuclear Matter Equations of State With Rotating Neutron Stars
+- [2511.22110](../papers/2511.22110.md) (2025) [2] Symmetry energy in dilute matter and the neutron skin
+- [2511.22772](../papers/2511.22772.md) (2025) [1] Relations between three-particle interactions in nuclear matter to observable quantities
+- [2511.20378](../papers/2511.20378.md) (2025) [2] Toward a Unified Understanding of the Dense Matter Equation of State
