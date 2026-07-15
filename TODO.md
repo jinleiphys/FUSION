@@ -20,13 +20,15 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 - [ ] Wave 3+ per catalog; each entry needs its open-source status verified before work starts
 - [ ] Each per-code skill meets the quality bar in skills-catalog.md (install, verified deck examples, run/parse, benchmark to N digits, failure modes) before it ships
 
-## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki)
+## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki + semantic relations)
 
+- [ ] **Semantic layer (L3) full run in progress** (armed 2026-07-15, off-peak launcher run_full_relations.sh, self-looping): 33,377 citing papers classified into typed relations (extends/applies/uses/compares/contrasts), then inject `## Related work` across the corpus. Design [semantic-layer-design.md](semantic-layer-design.md). Morning check + Claude spot-check of contrasts edges when done
+- [ ] **INSPIRE citation backfill for ~11,489 zero-edge papers** (finding 2026-07-15): newest papers are preprints using external `\bibliography{}`, and the corpus stores only .tex (no .bib/.bbl), so their in-corpus citation edges are unextractable from source (increment-tail coverage 27% vs corpus-wide 81%). Fix: query INSPIRE references API (zero LLM tokens, reuse literature-search tooling), map to corpus ids, merge into citations.tsv, re-inject. Also lifts the semantic layer since it feeds on citation edges
 - [ ] Abstract-only pages for the ~1,655 corpus papers without fulltext (lighter template, separate small batch)
 - [ ] 109+ topic landscape syntheses (DeepSeek, one per topic page)
 - [ ] Widen neighbor whitelist to cut the 36.4% unclassified rate (hadron structure, heavy-ion subconcepts; sampled unclassified = mix of true out-of-scope and concept gaps)
 - [ ] Tier-B citation edges (111k author-year heuristic edges) deserve a false-positive audit pass
-- [ ] Hook monthly re-run (digest new papers + kb_classify + build_wiki_layers + kb_citegraph + inject) into the corpus-update launchd job
+- [ ] Hook monthly re-run (digest new papers + kb_classify + build_wiki_layers + kb_citegraph + inject + kb_relations) into the corpus-update launchd job
 - [x] Distribution decision for kb-wiki: user decided 2026-07-10, pages live directly in the main repo (night-1 19,202 pages pushed in a1c4357; final ~250 MB, revisit only if GitHub complains)
 - [ ] Licensing decision for the public artifact: abstracts included vs snippets vs fetch-on-first-run [user decision]
 - [ ] Optional later: MCP server exposing kb_search/kb_browse (demoted from load-bearing to sugar, per 2026-07-09 revision)
@@ -48,6 +50,7 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 
 ## Completed
 
+- [x] 2026-07-15: Semantic layer (L3) built and validated. DeepSeek v4-pro on deepseek-semantic.md brief: citation-context extractor + relation classifier (6 types) + bidirectional page injector; 200-paper sample. Claude cross-review: hard gate 1711.07540->1511.03214 = extends verified against raw .tex; 3 contrasts edges independently confirmed real; type distribution healthy (76.6% background discarded, contrasts 2.6%). Fixed one self-flagged overfire (target-as-evidence-against-third-party now correctly `uses` not `contrasts`), re-verified. Merged kb-semantic; full 33,377-paper run armed off-peak
 - [x] 2026-07-15: Phase 3 CORE COMPLETE. Full corpus digested (61,059/61,059 pages over 4 off-peak windows, zero API failures, ~$120 total). Cross-link layers built by DeepSeek v4-pro on the deepseek-crosslink.md brief and Claude cross-reviewed: L0 physh-nuclear.yaml (180 concepts, tiered matching, negative filters), L1 classification 38,824 papers tagged + 109 topic pages + index tree, L2 citation graph 351,338 in-corpus edges (calibration edge 1711.07540->1511.03214 verified; Tier A edge spot-checked in raw .tex; 81.2% of papers have >= 1 edge). All 61,059 pages carry concepts frontmatter + In-corpus citations sections. Final QC: 13 defect pages regenerated, 0 em-dash, 0 malformed
 - [x] 2026-07-14: Phase 2 first per-code skill landed in-repo: `skills/fresco/` real self-contained copy (establishes skills/ layer) + binary auto-install (install_fresco.sh clones+builds I-Thompson/fresco when ~/bin/PATH lack it, run_fresco.sh auto-wires); gfortran build reproduces B1-elastic sigma_R = 1575.17495 (ref 1575.175). Codex cross-checked; caught the cp -R symlink trap (see devlog 2026-07-14), applied fixes #1/#12/#4/#16/#17
 - [x] 2026-07-09: Phase 0 quality gate, all items: opencode 1.17.15 + DeepSeek/Qwen keys + 36 skills symlinked (pre-existing); 3 real-case tests vs Claude references (litsearch exact BibTeX; fresco 4-5 sig figs; prc-writing 10/10 verified citations); user verdict = proceed (phase0/report.md)
