@@ -10,7 +10,7 @@ REL=kb-wiki/relations.tsv
 LOG=kb-wiki/relations-run-$(date +%Y%m%d-%H%M).log
 
 minutes_now() { echo $((10#$(date +%H) * 60 + 10#$(date +%M))); }
-todo_count() { $PY scripts/kb_relations.py full --workers 1 2>&1 | grep -o '[0-9]* to go' | grep -o '[0-9]*' | head -1; }
+todo_count() { $PY scripts/kb_relations.py full --count-only 2>/dev/null | grep -o '[0-9]*' | head -1; }
 
 echo "armed $(date)" >> "$LOG"
 while :; do

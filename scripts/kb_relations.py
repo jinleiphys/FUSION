@@ -1083,9 +1083,6 @@ def cmd_full(args):
 
     out_tsv = args.out or str(KB_WIKI / "relations.tsv")
     workers = args.workers
-    meta_index = build_corpus_index()
-    arxiv_meta, doi_to_aid, arxiv_id_set, surname_year_index, given_year_index = meta_index
-    api_key = load_api_key()
     out_edges = load_citation_edges()
 
     citing_all = [a for a, cited in out_edges.items() if cited]
@@ -1100,7 +1097,16 @@ def cmd_full(args):
                 if p:
                     done.add(p[0])
     todo = [a for a in citing_all if a not in done]
+
+    if getattr(args, "count_only", False):
+        # Cheap resumability probe for the launcher; runs NO classification.
+        print(f"{len(todo)} to go", flush=True)
+        return
     print(f"full: {len(citing_all)} citing papers, {len(done)} done, {len(todo)} to go, {workers} workers", flush=True)
+
+    meta_index = build_corpus_index()
+    arxiv_meta, doi_to_aid, arxiv_id_set, surname_year_index, given_year_index = meta_index
+    api_key = load_api_key()
 
     lock = threading.Lock()
     stats = {"n": 0, "edges": 0, "in": 0, "out": 0}
@@ -1170,6 +1176,7 @@ if __name__ == "__main__":
     p_full = sub.add_parser("full", help="Full-corpus classify, parallel + resumable")
     p_full.add_argument("--workers", type=int, default=32)
     p_full.add_argument("--out", default=None)
+    p_full.add_argument("--count-only", action="store_true", help="Print remaining count and exit, no classification")
 
     args = ap.parse_args()
 
