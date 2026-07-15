@@ -1076,6 +1076,81 @@ def cmd_inject(args):
                         break
 
 
+def cmd_full(args):
+    """Full-corpus classification, parallel + resumable (Step: maintainer run)."""
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    import threading
+
+    out_tsv = args.out or str(KB_WIKI / "relations.tsv")
+    workers = args.workers
+    meta_index = build_corpus_index()
+    arxiv_meta, doi_to_aid, arxiv_id_set, surname_year_index, given_year_index = meta_index
+    api_key = load_api_key()
+    out_edges = load_citation_edges()
+
+    citing_all = [a for a, cited in out_edges.items() if cited]
+    citing_all.sort()
+
+    done = set()
+    if Path(out_tsv).exists():
+        with open(out_tsv) as f:
+            next(f, None)
+            for line in f:
+                p = line.split("\t", 1)
+                if p:
+                    done.add(p[0])
+    todo = [a for a in citing_all if a not in done]
+    print(f"full: {len(citing_all)} citing papers, {len(done)} done, {len(todo)} to go, {workers} workers", flush=True)
+
+    lock = threading.Lock()
+    stats = {"n": 0, "edges": 0, "in": 0, "out": 0}
+    header_needed = not Path(out_tsv).exists()
+    out_f = open(out_tsv, "a")
+    if header_needed:
+        out_f.write("citing\tcited\ttype\tconfidence\tevidence\n")
+
+    def work(citing_aid):
+        cited_set = out_edges.get(citing_aid, set())
+        entries = []
+        for cited_aid in cited_set:
+            cm = arxiv_meta.get(cited_aid, {})
+            if cm:
+                entries.append((cited_aid, cm.get("title", cited_aid), ""))
+        if not entries:
+            return citing_aid, [], 0, 0
+        contexts = extract_contexts_for_citing(
+            citing_aid, cited_set, arxiv_meta, arxiv_id_set,
+            surname_year_index, given_year_index, doi_to_aid)
+        ewc = [(c, t, contexts.get(c, "")) for c, t, _ in entries]
+        for attempt in range(3):
+            try:
+                results, usage = classify_relations(citing_aid, ewc, api_key, arxiv_meta)
+                return citing_aid, results, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
+            except Exception:
+                if attempt == 2:
+                    return citing_aid, [], 0, 0
+                time.sleep(20)
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = {ex.submit(work, a): a for a in todo}
+        for fut in as_completed(futs):
+            citing_aid, results, ti, to = fut.result()
+            with lock:
+                for r in results:
+                    ev = r.get("rationale", "").replace("\t", " ").replace("\n", " ")
+                    out_f.write(f"{citing_aid}\t{r['cited']}\t{r['type']}\t{r['confidence']}\t{ev}\n")
+                    stats["edges"] += 1
+                out_f.flush()
+                stats["n"] += 1
+                stats["in"] += ti
+                stats["out"] += to
+                if stats["n"] % 100 == 0:
+                    print(f"  {stats['n']}/{len(todo)} papers, {stats['edges']} edges, "
+                          f"in={stats['in']} out={stats['out']}", flush=True)
+    out_f.close()
+    print(f"DONE full: {stats['n']} papers, {stats['edges']} edges, in={stats['in']} out={stats['out']}", flush=True)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="FUSION L3-semantic relation layer")
     sub = ap.add_subparsers(dest="command")
@@ -1092,6 +1167,10 @@ if __name__ == "__main__":
     p_inject = sub.add_parser("inject", help="Inject Related work sections into pages")
     p_inject.add_argument("--relations-tsv", default=None)
 
+    p_full = sub.add_parser("full", help="Full-corpus classify, parallel + resumable")
+    p_full.add_argument("--workers", type=int, default=32)
+    p_full.add_argument("--out", default=None)
+
     args = ap.parse_args()
 
     if args.command == "extract":
@@ -1103,5 +1182,7 @@ if __name__ == "__main__":
         cmd_sample(args)
     elif args.command == "inject":
         cmd_inject(args)
+    elif args.command == "full":
+        cmd_full(args)
     else:
         ap.print_help()
