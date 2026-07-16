@@ -22,7 +22,8 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 
 ## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki + semantic relations)
 
-- [ ] **Semantic layer (L3) full run in progress** (armed 2026-07-15, off-peak launcher run_full_relations.sh, self-looping): 33,377 citing papers classified into typed relations (extends/applies/uses/compares/contrasts), then inject `## Related work` across the corpus. Design [semantic-layer-design.md](semantic-layer-design.md). Morning check + Claude spot-check of contrasts edges when done
+- [ ] **Semantic layer (L3) full run in progress** (off-peak launcher run_full_relations.sh, self-looping): as of 2026-07-16, 30,082/54,378 citing papers classified (target grew from 33,377 after the INSPIRE backfill added edges), 431k typed edges, 36% non-background; contrasts 2.7% (healthy, spot-checked). ~24,296 to go, ~1 more window. Then inject `## Related work` across the corpus. Design [semantic-layer-design.md](semantic-layer-design.md)
+- [ ] relations.tsv exceeds GitHub's 50 MB soft warning (51 MB at 431k edges, will grow to ~90 MB at full 728k). Decide handling after L3 completes: gzip in-repo, or Git LFS, or fold into the eventual kb-wiki repo split. Not blocking (push still works)
 - [ ] Abstract-only pages for the ~1,655 corpus papers without fulltext (lighter template, separate small batch)
 - [ ] 109+ topic landscape syntheses (DeepSeek, one per topic page)
 - [ ] Widen neighbor whitelist to cut the 36.4% unclassified rate (hadron structure, heavy-ion subconcepts; sampled unclassified = mix of true out-of-scope and concept gaps)
