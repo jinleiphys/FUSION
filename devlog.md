@@ -2,6 +2,14 @@
 
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 
+## 2026-07-20: semantic full run made ZERO progress for 3 nights; KINGSTON .tex read hung the batch
+
+**Why we tried it:** Weekend auto-finish of the last 3,181 semantic-layer papers via the off-peak launcher.
+**What failed:** Three consecutive off-peak windows (Fri/Sat/Sun) each opened, started `full --workers 40`, and produced ZERO new edges; relations.tsv was byte-identical Friday to Monday, stuck at 51,197/54,378 citing papers. A manual `full` run confirmed: the first ~20 papers classify fast, then all workers freeze, and after 4 minutes there were 0 API-timeout fallbacks (so the hang was NOT the API).
+**Root cause:** The hang is in `extract_citation_context` reading each citing paper's .tex from the KINGSTON exFAT drive. File I/O has no timeout, so a pathological/slow .tex read blocks a worker forever. The remaining 3,181 papers are all recent (2025-2026) whose edges came from the INSPIRE backfill; their .tex uses external `\bibliography{}` with no inline cites, so context extraction was both useless (nothing to find) AND the thing that hung. The API 300s timeout was a red herring (never reached).
+**Lesson:** File I/O in a worker pool needs a timeout or a size/skip guard, same discipline as network calls. For backfill papers there is no .tex context to extract by definition, so skip it. Fix: added `--no-context` (classify on titles+abstracts, no .tex read) which cleared the 3,181 in ~3 minutes at ~19 papers/s; also lowered the API timeout 300s->60s and made a 3-retry failure write a background fallback so a poison paper is marked done instead of re-poisoning every future window.
+**Status:** Replaced by --no-context path; semantic layer completed 2026-07-20.
+
 ## 2026-07-15: newest papers have near-empty citation edges (external .bib not in corpus)
 
 **Why we tried it:** User asked whether the overnight digest increment got cross-referenced. Spot-checked the newest paper (2606.18165) then the last 500 ids in the date-sorted list.

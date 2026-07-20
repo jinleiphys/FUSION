@@ -491,7 +491,7 @@ Return ONLY the JSON array, no other text."""
         }).encode(),
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"},
     )
-    resp = json.load(urllib.request.urlopen(req, timeout=300))
+    resp = json.load(urllib.request.urlopen(req, timeout=60))
     content = resp["choices"][0]["message"]["content"]
     usage = resp.get("usage", {})
 
@@ -1124,18 +1124,26 @@ def cmd_full(args):
                 entries.append((cited_aid, cm.get("title", cited_aid), ""))
         if not entries:
             return citing_aid, [], 0, 0
-        contexts = extract_contexts_for_citing(
-            citing_aid, cited_set, arxiv_meta, arxiv_id_set,
-            surname_year_index, given_year_index, doi_to_aid)
-        ewc = [(c, t, contexts.get(c, "")) for c, t, _ in entries]
+        if getattr(args, "no_context", False):
+            ewc = [(c, t, "") for c, t, _ in entries]
+        else:
+            contexts = extract_contexts_for_citing(
+                citing_aid, cited_set, arxiv_meta, arxiv_id_set,
+                surname_year_index, given_year_index, doi_to_aid)
+            ewc = [(c, t, contexts.get(c, "")) for c, t, _ in entries]
         for attempt in range(3):
             try:
                 results, usage = classify_relations(citing_aid, ewc, api_key, arxiv_meta)
                 return citing_aid, results, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
             except Exception:
                 if attempt == 2:
-                    return citing_aid, [], 0, 0
-                time.sleep(20)
+                    # Mark the paper done with a background fallback so it is not
+                    # retried forever (poison papers otherwise block every window).
+                    fallback = [{"cited": c, "type": "background", "confidence": "low",
+                                 "rationale": "classification failed after retries"}
+                                for c, _, _ in ewc]
+                    return citing_aid, fallback, 0, 0
+                time.sleep(5)
 
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futs = {ex.submit(work, a): a for a in todo}
@@ -1177,6 +1185,7 @@ if __name__ == "__main__":
     p_full.add_argument("--workers", type=int, default=32)
     p_full.add_argument("--out", default=None)
     p_full.add_argument("--count-only", action="store_true", help="Print remaining count and exit, no classification")
+    p_full.add_argument("--no-context", action="store_true", help="Skip .tex context extraction (titles+abstracts only); use for backfill papers whose .tex has no inline cites")
 
     args = ap.parse_args()
 
