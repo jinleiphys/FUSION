@@ -1,0 +1,21 @@
+&general  
+        nr=100  alpha=0 Rmax=40 ctheta=4 
+        matgauss=t bgauss=t
+        numgauss = 400 rmaxgauss=150 
+        thetah=0.5 thetamax=180
+        cwftype=2 backrot=t/
+
+&system 
+        zp=3    massp=6     namep='6Li'
+        zt=82   masst=208   namet='208Pb'
+        jmin=0 jmax=40  elab=40 /  
+
+&pot
+        vv=109.500 rv=1.326 av=0.811
+        wv=22.384 rw=1.534 aw=0.884
+        vs=0 rvs=0 avs=0
+        ws=0 rws=0 aws=0 
+        rc=1.3 /
+
+&nonlocalpot
+        nonlocal=f nlbeta=0.0 /

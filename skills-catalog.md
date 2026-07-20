@@ -52,7 +52,7 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 ## Lei code family (ONLY published + publicly-open ones; hard rule, see CLAUDE.md)
 
 Eligible (published paper + public repo, skills double as student onboarding docs):
-- [ ] COLOSS (CPC 311, 109568 (2025); github.com/jinleiphys/COLOSS)
+- [x] COLOSS (CPC 311, 109568 (2025)) DONE: skills/coloss/, install+run scripts, FRESCO cross-check 4 sig figs + theta-invariance 5 sig figs (2026-07-20)
 - [ ] SLAM.jl (PRC 113, 024614 (2026); github.com/jinleiphys/SLAM.jl)
 - [ ] PINN-ECS (PRC 113, 064618 (2026); github.com/jinleiphys/PINN-ECS)
 - [ ] inhomoR (PRC 102 (2020); github.com/jinleiphys/inhomoR)
