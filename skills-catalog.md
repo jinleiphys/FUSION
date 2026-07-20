@@ -49,12 +49,23 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 - [V] **Geant4** — huge; a skill is feasible but scope must be narrowed (physics-list selection + common nuclear setups).
 - [x] excluded: MCNP (export-controlled), FLUKA/PHITS (restrictive licenses).
 
-## Lei code family (group-owned, skills also serve as onboarding docs for students)
+## Lei code family (ONLY published + publicly-open ones; hard rule, see CLAUDE.md)
 
-- [ ] smoothie, transfer, inhomoR (Line A engines)
-- [ ] COLOSS, SLAM.jl, swift.jl (scattering/few-body)
-- [ ] HPRMAT, STARS-public-parts (HPC)
-- [ ] PINN-ECS, DREAM (ML/UQ)
+Eligible (published paper + public repo, skills double as student onboarding docs):
+- [ ] COLOSS (CPC 311, 109568 (2025); github.com/jinleiphys/COLOSS)
+- [ ] SLAM.jl (PRC 113, 024614 (2026); github.com/jinleiphys/SLAM.jl)
+- [ ] PINN-ECS (PRC 113, 064618 (2026); github.com/jinleiphys/PINN-ECS)
+- [ ] inhomoR (PRC 102 (2020); github.com/jinleiphys/inhomoR)
+
+Per-code judgment call (public repo, but journal paper still in review, ask user):
+- [ ] HPRMAT (CPC in revision; arXiv 2512.11590; github.com/jinleiphys/HPRMAT)
+- [ ] swift.jl (public repo; no journal paper yet)
+- [ ] DREAM (public repo; PLB in submission; note: bundles internal pstars)
+
+EXCLUDED (not publicly released, never get a FUSION skill):
+- STARS / pstars (internal repo only)
+- smoothie (not public)
+- transfer (not public)
 
 ## Skill quality bar (every entry, no exceptions)
 
