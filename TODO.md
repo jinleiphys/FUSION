@@ -16,7 +16,13 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (reproduce each code's own documented reference values, not cross-code matching), one at a time (build+benchmark cannot be parallelized). Private-code boundary: only published + publicly-open codes (excludes THOx, smoothie, transfer, STARS). Full roadmap + status: [skills-catalog.md](skills-catalog.md).
 
 - [ ] Port the existing ~30 research skills (writing, review, literature, figures) to FUSION format; strip Claude-Code-only mechanics per skill
-- [ ] Next community code: TALYS (GPL, ships hundreds of sample cases with reference output; large build)
+- [ ] TALYS follow-up: the 11 GB install (8.6 GB structure DB) is the heaviest skill so far and will dominate any `install.sh` bundle in Phase 4; decide whether the distribution offers TALYS as an opt-in extra rather than a default [user decision]
+- [ ] **New Wave 1b from the community optical-potential code list (2026-07-20)**, ahead of Wave 2 because each is small, CPC-published-and-distributed (openness already settled), ships author test cases, and sits on an active research line. Order: **pikoe** (Ogata/Yoshida/Chazono, DWIA proton knockout; QFS-RB invited talk + quenching paper, Yoshida is a co-author), **NLAT** (Titus/Ross/Nunes, nonlocal ADWA/DWBA transfer; independent cross-check of the LG18891CR nonlocality engine), **CNOK** (Glauber knockout; partner for the IAV-vs-Glauber line), **SWANLOP + SIDES** as a pair (nonlocal-OMP scattering, siblings of COLOSS's Perey-Buck path)
+- [ ] Look at **JITR** (Beyer, Python R-matrix built for calibration/UQ, github.com/beykyle/jitr) before deciding on a skill: it is the closest external code to Line D / DREAM / the emulator work, so it may be more useful as something to read and compare against than as a skill
+- [ ] Verify publications for JITR and YAHFC, and licenses for the Alex Brown bundle, before any of them get a skill (open repo alone does not satisfy the hard rule)
+- [ ] Decide FRESCO upstream: the skill builds I-Thompson/fresco, but LLNL/Frescox is the actively maintained fork [user decision]
+- [ ] Theo4Exp (Seville/Krakow/Milano platform) is registration-gated, so it fails the publicly-obtainable rule as written; flagged not deleted, since it is Moro-adjacent [user decision]
+- [ ] GSM follow-ups: benchmark a GSM-CC reaction case (Chapter 9), noting the book's Ex X/XI numbers are superseded by GSM-2.0
 - [ ] Then Wave 2 community heavyweights: KSHELL, GEMINI++, GEF, AZURE2, SkyNet
 - [ ] Eligible Lei codes when convenient: SLAM.jl, PINN-ECS, inhomoR (COLOSS done)
 - [ ] Each per-code skill meets the quality bar in skills-catalog.md (install from public source, verified deck examples, run/parse, benchmark to N digits with a CLEAN-ROOM build test, failure modes) before it ships
@@ -43,12 +49,73 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 - [ ] Pilot with 2-3 group students; collect failures into devlog
 - [ ] v2+: TUI popup wizard (plugin slots), ORCID/INSPIRE author lookup, group mode (advisor-curated shared config)
 
+## Papers to download (user fetches from the office; added 2026-07-20)
+
+Needed to write the Wave 1b per-code skills. Each code's SOURCE is already
+obtainable (Mendeley Data / CPC Library), but the CPC paper is what documents the
+input format, the keyword semantics, and the author's own test cases with
+reference values, which is what a benchmark has to reproduce. ScienceDirect
+blocks automated fetching (HTTP 403), hence this list.
+
+All DOIs below were verified live against CrossRef on 2026-07-20; author, title,
+journal, volume, page and year are as returned by the CrossRef record.
+
+| # | code | paper | DOI |
+|---|---|---|---|
+| 1 | **pikoe** | Ogata, Yoshida, Chazono, *pikoe: A computer program for distorted-wave impulse approximation calculation for proton induced nucleon knockout reactions*, Comput. Phys. Commun. **297**, 109058 (2024) | `10.1016/j.cpc.2023.109058` |
+| 2 | **NLAT** | Titus, Ross, Nunes, *Transfer reaction code with nonlocal interactions*, Comput. Phys. Commun. **207**, 499-517 (2016) | `10.1016/j.cpc.2016.06.022` |
+| 3 | **CNOK** | Sun, Wang, *CNOK: A C++ Glauber model code for single-nucleon knockout reactions*, Comput. Phys. Commun. **288**, 108726 (2023) | `10.1016/j.cpc.2023.108726` |
+| 4 | **SWANLOP** | Arellano, Blanchon, *SWANLOP: Scattering waves off nonlocal optical potentials in the presence of Coulomb interaction*, Comput. Phys. Commun. **259**, 107543 (2021) | `10.1016/j.cpc.2020.107543` |
+| 5 | **SIDES** | Blanchon, Dupuis, Arellano, *SIDES: Nucleon-nucleus elastic scattering code for nonlocal potentials*, Comput. Phys. Commun. **254**, 107340 (2020) | `10.1016/j.cpc.2020.107340` |
+
+Priority order is the Wave 1b build order: 1 first (pikoe is next up), then 2, 3,
+then 4 and 5 together (SWANLOP and SIDES are siblings from the same group).
+
+**pikoe packaging note (found 2026-07-20; user resolved the same day: proceed).**
+The user's ruling: the skill's goal is to get the INPUT right, so an input manual
+plus 5 real decks is sufficient to build it, and the missing reference output
+does not block. Consequence to state honestly in the skill: pikoe's benchmark
+tier is lower than FRESCO/COLOSS/CCFULL/GSM/TALYS. Those reproduce documented
+reference numbers; pikoe can only be verified as builds + runs + produces
+physically sensible output, plus internal consistency between its own samples
+(sample1 normal vs sample4 inverse kinematics are the same reaction, and sample2
+vs sample3 are the same observable at 392 vs 100 MeV). Upgrade path once the CPC
+paper arrives: compare against its published figures. Details of what is missing:
+
+The source is fetched
+and fine (`pikoe1.1.f90`, 2025-03-18, from the author's RCNP page via the
+attach-plugin URL; the plain `.zip`/`.f90` URLs 403/404, use
+`index.php?plugin=attach&refer=files&openfile=pikoe1.1.zip`). It ships a real
+input manual (`input_man.txt`) and 5 sample cases. **But it ships no reference
+output.** `readme.txt` documents a `tbl_*.dat` and a `*.outlist` in every sample
+directory; neither is in the archive. Verified against both releases: v1.1 has 22
+entries, v1.0 has 13, and in both the `sampleN/` directories contain only the
+`.cnt` input. So the FUSION standard benchmark (reproduce the code's OWN
+documented reference values) cannot be run as things stand. Three options:
+  (a) **Ask the authors.** Kazuki Yoshida is a co-author and is the person who
+      invited Lei to QFS-RB 2026, so this is a one-line email and by far the
+      cleanest fix. It also likely helps the authors, since the packaging defect
+      is theirs and they may not know.
+  (b) Use the CPC paper's figures as a weak qualitative check. Fails the
+      N-significant-figures bar; not really a benchmark.
+  (c) Cross-check against another DWIA code. The catalog strategy explicitly
+      warns against this (convention archaeology, the COLOSS cautionary case).
+(a) is still worth doing opportunistically, since the packaging defect is the
+authors' and they likely do not know, but it is no longer blocking.
+
+Drop the PDFs anywhere convenient and point me at the directory. Papers 1 to 3
+are also worth ingesting into the literature-wiki afterwards: all three sit on
+active research lines (knockout/QFS, nonlocality, Glauber-vs-IAV) and none of
+them currently has a wiki source page.
+
 ## Wiki ingest queue
 
-(empty; no paper citations in the project yet)
+- TALYS code paper: Koning, Hilaire, Goriely, *TALYS: modeling of nuclear reactions*, Eur. Phys. J. A **59**, 131 (2023), DOI `10.1140/epja/s10050-023-01034-3`. Wiki precheck on 2026-07-20 returned **Related-only**: TALYS is named in 11 pages (methods/hauser-feshbach, entities/koning-aj, entities/ripl-library, and others) but has no source page of its own, so every mention is currently unanchored. Open access on SpringerLink, so no download trip needed.
 
 ## Completed
 
+- [x] 2026-07-20: Fifth per-code skill: TALYS (skills/talys/, Koning + Hilaire + Goriely, EPJA 59, 131 (2023), MIT). install/run/verify scripts; 5 clean-room sample benchmarks (n-Nb093-14MeV-full, n-Sn120-omp-KD03, n-Th232-fis-wkb, n-Os187-astro-ng, p-Mo100-medical) reproducing 1415 of 1438 distributed reference files byte for byte, the remaining 18 data files to ~6 sig figs on 4633 observables (the precision of TALYS's own output format). Three traps found and handled, all of which produce confident-looking wrong results: locale-collation source glob dropping 13 files without LC_ALL=C; character(len=132) path cap forcing a short install root; and **exit status 0 on fatal error** (the CCFULL false-positive trap in a new guise). Citations verified live against CrossRef + INSPIRE; input reference written from the shipped 890-page manual, not from memory. FUSION now has 5 per-code skills (FRESCO, COLOSS, CCFULL, GSM, TALYS)
+- [x] 2026-07-20: Fourth per-code skill: GSM (skills/gsm/, Michel + Ploszajczak, LNP 983 Springer 2021, github.com/GSMUTNSR/book_codes, AFL v3.0). Covers the whole Berggren/Gamow stack: one-body Gamow states, pole and antibound searches, complex-scaling widths, two-body and many-body GSM, GSM-CC. install_gsm.sh clones + unpacks the shipped zips + patches + builds any of 10 targets; run_gsm.sh runs with a clean-room guard; compare_gsm.sh does magnitude-split numeric comparison (a plain diff is wrong here: shipped references are GSM-1.0, sources are GSM-2.0, print format changed). Three clean-room benchmarks vs the book's own exercise outputs: Ch2 Ex XV neutron resonance 11 sig figs / 35 observables, Ch3 Ex XIII Berggren diagonalization in a foreign basis 9 sig figs / 562, Ch5 Ex II 18O many-body 8 sig figs / 2539 (ground state 12 figs). Found + patched an upstream infinite recursion in numlib `finite()` (see devlog). FUSION now has 4 per-code skills (FRESCO, COLOSS, CCFULL, GSM)
 - [x] 2026-07-20: Phase 2 per-code skills, two shipped (both clean-room verified from public source). COLOSS (skills/coloss/, CPC 2025, Lei-eligible): builds from public repo (make + bundled C++ Coulomb lib + LAPACK), FRESCO cross-check n+40Ca sigma_R 1157.5 vs 1157.7 mb (4 sig figs) + complex-scaling theta-invariance 5 sig figs; radius convention (target-only At^1/3) documented. CCFULL (skills/ccfull/, Hagino CPC 1999, community): fetch+build from Kyoto page (FORTRAN77, gfortran -std=legacy), 16O+144Sm fusion reproduces reference barrier + sub-barrier excitation function exactly, tail 4-5 sig figs; caught+documented the interactive-stdin quirk. FUSION now has 3 per-code skills (FRESCO, COLOSS, CCFULL)
 - [x] 2026-07-20: 108 topic-page Landscape syntheses written by DeepSeek (grounded in each topic's top-15 cited papers' abstracts), 108/108 topic pages, ~217k/40k tokens (pennies), 0 em-dash. Quality spot-checked (breakup, shell-model, astro all accurate)
 

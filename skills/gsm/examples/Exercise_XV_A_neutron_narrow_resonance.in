@@ -1,0 +1,23 @@
+WS-analytic
+neutron
+80 points(Gauss.Legendre)
+500 points(uniform)
+20 fm(rotation.point)
+100 fm(real.maximal.radius)
+
+0d3/2
+
+0.65 fm(diffuseness)
+63 MeV(Vo)
+7.5 MeV(Vso)
+3 fm(R0)
+
+12 (A)
+target.recoil.neglected(no)
+12 amu(mass)
+1 amu(particle.mass)
+
+E.search
+starting.energy(no)
+
+

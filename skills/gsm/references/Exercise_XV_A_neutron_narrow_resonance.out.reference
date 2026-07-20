@@ -1,0 +1,38 @@
+potential : WS-analytic
+particle : neutron
+
+80 points(Gauss.Legendre)
+500 points(uniform)
+20 fm(rotation.point)
+100 fm(real.maximal.radius)
+
+0.65 fm(diffuseness)
+63 MeV(Vo)
+7.5 MeV(Vso)
+3 fm(R0)
+
+12 (A)
+target.recoil.neglected(no)
+12 amu(mass)
+1 amu(particle.mass)
+
+
+Problem : E.search
+
+neutron 0d3/2   k:(0.0917515662506845,-0.000267628597659627) fm^(-1)   E:0.190611209857967 MeV   G:2.22398142767732 keV   |Jost(k)|oo:2.36397013075873e-12
+0d3/2 norm from complex scaling : (8.78766441560655,0.0630946872819231)
+
+width[current formula]:2.22370766713551 keV
+
+2mu/hbar^2 : 0.0441646548 hbar^2/2m : 22.6425408401471
+
+best b[HO] : 2.00726682365353 fm
+overlap <wf|wf[HO]> : (0.938511435480252,-0.00656793595005771)
+
+C0 : (0.113790013384673,-0.000817002672241467)
+C+ : (0.0231323015559183,-0.000296534432480209)
+
+theta min : 0.167124619899949 degrees.
+
+rms radius : (4.63721686662526,0.622109217371133) fm 
+sigma(l , eta) : (0,0)

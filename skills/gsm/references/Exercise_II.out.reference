@@ -1,0 +1,1601 @@
+1 MPI.processes
+1 OpenMP.threads
+STORAGE_DIR: /tmp/workspace//
+
+print.detailed.information(no)
+interaction : MSGI-COSM
+pivot.from.file(no)
+basis potential(Berggren basis): WS-analytic
+
+OBMEs.interaction.read(no)
+no.TBMEs.read
+
+16 amu(frozen.core.mass)
+16 (A.core)
+8 (Z.core)
+
+nn (basis.space)
+nn (space)
+2 neutron(s)[basis]
+2 neutron(s)
+1.00866 amu(neutron.mass)
+h^2/2m[n]:20.7213599521807 MeV fm^2
+
+neutron.basis.potential(no)
+
+15 fm(rotation-point)
+50 fm(real.maximal.radius)
+80 points.before.R(Gauss.Legendre)
+80 points.after.R(Gauss.Legendre)
+600 points.before.R(uniform)
+600 points.after.R(uniform)
+6.5 fm(cut.function.radius)
+1 fm(cut.function.diffuseness)
+
+5 fm^(-1)(k.max.momentum.space)
+15 fm(R.Fermi.function.momentum.space)
+80 points.before.k.max.momentum.space(Gauss.Legendre)
+600 points.before.k.max.momentum.space(uniform)
+
+6 neutron.pole.state(s)
+0s1/2 HO.state(core.frozen) 
+0p3/2 HO.state(core.frozen) 
+0p1/2 HO.state(core.frozen) 
+0d5/2 S.matrix.pole  1 hw(truncation.energy) 
+1s1/2 S.matrix.pole  1 hw(truncation.energy) 
+0d3/2 S.matrix.pole  1 hw(truncation.energy) 
+
+0 neutron.scattering.like.partial.wave(s)
+3 neutron.contour(s)
+partial.wave   k.peak(fm^(-1)) k.middle(fm^(-1)) k.max(fm^(-1))   N.k.peak N.k.middle N.k.max   hw(truncation.energy)
+s1/2    (0.2,-0.15) (0.4,0) (2,0)   10 10 10   1
+d5/2    (0.2,-0.15) (0.4,0) (2,0)   10 10 10   1
+d3/2    (0.2,-0.15) (0.4,0) (2,0)   10 10 10   1
+
+
+Hamiltonian potential for core: WS-analytic
+
+l   d(fm)   R0(fm)   Vo(MeV)   Vso(MeV)
+0   0.61   2.954   59.192   0
+1   0.61   2.954   59.192   5.607
+2   0.61   2.954   59.192   5.607
+
+
+
+Basis potential: WS-analytic
+
+l   d(fm)   R0(fm)   Vo(MeV)   Vso(MeV)
+0   0.61   2.954   59.192   0
+1   0.61   2.954   59.192   5.607
+2   0.61   2.954   59.192   5.607
+
+50 (equivalent.potential.regularizor)
+100 (HF/MSDHF/OCM.iterations.maximal.number)
+1e-07 (HF/MSDHF/OCM.potential.precision)
+
+
++ (Parities)
+0 (Jmin)
+4 (Jmax)
+
+truncation.hw(no)
+truncation.particle.hole(no)
+
+Davidson
+1 Lanczos/Davidson.restarts
+configuration.probabilities.printed(yes)
+scattering.configuration.probabilities.printed(no)
+1e-05 (configuration.minimal.probability.printed)
+100 vectors
+1e-08 (eigenvector.precision)
+T2.CM.operators.calculated(yes)
+
+5 eigenset(s)
+eigenset   eigenvectors.number   eigenvectors.indices
+0+   3   0 1 2   
+1+   2   0 1   
+2+   5   0 1 2 3 4   
+3+   2   0 1   
+4+   2   0 1   
+
+A.dependence(no)
+
+2 (lmax.for.interaction)
+
+2 fm(R0)
+1 fm(mu)
+J-Pi   V[J,Pi,T=1]
+0+   -16.489
+1+   16.122
+2+   -12.181
+3+   37.417
+4+   -4.885
+
+2 fm(b.HO)
+l   n.max.HO
+0   10
+1   10
+2   10
+
+5 (J.relative.max.nuclear.interaction)
+
+
+3 neutron.partial.wave.b.HO(s)
+partial.wave   b.HO(fm)
+s1/2   2
+p1/2   2
+p3/2   2
+
+
+are.there.new.neutron.natural.orbitals(no)
+
+GSM.multipoles(no)
+EM.transitions(yes)
+11 (EM.transitions.number)
+EM.type   quantum.numbers.in   quantum.numbers.out   long.wavelength.approximation(yes/no)   HO.expansion(yes/no)
+M1    1+(0)   0+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+M1    1+(1)   0+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    2+(0)   0+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    2+(1)   0+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    2+(2)   0+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    2+(3)   0+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    2+(4)   0+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    3+(0)   2+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    3+(1)   2+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    4+(0)   2+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+E2    4+(1)   2+(0)   long.wavelength.approximation(yes)   HO.expansion(yes)
+
+EM.transitions.strength(no)
+beta.transitions(no)
+beta.transitions.strength(no)
+density(yes)
+14 (density.number)
+radial/momentum   Gauss.Legendre(yes/no)   quantum.numbers
+radial  Gauss.Legendre(yes)  0+(0)
+radial  Gauss.Legendre(yes)  0+(1)
+radial  Gauss.Legendre(yes)  0+(2)
+radial  Gauss.Legendre(yes)  1+(0)
+radial  Gauss.Legendre(yes)  1+(1)
+radial  Gauss.Legendre(yes)  2+(0)
+radial  Gauss.Legendre(yes)  2+(1)
+radial  Gauss.Legendre(yes)  2+(2)
+radial  Gauss.Legendre(yes)  2+(3)
+radial  Gauss.Legendre(yes)  2+(4)
+radial  Gauss.Legendre(yes)  3+(0)
+radial  Gauss.Legendre(yes)  3+(1)
+radial  Gauss.Legendre(yes)  4+(0)
+radial  Gauss.Legendre(yes)  4+(1)
+
+transition.density(no)
+correlation.density(no)
+pair.density(no)
+spectroscopic.factor(no)
+overlap.function(no)
+rms.radius(no)
+rms.radius.one.body.strength(no)
+Hamiltonian.parts(no)
+
+0.5 (neutron.effective.charge)
+unsigned int constants transferred
+int constants transferred
+bool constants transferred
+double constants transferred
+unsigned int tables transferred
+int tables transferred
+bool tables transferred
+double tables transferred
+complex tables transferred
+shells/PSI quantum numbers tables transferred
+
+Common input_data transfer done
+
+
+(neutrons) hw:10.3606799760904 MeV. 3/4 hw:7.77050998206776 MeV
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Input file data read and transfered
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Basis interaction
+-----------------
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Basis interaction calculated. time:2.7e-07 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+OCM potentials
+--------------
+
+
+Iteration:1 test:0.0309762482611161 (Berggren)
+Iteration:2 test:0.000535812350284984 (Berggren)
+Iteration:3 test:0.000169477863659874 (Berggren)
+Iteration:4 test:1.26130786495635e-05 (Berggren)
+Iteration:5 test:1.25288464376834e-06 (Berggren)
+Iteration:6 test:3.35149703929485e-07 (Berggren)
+Iteration:7 test:4.89557056620395e-08 (Berggren)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+HF/OCM potentials calculated. time:2.259933802 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Berggren basis neutron space
+----------------------------
+
+neutron 1s1/2   k : (0,0.490366133581123) fm^(-1)   E : -5.29674797625096 MeV   G : -0 keV   |Jost(k)|oo : 7.89674992063283e-11
+
+1s1/2 norm from complex scaling : (0.999999995189183,0)
+
+neutron 0d5/2   k : (0,0.433287280890114) fm^(-1)   E : -4.13542599293713 MeV   G : -0 keV   |Jost(k)|oo : 7.17204073907851e-14
+
+0d5/2 norm from complex scaling : (7.36970531962846,0)
+
+neutron 0d3/2   k : (0.207515096680936,-0.00532661768886154) fm^(-1)   E : 0.947941475839884 MeV   G : 97.3934134764417 keV   |Jost(k)|oo : 3.78483910878913e-11
+
+0d3/2 norm from complex scaling : (8.99139524279313,0.55388637266304)
+
+2s1/2 k:(0.00260934714828284,-0.00195701036121212) fm^(-1) E:6.56160605381587e-05 MeV G:0.449938700833083 keV
+3s1/2 k:(0.0134936633311016,-0.0101202474983262) fm^(-1) E:0.00175471330823117 MeV G:12.0323198278708 keV
+4s1/2 k:(0.0320590431700976,-0.0240442823775732) fm^(-1) E:0.00990484176963069 MeV G:67.9189149917533 keV
+5s1/2 k:(0.0566604605870753,-0.0424953454403065) fm^(-1) E:0.030939025505111 MeV G:212.153317749333 keV
+6s1/2 k:(0.0851125661018369,-0.0638344245763777) fm^(-1) E:0.0698125977217387 MeV G:478.714955806208 keV
+7s1/2 k:(0.114887433898163,-0.0861655754236223) fm^(-1) E:0.127201281857185 MeV G:872.237361306411 keV
+8s1/2 k:(0.143339539412925,-0.107504654559694) fm^(-1) E:0.198006040207419 MeV G:1357.75570427945 keV
+9s1/2 k:(0.167940956829902,-0.125955717622427) fm^(-1) E:0.271806398346976 MeV G:1863.81530295069 keV
+10s1/2 k:(0.186506336668898,-0.139879752501674) fm^(-1) E:0.335222849238529 MeV G:2298.67096620706 keV
+11s1/2 k:(0.197390652851717,-0.148042989638788) fm^(-1) E:0.375491055561009 MeV G:2574.7958095612 keV
+12s1/2 k:(0.202609347148283,-0.148042989638788) fm^(-1) E:0.421473305808719 MeV G:2642.8693075311 keV
+13s1/2 k:(0.213493663331102,-0.139879752501674) fm^(-1) E:0.573009915807028 MeV G:2631.28692640406 keV
+14s1/2 k:(0.232059043170098,-0.125955717622427) fm^(-1) E:0.836754970528972 MeV G:2575.40033124018 keV
+15s1/2 k:(0.256660460587075,-0.107504654559694) fm^(-1) E:1.1964839466753 MeV G:2431.1659284826 keV
+16s1/2 k:(0.285112566101837,-0.0861655754236223) fm^(-1) E:1.62706584234501 MeV G:2164.60429042573 keV
+17s1/2 k:(0.314887433898163,-0.0638344245763777) fm^(-1) E:2.0943736988765 MeV G:1771.08188492552 keV
+18s1/2 k:(0.343339539412925,-0.0424953454403065) fm^(-1) E:2.55688678067981 MeV G:1285.56354195249 keV
+19s1/2 k:(0.367940956829902,-0.0240442823775732) fm^(-1) E:2.96938193123021 MeV G:779.503943281239 keV
+20s1/2 k:(0.386506336668898,-0.0101202474983262) fm^(-1) E:3.28839330838231 MeV G:344.648280024877 keV
+21s1/2 k:(0.397390652851717,-0.00195701036121212) fm^(-1) E:3.47850902745541 MeV G:68.5234366707311 keV
+22s1/2 k:(0.420874777186263,0) fm^(-1) E:3.9018823559087 MeV G:-0 keV
+23s1/2 k:(0.507949306648813,0) fm^(-1) E:5.68341168385182 MeV G:-0 keV
+24s1/2 k:(0.656472345360781,0) fm^(-1) E:9.49295109225595 MeV G:-0 keV
+25s1/2 k:(0.853283684696602,0) fm^(-1) E:16.0381863587047 MeV G:-0 keV
+26s1/2 k:(1.0809005288147,0) fm^(-1) E:25.7359278694109 MeV G:-0 keV
+27s1/2 k:(1.31909947118531,0) fm^(-1) E:38.3286448454174 MeV G:-0 keV
+28s1/2 k:(1.5467163153034,0) fm^(-1) E:52.6974627276684 MeV G:-0 keV
+29s1/2 k:(1.74352765463922,0) fm^(-1) E:66.961635506942 MeV G:-0 keV
+30s1/2 k:(1.89205069335119,0) fm^(-1) E:78.8558483679857 MeV G:-0 keV
+31s1/2 k:(1.97912522281374,0) fm^(-1) E:86.2809502234405 MeV G:-0 keV
+
+1d5/2 k:(0.00260934714828284,-0.00195701036121212) fm^(-1) E:6.56160605381587e-05 MeV G:0.449938700833083 keV
+2d5/2 k:(0.0134936633311016,-0.0101202474983262) fm^(-1) E:0.00175471330823117 MeV G:12.0323198278708 keV
+3d5/2 k:(0.0320590431700976,-0.0240442823775732) fm^(-1) E:0.00990484176963069 MeV G:67.9189149917533 keV
+4d5/2 k:(0.0566604605870753,-0.0424953454403065) fm^(-1) E:0.030939025505111 MeV G:212.153317749333 keV
+5d5/2 k:(0.0851125661018369,-0.0638344245763777) fm^(-1) E:0.0698125977217387 MeV G:478.714955806208 keV
+6d5/2 k:(0.114887433898163,-0.0861655754236223) fm^(-1) E:0.127201281857185 MeV G:872.237361306411 keV
+7d5/2 k:(0.143339539412925,-0.107504654559694) fm^(-1) E:0.198006040207419 MeV G:1357.75570427945 keV
+8d5/2 k:(0.167940956829902,-0.125955717622427) fm^(-1) E:0.271806398346976 MeV G:1863.81530295069 keV
+9d5/2 k:(0.186506336668898,-0.139879752501674) fm^(-1) E:0.335222849238529 MeV G:2298.67096620706 keV
+10d5/2 k:(0.197390652851717,-0.148042989638788) fm^(-1) E:0.375491055561009 MeV G:2574.7958095612 keV
+11d5/2 k:(0.202609347148283,-0.148042989638788) fm^(-1) E:0.421473305808719 MeV G:2642.8693075311 keV
+12d5/2 k:(0.213493663331102,-0.139879752501674) fm^(-1) E:0.573009915807028 MeV G:2631.28692640406 keV
+13d5/2 k:(0.232059043170098,-0.125955717622427) fm^(-1) E:0.836754970528972 MeV G:2575.40033124018 keV
+14d5/2 k:(0.256660460587075,-0.107504654559694) fm^(-1) E:1.1964839466753 MeV G:2431.1659284826 keV
+15d5/2 k:(0.285112566101837,-0.0861655754236223) fm^(-1) E:1.62706584234501 MeV G:2164.60429042573 keV
+16d5/2 k:(0.314887433898163,-0.0638344245763777) fm^(-1) E:2.0943736988765 MeV G:1771.08188492552 keV
+17d5/2 k:(0.343339539412925,-0.0424953454403065) fm^(-1) E:2.55688678067981 MeV G:1285.56354195249 keV
+18d5/2 k:(0.367940956829902,-0.0240442823775732) fm^(-1) E:2.96938193123021 MeV G:779.503943281239 keV
+19d5/2 k:(0.386506336668898,-0.0101202474983262) fm^(-1) E:3.28839330838231 MeV G:344.648280024877 keV
+20d5/2 k:(0.397390652851717,-0.00195701036121212) fm^(-1) E:3.47850902745541 MeV G:68.5234366707311 keV
+21d5/2 k:(0.420874777186263,0) fm^(-1) E:3.9018823559087 MeV G:-0 keV
+22d5/2 k:(0.507949306648813,0) fm^(-1) E:5.68341168385182 MeV G:-0 keV
+23d5/2 k:(0.656472345360781,0) fm^(-1) E:9.49295109225595 MeV G:-0 keV
+24d5/2 k:(0.853283684696602,0) fm^(-1) E:16.0381863587047 MeV G:-0 keV
+25d5/2 k:(1.0809005288147,0) fm^(-1) E:25.7359278694109 MeV G:-0 keV
+26d5/2 k:(1.31909947118531,0) fm^(-1) E:38.3286448454174 MeV G:-0 keV
+27d5/2 k:(1.5467163153034,0) fm^(-1) E:52.6974627276684 MeV G:-0 keV
+28d5/2 k:(1.74352765463922,0) fm^(-1) E:66.961635506942 MeV G:-0 keV
+29d5/2 k:(1.89205069335119,0) fm^(-1) E:78.8558483679857 MeV G:-0 keV
+30d5/2 k:(1.97912522281374,0) fm^(-1) E:86.2809502234405 MeV G:-0 keV
+
+1d3/2 k:(0.00260934714828284,-0.00195701036121212) fm^(-1) E:6.56160605381587e-05 MeV G:0.449938700833083 keV
+2d3/2 k:(0.0134936633311016,-0.0101202474983262) fm^(-1) E:0.00175471330823117 MeV G:12.0323198278708 keV
+3d3/2 k:(0.0320590431700976,-0.0240442823775732) fm^(-1) E:0.00990484176963069 MeV G:67.9189149917533 keV
+4d3/2 k:(0.0566604605870753,-0.0424953454403065) fm^(-1) E:0.030939025505111 MeV G:212.153317749333 keV
+5d3/2 k:(0.0851125661018369,-0.0638344245763777) fm^(-1) E:0.0698125977217387 MeV G:478.714955806208 keV
+6d3/2 k:(0.114887433898163,-0.0861655754236223) fm^(-1) E:0.127201281857185 MeV G:872.237361306411 keV
+7d3/2 k:(0.143339539412925,-0.107504654559694) fm^(-1) E:0.198006040207419 MeV G:1357.75570427945 keV
+8d3/2 k:(0.167940956829902,-0.125955717622427) fm^(-1) E:0.271806398346976 MeV G:1863.81530295069 keV
+9d3/2 k:(0.186506336668898,-0.139879752501674) fm^(-1) E:0.335222849238529 MeV G:2298.67096620706 keV
+10d3/2 k:(0.197390652851717,-0.148042989638788) fm^(-1) E:0.375491055561009 MeV G:2574.7958095612 keV
+11d3/2 k:(0.202609347148283,-0.148042989638788) fm^(-1) E:0.421473305808719 MeV G:2642.8693075311 keV
+12d3/2 k:(0.213493663331102,-0.139879752501674) fm^(-1) E:0.573009915807028 MeV G:2631.28692640406 keV
+13d3/2 k:(0.232059043170098,-0.125955717622427) fm^(-1) E:0.836754970528972 MeV G:2575.40033124018 keV
+14d3/2 k:(0.256660460587075,-0.107504654559694) fm^(-1) E:1.1964839466753 MeV G:2431.1659284826 keV
+15d3/2 k:(0.285112566101837,-0.0861655754236223) fm^(-1) E:1.62706584234501 MeV G:2164.60429042573 keV
+16d3/2 k:(0.314887433898163,-0.0638344245763777) fm^(-1) E:2.0943736988765 MeV G:1771.08188492552 keV
+17d3/2 k:(0.343339539412925,-0.0424953454403065) fm^(-1) E:2.55688678067981 MeV G:1285.56354195249 keV
+18d3/2 k:(0.367940956829902,-0.0240442823775732) fm^(-1) E:2.96938193123021 MeV G:779.503943281239 keV
+19d3/2 k:(0.386506336668898,-0.0101202474983262) fm^(-1) E:3.28839330838231 MeV G:344.648280024877 keV
+20d3/2 k:(0.397390652851717,-0.00195701036121212) fm^(-1) E:3.47850902745541 MeV G:68.5234366707311 keV
+21d3/2 k:(0.420874777186263,0) fm^(-1) E:3.9018823559087 MeV G:-0 keV
+22d3/2 k:(0.507949306648813,0) fm^(-1) E:5.68341168385182 MeV G:-0 keV
+23d3/2 k:(0.656472345360781,0) fm^(-1) E:9.49295109225595 MeV G:-0 keV
+24d3/2 k:(0.853283684696602,0) fm^(-1) E:16.0381863587047 MeV G:-0 keV
+25d3/2 k:(1.0809005288147,0) fm^(-1) E:25.7359278694109 MeV G:-0 keV
+26d3/2 k:(1.31909947118531,0) fm^(-1) E:38.3286448454174 MeV G:-0 keV
+27d3/2 k:(1.5467163153034,0) fm^(-1) E:52.6974627276684 MeV G:-0 keV
+28d3/2 k:(1.74352765463922,0) fm^(-1) E:66.961635506942 MeV G:-0 keV
+29d3/2 k:(1.89205069335119,0) fm^(-1) E:78.8558483679857 MeV G:-0 keV
+30d3/2 k:(1.97912522281374,0) fm^(-1) E:86.2809502234405 MeV G:-0 keV
+
+
+Maximal       |overlap|oo:1.3770006398225e-07
+Average       |overlap|oo:3.73805999993906e-09
+Dispersion of |overlap|oo:1.21178426641034e-08
+
+Maximal       |overlap(wf , wf')|oo:2.49921427975495e-09
+Average       |overlap(wf , wf')|oo:2.83990320052914e-11
+Dispersion of |overlap(wf , wf')|oo:1.53282805368805e-10
+
+
+Maximal       |OCM overlap|oo:1.11350275522035e-07
+Average       |OCM overlap|oo:2.24898615900982e-08
+Dispersion of |OCM overlap|oo:2.5878714300278e-08
+
+
+neutron space basis states read/calculated. time:0.469575373 s
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Berggren basis calculated and built. time:0.469692798 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Interaction
+-----------
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interaction calculated. time:3.92999999654364e-07 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+OBMEs and TBMEs 
+----------------
+
+
+Basis energies neutron space
+----------------------------
+
+HO.shell 0s1/2 neutron E:-32.95377813478 MeV
+
+HO.shell 0p3/2 neutron E:-16.5444174385471 MeV
+
+HO.shell 0p1/2 neutron E:-13.1220037512056 MeV
+
+Berggren 1s1/2 neutron E:-5.29674797625096 MeV  Gamma:-0 keV
+
+Berggren 0d5/2 neutron E:-4.13542599293713 MeV  Gamma:-0 keV
+
+Berggren 0d3/2 neutron E:0.947941475839884 MeV  Gamma:97.3934134764417 keV
+
+Berggren 2s1/2 neutron E:6.56160605381587e-05 MeV  Gamma:0.449938700833083 keV
+Berggren 3s1/2 neutron E:0.00175471330823117 MeV  Gamma:12.0323198278708 keV
+Berggren 4s1/2 neutron E:0.00990484176963069 MeV  Gamma:67.9189149917533 keV
+Berggren 5s1/2 neutron E:0.030939025505111 MeV  Gamma:212.153317749333 keV
+Berggren 6s1/2 neutron E:0.0698125977217387 MeV  Gamma:478.714955806208 keV
+Berggren 7s1/2 neutron E:0.127201281857185 MeV  Gamma:872.237361306411 keV
+Berggren 8s1/2 neutron E:0.198006040207419 MeV  Gamma:1357.75570427945 keV
+Berggren 9s1/2 neutron E:0.271806398346976 MeV  Gamma:1863.81530295069 keV
+Berggren 10s1/2 neutron E:0.335222849238529 MeV  Gamma:2298.67096620706 keV
+Berggren 11s1/2 neutron E:0.375491055561009 MeV  Gamma:2574.7958095612 keV
+Berggren 12s1/2 neutron E:0.421473305808719 MeV  Gamma:2642.8693075311 keV
+Berggren 13s1/2 neutron E:0.573009915807028 MeV  Gamma:2631.28692640406 keV
+Berggren 14s1/2 neutron E:0.836754970528972 MeV  Gamma:2575.40033124018 keV
+Berggren 15s1/2 neutron E:1.1964839466753 MeV  Gamma:2431.1659284826 keV
+Berggren 16s1/2 neutron E:1.62706584234501 MeV  Gamma:2164.60429042573 keV
+Berggren 17s1/2 neutron E:2.0943736988765 MeV  Gamma:1771.08188492552 keV
+Berggren 18s1/2 neutron E:2.55688678067981 MeV  Gamma:1285.56354195249 keV
+Berggren 19s1/2 neutron E:2.96938193123021 MeV  Gamma:779.503943281239 keV
+Berggren 20s1/2 neutron E:3.28839330838231 MeV  Gamma:344.648280024877 keV
+Berggren 21s1/2 neutron E:3.47850902745541 MeV  Gamma:68.5234366707311 keV
+Berggren 22s1/2 neutron E:3.9018823559087 MeV  Gamma:-0 keV
+Berggren 23s1/2 neutron E:5.68341168385182 MeV  Gamma:-0 keV
+Berggren 24s1/2 neutron E:9.49295109225595 MeV  Gamma:-0 keV
+Berggren 25s1/2 neutron E:16.0381863587047 MeV  Gamma:-0 keV
+Berggren 26s1/2 neutron E:25.7359278694109 MeV  Gamma:-0 keV
+Berggren 27s1/2 neutron E:38.3286448454174 MeV  Gamma:-0 keV
+Berggren 28s1/2 neutron E:52.6974627276684 MeV  Gamma:-0 keV
+Berggren 29s1/2 neutron E:66.961635506942 MeV  Gamma:-0 keV
+Berggren 30s1/2 neutron E:78.8558483679857 MeV  Gamma:-0 keV
+Berggren 31s1/2 neutron E:86.2809502234405 MeV  Gamma:-0 keV
+
+Berggren 1d5/2 neutron E:6.56160605381587e-05 MeV  Gamma:0.449938700833083 keV
+Berggren 2d5/2 neutron E:0.00175471330823117 MeV  Gamma:12.0323198278708 keV
+Berggren 3d5/2 neutron E:0.00990484176963069 MeV  Gamma:67.9189149917533 keV
+Berggren 4d5/2 neutron E:0.030939025505111 MeV  Gamma:212.153317749333 keV
+Berggren 5d5/2 neutron E:0.0698125977217387 MeV  Gamma:478.714955806208 keV
+Berggren 6d5/2 neutron E:0.127201281857185 MeV  Gamma:872.237361306411 keV
+Berggren 7d5/2 neutron E:0.198006040207419 MeV  Gamma:1357.75570427945 keV
+Berggren 8d5/2 neutron E:0.271806398346976 MeV  Gamma:1863.81530295069 keV
+Berggren 9d5/2 neutron E:0.335222849238529 MeV  Gamma:2298.67096620706 keV
+Berggren 10d5/2 neutron E:0.375491055561009 MeV  Gamma:2574.7958095612 keV
+Berggren 11d5/2 neutron E:0.421473305808719 MeV  Gamma:2642.8693075311 keV
+Berggren 12d5/2 neutron E:0.573009915807028 MeV  Gamma:2631.28692640406 keV
+Berggren 13d5/2 neutron E:0.836754970528972 MeV  Gamma:2575.40033124018 keV
+Berggren 14d5/2 neutron E:1.1964839466753 MeV  Gamma:2431.1659284826 keV
+Berggren 15d5/2 neutron E:1.62706584234501 MeV  Gamma:2164.60429042573 keV
+Berggren 16d5/2 neutron E:2.0943736988765 MeV  Gamma:1771.08188492552 keV
+Berggren 17d5/2 neutron E:2.55688678067981 MeV  Gamma:1285.56354195249 keV
+Berggren 18d5/2 neutron E:2.96938193123021 MeV  Gamma:779.503943281239 keV
+Berggren 19d5/2 neutron E:3.28839330838231 MeV  Gamma:344.648280024877 keV
+Berggren 20d5/2 neutron E:3.47850902745541 MeV  Gamma:68.5234366707311 keV
+Berggren 21d5/2 neutron E:3.9018823559087 MeV  Gamma:-0 keV
+Berggren 22d5/2 neutron E:5.68341168385182 MeV  Gamma:-0 keV
+Berggren 23d5/2 neutron E:9.49295109225595 MeV  Gamma:-0 keV
+Berggren 24d5/2 neutron E:16.0381863587047 MeV  Gamma:-0 keV
+Berggren 25d5/2 neutron E:25.7359278694109 MeV  Gamma:-0 keV
+Berggren 26d5/2 neutron E:38.3286448454174 MeV  Gamma:-0 keV
+Berggren 27d5/2 neutron E:52.6974627276684 MeV  Gamma:-0 keV
+Berggren 28d5/2 neutron E:66.961635506942 MeV  Gamma:-0 keV
+Berggren 29d5/2 neutron E:78.8558483679857 MeV  Gamma:-0 keV
+Berggren 30d5/2 neutron E:86.2809502234405 MeV  Gamma:-0 keV
+
+Berggren 1d3/2 neutron E:6.56160605381587e-05 MeV  Gamma:0.449938700833083 keV
+Berggren 2d3/2 neutron E:0.00175471330823117 MeV  Gamma:12.0323198278708 keV
+Berggren 3d3/2 neutron E:0.00990484176963069 MeV  Gamma:67.9189149917533 keV
+Berggren 4d3/2 neutron E:0.030939025505111 MeV  Gamma:212.153317749333 keV
+Berggren 5d3/2 neutron E:0.0698125977217387 MeV  Gamma:478.714955806208 keV
+Berggren 6d3/2 neutron E:0.127201281857185 MeV  Gamma:872.237361306411 keV
+Berggren 7d3/2 neutron E:0.198006040207419 MeV  Gamma:1357.75570427945 keV
+Berggren 8d3/2 neutron E:0.271806398346976 MeV  Gamma:1863.81530295069 keV
+Berggren 9d3/2 neutron E:0.335222849238529 MeV  Gamma:2298.67096620706 keV
+Berggren 10d3/2 neutron E:0.375491055561009 MeV  Gamma:2574.7958095612 keV
+Berggren 11d3/2 neutron E:0.421473305808719 MeV  Gamma:2642.8693075311 keV
+Berggren 12d3/2 neutron E:0.573009915807028 MeV  Gamma:2631.28692640406 keV
+Berggren 13d3/2 neutron E:0.836754970528972 MeV  Gamma:2575.40033124018 keV
+Berggren 14d3/2 neutron E:1.1964839466753 MeV  Gamma:2431.1659284826 keV
+Berggren 15d3/2 neutron E:1.62706584234501 MeV  Gamma:2164.60429042573 keV
+Berggren 16d3/2 neutron E:2.0943736988765 MeV  Gamma:1771.08188492552 keV
+Berggren 17d3/2 neutron E:2.55688678067981 MeV  Gamma:1285.56354195249 keV
+Berggren 18d3/2 neutron E:2.96938193123021 MeV  Gamma:779.503943281239 keV
+Berggren 19d3/2 neutron E:3.28839330838231 MeV  Gamma:344.648280024877 keV
+Berggren 20d3/2 neutron E:3.47850902745541 MeV  Gamma:68.5234366707311 keV
+Berggren 21d3/2 neutron E:3.9018823559087 MeV  Gamma:-0 keV
+Berggren 22d3/2 neutron E:5.68341168385182 MeV  Gamma:-0 keV
+Berggren 23d3/2 neutron E:9.49295109225595 MeV  Gamma:-0 keV
+Berggren 24d3/2 neutron E:16.0381863587047 MeV  Gamma:-0 keV
+Berggren 25d3/2 neutron E:25.7359278694109 MeV  Gamma:-0 keV
+Berggren 26d3/2 neutron E:38.3286448454174 MeV  Gamma:-0 keV
+Berggren 27d3/2 neutron E:52.6974627276684 MeV  Gamma:-0 keV
+Berggren 28d3/2 neutron E:66.961635506942 MeV  Gamma:-0 keV
+Berggren 29d3/2 neutron E:78.8558483679857 MeV  Gamma:-0 keV
+Berggren 30d3/2 neutron E:86.2809502234405 MeV  Gamma:-0 keV
+
+
+Coupled TBMEs nn : 316.44019597799 Mb
+
+Coupled TBMEs nn calculated. time:4.462797539 s
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+OBMEs and TBMEs calculated. time:4.924040816 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Pole approximation dimensions
+-----------------------------
+
+0+ : dimension(J)=3
+1+ : dimension(J)=2
+2+ : dimension(J)=5
+3+ : dimension(J)=2
+4+ : dimension(J)=2
+
+
+Full space dimensions
+---------------------
+
+0+ : dimension(J)=1488
+1+ : dimension(J)=3317
+2+ : dimension(J)=3875
+3+ : dimension(J)=2852
+4+ : dimension(J)=1457
+
+Iteration 1  Iteration 2  
+Iteration 1  
+Iteration 1  Iteration 2  Iteration 3  Iteration 4  
+Iteration 1  
+Iteration 1  
+
+Pole approximation spectrum
+---------------------------
+
+Z:8 N:10   J Pi (index):0+(0)   E:-11.3636534616811 MeV G:-8.13793226533975 keV   E:0 MeV G:-8.13793226533975 keV
+Z:8 N:10   J Pi (index):0+(1)   E:-11.316148930919 MeV G:-1.13210121655629 keV   E:0.0475045307621684 MeV G:-1.13210121655629 keV
+Z:8 N:10   J Pi (index):2+(0)   E:-10.3982296578862 MeV G:-0.0628253111822087 keV   E:0.965423803794968 MeV G:-0.0628253111822087 keV
+Z:8 N:10   J Pi (index):2+(1)   E:-9.9372851453429 MeV G:-0.202068978399615 keV   E:1.42636831633823 MeV G:-0.202068978399615 keV
+Z:8 N:10   J Pi (index):4+(0)   E:-8.86893541117419 MeV G:-0.168425339127433 keV   E:2.49471805050694 MeV G:-0.168425339127433 keV
+Z:8 N:10   J Pi (index):3+(0)   E:-6.50312957941017 MeV G:9.36410650025058e-05 keV   E:4.86052388227096 MeV G:9.36410650025058e-05 keV
+Z:8 N:10   J Pi (index):2+(2)   E:-4.98343818218718 MeV G:-56.7525413946795 keV   E:6.38021527949395 MeV G:-56.7525413946795 keV
+Z:8 N:10   J Pi (index):2+(3)   E:-4.24567561648421 MeV G:-159.604769638601 keV   E:7.11797784519692 MeV G:-159.604769638601 keV
+Z:8 N:10   J Pi (index):4+(1)   E:-3.65488332204817 MeV G:-16.0102796486773 keV   E:7.70877013963296 MeV G:-16.0102796486773 keV
+Z:8 N:10   J Pi (index):1+(0)   E:-3.51356167116756 MeV G:300.002647769188 keV   E:7.85009179051357 MeV G:300.002647769188 keV
+Z:8 N:10   J Pi (index):1+(1)   E:-1.75955920024719 MeV G:443.846295563041 keV   E:9.60409426143394 MeV G:443.846295563041 keV
+Z:8 N:10   J Pi (index):3+(1)   E:-0.34697404366163 MeV G:786.588062984283 keV   E:11.0166794180195 MeV G:786.588062984283 keV
+Z:8 N:10   J Pi (index):0+(2)   E:0.714282073479641 MeV G:-386.565819683499 keV   E:12.0779355351608 MeV G:-386.565819683499 keV
+Z:8 N:10   J Pi (index):2+(4)   E:1.24744417655942 MeV G:-124.356595881035 keV   E:12.6110976382405 MeV G:-124.356595881035 keV
+
+
+Full space
+----------
+
+
+0+(0) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-12.33010872 MeV G:-41.74661409 keV test:0.2208012515  time:0.072030169 s
+Iteration 2  E:-12.45365616 MeV G:-1.867655261 keV test:0.3203776655  time:0.07478809 s
+Iteration 3  E:-12.45804658 MeV G:-0.01634071725 keV test:0.01720513361  time:0.071986814 s
+Iteration 4  E:-12.45807666 MeV G:-9.304633958e-05 keV test:0.001120535827  time:0.071354152 s
+Iteration 5  E:-12.45807708 MeV G:1.216750045e-05 keV test:0.000141616353  time:0.075336549 s
+Iteration 6  E:-12.45807708 MeV G:1.160658824e-05 keV test:5.376238377e-06  time:0.072925525 s
+Iteration 7  E:-12.45807708 MeV G:1.16061456e-05 keV test:1.031238308e-07  time:0.071395003 s
+Iteration 8  E:-12.45807708 MeV G:1.160614013e-05 keV test:3.257314589e-09  time:0.071533547 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 1.70956226952512e-09
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-12.4580770789518,-5.80307006701542e-09)  J Pi:0+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.00285757344174699,-8.09118288998958e-11)
+neutron 0d5/2 occupation : (1.92762239000868,-1.04314479076748e-09)
+neutron 0d3/2 occupation : (0.010682586157989,-0.00123264989196707)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.000163783841994205,1.36109982418686e-12)
+Scattering neutron d3/2 occupation : (0.00558034006646494,0.00123265092543776)
+Scattering neutron d5/2 occupation : (0.0530933264831298,8.92249143994634e-11)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.00302135728374121,-7.9550729075698e-11)
+neutron d3/2 occupation : (0.016262926224454,1.03347068544683e-09)
+neutron d5/2 occupation : (1.98071571649181,-9.53919876199369e-10)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 1s1/2 - neutron 1s1/2 : (0.00141503679545042,-3.86392384376855e-11)
+neutron 0d5/2 - neutron 0d5/2 : (0.941946875910502,-5.55714825501868e-10)
+neutron 0d3/2 - neutron 0d3/2 : (0.0036428964955169,-0.000845655955926915)
+neutron 1s1/2 - neutron scat s1/2 : (2.74998508461471e-05,-3.63335202462411e-12)
+neutron 0d5/2 - neutron scat d5/2 : (0.0437286381876713,6.82848602363533e-11)
+neutron 0d3/2 - neutron scat d3/2 : (0.00339679316695525,0.000458662019886762)
+neutron scat s1/2 - neutron scat s1/2 : (6.81419955740292e-05,2.4972259242168e-12)
+neutron scat d3/2 - neutron scat d3/2 : (0.00109177344975484,0.000386994452775496)
+neutron scat d5/2 - neutron scat d5/2 : (0.00468234414772921,1.04700271573858e-11)
+
+
+
+
+0+(1) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-11.47207958 MeV G:44.7086336 keV test:0.09817142234  time:0.070765182 s
+Iteration 2  E:-11.32661164 MeV G:0.2869964334 keV test:0.4045817977  time:0.07060903 s
+Iteration 3  E:-11.35156086 MeV G:0.0003069825052 keV test:0.0356989156  time:0.070550274 s
+Iteration 4  E:-11.35157131 MeV G:-3.253505869e-05 keV test:0.0005992240811  time:0.070594884 s
+Iteration 5  E:-11.35157145 MeV G:-7.088654847e-06 keV test:7.687759083e-05  time:0.070640364 s
+Iteration 6  E:-11.35157145 MeV G:-7.499168184e-06 keV test:7.798166825e-06  time:0.070919526 s
+Iteration 7  E:-11.35157145 MeV G:-7.500163951e-06 keV test:1.893674345e-07  time:0.070896029 s
+Iteration 8  E:-11.35157145 MeV G:-7.500166441e-06 keV test:4.977422727e-09  time:0.075500073 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 1.45527581998928e-09
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-11.3515714493755,3.75008322062425e-09)  J Pi:0+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (1.99483288843461,9.21250352778029e-10)
+neutron 0d5/2 occupation : (0.00283633326085932,-9.02734251309754e-11)
+neutron 0d3/2 occupation : (1.82017596096083e-06,-2.05835907356076e-07)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.0022812091992039,-8.297321155343e-10)
+Scattering neutron d3/2 occupation : (8.5883633450064e-06,2.05835807834799e-07)
+Scattering neutron d5/2 occupation : (3.91605660194665e-05,-1.14532330427809e-12)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (1.99711409763382,9.15182371618204e-11)
+neutron d3/2 occupation : (1.04085393059672e-05,-9.95212768577028e-14)
+neutron d5/2 occupation : (0.0028754938268788,-9.14187484351772e-11)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 1s1/2 - neutron 1s1/2 : (0.996351948329646,8.58337540749372e-10)
+neutron 0d5/2 - neutron 0d5/2 : (0.00140413805394618,-4.46297303713167e-11)
+neutron 1s1/2 - neutron scat s1/2 : (0.00212899177531888,-7.95424728714111e-10)
+neutron 0d5/2 - neutron scat d5/2 : (2.80571529669613e-05,-1.0139643883485e-12)
+neutron scat s1/2 - neutron scat s1/2 : (7.61087119425129e-05,-1.71536935410302e-11)
+
+
+
+
+0+(2) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-0.2044178032 MeV G:10.99872514 keV test:0.3905092585  time:0.07053596 s
+Iteration 2  E:-0.09150563284 MeV G:-1.56146608 keV test:0.5356243514  time:0.070405923 s
+Iteration 3  E:-0.09274210091 MeV G:0.5853301456 keV test:0.2295121154  time:0.070370269 s
+Iteration 4  E:-0.09178949033 MeV G:-0.56142372 keV test:0.007257538275  time:0.070444724 s
+Iteration 5  E:-0.09177046381 MeV G:9.01146944e-05 keV test:0.001001445262  time:0.075768478 s
+Iteration 6  E:-0.09177053417 MeV G:0.0001085079309 keV test:0.0001156106377  time:0.071359955 s
+Iteration 7  E:-0.09177053434 MeV G:0.0001069730041 keV test:2.265252925e-05  time:0.070746143 s
+Iteration 8  E:-0.09177053435 MeV G:0.0001069568214 keV test:6.679558182e-07  time:0.070715142 s
+Iteration 9  E:-0.09177053435 MeV G:0.0001069568301 keV test:1.536871174e-07  time:0.070717608 s
+Iteration 10  E:-0.09177053435 MeV G:0.0001069565615 keV test:7.319350182e-09  time:0.071418871 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 3.39297853209753e-09
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-0.0917705343481561,-5.34782807537007e-08)  J Pi:0+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.000432711381845332,-4.05531304215529e-10)
+neutron 0d5/2 occupation : (0.248503551701842,2.69468852653061e-07)
+neutron 0d3/2 occupation : (1.44529681753024,-0.107436510680377)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.000473629043072618,-4.27670631303687e-10)
+Scattering neutron d3/2 occupation : (0.0640704578780798,0.107435962594534)
+Scattering neutron d5/2 occupation : (0.241222832464923,2.79450192228273e-07)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.000906340424917952,-8.33201935519258e-10)
+neutron d3/2 occupation : (1.50936727540831,-5.48085843258992e-07)
+neutron d5/2 occupation : (0.489726384166764,5.48919044881163e-07)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 0d5/2 - neutron 0d5/2 : (0.0037984171451357,-5.20712762742414e-09)
+neutron 0d3/2 - neutron 0d3/2 : (0.696758543592029,-0.100799965318869)
+neutron 1s1/2 - neutron scat s1/2 : (0.000428345788305268,-4.05491876443103e-10)
+neutron 0d5/2 - neutron scat d5/2 : (0.24090671741157,2.798831079081e-07)
+neutron 0d3/2 - neutron scat d3/2 : (0.051779730346178,0.0941634199573612)
+neutron scat s1/2 - neutron scat s1/2 : (2.26416273836755e-05,-1.10893774304003e-11)
+neutron scat d3/2 - neutron scat d3/2 : (0.00614536376595096,0.0066362713185864)
+neutron scat d5/2 - neutron scat d5/2 : (0.00015805752667665,-2.16457839764579e-10)
+
+
+
+
+1+(0) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-3.612602282 MeV G:375.93945 keV test:0.0594061236  time:0.418749693 s
+Iteration 2  E:-3.612648333 MeV G:375.9527855 keV test:0.003648282615  time:0.417283558 s
+Iteration 3  E:-3.612648445 MeV G:375.9530354 keV test:0.0003187453084  time:0.414943357 s
+Iteration 4  E:-3.61264845 MeV G:375.9530488 keV test:4.449471022e-05  time:0.41809561 s
+Iteration 5  E:-3.612648451 MeV G:375.9530485 keV test:7.367891733e-06  time:0.419512485 s
+Iteration 6  E:-3.612648451 MeV G:375.9530485 keV test:8.271815465e-07  time:0.416441296 s
+Iteration 7  E:-3.612648451 MeV G:375.9530485 keV test:5.19901769e-08  time:0.417461466 s
+Iteration 8  E:-3.612648451 MeV G:375.9530485 keV test:3.912107527e-09  time:0.419806951 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 3.69700936531103e-11
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-3.6126484505521,-0.18797652424957)  J Pi:1+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.998211601953903,0.000542485096582162)
+neutron 0d5/2 occupation : (5.92700672655006e-06,-1.60156219340029e-06)
+neutron 0d3/2 occupation : (1.0038388005328,-0.00378554823424128)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.00177314237877784,-0.000538375266571243)
+Scattering neutron d3/2 occupation : (-0.00383603875398472,0.003784762945907)
+Scattering neutron d5/2 occupation : (6.56688178262639e-06,-1.72297948421869e-06)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.999984744332679,4.10983001091797e-06)
+neutron d3/2 occupation : (1.00000276177881,-7.852883342962e-07)
+neutron d5/2 occupation : (1.24938885091765e-05,-3.32454167761899e-06)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 1s1/2 - neutron 0d3/2 : (1.00254447397996,-0.00322319623016358)
+neutron 1s1/2 - neutron scat d3/2 : (-0.00433287202638202,0.00376568132648869)
+neutron 0d3/2 - neutron scat s1/2 : (0.00128850587540451,-0.000560091113222623)
+neutron scat s1/2 - neutron scat d3/2 : (0.000484636503008912,2.17158464045692e-05)
+
+
+
+
+1+(1) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-2.066889566 MeV G:608.9222168 keV test:0.1706721791  time:0.426724629 s
+Iteration 2  E:-2.060148245 MeV G:612.5554621 keV test:0.07916646625  time:0.421048161 s
+Iteration 3  E:-2.06014226 MeV G:612.6425902 keV test:0.007919308044  time:0.41803478 s
+Iteration 4  E:-2.060142094 MeV G:612.6437072 keV test:0.0009250075147  time:0.418563643 s
+Iteration 5  E:-2.060142093 MeV G:612.6437083 keV test:9.524562512e-05  time:0.41592055 s
+Iteration 6  E:-2.060142094 MeV G:612.643708 keV test:1.171116867e-05  time:0.417954533 s
+Iteration 7  E:-2.060142094 MeV G:612.643708 keV test:9.495742558e-07  time:0.419723782 s
+Iteration 8  E:-2.060142094 MeV G:612.643708 keV test:4.488178759e-08  time:0.416056311 s
+Iteration 9  E:-2.060142094 MeV G:612.643708 keV test:1.364139569e-09  time:0.418387234 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 1.34152313389924e-10
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-2.06014209368535,-0.3063218540129)  J Pi:1+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (2.33622059936164e-06,-2.30869484763647e-06)
+neutron 0d5/2 occupation : (0.995598047811849,0.00173786155719729)
+neutron 0d3/2 occupation : (0.99896264040928,-0.000573882544300746)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (2.14437757896677e-07,-6.21363381523883e-07)
+Scattering neutron d3/2 occupation : (0.00103714594434504,0.000574505705333566)
+Scattering neutron d5/2 occupation : (0.00439961517616719,-0.00173555466000119)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (2.55065835725831e-06,-2.93005822916036e-06)
+neutron d3/2 occupation : (0.99999978635362,6.23161032810938e-07)
+neutron d5/2 occupation : (0.999997662988016,2.30689719609916e-06)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 0d5/2 - neutron 0d3/2 : (0.995984897101494,0.00103773234293277)
+neutron 0d5/2 - neutron scat d3/2 : (-0.000386863712372762,0.00070012780786245)
+neutron 0d3/2 - neutron scat d5/2 : (0.00297725279601985,-0.00161184075571393)
+
+
+
+
+2+(0) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-10.47182195 MeV G:-0.01880800512 keV test:0.06579830747  time:0.581923751 s
+Iteration 2  E:-10.47400719 MeV G:-0.006644290029 keV test:0.06932413369  time:0.584915374 s
+Iteration 3  E:-10.47595832 MeV G:-0.003020153871 keV test:0.01255234093  time:0.61446232 s
+Iteration 4  E:-10.47601073 MeV G:-0.0002185802405 keV test:0.001678019701  time:0.585014995 s
+Iteration 5  E:-10.47601138 MeV G:-6.368270578e-06 keV test:0.0001770989956  time:0.581679263 s
+Iteration 6  E:-10.47601139 MeV G:-7.293014909e-06 keV test:2.452038061e-05  time:0.584344722 s
+Iteration 7  E:-10.47601139 MeV G:-7.282409425e-06 keV test:9.55927082e-07  time:0.582851145 s
+Iteration 8  E:-10.47601139 MeV G:-7.282247617e-06 keV test:9.796951962e-08  time:0.584307393 s
+Iteration 9  E:-10.47601139 MeV G:-7.282274842e-06 keV test:3.17900581e-09  time:0.58564293 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 8.40645990318745e-10
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-10.4760113887161,3.64113742087009e-09)  J Pi:2+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.950049110457426,7.77472023235413e-10)
+neutron 0d5/2 occupation : (1.04481825536324,-5.82976751484339e-11)
+neutron 0d3/2 occupation : (9.18122566211468e-05,-1.04491210260445e-05)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.00185103403473073,-6.86799516558579e-10)
+Scattering neutron d3/2 occupation : (7.31871315065958e-05,1.04491237928122e-05)
+Scattering neutron d5/2 occupation : (0.00311660075647186,-3.51416636154588e-11)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.951900144492156,9.06725066718091e-11)
+neutron d3/2 occupation : (0.000164999388127743,2.76676761915156e-12)
+neutron d5/2 occupation : (1.04793485611971,-9.34393387608851e-11)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 1s1/2 - neutron 0d5/2 : (0.948118503471299,7.88492052947654e-10)
+neutron 0d5/2 - neutron 0d5/2 : (0.0470754290700434,-8.76336086608495e-11)
+neutron 0d5/2 - neutron 0d3/2 : (3.20761138133635e-05,-3.57640239913636e-06)
+neutron 0d3/2 - neutron 0d3/2 : (1.52968587503123e-05,-3.54714435816714e-06)
+neutron 1s1/2 - neutron scat d5/2 : (0.00192135415338659,-1.06827652391226e-11)
+neutron 0d5/2 - neutron scat s1/2 : (0.00166518732980936,-6.67728614114376e-10)
+neutron 0d5/2 - neutron scat d3/2 : (2.28331401708087e-05,3.57640269302038e-06)
+neutron 0d5/2 - neutron scat d5/2 : (0.000828797168062748,-4.08778072407478e-12)
+neutron 0d3/2 - neutron scat d3/2 : (1.81197311435622e-05,1.45442897390541e-06)
+neutron scat s1/2 - neutron scat d5/2 : (0.000175908290773766,-1.94551913859588e-11)
+neutron scat d5/2 - neutron scat d5/2 : (9.23810379630771e-05,-4.45571024513813e-13)
+
+
+
+
+2+(1) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-10.21248357 MeV G:0.003087624406 keV test:0.1180152962  time:0.583804564 s
+Iteration 2  E:-10.20727226 MeV G:-0.004722918315 keV test:0.1724510564  time:0.585479297 s
+Iteration 3  E:-10.20870364 MeV G:-0.0006992763796 keV test:0.007784699462  time:0.584333573 s
+Iteration 4  E:-10.20873302 MeV G:-3.693836571e-05 keV test:0.0009862455946  time:0.58469263 s
+Iteration 5  E:-10.2087332 MeV G:6.542921906e-07 keV test:9.073874915e-05  time:0.59718409 s
+Iteration 6  E:-10.2087332 MeV G:8.763336726e-07 keV test:1.001275057e-05  time:0.600034935 s
+Iteration 7  E:-10.2087332 MeV G:8.828146659e-07 keV test:1.338249997e-06  time:0.584188486 s
+Iteration 8  E:-10.2087332 MeV G:8.828109341e-07 keV test:7.99570275e-08  time:0.586721462 s
+Iteration 9  E:-10.2087332 MeV G:8.828138047e-07 keV test:4.581326676e-09  time:0.585858861 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 1.90533871145815e-09
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-10.2087331974243,-4.41406902373022e-10)  J Pi:2+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.0478628204064672,-1.02147079688652e-10)
+neutron 0d5/2 occupation : (1.937685152753,5.6328929617861e-11)
+neutron 0d3/2 occupation : (0.000200225851080628,-2.2383720902318e-05)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.000340418757842735,2.28021294323334e-11)
+Scattering neutron d3/2 occupation : (7.84652697515143e-05,2.23837337395593e-05)
+Scattering neutron d5/2 occupation : (0.0138329169618583,1.01790043529647e-11)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.0482032391643098,-7.93449502553223e-11)
+neutron d3/2 occupation : (0.000278691120832142,1.28372412998876e-11)
+neutron d5/2 occupation : (1.95151806971486,6.65079339921476e-11)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 1s1/2 - neutron 0d5/2 : (0.0477451297424794,-1.01954195098678e-10)
+neutron 0d5/2 - neutron 0d5/2 : (0.938995994323344,6.70211576317617e-11)
+neutron 1s1/2 - neutron 0d3/2 : (5.26550149170706e-05,-5.49799509287678e-06)
+neutron 0d3/2 - neutron 0d3/2 : (4.61367646708115e-05,-1.05712773260227e-05)
+neutron 1s1/2 - neutron scat d5/2 : (5.51617069385586e-05,-1.45893247457967e-13)
+neutron 0d5/2 - neutron scat s1/2 : (0.000264242798673075,1.8356845413033e-11)
+neutron 0d5/2 - neutron scat d5/2 : (0.0116820771307222,5.66667152996793e-12)
+neutron 0d3/2 - neutron scat s1/2 : (1.82673829611022e-05,-2.16217961102915e-06)
+neutron 0d3/2 - neutron scat d3/2 : (3.54996986405621e-05,6.57866264048048e-06)
+neutron scat s1/2 - neutron scat d3/2 : (1.41602699430711e-05,2.16218150816908e-06)
+neutron scat s1/2 - neutron scat d5/2 : (4.37483062654876e-05,2.54814407291639e-12)
+neutron scat d5/2 - neutron scat d5/2 : (0.00102583858010709,1.04742071363407e-12)
+
+
+
+
+2+(2) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-5.057585004 MeV G:3.393899496 keV test:0.08379338026  time:0.585444638 s
+Iteration 2  E:-5.057833059 MeV G:3.448229166 keV test:0.01672367737  time:0.585530097 s
+Iteration 3  E:-5.057930105 MeV G:3.529573835 keV test:0.003371565616  time:0.585496504 s
+Iteration 4  E:-5.057936208 MeV G:3.527625358 keV test:0.001146641475  time:0.58665788 s
+Iteration 5  E:-5.057936169 MeV G:3.52753116 keV test:8.458569483e-05  time:0.583524391 s
+Iteration 6  E:-5.05793625 MeV G:3.52767259 keV test:2.539412667e-05  time:0.586436252 s
+Iteration 7  E:-5.057936251 MeV G:3.527673132 keV test:7.927424502e-06  time:0.584864227 s
+Iteration 8  E:-5.057936251 MeV G:3.527673136 keV test:2.180057647e-06  time:0.587438564 s
+Iteration 9  E:-5.057936251 MeV G:3.527673136 keV test:2.687964085e-08  time:0.58577175 s
+Iteration 10  E:-5.057936251 MeV G:3.527673136 keV test:2.959981564e-09  time:0.586512677 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 1.94095728812266e-09
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-5.05793625079689,-0.00176383656818964)  J Pi:2+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.996300480589164,8.19279910899051e-05)
+neutron 0d5/2 occupation : (0.00238262833906257,-5.75910451618234e-05)
+neutron 0d3/2 occupation : (1.00695517969306,-0.0069801978008084)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.00131393174284756,-2.40641329559838e-05)
+Scattering neutron d3/2 occupation : (-0.00702558447236776,0.00698133812182228)
+Scattering neutron d5/2 occupation : (7.33641082393912e-05,-1.41313398575532e-06)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.997614412332014,5.78638581339211e-05)
+neutron d3/2 occupation : (0.999929595220692,1.14032101390285e-06)
+neutron d5/2 occupation : (0.00245599244730196,-5.90041791475787e-05)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 0d5/2 - neutron 0d5/2 : (7.18573823258804e-05,-1.26128064868432e-06)
+neutron 1s1/2 - neutron 0d3/2 : (1.00376794876629,-0.00664537379307678)
+neutron 0d5/2 - neutron 0d3/2 : (0.00217267899595129,-0.000202073592884063)
+neutron 0d3/2 - neutron 0d3/2 : (1.53517456464647e-05,-3.69357772530862e-06)
+neutron 1s1/2 - neutron scat d3/2 : (-0.00747012364005161,0.00672728292139075)
+neutron 0d5/2 - neutron scat d3/2 : (4.46514655547702e-05,0.000147414712924072)
+neutron 0d5/2 - neutron scat d5/2 : (1.65429974493016e-05,-3.1108593676546e-07)
+neutron 0d3/2 - neutron scat s1/2 : (0.000943721058070727,-0.00012329013696308)
+neutron 0d3/2 - neutron scat d3/2 : (1.09640549275304e-05,1.94532255274393e-06)
+neutron 0d3/2 - neutron scat d5/2 : (2.91633265238921e-05,-4.01844498660678e-06)
+neutron scat s1/2 - neutron scat d3/2 : (0.000363203461300944,9.93606220964092e-05)
+
+
+
+
+2+(3) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-4.522671025 MeV G:3.60761088 keV test:0.1687782498  time:0.584067108 s
+Iteration 2  E:-4.521306066 MeV G:0.05488204233 keV test:0.02538373524  time:0.584345047 s
+Iteration 3  E:-4.521350584 MeV G:0.1548515577 keV test:0.001772161206  time:0.581290363 s
+Iteration 4  E:-4.521350366 MeV G:0.1376280818 keV test:0.00325056526  time:0.583266469 s
+Iteration 5  E:-4.5213505 MeV G:0.1382857591 keV test:0.0001599746377  time:0.581753384 s
+Iteration 6  E:-4.521350501 MeV G:0.1382851234 keV test:1.720638436e-05  time:0.585519886 s
+Iteration 7  E:-4.521350501 MeV G:0.1382851262 keV test:1.757300388e-06  time:0.583770054 s
+Iteration 8  E:-4.521350501 MeV G:0.1382851275 keV test:3.883160624e-07  time:0.584313345 s
+Iteration 9  E:-4.521350501 MeV G:0.1382851276 keV test:3.329387743e-08  time:0.583824624 s
+Iteration 10  E:-4.521350501 MeV G:0.1382851096 keV test:7.110765587e-09  time:0.585490728 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 3.47154716522634e-09
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-4.52135050148842,-6.9142554778404e-05)  J Pi:2+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.00227379857592869,-4.16143763253084e-05)
+neutron 0d5/2 occupation : (0.992387841161083,4.08500592049219e-05)
+neutron 0d3/2 occupation : (1.00200996919303,-0.0480797414494119)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.000118901297008426,-9.51366533311553e-07)
+Scattering neutron d3/2 occupation : (-0.00162992018486455,0.0480758559395413)
+Scattering neutron d5/2 occupation : (0.00483940995749092,5.6011930684479e-06)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.00239269987293712,-4.256574285862e-05)
+neutron d3/2 occupation : (1.00038004900817,-3.8855098703775e-06)
+neutron d5/2 occupation : (0.997227251118574,4.64512522733696e-05)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 1s1/2 - neutron 0d5/2 : (3.27543978989863e-05,1.46855405754184e-07)
+neutron 1s1/2 - neutron 0d3/2 : (0.00223486643035739,-4.68025963619642e-05)
+neutron 0d5/2 - neutron 0d3/2 : (0.995775194705429,-0.0475806133701236)
+neutron 0d3/2 - neutron 0d3/2 : (0.00033191965747787,-7.07954640185571e-05)
+neutron 0d5/2 - neutron scat s1/2 : (7.27263703838042e-05,-1.57030912922614e-08)
+neutron 0d5/2 - neutron scat d3/2 : (-0.00350850115494663,0.0476210839461659)
+neutron 0d3/2 - neutron scat s1/2 : (2.25508794616753e-05,-3.28277734440684e-06)
+neutron 0d3/2 - neutron scat d3/2 : (0.000150121132169348,5.50987295002932e-05)
+neutron 0d3/2 - neutron scat d5/2 : (0.00316339673065521,-0.000362550507045096)
+neutron scat s1/2 - neutron scat d3/2 : (1.37985568336939e-05,2.32512129133013e-06)
+neutron scat d3/2 - neutron scat d3/2 : (2.83884576196877e-05,1.62898029592619e-05)
+
+
+
+
+2+(4) Z:8 , N:10
+--------------------
+
+Iteration 1  E:1.047379843 MeV G:-0.1431790447 keV test:0.153517634  time:0.584628028 s
+Iteration 2  E:1.047709298 MeV G:2.050650584 keV test:0.08183097733  time:0.582807969 s
+Iteration 3  E:1.047496076 MeV G:2.199358263 keV test:0.009182489852  time:0.581903741 s
+Iteration 4  E:1.047511041 MeV G:2.200096951 keV test:0.001899880293  time:0.5831292 s
+Iteration 5  E:1.047510914 MeV G:2.200069821 keV test:0.0003254776991  time:0.580949033 s
+Iteration 6  E:1.047510917 MeV G:2.2000581 keV test:4.528296555e-05  time:0.582634762 s
+Iteration 7  E:1.047510916 MeV G:2.200058001 keV test:6.191788977e-06  time:0.581387689 s
+Iteration 8  E:1.047510916 MeV G:2.200058004 keV test:8.92780125e-07  time:0.581951692 s
+Iteration 9  E:1.047510916 MeV G:2.200058004 keV test:1.638309009e-07  time:0.581400298 s
+Iteration 10  E:1.047510916 MeV G:2.200058005 keV test:1.096363498e-08  time:0.582063237 s
+Iteration 11  E:1.047510916 MeV G:2.200058004 keV test:1.4716045e-09  time:0.602688893 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 1.13309571361103e-10
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(1.04751091643462,-0.00110002900223386)  J Pi:2+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.000146429625302881,-2.45136062198743e-06)
+neutron 0d5/2 occupation : (0.0113191857753141,-0.000199953170383533)
+neutron 0d3/2 occupation : (1.99310925087318,-0.0302216592889939)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.00122919725186852,-8.77421752063321e-06)
+Scattering neutron d3/2 occupation : (-0.0098839518233451,0.0305021589700012)
+Scattering neutron d5/2 occupation : (0.00407988829768498,-6.9320932481087e-05)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.0013756268771714,-1.12255781426207e-05)
+neutron d3/2 occupation : (1.98322529904983,0.000280499681007353)
+neutron d5/2 occupation : (0.0153990740729991,-0.000269274102864622)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 0d5/2 - neutron 0d5/2 : (0.000145455908653093,-2.05380227321621e-06)
+neutron 0d5/2 - neutron 0d3/2 : (0.000584309191064422,-9.2788977511839e-05)
+neutron 0d3/2 - neutron 0d3/2 : (1.00531830560699,-0.0284164464218923)
+neutron 1s1/2 - neutron scat d3/2 : (8.54651059471455e-05,-3.70821078498141e-07)
+neutron 1s1/2 - neutron scat d5/2 : (4.66980245411613e-05,-4.30070249945718e-07)
+neutron 0d5/2 - neutron scat s1/2 : (0.00117517629616185,-2.02808759797876e-05)
+neutron 0d5/2 - neutron scat d3/2 : (0.00535608095045633,-1.12232544089696e-05)
+neutron 0d5/2 - neutron scat d5/2 : (0.00390823654409224,-7.15001739872484e-05)
+neutron 0d3/2 - neutron scat s1/2 : (2.99758674018287e-05,8.82539684901154e-06)
+neutron 0d3/2 - neutron scat d3/2 : (-0.0182326398931536,0.0267000552274612)
+neutron 0d3/2 - neutron scat d5/2 : (8.11989753067768e-05,-3.25990666340983e-06)
+neutron scat s1/2 - neutron scat d3/2 : (1.16269372658202e-05,2.82872309001375e-06)
+neutron scat s1/2 - neutron scat d5/2 : (1.24181510390146e-05,-1.47461479870943e-07)
+neutron scat d3/2 - neutron scat d3/2 : (0.00143986127219996,0.00190232072178357)
+
+
+
+
+3+(0) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-7.078953429 MeV G:0.06052311094 keV test:0.2010834513  time:0.30097632 s
+Iteration 2  E:-7.081259037 MeV G:1.570950959e-05 keV test:0.01194010908  time:0.301070034 s
+Iteration 3  E:-7.081269603 MeV G:-0.0001264109326 keV test:0.0007060215281  time:0.302066207 s
+Iteration 4  E:-7.081269646 MeV G:-8.870157439e-05 keV test:4.683048385e-05  time:0.301167952 s
+Iteration 5  E:-7.081269647 MeV G:-8.86812751e-05 keV test:5.139921163e-06  time:0.301810067 s
+Iteration 6  E:-7.081269647 MeV G:-8.868606246e-05 keV test:7.812245953e-07  time:0.302672029 s
+Iteration 7  E:-7.081269647 MeV G:-8.868606877e-05 keV test:2.978481438e-08  time:0.302819563 s
+Iteration 8  E:-7.081269647 MeV G:-8.868605415e-05 keV test:9.332200134e-10  time:0.302332615 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 2.11434434196911e-10
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-7.08126964679323,4.43430270772494e-08)  J Pi:3+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (0.978781422558511,1.59196497704565e-08)
+neutron 0d5/2 occupation : (0.981465999440957,-1.05004739272197e-09)
+neutron 0d3/2 occupation : (9.81046125515631e-06,-1.1199998391639e-06)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (0.0211233494499284,-1.59237976969337e-08)
+Scattering neutron d3/2 occupation : (2.14445684701323e-05,1.12000137399304e-06)
+Scattering neutron d5/2 occupation : (0.0185979735208779,1.05265890131341e-09)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (0.999904772008439,-4.14792662354099e-12)
+neutron d3/2 occupation : (3.12550297252886e-05,1.53482913225073e-12)
+neutron d5/2 occupation : (1.00006397296184,2.61150852682972e-12)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 1s1/2 - neutron 0d5/2 : (0.961459193956119,1.48030127628e-08)
+neutron 1s1/2 - neutron scat d5/2 : (0.0173222286023924,1.11663700761461e-09)
+neutron 0d5/2 - neutron scat s1/2 : (0.0199379612540261,-1.58558852328915e-08)
+neutron 0d5/2 - neutron scat d3/2 : (1.26105514391977e-05,1.62848885320975e-09)
+neutron 0d5/2 - neutron scat d5/2 : (5.59459332370243e-05,2.28835247207945e-12)
+neutron scat s1/2 - neutron scat d5/2 : (0.00118538819590232,-6.79124703194868e-11)
+
+
+
+
+3+(1) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-1.486710732 MeV G:-230.9073704 keV test:0.401435179  time:0.301844805 s
+Iteration 2  E:-1.493604229 MeV G:955.7184969 keV test:1.136166424  time:0.3023178 s
+Iteration 3  E:-1.360745487 MeV G:763.6682471 keV test:0.5656175212  time:0.301636946 s
+Iteration 4  E:-1.383118692 MeV G:794.0414434 keV test:0.3095086497  time:0.301593115 s
+Iteration 5  E:-1.384314246 MeV G:793.2360423 keV test:0.01462624549  time:0.30292455 s
+Iteration 6  E:-1.384318004 MeV G:793.2343972 keV test:0.001638712217  time:0.302458554 s
+Iteration 7  E:-1.384318041 MeV G:793.2344295 keV test:8.382786981e-05  time:0.301857077 s
+Iteration 8  E:-1.38431804 MeV G:793.2344304 keV test:1.511320495e-05  time:0.30259918 s
+Iteration 9  E:-1.38431804 MeV G:793.2344304 keV test:6.804438116e-06  time:0.302100372 s
+Iteration 10  E:-1.38431804 MeV G:793.2344304 keV test:8.033353721e-07  time:0.302416178 s
+Iteration 11  E:-1.38431804 MeV G:793.2344304 keV test:1.316177717e-08  time:0.319988411 s
+Iteration 12  E:-1.38431804 MeV G:793.2344304 keV test:2.030199214e-09  time:0.30283711 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 2.53300309811008e-10
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-1.38431803997302,-0.396617215198296)  J Pi:3+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 1s1/2 occupation : (-2.02816240068533e-07,1.88978373136671e-08)
+neutron 0d5/2 occupation : (0.996079467012914,0.000473903221147401)
+neutron 0d3/2 occupation : (0.298662724405951,0.0631833467965149)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron s1/2 occupation : (1.88742211608616e-06,1.24699382557365e-07)
+Scattering neutron d3/2 occupation : (0.701335584744156,-0.0631834904661607)
+Scattering neutron d5/2 occupation : (0.00392053923110112,-0.000473903148719743)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron s1/2 occupation : (1.68460587601762e-06,1.43597219871032e-07)
+neutron d3/2 occupation : (0.999998309150107,-1.43669645994745e-07)
+neutron d5/2 occupation : (1.00000000624402,7.24276563503573e-11)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 0d5/2 - neutron 0d3/2 : (0.295835216487605,0.0638862564740283)
+neutron 0d5/2 - neutron scat d3/2 : (0.700242217774639,-0.0634125340502522)
+neutron 0d3/2 - neutron scat d5/2 : (0.00282750669621571,-0.000702909810157679)
+
+
+
+
+4+(0) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-8.902993227 MeV G:-0.003804513703 keV test:0.04163989092  time:0.068153449 s
+Iteration 2  E:-8.90301283 MeV G:-2.315519525e-05 keV test:0.001660076566  time:0.066998216 s
+Iteration 3  E:-8.903012938 MeV G:6.128748288e-08 keV test:7.72035514e-05  time:0.066777744 s
+Iteration 4  E:-8.903012938 MeV G:6.533530336e-08 keV test:1.62186683e-06  time:0.066708969 s
+Iteration 5  E:-8.903012938 MeV G:6.53190183e-08 keV test:1.166860361e-08  time:0.066988843 s
+Iteration 6  E:-8.903012938 MeV G:6.532601026e-08 keV test:4.386280488e-11  time:0.067150865 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 2.83512102683403e-12
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-8.90301293780396,-3.26630051294029e-11)  J Pi:4+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 0d5/2 occupation : (1.9979743122145,-6.80995025818762e-12)
+neutron 0d3/2 occupation : (0.000175555189051977,-1.83537808089148e-05)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron d3/2 occupation : (3.57556295218701e-05,1.83537872030026e-05)
+Scattering neutron d5/2 occupation : (0.0018143769669224,4.15688426245758e-13)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron d3/2 occupation : (0.000211310818573847,6.3940877546997e-12)
+neutron d5/2 occupation : (1.99978868918143,-6.39426184183634e-12)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 0d5/2 - neutron 0d5/2 : (0.998105682706893,-6.55191220805291e-12)
+neutron 0d5/2 - neutron 0d3/2 : (0.000169388844019611,-1.76329663535055e-05)
+neutron 0d5/2 - neutron scat d3/2 : (3.17781845684144e-05,1.76329725019225e-05)
+neutron 0d5/2 - neutron scat d5/2 : (0.00156177977212979,1.4545716869729e-13)
+neutron scat d5/2 - neutron scat d5/2 : (0.000121226702403394,1.22802681375806e-14)
+
+
+
+
+4+(1) Z:8 , N:10
+--------------------
+
+Iteration 1  E:-3.700197692 MeV G:15.2258407 keV test:0.05595131012  time:0.066611713 s
+Iteration 2  E:-3.700187615 MeV G:15.20083848 keV test:0.002493893923  time:0.066555906 s
+Iteration 3  E:-3.700187807 MeV G:15.20083535 keV test:0.000130089161  time:0.06672969 s
+Iteration 4  E:-3.700187808 MeV G:15.20083479 keV test:1.193181727e-05  time:0.066799374 s
+Iteration 5  E:-3.700187808 MeV G:15.20083479 keV test:1.751612724e-07  time:0.066775219 s
+Iteration 6  E:-3.700187808 MeV G:15.20083479 keV test:2.868331753e-10  time:0.067147322 s
+
+
+Expectation values
+------------------
+
+|H.PSI - E.PSI|oo = 2.87733734408158e-11
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion).
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut).
+
+E:(-3.70018780772981,-0.00760041739296553)  J Pi:4+
+
+
+Configuration probabilities
+---------------------------
+
+
+neutron shell occupations
+------------------------------
+
+neutron 0d5/2 occupation : (0.999402185994873,2.66496380000084e-05)
+neutron 0d3/2 occupation : (1.00296635147956,-0.00294849319576746)
+
+
+neutron partial wave scattering occupations
+------------------------------------------------
+
+Scattering neutron d3/2 occupation : (-0.00322381776491153,0.00293585594917396)
+Scattering neutron d5/2 occupation : (0.000855280290482443,-1.40123914064155e-05)
+
+
+neutron partial wave occupations
+------------------------------------------------
+
+neutron d3/2 occupation : (0.999742533714643,-1.26372465934974e-05)
+neutron d5/2 occupation : (1.00025746628536,1.2637246593593e-05)
+
+
+Partially summed configuration probabilities
+--------------------------------------------
+
+neutron 0d5/2 - neutron 0d5/2 : (0.000185412394930262,-7.05910291717343e-06)
+neutron 0d5/2 - neutron 0d3/2 : (1.00244415599034,-0.00286589335695465)
+neutron 0d5/2 - neutron scat d3/2 : (-0.00348326297308602,0.00288689838462281)
+neutron 0d5/2 - neutron scat d5/2 : (7.04681877552627e-05,1.97628161661908e-05)
+neutron 0d3/2 - neutron scat d5/2 : (0.000522195489213147,-8.2599838812813e-05)
+
+
+
+
+Spectrum
+--------
+
+Z:8 N:10   J Pi (index):0+(0)   E:-12.4580770789518 MeV G:1.16061401340308e-05 keV   E:0 MeV G:1.16061401340308e-05 keV
+Z:8 N:10   J Pi (index):0+(1)   E:-11.3515714493755 MeV G:-7.5001664412485e-06 keV   E:1.10650562957631 MeV G:-7.5001664412485e-06 keV
+Z:8 N:10   J Pi (index):2+(0)   E:-10.4760113887161 MeV G:-7.28227484174019e-06 keV   E:1.98206569023568 MeV G:-7.28227484174019e-06 keV
+Z:8 N:10   J Pi (index):2+(1)   E:-10.2087331974243 MeV G:8.82813804746044e-07 keV   E:2.24934388152746 MeV G:8.82813804746044e-07 keV
+Z:8 N:10   J Pi (index):4+(0)   E:-8.90301293780396 MeV G:6.53260102588059e-08 keV   E:3.55506414114784 MeV G:6.53260102588059e-08 keV
+Z:8 N:10   J Pi (index):3+(0)   E:-7.08126964679323 MeV G:-8.86860541544988e-05 keV   E:5.37680743215856 MeV G:-8.86860541544988e-05 keV
+Z:8 N:10   J Pi (index):2+(2)   E:-5.05793625079689 MeV G:3.52767313637927 keV   E:7.4001408281549 MeV G:3.52767313637927 keV
+Z:8 N:10   J Pi (index):2+(3)   E:-4.52135050148842 MeV G:0.138285109556808 keV   E:7.93672657746337 MeV G:0.138285109556808 keV
+Z:8 N:10   J Pi (index):4+(1)   E:-3.70018780772981 MeV G:15.2008347859311 keV   E:8.75788927122198 MeV G:15.2008347859311 keV
+Z:8 N:10   J Pi (index):1+(0)   E:-3.6126484505521 MeV G:375.953048499139 keV   E:8.84542862839969 MeV G:375.953048499139 keV
+Z:8 N:10   J Pi (index):1+(1)   E:-2.06014209368535 MeV G:612.6437080258 keV   E:10.3979349852664 MeV G:612.6437080258 keV
+Z:8 N:10   J Pi (index):3+(1)   E:-1.38431803997302 MeV G:793.234430396592 keV   E:11.0737590389788 MeV G:793.234430396592 keV
+Z:8 N:10   J Pi (index):0+(2)   E:-0.0917705343481561 MeV G:0.000106956561507401 keV   E:12.3663065446036 MeV G:0.000106956561507401 keV
+Z:8 N:10   J Pi (index):2+(4)   E:1.04751091643462 MeV G:2.20005800446771 keV   E:13.5055879953864 MeV G:2.20005800446771 keV
+
+
+Observables
+-----------
+
+
+EM transitions
+--------------
+
+HO expansion , long wavelength approximation , 1+(0) --> 0+(0) :  B(M1) = (1.02222315703821e-07,-6.67422672447729e-08) mu[n]^2 = (6.30596191928654e-10,-4.11724380097029e-10) W.u.
+G = (7.82751092193346e-07,-5.85430107495777e-07) eV
+
+HO expansion , long wavelength approximation , 1+(1) --> 0+(0) :  B(M1) = (0.553937477522325,-0.147699889355233) mu[n]^2 = (0.00341716836961743,-0.000911141438485452) W.u.
+G = (7.01110432056292,-2.55074033367645) eV
+
+HO expansion , long wavelength approximation , 2+(0) --> 0+(0) :  B(E2) = (0.194524307951944,4.71293591817863e-09) e^2 fm^4 = (0.0694160000119603,1.68181119982947e-09) W.u.
+G = (4.79878736433479e-06,2.30592091802693e-13) eV
+
+HO expansion , long wavelength approximation , 2+(1) --> 0+(0) :  B(E2) = (1.93196644065441,9.68809475455709e-10) e^2 fm^4 = (0.689422231491522,3.45719664898819e-10) W.u.
+G = (8.97111172602796e-05,1.11418923520001e-12) eV
+
+HO expansion , long wavelength approximation , 2+(2) --> 0+(0) :  B(E2) = (0.00732351601368586,-8.82827350201503e-05) e^2 fm^4 = (0.00261339671656459,-3.15036943183912e-05) W.u.
+G = (0.000131063113562234,-1.73614567409922e-06) eV
+
+HO expansion , long wavelength approximation , 2+(3) --> 0+(0) :  B(E2) = (0.274872795141577,-0.000147467072600581) e^2 fm^4 = (0.0980883579626924,-5.26236254028189e-05) W.u.
+G = (0.00698081697004926,-4.04920214402932e-06) eV
+
+HO expansion , long wavelength approximation , 2+(4) --> 0+(0) :  B(E2) = (0.00124639418950527,-1.05326372163946e-05) e^2 fm^4 = (0.000444775771133854,-3.75857162961785e-06) W.u.
+G = (0.000451636241916549,-4.00048742085593e-06) eV
+
+HO expansion , long wavelength approximation , 3+(0) --> 2+(0) :  B(E2) = (0.607819757730675,7.05916235046474e-09) e^2 fm^4 = (0.216900482793778,2.51906211086661e-09) W.u.
+G = (0.000220991680218026,1.58146818607474e-11) eV
+
+HO expansion , long wavelength approximation , 3+(1) --> 2+(0) :  B(E2) = (0.880694094716693,0.41480012590595) e^2 fm^4 = (0.314275690956269,0.14802142646338) W.u.
+G = (0.0477944010515835,0.0107977584601788) eV
+
+HO expansion , long wavelength approximation , 4+(0) --> 2+(0) :  B(E2) = (0.684508295455154,1.90476827317795e-08) e^2 fm^4 = (0.244266787764336,6.79716565326975e-09) W.u.
+G = (5.31603214624144e-06,8.58491977479146e-14) eV
+
+HO expansion , long wavelength approximation , 4+(1) --> 2+(0) :  B(E2) = (1.89126981444098,-0.0361738403320002) e^2 fm^4 = (0.674899640276772,-0.0129086350562374) W.u.
+G = (0.0217810741733526,-0.000538818966601787) eV
+
+
+Densities
+---------
+
+Density norm (from splines) : (1.99999141739182,3.06613367807067e-10)
+Radial densities of 0+(0) calculated.
+
+Density norm (from splines) : (1.99998991595379,6.43998914347144e-09)
+Radial densities of 0+(1) calculated.
+
+Density norm (from splines) : (1.81284038599102,-1.58431176637866e-07)
+Radial densities of 0+(2) calculated.
+
+Density norm (from splines) : (2.0126526442138,0.110566406863468)
+Radial densities of 1+(0) calculated.
+
+Density norm (from splines) : (1.90113186382593,0.14336323724627)
+Radial densities of 1+(1) calculated.
+
+Density norm (from splines) : (1.99999336586919,4.02635562238019e-09)
+Radial densities of 2+(0) calculated.
+
+Density norm (from splines) : (1.9999978156108,2.81559429925024e-10)
+Radial densities of 2+(1) calculated.
+
+Density norm (from splines) : (1.99097629551425,-0.0142255268790172)
+Radial densities of 2+(2) calculated.
+
+Density norm (from splines) : (1.99878822694912,-4.0595709241524e-05)
+Radial densities of 2+(3) calculated.
+
+Density norm (from splines) : (1.97912838524513,-0.0104899324658259)
+Radial densities of 2+(4) calculated.
+
+Density norm (from splines) : (1.99974080866719,-8.38541161536761e-09)
+Radial densities of 3+(0) calculated.
+
+Density norm (from splines) : (1.30556778871046,0.108204723336181)
+Radial densities of 3+(1) calculated.
+
+Density norm (from splines) : (1.99999643671006,5.01800088703277e-12)
+Radial densities of 4+(0) calculated.
+
+Density norm (from splines) : (2.00265226168582,-0.0247627533206688)
+Radial densities of 4+(1) calculated.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Observables calculated. time:218.372974474 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+

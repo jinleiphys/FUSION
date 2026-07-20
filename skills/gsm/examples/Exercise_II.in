@@ -1,0 +1,233 @@
+1 MPI.processes
+1 OpenMP.threads
+
+/tmp/workspace/
+
+print.detailed.information(no)
+MSGI-COSM
+pivot.from.file(no)
+
+basis.potential(Berggren.basis)
+WS-analytic
+
+OBMEs.interaction.read(no)
+no.TBMEs.read
+
+16 amu(frozen.core.mass)
+16 (A.core)
+8 (Z.core)
+
+neutrons (basis.space)
+neutrons (space)
+
+2 neutron(s)[basis]
+2 neutron(s)
+
+1.00866 amu(neutron.mass)
+
+neutron.basis.potential(no)
+
+15 fm(rotation-point)
+50 fm(real.maximal.radius)
+80 points.before.R(Gauss.Legendre)
+80 points.after.R(Gauss.Legendre)
+600 points.before.R(uniform)
+600 points.after.R(uniform)
+
+6.5 fm(cut.function.radius)
+1.0 fm(cut.function.diffuseness)
+
+5 fm^(-1)(k.max.momentum.space)
+15 fm(R.Fermi.function.momentum.space)
+
+80 points.before.k.max.momentum.space(Gauss.Legendre)
+600 points.before.k.max.momentum.space(uniform)
+
+
+
+6 neutron.pole.state(s)
+
+0s1/2 HO.state(core.frozen)
+0p3/2 HO.state(core.frozen)
+0p1/2 HO.state(core.frozen)
+
+0d5/2 S.matrix.pole    1 hw(truncation.energy)
+1s1/2 S.matrix.pole    1 hw(truncation.energy)
+0d3/2 S.matrix.pole    1 hw(truncation.energy)
+
+
+
+0 neutron.scattering.like.partial.wave(s)
+
+
+
+
+3 neutron.contour(s)
+
+partial.wave  k.peak(fm^(-1))  k.middle(fm^(-1))  k.max(fm^(-1))  N.k.peak  N.k.middle  N.k.max  hw(truncation.energy)
+s1/2          (0.2,-0.15)      0.4                2               10        10          10       1
+d5/2          (0.2,-0.15)      0.4                2               10        10          10       1
+d3/2          (0.2,-0.15)      0.4                2               10        10          10       1
+
+
+
+
+core.potential
+WS-analytic
+
+l   d(fm) R0(fm) Vo(MeV) Vso(MeV)
+0   0.61  2.954  59.192  0
+1   0.61  2.954  59.192  5.607
+2   0.61  2.954  59.192  5.607
+
+
+
+
+Basis.WS.parameters
+
+l   d(fm) R0(fm) Vo(MeV) Vso(MeV)
+0   0.61  2.954  59.192  0
+1   0.61  2.954  59.192  5.607
+2   0.61  2.954  59.192  5.607
+
+
+50.0 (equivalent.potential.regularizor)
+
+
+100 (HF/MSDHF/OCM.iterations.maximal.number)
+1E-7 (HF/MSDHF/OCM.potential.precision)
+
++ (Parities)
+0 (Jmin)
+4 (Jmax)
+
+truncation.hw(no)
+
+truncation.particle.hole(no)
+
+
+Davidson
+1 Lanczos/Davidson.restarts
+configuration.probabilities.printed(yes)
+scattering.configuration.probabilities.printed(no)
+1E-5 (configuration.minimal.probability.printed)
+
+100 vectors
+
+1E-8 (eigenvector.precision)
+
+T2.CM.operators.calculated(yes)
+
+5 eigenset(s)
+
+eigenset    eigenvectors.number   eigenvectors.indices
+0+          3                     0 1 2
+1+          2                     0 1
+2+          5                     0 1 2 3 4 
+3+          2                     0 1
+4+          2                     0 1
+
+
+
+
+
+
+A.dependence(no)
+
+Hamiltonian.interaction
+
+2 (lmax.for.interaction)
+
+2 fm(R0)
+1.0 fm(mu)
+
+J-Pi  V[J,Pi,T=1]
+0+    -16.489
+1+     16.122
+2+    -12.181
+3+     37.417
+4+    -4.885
+
+HO.expansion
+
+2 fm(b.HO)
+
+l n.max.HO
+0 10
+1 10
+2 10
+
+5 (J.relative.max.nuclear.interaction)
+
+
+
+
+
+
+3 neutron.partial.wave.b.HO(s)
+partial.wave    b.HO(fm)
+s1/2            2
+p1/2            2
+p3/2            2
+
+
+
+are.there.new.neutron.natural.orbitals(no)
+
+GSM.multipoles(no)
+	
+EM.transitions(yes)
+11 (EM.transitions.number)
+EM.type   quantum.numbers.in   quantum.numbers.out   long.wavelength.approximation(yes/no)   HO.expansion(yes/no)
+M1        1+ 0                 0+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+M1        1+ 1                 0+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        2+ 0                 0+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        2+ 1                 0+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        2+ 2                 0+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        2+ 3                 0+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        2+ 4                 0+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        3+ 0                 2+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        3+ 1                 2+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        4+ 0                 2+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+E2        4+ 1                 2+ 0                  long.wavelength.approximation(yes)      HO.expansion(yes)
+
+EM.transitions.strength(no)
+beta.transitions(no)
+beta.transitions.strength(no)
+
+density(yes)
+14 (density.number)
+radial/momentum Gauss.Legendre(yes/no) quantum.numbers 
+radial          Gauss.Legendre(yes)    0+ 0
+radial          Gauss.Legendre(yes)    0+ 1
+radial          Gauss.Legendre(yes)    0+ 2
+radial          Gauss.Legendre(yes)    1+ 0
+radial          Gauss.Legendre(yes)    1+ 1
+radial          Gauss.Legendre(yes)    2+ 0
+radial          Gauss.Legendre(yes)    2+ 1
+radial          Gauss.Legendre(yes)    2+ 2
+radial          Gauss.Legendre(yes)    2+ 3
+radial          Gauss.Legendre(yes)    2+ 4
+radial          Gauss.Legendre(yes)    3+ 0
+radial          Gauss.Legendre(yes)    3+ 1
+radial          Gauss.Legendre(yes)    4+ 0
+radial          Gauss.Legendre(yes)    4+ 1
+
+transition.density(no)
+correlation.density(no)
+pair.density(no)
+spectroscopic.factor(no)
+overlap.function(no)
+rms.radius(no)
+rms.radius.one.body.strength(no)
+Hamiltonian.parts(no)
+
+
+
+
+
+0.5 (neutron.effective.charge)
+
+
+
+

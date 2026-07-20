@@ -1,0 +1,37 @@
+WS-analytic
+
+0.65 fm(diffuseness)         
+52.000 MeV(Vo)        
+0.000 MeV(Vso)            
+3.000 fm(R0)
+
+16 (A)
+target.recoil.neglected(yes)
+
+15 fm(rotation.point)
+100 fm(real.maximal.radius)
+
+600 points(uniform)
+100 points(Gauss.Legendre)
+
+proton
+
+10 protons(target)
+3.000 fm(charge.radius)
+
+s1/2
+
+2 pole.state(s)
+0s1/2
+1s1/2
+
+(0.25,-0.1) fm^(-1)(k.peak)
+1 fm^(-1)(k.middle)
+4 fm^(-1)(k.max)
+
+20 (N.k.peak)
+20 (N.k.middle)
+20 (N.k.max)
+
+52 MeV(Vo.potential.to.diagonalize)
+8 protons(target.potential.to.diagonalize)
