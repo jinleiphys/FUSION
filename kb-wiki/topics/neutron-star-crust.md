@@ -4,6 +4,14 @@
 
 **Broader:** [Neutron stars & pulsars](neutron-stars-pulsars.md)
 
+## Landscape
+
+The neutron star crust is the solid outer layer of a neutron star, separating the liquid core from the surface. Its properties are crucial for interpreting gravitational wave signals, understanding pulsar glitches, and constraining the nuclear equation of state (EOS) at sub-saturation densities. The topic matters because the crust’s composition, elasticity, and transport properties directly impact observable phenomena, from the star’s thermal evolution to its rotational dynamics.
+
+The main approaches combine nuclear theory with astrophysical modeling. Many studies constrain the inner crust-core transition density and pressure using Skyrme and Gogny interactions, as in the work by Xu et al. on nuclear constraints and the SLy interaction study. The symmetry energy and its density dependence are central, with lower bounds derived from unitary-gas considerations and chiral effective field theory calculations. Unified EOSs, such as those from the Brussels-Montreal group, describe both crust and core consistently. Microscopic simulations address specific crust physics, including molecular dynamics for breaking strain and time-dependent density functional theory for superfluidity and vortex pinning.
+
+Active directions include refining the crust-core transition using Bayesian methods that incorporate nuclear experiment data and gravitational wave observations like GW170817. The role of the symmetry energy slope parameter L in determining inner crust thickness remains debated. Open questions involve the electrical conductivity of warm crusts in magnetic fields, the thermodynamics of nuclear pasta phases, and the composition and heating of accreting neutron star crusts, where multicomponent models and pycnonuclear fusion rates are under investigation.
+
 **Papers:** 146 (showing first 100 of 146)
 
 - [2606.09247](../papers/2606.09247.md) (2026) [1] Bayesian analysis of the shear modulus in the neutron-star crust

@@ -4,6 +4,14 @@
 
 **Broader:** [Fission](fission.md)
 
+## Landscape
+
+The scission point is the moment in nuclear fission when the compound nucleus splits into two separate fragments, defining the initial conditions for all subsequent fragment properties. Understanding this point is crucial because it directly determines the fragment mass, charge, kinetic energy, and angular momentum distributions, which are essential for applications from reactor physics to the astrophysical r-process, where fission recycling in neutron star mergers shapes the abundance of heavy elements.
+
+The main theoretical approaches to the scission point are diverse. Fully microscopic methods, such as the constrained Hartree-Fock-Bogoliubov theory with Gogny forces, are used to calculate potential energy surfaces up to scission, revealing bimodal fission paths in the Fm region. Density functional theory with Skyrme functionals is similarly applied to compute static potential energy surfaces for reactions like 239Pu(n,f). Phenomenological scission-point models, such as the SPY model, are employed to derive fission fragment distributions for r-process calculations. Dynamical approaches, including the Langevin framework, simulate the evolution from saddle to scission, capturing the role of shape fluctuations and random forces in determining mass asymmetry and peak widths. Time-dependent mean-field theories, like TDHF, are used to estimate collective masses and torques acting on fragments at scission.
+
+Open questions and active directions focus on the detailed dynamics and properties at the scission point. Recent work explores the competition between static collective structure and stochastic dynamics to understand the tails of yield distributions. The angular momentum of fragments, including its deformation and thermal contributions, is an active area, with studies using TDHF to examine torques from nuclear and Coulomb interactions. Experimental efforts now derive scission configuration properties, such as the distance between fragments and proton-neutron number sharing, from measured fragment velocities. Finally, the role of the scission point in late-time prompt fission gamma-ray emission, including the influence of isomers, is being investigated within the Hauser-Feshbach formalism.
+
 **Papers:** 40
 
 - [2604.19576](../papers/2604.19576.md) (2026) [2] Shell effects and the neutron emission within the multi-dimensional Langevin model for nuclear fission

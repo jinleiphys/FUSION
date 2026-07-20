@@ -6,6 +6,14 @@
 
 **Narrower:** [Color deconfinement](color-deconfinement.md)
 
+## Landscape
+
+The study of QCD phase transitions explores the behavior of strongly interacting matter under extreme conditions of temperature and baryon density, mapping the transition between confined hadronic matter and deconfined quark-gluon plasma. This topic is crucial for understanding the early universe, the interior of neutron stars, and the QCD phase diagram, including the search for a critical endpoint. The Snowmass 2021 Cosmic Frontier White Paper highlights that the dense matter equation of state and QCD phase transitions are a major outstanding problem, with neutron stars serving as cosmic laboratories to probe this regime.
+
+The main approaches include effective models and astrophysical observations. An effective quark-meson-nucleon model introduces a bag field to unify nucleon and quark degrees of freedom, predicting that chiral and deconfinement transitions are always linked. Compact stars with sequential QCD phase transitions explore scenarios with two first-order transitions, such as from nuclear matter to 2SC and then to CFL quark matter, producing distinct hybrid star branches. Other methods include holographic QCD models, the Skyrme model on a hypersphere, and machine learning applied to the 3D Ising universality class. Observational constraints from two-solar-mass neutron stars and merger events are used to reconcile equations of state, while gravitational wave frequencies from supernova explosions are proposed as a signature to distinguish neutron stars from strange quark stars.
+
+Active directions include probing the QCD critical point through novel observables. The yield ratio of light nuclei from nucleon coalescence is shown to increase with the correlation length near the critical point. Quark-antiquark spin correlations, studied via the Nambu-Jona-Lasinio model, exhibit a peak near the chiral critical endpoint, offering a potential experimental signature. The impact of phase conversion speed on hybrid stars with sequential transitions is also investigated, affecting dynamical stability and mass-radius profiles. Finally, the influence of the chiral phase transition on the chiral magnetic effect is studied, showing a sudden suppression of chiral currents at the critical temperature.
+
 **Papers:** 31
 
 - [2604.00465](../papers/2604.00465.md) (2026) [1] Gravitational wave spectrum from first-order QCD phase transitions based on a parity doublet model

@@ -6,6 +6,14 @@
 
 **Narrower:** [Double beta decay](double-beta-decay.md), [Neutrinoless double beta decay](neutrinoless-double-beta-decay.md)
 
+## Landscape
+
+Beta decay is a fundamental weak interaction process in which a nucleus transforms by emitting an electron and an antineutrino or a positron and a neutrino. It is critically important because it governs stellar evolution and nucleosynthesis, as shown in shell-model calculations of weak interaction rates for nuclei in supernovae environments, and because its hypothetical neutrinoless mode, if observed, would prove that neutrinos are Majorana particles, create matter, and reveal physics beyond the Standard Model, with profound implications for particle physics, astrophysics, and cosmology.
+
+The main theoretical approaches combine nuclear structure models with effective field theories. The interacting shell model is used to disassemble nuclear matrix elements for neutrinoless double-beta decay, while ab initio methods, such as the in-medium similarity renormalization group combined with the generator coordinate method, treat collective correlations in deformed nuclei. Chiral effective field theory provides a consistent framework for interactions and currents, constraining low-energy constants from triton beta decay and showing that two-body currents are essential for Gamow-Teller transitions and neutrinoless double-beta decay operators. A master formula from effective field theory connects lepton-number-violating operators at high scales to the nuclear scale.
+
+Active directions include determining the short-range operator contribution to neutrinoless double-beta decay, which is missing in current calculations and requires matching to lattice QCD or chiral symmetry relations. The development of exascale computing promises a predictive theory of nuclear structure rooted in QCD with quantifiable uncertainties, directly impacting searches for neutrinoless double-beta decay and dark matter. Future work also focuses on probing novel scalar and tensor interactions from neutron and nuclear decays, and on improving the accuracy of antineutrino spectra from reactors by addressing higher-order corrections like weak magnetism.
+
 **Papers:** 842 (showing first 100 of 842)
 
 - [2606.13073](../papers/2606.13073.md) (2026) [2] The leading nuclear-structure electrostatic correction in arbitrary $β$ decays

@@ -6,6 +6,16 @@
 
 **Narrower:** [Asymmetric nuclear matter](asymmetric-nuclear-matter.md), [Symmetry energy](symmetry-energy.md), [Equations of state of nuclear matter](equations-of-state-of-nuclear-matter.md)
 
+## Landscape
+
+### Landscape Synthesis: Nuclear Matter
+
+Nuclear matter is the theoretical study of strongly interacting matter under extreme conditions of density and temperature, governed by Quantum Chromodynamics (QCD). This topic is crucial for understanding the interior of neutron stars, the dynamics of heavy-ion collisions, and the phase structure of QCD, including the transition from hadronic matter to a deconfined quark-gluon plasma (QGP). Its importance spans from astrophysical observations of compact objects to laboratory experiments probing the fundamental forces of nature.
+
+The main approaches include relativistic mean-field (RMF) models and quantum hadrodynamics (QHD) for describing nuclear matter as a system of baryons and mesons, as reviewed by the authors of "Recent Progress in Quantum Hadrodynamics." For dense matter in neutron stars, the equation of state (EoS) is a central focus, with studies like "Masses, Radii, and Equation of State of Neutron Stars" summarizing observational constraints. The transition to quark matter is explored via the Nambu-Jona-Lasinio framework, as in "From hadrons to quarks in neutron stars," and through generic parameterizations like the constant-speed-of-sound (CSS) model in "Generic conditions for stable hybrid stars." Heavy-ion reactions, as discussed in "Recent Progress and New Challenges in Isospin Physics," probe the density dependence of the symmetry energy, while "Jet Quenching and Radiative Energy Loss" uses QGP signatures to study dense matter created in collisions.
+
+Active directions include determining whether quark matter cores exist in massive neutron stars, as addressed by "Evidence for quark-matter cores in massive neutron stars" using model-independent astrophysical constraints. The possibility that hybrid stars can masquerade as purely nucleonic ones, shown in "Hybrid stars that masquerade as neutron stars," remains an open challenge. The role of light clusters at finite temperature, investigated in "Composition and thermodynamics of nuclear matter with light clusters," and the concept of Quarkyonic matter, proposed in "Quarkyonic Matter and Neutron Stars" to explain observed neutron star properties, represent ongoing theoretical frontiers.
+
 **Papers:** 4107 (showing first 100 of 4107)
 
 - [2606.14018](../papers/2606.14018.md) (2026) [2] Energy and centrality dependence of thermodynamical observables from multiplicity in Pb+Pb and Au+Au collisions

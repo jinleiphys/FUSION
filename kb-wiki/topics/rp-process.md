@@ -4,6 +4,14 @@
 
 **Broader:** [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md)
 
+## Landscape
+
+The rp process is a sequence of rapid proton captures and beta decays that drives hydrogen burning on the surface of accreting neutron stars, powering phenomena such as Type I X-ray bursts and influencing the thermal evolution of the crust. Its endpoint and reaction flow determine the composition of accreted material and the energy released in deep crustal heating, making it essential for understanding neutron star observables and nucleosynthesis beyond iron.
+
+Key approaches include reaction network calculations that trace the rp process up to a closed SnSbTe cycle, as demonstrated by the endpoint study, which prevents synthesis beyond Te. Nuclear structure investigations, such as projected shell model studies of waiting point nuclei like 68Se and 72Kr, address shape coexistence and isomer impacts on burst models. Experimental determinations of breakout reactions, including 15O(alpha,gamma)19Ne via recoil coincidence techniques and 18Ne(alpha,p)21Na via Monte Carlo rate calculations, constrain the transition from hot CNO cycles to the rp process. Mass model calculations using Skyrme Hartree-Fock or the modified Bethe-Weizsacker formula provide proton drip line predictions essential for reaction path sensitivity.
+
+Open questions include the precise role of shape isomers in waiting point nuclei and their effect on isotopic abundances, as explored in projected shell model work. The remaining mass uncertainties for proton-rich nuclei, particularly in the A=41-75 region, continue to limit the accuracy of X-ray burst model predictions. The impact of neutron superfluidity on deep crustal heating for realistic thermonuclear ash compositions, as addressed in recent crustal heating studies, remains an active area of investigation.
+
 **Papers:** 43
 
 - [2512.14145](../papers/2512.14145.md) (2025) [1] Impact of experimental mass of $^{70}$Kr on the $^{68}$Se waiting-point in $rp$-process

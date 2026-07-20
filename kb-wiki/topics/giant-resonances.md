@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+Giant resonances are collective, high-frequency oscillations of the atomic nucleus, where a large fraction of nucleons move coherently. Their study is crucial because the properties of these modes, such as the isoscalar giant monopole resonance (ISGMR) and the isovector giant dipole resonance (IVGDR), provide direct experimental constraints on key parameters of the nuclear equation of state (EoS), including nuclear incompressibility and the symmetry energy. This information is essential for understanding the structure of finite nuclei, the dynamics of heavy-ion collisions, and the properties of neutron stars.
+
+The primary theoretical framework for describing these excitations is the random phase approximation (RPA), implemented in both non-relativistic and relativistic approaches. The paper on the compression-mode giant resonances highlights the extraction of nuclear incompressibility from the ISGMR. Relativistic RPA (RRPA) calculations, as detailed in the papers on collective multipole excitations and density-dependent meson-nucleon couplings, achieve excellent agreement with experimental data for spherical nuclei. Constraints on the symmetry energy are derived from the neutron skin thickness of nuclei and from the centroid energies of various resonances, as shown in the papers on the symmetry energy probed by neutron skins and from collective motion. The paper on the isospin splitting of the nucleon effective mass uses data from the IVGDR and isoscalar giant quadrupole resonance in 208Pb to extract precise values for the isovector and isoscalar effective masses.
+
+Active directions include the study of double giant resonances, such as the double giant dipole resonance (DGDR), to test the harmonic picture of nuclear vibrations, as discussed in the microscopic studies on two-phonon giant resonances and their decay theory. The incorporation of particle-vibration coupling (PVC) beyond mean-field theory, as in the paper extending covariant density functional theory, represents a significant frontier for improving the description of damping and fragmentation. Furthermore, the interplay between giant resonance data and astrophysical constraints is a vibrant area, with the relativistic effective interaction paper explicitly linking laboratory measurements of the neutron skin in 208Pb to the extrapolations needed for neutron star simulations.
+
 **Papers:** 204 (showing first 100 of 204)
 
 - [2604.07229](../papers/2604.07229.md) (2026) [1] Nuclear giant resonances from first principles

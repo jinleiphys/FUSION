@@ -4,6 +4,14 @@
 
 **Broader:** [Beta decay](beta-decay.md)
 
+## Landscape
+
+Neutrinoless double beta decay is a hypothetical ultra-rare nuclear process that, if observed, would prove that neutrinos are their own antiparticles (Majorana particles) and that lepton number is not conserved, directly creating matter. Its discovery would have profound implications for particle physics, astrophysics, and cosmology, offering a portal to physics beyond the Standard Model and potentially explaining the matter-antimatter asymmetry of the universe. The experimental search for this decay is now a major priority, with ton-scale experiments becoming feasible, and even a non-observation provides valuable constraints on neutrino mass.
+
+The primary theoretical challenge is the accurate calculation of nuclear matrix elements (NMEs), which govern the decay rate. A review by Engel and Menendez surveys NMEs across many nuclear models, noting that rapidly developing ab initio nuclear structure theory holds promise for more accurate results. Several papers pursue this ab initio path using chiral effective field theory (EFT) interactions. Yao et al. combine the in-medium similarity renormalization group with the generator coordinate method for 48Ca, while Novario et al. use coupled-cluster theory for the same nucleus. A critical development from Cirigliano et al. and others is the demonstration, within chiral EFT, that a leading-order short-range operator is required in the transition operator, a contribution missing in all previous calculations. Other major approaches include the interacting shell model, as used by Menendez et al., and energy density functional methods, such as the Gogny D1S study by Rodriguez and Martinez-Pinedo and the covariant density functional theory by Yao et al.
+
+Active directions focus on refining the theoretical framework and reducing uncertainties. The inclusion of chiral two-body currents is shown by Menendez et al. to provide significant contributions that must be included in all calculations. A major open question is the determination of the finite part of the newly identified short-range coupling, with strategies proposed to match to lattice QCD or relate it to isospin-breaking observables. The broader effort, as described by Hagen et al., aims to ground nuclear physics in QCD using exascale computing to produce a predictive theory with quantifiable uncertainties, which is essential for interpreting the results of next-generation experiments.
+
 **Papers:** 282 (showing first 100 of 282)
 
 - [2606.09288](../papers/2606.09288.md) (2026) [1] Global Ab initio Neutrino Mass Limits from Neutrinoless Double-Beta Decay

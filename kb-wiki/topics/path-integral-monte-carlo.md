@@ -4,6 +4,14 @@
 
 **Broader:** [Monte Carlo methods](monte-carlo-methods.md)
 
+## Landscape
+
+Path integral Monte Carlo (PIMC) is a nonperturbative, finite temperature quantum simulation method that extends classical statistical mechanics into the quantum regime by representing the thermal density matrix as a path integral. This topic is crucial because it enables first principles calculations of thermodynamic and transport properties in strongly correlated systems ranging from dense astrophysical plasmas to the quark gluon plasma, where mean field or semiclassical approximations fail. For example, PIMC calculations of Coulomb tunneling in dense matter show excellent agreement with WKB methods above one fifth of the ion plasma temperature, while in neutron star crusts PIMC reveals electron scattering rates enhanced by a factor of 2 to 4 compared to simpler impurity scattering models.
+
+The main methodological threads include simulations of nuclear matter and quark gluon plasma. For nuclear systems, PIMC has been applied to bosons and fermions interacting via Lennard Jones potentials to construct phase diagrams, and to dilute neutron matter where the critical temperature for the superfluid normal phase transition is extracted from finite size scaling of the condensate fraction. For quark gluon plasma, color path integral Monte Carlo methods with a relativistic measure instead of the Gaussian Feynman Wiener measure reproduce the lattice QCD equation of state and reveal liquid like properties with bound quark antiquark states surviving just above the critical temperature.
+
+Open questions visible in recent papers include the extraction of scattering phase shifts from integrated correlation functions in trapped systems, particularly for coupled channels where a new relation retains explicit dependence on phase shifts but not inelasticity. Additionally, dissipative effects on quarkonium spectral functions are studied using PIMC with a nonlocal term to determine the Euclidean Green function, though challenges in deconvolution via the maximum entropy method remain significant. The thermal behavior of the Tan contact in one dimensional Bose gases also presents an active direction, where the \(1/k^4\) tail of the momentum distribution is screened by a \(1/|k|^3\) term above the hole anomaly temperature.
+
 **Papers:** 16
 
 - [2511.19209](../papers/2511.19209.md) (2025) [2] Projected Density Matrix Sampling for Lattice Hamiltonians

@@ -4,6 +4,16 @@
 
 **Broader:** [Nuclear charge distribution](nuclear-charge-distribution.md)
 
+## Landscape
+
+### Landscape Synthesis: Nuclear Charge Radii
+
+Nuclear charge radii, which quantify the spatial distribution of electric charge within an atomic nucleus, are fundamental observables that probe the complex dynamics of the nucleon-nucleon interaction and the bulk properties of nuclear matter. Their precise determination is crucial for validating nuclear structure models, understanding shell effects and isospin dependence, and constraining the nuclear equation of state, with implications ranging from the structure of exotic isotopes to astrophysical phenomena.
+
+The main theoretical approaches include nuclear density functional theory (DFT) using Skyrme, Fayans, and covariant functionals, which are applied to study correlations between charge radii, neutron skins, and nuclear matter parameters. A prominent sub-thread combines DFT with Bayesian neural networks (BNN) to refine predictions across the nuclear chart, as seen in the works exploring BNN-based approaches. Empirical formulas incorporating shell corrections and deformations, such as the four-parameter formula from the Weizsäcker-Skyrme mass model, also achieve high accuracy. Experimentally, collinear laser spectroscopy provides precise isotope shift measurements, as demonstrated for nickel, silicon, and potassium isotopes, enabling stringent tests of ab initio methods like chiral effective field theory and in-medium similarity renormalization group calculations.
+
+Open questions include the origin of unexpected charge radius increases in neutron-rich calcium and potassium isotopes, which challenge current theory and the magic character of N=32. The role of short-range correlated nucleon pairs in influencing long-range nuclear properties like charge radii remains an active direction. Additionally, the bulk versus surface nature of neutron skin formation and its correlation with the symmetry energy slope L continues to be investigated, with recent mirror pair measurements suggesting L ≤ 60 MeV.
+
 **Papers:** 79
 
 - [2606.07829](../papers/2606.07829.md) (2026) [2] Clustering in hadrons and light nuclei from Lorentz boosted form factors

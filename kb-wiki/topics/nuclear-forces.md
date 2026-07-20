@@ -4,6 +4,16 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+### Landscape: Nuclear Forces
+
+The topic of nuclear forces seeks to understand the strong interaction between nucleons (protons and neutrons) that binds atomic nuclei. This understanding is fundamental to describing nuclear structure, from light nuclei to heavy systems like 208Pb, and the properties of dense matter found in neutron stars. The field is driven by the need for a predictive theory rooted in Quantum Chromodynamics (QCD), the underlying theory of the strong force, to explain phenomena across vastly different scales.
+
+The dominant modern approach is chiral effective field theory (chiEFT), which provides a systematic, model-independent derivation of nuclear forces from low-energy QCD, as reviewed by Epelbaum et al. and Machleidt and Entem. This framework yields nucleon-nucleon potentials at increasing orders of precision, such as the fifth-order potential by Entem et al. which shows improved convergence. Key sub-threads include the development of local chiral interactions for quantum Monte Carlo calculations, as demonstrated by Gezerlis et al., and the application of these forces to many-body systems, such as the variational chain summation calculations for neutron star structure by Akmal et al. that incorporate three-nucleon interactions. Complementary approaches include the large-N QCD perspective on spin-flavor dependence and the shell model, which uses effective interactions for heavy nuclei.
+
+Active directions focus on refining the theory and extending its reach. Open questions include the proper renormalization of chiral forces, particularly in triplet channels as discussed by Long and Yang, and the behavior of nuclear forces in the chiral limit, relevant for connecting to lattice QCD. A major frontier is the ab initio description of heavy nuclei, where recent work by Hu et al. links the neutron skin of 208Pb to nuclear forces, bridging nuclear structure and neutron star properties. The systematic quantification of uncertainties in chiral interactions, as pursued by Ekström et al., is also a critical ongoing effort.
+
 **Papers:** 409 (showing first 100 of 409)
 
 - [2605.02826](../papers/2605.02826.md) (2026) [2] Structure of the $^8$B and $^8$Li nuclei and the astrophysical $S_{17}(0)$-factor of the $^7$Be($p,γ$)$^8$B direct captu...

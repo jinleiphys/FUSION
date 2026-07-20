@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear fusion](nuclear-fusion.md)
 
+## Landscape
+
+Fusion evaporation reactions are a central mechanism in nuclear physics for synthesizing neutron deficient and superheavy nuclei, where a projectile fuses with a target nucleus to form a compound nucleus that subsequently evaporates particles. This topic matters because it enables the production of exotic isotopes far from stability, including proton rich nuclei near the N=126 shell closure and new superheavy elements with Z=119 and 120, which test the limits of nuclear existence and provide insight into nuclear structure and the island of stability.
+
+The main approaches involve theoretical modeling with the dinuclear system model and the improved quantum molecular dynamics model, as seen in systematic studies of proton rich nuclei around Z=84-90 and superheavy nuclei Z=119-122. The dinuclear system model is used to calculate production cross sections and optimal excitation energies for fusion evaporation reactions, as demonstrated in the papers on superheavy element synthesis and neutron deficient actinide isotopes. Additionally, time dependent Hartree Fock calculations are employed to study fusion and quasifission dynamics, as in the investigation of reactions with 48Ca and 50Ti beams on 249Bk targets.
+
+Active directions include resolving the competition between quasifission and fusion fission dynamics that hinders superheavy element synthesis, particularly for reactions with single magic 50Ti beams that have so far been unsuccessful. Open questions also involve the role of nuclear structure effects such as shape coexistence, as investigated via lifetime measurements in 188Hg, and the statistical decay properties of light nuclei, probed through exclusive fusion evaporation data and Hauser Feshbach calculations. The dependence of synthesis cross sections on collision orientations and the inclusion of cluster transfer and quadrupole deformation coupling remain under active investigation.
+
 **Papers:** 12
 
 - [2511.18337](../papers/2511.18337.md) (2025) [2] Systematic investigation on the superheavy nucleus formation in the reactions of $^{48}$Ca, $^{50}$Ti, $^{51}$V and $^{5...

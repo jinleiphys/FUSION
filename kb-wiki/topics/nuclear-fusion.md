@@ -6,6 +6,14 @@
 
 **Narrower:** [Fusion evaporation reactions](fusion-evaporation-reactions.md)
 
+## Landscape
+
+Nuclear fusion is the process by which atomic nuclei combine to form heavier elements, releasing vast amounts of energy that powers stars and drives nucleosynthesis. This topic is critically important because it governs stellar evolution, the production of elements essential for life, and offers a potential pathway for terrestrial energy generation. Understanding fusion cross sections, as reviewed in "Solar fusion cross sections II: the pp chain and CNO cycles," is fundamental to predicting solar neutrino fluxes and stellar burning rates.
+
+The main approaches to studying fusion span ab initio calculations, reaction dynamics, and transport models. The Hoyle state in carbon-12, a key resonance for stellar helium burning, has been elucidated through ab initio lattice calculations that reveal its cluster structure and rotational excitations, as shown in "Structure and rotations of the Hoyle state" and "Ab initio calculation of the Hoyle state." Heavy-ion fusion reactions are modeled using coupled-channels calculations, as described in "A program for coupled-channels calculations with all order couplings for heavy-ion fusion reactions," and time-dependent Hartree-Fock theory, detailed in "Heavy-ions collisions and fission dynamics with the time-dependent Hartree-Fock theory." At higher energies, the Parton-Hadron-String Dynamics approach, presented in "Parton transport and hadronization from the dynamical quasiparticle point of view," describes the transition from partonic to hadronic matter.
+
+Open questions and active directions include the density dependence of the symmetry energy in neutron-rich matter, a focus of "Reaction Dynamics with Exotic Beams" and "Recent Progress and New Challenges in Isospin Physics with Heavy-Ion Reactions." The precise nature of the Hoyle state and its rotational excitations remains a challenge, as does the accurate determination of solar fusion cross sections. Furthermore, the role of neutrino emission from neutron stars, reviewed in "Neutrino Emission from Neutron Stars," and the application of lattice QCD to multi-channel systems, as in "Moving Multi-Channel Systems in a Finite Volume with Application to Proton-Proton Fusion," represent frontiers where theory and experiment continue to converge.
+
 **Papers:** 1624 (showing first 100 of 1624)
 
 - [2606.07077](../papers/2606.07077.md) (2026) [1] External-Field-Assisted Muon Reactivation in Muon-Catalyzed Fusion: A Rate-Network Criterion for Reducing Alpha Sticking

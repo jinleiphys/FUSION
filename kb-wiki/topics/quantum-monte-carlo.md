@@ -6,6 +6,14 @@
 
 **Narrower:** [Diffusion quantum Monte Carlo](diffusion-quantum-monte-carlo.md)
 
+## Landscape
+
+Quantum Monte Carlo (QMC) methods are ab initio computational approaches that solve the nuclear many-body problem starting from realistic two- and three-nucleon interactions. These methods are essential for predicting the structure, reactions, and equation of state of light nuclei and neutron-rich matter directly from fundamental forces, providing a bridge between nuclear physics and astrophysical phenomena such as neutron star structure.
+
+The main methodological thread is the Green's function Monte Carlo algorithm, detailed in calculations of nuclei with A ≤ 7 using the Argonne v18 two-nucleon and Urbana IX three-nucleon potentials. A parallel approach is the auxiliary-field diffusion Monte Carlo method, which has been applied to neutron matter using local chiral effective field theory interactions up to next-to-next-to-leading order. These techniques have been extended to systematically study p-shell nuclei up to A=10, reproducing over 30 different states in A ≤ 8 nuclei and demonstrating that nuclear structure emerges from elementary interactions.
+
+Open questions center on the role of three-nucleon forces, particularly in neutron-rich systems and dense matter. Recent work investigates the hyperon puzzle in neutron stars, where three-body hyperon-nucleon interactions fundamentally soften the equation of state. The correlation between short-range three-neutron interactions and the nuclear symmetry energy remains an active direction, with chiral effective field theory providing a framework for reliable uncertainty estimates in astrophysical contexts.
+
 **Papers:** 274 (showing first 100 of 274)
 
 - [2606.14558](../papers/2606.14558.md) (2026) [2] Tomography of Atomic Nuclei

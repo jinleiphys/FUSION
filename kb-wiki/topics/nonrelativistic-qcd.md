@@ -4,6 +4,14 @@
 
 **Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
 
+## Landscape
+
+Nonrelativistic QCD (NRQCD) is the effective field theory that describes heavy quarkonium systems, where the heavy quark mass provides a scale separation that allows for systematic expansions in the relative velocity. This topic matters because it provides the theoretical foundation for understanding the spectroscopy, production, and in-medium behavior of heavy quarkonia, which are crucial probes of quantum chromodynamics (QCD) from the perturbative to the nonperturbative regime, as highlighted in the comprehensive overviews of heavy quarkonium physics and the progress, puzzles, and opportunities in the field.
+
+The main approaches include the construction of effective field theories that systematically integrate out high-energy scales. The foundational NRQCD framework is extended by the potential NRQCD (pNRQCD) effective field theory for ultrasoft momenta, as proposed by the authors of "Effective Field Theory for Ultrasoft Momenta in NRQCD and NRQED." A major sub-thread is the application of these theories to heavy-ion collisions, where coupled Boltzmann transport equations for heavy quarks and quarkonia in the quark-gluon plasma are developed, and quantum master equations in the Lindblad form are derived for heavy quark systems at high temperatures. Lattice QCD simulations using NRQCD for the bottom quark are employed to study bottomonium spectral functions in the quark-gluon plasma, as seen in the work on the Upsilon and eta_b. Additionally, chiral perturbation theory for heavy hadrons and chiral effective field theory for heavy hadronic molecules are used to understand the properties of open-charm and open-bottom systems and the nature of exotic states like the hidden-charm pentaquark and tetraquark states.
+
+Open questions and active directions visible in the recent papers include the precise nature of the many charmonium-like and bottomonium-like states, such as the charged Z_c and Z_b states and the hidden-charm pentaquarks, which challenge the naive quark model and require clarification between tetraquark and molecular interpretations. Another active direction is the transport of heavy quarkonia in the quark-gluon plasma, where the interplay between dissociation and recombination, the role of quantum corrections to semiclassical transport, and the factorization of the quarkonium-bath coupling are under active investigation. The study of nuclear-bound quarkonia and heavy-flavor hadrons also presents a promising frontier, with new experimental opportunities at FAIR, Jefferson Lab, and J-PARC motivating further theoretical predictions.
+
 **Papers:** 295 (showing first 100 of 295)
 
 - [2606.12175](../papers/2606.12175.md) (2026) [2] Factorizing quarkonium LDMEs and TMDSTFs using effective field theory

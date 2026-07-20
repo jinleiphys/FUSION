@@ -4,6 +4,16 @@
 
 **Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
 
+## Landscape
+
+### Landscape Synthesis: QCD Phenomenology
+
+QCD phenomenology seeks to bridge the fundamental theory of the strong force, quantum chromodynamics, with the observable properties of hadrons and atomic nuclei. Its central importance lies in explaining the origin of the vast bulk of visible mass, which is not due to the Higgs mechanism but emerges from the dynamics of quarks and gluons, as highlighted in the paper "Insights into the Origin of Mass." This field addresses how the roughly 1 GeV mass scale of nucleons arises and why the pion and kaon, as Nambu-Goldstone bosons, are paradoxically light.
+
+The main approaches include effective field theories and continuum methods. The "QCD Phenomenology based on a Chiral Effective Lagrangian" review details the Nambu-Jona-Lasinio model for dynamical chiral symmetry breaking and hadron spectra. Covariant QCD phenomenology is applied to meson coupling constants and form factors in "Inside Mesons." Lattice QCD provides first-principles calculations, as seen in "Transverse force distributions in the proton from lattice QCD," which computes colour-Lorentz forces. The "Pion and Kaon Structure at the Electron-Ion Collider" perspective outlines the need for experimental probes to unravel partonic structure and the interplay between emergent and Higgs-boson mass mechanisms.
+
+Active directions include the study of heavy flavor jets in heavy ion collisions, where dijet mass modifications offer sensitivity to parton energy loss. The "Snowmass white paper" emphasizes the need for amplitude analysis constrained by QCD phenomenology to interpret new hadron spectroscopy. The "Kaon spectrum revisited" paper describes a new CERN facility to map excited kaons, impacting low-energy phenomenology and CP violation studies. The "Dynamical quark recombination" paper explores the transition from free quarks to hadrons in heavy-ion collisions, while "From QCD phenomenology to nuclear physics phenomenology" connects gluon correlators to neutron star models.
+
 **Papers:** 17
 
 - [2502.00325](../papers/2502.00325.md) (2025) [2] Transverse force distributions in the proton from lattice QCD

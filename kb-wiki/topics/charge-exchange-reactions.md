@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+Charge-exchange reactions are nuclear processes in which a projectile and target exchange charge, altering the proton and neutron numbers of the participants while leaving the mass number unchanged. These reactions are a primary experimental tool for probing the spin-isospin response of nuclei, providing direct access to Gamow-Teller (GT) transition strengths. This capability is crucial for understanding nuclear structure, constraining the nuclear symmetry energy and its density slope, and informing astrophysical models of supernova dynamics, nucleosynthesis, and neutron star properties.
+
+The field employs a range of theoretical and experimental methods. The Hugenholtz-Van Hove theorem connects global nucleon optical potentials, extracted from (p,n) charge-exchange reactions and other data, to the symmetry energy and its slope at normal density. Many-body approaches such as the quasiparticle random-phase approximation (QRPA) and the deformed QRPA are used to evaluate GT strength distributions, as seen in work on pf-shell nuclei and on isotopes like 76Ge and 76Se. The Faddeev-Alt-Grassberger-Sandhas approach provides a framework for calculating charge-exchange reactions within a three-body model, while Bayesian analysis has been applied to quantify uncertainties in (p,n) reaction theories for transitions to isobaric analogue states.
+
+Open questions and active directions include the precise determination of the axial-vector coupling strength g_A, which is known to be quenched in nuclear beta and double-beta decays, and its impact on neutrinoless double-beta decay matrix elements. A strong linear correlation has been demonstrated between the nuclear matrix elements of neutrinoless double-beta decay and double Gamow-Teller transitions, suggesting a new pathway for constraining the former. The role of forbidden transitions in neutrino-nucleus reactions at supernova-relevant energies, and the accurate description of the Gamow-Teller resonance with improved Skyrme interactions, remain areas of active investigation.
+
 **Papers:** 79
 
 - [2603.21997](../papers/2603.21997.md) (2026) [1] Lepton Double Charge Exchange Reactions as Probes for Lepton Number Violation

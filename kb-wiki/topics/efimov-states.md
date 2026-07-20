@@ -4,6 +4,16 @@
 
 **Broader:** [Few-body systems](few-body-systems.md)
 
+## Landscape
+
+### Landscape Synthesis: Efimov States
+
+Efimov states are a sequence of universal, shallow three-body bound states that emerge when the two-body scattering length is large, a phenomenon first predicted by Vitaly Efimov. Their importance lies in their discrete scaling symmetry, which leads to a log-periodic dependence of observables on the scattering length, a feature that transcends specific systems. This universality, grounded in short-range interactions, makes Efimov states a key probe of few-body quantum mechanics, with implications ranging from cold atomic gases to nuclear and particle physics.
+
+The primary theoretical approach is effective field theory, which captures the universal low-energy properties without detailing short-distance physics. This method is used to calculate the universal function for the Efimov spectrum, as done in the "Universal Equation for Efimov States" paper, and to investigate modifications in a finite volume, as explored in "Efimov physics in a finite volume." A major sub-thread is the application to nuclear physics, particularly halo nuclei. Papers such as "Universal properties and structure of halo nuclei" and "Range corrections for two-neutron halo nuclei in effective theory" use an effective three-body framework to study Borromean 2n-halo nuclei, identifying 20C as a promising candidate for an excited Efimov state. Another active direction is the holographic description of exotic hadrons, where "Heavy Holographic Exotics" and "Holographic tetraquarks and the newly observed Tcc+ at LHCb" model tetraquarks as Efimov states formed by binding heavy-light mesons.
+
+Open questions center on the existence and properties of Efimov states in specific nuclear systems. The paper "Implications of a matter-radius measurement for the structure of Carbon-22" uses experimental data to constrain the separation energies of 22C, finding that for it to have an rms matter radius within 1-sigma of the measured value, the two-neutron separation energy must be very small, which in turn constrains the possibility of an excited Efimov state. The role of range corrections, as investigated in "Range corrections for two-neutron halo nuclei," introduces uncertainty from unknown effective ranges, estimated by the inverse pion mass. Finally, the extension to larger clusters, as in "Weakly Bound Cluster States of Efimov Character," and the interplay of isospin degrees of freedom, as in "Universal physics of three bosons with isospin," represent active frontiers for understanding the universality of Efimov physics beyond the three-body system.
+
 **Papers:** 63
 
 - [2604.04435](../papers/2604.04435.md) (2026) [2] Neural-network quantum states for solving few-body problems: application to Efimov physics

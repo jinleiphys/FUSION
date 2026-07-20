@@ -4,6 +4,16 @@
 
 **Broader:** [Parton distribution functions](parton-distribution-functions.md)
 
+## Landscape
+
+### Landscape Synthesis: Fragmentation Functions
+
+Fragmentation functions describe the probability for a high-energy parton to hadronize into a specific hadron, encoding the transition from perturbative quarks and gluons to observable particles. Their study is crucial for interpreting hard probes in nuclear collisions, as modifications to these functions provide a direct signature of the quark-gluon plasma and cold nuclear matter effects, enabling quantitative tomography of the medium.
+
+The dominant theoretical framework treats medium modification as induced parton energy loss from multiple scattering. The Higher Twist approach derives modified fragmentation functions and their QCD evolution equations in deeply inelastic scattering, with results depending on twist-four parton distributions and exhibiting the Landau-Pomeranchuk-Migdal interference pattern and an A^{2/3} nuclear size dependence. The Linear Boltzmann Transport model tracks both leading partons and thermal recoil partons, implementing elastic and inelastic processes to study jet-induced medium excitations. Systematic comparisons of energy-loss schemes, including BDMPS-Z/ASW, Higher Twist, and AMY approaches, are performed using identical realistic hydrodynamic backgrounds. For heavy quarks, the gluon formation time dependence on quark mass leads to a transition from linear to quadratic medium size dependence of energy loss.
+
+Active directions include extending calculations beyond the helicity amplitude approximation, which reduces the effective energy loss by a factor of 5/6. The breakdown of collinear factorization at low transverse momenta due to high parton densities is explored through gluon recombination and the Color Glass Condensate formalism. The TMD Handbook highlights the importance of transverse-momentum-dependent fragmentation functions for understanding hadron structure. Simultaneous description of heavy and light flavor hadron suppression across RHIC and LHC energies remains a key challenge, requiring consistent coupling of jet transport parameters with realistic bulk matter evolution.
+
 **Papers:** 333 (showing first 100 of 333)
 
 - [2605.15280](../papers/2605.15280.md) (2026) [2] Sivers Tomography from Charge and Angle Only

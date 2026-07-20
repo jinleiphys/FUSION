@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+Radiative capture is a nuclear reaction in which a target nucleus absorbs an incident nucleon or light ion and emits a photon, forming a compound nucleus. This process is fundamental to nuclear astrophysics, as it governs the rates of key stellar reactions such as the proton-proton chain and the carbon-nitrogen-oxygen cycle, thereby influencing nucleosynthesis and energy generation in stars. It also provides a sensitive probe of nuclear forces and currents, particularly the role of meson-exchange currents beyond the simple one-body picture.
+
+The main theoretical approaches include effective field theory (EFT) and ab initio methods. The paper "n + p -> d + gamma in Effective Field Theory" explicitly demonstrates that meson exchange currents appear as divergent diagrams requiring a local counterterm, while "Isoscalar M1 and E2 Amplitudes in n+p -> d+gamma" uses EFT to compute suppressed amplitudes. "Halo effective field theory constrains the solar Beryllium-7 + proton -> Boron-8 + photon rate" applies Halo-EFT to extrapolate the S-factor for a key solar reaction. Ab initio calculations are represented by "Ab initio calculation of the np -> d gamma radiative capture process," which uses lattice QCD to determine short-distance two-body electromagnetic contributions, and "Ab initio many-body calculation of the 7Be(p,gamma)8B radiative capture," which employs the no-core shell model/resonating group method. The R-matrix theory, described in "The R-matrix theory," provides a phenomenological parametrization of cross sections, while the TALYS reaction code, detailed in "Improved predictions of nuclear reaction rates with the TALYS reaction code," offers a statistical Hauser-Feshbach framework for astrophysical rates.
+
+Active directions include the unification of ab initio structure and reaction methods, as seen in "Unified ab initio approaches to nuclear structure and reactions," which aims to describe bound and continuum states from QCD-derived Hamiltonians. The paper "Marrying ab initio calculations and Halo-EFT: the case of 7Li + n -> 8Li + gamma" exemplifies a hybrid approach, using variational Monte Carlo for asymptotic normalization coefficients to constrain EFT couplings. Open questions involve the precise role of three-body currents and core excitation, as explored in "Electromagnetic structure of A=2 and 3 nuclei and the nuclear current operator," and the universal features of electromagnetic strength in halo nuclei, as discussed in "Electromagnetic strength of neutron and proton single-particle halo nuclei," which highlights sensitivity to final-state interactions.
+
 **Papers:** 206 (showing first 100 of 206)
 
 - [2602.12423](../papers/2602.12423.md) (2026) [2] Low-energy $^{3}$He($α,γ$)$^{7}$Be reaction within the Skyrme potential framework

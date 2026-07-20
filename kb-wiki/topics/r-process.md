@@ -4,6 +4,14 @@
 
 **Broader:** [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md)
 
+## Landscape
+
+The rapid neutron capture process, or r process, is the astrophysical nucleosynthesis mechanism believed to produce approximately half of the heavy elements found in nature, including those heavier than iron. Understanding this process is a major open challenge because it connects nuclear physics, astrophysical environments, and the observed abundance patterns in metal-poor stars. The topic matters fundamentally for explaining the origin of the heaviest elements and for interpreting multi-messenger signals, such as the binary neutron star merger detected by LIGO-Virgo, which provides a direct astrophysical site for r-process nucleosynthesis.
+
+The main approaches involve constraining nuclear properties and astrophysical conditions through theory and experiment. Nuclear mass models, such as the Skyrme-Hartree-Fock-Bogoliubov framework, are refined to cross the 0.6 MeV accuracy threshold, as shown by Goriely et al., while surface diffuseness corrections improve mass formulas to 298 keV rms deviation. Beta-decay rates for r-process waiting-point nuclei are calculated using self-consistent Quasiparticle Random-Phase Approximation, with first-forbidden transitions included systematically by Marketin et al. The equation of state of dense matter, constrained by neutron star observations and nuclear symmetry energy parameters, is linked to r-process nucleosynthesis through neutronization in core-collapse supernovae and neutron star mergers, as discussed by Horowitz et al. and in the multi-messenger era paper.
+
+Active directions include resolving the large variation in predicted neutron drip line positions and r-process paths across different density functional theories, as highlighted by the positioning study. The impact of individual nuclear properties, such as masses and neutron capture rates, remains a key uncertainty, while fission fragment distributions from microscopic energy density functional theory are being developed for r-process applications. The search for the definitive astrophysical site continues, with neutrino-driven winds from supernovae and dynamically ejected matter from neutron star mergers both under investigation, and constraints from SN1987A on neutrino spectra still being evaluated.
+
 **Papers:** 375 (showing first 100 of 375)
 
 - [2606.10118](../papers/2606.10118.md) (2026) [2] Internal constitution of the outer crust of non-accreted neutron stars and magnetars

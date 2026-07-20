@@ -2,6 +2,16 @@
 
 **PhySH lineage:** Parity
 
+## Landscape
+
+### Landscape: Parity
+
+Parity (P) and charge-parity (CP) symmetries are fundamental to the Standard Model, yet their violation in strong interactions is a key probe of non-perturbative quantum chromodynamics (QCD). This topic investigates how topological QCD configurations, characterized by a winding number \(Q_w\), can induce local parity violation in hot, dense matter created in heavy ion collisions, and how parity-violating electron scattering can constrain the neutron skin of heavy nuclei, linking nuclear structure to neutron star properties.
+
+The primary approach to studying parity violation in QCD matter involves the Chiral Magnetic Effect (CME), where topological charge separation in a magnetic field leads to charge-dependent azimuthal correlations. Kharzeev et al. proposed this mechanism, while the STAR collaboration reported measurements of a three-particle mixed harmonics correlator sensitive to charge separation. Alternative explanations, such as cluster particle correlations, have been investigated by Bzdak et al. to account for these observables. In nuclear structure, parity-violating electron scattering provides a model-independent probe of the weak form factor, as demonstrated by the CREX collaboration's precision measurement of \(^{48}\)Ca, which extracts the neutron skin thickness.
+
+Open questions remain regarding the unambiguous isolation of the CME signal from background effects like charge conservation and cluster correlations. The possibility of spontaneous parity violation in hot QCD, as suggested by Pisarski et al., and the behavior of parity partners in chiral symmetry restoration, reviewed by Rapp et al., are active directions. Future experiments aim to refine these observables and extend measurements to new systems, while ab initio calculations, such as those by Hu et al., seek to link the neutron skin of \(^{208}\)Pb directly to nuclear forces.
+
 **Papers:** 2018 (showing first 100 of 2018)
 
 - [2606.18165](../papers/2606.18165.md) (2026) [2] Observation of a dominant $\boldsymbol{0f_{7/2}}$ neutron configuration in the $\boldsymbol{^{32}}$Si $\boldsymbol{J^π=5...

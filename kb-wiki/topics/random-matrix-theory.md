@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Random matrix theory
 
+## Landscape
+
+Random matrix theory (RMT) provides a statistical framework for describing the spectral fluctuations of complex quantum systems, where a complete microscopic description is intractable. Its importance stems from its universal predictions, which apply across diverse fields including nuclear physics, quantum chaos, disordered systems, and quantum chromodynamics (QCD), as emphasized in the review of common concepts. The theory matters because it offers a powerful null hypothesis for identifying chaotic behavior and a quantitative tool for analyzing experimental data, from neutron resonances to the conductance of quantum dots.
+
+The main approaches include the application of Gaussian ensembles to nuclear spectra, where the agreement with RMT predictions is taken as a signature of quantum chaos, as reviewed for compound-nucleus reactions and spectral fluctuations. A key sub-thread is the two-body random ensemble, which introduces physically motivated stochastic interactions for many-body systems, showing deviations from standard RMT in eigenstate structure and spectral tails. Other methods involve embedded ensembles for many-body physics, the use of the \(\Delta_3(L)\) statistic to correct for missed levels in experimental data, and mean-field theories for the chiral phase transition in QCD.
+
+Open questions and active directions are visible in recent papers. A significant unresolved issue is the persistent disagreement between the Porter-Thomas distribution predicted by RMT and the reduced neutron widths in the nuclear data ensemble, which rejects the prediction with high statistical significance. Further active directions include testing the Eigenstate Thermalization Hypothesis in lattice gauge theory, studying deviations from chaos in spherical nuclei like Ca isotopes, and developing functional generalizations of kinetic equations to model deviations from ensemble averages in non-equilibrium systems.
+
 **Papers:** 82
 
 - [2507.02707](../papers/2507.02707.md) (2025) [2] Statistical shell model for neutrinoless double $β$-decay nuclear transition matrix elements: Results for $^{76}$Ge, $^{...

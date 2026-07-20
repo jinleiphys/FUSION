@@ -4,6 +4,16 @@
 
 **Broader:** [Unstable nuclei induced nuclear reactions](unstable-nuclei-induced-nuclear-reactions.md)
 
+## Landscape
+
+### Landscape Synthesis: Shape Coexistence in Nuclear Physics
+
+Shape coexistence describes the phenomenon where atomic nuclei exhibit multiple distinct equilibrium deformations (e.g., spherical, prolate, oblate) at similar excitation energies. This topic is crucial because it challenges the simple mean-field picture of a single nuclear ground-state shape, revealing the subtle interplay between the nuclear force, shell structure, and correlations. Understanding shape coexistence provides deep insights into the effective nucleon-nucleon interaction and the evolution of magic numbers, particularly in exotic nuclei far from stability, as highlighted by the discovery of a doubly magic stronghold in \(^{78}\)Ni.
+
+The main theoretical approaches include self-consistent mean-field methods and the nuclear shell model. Configuration mixing of symmetry-restored mean-field states, using Skyrme interactions like SLy6, is a key technique for studying coexistence in neutron-deficient Pb and Kr isotopes. The relativistic Hartree-Bogoliubov (RHB) framework and Gogny-Hartree-Fock-Bogoliubov (HFB) calculations are also widely applied, for instance, to analyze shape evolution in N=28 isotones and triaxiality in Germanium isotopes. Large-scale shell-model calculations, using effective interactions like GXPF1 for the \(pf\)-shell, successfully describe core-excitations and the onset of deformation in regions such as the \(N=Z=28\) closed core and the new island of inversion around \(^{78}\)Ni.
+
+Active open questions include the precise microscopic mechanism driving shape coexistence, with Type II shell evolution recently identified as a quantitative cause in \(^{96}\)Zr. The role of exotic deformations, such as tetrahedral (\(Y_{32}\)) and triangular (\(Y_{33}\)) shapes, is being explored in symmetry-unrestricted calculations for N=Z nuclei like \(^{68}\)Se and \(^{80}\)Zr. Furthermore, the ordering of calculated bands in neutron-deficient Kr isotopes remains a challenge for current models, indicating that constraints on the single-particle spectrum from collective excitations are needed to refine effective interactions and better predict coexistence in regions like the neutron-rich N=50 island of inversion.
+
 **Papers:** 212 (showing first 100 of 212)
 
 - [2606.07092](../papers/2606.07092.md) (2026) [1] Impact of Shape Coexistence on Nuclear Stability

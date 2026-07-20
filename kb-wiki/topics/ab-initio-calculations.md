@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Ab initio calculations
 
+## Landscape
+
+Ab initio calculations in nuclear physics aim to describe atomic nuclei and nuclear matter starting from the fundamental interactions between nucleons, governed by quantum chromodynamics and realized through chiral effective field theory. This topic matters because it provides a predictive, first-principles framework for understanding nuclear structure, reactions, and the properties of extreme astrophysical objects, such as neutron stars, where matter is compressed to densities far beyond those in ordinary nuclei.
+
+The main methodological threads include quantum Monte Carlo methods, which are reviewed for their success in reproducing the structure and reactions of light nuclei from realistic interactions. Chiral effective field theory provides the systematic foundation for nuclear forces, with high-precision nucleon-nucleon potentials developed up to fifth order in the chiral expansion, as presented in the works on precision nucleon-nucleon potentials and high-quality two-nucleon potentials. Many-body methods such as the no-core shell model and the in-medium similarity renormalization group are used to extend calculations to medium-mass nuclei, as demonstrated in the predictions of nuclear drip lines from helium to iron and in studies of helium isotopes.
+
+Active directions include the quantification of theoretical uncertainties, addressed through emulators like eigenvector continuation for error analysis. The interplay between ab initio calculations and neutron star physics is a vibrant frontier, where QCD input is shown to complement astrophysical observations in constraining the equation of state. Open questions remain about the existence of quark matter in neutron star cores, the role of three-nucleon forces in nuclear binding, and the need for consistent interactions and currents to determine low-energy constants, as seen in the work on three-nucleon low-energy constants from triton beta decay.
+
 **Papers:** 311 (showing first 100 of 311)
 
 - [2606.12998](../papers/2606.12998.md) (2026) [2] Efficient emulation of nuclear ground states with neural-network variational Monte Carlo and eigenvector continuation

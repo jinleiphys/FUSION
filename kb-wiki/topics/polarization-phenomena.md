@@ -4,6 +4,16 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+### Landscape Synthesis: Polarization Phenomena
+
+Polarization phenomena in nuclear and particle physics concern the orientation of particle spins and their observable consequences in scattering and production processes. This topic is crucial because spin-dependent observables provide a far more detailed probe of reaction mechanisms and internal hadron structure than unpolarized cross sections alone, offering access to subtle quantum effects and fundamental interactions that would otherwise remain hidden.
+
+The field employs a diverse set of theoretical approaches. Quantum kinetic theory, using the Wigner-function formalism with an expansion in powers of $\hbar$, is used to derive transport equations for spin-1/2 particles, including nonlocal collision terms and self-energy corrections as seen in the works on the relativistic Boltzmann equation and spin polarization from quantum kinetic theory. Phenomenological models, such as the Jülich model for pion production, are applied to compute spin-dependent observables in reactions like $pp \to pp\pi^0$. Other approaches include the Zubarev response formalism for polarization in local equilibrium, the analysis of two-photon exchange effects in elastic lepton-nucleon scattering, and the study of spin correlations driven by initial-state effects in heavy-ion collisions.
+
+Active open questions include the precise role of medium effects, such as strong magnetic fields, baryon chemical potential, and anisotropy, on hadron polarization and spin alignment. The interplay between different polarization sources, such as thermal vorticity, shear, and initial-state spin density, remains under investigation, particularly in the context of heavy-ion collisions. Furthermore, the development of a complete and model-independent extraction of nucleon form factors from polarization observables, as well as the search for exotic phenomena like resonance mixing through polarization experiments, represent ongoing frontiers.
+
 **Papers:** 39
 
 - [2606.06553](../papers/2606.06553.md) (2026) [2] Hyperon-Nucleon Spectrometer

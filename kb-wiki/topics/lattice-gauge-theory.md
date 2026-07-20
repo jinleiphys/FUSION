@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Lattice gauge theory
 
+## Landscape
+
+Lattice gauge theory is a non perturbative framework for studying quantum chromodynamics (QCD) and other gauge theories by discretizing spacetime onto a lattice, enabling first principles calculations of phenomena like the quark gluon plasma and the QCD phase transition. It matters because it provides the only known systematic method to compute properties of strongly interacting matter from the fundamental theory, directly informing our understanding of heavy ion collisions, the equation of state of super hadronic matter, and the structure of the QCD phase diagram.
+
+The main approaches include classical statistical real time simulations of highly occupied non Abelian plasmas, which reveal universal attractor solutions governing thermalization as shown by Berges and collaborators. Another thread uses Bayesian inference to constrain the QCD equation of state by comparing lattice results to heavy ion collision data. Dyson Schwinger equation studies of the phase structure for three and four flavor QCD show excellent agreement with lattice results at zero chemical potential. Quantum simulation of SU(3) Yang Mills theory in a local multiplet basis represents an emerging method to address gauge redundancy, while digital quantum simulations of the Schwinger model with trapped ions demonstrate real time dynamics including pair creation.
+
+Active directions include the search for a QCD critical point in the phase diagram, the calculation of the jet quenching parameter from lattice gauge theory, and the study of deconfinement in dense two color QCD which reveals distinct regimes including Bose Einstein condensation of diquarks. The classical transport of heavy quarks and jets through the Glasma using colored particle in cell methods coupled to real time lattice fields is another frontier, alongside efforts to map the full QCD phase diagram through combined lattice, model, and universality arguments.
+
 **Papers:** 154 (showing first 100 of 154)
 
 - [2605.15076](../papers/2605.15076.md) (2026) [1] Deforming the Trail: Baseline Quantum Circuitry for $\text{SU(2)}_k$ Lattice Gauge Theory

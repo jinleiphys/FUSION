@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+The astrophysical S-factor is a key quantity in nuclear astrophysics that encapsulates the probability of low-energy nuclear fusion reactions, extrapolating measured cross sections to the stellar energies relevant for nucleosynthesis and solar neutrino production. Its precise determination is critical for understanding the solar neutrino flux, Big Bang nucleosynthesis, and future energy generation, as highlighted by the importance of reactions such as 7Be(p,gamma)8B and 3He(4He,gamma)7Be.
+
+The main theoretical approaches include Halo Effective Field Theory (EFT) and ab initio many-body methods. Halo EFT is applied to the 7Be(p,gamma)8B reaction, using asymptotic normalization coefficients from ab initio calculations to fix couplings at leading and next-to-leading order, as seen in the works by authors like Zhang and Nollett. Ab initio calculations using the no-core shell model/resonating group method (NCSM/RGM) with chiral nucleon-nucleon interactions predict the S-factor for 7Be(p,gamma)8B and for the 3H(d,n)4He and 3He(d,p)4He fusion reactions. Other approaches include the Shell Model Embedded in the Continuum for 16O(p,gamma)17F and parameter-free chiral EFT calculations for the hep process and proton-proton weak capture.
+
+Open questions and active directions include improving the precision of the zero-energy S-factor and its energy dependence, particularly for the 7Be(p,gamma)8B reaction which determines the 8B neutrino flux. Recent papers emphasize Bayesian methods to infer multi-dimensional parameter posteriors from capture data, as demonstrated for 3He+4He capture. The role of core excitation in Halo EFT and the need to reconcile results from different theoretical frameworks, such as the 1% agreement between NLO Halo EFT and other models, remain active areas of investigation.
+
 **Papers:** 200 (showing first 100 of 200)
 
 - [2605.19927](../papers/2605.19927.md) (2026) [1] A new analysis of the "hep" S-factor and the "hen" cross section

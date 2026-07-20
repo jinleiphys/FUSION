@@ -24,7 +24,6 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 
 - [ ] relations.tsv exceeds GitHub's 50 MB soft warning (51 MB at 431k edges, will grow to ~90 MB at full 728k). Decide handling after L3 completes: gzip in-repo, or Git LFS, or fold into the eventual kb-wiki repo split. Not blocking (push still works)
 - [ ] Abstract-only pages for the ~1,655 corpus papers without fulltext (lighter template, separate small batch)
-- [ ] 109+ topic landscape syntheses (DeepSeek, one per topic page)
 - [ ] Widen neighbor whitelist to cut the 36.4% unclassified rate (hadron structure, heavy-ion subconcepts; sampled unclassified = mix of true out-of-scope and concept gaps)
 - [ ] Tier-B citation edges (111k author-year heuristic edges) deserve a false-positive audit pass
 - [ ] Hook monthly re-run (digest new papers + kb_classify + build_wiki_layers + kb_citegraph + inject + kb_relations) into the corpus-update launchd job
@@ -48,6 +47,8 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 (empty; no paper citations in the project yet)
 
 ## Completed
+
+- [x] 2026-07-20: 108 topic-page Landscape syntheses written by DeepSeek (grounded in each topic's top-15 cited papers' abstracts), 108/108 topic pages, ~217k/40k tokens (pennies), 0 em-dash. Quality spot-checked (breakup, shell-model, astro all accurate)
 
 - [x] 2026-07-20: Semantic layer (L3) COMPLETE. All 54,378 citing papers classified, 727,841 edges typed. Final distribution: background 485,740 (67%, dropped), uses 187,742, compares 20,767, contrasts 17,505 (2.4%), extends 11,361, applies 4,726; ~242k non-background kept (33%). `## Related work` injected into 44,891 pages (bidirectional). Claude QC: 0 fallbacks, contrasts spot-check all genuine disagreements, sample pages sensible. Phase 3 (knowledge base) core fully done: 4 layers live (concepts, citations, semantic relations, all on 61,059 pages). Bug fixed to get here: the last 3,181 recent/backfill papers hung the batch on KINGSTON .tex reads (no timeout on file I/O); fixed with --no-context (skip .tex for backfill papers, classify on titles+abstracts) + 60s API timeout + background-fallback-marks-done (see devlog 2026-07-20)
 - [x] 2026-07-15: INSPIRE citation backfill DONE. Fetched references API for all 27,682 zero-outgoing-edge papers (27,630 hit INSPIRE, 99.8%, 52 not indexed), mapped to corpus ids, added 376,503 new in-corpus edges. Coverage: corpus-wide 81% -> 96%, newest-500 papers 27% -> 87% (the recent-preprint gap closed). Merged into citations.tsv (351k -> 728k edges), re-injected citation sections (36,980 pages updated). Verified 2604.11226 gains 8 correct edges. Zero LLM tokens. Tonight's semantic run now covers 54,378 citing papers (was 33,377)

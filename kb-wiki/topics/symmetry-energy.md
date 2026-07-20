@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear matter](nuclear-matter.md)
 
+## Landscape
+
+The symmetry energy describes how the energy of nuclear matter changes as its neutron-proton balance is altered, and its density dependence is a central focus of isospin physics. This quantity is crucial because it governs the composition and structure of neutron-rich matter, linking laboratory nuclear physics to astrophysical phenomena such as neutron star structure, core-collapse supernovae, and r-process nucleosynthesis, as highlighted in the papers by the authors of "Constraining the Symmetry Parameters of the Nuclear Interaction" and "Recent Progress and New Challenges in Isospin Physics with Heavy-Ion Reactions".
+
+The main approaches to constraining the symmetry energy combine terrestrial experiments with astrophysical observations. Laboratory constraints come from measurements of the neutron skin thickness in heavy nuclei, such as the PREX-II result for 208Pb and a new precision measurement for 48Ca, which are strongly correlated with the slope of the symmetry energy L. These are complemented by microscopic calculations from chiral effective field theory, as detailed in "How well do we know the neutron-matter equation of state", and by relativistic mean-field models that are systematically compared to nuclear matter properties. Astrophysical constraints are derived from neutron star masses and radii, with the observation of a 1.97 solar mass neutron star providing a key upper bound on the equation of state.
+
+Open questions and active directions include the precise determination of the symmetry energy at both sub- and supranuclear densities, as the density ladder from terrestrial experiments to astronomical observations is refined. The recent PREX-II and 48Ca results show some tension with other constraints, motivating further work. Additionally, the behavior of hot, dense matter with light clusters, as studied in "Composition and thermodynamics of nuclear matter with light clusters", and the role of thermal properties in supernovae and neutron star mergers remain less well constrained, representing a frontier for future research.
+
 **Papers:** 1367 (showing first 100 of 1367)
 
 - [2606.17169](../papers/2606.17169.md) (2026) [2] Heaven and Earth: Connecting Jefferson Lab to the Cosmos

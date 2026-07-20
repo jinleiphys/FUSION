@@ -4,6 +4,14 @@
 
 **Broader:** [Strong interaction](strong-interaction.md), [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
 
+## Landscape
+
+The quark-gluon plasma (QGP) is a state of matter where quarks and gluons, normally confined within hadrons, become deconfined and free to travel over distances larger than the size of a proton. This topic matters because it recreates the conditions of the early universe, often described as the "Little Bang," and allows the study of the strong force under extreme temperatures and energy densities, as noted in the review of collective flow and viscosity.
+
+The primary approach to studying QGP is through relativistic heavy-ion collisions, modeled using relativistic hydrodynamics. The paper on hydrodynamic description of ultrarelativistic collisions demonstrates that this model successfully describes momentum distributions and elliptic flow. A key sub-thread is the extraction of the specific shear viscosity, with the paper on 200 A GeV Au+Au collisions concluding the QGP behaves as a nearly perfect liquid with a very low viscosity. Other methods include the study of the Color Glass Condensate as an initial state, as discussed in "New Forms of QCD Matter Discovered at RHIC," and the investigation of event-by-event fluctuations to locate the QCD critical point, as detailed in the paper on fluctuations and the QCD critical point.
+
+Open questions and active directions include the precise role of electromagnetic fields, with the event-by-event generation paper noting strong fields and their implications for the Chiral Magnetic Effect, a topic reviewed in a dedicated status report. The phase structure of QCD remains a central puzzle, with the paper on decoding the phase structure using statistical hadronization pointing to quark-hadron duality. Finally, Bayesian parameter estimation, as applied in the paper on simultaneous characterization, represents a modern direction for quantitatively constraining both the initial state and the QGP medium properties from experimental data.
+
 **Papers:** 2805 (showing first 100 of 2805)
 
 - [2606.16377](../papers/2606.16377.md) (2026) [2] Static linear response of hot and dense QCD matter to electromagnetic fields: Leading hard and soft QCD corrections

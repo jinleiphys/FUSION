@@ -4,6 +4,16 @@
 
 **Narrower:** [Jet quenching](jet-quenching.md), [Photon, lepton & quark production](photon-lepton-quark-production.md), [Collective flow](collective-flow.md), [Transport in heavy-ion collisions](transport-in-heavy-ion-collisions.md), [Jets & heavy flavor physics](jets-heavy-flavor-physics.md), [Particle correlations & fluctuations](particle-correlations-fluctuations.md), [Quark-gluon plasma](quark-gluon-plasma.md), [Particle & resonance production](particle-resonance-production.md), [Hard scattering](hard-scattering.md), [Charged-particle multiplicity](charged-particle-multiplicity.md), [QCD phase transitions](qcd-phase-transitions.md)
 
+## Landscape
+
+### Landscape: Relativistic Heavy-Ion Collisions
+
+Relativistic heavy-ion collisions create extreme conditions of temperature and energy density, recreating the quark-gluon plasma (QGP) that existed in the early universe. This topic is crucial for understanding the fundamental properties of QCD matter, including the phase transition between hadronic matter and the QGP, and the search for a possible QCD critical point. The "Little Bangs" produced in these collisions allow the study of the strong force under conditions not accessible in ordinary nuclear matter.
+
+The primary approach to describing the collision dynamics is relativistic fluid dynamics, often coupled with a hadronic cascade model. Key works include the MUSIC code for 3+1D hydrodynamic simulation and the VISH2+1 code for causal viscous hydrodynamics, which explore the effects of shear and bulk viscosity. The extraction of the specific shear viscosity of the QGP from collective flow data is a central theme, with papers by the STAR collaboration and others showing that the QGP behaves as a nearly perfect liquid. The AMPT model provides a multi-phase transport framework, while the TRENTO model is used for Bayesian parameter estimation to simultaneously characterize the initial state and medium properties. Other sub-threads include the study of chiral magnetic and vortical effects, and the use of fluctuations of conserved quantities to search for the QCD critical point.
+
+Open questions and active directions include the precise determination of the QGP's transport coefficients, particularly the temperature dependence of shear and bulk viscosity. Recent papers also focus on the role of initial state fluctuations, such as triangularity and dipole asymmetry, and their influence on final state observables. The search for the QCD critical point continues through the beam energy scan program at RHIC, analyzing higher-order cumulants of conserved quantities. Additionally, the incorporation of spin degrees of freedom into the relativistic distribution function and the study of photon production from viscous hydrodynamics represent ongoing efforts to refine our understanding of the QGP.
+
 **Papers:** 1969 (showing first 100 of 1969)
 
 - [2606.02412](../papers/2606.02412.md) (2026) [1] Quantum Symmetry Restoration and Emergent Effective Deformation in Relativistic Heavy-Ion Collisions

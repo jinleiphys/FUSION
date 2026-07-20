@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Nuclear density functional theory
 
+## Landscape
+
+Nuclear density functional theory (DFT) is the only microscopic framework applicable across the entire nuclear landscape, from finite nuclei to neutron stars. It is essential for predicting nuclear binding energies, which determine stability and reaction rates, and for understanding the origin of elements in the universe via the r-process. The theory also underpins the microscopic description of nuclear fission, addressing both spontaneous fission half-lives via quantum tunnelling and induced fission fragment properties through time-dependent approaches.
+
+The cornerstone of the theory is the energy density functional, implemented primarily through the Hartree-Fock-Bogoliubov (HFB) formalism. Key methodological threads include the optimization of Skyrme functionals, such as the UNEDF2 parameterization which lifts restrictions on the tensor term, and the development of relativistic functionals like DD-PC1 used to study octupole phase transitions in Thorium isotopes. Beyond mean-field corrections, finite-temperature extensions, and the construction of functionals from microscopic Bruckner G-matrix calculations represent other active approaches. Bayesian machine learning techniques are increasingly applied to extrapolate nuclear observables and quantify uncertainties.
+
+Open questions and active directions center on quantifying the limits of the nuclear landscape and the impact of mass uncertainties on r-process nucleosynthesis. Recent work uses Bayesian methodology to provide quantified predictions of proton and neutron drip lines. The challenge of reproducing charge radii, particularly the unexpected increases in neutron-rich potassium isotopes that challenge the magic character of N=32, drives further functional development. Emulator techniques, such as the reduced basis method, are emerging to accelerate many-body calculations, while the simultaneous description of finite nuclei and neutron star properties remains a key goal for functional optimization.
+
 **Papers:** 153 (showing first 100 of 153)
 
 - [2605.26088](../papers/2605.26088.md) (2026) [2] Multipole tomography of atomic nuclei with conserved symmetries

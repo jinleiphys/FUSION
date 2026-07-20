@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+The gamma ray strength function (gSF) describes the average probability for a nucleus to emit or absorb a photon of a given energy, and it is a fundamental input for statistical model calculations of nuclear reactions. Understanding the gSF is critical for modeling nucleosynthesis in astrophysical environments, where radiative capture cross sections often rely on theoretical strength functions, and for improving the accuracy of nuclear data used in applications such as reactor design.
+
+The primary experimental method for extracting gSFs in the quasi continuum is the Oslo method, applied to isotopic chains such as neodymium and samarium to study how the gSF evolves with deformation and mass number. The neodymium study reveals the evolution of the low energy enhancement, scissors mode, and pygmy dipole resonance, while the samarium work highlights the interplay between the scissors mode and an observed upbend at low energies. Theoretical efforts include a benchmark of many body approaches for M1 strength, motivated by the suggestion that the low energy enhancement arises from magnetic dipole radiation, and a closed form thermodynamic pole approach for describing E1 strength functions across a wide energy range.
+
+Open questions center on the mechanisms behind the low energy enhancement and the upbend, with data indicating that the low energy enhancement and scissors mode are decoupled. The role of consistent parameter sets for the alpha particle optical model potential, which itself depends on gSF inputs, remains an active area of investigation, particularly for improving statistical model calculations below the Coulomb barrier across various mass ranges.
+
 **Papers:** 7
 
 - [2312.11040](../papers/2312.11040.md) (2023) [2] Benchmark of many-body approaches for magnetic dipole transition strength

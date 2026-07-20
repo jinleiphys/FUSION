@@ -4,6 +4,14 @@
 
 **Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
 
+## Landscape
+
+Generalized parton distributions (GPDs) are quantum chromodynamics (QCD) observables that encode the spatial distribution of forces experienced by quarks and gluons inside hadrons, accessible through hard exclusive processes. As argued in the paper "Generalized parton distributions and strong forces inside nucleons and nuclei," GPDs open a direct path to measuring strong forces in different parts of nucleons and nuclei, thereby addressing fundamental questions about the properties of quark and gluon matter. This topic is central to understanding the internal structure of the proton and the dynamics of strong interactions, linking experimental measurements to the theoretical framework of QCD.
+
+The main approaches to studying GPDs include lattice QCD calculations and large-momentum effective theory (LaMET). The paper "Nucleon Generalized Parton Distributions from Full Lattice QCD" presents a comprehensive study of the lowest moments of nucleon GPDs using \(N_f=2+1\) lattice QCD with pion masses as low as 350 MeV. Separately, "Parton Physics on Euclidean Lattice" and "Large-Momentum Effective Theory" describe how parton physics related to light-cone correlations can be extracted from equal-time correlators in the large momentum limit, enabling practical calculations of parton properties. These theoretical developments are complemented by experimental programs such as the Electron-Ion Collider (EIC), which is motivated by the need to probe gluon-dominated matter and the quark sea at high energies, as outlined in "Electron Ion Collider: The Next QCD Frontier" and "Gluons and the quark sea at high energies."
+
+Active directions visible in recent papers include the extraction of GPDs from exclusive meson electroproduction at high photon virtualities, as described in "Studies of Nucleon Resonance Structure in Exclusive Meson Electroproduction," which aims to probe excited nucleon structures at distance scales where effective degrees of freedom transition to quark-gluon dynamics. The "TMD Handbook" highlights the complementary role of transverse-momentum-dependent distributions in describing the internal momentum and spin structure of hadrons. Open questions remain regarding the decomposition of total angular momentum into spin and orbital contributions for gluons, a controversy discussed in "The angular momentum controversy," and the precise extraction of nucleon form factors with two-photon exchange corrections, as addressed in "Global analysis of proton elastic form factor data with two-photon exchange corrections."
+
 **Papers:** 658 (showing first 100 of 658)
 
 - [2606.13908](../papers/2606.13908.md) (2026) [3] Anomalies, Topology, and Hadron Structure in QCD

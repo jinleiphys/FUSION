@@ -4,6 +4,14 @@
 
 **Broader:** [Beta decay](beta-decay.md)
 
+## Landscape
+
+Neutrinoless double beta decay is a hypothetical ultra-rare nuclear process that, if observed, would constitute the discovery of a matter-creating process and prove that neutrinos are Majorana particles, capable of transforming into their own antiparticles. This discovery would have profound implications for particle physics, nuclear physics, astrophysics, and cosmology, as it would corroborate leading theories of matter-antimatter asymmetry and force unification. Even non-observation provides useful constraints now that neutrinos are known to have mass.
+
+The main theoretical approaches focus on calculating the nuclear matrix elements that govern the decay rate, with a wide variety of nuclear models under active development. The interacting shell model is used to analyze matrix elements for nuclei like 48-Ca and 76-Ge, while energy density functional methods with the Gogny D1S functional provide systematic studies across many candidate isotopes. Ab initio approaches, including coupled-cluster theory and the in-medium similarity renormalization group combined with the generator coordinate method, are developing rapidly and hold out hope for more accurate matrix elements with quantifiable uncertainties. Chiral effective field theory has revealed the need to introduce a leading-order short-range operator in the transition operator, which is missing in all current calculations and requires matching to lattice QCD.
+
+Open questions center on the accurate determination of nuclear matrix elements and the proper treatment of short-range correlations. The contributions from chiral two-body currents are significant and must be included in all calculations, while momentum dependent induced nucleon currents such as weak-magnetism reduce light neutrino matrix elements by about 30 percent. A master formula from effective field theory now provides an end-to-end framework connecting the lepton-number-violating scale to the nuclear scale, but the finite part of the short-range coupling remains to be determined, either by matching to lattice QCD or by relating it via chiral symmetry to isospin-breaking observables.
+
 **Papers:** 435 (showing first 100 of 435)
 
 - [2606.09288](../papers/2606.09288.md) (2026) [1] Global Ab initio Neutrino Mass Limits from Neutrinoless Double-Beta Decay

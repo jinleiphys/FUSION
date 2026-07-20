@@ -4,6 +4,14 @@
 
 **Broader:** [Strong interaction](strong-interaction.md)
 
+## Landscape
+
+The topic of quark matter investigates the behavior of strongly interacting matter at extreme densities and temperatures, where quarks and gluons become deconfined from hadrons. This matters because it is central to understanding the fundamental phase diagram of Quantum Chromodynamics (QCD) and the internal composition of neutron stars, which serve as natural laboratories for dense matter physics. The existence of deconfined quark matter in neutron star cores, potentially as a color superconductor, directly impacts observable stellar properties like mass, radius, and gravitational wave signatures.
+
+The main approaches combine theoretical modeling with astrophysical constraints. Akmal et al. use variational chain summation with the Argonne v18 interaction to compute the nuclear equation of state, finding a neutron star mass limit of 2.20 solar masses when including three-nucleon interactions. For quark matter, the Nambu-Jona-Lasinio (NJL) model framework is used to study the interplay between chiral symmetry restoration and color superconductivity, as reviewed by Buballa. At asymptotically high densities, perturbative QCD calculations by Fraga et al. at O(alpha_s^2) show reasonable convergence for chemical potentials above 1 GeV, while Alford et al. describe the color-flavor locked (CFL) phase as the ground state. The "Constant Speed of Sound" (CSS) parameterization provides a generic framework for modeling hybrid stars with a sharp hadron-quark interface, as used by Alford et al. and in studies of hybrid stars that masquerade as neutron stars.
+
+Open questions and active directions focus on the observational signatures of quark matter in neutron stars. Recent work by Annala et al. provides model-independent evidence for quark matter cores in massive neutron stars by combining astrophysical observations with ab-initio calculations. The possibility of a first-order hadron-quark phase transition is being explored through its imprint on gravitational waves from neutron star mergers, where Bauswein et al. show that the dominant postmerger frequency f_peak can deviate significantly from empirical relations if a stable quark matter core forms. The existence of absolutely stable strange quark matter remains an open question, with perturbative calculations pointing to a narrow range of parameters where it may exist.
+
 **Papers:** 1653 (showing first 100 of 1653)
 
 - [2605.23433](../papers/2605.23433.md) (2026) [2] Quasiradial oscillations of rotating hybrid neutron stars

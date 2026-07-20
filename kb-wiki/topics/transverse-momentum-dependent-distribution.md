@@ -4,6 +4,16 @@
 
 **Broader:** [Parton distribution functions](parton-distribution-functions.md)
 
+## Landscape
+
+### Landscape Synthesis: Transverse Momentum Dependent Distributions
+
+Transverse momentum dependent (TMD) distributions extend the one-dimensional parton model by resolving the intrinsic motion of quarks and gluons inside hadrons, providing a three-dimensional picture of nucleon structure in momentum space. This topic is crucial for interpreting semi-inclusive deep inelastic scattering (SIDIS), Drell-Yan processes, and dijet production, as it encodes correlations between parton spin and transverse momentum that are essential for understanding orbital angular momentum and the QCD dynamics of confined systems.
+
+The field employs diverse theoretical approaches. The Color Glass Condensate (CGC) effective field theory is used to compute the Weizsäcker-Williams gluon TMD at next-to-leading order for back-to-back dijets in DIS, as shown in the paper on complete NLO results and predictions. Phenomenological models, such as the MIT bag model and a quark-spectator-antiquark model with dipole form factors, calculate leading-twist TMDs like the naive T-odd function \(h_1^{\perp}\) to predict azimuthal asymmetries in unpolarized pion-nucleon Drell-Yan processes. Generalized TMDs (GTMDs) are explored via contact interactions for pions and light-front spectator models for gluons, connecting to Wigner functions and gravitational form factors.
+
+Active directions include the extension of TMD formalism to threshold limits, where joint threshold and TMD factorization introduces new distribution functions with universal evolution properties. The role of quantum statistics and entanglement is being investigated, with studies of double quark production in p-A collisions revealing correlations from identical fermions in quadrupole amplitudes. Future experimental opportunities, such as the AFTER@LHC fixed-target program and the JLab 12 GeV upgrade with CLAS12, promise high-luminosity measurements of TMDs and GPDs, while open questions remain about the decomposition of transverse orbital angular momentum and the reconciliation of model predictions with high-energy data.
+
 **Papers:** 13
 
 - [2512.21228](../papers/2512.21228.md) (2025) [2] Quantum entanglement between partons in a strongly coupled quantum field theory

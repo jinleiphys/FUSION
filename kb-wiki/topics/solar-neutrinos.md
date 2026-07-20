@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear astrophysics](nuclear-astrophysics.md)
 
+## Landscape
+
+Solar neutrinos are produced by nuclear fusion reactions in the Sun's core, primarily through the pp chain and CNO cycles, and their study provides a unique probe of both stellar astrophysics and fundamental neutrino properties. Understanding these fluxes and their energy spectra is crucial for testing standard solar models and for precision measurements of neutrino oscillation parameters, as the discrepancy between predicted and observed fluxes historically drove the discovery of neutrino flavor change.
+
+The field relies on a combination of nuclear physics inputs and large-scale detector experiments. Nuclear cross sections for key reactions like \(^7\)Be(p,\(\gamma\))\(^8\)B are critically evaluated and extrapolated to solar energies, as reviewed by Adelberger et al. in "Solar fusion cross sections II," which provides recommended spectra for \(^8\)B neutrinos. Experimental measurements are carried out by detectors such as Super-Kamiokande, SNO, and Borexino, which determine elastic scattering rates and fluxes for \(^7\)Be and pep neutrinos, as summarized in "Solar Neutrinos: Status and Prospects." The interpretation of these data relies on the MSW matter effect, and the KamLAND reactor experiment has uniquely identified the Large Mixing Angle (LMA) solution as the dominant oscillation mechanism, as shown in "Solar Neutrinos Before and After KamLAND."
+
+Open questions and active directions include resolving the solar abundance problem through nonstandard models with accretion, as explored in "Solar models with accretion. I." Another major challenge is controlling spallation backgrounds from cosmic-ray muons, which limit sensitivity in the MeV range for detectors like Super-Kamiokande and DUNE, as detailed in "Spallation Backgrounds in Super-Kamiokande" and "Developing the MeV potential of DUNE." Future experiments such as DUNE aim to deliver world-leading solar neutrino results by leveraging separate detection channels and the day-night effect, while also probing new physics through comparisons with reactor data.
+
 **Papers:** 91
 
 - [2510.12873](../papers/2510.12873.md) (2025) [2] New Spallation Background Rejection Techniques to Greatly Improve the Solar Neutrino Sensitivity of JUNO

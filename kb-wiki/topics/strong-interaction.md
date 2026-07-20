@@ -4,6 +4,14 @@
 
 **Narrower:** [Quark model](quark-model.md), [Color confinement](color-confinement.md), [Multiquark bound states](multiquark-bound-states.md), [Quantum chromodynamics](quantum-chromodynamics.md), [Quark matter](quark-matter.md), [Quark-gluon plasma](quark-gluon-plasma.md), [Quark & gluon jets](quark-gluon-jets.md)
 
+## Landscape
+
+The strong interaction, governed by quantum chromodynamics (QCD), is the fundamental force binding quarks and gluons into protons, neutrons, and atomic nuclei. Understanding its nonperturbative nature is crucial for explaining the structure of visible matter, from the properties of nucleons to the behavior of dense astrophysical objects like neutron stars, as well as the phase transition of nuclear matter in heavy-ion collisions.
+
+Theoretical approaches are diverse. Dyson-Schwinger equations provide a Poincare covariant framework for studying hadrons as bound states, revealing how dynamical chiral symmetry breaking emerges from the long-range strong interaction. Quantum Monte Carlo and coupled-cluster methods compute nuclear properties from realistic Hamiltonians, successfully describing ground and excited states for light to medium-mass nuclei. Phenomenological models, including relativistic mean field theory, are optimized to describe finite nuclei and the neutron star equation of state. Experimentally, the search for the QCD critical point uses fluctuations of conserved quantities in relativistic heavy-ion collisions, while jet quenching studies probe the structure of dense matter via hard parton showers. The proposed Electron-Ion Collider aims to directly image gluon-dominated matter.
+
+Open questions persist regarding the nature of confinement and the exact location of the QCD critical point. The connection between short-range nucleon correlations and the EMC effect, which modifies quark distributions in nuclei, remains under investigation. Future facilities like the Electron-Ion Collider in China and ultra-peripheral collisions at the LHC will provide new probes of gluon and sea quark tomography, while improved many-body calculations aim to resolve the equation of state of neutron stars.
+
 **Papers:** 951 (showing first 100 of 951)
 
 - [2606.13908](../papers/2606.13908.md) (2026) [2] Anomalies, Topology, and Hadron Structure in QCD

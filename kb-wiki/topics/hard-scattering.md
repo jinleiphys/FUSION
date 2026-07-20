@@ -4,6 +4,14 @@
 
 **Broader:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
 
+## Landscape
+
+Hard scattering refers to high-momentum-transfer interactions between partons, which are calculable in perturbative QCD and serve as the foundation for precision phenomenology at colliders. This topic matters because it connects the fundamental quark and gluon structure of hadrons to observable final-state particles, enabling tests of the Standard Model and probes of the quark-gluon plasma in heavy-ion collisions.
+
+The main approaches include the BDMPS-Z formalism for medium-induced gluon radiation, used in "Calculating Quenching Weights" to compute quenching weights for hard partons in expanding QCD matter. The "Parton-Based Gribov-Regge Theory" provides a unified treatment of soft and hard scattering without a cutoff parameter. "An Effective Field Theory for Forward Scattering and Factorization Violation" derives Glauber gluon exchanges within SCET, showing how they can invalidate factorization. "Parton Physics from Large-Momentum Effective Field Theory" introduces LaMET to extract parton properties from lattice QCD. Global PDF analyses, reviewed in "The Structure of the Proton in the LHC Precision Era", incorporate hard-scattering measurements to determine parton distributions.
+
+Active directions include the role of thermalization in hard scattering, as explored in "Thermal Radiation and Entanglement in Proton-Proton Collisions at the LHC", which finds an effective temperature extending to Higgs production. The interplay of initial hard scattering and regeneration in the quark-gluon plasma is studied for charmonium and bottomonia production in "Charmonium Production in Heavy-Ion Collisions from SPS to LHC" and "Bottomonia Suppression in Heavy-Ion Collisions". New observables such as the azimuthal dependence of energy correlators, introduced in "Probing Transverse Momentum Dependent Structures with Azimuthal Dependence of Energy Correlators", offer novel probes of transverse momentum dependent parton distributions.
+
 **Papers:** 119 (showing first 100 of 119)
 
 - [2604.20780](../papers/2604.20780.md) (2026) [2] Probing QCD instantons using jet correlation observables in proton-proton collisions at the LHC

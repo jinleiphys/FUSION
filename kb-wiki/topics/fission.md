@@ -6,6 +6,14 @@
 
 **Narrower:** [Scission point](scission-point.md)
 
+## Landscape
+
+Nuclear fission is the process by which a heavy atomic nucleus splits into two or more lighter fragments, releasing a substantial amount of energy. Understanding fission is critical for applications ranging from nuclear power generation to astrophysical nucleosynthesis, and it provides a stringent test of nuclear many-body theory. The topic matters because a predictive microscopic description of fission remains a central challenge in nuclear physics, with implications for reactor design, nuclear waste management, and the structure of neutron stars.
+
+The primary theoretical framework for modern fission studies is nuclear density functional theory, as reviewed by Schunck and Robledo. This approach relies on energy density functionals, such as the Skyrme parametrizations UNEDF1 and UNEDF2 optimized by Kortelainen et al. for large deformations and shell structure. The time-dependent Hartree-Fock (TDHF) theory and its extensions, including pairing correlations and quantum fluctuations, are used to describe real-time fission dynamics, as demonstrated by Simenel and by Bulgac et al. in their real-time simulation of induced fission in Pu240. Macroscopic-microscopic models, such as the finite-range droplet model (FRDM) tabulated by Möller et al., provide comprehensive mass and deformation predictions for thousands of nuclei.
+
+Active directions include the direct imaging of nuclear shapes in high-energy collisions, as proposed by Giacalone et al., which connects ground-state deformations to collective flow observables. Open questions involve the role of superfluidity in fission dynamics and neutron star matter, reviewed by Dean and Hjorth-Jensen, and the connection between nucleon-nucleon short-range correlations and the EMC effect, as analyzed by Hen et al. The slow fission dynamics observed in recent real-time simulations, where collective inertia plays a negligible role, challenges previous theoretical expectations and motivates further study of energy dissipation and fragment formation.
+
 **Papers:** 1446 (showing first 100 of 1446)
 
 - [2606.15440](../papers/2606.15440.md) (2026) [2] Fast-reactor neutron sources in evaluated nuclear data library validation

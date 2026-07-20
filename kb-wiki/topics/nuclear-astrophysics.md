@@ -4,6 +4,14 @@
 
 **Narrower:** [Nuclear physics of explosive environments](nuclear-physics-of-explosive-environments.md), [Solar neutrinos](solar-neutrinos.md), [Hydrostatic stellar nucleosynthesis](hydrostatic-stellar-nucleosynthesis.md), [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md), [Nuclear matter in neutron stars](nuclear-matter-in-neutron-stars.md)
 
+## Landscape
+
+Nuclear astrophysics seeks to understand the role of nuclear reactions and nuclear structure in cosmic phenomena, from the synthesis of elements to the life cycles of stars. Its importance lies in connecting the microphysics of the atomic nucleus with the macrophysics of astronomical objects, as it governs processes such as the neutronization of matter in core-collapse supernovae, the cooling and radii of neutron stars, and the conditions for r-process nucleosynthesis.
+
+The main approaches combine experimental nuclear data with theoretical models to constrain the nuclear equation of state. The symmetry energy, which controls the pressure of neutron star matter near saturation density, is a central focus. Papers constrain its parameters \(S_v\) and \(L\) using fits to nuclear masses, neutron skins, and heavy ion collisions, as well as the mass-radius relation of neutron stars from NICER and LIGO/Virgo observations. Self-consistent mean-field calculations and the extended Brueckner-Hartree-Fock approach are used to derive energy density functionals from effective interactions. The statistical Hauser-Feshbach model and nuclear databases like BRUSLIB and NACRE II are employed to predict thermonuclear reaction rates for nuclei far from stability.
+
+Open questions include the exact mechanism of core-collapse supernova explosions and the nature of the dense matter equation of state at high densities. Recent work investigates observable consequences of non-smooth structure in the speed of sound, such as first-order phase transitions or crossovers that could produce ultra-heavy neutron stars. The role of neutron star mergers as an r-process site, confirmed by GW170817, and the need for model-independent determinations of neutron-skin thickness remain active directions.
+
 **Papers:** 239 (showing first 100 of 239)
 
 - [2604.09935](../papers/2604.09935.md) (2026) [2] From credible shell model interactions to neutron-capture uncertainties

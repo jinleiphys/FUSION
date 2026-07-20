@@ -4,6 +4,14 @@
 
 **Broader:** [Strong interaction](strong-interaction.md)
 
+## Landscape
+
+The quark model, which classifies hadrons as bound states of constituent quarks, has been a cornerstone of nuclear and particle physics. Its importance is underscored by its success in describing the spectrum of conventional mesons and baryons, yet the discovery of states that defy this simple picture, such as the charged charmonium-like \(Z_c\) states and hidden-charm pentaquarks, has driven a renaissance in hadron spectroscopy. Understanding these exotic states is crucial for mapping the full spectrum of QCD and probing the nature of confinement.
+
+The main theoretical approaches to this problem are diverse. One prominent method treats these exotic candidates as hadronic molecules, analogues of light nuclei, using nonrelativistic effective field theories to make predictions with controlled uncertainty, as reviewed in the work on hadronic molecules. Another approach uses lattice QCD, which has provided evidence that the \(\Lambda(1405)\) resonance is an antikaon-nucleon molecule and has enabled the calculation of excited baryon spectra for spins up to \(J=7/2\). Complementing these are functional QCD methods, such as Dyson-Schwinger and Bethe-Salpeter equations, which describe baryons as relativistic three-quark bound states, and constituent quark models that investigate specific systems like \(\Sigma_c \bar{D}\) bound states or the decays of nonstrange baryons.
+
+Open questions and active directions are visible in recent papers. The existence of additional, experimentally uncharted strange hadrons predicted by quark models is suggested by comparisons of lattice QCD thermodynamics with hadron resonance gas models. The role of hyperons in massive neutron stars remains an open problem, with the maximum neutron star mass appearing to depend linearly on the strangeness content of the core. Furthermore, the nature of the third family of hybrid compact stars, modeled using a nonlocal chiral quark model, is actively investigated, particularly regarding the conditions for diquark condensation and the existence of a stable hybrid star branch.
+
 **Papers:** 1313 (showing first 100 of 1313)
 
 - [2606.10356](../papers/2606.10356.md) (2026) [2] Light and Strange Baryons in Medium

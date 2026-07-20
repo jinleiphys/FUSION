@@ -4,6 +4,14 @@
 
 **Broader:** [Monte Carlo methods](monte-carlo-methods.md)
 
+## Landscape
+
+Simulated annealing is a stochastic optimization algorithm adapted in nuclear physics to navigate complex, high-dimensional parameter spaces and identify global minima, particularly for the chi-square function used in fitting effective interactions and for cluster identification in heavy-ion collisions. Its importance stems from the need to accurately model nuclear structure and reaction dynamics, from the ground-state properties of exotic nuclei to the multifragmentation of spectator matter, where traditional deterministic methods often fail due to the ruggedness of the energy hypersurface.
+
+The main methodological threads are parameter optimization and clusterization. For parameter fitting, the simulated annealing method was first implemented to determine Skyrme-type effective nucleon-nucleon interactions by minimizing chi-square against extensive experimental data on nuclear radii and ground-state properties. This approach was later extended to construct parameter sets for extended Skyrme interactions, including additional momentum and density-dependent forces, and to fit Gogny-type forces for hypernuclei. For clusterization, the Simulated Annealing Clusterization Algorithm (SACA) was developed to identify fragments in heavy-ion reactions, using binding energy criteria that were later refined with a modified Bethe-Weizsäcker mass formula. This algorithm has been applied within quantum molecular dynamics models to study spectator fragmentation and has been adapted into new approaches like FRIGA for identifying isotopes and hypernuclei in n-body transport simulations.
+
+Open questions and active directions include the sensitivity of cluster formation to the parameters governing the simulated annealing algorithm, as demonstrated by the FRIGA approach and studies of spectator fragmentation at low incident energies. The development of a common clusterization library (CCL) aims to standardize comparisons between methods like SACA, minimum spanning tree, and coalescence. Furthermore, the extension of these techniques to hypernuclei production and the exploration of hybrid quantum-classical schemes, such as hybrid quantum annealing via molecular dynamics, represent emerging frontiers that seek to improve computational efficiency and accuracy for large-scale nuclear many-body problems.
+
 **Papers:** 20
 
 - [2512.02084](../papers/2512.02084.md) (2025) [1] Modifications in clusterization procedures for heavy-ion collisions: minimum spanning tree, simulated annealing, coalesc...

@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+Alpha decay is a fundamental quantum tunneling process in which an unstable nucleus emits a helium-4 nucleus, a phenomenon critical for understanding nuclear stability, the limits of the nuclear landscape, and the formation of superheavy elements. Its study directly informs the search for the island of stability and the synthesis of new elements, while also providing a stringent test for nuclear mass models and the microscopic description of clustering in nuclei.
+
+The field is advanced through two main theoretical approaches. Macroscopic-microscopic mass formulas, as refined by Wang et al. and others, achieve high accuracy by incorporating surface diffuseness corrections and mirror nuclei constraints, reducing the root-mean-square deviation for known masses to below 0.3 MeV and precisely predicting alpha-decay energies for superheavy nuclei. Concurrently, self-consistent mean-field methods, such as the relativistic continuum Hartree-Bogoliubov theory and Skyrme-Hartree-Fock calculations, explore the entire nuclear landscape, predicting over 9000 bound nuclei and detailing the shell structure and fission properties of superheavy elements. A third thread focuses on the decay process itself, using the WKB approximation to derive new barrier penetration formulas and microscopic quartetting wave function approaches to calculate preformation probabilities and decay widths.
+
+Active directions include refining predictions for the location and properties of the superheavy island of stability, with shell corrections suggesting a central region around N=176-178 and Z=116-120. Open questions concern the precise role of continuum effects in drip-line nuclei, the angular dependence of bremsstrahlung in alpha decay, and the need for improved collective inertias and fission lifetimes for r-process calculations. The interplay between alpha decay and competing fission modes in the heaviest nuclei remains a key area of investigation, as does the extension of these models to describe charged-particle emissions from highly unstable nuclei.
+
 **Papers:** 171 (showing first 100 of 171)
 
 - [2605.11252](../papers/2605.11252.md) (2026) [2] Quantum tunneling, global phases and the limits of classical action reconstructions

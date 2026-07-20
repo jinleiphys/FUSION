@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+Breakup reactions are nuclear processes in which a projectile, often a weakly bound or halo nucleus, disintegrates into its constituents upon interaction with a target. These reactions are essential for probing the structure of exotic nuclei far from stability, understanding few-body dynamics, and providing critical input for astrophysical processes such as solar neutrino detection and nucleosynthesis. The topic matters because it connects fundamental nuclear forces to observable reaction outcomes, enabling tests of theoretical models against experimental data.
+
+The main approaches include chiral effective field theory, which provides a systematic derivation of nuclear forces, as reviewed by Epelbaum et al. in "Modern Theory of Nuclear Forces" and "Chiral dynamics of few- and many-nucleon systems." The complex scaling method, detailed by Myo et al., handles many-body resonances and continua in light nuclei. The post-form DWBA framework of Ichimura, Austern, and Vincent is central to inclusive breakup calculations, as revisited in "Reexamining closed-form formulae for inclusive breakup" and "Numerical assessment of post-prior equivalence." The continuum discretized coupled channels method is compared to exact three-body Faddeev solutions in a study by Deltuva et al., while time-dependent approaches describe halo breakup dynamically, as in the work on 11Be and 19C.
+
+Open questions include the numerical equivalence of post and prior DWBA formulas, assessed in recent work on inclusive breakup. The convergence of chiral interactions in few-nucleon systems is actively investigated, as seen in studies using semilocal regularized potentials. The role of Coulomb interactions in three-nucleon breakup remains a challenge, addressed via screening and renormalization techniques. Finally, fixing two-nucleon weak-axial couplings from muon capture on deuteron is needed to reduce uncertainties in neutrino-deuteron breakup cross sections, highlighting the demand for precise experimental measurements.
+
 **Papers:** 377 (showing first 100 of 377)
 
 - [2605.23541](../papers/2605.23541.md) (2026) [2] Coulomb bridge mechanism for peripheral polarization of weakly bound projectiles

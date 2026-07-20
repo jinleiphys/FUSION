@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+Electron-ion collisions probe the structure of atomic nuclei and the strong force by scattering high-energy electrons off ions, revealing how quarks and gluons are distributed and interact within nuclear matter. This topic matters because it addresses fundamental questions in quantum chromodynamics (QCD), including the origin of the EMC effect, the nature of gluon saturation, and the spatial distribution of gluons in nuclei, which are essential for understanding nuclear structure and the early universe.
+
+The main approaches include the dipole model for exclusive diffractive processes, used to predict vector meson production and deeply virtual Compton scattering (DVCS) as a probe of non-linear QCD and gluon saturation, as detailed in the paper on exclusive diffractive processes. The open quantum system formalism and potential non-relativistic QCD derive a Boltzmann transport equation for quarkonium in-medium evolution, as shown in the quarkonium transport equation paper. Light-front quantization frameworks, such as time-dependent basis light-front quantization (tBLFQ) and basis light-front quantization (BLFQ), are applied to intense field dynamics and heavy quarkonia production, respectively. Higher-twist factorization and NRQCD are used to study jet transport coefficients, medium-induced flavor conversion, and J/ψ leptoproduction.
+
+Active directions include probing the neutron skin thickness via jet charge distributions in deep inelastic scattering, as proposed in the paper on unraveling neutron skin thickness. The role of nonlinear effects in diffractive observables is investigated using the Balitsky-Kovchegov equation with collinear improvement and impact-parameter dependence. Future colliders like the EIC, LHeC, and FCC-eh are expected to enable measurements of exclusive vector meson production, photoproduction of QED bound states, and exclusive η_c production, which can constrain transition form factors and gluon helicity distributions.
+
 **Papers:** 19
 
 - [2510.08454](../papers/2510.08454.md) (2025) [2] Gluon splitting at small $x$: a unified derivation for the JIMWLK, DGLAP and CSS equations

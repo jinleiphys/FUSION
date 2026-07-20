@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Shell model
 
+## Landscape
+
+The nuclear shell model is a foundational paradigm for understanding the structure of atomic nuclei, describing how protons and neutrons occupy quantized energy levels, or shells, analogous to electrons in atoms. This topic matters because it explains the emergence of magic numbers, which correspond to particularly stable nuclei, and provides a framework for predicting nuclear properties across the entire chart of nuclides, including exotic, short-lived isotopes.
+
+The field encompasses both phenomenological and ab initio approaches. Traditional large-scale shell-model calculations diagonalize matrices in spaces up to \(10^9\) dimensions using the Lanczos method, as analyzed in "The Shell Model as Unified View of Nuclear Structure." Ab initio methods, such as the In-Medium Similarity Renormalization Group (IM-SRG) reviewed by Hergert et al., continuously decouple the ground state from excitations. The no-core shell model (NCSM) is applied to light nuclei like \(^{12}\)C using realistic nucleon-nucleon potentials, while a nucleus-dependent valence-space approach generalizes the IM-SRG to an ensemble reference, capturing three-nucleon forces for medium-mass nuclei. Effective interactions are also derived from chiral effective field theory, as seen in the local three-nucleon interaction used in NCSM calculations for \(^{3}\)H and \(^{4}\)He.
+
+Active directions include the evolution of shell structure in exotic nuclei, where traditional magic numbers may change due to spin- and isospin-dependent interactions. Open questions involve the microscopic description of clustering in light nuclei, as reviewed in "Microscopic Clustering in Light Nuclei," and the development of efficient eigensolvers like the thick-restart block Lanczos method for highly excited states. The interplay between shape coexistence and the effective nucleon-nucleon interaction, explored via Hartree-Fock and shell-model methods, remains an active area of investigation.
+
 **Papers:** 2308 (showing first 100 of 2308)
 
 - [2606.11668](../papers/2606.11668.md) (2026) [2] Application of the Skyrme Hartree-Fock-Bogoliubov Theory to WIMP-Nucleus Interactions in 40Ar

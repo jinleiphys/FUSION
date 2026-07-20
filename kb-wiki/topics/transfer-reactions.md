@@ -6,6 +6,16 @@
 
 **Narrower:** [Knockout reactions](knockout-reactions.md)
 
+## Landscape
+
+### Landscape Synthesis: Transfer Reactions
+
+Transfer reactions are nuclear processes where one or more nucleons are exchanged between a projectile and a target nucleus, providing a crucial tool for probing nuclear structure and reaction mechanisms. They are essential for understanding nuclear astrophysics, as they underpin thermonuclear reaction rates in stars, and for exploring the limits of the nuclear chart, including the production of exotic neutron-rich nuclei and superheavy elements.
+
+The theoretical description of transfer reactions employs a range of approaches. Time-dependent Hartree-Fock (TDHF) theory, derived from the Balian-Vénéroni variational principle, provides a microscopic mean-field framework for dynamics, with extensions to include particle number fluctuations and correlations. The dinuclear system (DNS) model, used in studies of heavy systems like $^{238}$U+$^{238}$U, describes sequential nucleon transfer via master equations. Ab initio methods, such as solving four-body equations for scattering, offer a fundamental approach from realistic nucleon-nucleon interactions. Compilations like NACRE II provide essential experimental reaction rates for light nuclei.
+
+Active directions include improving predictive power for multinucleon transfer cross sections, particularly for producing unknown neutron-rich nuclei, as explored with the improved quantum molecular dynamics model. Open questions involve the role of non-local interactions in transfer to continuum states, the post-prior equivalence problem with complex potentials, and the need for extensions beyond TDHF to include cluster transfers. The synthesis of superheavy elements via transfer reactions, including with radioactive ion beams, remains a frontier.
+
 **Papers:** 214 (showing first 100 of 214)
 
 - [2606.08177](../papers/2606.08177.md) (2026) [2] A Dynamical Model of Light Halo Nuclei

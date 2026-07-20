@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Collective models
 
+## Landscape
+
+The collective model describes nuclear excitations in terms of coordinated motions of many nucleons, such as vibrations and rotations, rather than single-particle behavior. This framework, rooted in the work of Bohr, Mottelson, and Rainwater, is essential for understanding nuclear structure, from low-lying spectra to giant resonances, and connects macroscopic observables to microscopic many-nucleon theory as reviewed in "The many-nucleon theory of nuclear collective structure and its macroscopic limits."
+
+Key approaches include the Bohr-Mottelson model, for which a computationally tractable version using beta wave functions from the softened-beta Wilets-Jean model and SO(5) spherical harmonics is presented. Coupled-channels methods, as in "Role of the Pauli principle in collective-model coupled-channels calculations," incorporate the Pauli principle to correctly interpret sub-threshold and resonant spectra. Algebraic models like the Interacting Vector Boson Model (IVBM) with Sp(12,R) dynamical symmetries describe axial asymmetry and simultaneous positive and negative parity bands. Self-consistent approaches, such as Skyrme-RPA in "Skyrme-Rpa Description of Dipole Giant Resonance," reproduce experimental giant dipole resonance (GDR) energies and widths.
+
+Open questions include the effect of large neutron excess on the dipole response, which fragments the GDR and shifts its centroid below collective model predictions. The anomalous quadrupole collectivity in Te isotopes, where vibrational spectra coexist with rotational-like E2 transitions, challenges collective models. Soft dipole mode excitation in electron scattering and the need for improved variation after projection methods for high-spin states also represent active directions.
+
 **Papers:** 29
 
 - [2604.22599](../papers/2604.22599.md) (2026) [2] The 0+-spectrum in rare earth nuclei within the pseudo-SU(3) shell model

@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Cluster models
 
+## Landscape
+
+Cluster models describe atomic nuclei as composite systems of smaller nuclear clusters, such as alpha particles (helium-4 nuclei), rather than treating all nucleons individually. This approach is essential for understanding the emergence of simple patterns in nuclear structure from first principles, as it captures clustering phenomena that are difficult to reproduce in single-particle models. The topic matters because cluster structures appear in light nuclei, influence nuclear reactions in astrophysical scenarios like solar burning, and provide a testing ground for the underlying quark and gluon degrees of freedom of quantum chromodynamics.
+
+The main approaches include microscopic alpha-cluster models with fully antisymmetrized wave functions, as applied to carbon-12 and oxygen-16 using Tohsaki interactions to address long-standing binding energy discrepancies. Symmetry-guided large-scale shell-model theory utilizes exact and partial symmetries to reduce model space size for ab initio studies. Specific sub-threads include the dynamical alpha-cluster model of oxygen-16 incorporating tetrahedral and square configurations, three-alpha and beryllium-10-plus-alpha cluster models for carbon isotopes, and four-body cluster models for light hypernuclei using the Gaussian Expansion Method. The complex-scaled generator coordinate method treats resonances and scattering in cluster systems, while simplified methods incorporate tensor effects by mixing alpha-cluster breaking components.
+
+Open questions include the missing monopole strength of the Hoyle state in carbon-12, where inelastic alpha scattering shows only 7 to 9 percent of the energy weighted sum rule compared to 15 percent from electron scattering and up to 22 percent from cluster models. The consistency of lambda-lambda hypernuclear events requires further experimental confirmation, with shell-model predictions offering alternative assignments for recent emulsion events. Active directions involve developing real-time evolution methods using Gaussian wave packets, exploring linear-chain and gas-like cluster states stabilized by valence neutrons, and applying quark mean field models to single-xi hypernuclei across a wide mass range.
+
 **Papers:** 68
 
 - [2605.21228](../papers/2605.21228.md) (2026) [1] Minimal Wigner-$SU(4)$ Interaction in Microscopic Cluster Models for $α$-Conjugate Nuclei

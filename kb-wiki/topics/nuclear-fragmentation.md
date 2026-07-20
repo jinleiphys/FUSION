@@ -4,6 +4,16 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+### Landscape: Nuclear Fragmentation
+
+Nuclear fragmentation describes the breakup of atomic nuclei into multiple smaller clusters and nucleons, typically following high-energy collisions. This process is central to understanding nuclear matter under extreme conditions, including the liquid-gas phase transition in asymmetric systems and the equation of state of nuclear matter. Its study has implications for nuclear astrophysics, radioactive beam physics, and the fundamental properties of strong interactions, as it probes both equilibrium and dynamical aspects of nuclear systems.
+
+The field employs a range of theoretical approaches. Transport models, such as the Giessen Boltzmann-Uehling-Uhlenbeck (GiBUU) implementation, simulate the dynamical evolution of heavy-ion collisions from first principles. Statistical models, including the exactly solvable canonical ensemble of non-interacting fragments and its extensions with excluded volume and Coulomb effects, describe fragment yields at thermodynamic equilibrium. Percolation models are used to interpret multifragmentation data and extract critical exponents, as demonstrated in the analysis of proton-induced reactions on gold. Quantum molecular dynamics models incorporate isospin physics and in-medium effects to study neck fragmentation and symmetry energy at subsaturation densities.
+
+Active directions include the characterization of the nuclear matter phase transition in finite systems, with recent work extracting critical exponents and a critical temperature of 8.3 MeV from event-by-event data. The role of isospin asymmetry is a key focus, predicting neutron distillation and new chemical instabilities in the liquid-gas transition. Future measurements, such as spectator tagging in electron-deuteron deep-inelastic scattering at a future Electron-Ion Collider, aim to extract free neutron structure functions and study nuclear modifications. The extension of fragmentation models to higher energies, including quark-gluon degrees of freedom at LHC energies, represents an emerging frontier.
+
 **Papers:** 58
 
 - [2602.13360](../papers/2602.13360.md) (2026) [1] Nuclear Fragmentation at Intermediate Energies in the DCM-QGSM-SMM Model

@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Radioactive beams
 
+## Landscape
+
+Radioactive beams are a central tool for studying isospin asymmetric nuclear matter, which is matter with unequal numbers of neutrons and protons. This topic matters because it connects laboratory experiments to astrophysical objects such as neutron stars and supernovae, where extreme neutron richness is common. By creating transient states of dense, neutron-rich matter in heavy-ion collisions, researchers can probe the equation of state (EOS) of such matter, particularly the density dependence of the nuclear symmetry energy, which governs key properties from neutron star crusts to nucleosynthesis.
+
+The main approaches rely on isospin and momentum dependent transport models, such as the IBUU04 model, to simulate reactions induced by radioactive beams. Several papers use these models to study experimental probes. For example, the neutron/proton ratio of free nucleons at backward rapidities is identified as a sensitive probe of the isospin dependence of in-medium nucleon-nucleon cross sections. The ratio of negatively to positively charged pions, the \(\pi^-/\pi^+\) ratio, is extensively investigated as a probe of the high density behavior of the symmetry energy. Analyses of isospin diffusion data have constrained the symmetry energy at subnormal densities to \(E_{sym}(\rho)\approx 31.6(\rho/\rho_0)^{1.05}\).
+
+Open questions and active directions focus on constraining the symmetry energy at supra-saturation densities, which remains uncertain. Recent papers explore the influence of light nuclei on neutrino-driven supernova outflows and the role of the isovector scalar channel in asymmetric nuclear matter. The planned Facility for Rare Isotope Beams (FRIB) is highlighted as a future laboratory that will provide intense beams to access key nuclear regions, enabling further studies of the EOS of dense neutron-rich matter and its implications for neutron star structure and the origin of elements.
+
 **Papers:** 60
 
 - [2311.03180](../papers/2311.03180.md) (2023) [2] Measurement of the energy of the 8.3-eV isomer of 229mTh with photoelectric effect

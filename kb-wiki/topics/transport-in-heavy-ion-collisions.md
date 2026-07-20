@@ -6,6 +6,14 @@
 
 **Narrower:** [Ion-induced tracks](ion-induced-tracks.md)
 
+## Landscape
+
+Transport in heavy ion collisions studies how particles and their properties evolve through the hot, dense medium created in these high-energy nuclear reactions. This topic matters because it probes fundamental aspects of quantum chromodynamics (QCD), including the transport of heavy quarks, the manifestation of the chiral anomaly, and the hadronization process, offering insights into the nature of strongly interacting matter.
+
+The main approaches include anomalous-viscous fluid dynamics for chiral transport, as seen in the papers on the Chiral Magnetic Effect (CME) where a vector current is generated along an external magnetic field. Heavy quark transport is modeled using a Langevin approach within the UrQMD hybrid model, with drag and diffusion coefficients from a T-Matrix or resonance model. A data-driven Bayesian analysis calibrates heavy quark diffusion coefficients to D-meson data, while a kinetic-rate equation approach is used for the transport of exotic states like the X(3872). Charge balance functions provide another method to study hadronization and transport by isolating correlated charge pairs.
+
+Open questions include the precise temperature dependence of the heavy quark diffusion coefficient, which is constrained around 1.3-1.5 times the critical temperature. The internal structure of the X(3872) remains under investigation through its transport properties. Distortions in charge balance functions from residual interactions and unbalanced charges require careful removal, as studied in simple models. The search for the CME continues as a key active direction.
+
 **Papers:** 6
 
 - [2006.09945](../papers/2006.09945.md) (2020) [1] X(3872) Transport in Heavy-Ion Collisions

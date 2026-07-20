@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+Coulomb dissociation is a reaction mechanism in which a fast-moving projectile nucleus is broken apart by the intense, time-dependent electromagnetic field of a heavy target, such as lead. This process is of central importance because it allows the extraction of electromagnetic transition matrix elements and, critically, the astrophysical S-factors for radiative capture reactions that occur in stellar environments, such as the solar \(^7\)Be(p,\(\gamma\))\(^8\)B reaction. The method is particularly powerful for studying weakly-bound halo nuclei, as the perturbation from the target's electric field is well understood, enabling firm conclusions about nuclear structure and reaction rates.
+
+The main theoretical approaches include effective field theory (Halo EFT), which exploits the separation of scales in halo systems to compute electric dipole transitions and charge radii, as demonstrated for \(^{11}\)Be and \(^{19}\)C. Continuum Discretized Coupled Channels (CDCC) theory is used to assess nuclear and Coulomb breakup contributions and their scaling with target mass, as applied to \(^8\)B and \(^{11}\)Be. First-order perturbation theory, including E1, E2, and M1 transitions, is employed to analyze Coulomb dissociation data for \(^8\)B, while the sudden (Glauber) approximation accounts for higher-order effects in the target-core interaction. For Borromean nuclei like \(^6\)He and \(^{11}\)Li, coordinate-space Faddeev equations in hyperspherical coordinates compute continuum spectra and dissociation cross sections.
+
+Open questions and active directions include the precise determination of the astrophysical S\(_{17}\)(0) factor for the \(^7\)Be(p,\(\gamma\))\(^8\)B reaction, where different experimental and theoretical analyses show slight systematic deviations. The role of higher-order effects in electromagnetic dissociation and the sensitivity to final-state interactions between the nucleon and core remain under investigation. Recent work also extends Coulomb dissociation to neutron-rich nuclei relevant to the r-process, such as \(^{34}\)Na, and explores universal features of electromagnetic strength functions in single-particle halo nuclei.
+
 **Papers:** 91
 
 - [2407.16775](../papers/2407.16775.md) (2024) [2] Investigating the rate of $^{10}$Be(n,$γ$)$^{11}$Be radiative capture reaction within the FRDWBA framework

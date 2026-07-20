@@ -4,6 +4,14 @@
 
 **Broader:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
 
+## Landscape
+
+Collective flow in relativistic heavy-ion collisions describes the correlated, anisotropic expansion of matter created in high-energy nuclear collisions, often referred to as "Little Bangs" that mimic the early universe. This topic is crucial because the magnitude and pattern of flow, quantified by Fourier coefficients such as elliptic flow \(v_2\) and triangular flow \(v_3\), provide direct access to the transport properties of the quark-gluon plasma (QGP), particularly its specific shear viscosity \(\eta/s\). The extraction of \(\eta/s\) from experimental data at RHIC and LHC is a central goal, as it reveals whether the QGP behaves as a nearly perfect fluid with an \(\eta/s\) approaching a conjectured lower bound.
+
+The main approaches include relativistic hydrodynamics and microscopic transport models. Hydrodynamic models, often with event-by-event fluctuating initial conditions from the Glauber Monte-Carlo model, successfully reproduce collective flow data, as shown in studies of p-Pb and d-Pb collisions at TeV energies. Ideal and viscous hydrodynamics are used to compute flow harmonics, while hybrid approaches combine hydrodynamics for the deconfined stage with microscopic non-equilibrium models for the hadronic phase, as described in the dynamics of hot bulk QCD matter. Transport models like UrQMD and ART 1.0 simulate hadronic rescattering and superdense matter formation, with the latter showing sensitivity to the equation of state. The effect of early chemical freeze-out on radial and elliptic flow is investigated using three-dimensional hydrodynamic models, and anisotropic hydrodynamics (aHydro) extends the framework to momentum-space anisotropies.
+
+Open questions and active directions include the role of bulk viscosity, which has been shown to enhance flow harmonics from \(v_2\) to \(v_5\) at intermediate transverse momenta in event-by-event viscous hydrodynamics. The interpretation of triangular flow as arising from event-by-event fluctuations in initial conditions, followed by collective flow, remains an active area. Additionally, the dynamics of heavy quarks (charm and bottom) in the QGP, including resonant interactions and parton coalescence, are being explored to probe the strongly interacting nature of the medium. The collapse of flow at beam energies around 10 A\(\cdot\)GeV, observed by NA49, is interpreted as potential evidence for a first-order phase transition at high baryon density, a direction that continues to motivate experimental and theoretical work.
+
 **Papers:** 346 (showing first 100 of 346)
 
 - [2606.10258](../papers/2606.10258.md) (2026) [2] Nonflow Subtraction Beyond Two-Particle Correlations

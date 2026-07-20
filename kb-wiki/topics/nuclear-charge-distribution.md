@@ -6,6 +6,14 @@
 
 **Narrower:** [Nuclear charge radii](nuclear-charge-radii.md)
 
+## Landscape
+
+The nuclear charge distribution describes the radial density of protons within an atomic nucleus, a fundamental property that governs the electrostatic potential experienced by orbiting electrons and muons. Precise knowledge of this distribution is essential for interpreting atomic spectroscopy, testing quantum electrodynamics (QED) in strong fields, and constraining nuclear structure models, with applications ranging from fundamental symmetry tests to the development of nuclear clocks.
+
+The main approaches to probing the charge distribution include isotope shift spectroscopy in highly charged ions, muonic atom spectroscopy, and elastic electron scattering. Brandau et al. demonstrated that dielectronic recombination measurements in lithium-like ions can infer changes in mean-square charge radii, while Yerokhin et al. showed that QED theory for Li-like ions, combined with electron-scattering constraints, enables model-independent determinations of absolute radii. Muonic atom spectroscopy, as analyzed by the Fourier-Bessel benchmark for 208Pb, extracts higher-order radial moments of the charge density. The Breit-Wheeler process in heavy-ion collisions offers a novel probe, with computed cross sections sensitive to the charge distribution. Recent work on ytterbium isotope shifts extracted higher-order changes in the charge distribution, benchmarking ab initio calculations.
+
+Open questions include the role of two-photon exchange and dispersive corrections in electron-nucleus scattering, which can significantly modify cross sections beyond the Born approximation. The hadronic vacuum polarization correction in muonic atoms shows irregularities correlating with non-monotonic nuclear charge behavior, requiring further study. The host-dependence of the 229Th nuclear clock frequency, driven by the isomer shift from the charge distribution difference between nuclear states, remains an active direction. Additionally, the influence of external pressure on finite-nuclear-size corrections in confined ions presents a new frontier for understanding charge distribution under extreme conditions.
+
 **Papers:** 11
 
 - [2606.13073](../papers/2606.13073.md) (2026) [2] The leading nuclear-structure electrostatic correction in arbitrary $β$ decays

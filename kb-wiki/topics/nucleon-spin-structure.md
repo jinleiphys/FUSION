@@ -6,6 +6,14 @@
 
 **Narrower:** [Transversity distribution functions](transversity-distribution-functions.md), [Helicity distribution functions](helicity-distribution-functions.md)
 
+## Landscape
+
+The topic of nucleon spin structure investigates how the intrinsic angular momentum of the proton and neutron is distributed among their constituent quarks and gluons, a fundamental question in quantum chromodynamics (QCD). Understanding this distribution is crucial for a complete theory of the strong force and for interpreting precision measurements in hadronic physics, from high-energy scattering to the spectroscopy of exotic atoms like muonic hydrogen.
+
+The main approaches include phenomenological modeling and first-principles calculations. Dyson-Schwinger equation treatments reveal the importance of nonpointlike diquark correlations for longitudinal-spin parton distributions at high x. Lattice QCD provides first calculations of the charm quark contribution to nucleon form factors and, combined with machine learning, determines the gluon helicity distribution. Effective field theories, such as chiral perturbation theory with explicit spin-3/2 degrees of freedom, yield parameter-free predictions for spin polarizabilities. Experimental proposals, like the AFTER fixed-target experiment using LHC beams, aim to probe spin structure via azimuthal asymmetries in lepton-pair production.
+
+Open questions and active directions include the role of sea quarks, as seen in constraints on charm-anticharm asymmetry from lattice QCD. The verification of spin-dependent sum rules connecting real and virtual Compton scattering remains a focus, alongside the need for higher-order calculations in chiral perturbation theory to improve descriptions of spin structure at finite photon virtualities. The sign of the gluon helicity PDF is being actively constrained, and the impact of non-spherical Pauli blocking in nucleon-nucleon interactions on spin observables is a developing area.
+
 **Papers:** 27
 
 - [2606.13908](../papers/2606.13908.md) (2026) [2] Anomalies, Topology, and Hadron Structure in QCD

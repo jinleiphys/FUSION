@@ -4,6 +4,14 @@
 
 **Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
 
+## Landscape
+
+Lattice QCD is the primary nonperturbative framework for calculating hadronic properties directly from the fundamental theory of strong interactions. It enables first-principles studies of nuclear forces, the quark-gluon plasma, and hadron spectroscopy, providing controlled predictions where experimental data are scarce or model dependencies must be eliminated. This matters because it connects the microscopic degrees of freedom of QCD to observable phenomena such as the binding of light nuclei, the equation of state of hot dense matter, and the survival of quarkonium states in a deconfined plasma.
+
+The main approaches include direct calculations of nucleon-nucleon potentials, as in the quenched study that revealed a repulsive core and attractive well in the central potential. Effective field theories (EFTs) are used to systematically connect lattice results to few-nucleon systems, with expansions in momenta that can be matched to lattice simulations in the chiral limit. The maximum entropy method (MEM) extracts spectral functions from imaginary-time correlators, applied to charmonia to show that J/ψ and η_c survive up to about 1.6 T_c. Taylor expansions in chemical potentials up to sixth order provide the QCD equation of state, while comparisons with hadron resonance gas models reveal discrepancies that are reduced by accounting for lattice artifacts.
+
+Open questions include the precise nature of the chiral crossover at nonzero baryon, strangeness, and isospin chemical potentials, where pseudo-critical temperatures are parameterized with quadratic and quartic coefficients. The dissociation temperature of heavy quarkonia in the plasma remains uncertain, with MEM analyses indicating survival between 1.6 and 1.9 T_c. The structure of exotic hadrons such as pentaquarks and tetraquarks is actively investigated, with recent LHCb evidence supporting a molecular picture. Large-momentum effective theory (LaMET) offers a path to compute parton distribution functions directly from lattice QCD, addressing a long-standing challenge in connecting lattice calculations to collider physics.
+
 **Papers:** 2455 (showing first 100 of 2455)
 
 - [2606.16377](../papers/2606.16377.md) (2026) [2] Static linear response of hot and dense QCD matter to electromagnetic fields: Leading hard and soft QCD corrections

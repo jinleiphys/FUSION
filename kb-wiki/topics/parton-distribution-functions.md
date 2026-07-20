@@ -6,6 +6,14 @@
 
 **Narrower:** [Fragmentation functions](fragmentation-functions.md), [Spin-dependent parton distribution functions](spin-dependent-parton-distribution-functions.md), [Transverse momentum dependent distribution](transverse-momentum-dependent-distribution.md)
 
+## Landscape
+
+Parton distribution functions (PDFs) describe the nonperturbative relation between a hadron and its constituent quarks and gluons, encoding how the momentum and spin of the hadron are distributed among its partons. Understanding PDFs is essential for interpreting high-energy collider data, as they are a key ingredient in the QCD factorization framework that connects theoretical calculations to experimental cross sections. This topic matters because precise PDFs are required for accurate predictions at the Large Hadron Collider (LHC) and for probing the internal structure of nucleons and nuclei, including the effects of nuclear binding and the quark-gluon plasma.
+
+The main approaches include global DGLAP analyses of nuclear PDFs, as in the EPS09 and EPPS16 analyses, which fit deep inelastic scattering, Drell-Yan, and inclusive pion production data to determine parton distributions and their uncertainties. The CTEQ-TEA collaboration similarly performs global QCD analyses using high-precision LHC data on jet, Drell-Yan, and top-quark production. Lattice QCD offers an ab initio method, with proposals to extract PDFs from good lattice cross sections that factorize into PDFs, as demonstrated by the reconstruction of light-cone PDFs at the physical point. Monte Carlo event generators like HIJING model parton and particle production in nuclear collisions, while the TMD Handbook reviews transverse-momentum-dependent distributions that provide insight into hadron structure beyond collinear factorization.
+
+Open questions and active directions include the determination of parton distributions at large x, where new data on weak boson production and the free neutron structure function from Jefferson Lab have reduced uncertainties on the d/u ratio. The gluon distribution in nuclei remains poorly constrained, with large uncertainties at moderate x, and the momentum fraction carried by gluons in the pion is now estimated at about 30% from combined Drell-Yan and HERA data. Lattice QCD calculations at the physical point now show overlap with phenomenological PDFs for polarized distributions, offering a path toward first-principles extraction. The interplay between open heavy flavor transport and quarkonium dissociation in the quark-gluon plasma is also an active area, studied via coupled Boltzmann transport equations.
+
 **Papers:** 521 (showing first 100 of 521)
 
 - [2606.17133](../papers/2606.17133.md) (2026) [2] Short-Range Correlations Between Partons in a Proton

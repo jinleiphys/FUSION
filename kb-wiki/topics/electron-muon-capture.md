@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+Electron and muon capture are weak interaction processes in which a nucleus absorbs an orbital electron or muon, transforming a proton into a neutron and emitting a neutrino. These reactions are fundamental to stellar evolution and supernova dynamics, as they set the electron fraction and entropy during core collapse. The topic also extends to exotic physics, including the detection of sterile antineutrino dark matter via capture on radioactive nuclei like Ho-163, and to laboratory studies of nuclear excitation by electron capture in laser-generated plasmas.
+
+The dominant theoretical approach is large-scale shell model calculations, as demonstrated by Langanke and Martínez-Pinedo, who computed Gamow-Teller strength distributions and weak rates for nuclei in the A=45-65 range relevant to supernovae. For heavier and more neutron-rich nuclei, hybrid models combining the Shell Model Monte Carlo with the random phase approximation have been proposed, as seen in the work on neutron-rich Germanium isotopes. The finite-temperature relativistic random-phase approximation provides a self-consistent microscopic framework for stellar electron capture rates, while the Projected Shell Model explicitly includes multi-quasiparticle excited configurations for medium-heavy nuclei.
+
+Open questions include the role of very neutron-rich heavy nuclei omitted from earlier rate calculations, as highlighted by recent work calling for improved estimates during the final collapse phase. The influence of nuclear excitations on Urca cooling in neutron star crusts remains an active direction, with new expressions for neutrino luminosity accounting for excited states of both members of an Urca pair. The potential for time-modulated electron capture decay in H-like ions, linked to neutrino-flavour mixing, and the damping of chiral magnetic instability by the nonzero electron mass in supernovae represent further unresolved frontiers.
+
 **Papers:** 306 (showing first 100 of 306)
 
 - [2604.26004](../papers/2604.26004.md) (2026) [2] Revisiting Turner Window Axions: The Untapped Potential of NaI Dark Matter Detectors

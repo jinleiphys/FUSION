@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+The nucleon-nucleon (NN) interaction is the fundamental force that binds protons and neutrons into atomic nuclei, governing everything from the stability of isotopes to the structure of neutron stars. Understanding this force from first principles is essential for a predictive theory of nuclear structure and reactions, yet its complexity, including spin- and isospin-dependent components, makes it a central challenge in nuclear physics.
+
+A major theoretical approach is chiral effective field theory (EFT), which systematically expands the NN interaction based on the symmetries of quantum chromodynamics. A new power counting for this EFT is introduced in "A New Expansion for Nucleon-Nucleon Interactions," which also provides analytic results for the 1S0 and 3S1-3D1 channels. This technique is elaborated in "Two-Nucleon Systems from Effective Field Theory." To improve convergence in many-body calculations, the similarity renormalization group (SRG) is applied to NN interactions in "Similarity Renormalization Group for Nucleon-Nucleon Interactions." These interactions are then used in ab initio methods, such as the no-core shell model (NCSM) for helium isotopes in "Proton radii of 4,6,8He isotopes" and quantum Monte Carlo (QMC) calculations with chiral EFT in "Quantum Monte Carlo Calculations with Chiral Effective Field Theory Interactions."
+
+Open questions include the nature of nuclear binding near a quantum phase transition, as explored via lattice simulations in "Nuclear binding near a quantum phase transition." The extension of chiral EFT to hyperon-nucleon interactions is addressed in "Leading order relativistic hyperon-nucleon interactions in chiral effective field theory." Furthermore, lattice QCD calculations at unphysical pion masses, as in "Two Nucleon Systems at m_pi ~ 450 MeV from Lattice QCD," provide direct constraints from QCD, while the development of ab initio covariant density functionals, discussed in "Towards an ab initio covariant density functional for nuclear structure," aims to bridge the gap between fundamental interactions and phenomenological models.
+
 **Papers:** 305 (showing first 100 of 305)
 
 - [2604.13766](../papers/2604.13766.md) (2026) [2] Spectroscopy of $^{11}$Be from the $^{10}$Be($d,p$) reaction measured in inverse kinematics by the AT-TPC in SOLARIS

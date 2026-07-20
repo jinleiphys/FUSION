@@ -4,6 +4,16 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+### Landscape Synthesis: Nuclear Level Densities
+
+Nuclear level densities (NLDs) describe the number of quantum states per unit energy in a nucleus, a fundamental quantity governing the statistical behavior of excited nuclei. They are crucial for modeling nuclear reactions in astrophysics, such as hydrostatic and explosive burning, as well as for understanding fission processes and the decay of giant resonances. Accurate NLDs are essential inputs for statistical model calculations of reaction rates and for interpreting experimental spectra.
+
+The main theoretical approaches are microscopic and phenomenological. The Shell Model Monte Carlo (SMMC) method, as applied by Alhassid and collaborators, calculates NLDs and their spin and parity distributions for iron-region nuclei using the complete $(pf+0g_{9/2})$-shell, achieving remarkable agreement with experiment. A separate thread uses the Skyrme-Hartree-Fock-Bogoliubov (HFB) model, as in the HFB-16 mass formula by Goriely et al., to predict NLDs for all nuclei between drip lines, with the pairing force constrained by microscopic neutron-matter gaps. Phenomenological approaches include the backshifted Bethe formula and the moments method, with a new high-performance algorithm by Karampagia et al. calculating spin- and parity-dependent NLDs in the proton-neutron formalism.
+
+Active directions include extending SMMC to higher temperatures by incorporating continuum states, as explored by Nakada and Alhassid. The fine structure of the isovector giant dipole resonance in 208Pb, measured by Reinhard et al., is being analyzed with wavelet methods to extract characteristic scales and relate them to NLDs. Furthermore, the impact of temperature-dependent fission barriers on thermal fission rates is being studied with finite-temperature Skyrme-Hartree-Fock+BCS, while correlated prompt fission data from codes like FREYA and CGMF place stringent constraints on NLD models.
+
 **Papers:** 150 (showing first 100 of 150)
 
 - [2606.04606](../papers/2606.04606.md) (2026) [2] Physics of many-body resonances with complex scaling and applications to light unstable nuclei

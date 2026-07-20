@@ -4,6 +4,14 @@
 
 **Narrower:** [Metropolis algorithm](metropolis-algorithm.md), [Path-integral Monte Carlo](path-integral-monte-carlo.md), [Entropic sampling methods](entropic-sampling-methods.md), [Heatbath algorithm](heatbath-algorithm.md), [Simulated annealing](simulated-annealing.md), [Langevin algorithm](langevin-algorithm.md), [Quantum Monte Carlo](quantum-monte-carlo.md), [Hybrid Monte Carlo algorithm](hybrid-monte-carlo-algorithm.md)
 
+## Landscape
+
+Monte Carlo methods in nuclear physics are ab initio numerical techniques that solve the many-body Schrödinger equation for nuclei and nucleonic matter starting from realistic nuclear interactions and currents. These methods matter because they enable the accurate prediction of properties such as low-lying states, moments, transitions, and the equation of state of neutron matter, which are essential for understanding light nuclei, neutron star crusts, and electroweak reactions. The calculations are grounded in realistic Hamiltonians and are validated against experimental data, providing a bridge between fundamental nuclear forces and observable phenomena.
+
+The main approaches include variational and Green's function Monte Carlo methods, as described in the review of light nuclei using the Argonne \(v_{18}\) and Urbana IX potentials. Auxiliary field diffusion Monte Carlo is detailed for light and medium-mass nuclei with local chiral interactions up to next-to-next-to-leading order. Shell Model Monte Carlo methods reduce the many-body evolution operator to a stochastic path integral, enabling calculations of ground-state and thermal properties in large model spaces. Effective field theory is combined with these methods, as shown in the work on lattice nuclei where pionless EFT is solved using hyperspherical harmonics and auxiliary field diffusion Monte Carlo.
+
+Active directions include extending QMC methods to heavier nuclei and asymmetric nuclear matter, as noted in recent advances. The development of local chiral EFT interactions consistent with electroweak currents is a key focus, enabling studies of neutrino scattering on \(^{12}\)C. Open questions involve resolving differences in chiral EFT derivations of charge and current operators, and improving energy-density functionals to better reproduce the central density and spin-orbit splitting observed in neutron drops. The treatment of non-global logarithms in jet substructure remains an outstanding problem in QCD.
+
 **Papers:** 85
 
 - [2602.22515](../papers/2602.22515.md) (2026) [2] Confined and Deconfined Phases of Qubit Regularized Lattice Gauge Theories

@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Hydrodynamic models
 
+## Landscape
+
+Hydrodynamic models are a cornerstone of relativistic heavy-ion physics, used to simulate the evolution of the quark-gluon plasma (QGP) created in collisions at RHIC and the LHC. They are essential for extracting transport properties of the QGP, such as the jet transport parameter \(\hat q\), and for connecting experimental observables to the underlying dynamics of the strongly interacting matter. The success of hydrodynamics in describing bulk hadron spectra and collective flow makes it a critical tool for interpreting data and testing our understanding of the QGP.
+
+The main approaches involve coupling 2+1D or 3+1D viscous hydrodynamic models for the bulk medium evolution with specific models for parton energy loss, as systematically done by the JET Collaboration to extract \(\hat q\) from single inclusive hadron suppression data. Other sub-threads include using hydrodynamics to study femtoscopic correlations, where the "HBT puzzle" was resolved by identifying multiple shortcomings rather than a single failure. Recent work also applies hydrodynamics to compute new observables like the skewness of mean transverse momentum fluctuations and mixed harmonic cumulants, which probe correlations between different flow coefficients.
+
+Open questions and active directions include resolving the \(v_2\)-to-\(v_3\) puzzle in ultracentral Pb+Pb collisions, which may require incorporating nuclear deformation effects from low-energy structure. The role of pre-equilibrium dynamics and the full opacity dependence of flow are being evaluated by comparing kinetic theory to hydrodynamic simulations to identify inaccuracies. Additionally, the study of helicity polarization in 3+1D viscous hydrodynamics and the \(p_T\) dependence of principal components of multiplicity fluctuations represent ongoing efforts to refine hydrodynamic descriptions against experimental data.
+
 **Papers:** 78
 
 - [2602.22490](../papers/2602.22490.md) (2026) [1] The shape of transverse momentum spectra in hybrid hydrodynamic models

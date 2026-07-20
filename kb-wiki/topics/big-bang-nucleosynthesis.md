@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Big bang nucleosynthesis
 
+## Landscape
+
+Big bang nucleosynthesis (BBN) describes the production of the lightest elements during the first few minutes of the universe. It is a cornerstone of the standard cosmological model, and its predictions for primordial abundances provide a stringent test of our understanding of fundamental physics. The topic matters because precise agreement between BBN calculations and observations of elements like deuterium and helium-4 can constrain new physics, while the persistent discrepancy between the predicted and observed abundance of lithium-7 constitutes the "primordial lithium problem" (The Primordial Lithium Problem).
+
+The main approaches rely on precise calculations of key nuclear reaction rates, often using effective field theory. For the crucial neutron-proton capture reaction n+p to d+gamma, multiple papers achieve high precision by calculating the M1 and E1 transition amplitudes to high orders, with uncertainties estimated at 1% to 4% (Precision Calculation of n+p->d+gamma Cross Section; n+p -> d+gamma for Big-Bang Nucleosynthesis; Radiative neutron capture on a proton at BBN energies). Other sub-threads use ab initio many-body methods to calculate fusion reactions like 3H(d,n)4He (Ab initio many-body calculations) and analyze the 3He(alpha,gamma)7Be reaction to address the lithium problem (Evaluation of Modern 3He(alpha,gamma)7Be Data). A separate thread investigates the impact of fundamental constant variation, using chiral perturbation theory to link quark mass changes to nuclear binding and BBN abundances (Varying the light quark mass; Quark mass variation constraints from Big Bang nucleosynthesis).
+
+Active directions include resolving the lithium problem through improved nuclear data for 7Be destruction channels (New determination of the spectroscopic factor of 7Be ground state) and ruling out exotic explanations like enhanced electron screening (Electron screening and its effects on Big-Bang nucleosynthesis). The possibility of cosmological variation of fundamental constants remains a vibrant area, with studies deriving limits on quark mass variation from BBN and other cosmological data (Limits on Cosmological Variation of Strong Interaction and Quark Masses; Dependence of hadronic properties on Quark Masses).
+
 **Papers:** 171 (showing first 100 of 171)
 
 - [2604.16600](../papers/2604.16600.md) (2026) [2] A data-driven prediction for the primordial deuterium abundance

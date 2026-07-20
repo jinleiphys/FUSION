@@ -4,6 +4,14 @@
 
 **Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
 
+## Landscape
+
+Chiral perturbation theory (ChPT) is the effective field theory of quantum chromodynamics (QCD) at low energies, exploiting the spontaneous breaking of chiral symmetry to describe interactions among pions and nucleons. Its importance lies in providing a systematic, model independent framework for calculating hadronic processes, from nucleon nucleon potentials to pion nucleon scattering, with a controlled expansion in small momenta and quark masses. This approach is essential for connecting QCD to nuclear phenomena and for interpreting lattice QCD results.
+
+The field is characterized by several methodological threads. A major focus is the construction of high precision nucleon nucleon potentials, with work at next to next to next to leading order (N3LO) showing that this order is necessary and sufficient for a reliable potential, as demonstrated by the accurate charge dependent potential presented by the Bochum group. A distinct power counting for the two nucleon system was introduced by Kaplan, Savage, and Wise to handle large scattering lengths. For pion nucleon scattering, relativistic formulations and heavy baryon approaches are used, with Roy Steiner equations providing a rigorous framework for extracting scattering lengths from data. The inclusion of the Delta resonance as an explicit degree of freedom extends the theory into higher energy regions, as shown in Compton scattering calculations.
+
+Open questions and active directions are visible in several recent papers. The nature of the chiral phase transition at finite isospin density is explored, with a conjecture that the transition from hadron to quark matter is smooth. The thermal evolution of cold dense nuclear matter is being investigated, with results showing a rapid decrease of the chiral condensate at high baryon chemical potential, indicating a tendency toward chiral restoration. Furthermore, the development of hidden local symmetry models aims to incorporate vector mesons and describe the chiral phase transition, while new regularization schemes for chiral potentials, such as semilocal momentum space regularization, continue to refine the description of nuclear forces.
+
 **Papers:** 1328 (showing first 100 of 1328)
 
 - [2604.27993](../papers/2604.27993.md) (2026) [2] Hadron properties at finite temperature

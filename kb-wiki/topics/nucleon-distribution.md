@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+The study of nucleon distribution addresses how protons and neutrons are arranged within atomic nuclei and in nuclear matter, spanning spatial configurations in nuclei, momentum distributions in scattering processes, and the non-uniform matter in astrophysical contexts. This topic matters because it underpins our understanding of nuclear structure, the equation of state for dense matter in core-collapse supernovae, and the interpretation of high-energy collision experiments that probe fundamental aspects of quantum chromodynamics.
+
+Two main methodological threads emerge from the literature. The first uses relativistic mean-field theory with the Thomas-Fermi approximation to describe non-uniform nuclear matter, as in the work constructing equations of state for supernova simulations and in studies comparing self-consistent versus parameterized nucleon distributions. The second thread employs light cone sum rules to extract nucleon distribution amplitudes from form factor data, with several papers refining these calculations for electromagnetic and axial form factors. A distinct sub-thread uses transport models and coalescence to study cluster production in heavy-ion collisions, where nucleon distribution functions from isospin-dependent models reveal sensitivity to the symmetry energy.
+
+Active directions visible in recent papers include the use of isobar collisions to differentiate nucleon distributions between nuclei of equal mass, with Bayesian imaging and charmonium production as probes. The evolution of clustering structure in light nuclei like beryllium isotopes is investigated through momentum distributions, while lattice effective field theory provides spatial distribution information for proton-rich nuclei such as 22Si. Open questions remain about the precise shape of nucleon distribution amplitudes and their role in hard exclusive processes like backward pion electroproduction.
+
 **Papers:** 29
 
 - [2606.09254](../papers/2606.09254.md) (2026) [2] Meson-Nucleus Bound States with Neural-Network Quantum States

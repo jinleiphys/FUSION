@@ -4,6 +4,14 @@
 
 **Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
 
+## Landscape
+
+Perturbative QCD (pQCD) is the framework for calculating the strong interaction at high energies or short distances, where the coupling constant is small enough to allow expansion in terms of Feynman diagrams. It matters because it provides the first-principles tool to describe phenomena from jet production in heavy ion collisions to the partonic structure of hadrons, and it underpins the theoretical interpretation of experiments at RHIC, the LHC, and future facilities like the Electron-Ion Collider.
+
+The main approaches include the Color Glass Condensate effective theory, which describes high-energy scattering where parton densities saturate, as detailed in the paper by Gelis et al. Another thread uses the Nambu-Jona-Lasinio model to study chiral symmetry breaking and color superconductivity in dense quark matter, as reviewed by Buballa and by Hatsuda and Kunihiro. For heavy ion collisions, the AMPT model combines pQCD initial conditions with parton cascades and hadronic transport, while relativistic viscous hydrodynamics, applied by Luzum and Romatschke, connects pQCD inputs to the observed collective flow of the quark-gluon plasma.
+
+Open questions include the nature of strongly coupled QCD matter at RHIC, where evidence points to a nearly perfect fluid, and the existence of quark matter cores in neutron stars, now constrained by gravitational wave observations from GW170817. The role of nuclear parton distribution functions, as analyzed in the EPS09 study, remains active, and the heavy quarkonium sector continues to present puzzles in production and suppression that challenge pQCD predictions.
+
 **Papers:** 2868 (showing first 100 of 2868)
 
 - [2606.16377](../papers/2606.16377.md) (2026) [3] Static linear response of hot and dense QCD matter to electromagnetic fields: Leading hard and soft QCD corrections

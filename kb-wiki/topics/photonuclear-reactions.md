@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+Photonuclear reactions, in which a nucleus absorbs a high energy photon and subsequently emits particles or undergoes fission, are a fundamental probe of nuclear structure and dynamics. Because the electromagnetic interaction is perturbative and well understood, these reactions provide a clean connection between measured cross sections and calculated nuclear properties, as emphasized in the overview of ab initio calculations on light nuclei. This topic matters because it tests our understanding of nuclear forces, reveals in medium modifications of hadrons, and has practical applications ranging from nuclear waste transmutation to the study of the quark gluon plasma in peripheral heavy ion collisions.
+
+The main theoretical approaches span ab initio methods and semi classical transport models. For light nuclei, chiral effective field theories and conventional ab initio calculations are used to describe electron scattering and photonuclear reactions. For heavier nuclei, the quasi deuteron model is a key framework, as applied in the Extended Quantum Molecular Dynamics model to study alpha clustering in carbon and in a systematic analysis of photofission for actinides. Relativistic effects are treated via the relativistic distorted wave impulse approximation, which shows significant medium modifications compared to nonrelativistic calculations. Transport models like the BUU approach and the Cascade Exciton Model, extended to photonuclear reactions, are used to simulate final state interactions and particle production.
+
+Active directions include the search for observable consequences of in medium changes of hadronic properties, such as the modification of the phi meson mass in nuclear matter or the properties of the S11(1535) resonance in eta photoproduction. The role of coherence length effects in high energy photonuclear reactions and the formation time of hadrons are also under investigation. Furthermore, the sensitivity of photonuclear observables to alpha cluster configurations in light nuclei and the need for consistent relativistic treatments of one nucleon currents and Delta isobar excitation in few nucleon systems remain open questions.
+
 **Papers:** 36
 
 - [2606.08830](../papers/2606.08830.md) (2026) [2] Nuclear parton distributions and nuclear shadowing

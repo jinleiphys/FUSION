@@ -4,6 +4,16 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+### Landscape Synthesis: Charge Distributions
+
+The study of charge distributions in nuclear physics addresses how electric charge is spatially arranged within nucleons and nuclei, as well as how these distributions evolve in extreme conditions such as high-energy collisions. This topic matters because it underpins our understanding of nuclear structure, from the radii of stable isotopes to the exotic shapes of neutron-rich nuclei, and it connects to fundamental symmetries and the search for new physics beyond the Standard Model. Accurate knowledge of charge distributions is also essential for interpreting experiments in heavy-ion collisions and electron scattering.
+
+The main approaches include relativistic mean-field theories and beyond-mean-field methods. The relativistic continuum Hartree-Bogoliubov theory with the PC-PK1 functional has been used to predict the charge distributions of over 9000 bound nuclei from the proton to neutron drip lines. The deformed relativistic Hartree-Bogoliubov theory in continuum extends this to even-Z nuclei, tabulating charge radii alongside binding energies and deformations. Beyond-mean-field studies incorporate long-range correlations via Random Phase Approximation and short-range correlations to improve descriptions of empirical charge distributions, as shown for 206Pb and 205Tl. At the quark level, the quark-meson coupling model derives density-dependent Skyrme forces that reproduce charge distributions of doubly magic nuclei. For moving nucleons, relativistic charge distributions interpolate between Breit frame and infinite-momentum frame descriptions.
+
+Open questions include the role of color charge correlations in the proton, where QCD light front formalisms reveal analogies to electromagnetic charge densities and remove infrared divergences in gluon exchange. In heavy-ion collisions, the chiral Hall effect and axial charge fluctuations from the Glasma state suggest nontrivial rapidity-dependent charge distributions, while dilepton photoproduction is proposed as a probe of initial electromagnetic field fluctuations. Volume corrections and resonance decays in Monte Carlo hadron resonance gas models remain active areas for understanding net-charge cumulants in central collisions.
+
 **Papers:** 113 (showing first 100 of 113)
 
 - [2603.13819](../papers/2603.13819.md) (2026) [2] Electromagnetic structure of Bc and heavy quarkonia in the light-front quark model

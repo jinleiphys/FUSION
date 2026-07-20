@@ -4,6 +4,16 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+### Landscape Synthesis: Direct Reactions
+
+Direct reactions are a cornerstone of nuclear physics, used to probe the structure of atomic nuclei and the dynamics of nuclear interactions. They encompass processes where a projectile transfers energy or nucleons to a target in a single, swift encounter, in contrast to the formation of a long-lived compound nucleus. This topic is critical because it provides access to exotic nuclei far from stability, tests fundamental symmetries like chiral symmetry restoration in dense matter, and informs models of nucleosynthesis in astrophysical environments, such as neutron star mergers.
+
+The main approaches include transfer reactions, which are central to studying shell evolution and pairing. For instance, the Sn(d,3He) reaction was used to measure deeply bound pionic states, revealing evidence for chiral symmetry restoration. Multinucleon transfer reactions are studied with microscopic frameworks like Time-Dependent Hartree-Fock (TDHF) theory and its extensions, as reviewed for the production of neutron-rich nuclei. The complex-energy continuum shell model provides a consistent description of bound and resonant states, while the NACRE II compilation updates thermonuclear reaction rates for charged-particle-induced reactions. Pairing correlations are investigated through one- and two-nucleon transfer below the Coulomb barrier, showing a strong enhancement of two-particle transfer due to pairing.
+
+Active directions include the production of new exotic nuclei via multinucleon transfer, as explored in reactions like 58Ni+124Sn and 154Sm+160Gd. The isospin equilibration process in near-barrier reactions is being studied with quantum molecular dynamics models. Open questions involve the nature of neutron-proton pairing along the N=Z line and the extraction of scattering lengths from production reactions, such as pp to K+ p Lambda. The recent discovery of a two-neutron halo in 29F challenges traditional shell closures, highlighting the ongoing need to understand nuclear structure at the limits of stability.
+
 **Papers:** 244 (showing first 100 of 244)
 
 - [2606.02270](../papers/2606.02270.md) (2026) [2] The spectrum of $^{18}$O in terms of the multiconfigurational dynamical symmetry

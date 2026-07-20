@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+Proton emission is a fundamental radioactive decay process occurring in nuclei beyond the proton drip line, where the separation energy for a proton becomes negative. This topic is crucial for defining the limits of nuclear stability and for probing the structure of exotic, neutron-deficient nuclei. Understanding proton emission provides direct insight into nuclear binding, deformation, and the quantum mechanical tunneling of nucleons through the Coulomb barrier, with implications for the nuclear shell model and the astrophysical rp-process.
+
+The main approaches to studying proton emission include experimental measurements of decay energies and half-lives, as seen in the reinvestigation of the d3/2 proton emitter 151mLu, which resolved a long-standing discrepancy in the spectroscopic factor. Theoretical methods range from the generalized liquid drop model (GLDM) and WKB approximation for calculating penetrability, to relativistic mean field theory for spectroscopic factors. Systematics of proton emission are captured by simple formulas relating half-life to the Coulomb parameter, revealing two distinct regions of deformation. The relativistic formulation of Glauber theory is applied to electro-induced proton emission, while Bayesian methods are used to quantify predictions beyond the drip line.
+
+Open questions and active directions include the mechanism of two-proton radioactivity, which has been observed from ground states and excited states, with recent work distinguishing between simultaneous and sequential emission in nuclei like 23Al and 22Mg. The role of nuclear pairing correlations in two-proton decay is being explored using time-dependent three-body models. Additionally, the existence of near-threshold proton-emitting resonances, such as in 11B, highlights the impact of continuum coupling on nuclear structure. The formation probability of the emitted proton remains a key quantity for determining deformation properties of mother nuclei.
+
 **Papers:** 99
 
 - [2603.09777](../papers/2603.09777.md) (2026) [2] Overview of recent UPC measurements

@@ -4,6 +4,16 @@
 
 **Narrower:** [Nucleon spin structure](nucleon-spin-structure.md)
 
+## Landscape
+
+### Landscape Synthesis: Spin in Nuclear Physics
+
+The topic of spin in nuclear physics explores how the intrinsic angular momentum of particles influences the structure of nuclei, the dynamics of dense matter, and the properties of the quark-gluon plasma created in heavy-ion collisions. Understanding spin is crucial because it provides a unique probe of fundamental interactions, from the spin and flavor structure of the proton to the equation of state of neutron stars, and it reveals new transport phenomena in extreme conditions.
+
+The main approaches include ab-initio methods and relativistic fluid dynamics. Quantum Monte Carlo methods, as reviewed for light nuclei, use realistic nuclear interactions to calculate ground and excited states, successfully reproducing properties like moments and transitions. For dense matter, NJL-type models analyze the interplay between chiral symmetry restoration and color superconductivity. A major sub-thread is the development of relativistic hydrodynamics for spin-polarized fluids, where distribution functions for spin-1/2 particles at local thermodynamical equilibrium predict polarization proportional to fluid vorticity. This framework, extended by conservation laws for angular momentum, is used to analyze global hyperon polarization in non-central collisions, where spin-orbital coupling in parton scattering leads to observable left-right asymmetries and azimuthal anisotropy.
+
+Active directions focus on the interplay of vorticity, magnetic fields, and polarization. Recent papers investigate how the intense magnetic field generated in non-central collisions may cause a splitting in polarization between particles and antiparticles, a signature distinct from vorticity-induced polarization. The derivation of a relativistic chiral kinetic equation with a 4-dimensional Berry monopole connects vorticity terms to the axial anomaly. Open questions include constraining the neutron star equation of state through precision measurements of spin rates and maximum mass, and understanding the spin alignment of vector mesons, which depends on different hadronization scenarios and can be tested via angular distributions of decay products.
+
 **Papers:** 5935 (showing first 100 of 5935)
 
 - [2606.18165](../papers/2606.18165.md) (2026) [2] Observation of a dominant $\boldsymbol{0f_{7/2}}$ neutron configuration in the $\boldsymbol{^{32}}$Si $\boldsymbol{J^π=5...

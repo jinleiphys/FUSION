@@ -6,6 +6,14 @@
 
 **Narrower:** [QCD phenomenology](qcd-phenomenology.md), [Chiral perturbation theory](chiral-perturbation-theory.md), [Nonrelativistic QCD](nonrelativistic-qcd.md), [Generalized parton distributions](generalized-parton-distributions.md), [Parton distribution functions](parton-distribution-functions.md), [Lattice QCD](lattice-qcd.md), [Heavy quark effective theory](heavy-quark-effective-theory.md), [Perturbative QCD](perturbative-qcd.md)
 
+## Landscape
+
+Quantum chromodynamics (QCD) is the fundamental theory of the strong nuclear force, governing the interactions of quarks and gluons. This topic matters because it describes the behavior of nuclear matter under extreme conditions, from the interior of neutron stars to the primordial quark-gluon plasma (QGP) created in heavy-ion collisions, thereby connecting the smallest scales of particle physics to the largest scales of astrophysics and cosmology.
+
+The main approaches to studying QCD include effective field theories and transport models. Chiral effective field theory provides a systematic derivation of nuclear forces from low-energy QCD, as reviewed in "Modern Theory of Nuclear Forces" and "Chiral effective field theory and nuclear forces." The Color Glass Condensate effective field theory describes saturated gluons in high-energy hadron wavefunctions, as detailed in "The Color Glass Condensate" and "The Color Glass Condensate and High Energy Scattering in QCD." For heavy-ion collisions, microscopic transport models like UrQMD and the AMPT model simulate the full collision dynamics, while lattice QCD calculations, such as those in "The equation of state in (2+1)-flavor QCD," provide the equation of state for the QGP.
+
+Open questions and active directions include the precise extraction of the QGP's specific shear viscosity from collective flow data, as reviewed in "Collective flow and viscosity in relativistic heavy-ion collisions." The Chiral Magnetic Effect, discussed in "The effects of topological charge change in heavy ion collisions," probes CP violation via topological charge fluctuations in strong magnetic fields. At high density, the nature of color superconducting phases, including the color-flavor locked phase, remains an active area of investigation, as explored in "Color superconductivity in dense quark matter" and "NJL-model analysis of dense quark matter."
+
 **Papers:** 15203 (showing first 100 of 15203)
 
 - [2606.16377](../papers/2606.16377.md) (2026) [1] Static linear response of hot and dense QCD matter to electromagnetic fields: Leading hard and soft QCD corrections

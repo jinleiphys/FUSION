@@ -4,6 +4,16 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+### Landscape Synthesis: Nuclear Binding
+
+Nuclear binding, the energy that holds protons and neutrons together in an atomic nucleus, is the fundamental property determining nuclear stability, reaction rates, and the origin of elements in the universe. Understanding how binding emerges from first principles is essential for describing exotic nuclei far from stability, which are critical for astrophysical nucleosynthesis and for testing the limits of nuclear existence.
+
+The primary approach to this problem is *ab initio* nuclear structure theory, often based on chiral effective field theory (EFT). However, recent lattice simulations have revealed that not all chiral EFT interactions yield accurate predictions at higher densities, prompting work to deduce the minimal nuclear interaction needed to reproduce ground state properties. A key sub-thread involves softening the nuclear interaction; studies of low-momentum potentials show that with cutoffs around 2 fm⁻¹, nuclear matter becomes perturbative, with corrections well-converged at second order. Complementary methods include wavefunction matching, which transforms interactions to simplify many-body calculations, and Bayesian machine learning techniques that improve mass predictions for nuclei far from stability by combining theoretical models with experimental data.
+
+Active directions focus on the limits of binding and the role of emergent phenomena. The neutron drip line in the calcium region is being explored using global mass models and statistical machine learning to assess the impact of recent discoveries of extremely neutron-rich isotopes. Evidence from *ab initio* lattice simulations suggests that nature is near a quantum phase transition, driven by quantum fluctuations, which may govern how protons and neutrons bind. A major open challenge is the multiscale physics of nuclei, where traditional shell structure melts near the driplines, requiring a unified non-perturbative framework that captures both short- and long-range correlations.
+
 **Papers:** 189 (showing first 100 of 189)
 
 - [2606.12166](../papers/2606.12166.md) (2026) [1] Saturation of Nuclear Binding from Lattice Hamiltonians

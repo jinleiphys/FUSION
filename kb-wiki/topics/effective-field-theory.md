@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Effective field theory
 
+## Landscape
+
+Effective field theory (EFT) provides a systematic and model-independent framework for deriving nuclear forces from the symmetries of Quantum Chromodynamics (QCD). This approach is essential because it connects low-energy nuclear phenomena to the fundamental theory of the strong interaction, enabling controlled expansions in momenta and precise calculations. It matters because it underpins our understanding of everything from few-nucleon systems to the properties of neutron stars, as microscopic calculations of neutron matter based on chiral EFT interactions, combined with observations of a 1.97 solar mass neutron star, constrain the equation of state of neutron-rich matter.
+
+The main approaches include chiral EFT, which incorporates pion fields and is reviewed for nuclear forces, and pionless EFT, which uses only contact interactions for low-energy systems. A key methodological thread is the development of a new power counting for nucleon-nucleon interactions, introduced to handle large scattering lengths, with analytic results presented for the 1S0 and 3S1-3D1 channels. The renormalization of the three-body system with short-range forces is also a critical sub-thread, where a single three-body counterterm absorbs cutoff dependence. A distinct EFT, the Color Glass Condensate, describes saturated gluons in high-energy hadron wavefunctions.
+
+Open questions and active directions include the extension of these EFTs to many-body systems and higher orders, as seen in improved chiral nucleon-nucleon potentials up to next-to-next-to-next-to-leading order. The application of chiral EFT interactions to constrain the speed of sound inside neutron stars and the equation of state at supranuclear densities is a vibrant area. Furthermore, the universal low-energy properties of few-body systems with large scattering length, including the existence of Efimov states, continue to be explored, alongside the development of relativistic fluid dynamics from an EFT framework for heavy-ion collisions.
+
 **Papers:** 2497 (showing first 100 of 2497)
 
 - [2606.17148](../papers/2606.17148.md) (2026) [1] Quantum Resources and Wigner Symmetry in Nucleon-Nucleon Scattering from Effective Field Theory

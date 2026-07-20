@@ -2,6 +2,14 @@
 
 **PhySH lineage:** Nuclear many-body theory
 
+## Landscape
+
+Nuclear many body theory seeks to describe atomic nuclei as systems of interacting nucleons, starting from the fundamental forces between them. This topic matters because it provides the microscopic foundation for understanding nuclear structure, reactions, and the properties of dense matter found in neutron stars, connecting laboratory measurements to astrophysical observations and tests of the strong interaction.
+
+The field employs a range of complementary approaches. Ab initio methods, such as those using Similarity Renormalization Group techniques, now compute ground and excited states up to the tin region, confronting chiral Effective Field Theory interactions with data as described in the Guided Tour paper. Other methods address specific regimes: the BCS-BEC crossover connects ultra-cold Fermi gases to nuclear systems, while the pseudo-conformal model constructs an equation of state for compact star matter using effective hadron degrees of freedom and topology change. The Self-Consistent Green's Functions approach is used to study the liquid-gas phase transition in hot nuclear matter, and relativistic many body theory provides equations of state for supernova simulations.
+
+Active directions include extending calculations to heavy and exotic nuclei, where the Singular Value Decomposition paper addresses the challenge of computational cost. The tidal deformation of neutron stars from GW170817 provides new constraints on dense matter models. Neutrino nucleus cross sections, as studied in the impulse approximation regime and for the spectral function of 40Ar, are a key source of systematics for experiments like LBNE. The origin of the EMC effect is being probed through correlations with nucleon removal energies, and the unbound nature of pure neutron matter imposes intrinsic correlations among equation of state parameters that help constrain high density behavior.
+
 **Papers:** 33
 
 - [2606.07035](../papers/2606.07035.md) (2026) [2] Solution of the Equation-of-Motion Phonon Method eigenvalue problems on the D-Wave quantum annealer

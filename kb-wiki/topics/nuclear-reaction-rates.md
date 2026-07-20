@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+Nuclear reaction rates govern the transformation of nuclei in astrophysical plasmas, from the Big Bang to stellar interiors and explosive events like supernovae and neutron star mergers. They are the essential microphysics input for nucleosynthesis models, determining the production of elements and the energy generation that drives stellar evolution. Accurate rates are therefore critical for interpreting observational abundances and constraining the fundamental physics of the cosmos.
+
+The field employs several complementary theoretical and computational approaches. The statistical Hauser-Feshbach model, as implemented in codes like TALYS, is a standard method for predicting Maxwellian-averaged reaction rates for astrophysics, though its approximations are being rigorously tested. A separate thread uses potential models, such as the RADCAP code, to calculate direct capture cross sections and S-factors for two-body systems. For plasma environments, quantum statistical mechanics and effective field theory are used to derive screening and dynamical effects on Coulomb barrier penetration and resonant scattering, with studies comparing Path Integral Monte Carlo to mean-field WKB calculations. Sensitivity studies systematically vary nuclear properties or fundamental constants, like the quark mass or fine-structure constant, to assess their impact on predicted abundances from Big Bang nucleosynthesis and the p- and r-processes.
+
+Open questions center on the treatment of nuclear and plasma uncertainties. Recent work highlights the role of nuclear isomers, or "astromers," which can behave as separate species below a thermalization temperature, altering reaction flow. Dynamical screening in plasmas is shown to introduce a thermal width for resonances, potentially having a huge impact on rates like alpha-alpha scattering. Propagating uncertainties from statistical model inputs, such as neutron capture rates on neutron-rich nuclei, remains a key challenge for interpreting r-process nucleosynthesis from events like GW170817.
+
 **Papers:** 63
 
 - [2511.10536](../papers/2511.10536.md) (2025) [1] Non-Resonant Alpha-Induced Neutron-Emission: A Multi- Method Comparison Of Nuclear Reaction Rates

@@ -4,6 +4,14 @@
 
 **Broader:** [QCD phase transitions](qcd-phase-transitions.md)
 
+## Landscape
+
+Color deconfinement is the transition from hadronic matter, where quarks and gluons are confined within color-neutral hadrons, to a quark-gluon plasma (QGP), a state where these constituents are free to move over volumes larger than a hadron. This topic is central to understanding the phase diagram of quantum chromodynamics (QCD) and the properties of matter at extreme energy densities, such as those created in relativistic heavy ion collisions at RHIC and the LHC. The existence of this deconfined phase is a fundamental prediction of QCD, and its study connects to early universe cosmology and the interior of neutron stars.
+
+The main approaches to studying color deconfinement include relativistic hydrodynamics and lattice QCD simulations. The "Thermalization at RHIC" paper shows that ideal hydrodynamics describes particle spectra at RHIC, requiring rapid thermalization at energy densities an order of magnitude above the deconfinement critical value, indicating the QGP is a strongly interacting liquid. Lattice studies, such as "Lattice Study of Dense Matter with Two Colors and Four Flavors," use gauge theory simulations with non-zero chemical potential to compute order parameters for deconfinement and superfluidity. Other sub-threads examine the interplay of deconfinement with chiral symmetry restoration, as in "Quarkyonic Matter and Chiral Symmetry Breaking," which proposes a quarkyonic phase at high density and low temperature, and the use of quarkonium suppression as a signal of deconfinement, discussed in "Quarkonium Production and Color Deconfinement in Nuclear Collisions."
+
+Open questions and active directions include the precise nature of the QGP as a strongly coupled liquid and the location of the deconfinement transition at high baryon density. The paper "The QCD Phase Structure at High Baryon Density" explores whether deconfinement and chiral symmetry restoration coincide, suggesting an intermediate phase of massive constituent quarks. Recent work on "Rotating gluon system and confinement" investigates the effect of background rotation on the deconfinement transition using semi-classical caloron solutions. Additionally, "Two Color QCD beyond the BEC regime" provides evidence for a Fermi surface disrupted by a Cooper pair condensate, rather than a Bose condensate of diquarks, and studies screening of the confining force at high density.
+
 **Papers:** 17
 
 - [2512.07633](../papers/2512.07633.md) (2025) [2] Chiral transition in a Non-Abelian Quasi-Particle Model with three quark flavours

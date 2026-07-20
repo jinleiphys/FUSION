@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+The neutron skin thickness, defined as the difference between the root-mean-square radii of neutrons and protons in a heavy nucleus, is a fundamental observable that probes the density dependence of the nuclear symmetry energy. This quantity is critical because it directly links the properties of finite nuclei to the equation of state of neutron-rich matter, which governs the structure and radii of neutron stars. Precise measurements of the neutron skin, particularly in 208Pb, therefore provide a stringent laboratory constraint that connects terrestrial nuclear physics to astrophysical observations.
+
+The main approaches to determining the neutron skin include electroweak parity-violating electron scattering, as performed by the PREX collaboration on 208Pb and the CREX collaboration on 48Ca, which directly probes the weak form factor. Complementary methods involve measuring the electric dipole polarizability in 208Pb, which correlates with the skin thickness within mean-field models. Theoretical efforts span from relativistic mean-field models and Skyrme-Hartree-Fock approaches, which establish correlations between the skin thickness and the slope of the symmetry energy L, to ab initio predictions that link the skin of 208Pb directly to nuclear forces using advanced quantum many-body methods.
+
+Active directions focus on resolving tensions between experimental results, such as the large neutron skin thickness reported by PREX-II for 208Pb, which implies a slope parameter L larger than most microscopic calculations and other nuclear experiments. Recent work uses nonparametric equation of state representations based on Gaussian processes to reconcile these astrophysical constraints with minimal modeling assumptions. The era of multi-messenger astronomy, combining gravitational wave observations of neutron star mergers with laboratory measurements, provides new opportunities to refine the equation of state and the symmetry energy across a wide density range.
+
 **Papers:** 303 (showing first 100 of 303)
 
 - [2606.17169](../papers/2606.17169.md) (2026) [2] Heaven and Earth: Connecting Jefferson Lab to the Cosmos

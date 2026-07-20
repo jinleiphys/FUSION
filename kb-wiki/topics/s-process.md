@@ -4,6 +4,14 @@
 
 **Broader:** [Hydrostatic stellar nucleosynthesis](hydrostatic-stellar-nucleosynthesis.md)
 
+## Landscape
+
+The s process, or slow neutron capture process, is one of the two primary nucleosynthesis mechanisms producing elements heavier than iron, responsible for approximately half of these abundances via a sequence of neutron captures and beta decays. It is divided into the weak component, occurring in massive stars and producing nuclei up to mass number A ~ 90, and the main component, occurring in low mass asymptotic giant branch (AGB) stars and producing heavier isotopes. Understanding the s process is critical for interpreting stellar evolution and the chemical enrichment of the galaxy.
+
+The main approaches to studying the s process combine stellar evolution modeling with nuclear reaction network calculations, often using Monte Carlo frameworks to quantify uncertainties. For the weak component in massive stars, the competing \(^{22}\)Ne(\(\alpha\),n)\(^{25}\)Mg and \(^{22}\)Ne(\(\alpha\),\(\gamma\))\(^{26}\)Mg reactions are key neutron sources, and their rates have been re-evaluated using sub-Coulomb \(\alpha\)-transfer reactions and new resonance information. For the main s process in low mass stars, extensive Monte Carlo variations have been performed to determine the impact of nuclear physics uncertainties, particularly for neutron capture and beta-decay rates. Experimental efforts also focus on constraining specific reaction rates, such as the neutron poison role of \(^{16}\)O and the \(^{17}\)O(n,\(\gamma\))\(^{18}\)O reaction, often using photodisintegration or direct capture calculations.
+
+Active directions include reducing the significant uncertainties in stellar reaction rates, especially for the \(^{22}\)Ne+\(\alpha\) reactions at the critical temperatures of 0.2-0.4 GK where resonance properties remain poorly constrained. The role of excited state captures, quantified by the ground state contribution factor X, is an open question for achieving the required precision in stellar rates. Additionally, the connection between nuclear structure and nucleosynthesis is being explored, for example through studies of dipole strength in \(^{206}\)Pb and the quenching of gamma transitions in neutron capture, which inform the gamma-strength function and reaction mechanisms.
+
 **Papers:** 58
 
 - [2603.08140](../papers/2603.08140.md) (2026) [1] s-process nucleosynthesis in low-mass AGB stars by the $^{13}$C($α$,n)$^{16}$O neutron source

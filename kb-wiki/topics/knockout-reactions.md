@@ -4,6 +4,14 @@
 
 **Broader:** [Transfer reactions](transfer-reactions.md)
 
+## Landscape
+
+Knockout reactions are a class of direct nuclear reactions in which a projectile, such as a nucleon, electron, or heavy ion, removes one or more nucleons from a target nucleus, providing a powerful probe of nuclear structure and dynamics. These reactions are essential for studying single-particle strengths, short-range correlations (SRC), and the properties of nuclei far from stability, including unbound systems beyond the drip-lines. Their importance is underscored by applications ranging from understanding the quenching of spectroscopic strength in asymmetric matter to constraining models of neutrino-nucleus scattering.
+
+The field employs diverse experimental and theoretical approaches. Electron-induced knockout, such as the (e,e'p) reaction, is used to study medium modifications and relativistic effects, with work by Udias et al. establishing limits on the validity of nonrelativistic approaches. Heavy-ion-induced knockout, exemplified by the work of Charity et al. on 16Ne and 6Be, enables the measurement of three-body correlations and long-range Coulomb effects in unbound nuclei. The study of SRC is advanced through exclusive two-nucleon knockout reactions, where Colle et al. quantify final-state interactions and Weiss et al. use the contact formalism to analyze the energy and momentum dependence of the spectral function. The role of meson-exchange currents and the Delta isobar in two-nucleon knockout is also a key methodological thread, as seen in the work of Ryckebusch et al. and Vanhalst et al.
+
+Active directions include the exploration of unbound nuclei beyond the neutron drip-line, as demonstrated by the first observation of 11O and the investigation of 25O and 26O by Caesar et al. The quenching of single-particle strength as a function of proton-to-neutron asymmetry remains a central open question, reviewed by Aumann et al. Furthermore, the treatment of final-state interactions and the interplay between short-range and tensor correlations in exclusive reactions, as well as the extension of knockout models to neutrino-induced processes, represent vibrant areas of ongoing research.
+
 **Papers:** 113 (showing first 100 of 113)
 
 - [2604.00880](../papers/2604.00880.md) (2026) [2] Predicting reaction observables for the two-neutron halo candidates $^{31}$F and $^{39}$Na

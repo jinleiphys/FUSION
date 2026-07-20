@@ -6,6 +6,14 @@
 
 **Narrower:** [Efimov states](efimov-states.md)
 
+## Landscape
+
+Few-body systems are the study of quantum systems composed of a small number of particles, typically two to six, where the interactions and emergent universal behavior can be understood without detailed knowledge of short-range structure. This topic matters because it provides a controlled setting to test fundamental nuclear forces, explains phenomena such as the Efimov effect in ultracold atoms, and underpins the structure of exotic hadrons and neutron-rich nuclei. The papers highlight that systems with large scattering length exhibit universal low-energy properties, including the sequence of shallow three-body bound states known as Efimov states, as noted in the work on universality in few-body systems.
+
+The main approaches include effective field theory and the stochastic variational method, which uses correlated Gaussians for precise solutions of few-body problems. The chiral dynamics framework is applied to understand the Lambda(1405) resonance as a quasi-bound state of antikaon and nucleon, while the effective Kbar N interaction is derived from chiral SU(3) coupled-channel dynamics. Relativistic treatments use explicitly covariant light-front dynamics, and the similarity renormalization group is employed to soften nuclear Hamiltonians, as demonstrated for the deuteron. The symmetric heavy-light ansatz addresses attractive two-component fermions, and the gauging of equations method incorporates electromagnetic currents into few-body descriptions.
+
+Open questions and active directions include the role of an intrinsic four-body scale in universal few-boson systems, which is debated in the context of effective field theory, and the need for a four-body force at next-to-leading order to renormalize binding energies. The anomaly in the oxygen isotope neutron drip-line is explained by three-nucleon forces established in few-body systems, while violations of discrete space-time symmetries in chiral effective field theory are being explored for parity-violating and time-reversal-violating interactions. The construction of low-momentum effective theories for nucleons aims to systematically treat relativistic effects and effective chiral few-nucleon forces.
+
 **Papers:** 141 (showing first 100 of 141)
 
 - [2604.25792](../papers/2604.25792.md) (2026) [1] Exact emulation of few-body systems at low cost

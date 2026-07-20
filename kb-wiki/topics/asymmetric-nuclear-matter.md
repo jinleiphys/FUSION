@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear matter](nuclear-matter.md)
 
+## Landscape
+
+Asymmetric nuclear matter (ANM) is the study of nuclear matter with unequal numbers of neutrons and protons, bridging the gap between symmetric nuclear matter and pure neutron matter. This topic is crucial for understanding the equation of state (EOS) of neutron-rich systems, from the structure of neutron star crusts to the dynamics of heavy ion collisions with exotic beams, and directly informs the density dependence of the nuclear symmetry energy.
+
+The main approaches combine phenomenological models with experimental constraints. The Skyrme-Hartree-Fock approach correlates neutron skin thickness of Sn isotopes with the symmetry energy and its density slope L, as shown in the paper on the density slope of the nuclear symmetry energy. Transport models, such as the isospin- and momentum-dependent model using the Gogny interaction, extract the symmetry energy stiffness from isospin diffusion data. Relativistic frameworks, including the density dependent hadron field theory and the relativistic Hartree-Bogoliubov model with density-dependent meson-nucleon couplings, incorporate the isovector scalar channel to study the EOS and neutron-proton effective mass splitting. Chiral effective field theory interactions, extended via a Gaussian process emulator, provide a nonparametric calculation of the EOS for arbitrary proton fraction and temperature.
+
+Active directions include probing the symmetry energy at supra-saturation densities through reaction dynamics with exotic beams, as reviewed in the paper on reaction dynamics with exotic beams. The role of proton-neutron short-range correlations, evidenced by high-momentum-transfer reactions on Carbon, is an open question for the high-momentum behavior of ANM. The phase diagram of neutron-proton condensates in inhomogeneous Larkin-Ovchinnikov-Fulde-Ferrell phases and the liquid-gas phase transition in warm, asymmetric matter with two conserved charges remain active areas of theoretical investigation.
+
 **Papers:** 452 (showing first 100 of 452)
 
 - [2606.08250](../papers/2606.08250.md) (2026) [2] On the effect of higher order symmetry energy corrections in Skyrme models for neutron star matter

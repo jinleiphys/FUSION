@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+The topic of energy levels in nuclear physics concerns the discrete quantum states of nuclei and their constituents, from nucleons to quarks and gluons. Understanding these levels is essential for explaining nuclear structure, stability, and reactions, as well as for probing fundamental interactions such as the strong force described by Quantum Chromodynamics (QCD). The study of energy levels directly informs phenomena from nuclear binding to heavy quarkonium suppression in extreme environments.
+
+A central approach is lattice QCD, which computes energy levels from first principles. Papers by the Hadron Spectrum Collaboration use Lüscher's formalism to extract scattering phases from finite-volume spectra for meson and baryon resonances. Other lattice studies resolve the structure of the Lambda(1405) resonance as an antikaon-nucleon molecule and determine short-distance two-body electromagnetic contributions to the np to d gamma capture process. Complementary methods include the shell model, as in the effective interaction for pf-shell nuclei, and the vibron model for phase transitions in Zr isotopes. Effective field theory and the Hugenholtz-Van Hove theorem connect energy levels to nuclear symmetry energy.
+
+Active directions include resolving the nature of resonances like the N*(1440) Roper resonance, where Hamiltonian effective field theory explores three structural hypotheses. The coexistence of prolate and triaxial shapes in Zr isotopes, identified as a quantum phase transition driven by type II shell evolution, remains an open question. Further challenges include determining the short-distance electroweak matrix elements in the two-nucleon sector directly from QCD and understanding the role of meson-baryon components in negative parity pion-nucleon scattering.
+
 **Papers:** 381 (showing first 100 of 381)
 
 - [2605.28437](../papers/2605.28437.md) (2026) [2] Learning shape resonances from the stabilization method

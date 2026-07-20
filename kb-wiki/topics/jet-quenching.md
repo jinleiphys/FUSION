@@ -4,6 +4,16 @@
 
 **Broader:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
 
+## Landscape
+
+### Landscape Synthesis: Jet Quenching
+
+Jet quenching is the study of how high-energy partons, produced in hard scattering events, lose energy as they traverse the hot and dense quark-gluon plasma (QGP) created in ultra-relativistic heavy-ion collisions. This phenomenon, evidenced by the suppression of high-momentum hadrons, serves as a critical hard probe for extracting the transport properties of the QGP, such as the jet transport coefficient $\hat q$, and for understanding the structure of strongly interacting matter under extreme conditions.
+
+The theoretical framework is built on perturbative QCD approaches to parton energy loss, including both radiative (gluon bremsstrahlung) and collisional processes. Foundational work using a reaction operator formalism derived analytic solutions for induced gluon radiation to all orders in opacity, generalizing the BDMPS continuum solutions. The opacity expansion method (GLV, WW, WOGZ) clarified the non-linear behavior of energy loss at finite opacity, while other studies extended jet tomography to include elastic losses and path length fluctuations. Phenomenological extraction of $\hat q$ is performed by comparing multiple energy loss models, such as MATTER and LBT within the JETSCAPE framework, to inclusive hadron suppression data from RHIC and LHC, using Bayesian parameter estimation and constrained by hydrodynamic bulk medium evolution.
+
+Active directions include the development of a hybrid strong/weak coupling approach that treats high-$Q^2$ perturbative jet evolution separately from its interactions with a strongly coupled medium. Recent reviews emphasize the importance of jet-induced medium response and its effects on experimental observables. Open questions concern the role of interference effects in medium-induced gluon radiation, particularly for color singlet antennas, and the need to reconcile theoretical predictions with heavy quark tomography data by incorporating both elastic and inelastic energy loss mechanisms alongside path length fluctuations.
+
 **Papers:** 526 (showing first 100 of 526)
 
 - [2606.02693](../papers/2606.02693.md) (2026) [2] Stochastic Dynamics of Heavy Quarks in Strongly Coupled Plasma

@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+Electromagnetic transitions describe the rearrangement of charge and current distributions within a nucleus or hadron as it moves between quantum states, typically via the emission or absorption of photons. These processes, classified as electric (E) or magnetic (M) multipole radiation, are fundamental probes of nuclear and hadronic structure. They provide stringent tests of theoretical models, from the spectrum of charmonium states to the rotational bands of light nuclei, and are essential for interpreting experimental data across nuclear and particle physics.
+
+Theoretical approaches span ab initio methods and phenomenological models. The in-medium similarity renormalization group, as presented by the authors of "Ab initio electromagnetic observables", consistently evolves transition operators for medium-mass nuclei. Quantum Monte Carlo calculations, such as those in "Quantum Monte Carlo calculations of electromagnetic transitions in 8Be", incorporate two-body meson-exchange currents derived from chiral effective field theory. Shell model studies, like the work on the A=50, 51, and 52 isobars, use effective interactions such as KB3G to compute electromagnetic transitions. Phenomenological models include the relativized Godfrey-Isgur model for higher charmonia, the covariant spectator quark model for octet to decuplet transitions, and the interacting boson model with partial dynamical symmetry for deformed nuclei.
+
+Open questions center on the role of sub-nucleonic degrees of freedom and the quantification of theoretical uncertainties. The meson cloud dressing, explored in studies of baryon decuplet to octet transitions, is shown to be crucial for describing experimental decay widths, yet its precise contribution remains under investigation. The effective field theory for nuclear vibrations, developed with quantified uncertainties from Bayesian statistics, suggests a systematic path forward for describing spectra and transitions in vibrational nuclei. The emergence of rotational bands from ab initio no-core configuration interaction calculations in beryllium isotopes also raises questions about the microscopic origin of collective motion.
+
 **Papers:** 103 (showing first 100 of 103)
 
 - [2605.13903](../papers/2605.13903.md) (2026) [2] Radiative decays of the 1$P$, 1$D$, 2$S$, and 2$P$ $Λ_c$ and 1$D$, 2$S$, and 2$P$ $Ξ_c$ charmed baryons

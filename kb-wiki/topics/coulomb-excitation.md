@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear reactions](nuclear-reactions.md)
 
+## Landscape
+
+Coulomb excitation is a key reaction mechanism in nuclear physics where the electromagnetic field of a passing nucleus or charged particle excites the target nucleus, providing a well-understood and clean probe of nuclear structure. Its importance stems from the fact that the interaction is purely electromagnetic and thus precisely known, making it one of the best tools for extracting quantitative nuclear properties such as transition matrix elements, deformation parameters, and the response of the nucleus to external fields, as highlighted in the review on theory and applications.
+
+The main approaches span from low to relativistic energies and include both perturbative and non-perturbative methods. The time-dependent Hartree-Fock (TDHF) formalism is used to incorporate dynamic alignment from multiple E2/E4 Coulomb excitation into fusion calculations for spherical and deformed systems. Microscopic approaches beyond RPA treat anharmonicities and non-linearities in the external field, showing their importance for excitation cross sections in heavy ion collisions. Specific applications include the study of multiphonon and hot-phonon isovector electric-dipole excitations, the pygmy dipole resonance in 208Pb using proton scattering, and the evolution of octupole deformation in radium nuclei via sub-barrier multi-step Coulomb excitation at the HIE-ISOLDE facility.
+
+Open questions and active directions include the role of anharmonicities and non-linearities in the multiphonon picture, as microscopic calculations show increases of 10 to 20 percent in excitation cross sections beyond the standard approach. The investigation of double giant resonances aims to determine how far the harmonic picture of boson-type excitations holds in finite fermion systems. Recent papers also explore the use of mutual Coulomb excitation as a tag for impact parameter in coherent vector meson photoproduction, and the development of quantum simulation algorithms for nuclear inelastic scattering, promising exponential speedups for simulating the dynamics of these complex scattering problems.
+
 **Papers:** 117 (showing first 100 of 117)
 
 - [2604.10972](../papers/2604.10972.md) (2026) [2] Microscopic investigation of $E2$ matrix elements in atomic nuclei -- II

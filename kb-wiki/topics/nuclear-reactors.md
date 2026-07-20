@@ -6,6 +6,14 @@
 
 **Narrower:** [Reactor fuels & coolants](reactor-fuels-coolants.md), [Reactor instrumentation](reactor-instrumentation.md), [Theory, design & simulation of reactors](theory-design-simulation-of-reactors.md), [Radioactive waste](radioactive-waste.md)
 
+## Landscape
+
+The topic of nuclear reactors in this context focuses on their role as intense sources of antineutrinos and neutrons, enabling fundamental physics probes and the study of nuclear processes. Understanding reactor antineutrino spectra is critical for neutrino oscillation experiments and for investigating anomalies that may hint at sterile neutrinos, as discussed in papers on reactor-based neutrino oscillation experiments and reevaluations of reactor antineutrino anomalies. The production of superheavy nuclei via neutron capture in reactors also connects to astrophysical nucleosynthesis, highlighting the broad importance of reactor physics for both particle physics and nuclear structure.
+
+The main approaches include the summation method for calculating antineutrino spectra from fission fragments, which reveals fine structure due to individual beta decays, and the study of higher order corrections such as weak magnetism that limit accuracy. Flavor dependent radiative corrections in coherent elastic neutrino nucleus scattering are calculated within the Standard Model using effective field theory. Machine learning is applied to automate spin classification of neutron resonances, improving cross section knowledge. The nuclear shell model assesses beta spectral shapes sensitive to the weak axial coupling \(g_{\rm A}\), while the QRPA+HF model describes beta decay with statistical de excitation.
+
+Open questions include the persistence of the reactor antineutrino anomaly and the ability of upcoming experiments to probe sterile neutrino parameter space. The generation of fission fragment angular momenta via quantum fluctuations remains unexplained after decades. The production of neutron rich superheavy nuclei via neutron capture in reactors faces challenges from low cross sections, and the synthesis of new elements with \(Z>120\) requires exploring fusion, multi nucleon transfer, and neutron capture reactions.
+
 **Papers:** 25
 
 - [2507.03592](../papers/2507.03592.md) (2025) [2] Nuclear $β^{-}$-decay with statistical de-excitation

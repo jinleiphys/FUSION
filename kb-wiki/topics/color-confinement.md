@@ -4,6 +4,14 @@
 
 **Broader:** [Strong interaction](strong-interaction.md)
 
+## Landscape
+
+Color confinement is the property of quantum chromodynamics (QCD) that prevents the observation of isolated quarks and gluons, binding them into color-singlet hadrons. This topic matters because it governs the spectrum of hadronic matter, from light mesons to exotic hadrons, and is central to understanding the strong interaction at all energy scales, from the vacuum structure to the properties of dense quark matter and the dynamics of high-energy collisions.
+
+The main approaches to studying confinement include analyzing hadronic resonances as S-matrix poles, where threshold cusps and triangle singularities reveal kinematical effects from intermediate particles. Lattice QCD simulations provide increasingly precise numerical insight, as seen in studies of meson condensation phases and the order of the chiral transition for two-flavor QCD. Effective models, such as the constituent quark model and the chiral SU(3) quark model, investigate the role of hidden color channels in nucleon-nucleon interactions and the structure of exotic states like dibaryons and tetraquarks. The Gribov-Zwanziger approach models the infrared dynamics of gluons in a plasma, while the functional renormalization group explores baryon number probability distributions and the Roberge-Weiss periodicity.
+
+Open questions include the precise nature of exotic hadrons, such as the five-quark and tetraquark states studied in the chiral SU(3) quark model and nonrelativistic potential models. The competition between nucleon clustering and diquark formation in quark matter remains unresolved, as does the space-time evolution of hadronization, which is critical for interpreting jet-quenching data. Recent work also probes the asymptotic long-distance behavior of Euclidean correlators in lattice QCD and the modification of the gluon propagator in the theta-vacuum to reconcile perturbation theory with topological Ward identities.
+
 **Papers:** 40
 
 - [2603.01819](../papers/2603.01819.md) (2026) [2] Recent developments and applications of the relativistic chiral nuclear force

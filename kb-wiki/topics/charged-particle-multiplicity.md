@@ -4,6 +4,16 @@
 
 **Broader:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
 
+## Landscape
+
+### Landscape Synthesis: Charged-Particle Multiplicity
+
+Charged-particle multiplicity, the number of charged hadrons produced in a collision, is a fundamental observable in high-energy nuclear physics. It serves as a key proxy for the initial energy density and the overall "size" of the system created in heavy-ion collisions, directly informing the properties of the quark-gluon plasma (QGP). Its centrality and energy dependence are critical for testing models of particle production, from hard perturbative QCD processes to soft, non-perturbative mechanisms, and for constraining the subsequent hydrodynamic evolution of the fireball.
+
+The main approaches to studying multiplicity are diverse. Early work at RHIC extracted the fraction of hadrons from hard processes, finding a strong growth with energy (Kharzeev and Nardi). Hydrodynamic models show that the centrality dependence of multiplicity is sensitive to whether the initial entropy production is modeled as a hard or soft process (Kolb et al.). The AMPT model, which includes both partonic and hadronic interactions, has been used to describe multiplicity at RHIC (Lin et al.) and to predict triangular flow (Xu et al.). More recent work uses multiplicity as a baseline for jet energy loss models (WH DG/DGLV) and to study scaling behaviors, such as the suppression of light nuclei yields in small systems (ALICE) and the monotonic decrease of the triton-to-deuteron yield ratio with multiplicity (STAR).
+
+Active directions focus on using multiplicity as a differential probe. The correlation between elliptic flow and mean transverse momentum at fixed multiplicity is predicted to reveal the origin of momentum anisotropies in small systems (Schenke et al.). The rise of mean transverse momentum with multiplicity in ultracentral collisions is proposed as a direct measure of the QGP speed of sound (Gardim et al.). Furthermore, the extraction of linear and mode-coupled anisotropic flow coefficients shows a common acoustic scaling pattern, enabling a precision extraction of the specific shear viscosity (Qian et al.).
+
 **Papers:** 141 (showing first 100 of 141)
 
 - [2604.05307](../papers/2604.05307.md) (2026) [2] Equilibrated fraction of QCD matter in high-energy oxygen--oxygen collisions

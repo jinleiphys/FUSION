@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+The topic of nuclear radii concerns the quantitative determination of the spatial extent of atomic nuclei, a fundamental observable that encodes the distribution of protons and neutrons within the nuclear volume. Accurate radii are essential for testing nuclear forces, constraining the equation of state of neutron-rich matter, and interpreting precision measurements in electroweak physics, such as the extraction of the Cabibbo-Kobayashi-Maskawa matrix element \(V_{ud}\) from superallowed beta decays.
+
+The main approaches span ab initio methods and phenomenological models. Chiral effective field theory interactions, such as the NNLO\(_{\rm sat}\) Hamiltonian, are optimized to reproduce binding energies and radii of light and medium-mass nuclei up to \(^{40}\)Ca via coupled-cluster calculations. A novel chiral Hamiltonian combining three-nucleon forces at next-to-next-to-leading order with a two-body interaction is also investigated using no-core shell model and self-consistent methods. Phenomenologically, the Woods-Saxon potential is parameterized to fit experimental single-nucleon spectra across the nuclear chart, while relativistic mean field theory with pairing correlations describes deformed nuclei. Hartree-Fock-Bogolyubov calculations reveal kinks and anti-kinks in charge and matter radii at magic numbers, and the Color Glass Condensate formalism extracts radii from diffractive vector meson production in ultra-peripheral nuclear collisions.
+
+Open questions include the persistent puzzle in oxygen isotopes, where ab initio calculations with conventional chiral interactions fail to simultaneously reproduce both binding energies and radii. The density dependence of the equation of state for neutron-rich matter remains uncertain, requiring radii measurements of neutron stars across a broad mass range. Furthermore, the isospin-symmetry breaking correction \(\delta_C\) for superallowed beta decays is being connected to measurable electroweak nuclear radii, offering a new experimental constraint to discriminate between theoretical models.
+
 **Papers:** 57
 
 - [2605.08413](../papers/2605.08413.md) (2026) [2] Charge radii of Cl isotopes from x-ray spectroscopy of muonic atoms

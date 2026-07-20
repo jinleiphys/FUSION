@@ -4,6 +4,14 @@
 
 **Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
 
+## Landscape
+
+The study of high spin states explores the structure and behavior of atomic nuclei under extreme rotational motion, where angular momentum reaches values that challenge the limits of nuclear stability. This topic matters because it provides a unique testing ground for nuclear many-body theories, revealing how pairing correlations, deformation, and clustering evolve as a nucleus spins faster. Understanding these states is crucial for probing the fundamental forces and phases of nuclear matter, from superfluid to normal phases, and for interpreting experimental data from gamma-ray spectroscopy.
+
+The main theoretical approaches include advanced many-body techniques and symmetry restoration methods. The Pfaffian algorithm, as described in "Toward extremes of angular momentum," overcomes combinatorial complexity in calculating matrix elements for Hartree-Fock-Bogoliubov states with many quasi-particles, enabling shell-model studies of high-spin states. Cranking calculations are used in "Searching for 4α linear-chain structure" to determine high-spin states within covariant density functional theory. The sdg interacting boson model, detailed in "Description of deformed nuclei," employs numerical diagonalization and analytical 1/N expansion to describe high-spin states in rare-earth and actinide nuclei. The triaxial projected shell model, expanded in "Triaxial projected shell model study," incorporates triaxially-deformed multi-quasiparticle states to study yrast and gamma-vibrational bands up to high spins.
+
+Open questions and active directions include the role of pairing fluctuations and isospin symmetry restoration at high spins. "Pairing fluctuations and gauge symmetry restoration" highlights the transition from superfluid to normal phase, where dynamic fluctuations beyond mean-field become important. "Onset of T=0 Pairing and Deformations" shows that T=0 neutron-proton pairing correlations decisively influence deformation and excitation energies above 16ħ in N=Z nuclei. "Isospin-symmetry restoration within the nuclear density functional theory" proposes a projection scheme for consistent treatment of isospin breaking in high-spin states, while "An effective and efficient algorithm for the Wigner rotation matrix" addresses long-standing numerical instability in angular-momentum projection, hindering precise calculations for high-spin states.
+
 **Papers:** 72
 
 - [2601.18688](../papers/2601.18688.md) (2026) [2] First observation of multi-phonon $γ$-vibrations in an odd-odd nuclear system
