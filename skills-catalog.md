@@ -7,8 +7,8 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 ## Reactions: coupled channels / DWBA / breakup
 
 - [S] **FRESCO** (Thompson) — coupled channels, CC/CRC/CDCC/transfer/capture. The template skill; embedded in-repo at `skills/fresco/` (2026-07-14) with binary auto-install from github.com/I-Thompson/fresco (install_fresco.sh). Reference for both the skill house style and the auto-provision pattern.
-- [ ] **THOx** (Sevilla) — CDCC with core excitation (XCDCC); Moro group, on GitHub.
-- [ ] **CCFULL** (Hagino) — fusion coupled channels near barrier.
+- EXCLUDED **THOx** (Sevilla, Moro group) — NOT publicly released (internal code), so no FUSION skill (hard rule).
+- [ ] **CCFULL** (Hagino, Rowley, Kruppa; CPC 123 (1999) 143) — near-barrier heavy-ion fusion, all-order coupled channels. Public: Hagino's Kyoto page + GitHub mirrors (shu-yusa/ccfull-rmt, ccfull-qel; murry-liao Fortran90). Documented benchmark: 16O+154Sm fusion excitation function.
 - [V] **ECIS** (Raynal) — coupled channels + optical model fits; distribution status to verify.
 - [V] **DWUCK4/5** (Kunz) — classic DWBA; public-domain-ish, verify canonical source.
 - [V] **TWOFNR** (Igarashi/Tostevin) — transfer DWBA/ADWA; verify distribution.
@@ -75,9 +75,16 @@ EXCLUDED (not publicly released, never get a FUSION skill):
 4. At least one benchmark against a published value, agreement stated to N digits.
 5. Failure-modes section (the arcane traps each code is famous for).
 
-## Build order proposal (user to confirm)
+## Strategy (user 2026-07-20)
 
-Wave 1 (user is expert, benchmarks at hand): THOx, CCFULL, TALYS, smoothie, COLOSS.
+- **Community codes first**, not the Lei family. The community codes are the point of FUSION.
+- **Self-consistent benchmarks**, not cross-code matching. Each code ships a test suite / manual with documented reference values; reproduce THOSE. Avoid the convention archaeology that made the COLOSS cross-check slow (radius/spin-orbit conventions differ per code). Cross-code checks only when a code has no documented reference.
+- **One at a time, sequential.** Per-code build+benchmark cannot be parallelized or delegated (each needs real compilation + a verified number). Each skill is fully done (builds from source, runs, reproduces a documented value to N digits) before the next starts.
+
+## Build order
+
+Wave 1 (small, classic, self-benchmarking, community): CCFULL, then TALYS. (THOx dropped: not public.)
 Wave 2 (community heavyweights): KSHELL, GEMINI++, GEF, AZURE2, SkyNet.
 Wave 3 (verify-then-build): ECIS, TWOFNR, DWUCK, SAMMY, NuShellX-policy, OpenMC, NJOY.
 Wave 4 (ecosystem monsters, scoped): Geant4.
+Lei family (eligible only): COLOSS done; SLAM.jl, PINN-ECS, inhomoR when convenient.
