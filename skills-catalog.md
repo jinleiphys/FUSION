@@ -8,7 +8,7 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 
 - [S] **FRESCO** (Thompson) — coupled channels, CC/CRC/CDCC/transfer/capture. The template skill; embedded in-repo at `skills/fresco/` (2026-07-14) with binary auto-install from github.com/I-Thompson/fresco (install_fresco.sh). Reference for both the skill house style and the auto-provision pattern.
 - EXCLUDED **THOx** (Sevilla, Moro group) — NOT publicly released (internal code), so no FUSION skill (hard rule).
-- [ ] **CCFULL** (Hagino, Rowley, Kruppa; CPC 123 (1999) 143) — near-barrier heavy-ion fusion, all-order coupled channels. Public: Hagino's Kyoto page + GitHub mirrors (shu-yusa/ccfull-rmt, ccfull-qel; murry-liao Fortran90). Documented benchmark: 16O+154Sm fusion excitation function.
+- [x] **CCFULL** (Hagino, Rowley, Kruppa; CPC 123 (1999) 143) DONE: skills/ccfull/, fetch+build from Kyoto page, 16O+144Sm fusion reproduces reference barrier + sub-barrier excitation function exactly, tail to 4-5 sig figs (2026-07-20). Interactive-stdin quirk documented.
 - [V] **ECIS** (Raynal) — coupled channels + optical model fits; distribution status to verify.
 - [V] **DWUCK4/5** (Kunz) — classic DWBA; public-domain-ish, verify canonical source.
 - [V] **TWOFNR** (Igarashi/Tostevin) — transfer DWBA/ADWA; verify distribution.

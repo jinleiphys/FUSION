@@ -1,0 +1,65 @@
+16.,8.,144.,62.
+1.2,-1,1.06,0
+1.81,0.205,3,1
+1.66,0.11,2,0
+6.13,0.733,3,1
+0,0.,0.3
+105.1,1.1,0.75
+55.,70.,1.
+30,0.05
+
+%-----------------
+The first line:
+     AP,ZP,AT,ZT
+The second line:
+     RP,IVIBROTP,RT,IVIBROTT
+          (The radius parameter used in the coupling Hamiltonian)
+           (IVIBROT: option for intrinsic degree of freedom 
+                     = -1; no excitation (inert)
+                     = 0 ; vibrational coupling
+                     = 1 ; rotational coupling
+                IVIBROTP: for projectile excitation
+		IVIBROTT: for target excitation)
+The third line:
+     OMEGAT,BETAT,LAMBDAT,NPHONONT  (if IVIBROTT=0)
+     E2T,BETA2T,BETA4T,NROTT        (if IVIBROTT=1)
+          (Input for the target excitation)
+	  (This line is irrelevant if IVIBROTT = -1.)
+	  (NROT: the number of levels in the rotational band to be 
+                 included (up to I^pi=2*NROTT+ states are included)
+                 e.g. if NROTT=2, then 0+, 2+ and 4+ in the target 
+                 are included.)
+The 4th line: 
+     OMEGAT2,BETAT2,LAMBDAT2,NPHONONT2
+	  (Input for target phonon excitation; the second mode of 
+           excitation. 
+           For example, the first mode (LAMBDAT) may be a quadrupole 
+           vib. and the second mode (LAMBDAT2) may be an octupole vib. 
+           in the target nucleus.)
+          (No second target phonon excitation if NPHONONT2=0
+	           OMEGAT2, BETAT2, and LAMBDAT2 are irrelevant 
+                   if NPHONONT2=0)
+The 5th line:
+     OMEGAP,BETAP,LAMBDAP,NPHONONP  (if IVIBROTP=0)
+     E2P,BETA2P,BETA4P,NROTP        (if IVIBROTP=1)
+          (Input for the projectile excitation)
+	  (This line is irrelevant if IVIBROTP = -1.)
+	  (NROT: the number of levels in the rotational band to be 
+                 included (up to I^pi=2*NROTP+ states are included)
+                 e.g. if NROTP=2, then 0+, 2+ and 4+ in the projectile 
+                 are included.)
+The 6th line:
+     NTRANS,QTRANS,FTR
+          (Input for pair transfer channel)
+          (NTRANS is either 0 OR 1)
+              No transfer ch. if NTRANS=0
+        	       QTRANS and FTR are irrelevant if NTRANS=0)
+          (Coupling form factor: 
+               FTRANS(R)=FTR * d VN/ dR)
+The 7th line: 
+     V0,R0,A0
+	  (Potential parameters)
+The 8th line:
+     EMIN,EMAX,DE
+The 9th line:
+     RMAX,DR
