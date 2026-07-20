@@ -25,7 +25,8 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 - [ ] GSM follow-ups: benchmark a GSM-CC reaction case (Chapter 9), noting the book's Ex X/XI numbers are superseded by GSM-2.0
 - [ ] Then Wave 2 community heavyweights: KSHELL, GEMINI++, GEF, AZURE2, SkyNet
 - [ ] Eligible Lei codes when convenient: SLAM.jl, PINN-ECS, inhomoR (COLOSS done)
-- [ ] Each per-code skill meets the quality bar in skills-catalog.md (install from public source, verified deck examples, run/parse, benchmark to N digits with a CLEAN-ROOM build test, failure modes) before it ships
+- [ ] Each per-code skill meets the quality bar in skills-catalog.md (install from public source, verified deck examples, run/parse, benchmark to N digits with a CLEAN-ROOM build test, failure modes) before it ships. Since 2026-07-20 this also requires a **Codex adversarial pass** and **live citation verification**, and the skill must declare its benchmark tier (see CLAUDE.md Key decisions)
+- [ ] **pikoe skill, IN PROGRESS** (2026-07-20). Source fetched and building (single Fortran 90 file, gfortran, ~3 s); sample 1 (12C(p,2p)11B at 392 MeV, TDX normal kinematics) runs clean and writes its output table. Remaining: run samples 2 to 5, establish the internal-consistency checks that stand in for the missing reference output (sample1 normal vs sample4 inverse kinematics are the same reaction; sample2 vs sample3 are the same observable at 392 vs 100 MeV), write SKILL.md + input-format.md from `input_man.txt`, then Codex pass. Ships as a tier-2 benchmark, stated plainly
 
 ## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki + semantic relations)
 
@@ -107,6 +108,10 @@ Drop the PDFs anywhere convenient and point me at the directory. Papers 1 to 3
 are also worth ingesting into the literature-wiki afterwards: all three sit on
 active research lines (knockout/QFS, nonlocality, Glauber-vs-IAV) and none of
 them currently has a wiki source page.
+
+## Repo hygiene
+
+- [ ] **Concurrent-session hazard, live as of 2026-07-20.** Another Claude session is working in this same repo: `scripts/kb_citegraph.py` (modified), `scripts/kb_citemap.py`, `scripts/citegraph_template.html`, and `fusion-web/` (a citation-graph web visualization) all appeared during this session and are not this session's work. They are deliberately left uncommitted. Consequence: **never `git commit -a` here**, always stage explicit paths, and check `git status` before and after. Same failure mode the profile records for 2026-07-14, when a parallel session silently dropped another's edits
 
 ## Wiki ingest queue
 
