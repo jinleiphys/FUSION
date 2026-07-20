@@ -13,12 +13,13 @@ Validation rules and hard constraints live in [CLAUDE.md](CLAUDE.md); do not res
 
 Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics code gets its own skill**, across reactions, statistical/fission, R-matrix/astro, structure, and (scoped) transport/data. Full living roadmap with openness-verification flags and wave ordering: [skills-catalog.md](skills-catalog.md).
 
+Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (reproduce each code's own documented reference values, not cross-code matching), one at a time (build+benchmark cannot be parallelized). Private-code boundary: only published + publicly-open codes (excludes THOx, smoothie, transfer, STARS). Full roadmap + status: [skills-catalog.md](skills-catalog.md).
+
 - [ ] Port the existing ~30 research skills (writing, review, literature, figures) to FUSION format; strip Claude-Code-only mechanics per skill
-- [ ] User confirms wave ordering in skills-catalog.md
-- [ ] Wave 1 per-code skills (user expert, benchmarks at hand): THOx, CCFULL, TALYS, smoothie, COLOSS
-- [ ] Wave 2 (community heavyweights): KSHELL, GEMINI++, GEF, AZURE2, SkyNet
-- [ ] Wave 3+ per catalog; each entry needs its open-source status verified before work starts
-- [ ] Each per-code skill meets the quality bar in skills-catalog.md (install, verified deck examples, run/parse, benchmark to N digits, failure modes) before it ships
+- [ ] Next community code: TALYS (GPL, ships hundreds of sample cases with reference output; large build)
+- [ ] Then Wave 2 community heavyweights: KSHELL, GEMINI++, GEF, AZURE2, SkyNet
+- [ ] Eligible Lei codes when convenient: SLAM.jl, PINN-ECS, inhomoR (COLOSS done)
+- [ ] Each per-code skill meets the quality bar in skills-catalog.md (install from public source, verified deck examples, run/parse, benchmark to N digits with a CLEAN-ROOM build test, failure modes) before it ships
 
 ## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki + semantic relations)
 
@@ -48,6 +49,7 @@ Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics
 
 ## Completed
 
+- [x] 2026-07-20: Phase 2 per-code skills, two shipped (both clean-room verified from public source). COLOSS (skills/coloss/, CPC 2025, Lei-eligible): builds from public repo (make + bundled C++ Coulomb lib + LAPACK), FRESCO cross-check n+40Ca sigma_R 1157.5 vs 1157.7 mb (4 sig figs) + complex-scaling theta-invariance 5 sig figs; radius convention (target-only At^1/3) documented. CCFULL (skills/ccfull/, Hagino CPC 1999, community): fetch+build from Kyoto page (FORTRAN77, gfortran -std=legacy), 16O+144Sm fusion reproduces reference barrier + sub-barrier excitation function exactly, tail 4-5 sig figs; caught+documented the interactive-stdin quirk. FUSION now has 3 per-code skills (FRESCO, COLOSS, CCFULL)
 - [x] 2026-07-20: 108 topic-page Landscape syntheses written by DeepSeek (grounded in each topic's top-15 cited papers' abstracts), 108/108 topic pages, ~217k/40k tokens (pennies), 0 em-dash. Quality spot-checked (breakup, shell-model, astro all accurate)
 
 - [x] 2026-07-20: Semantic layer (L3) COMPLETE. All 54,378 citing papers classified, 727,841 edges typed. Final distribution: background 485,740 (67%, dropped), uses 187,742, compares 20,767, contrasts 17,505 (2.4%), extends 11,361, applies 4,726; ~242k non-background kept (33%). `## Related work` injected into 44,891 pages (bidirectional). Claude QC: 0 fallbacks, contrasts spot-check all genuine disagreements, sample pages sensible. Phase 3 (knowledge base) core fully done: 4 layers live (concepts, citations, semantic relations, all on 61,059 pages). Bug fixed to get here: the last 3,181 recent/backfill papers hung the batch on KINGSTON .tex reads (no timeout on file I/O); fixed with --no-context (skip .tex for backfill papers, classify on titles+abstracts) + 60s API timeout + background-fallback-marks-done (see devlog 2026-07-20)
