@@ -2,6 +2,61 @@
 
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 
+## 2026-07-21: GEF clears the fission row, and brings a fifth way for a failed run to look successful
+
+**Why we tried it:** GEMINI++ was dropped that morning for failing the
+publicly-obtainable rule, leaving GEF as the only candidate for the paper's
+fission/statistical row. If GEF had also failed, the paper's cross-subfield
+claim would have had to narrow from four subfields to three, so this was a
+gate-deciding check rather than routine catalog work.
+
+**Result: it clears, on every criterion.** GPL-3.0 (`License.txt` in the
+tarball), anonymous direct download with no registration wall, actively
+maintained (24 archived versions, 2025/1.4 released three weeks before the
+check), and the citation verified live against CrossRef rather than from memory:
+Nucl. Data Sheets **131**, 107-221 (2016). It was then actually run, not merely
+licence-checked, and ²⁵²Cf(SF) gave nu-bar 3.8207 against the evaluated 3.7676.
+
+**The new false-success mode, and it is a good one.** A rerun of an
+already-completed case produced no output, printed "GEF is terminated", and
+**exited 0**. The cause is `ctl/done.ctl`, a memo file listing finished cases,
+which GEF silently skips on a later run. A wrapper keying on exit status, or on
+the presence of the banner, would have recorded a calculation that did nothing as
+a success. There is a second, quieter version of the same hazard: a `Fitpar.dat`
+left behind by any earlier `FIT(...)` run is picked up on the next run and
+silently overrides the shipped defaults, so a "clean" run can be using fitted
+parameters from an unrelated earlier job.
+
+That makes five distinct mechanisms across five codes: CCFULL leaves a stale
+reference file, GSM exits 139 with empty stderr, TALYS exits 0 on a fatal error,
+pikoe opens every output file at zero bytes, and now GEF memoizes completed work
+and skips it. The rule stated after pikoe (**verify content, never presence, and
+never status**) survives contact with a fifth instance, but GEF adds a corollary
+worth stating separately: **a scientific code may carry state between runs, so a
+clean room means clearing that state, not just clearing the output directory.**
+The first attempt here removed `out` and `.ctl` and missed that the directory is
+`ctl/`, which is exactly how the trap fired.
+
+**A self-inflicted one worth recording too:** a remote cleanup used
+`pkill -f GEF64`, which matched the ssh session's own command line (it contained
+the string `GEF64`) and killed the shell before it did any work, producing a
+completely silent no-op. `pkill -f` matches the invoking command too; on a remote
+one-liner that is a self-kill.
+
+**Cost of the row, honestly stated:** GEF is **Linux-only** for our purposes.
+The source is FreeBASIC (33 `.bas` files), `fbc` is not installed and has no
+Homebrew formula, and the shipped binaries are ELF Linux plus a Windows `.exe`
+with no macOS build. Running the shipped `GEF64` on heliumx sidesteps the
+toolchain question entirely and is where heavy compute belongs anyway, but it
+makes this the first platform-pinned row in the benchmark, which the harness
+design has to absorb rather than assume away. And like pikoe and AZURE2, GEF
+ships plenty of input decks (97) and **no reference output**, so tier 1 is not
+reachable from the distribution alone.
+
+**Status:** Openness and feasibility resolved; skill not yet built. Fallbacks
+(TALYS's fission channel carrying the row, or narrowing to three subfields) are
+withdrawn.
+
 ## 2026-07-21: the same guard bug, in the script whose comment cites the same guard bug
 
 **Why we tried it:** Seventh per-code skill, NLAT (Titus, Ross, Nunes, CPC 207,
