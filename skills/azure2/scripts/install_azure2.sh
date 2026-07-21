@@ -8,8 +8,8 @@
 # AZURE2 is the Notre Dame multichannel R-matrix code (Azuma et al., Phys. Rev.
 # C 81, 045805 (2010)), GPLv3, github.com/rdeboer1/AZURE2.
 #
-# WHY THIS SCRIPT IS LONG. A stock `cmake .. && make` fails five separate ways
-# on a current macOS toolchain, and four of the five produce error messages that
+# WHY THIS SCRIPT IS LONG. A stock `cmake .. && make` fails seven separate ways
+# on a current macOS toolchain, and five of the seven produce error messages that
 # point somewhere other than the cause. Each fix below is load-bearing:
 #
 #   1. CMake 4 removed compatibility with `cmake_minimum_required(VERSION <3.5)`,
@@ -89,6 +89,41 @@ if [ -z "$CXX_BIN" ]; then
   exit 1
 fi
 echo "install_azure2: using $CXX_BIN" >&2
+
+# Fix 7: Homebrew GCC bakes in the macOS SDK path it was built against, and its
+# private include-fixed/_stdio.h then #includes <_bounds.h>. After an Xcode SDK
+# upgrade that baked path is stale, so a plain `g++-15 -c` on anything including
+# <cstdio> dies with "fatal error: _bounds.h: No such file or directory", which
+# names a header the CURRENT SDK does ship. The message points at gcc's own
+# include-fixed directory and says nothing about a sysroot, so it reads like a
+# broken gcc install. Passing the live SDK explicitly fixes it without a gcc
+# reinstall. Probed, not assumed: only applied when the bare compiler actually
+# fails and the SDK pin actually helps.
+#
+# It is exported as SDKROOT rather than passed as CMAKE_CXX_FLAGS, and that
+# choice is load-bearing. AZURE2's CMakeLists.txt line 20 reads
+#   set (CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS})
+# unquoted, so CMake builds a LIST and writes "-isysroot /path;-fopenmp" into
+# flags.make. Make passes that unquoted to the shell, the `;` ends the command,
+# and g++ is invoked with a sysroot and no source file. The reported error is
+# "g++-15: fatal error: no input files", which describes neither the missing
+# quotes nor the SDK. Any non-empty CMAKE_CXX_FLAGS triggers it; SDKROOT does
+# not go through that variable at all.
+if [ "$(uname -s)" = "Darwin" ] && command -v xcrun >/dev/null 2>&1; then
+  _probe_c="$(mktemp -t az2probe).cc"; printf '#include <cstdio>\nint main(){return 0;}\n' > "$_probe_c"
+  if ! "$CXX_BIN" -c "$_probe_c" -o "${_probe_c}.o" >/dev/null 2>&1; then
+    _sdk="$(xcrun --show-sdk-path 2>/dev/null || true)"
+    if [ -n "$_sdk" ] && SDKROOT="$_sdk" "$CXX_BIN" -c "$_probe_c" -o "${_probe_c}.o" >/dev/null 2>&1; then
+      export SDKROOT="$_sdk"
+      echo "install_azure2: $CXX_BIN has a stale baked SDK; exporting SDKROOT=$_sdk" >&2
+    else
+      echo "install_azure2: $CXX_BIN cannot compile a trivial <cstdio> program," >&2
+      echo "  and pinning SDKROOT did not fix it. Try: brew reinstall gcc" >&2
+      rm -f "$_probe_c" "${_probe_c}.o"; exit 1
+    fi
+  fi
+  rm -f "$_probe_c" "${_probe_c}.o"
+fi
 
 mkdir -p "$ROOT_DIR"
 
