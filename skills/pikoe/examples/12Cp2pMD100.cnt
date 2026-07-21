@@ -1,0 +1,36 @@
+  **** ppN control data ****
+  10:unknown ::./tbl_12Cp2pMD100.dat
+  11:old     ::../elem/FLtbl_rede.dat
+  12:old     ::../pot/EDAD1p12C@100_e.dat
+  13:old     ::../pot/EDAD1p11B_e.dat
+  14:unknown ::./LG_12Cp2pMD100.dat
+  15:unknown ::./PX_12Cp2pMD100.dat
+  16:unknown ::./TR_12Cp2pMD100.dat
+  17:unknown ::./TL_12Cp2pMD100.dat
+  06:unknown ::./12Cp2pMD100.outlist
+ 999:
+---- input ----
+12C(p,2p)11B_gs@100MeV DWIA MD
+1000 0    2    0    1                             limfs ions ifrm imir ical
+1.00 1.007825  6.0  12.00                         zp ap za aa
+1    100.0     0                                  ikin elab ictrein
+1    15.96     1.0  1.007825  0.85      1         ish ebind zsp asp betasp ictrm
+1.5  1.0  1.77      0    0                        fj fl sfac nod kibbs
+0    1.35      1    0.65      1.35      1         ibmc rc ictrc a0c rcl ictrcl
+0    8.2       1.35      1    0.65                ibms v0ls rs ictrs as
+30   30   30                                      lmax0 lmax1 lmax2
+9    0    2.00 1    1                             ivar iex fkncut ixunt kunt
+1    -2.0      2.0       0.05                     ivvar varmin varmax dvar
+1    0.0       2.0       0.05                     ivthx thxmin thxmax dthx
+0    0.0       40.0      10.0                     ivphx phxmin phxmax dphx
+0    0.0       180.0     0.5                      ivet2 et2min et2max det2
+0    180.0     360.0     10.0                     ivph2 ph2min ph2max dph2
+10   6    0    14   15   16   17                  kib: tbl out tmd lg px tr tl
+3    11   1    0    1                             ielm kibelm ionsh kinelm ielmedg
+15.0      0.1       30   30   40   15   15        rmax dr ng24-b,th,ph,k1,ph1q
+12   1.00 1.00 1.00 1.00 -0.85     0    1         0: ipot fv fw fvs fws bet ms edg
+13   1.00 1.00 1.00 1.00 -0.85     0    1         1: ipot fv fw fvs fws bet ms edg
+13   1.00 1.00 1.00 1.00 -0.85     0    1         2: ipot fv fw fvs fws bet ms edg
+
+
+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
