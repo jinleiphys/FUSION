@@ -66,7 +66,17 @@ error names a missing `_bounds.h` rather than a sysroot.
 bash scripts/install_azure2.sh                          # prints AZURE2=<path>
 bash scripts/run_azure2.sh mycase.azr 3                 # 3 = calculate, no data
 bash scripts/verify_azure2.sh                           # run the benchmark
+bash scripts/selftest_azure2.sh                         # test the harness itself
 ```
+
+`selftest_azure2.sh` feeds the wrapper deliberately broken inputs and asserts it
+refuses each one: a malformed marker, a missing data file, a locked output
+directory, six shapes of exit-0-with-bad-output, and an unsupported menu choice,
+plus two cases it must NOT refuse (a stale file from an earlier run, an output
+path containing a space). Run it after touching either script. Every case in it
+was added after an adversarial pass found the harness accepting that failure, so
+a guard that quietly stops firing is caught rather than assumed. It is verified
+to be capable of failing: disabling any single guard flips exactly one case.
 
 Menu choices: `1` calculate using data, `2` fit, `3` calculate without data
 (uses `<segmentsTest>`). `run_azure2.sh` refuses 4 and 5, which ask further
