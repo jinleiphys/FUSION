@@ -127,11 +127,40 @@ fi
 
 mkdir -p "$ROOT_DIR"
 
+# Guarded delete. This script rm -rf's two build directories, and a plain
+# `rm -rf "$SRCDIR/build"` escapes its own tree whenever any path component is a
+# symlink: point AZURE2_ROOT at a directory whose AZURE2 entry is a symlink to
+# somewhere else and the delete lands over there. Verified as a live escape by
+# an adversarial pass, not hypothesised.
+#
+# So the guard is written against the RESOLVED target of the literal argument,
+# which is the operand rm actually acts on. Two earlier skills in this repo
+# shipped guards that tested a different path than the one being deleted; the
+# lesson only transfers if the guard names the same thing as the command.
+safe_rmdir () {
+  local victim="$1" root_real victim_real
+  [ -e "$victim" ] || [ -L "$victim" ] || return 0
+  if [ -L "$victim" ]; then
+    echo "install_azure2: refusing to delete symlink $victim" >&2; exit 1
+  fi
+  root_real="$(cd "$ROOT_DIR" 2>/dev/null && pwd -P)" || {
+    echo "install_azure2: cannot resolve AZURE2_ROOT $ROOT_DIR" >&2; exit 1; }
+  victim_real="$(cd "$victim" 2>/dev/null && pwd -P)" || {
+    echo "install_azure2: cannot resolve $victim" >&2; exit 1; }
+  case "$victim_real" in
+    "$root_real"/*) : ;;
+    *) echo "install_azure2: refusing to delete $victim_real, which resolves" >&2
+       echo "  outside AZURE2_ROOT ($root_real). A symlinked path component?" >&2
+       exit 1 ;;
+  esac
+  rm -rf "$victim_real"
+}
+
 # --- Minuit2, built with the SAME compiler as AZURE2 (fix 2 and fix 5) --------
 if [ ! -f "$M2INST/lib/libMinuit2.a" ] || [ ! -f "$M2INST/lib/libMinuit2Math.a" ]; then
   [ -d "$M2SRC/.git" ] || git clone -q --depth 1 "$M2_REPO" "$M2SRC" || {
     echo "install_azure2: failed to clone Minuit2 from $M2_REPO" >&2; exit 1; }
-  rm -rf "$M2SRC/build"
+  safe_rmdir "$M2SRC/build"
   mkdir -p "$M2SRC/build"
   ( cd "$M2SRC/build" && cmake .. \
       -DCMAKE_INSTALL_PREFIX="$M2INST" \
@@ -167,7 +196,7 @@ if [ -f "$CF" ] && grep -q 'return (finite (x) && finite (y));' "$CF"; then
   echo "install_azure2: finite() patch did not apply" >&2; exit 1
 fi
 
-rm -rf "$SRCDIR/build"
+safe_rmdir "$SRCDIR/build"
 mkdir -p "$SRCDIR/build"
 ( cd "$SRCDIR/build" && cmake .. \
     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \

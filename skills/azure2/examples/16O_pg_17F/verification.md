@@ -63,13 +63,18 @@ directly, was tried and **rejected on physics**. It gives a similar number at
 90 keV but destroys the ANC normalisation, because `--no-transform` skips the
 ANC-to-amplitude conversion. The channel-radius test below is what exposed it:
 
-| `ac` | S(90 keV), transform mode (ANC live) | S(90 keV), `--no-transform` |
+| `ac` | S(90 keV), transform mode (ANC live, recalibrated at each radius) | S(90 keV), `--no-transform` |
 |---|---|---|
 | 4.0 fm | | 3.58 keV b |
-| 4.5 fm | 7.612 keV b | 5.28 keV b |
-| 5.0 fm | 7.584 keV b | 7.60 keV b |
-| 5.5 fm | 7.590 keV b | 10.72 keV b |
+| 4.5 fm | 7.6328 keV b | 5.28 keV b |
+| 5.0 fm | 7.6080 keV b | 7.60 keV b |
+| 5.5 fm | 7.6173 keV b | 10.72 keV b |
 | 6.0 fm | | 14.88 keV b |
+
+The transform-mode column **recalibrates the widths at each radius**, which is
+the correct comparison: the eV partial widths are radius-dependent, so holding
+them fixed while moving `ac` mixes two effects. An earlier draft of this file
+reported 7.612 / 7.584 / 7.590 from an uncalibrated sweep on the pre-dummy deck.
 
 ANC-normalised external capture **must** be nearly independent of the channel
 radius, since the ANC fixes the asymptotic tail and the interior contributes
@@ -119,14 +124,37 @@ Sp is not free, though: inverting the integer-keV Ep column of Table V pins it t
 roughly [599.9, 600.65] keV, and reaching 8.07 would need **601.5 keV, outside
 that window**. So Sp ambiguity covers about 2 of the 5.7 points and no more.
 
-**Independent check against measured data.** deBoer's FRIB/TALENT Course 6
-material ships Rolfs (1973) data for this reaction. Run against it with **nothing
-fitted**, using only the Table V parameters:
+Four further knobs were tested by an independent adversarial pass and none
+closes the gap either:
 
-| channel | chi^2/N | data/calc |
-|---|---|---|
-| gamma0, 90 deg | **1.53** | 1.034 |
-| gamma1, 90 deg | 31.7 | 0.807 |
+| variant | S_total (keV b) |
+|---|---|
+| nuclear instead of atomic masses | 7.666 |
+| 90 keV read as lab rather than CM | 7.714 |
+| `--gsl-coul` Coulomb functions | 7.658 |
+| Ex = 495.33 keV (the evaluated value) instead of 495.0 | 7.500, i.e. **worse** |
+
+**Independent check against measured data.** deBoer's FRIB/TALENT Course 6
+material ships Rolfs (1973) data for this reaction. Run `16O_pg_17F_data.azr`,
+which is the same level scheme with the four data segments filled in, against it
+with **nothing fitted**, using only the Table V parameters:
+
+```bash
+printf '1\n\n\n6\n' | <AZURE2> --no-gui 16O_pg_17F_data.azr
+cat output/chiSquared.out
+```
+
+| segment | channel | chi^2/N | data/calc |
+|---|---|---|---|
+| 1 | gamma0, 0 deg | 2.60 | 1.193 |
+| 2 | gamma1, 0 deg | 15.1 | see note |
+| 3 | **gamma0, 90 deg** | **1.53** | 1.034 |
+| 4 | gamma1, 90 deg | 31.7 | 0.807 |
+
+Those are the values the committed deck reproduces. (An adversarial rerun
+reported 30.18 for segment 4; that came from a perturbed deck, and the committed
+one gives 31.6567 repeatably.) The segment-2 data/calc mean is meaningless
+because the calculation is near zero at the lowest energies; its median is 17.8.
 
 The ground-state channel is reproduced at chi^2/N = 1.5, which independently
 validates the external-capture machinery. The gamma1 channel disagrees with

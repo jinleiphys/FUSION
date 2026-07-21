@@ -86,13 +86,22 @@ def level_lines(text):
 
 def run_azure2(binary):
     """One calculation pass. Returns {(E_level, pair key): (g_int, Re g_ext)}."""
-    # AZURE2 reads param.par back if it exists, instead of regenerating it.
-    if PARAM.exists():
-        PARAM.unlink()
+    # BOTH files must go before the run, and for different reasons. AZURE2 reads
+    # param.par back instead of regenerating it, so a stale one silently pins the
+    # parameters. A stale parameters.out is worse: if AZURE2 then fails, this
+    # script would read the PREVIOUS run's numbers and converge on them. Codex
+    # demonstrated exactly that, driving the calibration to "converged" with
+    # /usr/bin/false standing in for the binary.
+    for stale in (PARAM, PHYS):
+        if stale.exists():
+            stale.unlink()
     proc = subprocess.run(
         [binary, "--no-gui", AZR.name],
         cwd=HERE, input="3\n\n\n6\n", capture_output=True, text=True,
     )
+    if proc.returncode != 0:
+        sys.exit(f"calibrate: AZURE2 exited {proc.returncode}\n"
+                 + (proc.stdout or "")[-2000:] + (proc.stderr or "")[-2000:])
     if not PHYS.exists():
         sys.exit("calibrate: AZURE2 produced no parameters.out\n" + proc.stdout[-2000:])
     reported, energy = {}, None
@@ -127,11 +136,23 @@ def main():
         text = AZR.read_text()
         lines = text.splitlines()
 
+        # Every published target must be present in the deck. Without this the
+        # loop below simply skips a missing channel and reports convergence over
+        # whatever survives: deleting the 4.711 MeV gamma1 line made an earlier
+        # version print "converged" while Table V was NOT reproduced.
+        present = {(round(float(tok[2]), 6), int(tok[5])) for _, tok in level_lines(text)}
+        absent = sorted(set(TARGETS) - present)
+        if absent:
+            sys.exit(f"calibrate: the deck is missing {len(absent)} Table V "
+                     f"channel(s), so it cannot reproduce the table: {absent}")
+
         worst, changed = 0.0, False
+        checked = set()
         for idx, tok in level_lines(text):
             key = (round(float(tok[2]), 6), int(tok[5]))
             if key not in TARGETS:
                 continue  # bound level: field 12 is already the published ANC
+            checked.add(key)
             if key not in reported:
                 sys.exit(f"calibrate: AZURE2 never reported channel {key}")
             target = TARGETS[key]
@@ -170,7 +191,11 @@ def main():
 
         print(f"iteration {iteration}: worst relative deviation {worst:.3e}")
         if not changed:
-            print(f"converged: every channel within {TOL:g} of Table V")
+            # Assert on the count actually compared, not on the absence of edits.
+            if checked != set(TARGETS):
+                sys.exit(f"calibrate: only {len(checked)} of {len(TARGETS)} targets "
+                         f"were compared; refusing to report convergence")
+            print(f"converged: all {len(checked)} channels within {TOL:g} of Table V")
             return 0
         AZR.write_text("\n".join(lines) + "\n")
 

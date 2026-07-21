@@ -35,11 +35,21 @@ section, error** (`include/DataLine.h:17-19`), with energy in **lab MeV**, angle
 in **lab degrees** and cross section in **barns**.
 
 Both Rolfs files contain two blocks: 38 points at angle 0.1 and ~38 at 90
-degrees. **Both blocks are differential cross sections.** The 0.1-degree block
-is not angle-integrated, despite what the near-zero angle suggests: treating it
-as angle-integrated (`isDiff = 0`) makes the calculation overshoot the data by a
-factor of 12.6, which is 4*pi. Select the blocks with the segment angle cuts and
-set `isDiff = 1` for both.
+degrees. **Both blocks are differential cross sections**, so set `isDiff = 1`
+for both and select each block with the segment angle cuts (`0.0 1.0` and
+`89.0 91.0`).
+
+The 0.1-degree block is not angle-integrated despite the near-zero angle.
+Declaring it `isDiff = 0` makes the calculation overshoot the data by roughly
+4*pi, which is the tell. Two caveats on that test, both found by an adversarial
+recheck of an earlier, sloppier version of this paragraph:
+
+- **`isDiff = 0` ignores the angle cuts entirely**, so an angle-integrated
+  segment pointed at the raw file swallows *both* blocks rather than the
+  0.1-degree one. To see the factor cleanly you must first filter the file.
+- Even then the ratio is **not a clean constant 12.6**; it runs from about 9.2
+  to 12.5 across the energy range, because the angular distribution is not
+  isotropic. It is an order-of-magnitude diagnostic, not an identity.
 
 ## Reference result
 
