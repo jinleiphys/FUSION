@@ -90,6 +90,15 @@ echo "install_pikoe: building $(basename "$SRCF") with $FC $FFLAGS" >&2
 # CURRENT WORKING DIRECTORY, so building from wherever the caller happens to
 # stand litters that directory with angmom.mod, array.mod, consts.mod and the
 # rest. Direct them into the install tree instead.
+#
+# Clearing them first is also not optional, and is a separate bug from the one
+# above. .mod files are gfortran-version-specific, so a rebuild after ANY
+# compiler upgrade reads the stale ones and dies with
+#   Fatal Error: Cannot read module file 'dims.mod' ...
+#   because it was created by a different version of GNU Fortran
+# which names neither the cause nor the fix. Found by building the same source
+# with gfortran 15.2 (macOS) and 13.3 (Linux) for the cross-platform check.
+rm -f "$SRCDIR"/*.mod
 "$FC" $FFLAGS -J "$SRCDIR" -o "$BIN" "$SRCF" 2> "$ROOT/build.log" || {
   echo "install_pikoe: build failed, see $ROOT/build.log" >&2
   tail -20 "$ROOT/build.log" >&2

@@ -85,7 +85,36 @@ layout, and it is why this skill's benchmark is anchored on the CPC paper's
 published figures instead of on distributed reference numbers. See
 `verification.md`.
 
-## 8. Only the attach-plugin URL serves the archive
+**This is less of a loss than it first appears, and asking the authors for the
+files was considered and dropped.** A reference output is produced by the same
+source as your own run, so it can certify only that your *build* is sound; a
+genuine physics error sits in their reference too, and matching it proves
+nothing. Build soundness is better established by reproducing across compilers
+and architectures, which covers more configurations than a single reference
+file. Measured here: macOS ARM64 gfortran 15.2.0 against Linux x86_64 gfortran
+13.3.0, at `-O2`, `-O0`, and `-finit-real=snan -finit-integer=-99999`, gives
+**bit-identical output across all six builds** (5642 numbers, TDXnorm + TDXinv +
+QDXinv). Physics correctness is carried separately by the figure anchoring.
+
+## 8. `.mod` files break the next rebuild after a compiler upgrade
+
+gfortran module files are version-specific, and the installer writes them into
+the source directory (`-J "$SRCDIR"`, so that they land somewhere deliberate
+rather than in whatever directory the caller happens to stand in). After
+upgrading gfortran, or after copying an already built tree to a machine with a
+different gfortran, the build dies with:
+
+```
+Fatal Error: Cannot read module file '.../dims.mod' opened at (1),
+because it was created by a different version of GNU Fortran
+```
+
+which names neither the cause nor the fix. `install_pikoe.sh` now clears
+`$SRCDIR/*.mod` before every build. If you build by hand, do the same. Found by
+building the same source under gfortran 15.2 and 13.3 for the cross-platform
+check above.
+
+## 9. Only the attach-plugin URL serves the archive
 
 The plain URLs on the RCNP page (`.../pikoe1.1.zip`, `.../pikoe1.1.f90`) return
 403 or 404. The PukiWiki attach-plugin URL works:
@@ -93,19 +122,19 @@ The plain URLs on the RCNP page (`.../pikoe1.1.zip`, `.../pikoe1.1.f90`) return
 uses it and rejects a downloaded file that is not a zip archive, because an
 error page also arrives with HTTP 200.
 
-## 9. The readme names a source file that is not in the archive
+## 10. The readme names a source file that is not in the archive
 
 `readme.txt` says the source is `pikoe1.f90`; the v1.1 archive ships
 `pikoe1.1.f90`. `install_pikoe.sh` globs `pikoe*.f90` rather than trusting
 either name.
 
-## 10. gfortran warnings at build are expected
+## 11. gfortran warnings at build are expected
 
 The source uses features deleted in Fortran 2018 (arithmetic `IF`, `DO`
 termination on a non-`CONTINUE` labelled statement). gfortran 15 warns and
 compiles. Treat warnings as normal; treat a link failure as real.
 
-## 11. `ulimit -s unlimited` fails on macOS
+## 12. `ulimit -s unlimited` fails on macOS
 
 `readme.txt` recommends an unlimited stack. macOS caps the hard limit well below
 unlimited, so the request is refused. The distributed sample cases run inside
@@ -113,7 +142,7 @@ the default stack; `run_pikoe.sh` asks for the hard limit and continues if
 refused. If a much larger case segfaults with no diagnostic, raise the stack
 first before suspecting the deck.
 
-## 12. `ielm=6` is referenced but undocumented
+## 13. `ielm=6` is referenced but undocumented
 
 `input_man.txt` documents `ielm` values 0, 3 and 4, yet lists `ielm=6` as an
 exclusion in the L10 (`iex`) and L16 (`kibtmd`) entries. The code settles it:
@@ -121,7 +150,7 @@ anything other than 0, 3 or 4 is rejected outright with
 `ERROR: ielm must be 0, 3, or 4`. So `ielm=6` cannot run at all, and the
 exclusion notes are vestigial.
 
-## 13. The phase volume convention differs from the review article
+## 14. The phase volume convention differs from the review article
 
 pikoe evaluates the phase volume in the output frame, not in the G-frame as in
 Eq. (3.30) of the Wakasa-Ogata-Noro review (Prog. Part. Nucl. Phys. 96, 32

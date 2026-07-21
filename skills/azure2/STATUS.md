@@ -63,26 +63,51 @@ inline at the top of the script. The two worth repeating here:
 Minuit2 is built standalone from the GooFit fork rather than pulled in as part
 of a 1 to 2 GB ROOT install.
 
-## What is missing, and the blocker
+## What is missing, and the actual path (revised 2026-07-21)
 
-**No test case.** The AZURE2 repo ships no `.azr` configuration file, and
-`azure.nd.edu` currently serves a 3 kB placeholder. So Level 1 (build) is solid
-while Level 2 (reproduce the author's reference case) has nothing to reproduce.
+**The repo ships no `.azr` file, and that turns out not to be the blocker it was
+first written up as.** An earlier version of this file said Level 2 "has nothing
+to reproduce" and made emailing R.J. deBoer for an example set the top action.
+That framing was wrong, on a user observation: an R-matrix case is fully
+specified by numbers that are already published, so the case is **constructed**
+from the paper rather than **obtained** from the authors.
 
-This is the pikoe situation again, and it decides the benchmark tier. Options,
-in preference order:
+The AZURE2 paper itself (Azuma et al., PRC **81**, 045805 (2010)) devotes
+Sec. IV to three worked examples and tabulates the complete fit parameters:
 
-1. Ask R.J. deBoer for the standard example set. He is the repo owner and the
-   AZURE2 corresponding author, and the request also fixes a distribution gap
-   for everyone else.
-2. Recover an example from the AZURE2 manual, if it contains a fully specified
-   configuration with published output.
-3. Build a case from a published R-matrix analysis with tabulated numbers, and
-   state plainly that the comparison is against the paper rather than against a
-   distributed reference.
+| Source | Content | Use |
+|---|---|---|
+| **Table V**, ¹⁶O(p,γ)¹⁷F | 5 levels, `Eλ`, `Ep`, `γp`, both `γγ(int)`; clean values with no uncertainty spread | **Best first case.** The paper calls this reaction completely dominated by external capture, so it is the simplest of the three |
+| **Table I**, ¹²C+p | 4 levels plus the ground-state ANC `Cp1/2 = 1.87 fm^-1/2`, channel radius `ac = 3.4 fm` | Second case; also exercises elastic scattering (Figs. 4 and 5) |
+| **Table IV**, ¹⁴N(p,γ)¹⁵O | Astrophysical S factors: 0.28 / 0.01 / 0.10 / 0.12 / 1.30, **total 1.81 keV b** | **Numeric anchor.** This is a table of results, not a figure, so it supports a digit comparison rather than a plot read |
+| **Figs. 3, 4, 5, 15** | The published AZURE fits | Curve-level check |
 
-Until one of those lands, this cannot claim tier 1, and the honest label is
-"builds and runs, no reference reproduction".
+A second fully specified case exists outside the paper, in deBoer's IAEA/TALENT
+teaching material: ¹²C(n,n₀) through the ¹³C compound nucleus, with `mn = 1.0087`,
+`Jπ(n) = 1/2+`, `Jπ(¹²C) = 0+`, `Sn = 4.946 MeV`, `ac = 1.4(A₁^⅓+A₂^⅓) = 4.6 fm`,
+levels from the TUNL/NNDC compilations, and data from Auchampaugh et al. (1979)
+via EXFOR. Every input is in a public database.
+
+**So the verification architecture is the same one validated empirically on
+pikoe**, and it does not require anything from the authors:
+
+1. **Physics anchor**: reproduce Table IV's S factors and the published fit
+   figures. Note this is *better* than pikoe's anchor, which was figure-only:
+   Table IV supports comparing digits.
+2. **Build integrity**: cross-platform, cross-compiler, cross-optimization
+   reproduction. On pikoe this returned bit-identical output across ARM64/macOS
+   gfortran 15.2 and x86_64/Linux gfortran 13.3 at `-O2`, `-O0` and
+   `-finit-real=snan`, which is a stronger statement than any single reference
+   file could make.
+
+The residual risk is honest and worth stating: **hand-building an `.azr` from a
+parameter table can encode a format mistake that produces a wrong but plausible
+result.** The Table IV digit comparison is what catches that, which is exactly
+why the numeric anchor matters more than the figures.
+
+Emailing deBoer is therefore a nice-to-have, not a prerequisite, and is better
+spent asking whether an official example set exists at all than asking him to
+unblock us.
 
 ## Remaining work
 
