@@ -26,7 +26,20 @@ Table V. Citation verified live against CrossRef, DOI `10.1103/physrevc.81.04580
 
 Two things follow from the Jπ assignments rather than being stated: 1/2− and
 3/2− are l = 1 proton channels, 5/2− is l = 3, since parity = (−1)^l for
-p + 16O(0+). The separation energy 0.60027 MeV is not quoted in the paper but is
+p + 16O(0+).
+
+**The deck also carries a 7/2− level that Table V does not list, and that is
+correct rather than an invention.** Sec. IV C 1 states that external capture
+proceeds through li = 1 (1/2−, 3/2−) **and li = 3 (5/2−, 7/2−)**, but AZURE2
+enumerates external-capture pathways only over Jπ groups that exist among the
+supplied levels (`src/CNuc.cpp:740-800`), so the li = 3 half of that sentence is
+silently dropped unless a 7/2− group is present. deBoer's FRIB/TALENT Course 6
+lecture names the requirement outright: *"AZURE2 eccentricity, need to add
+'dummy' levels to tell code which angular momenta to include in hard sphere
+phase shift calculations."* Such levels carry no fitted physics, which is
+exactly why they do not appear in a table of fit parameters. Verified inert
+here: moving it to 4.711, 10 or 20 MeV leaves S(90 keV) identical to five
+decimals. The separation energy 0.60027 MeV is not quoted in the paper but is
 **checked against it**: it is what makes the computed lab energies reproduce the
 Ep column of Table V (−638, −112, 2659, 3463, 4368 keV) to 1-2 keV.
 
@@ -77,28 +90,55 @@ is S(90 keV) = 8.07 keV b (Sec. IV C 2). This deck gives:
 
 | | S (keV b) |
 |---|---|
-| gamma0 (to the 5/2+ ground state) | 0.399 |
+| gamma0 (to the 5/2+ ground state) | 0.404 |
 | gamma1 (to the 1/2+ 495 keV state) | 7.203 |
-| **total** | **7.602** |
+| **total** | **7.608** |
 | **paper** | **8.07** |
-| deviation | **−5.8%** |
+| deviation | **−5.7%** |
+| at the most favourable Sp the paper's own Ep column allows (600.65 keV) | 7.755, **−3.9%** |
 
-That gap is real and is **not** explained by any of the following, each tested:
-the channel radius (0.4% over 4.5-5.5 fm), the resonance and background-pole
-parameters (moving them from placeholders to their Table V values shifts the
-total by 0.02 keV b, since 90 keV is far below every resonance), or the missing
-li = 3 entrance pathway (adding a 7/2− group raises the total by 1.4%).
+Each of the following was tested and does **not** account for the gap: the
+channel radius (0.4% over 4.5-5.5 fm), the resonance and background-pole
+parameters (0.02 keV b, since 90 keV is far below every resonance), and the
+li = 3 entrance pathway (the 7/2− dummy is worth 1.4% *of the gamma0 channel*,
+which is only **0.07% of the total** because gamma0 is 5% of the sum; an earlier
+draft of this file misreported that as 1.4% of the total).
 
-The most likely residue is that the published fit contains entrance Jπ groups or
-level-scheme details that Table V does not tabulate. AZURE2 enumerates external
-capture pathways only over Jπ groups that exist among the supplied levels
-(`CNuc.cpp:740-800`), so any group the authors included but did not print is
-silently absent here, and it can only add strength. That is consistent with the
-sign of the discrepancy but has not been demonstrated, and is recorded as an
-open question rather than a conclusion.
+**The dominant sensitivity is the separation energy, which the paper never
+states.** The gamma1 final state is bound by only ~105 keV and the capture is
+external, so S_gamma1 moves ~13% per 3 keV of binding energy:
+
+| Sp (keV) | B(1/2+) (keV) | S_total (keV b) |
+|---|---|---|
+| 595.00 | 100.00 | 5.872 |
+| 600.27 | 105.27 | 7.608 |
+| 603.00 | 108.00 | 8.620 |
+| 606.00 | 111.00 | 9.847 |
+
+Sp is not free, though: inverting the integer-keV Ep column of Table V pins it to
+roughly [599.9, 600.65] keV, and reaching 8.07 would need **601.5 keV, outside
+that window**. So Sp ambiguity covers about 2 of the 5.7 points and no more.
+
+**Independent check against measured data.** deBoer's FRIB/TALENT Course 6
+material ships Rolfs (1973) data for this reaction. Run against it with **nothing
+fitted**, using only the Table V parameters:
+
+| channel | chi^2/N | data/calc |
+|---|---|---|
+| gamma0, 90 deg | **1.53** | 1.034 |
+| gamma1, 90 deg | 31.7 | 0.807 |
+
+The ground-state channel is reproduced at chi^2/N = 1.5, which independently
+validates the external-capture machinery. The gamma1 channel disagrees with
+Rolfs by 24% in the **opposite direction** from the paper's number. The paper fit
+Morlock et al. [54], not Rolfs, and flags a 10% systematic in this data set
+(Sec. IV C 1), so the gamma1 normalisation is genuinely contested in the
+literature at the tens-of-percent level. A 5.7% offset from one fit sits inside
+that spread.
 
 **Do not describe this case as reproducing the paper's S factor.** It reproduces
-the paper's *inputs* exactly and its *observable* to 6%.
+the paper's *inputs* exactly, its gamma0 channel against measured data at
+chi^2/N = 1.5, and its published total S factor to 4-6%.
 
 ## Reproducing
 
