@@ -32,7 +32,7 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 
 ## R-matrix / resonances / astro
 
-- [ ] **AZURE2** (Notre Dame) — multichannel R-matrix for astrophysics; open.
+- [ ] **AZURE2** (Notre Dame) — multichannel R-matrix for astrophysics. **Openness CLEARED 2026-07-21 (user decision: use the open-source channel).** Two distribution channels exist and only one is usable: **`github.com/rdeboer1/AZURE2` is GPL-3.0, public, anonymously clonable and actively pushed**, while **`azure.nd.edu` redirects to `login.php`** and is registration-gated. The skill builds from GitHub and never touches the gated site, so it satisfies the hard rule. This is materially unlike GEMINI++, which has no public repo at all. Citation verified live via CrossRef: Azuma et al., Phys. Rev. C **81**, 045805 (2010), DOI 10.1103/physrevc.81.045805. Build works headless; **remaining blocker is L2, not licensing**: no `.azr` test case ships anywhere.
 - [V] **JITR** (Beyer), "just in time" R-matrix, a fast parametric R-matrix solver built explicitly for **calibration and uncertainty quantification**. Python, github.com/beykyle/jitr. Verify the publication. Strategically the closest external code to Line D / DREAM / the emulator work, and Python+differentiable-friendly, so worth an early look even before a skill.
 - [V] **SAMMY** (ORNL) — R-matrix analysis of neutron data; license to verify (RSICC).
 - [ ] **SkyNet** (Lippuner) — nucleosynthesis reaction network; open.

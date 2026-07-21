@@ -5,6 +5,35 @@ skill. What exists is the hard part of the port: a tested, clean-room
 `scripts/install_azure2.sh` that goes from nothing to a working headless AZURE2
 binary in about 19 seconds.
 
+## Distribution and licence: resolved 2026-07-21, use the open-source channel
+
+AZURE2 was briefly questioned on the grounds that it "is not freely
+downloadable". That doubt was correct about one channel and wrong about the
+other, so it is worth writing the distinction down rather than leaving it to
+memory:
+
+| Channel | Status | Usable? |
+|---|---|---|
+| `github.com/rdeboer1/AZURE2` | **GPL-3.0, public, anonymous `git ls-remote` succeeds with no credentials, actively pushed** | **Yes, this is what the installer uses** |
+| `azure.nd.edu` | Redirects to `login.php`, registration-gated | No, and nothing here touches it |
+
+**Decision (user): build from the open-source channel.** The FUSION private-code
+boundary requires a code to be both publicly open-source and backed by a
+published paper. AZURE2 satisfies both: the repo is public and GPL-3.0, and the
+paper is Azuma et al., Phys. Rev. C **81**, 045805 (2010), DOI
+`10.1103/physrevc.81.045805`, verified live against CrossRef rather than quoted
+from memory.
+
+This is **not** the GEMINI++ case. GEMINI++ was dropped because *both* of its
+known distribution URLs return 404 and no public repo exists anywhere, so nobody
+can obtain it. AZURE2 has a working public source of truth; only a secondary
+web-facing service is gated. A registration wall on one channel does not make a
+code unobtainable when another channel is GPL-3.0 and open.
+
+Keep the two questions separate when reading the rest of this file: **licensing
+is settled, availability of a test case is not.** The remaining blocker below is
+entirely the latter.
+
 ## Why this was built ahead of the rest of the Wave 1b queue
 
 The fusion-paper benchmark (`/Users/jinlei/Desktop/code/fusion-paper`) gates
