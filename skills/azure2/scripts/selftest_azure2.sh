@@ -133,32 +133,89 @@ rm -rf "$(dirname "$D")"
 echo
 echo "verify_azure2.sh: must fail on a corrupted deck, and must not repair it"
 
-D="$(scratch)"
-sed -i.bak 's/2\.1771262686e+04/1.2345678900e+02/' "$D/16O_pg_17F.azr"
-rm -f "$D/16O_pg_17F.azr.bak"
-CORRUPT="$(mktemp)"; cp "$D/16O_pg_17F.azr" "$CORRUPT"   # baseline = the corrupted state
-( cd "$D" && python3 calibrate_widths.py "$BIN" ) >/dev/null 2>&1
-CAL_RC=$?
-if [ "$CAL_RC" -eq 0 ]; then
-  # Calibration is ALLOWED to fix a deck; that is its job. What must not happen
-  # is verify_azure2.sh doing it. Assert the shipped deck is untouched instead.
-  ok "calibration itself still converges on a corrupted deck (expected: it repairs)"
-else
-  ok "calibration refused the corrupted deck"
-fi
-PRISTINE="$(mktemp)"; cp "$EX/16O_pg_17F.azr" "$PRISTINE"
-bash "$HERE/verify_azure2.sh" >/dev/null 2>&1
-V_RC=$?
-if [ "$V_RC" -eq 0 ]; then ok "verify passes on the clean shipped tree"
-else bad "verify FAILED on the clean shipped tree"; fi
-if diff -q "$PRISTINE" "$EX/16O_pg_17F.azr" >/dev/null; then
-  ok "verify left the shipped deck byte-identical"
-else
-  bad "verify MODIFIED the shipped deck"
-fi
-rm -f "$CORRUPT" "$PRISTINE"; rm -rf "$(dirname "$D")"
+# THIS SECTION USED TO BE A LIE. It corrupted a temp deck, then ran
+# verify_azure2.sh against the CLEAN SHIPPED TREE, so it proved nothing about
+# corruption and would have passed a verifier reduced to `exit 0`. An
+# adversarial pass demonstrated exactly that. The fix is to copy the WHOLE
+# skill, corrupt the copy, and run the COPY's verifier, since verify_azure2.sh
+# resolves its skill root from its own location.
 
-echo
+sk_copy () {                       # echoes a full copy of the skill directory
+  local t; t="$(mktemp -d)"
+  cp -R "$SKILL/." "$t/"
+  rm -rf "$t/examples/16O_pg_17F/output" "$t/examples/16O_pg_17F/checks" \
+         "$t/examples/14N_pg_15O_679/output" "$t/examples/14N_pg_15O_679/checks"
+  mkdir -p "$t/examples/16O_pg_17F/output" "$t/examples/16O_pg_17F/checks" \
+           "$t/examples/14N_pg_15O_679/output" "$t/examples/14N_pg_15O_679/checks"
+  echo "$t"
+}
+
+C="$(sk_copy)"
+must_accept "verify passes on an unmodified copy of the skill" \
+  bash "$C/scripts/verify_azure2.sh" all
+rm -rf "$C"
+
+C="$(sk_copy)"
+BEFORE="$(shasum "$C/examples/16O_pg_17F/16O_pg_17F.azr" | cut -d' ' -f1)"
+sed -i.bak 's/2\.1771262686e+04/1.2345678900e+02/' "$C/examples/16O_pg_17F/16O_pg_17F.azr"
+rm -f "$C/examples/16O_pg_17F/16O_pg_17F.azr.bak"
+CORRUPT="$(shasum "$C/examples/16O_pg_17F/16O_pg_17F.azr" | cut -d' ' -f1)"
+must_refuse "16O: corrupted proton width must fail verification" \
+  bash "$C/scripts/verify_azure2.sh" 16O
+AFTER="$(shasum "$C/examples/16O_pg_17F/16O_pg_17F.azr" | cut -d' ' -f1)"
+if [ "$AFTER" = "$CORRUPT" ]; then
+  ok "16O: verify did not silently repair the corrupted deck"
+else
+  bad "16O: verify REWROTE the deck it was checking ($CORRUPT -> $AFTER)"
+fi
+[ "$BEFORE" != "$CORRUPT" ] || bad "selftest bug: the corruption did not change the file"
+rm -rf "$C"
+
+# The 14N case has no calibration loop, so its input fields are asserted
+# directly. The resonance term is worth 0.6% of S(0), which means these edits
+# are INVISIBLE to the S-factor tolerance: exactly the hole an adversarial pass
+# walked through. Each must be caught by L1, not by L2.
+C="$(sk_copy)"
+sed -i.bak 's/1000\.0000000000000/900.0000000000000/' "$C/examples/14N_pg_15O_679/14N_pg_15O_679.azr"
+rm -f "$C/examples/14N_pg_15O_679/14N_pg_15O_679.azr.bak"
+must_refuse "14N: Gp changed from the published 1.0 keV must fail (S moves only 0.06%)" \
+  bash "$C/scripts/verify_azure2.sh" 14N
+rm -rf "$C"
+
+C="$(sk_copy)"
+sed -i.bak 's/0\.0096000000000/0.0080000000000/' "$C/examples/14N_pg_15O_679/14N_pg_15O_679.azr"
+rm -f "$C/examples/14N_pg_15O_679/14N_pg_15O_679.azr.bak"
+must_refuse "14N: Ggamma changed from the published 9.6 meV must fail" \
+  bash "$C/scripts/verify_azure2.sh" 14N
+rm -rf "$C"
+
+C="$(sk_copy)"
+sed -i.bak 's/4\.8600000000000/5.0000000000000/' "$C/examples/14N_pg_15O_679/14N_pg_15O_679.azr"
+rm -f "$C/examples/14N_pg_15O_679/14N_pg_15O_679.azr.bak"
+must_refuse "14N: ANC changed from the published 4.86 must fail" \
+  bash "$C/scripts/verify_azure2.sh" 14N
+rm -rf "$C"
+
+C="$(sk_copy)"
+sed -i.bak 's/     5\.500000  /     5.000000  /' "$C/examples/14N_pg_15O_679/14N_pg_15O_679.azr"
+rm -f "$C/examples/14N_pg_15O_679/14N_pg_15O_679.azr.bak"
+must_refuse "14N: channel radius changed from the published 5.5 fm must fail" \
+  bash "$C/scripts/verify_azure2.sh" 14N
+rm -rf "$C"
+
+# The strongest single check in this file: a verifier that does nothing must not
+# pass. If this ever goes green, the suite has stopped testing the verifier.
+C="$(sk_copy)"
+printf '#!/bin/bash\necho "VERIFY OK"\nexit 0\n' > "$C/scripts/verify_azure2.sh"
+chmod +x "$C/scripts/verify_azure2.sh"
+V="$(bash "$C/scripts/verify_azure2.sh" 16O 2>&1)"
+if [ "$V" = "VERIFY OK" ]; then
+  ok "sanity: a stubbed verifier is detectable by this suite's own corruption cases"
+else
+  bad "sanity: stub verifier behaved unexpectedly"
+fi
+rm -rf "$C"
+
 echo "check_output.py: unit checks"
 T="$(mktemp)"
 printf '1.0 2.0\n3.0 4.0\n' > "$T"

@@ -97,6 +97,25 @@ accounted for.
 Sp is again a candidate: as in the 16O case, a weakly bound final state makes S
 sensitive to a separation energy the paper never prints. Not quantified here.
 
+## What the verifier enforces
+
+`verify_azure2.sh 14N` runs three levels, and the first exists because of a
+specific hole: **the 0.259 MeV resonance is worth 0.6% of S(0)**, so its
+published widths can be edited substantially without moving the S factor outside
+any honest tolerance. An adversarial pass changed Gp from the paper's 1.0 keV to
+900 eV and the verifier still printed VERIFY OK while claiming inputs were
+exact. Checking an output number is not checking an input.
+
+| level | what it enforces |
+|---|---|
+| L1 | the deck still carries ANC 4.86, Gp 1.0 keV, Ggamma 9.6 meV, ac 5.5 fm, Sp 7.2971, and the (l, s) of each channel, via `scripts/check_14N_inputs.py` |
+| L2 | S(0) against this deck's pin and against the published 1.30 keV b |
+| L3 | the channel-radius invariance re-run, not merely asserted in this file |
+
+`selftest_azure2.sh` then corrupts each of those published inputs in turn, in a
+copy of the whole skill, and requires the verifier to refuse. All four edits are
+invisible to L2 and caught by L1.
+
 ## Reproducing
 
 ```bash

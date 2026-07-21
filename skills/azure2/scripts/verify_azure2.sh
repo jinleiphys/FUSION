@@ -154,6 +154,17 @@ verify_14N () {
   mkdir -p "$D"; cp -R "$SRC/." "$D/"
   rm -rf "$D/output" "$D/checks"; mkdir -p "$D/output" "$D/checks"
 
+  # L1: the deck must still carry the PUBLISHED inputs. Checking an output
+  # number is not checking an input: the 0.259 MeV resonance is worth 0.6% of
+  # S(0), so its widths can be edited freely without moving the tolerance.
+  if python3 "$HERE/check_14N_inputs.py" "$D/14N_pg_15O_679.azr" >/dev/null 2>/tmp/az2_l1.$$; then
+    pass "L1 deck carries the published inputs (ANC 4.86, Gp 1.0 keV, Ggamma 9.6 meV, ac 5.5 fm, Sp 7.2971)"
+  else
+    fail "L1 deck no longer matches the paper:"
+    sed 's/^/        /' /tmp/az2_l1.$$ >&2
+  fi
+  rm -f /tmp/az2_l1.$$
+
   bash "$HERE/run_azure2.sh" "$D/14N_pg_15O_679.azr" 3 >/dev/null || {
     fail "extrapolation run"; rm -rf "$TMP"; return; }
   local s0
@@ -173,7 +184,32 @@ verify_14N () {
   else
     fail "S_6.79(0) = $s0 is not within 5% of the published 1.30"
   fi
+
+  # L3: re-run the channel-radius invariance that verification.md rests on.
+  # Claiming an invariance in prose while nothing re-tests it means a
+  # regression in it goes unnoticed.
+  local va vb
+  va="$(_s679_at "$D" 5.0)"; vb="$(_s679_at "$D" 6.0)"
+  if [ -n "$va" ] && [ -n "$vb" ] && rel_ok "$va" "$s0" 0.03 && rel_ok "$vb" "$s0" 0.03; then
+    pass "L3 channel-radius invariance holds: $va / $s0 / $vb over 5.0-6.0 fm (within 3%)"
+  else
+    fail "L3 channel-radius invariance broken: $va / $s0 / $vb over 5.0-6.0 fm"
+  fi
   rm -rf "$TMP"
+}
+
+# _s679_at <casedir> <channel radius> : rerun the 14N case at another radius
+_s679_at () {
+  local D="$1" ac="$2" t; t="$(mktemp -d)"
+  mkdir -p "$t/output" "$t/checks"
+  awk -v ac="$ac" '
+    /^<levels>$/{i=1; print; next}
+    /^<\/levels>$/{i=0; print; next}
+    { if (i && NF>5 && $27=="0") $28=ac; print }
+  ' "$D/14N_pg_15O_679.azr" > "$t/c.azr"
+  ( cd "$t" && printf '3\n\n\n6\n' | "$BIN" --no-gui c.azr >/dev/null 2>&1 )
+  awk 'NR==1{print $5*1000}' "$t/output/AZUREOut_aa=1_R=2.extrap" 2>/dev/null
+  rm -rf "$t"
 }
 
 case "$CASE" in
