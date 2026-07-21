@@ -12,7 +12,7 @@ A nuclear-physics research agent platform, built as a rebrand fork of [opencode]
 
 Give nuclear physicists (starting with students and group members, extending to the community) an agent that comes out of the box with:
 
-1. **One expert skill per nuclear open-source code, for the whole ecosystem.** Reactions (FRESCO, THOx, CCFULL, TALYS, GEMINI++, GEF, ...), R-matrix/astro (AZURE2, SkyNet, ...), structure (KSHELL, BIGSTICK, imsrg++, HFBTHO, ...), scoped transport/data (OpenMC, NJOY), plus the group's own codes (smoothie, COLOSS, SLAM.jl, ...). Each skill teaches the agent to install, write inputs for, run, and parse that code, validated against a published benchmark. Living roadmap: [skills-catalog.md](skills-catalog.md).
+1. **One expert skill per nuclear open-source code, for the whole ecosystem.** Reactions (FRESCO, THOx, CCFULL, TALYS, GEF, ...), R-matrix/astro (AZURE2, SkyNet, ...), structure (KSHELL, BIGSTICK, imsrg++, HFBTHO, ...), scoped transport/data (OpenMC, NJOY), plus the group's own codes (smoothie, COLOSS, SLAM.jl, ...). Each skill teaches the agent to install, write inputs for, run, and parse that code, validated against a published benchmark. Living roadmap: [skills-catalog.md](skills-catalog.md).
 2. **A self-contained domain knowledge base.** The local arXiv nucl-th full-text corpus (62714 papers, 61357 with full text, 1992-09 to 2026-06, SQLite FTS5 + BM25), partitioned by domain keywords (reactions, structure, astro, EFT, ...) and exposed to the agent as a search tool. Offline, exhaustive, lexical.
 3. **A private personalization layer.** Each user mounts their own read-literature wiki and research profile; FUSION defines the interface but never ships anyone's personal layer.
 

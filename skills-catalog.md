@@ -25,7 +25,7 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 - [x] **TALYS** (Koning, Hilaire, Goriely; Eur. Phys. J. A 59, 131 (2023), DOI 10.1140/epja/s10050-023-01034-3; github.com/arjankoning1/talys, **MIT** not GPL as previously listed here) DONE: skills/talys/, clone+build+run+verify scripts, 5 clean-room sample benchmarks reproducing 1415 of 1438 distributed reference files byte for byte and the rest to ~6 sig figs (2026-07-20). Three traps found and handled: the Makefile source glob is locale-collation dependent and silently drops 13 files unless LC_ALL=C; paths are capped at character(len=132) so the install root must be under 63 chars; and **TALYS exits 0 even on a fatal error**, so the exit status must never be trusted. Install is ~11 GB (8.6 GB structure database), the heaviest skill so far.
 - [ ] **EMPIRE** (Herman, Capote, Carlson, Oblozinsky, Sin, Trkov, Wienke, Zerkin), statistical model suite, nds.iaea.org/empire/ (also a paper-mill red-flag domain; skill should embed the Boilley checklist for sanity).
 - [V] **YAHFC** (Ormand, LLNL), Monte Carlo Hauser-Feshbach, event-by-event decay with n/p/d/t/3He/alpha/gamma plus fission; Fortran 90 serial and MPI, github.com/LLNL/Yet-Another-Hauser-Feshbach-Code. Verify the accompanying publication before committing (open repo alone does not satisfy the hard rule).
-- [ ] **GEMINI++** (Charity) — statistical decay of compound nuclei.
+- [x] ~~**GEMINI++** (Charity) — statistical decay of compound nuclei.~~ **DROPPED 2026-07-21 (user):** fails the publicly-obtainable hard rule. Both known distribution URLs (chemistry.wustl.edu/~rc/gemini++/ and the SourceForge project) return HTTP 404, and no public repo was found. Recorded here rather than deleted so it is not re-proposed; revisit only if the authors publish a clonable source release.
 - [ ] **GEF** (Schmidt-Jurado) — fission-fragment yields.
 - [V] **PACE4** — fusion-evaporation; bundled in LISE++, verify openness.
 - [ ] **KEWPIE2** — evaporation for superheavy synthesis.
@@ -110,7 +110,7 @@ Note on the whole list: openness is *asserted by the page*, not verified by us. 
 
 Wave 1 (small, classic, self-benchmarking, community): CCFULL done, GSM done, TALYS done. (THOx dropped: not public.)
 Wave 1b (added 2026-07-20, CPC-Library codes: small, published, distributed with the paper, so the openness question is already settled and each ships author test cases): **pikoe, NLAT, CNOK, SWANLOP/SIDES**. These jumped the queue over Wave 2 because they are cheap to verify and every one of them sits directly on an active research line (knockout/QFS, nonlocality, Glauber-vs-IAV). Suggested order: pikoe, NLAT, CNOK, SIDES+SWANLOP as a pair.
-Wave 2 (community heavyweights): KSHELL, GEMINI++, GEF, AZURE2, SkyNet.
+Wave 2 (community heavyweights): KSHELL, GEF, AZURE2, SkyNet.
 Wave 3 (verify-then-build): ECIS, TWOFNR (+FRONT/KDUQ), OPTMAN, JITR, YAHFC, DWUCK, SAMMY, NuShellX-policy, OpenMC, NJOY.
 Wave 4 (ecosystem monsters, scoped): Geant4.
 Lei family (eligible only): COLOSS done; SLAM.jl, PINN-ECS, inhomoR when convenient.
