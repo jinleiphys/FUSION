@@ -115,6 +115,15 @@ radius, because the ANC fixes the asymptotic tail. Transform mode is flat to
 0.4%. The two modes agree at 5.0 fm, so **a check at a single radius cannot tell
 them apart**; vary the radius.
 
+The `--no-transform` column is measured with the bound-state entries replaced by
+the **formal amplitudes** AZURE2 itself reports (0.805998 and 1.174864
+MeV^(1/2)), not with Table V's ANCs typed in literally. That distinction is
+worth stating because the literal-ANC version is *worse*, not merely different:
+it gives S(90 keV) = 19.66 keV b at ac = 5.0 fm, since fm^(-1/2) values are then
+read as MeV^(1/2) amplitudes. So the honest summary is that `--no-transform`
+fails in two separate ways, and the radius sweep above isolates the subtler one.
+
+
 ## Converting a published parameter table
 
 Papers quote reduced-width amplitudes (MeV^(1/2)); AZURE2 wants partial widths

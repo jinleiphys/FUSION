@@ -32,6 +32,12 @@ directly is a natural move and it is wrong for any case with external capture.
 The flag skips the ANC-to-amplitude conversion, so the bound state's asymptotic
 normalisation is no longer set by its ANC.
 
+There are two distinct failures here. The blunt one: typing Table V's ANCs in
+literally under `--no-transform` makes AZURE2 read fm^(-1/2) values as
+MeV^(1/2) amplitudes, giving S(90 keV) = 19.66 keV b instead of 7.61. The subtle
+one, which survives even after substituting the correct formal amplitudes, is
+the loss of radius invariance described next.
+
 The tell is channel-radius dependence. With the ANC live, S(90 keV) on the
 benchmark case varies by 0.4% over `ac` = 4.5 to 5.5 fm, as ANC-normalised
 external capture must. Under `--no-transform` it varies by a factor of 4 over

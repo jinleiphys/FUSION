@@ -66,11 +66,18 @@ if [ -z "${AZURE2_KEEP_PARAMS:-}" ]; then
   rm -f "$OUTDIR/param.par" "$OUTDIR/parameters.out"
 fi
 
-# Record what existed before, so "did this run produce it" is answerable rather
-# than assumed. A pre-existing output file from an earlier run is exactly how
-# the CCFULL skill once reported a stale reference as a fresh success.
-BEFORE="$(mktemp)"; trap 'rm -f "$BEFORE"' EXIT
-find "$OUTDIR" -type f -newermt "@0" 2>/dev/null | sort > "$BEFORE" || true
+# CONCURRENCY. "files newer than my stamp" attributes another process's output
+# to this run: an adversarial pass started a stub that wrote nothing, then a real
+# AZURE2 in the same directory 0.08 s later, and the stub reported OK for the
+# other process's files. An exclusive lock on the output directory removes the
+# race rather than trying to disambiguate afterwards.
+LOCK="$OUTDIR/.run_azure2.lock"
+if ! mkdir "$LOCK" 2>/dev/null; then
+  echo "run_azure2: $OUTDIR is locked by another run (stale? remove $LOCK)." >&2
+  exit 1
+fi
+trap 'rmdir "$LOCK" 2>/dev/null || true' EXIT
+
 STAMP="$(mktemp)"; touch "$STAMP"
 
 LOG="$OUTDIR/run.log"; ERR="$OUTDIR/run.err"
@@ -82,44 +89,56 @@ set -e
 if grep -q "Could not find" "$LOG" 2>/dev/null; then
   echo "run_azure2: AZURE2 could not find a directory named in <config>:" >&2
   grep "Could not find" "$LOG" >&2
-  exit 1
+  rm -f "$STAMP"; exit 1
 fi
 
-# Positive assertion 1: files that this run actually wrote.
-NEW="$(find "$OUTDIR" -type f -newer "$STAMP" \
-        \( -name '*.extrap' -o -name '*.out' -o -name '*.acoeff' \) \
-        ! -name 'run.log' ! -name 'run.err' 2>/dev/null | sort)"
+# A DROPPED SEGMENT IS A FAILURE, not a warning. If a data file is missing or
+# unreadable AZURE2 prints "Could Not Fill Segment #N from file." and carries on
+# with the rest, so chiSquared.out is computed over a DIFFERENT deck than the one
+# requested. Silently accepting that is how a benchmark quietly stops testing
+# what it claims to test.
+if grep -qi "Could Not Fill Segment" "$LOG" 2>/dev/null; then
+  echo "run_azure2: AZURE2 dropped one or more segments; the deck did not run as written:" >&2
+  grep -i "Could Not Fill Segment" "$LOG" >&2
+  echo "  (usually a missing or unreadable data file; paths resolve against $AZR_DIR)" >&2
+  rm -f "$STAMP"; exit 1
+fi
+
+# Positive assertion 1: files that THIS run wrote. NUL-delimited throughout, so
+# output directories containing spaces do not get word-split into fake paths.
+NEWLIST="$(mktemp)"
+# Only the AZUREOut_* tables are numeric result files. Deliberately excluded:
+# intEC.extrap (complex amplitudes written as "(re,im)", a legitimate format
+# that is not a column table) and parameters.out (a human-readable report).
+# Validating those as numeric tables makes a healthy run look broken.
+find "$OUTDIR" -type f -newer "$STAMP" -name 'AZUREOut_*' \
+     \( -name '*.extrap' -o -name '*.out' -o -name '*.acoeff' \) \
+     -print0 2>/dev/null > "$NEWLIST" || true
 rm -f "$STAMP"
-if [ -z "$NEW" ]; then
+if [ ! -s "$NEWLIST" ]; then
   echo "run_azure2: AZURE2 exited $RC but wrote no result file into $OUTDIR." >&2
   echo "  Last lines of $LOG:" >&2; tail -15 "$LOG" >&2
   [ -s "$ERR" ] && { echo "  stderr:" >&2; tail -10 "$ERR" >&2; }
-  exit 1
+  rm -f "$NEWLIST"; exit 1
 fi
 
-# Positive assertion 2: non-empty, and every number finite. A diverging R-matrix
-# solve writes nan/inf rather than failing, and a comparator that only checks
-# for the file's existence would call that a success.
-BAD=0
-for f in $NEW; do
-  if [ ! -s "$f" ]; then
-    echo "run_azure2: $f was created but is EMPTY." >&2; BAD=1; continue
-  fi
-  if grep -qiE 'nan|inf' "$f"; then
-    echo "run_azure2: $f contains non-finite values (nan/inf):" >&2
-    grep -inE 'nan|inf' "$f" | head -3 >&2; BAD=1
-  fi
-done
-[ "$BAD" -eq 0 ] || exit 1
+# Positive assertion 2: every result file is a well-formed numeric table with
+# finite values. check_output.py enforces column consistency, float parsing,
+# finiteness and a terminating newline; a nan/inf grep catches none of the
+# truncated-line, 1e9999 or non-numeric-token cases.
+if ! xargs -0 python3 "$HERE/check_output.py" < "$NEWLIST" ; then
+  echo "run_azure2: result file(s) failed structural validation." >&2
+  rm -f "$NEWLIST"; exit 1
+fi
 
 if [ "$RC" -ne 0 ]; then
   echo "run_azure2: WARNING, AZURE2 exited $RC although output looks well formed." >&2
   tail -5 "$LOG" >&2
 fi
 
-# Surface the warnings AZURE2 prints but does not treat as errors. The
-# A-matrix one is expected whenever external capture is on, and is not a fault.
 grep -E "^WARNING" "$LOG" 2>/dev/null | sort -u | sed 's/^/run_azure2: /' >&2 || true
 
-echo "run_azure2: OK, $(echo "$NEW" | wc -l | tr -d ' ') result file(s) in $OUTDIR"
-for f in $NEW; do echo "  $f"; done
+NFILES="$(tr -cd '\0' < "$NEWLIST" | wc -c | tr -d ' ')"
+echo "run_azure2: OK, $NFILES result file(s) in $OUTDIR"
+tr '\0' '\n' < "$NEWLIST" | sed 's/^/  /'
+rm -f "$NEWLIST"
