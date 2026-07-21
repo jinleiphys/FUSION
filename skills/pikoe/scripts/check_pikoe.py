@@ -219,9 +219,9 @@ def check(case, case_dir):
 # Pins for the momentum-distribution cases, as
 # (LG peak value, LG centroid in MeV/c, sum of the LG distribution over the grid).
 # An entry here must come from a measured run, never from reading the paper's
-# figures. MD (392A MeV) is still unpinned: the run takes over an hour and had
-# not finished when this skill was written.
+# figures. Both were measured to completion in a clean room.
 MD_PINS = {
+    "MD": (39.316, -24.0854, 908.544),
     "MD100": (36.724, -63.9691, 905.855),
 }
 

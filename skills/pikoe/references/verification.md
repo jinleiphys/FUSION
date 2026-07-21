@@ -50,6 +50,7 @@ nonlocality range 0.85 fm.
 | TDXnorm | Fig. 1(b) | `Ay` range over 20 to 80 deg | -0.409 to +0.470 | about -0.4 to +0.5, with the sharp swing at the dip |
 | QDXinv | Fig. 5 | low-`T2` peak | 0.18147 at 185 MeV | about 0.175 at about 190 MeV |
 | QDXinv | Fig. 5 | high-`T2` peak | 0.17408 at 325 MeV | about 0.168 at about 330 MeV |
+| MD | Fig. 2 | LG distribution peak | 39.316 at -29.6 MeV/c | about 39 at about -20 MeV/c |
 | MD100 | Fig. 3 | LG distribution peak | 36.724 at 9.87 MeV/c | about 37, flat-topped near zero |
 | MD100 | Fig. 3 | LG asymmetry | centroid -63.97 MeV/c, sharp fall above +100 MeV/c | visibly asymmetric, sharp fall above +100 MeV/c |
 | TDXinv | Fig. 4 | divergence structure | two `isol` branches, steep rise to 1049 (isol=1, 31.50 deg) and 1422 (isol=2, 32.25 deg) | both branches rising past 1000 at the right edge, about 32.3 deg |
@@ -87,6 +88,9 @@ QDXinv:
 - low-`T2` peak 0.18147 at 185.0 MeV
 - high-`T2` peak 0.17408 at 325.0 MeV
 
+MD (opt-in, about 72 minutes of CPU):
+- LG peak value 39.316, centroid -24.0854 MeV/c, sum over the grid 908.544
+
 MD100 (opt-in, about 31 minutes of CPU):
 - LG peak value 36.724, centroid -63.9691 MeV/c, sum over the grid 905.855
 
@@ -96,11 +100,18 @@ of the maximum), so the argmax can hop between them under a different compiler
 while the physics is unchanged. The centroid is stable and carries the point the
 figure is making, namely that the low-energy distribution is asymmetric.
 
-**MD (392A MeV) is not pinned yet**: the run takes over an hour and had not
-finished when this skill was written. `check_pikoe.py` reports SKIPPED for an
-unpinned case rather than passing, and `verify_pikoe.sh` exits non-zero if every
-requested case was skipped, so an unpinned run can never read as a green
-verification.
+Both momentum-distribution cases are now pinned from measured runs. The
+mechanism that protected the unpinned case stays in place: `check_pikoe.py`
+reports SKIPPED rather than passing when no pin exists, and `verify_pikoe.sh`
+exits non-zero if every requested case was skipped, so an unpinned run can never
+read as a green verification.
+
+The two centroids are also a physics cross-check on each other, and on the
+paper's own point about these figures: -24.1 MeV/c at 392A MeV against -64.0
+MeV/c at 100A MeV, i.e. the longitudinal distribution is close to symmetric at
+high incident energy and clearly asymmetric at low, which is what the paper says
+(Sec. 4.2, referring the detail to Ogata, Yoshida and Minomo, Phys. Rev. C 92,
+034616 (2015)).
 
 ## Runtimes
 
@@ -114,7 +125,7 @@ percent higher on an otherwise busy machine:
 | TDXinv | 1 | 7.2 s |
 | QDXinv | 3 | 5.2 s |
 | MD100 | 9 | 1846.8 s (31 min) |
-| MD | 9 | over an hour, not yet measured to completion |
+| MD | 9 | 4307.9 s (72 min) |
 
 The momentum-distribution cases are three orders of magnitude more expensive
 because `ivar=9` adds Gauss-Legendre quadratures over `K1` and `phi_1Q` (15

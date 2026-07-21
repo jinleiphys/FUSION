@@ -26,7 +26,7 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 - [ ] Then Wave 2 community heavyweights: KSHELL, GEMINI++, GEF, AZURE2, SkyNet
 - [ ] Eligible Lei codes when convenient: SLAM.jl, PINN-ECS, inhomoR (COLOSS done)
 - [ ] Each per-code skill meets the quality bar in skills-catalog.md (install from public source, verified deck examples, run/parse, benchmark to N digits with a CLEAN-ROOM build test, failure modes) before it ships. Since 2026-07-20 this also requires a **Codex adversarial pass** and **live citation verification**, and the skill must declare its benchmark tier (see CLAUDE.md Key decisions)
-- [ ] **pikoe follow-up**: pin the MD case (12Cp2pMD.cnt, 392A MeV momentum distributions). It is the one shipped deck not yet measured to completion (over an hour of CPU); `check_pikoe.py` reports SKIPPED for it rather than passing, so nothing is claimed that was not run. MD100 is pinned (LG peak 36.724, centroid -63.9691 MeV/c). Also worth an opportunistic email to the authors for the missing reference output (Yoshida is a co-author and the QFS-RB inviter); that would lift pikoe from figure-anchored to tier 1
+- [ ] **pikoe follow-up**: opportunistic email to the authors asking for the missing reference output (`tbl_*.dat` and `*.outlist` per sample directory, documented in their readme but absent from both releases). Yoshida is a co-author and the QFS-RB inviter, so it is a one-line ask, it fixes a packaging defect for everyone, and it would lift pikoe from figure-anchored to tier 1. All five sample decks are now pinned from measured runs, so nothing is blocked on it
 
 ## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki + semantic relations)
 
