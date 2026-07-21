@@ -32,7 +32,7 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 
 ## R-matrix / resonances / astro
 
-- [ ] **AZURE2** (Notre Dame) — multichannel R-matrix for astrophysics. **Openness CLEARED 2026-07-21 (user decision: use the open-source channel).** Two distribution channels exist and only one is usable: **`github.com/rdeboer1/AZURE2` is GPL-3.0, public, anonymously clonable and actively pushed**, while **`azure.nd.edu` redirects to `login.php`** and is registration-gated. The skill builds from GitHub and never touches the gated site, so it satisfies the hard rule. This is materially unlike GEMINI++, which has no public repo at all. Citation verified live via CrossRef: Azuma et al., Phys. Rev. C **81**, 045805 (2010), DOI 10.1103/physrevc.81.045805. Build works headless; **remaining blocker is L2, not licensing**: no `.azr` test case ships anywhere.
+- [x] **AZURE2** (Notre Dame) — multichannel R-matrix for astrophysics. **SHIPPED 2026-07-22, `skills/azure2/`, TIER 2.** Built from the open channel `github.com/rdeboer1/AZURE2` (GPL-3.0, anonymously clonable); the registration-gated `azure.nd.edu` is never touched. Citation verified live via CrossRef: Azuma et al., Phys. Rev. C **81**, 045805 (2010), DOI 10.1103/physrevc.81.045805. The repo ships **neither example input nor reference output**, so the benchmark is CONSTRUCTED from PRC 81, 045805 Table V (16O(p,g)17F) and the `.azr` format reference was derived from the parser source. Verified: all 9 published parameters exact; S(90 keV) = 7.6080 vs the published 8.07 keV b (**-5.7%**, causes bounded and stated); and **chi^2/N = 1.53 against measured Rolfs (1973) data with nothing fitted**, the one check independent of the paper. Two Codex adversarial passes. Fills the **astro / R-matrix** subfield row of the fusion paper
 - [V] **JITR** (Beyer), "just in time" R-matrix, a fast parametric R-matrix solver built explicitly for **calibration and uncertainty quantification**. Python, github.com/beykyle/jitr. Verify the publication. Strategically the closest external code to Line D / DREAM / the emulator work, and Python+differentiable-friendly, so worth an early look even before a skill.
 - [V] **SAMMY** (ORNL) — R-matrix analysis of neutron data; license to verify (RSICC).
 - [ ] **SkyNet** (Lippuner) — nucleosynthesis reaction network; open.
@@ -110,7 +110,7 @@ Note on the whole list: openness is *asserted by the page*, not verified by us. 
 
 Wave 1 (small, classic, self-benchmarking, community): CCFULL done, GSM done, TALYS done. (THOx dropped: not public.)
 Wave 1b (added 2026-07-20, CPC-Library codes: small, published, distributed with the paper, so the openness question is already settled and each ships author test cases): **pikoe, NLAT, CNOK, SWANLOP/SIDES**. These jumped the queue over Wave 2 because they are cheap to verify and every one of them sits directly on an active research line (knockout/QFS, nonlocality, Glauber-vs-IAV). Suggested order: pikoe, NLAT, CNOK, SIDES+SWANLOP as a pair.
-Wave 2 (community heavyweights): KSHELL, GEF, AZURE2, SkyNet.
+Wave 2 (community heavyweights): KSHELL, GEF, SkyNet (AZURE2 done 2026-07-22).
 Wave 3 (verify-then-build): ECIS, TWOFNR (+FRONT/KDUQ), OPTMAN, JITR, YAHFC, DWUCK, SAMMY, NuShellX-policy, OpenMC, NJOY.
 Wave 4 (ecosystem monsters, scoped): Geant4.
 Lei family (eligible only): COLOSS done; SLAM.jl, PINN-ECS, inhomoR when convenient.
