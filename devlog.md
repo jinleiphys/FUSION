@@ -2,6 +2,82 @@
 
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 
+## 2026-07-21: the same guard bug, in the script whose comment cites the same guard bug
+
+**Why we tried it:** Seventh per-code skill, NLAT (Titus, Ross, Nunes, CPC 207,
+499 (2016)), second of the Wave 1b batch, built the same day as pikoe.
+
+**What failed:** Codex confirmed 21 defects. The one worth the entry: the
+`rm -rf` guard in `run_nlat.sh` tested whether the **install contained the
+workdir**, when the destructive case is the **workdir inside the install**.
+Pointing the workdir at `LOCAL_SAMPLE` deleted the distributed reference output;
+pointing it at `SOURCE/` deleted the source tree. Worse, after `SOURCE/` was
+wiped the directory still existed, so `install_nlat.sh`'s
+`[ -d "$SRCDIR/SOURCE" ]` short-circuit kept returning the broken install as
+valid, making the damage unrecoverable without a manual purge.
+
+This is the identical defect pikoe shipped with a few hours earlier, in a
+function whose comment reads "Getting this wrong once destroyed 50 MB of data
+tables in the pikoe skill."
+
+Two more false-pass vectors in the same review. An all-NaN output file was
+reported as a **perfect match**: every comparison against NaN is false, so
+`d > worst` never fired and the worst-difference counter stayed at zero. NaN is
+the characteristic output of a diverging iterative solve, and an iterative
+nonlocal solve is precisely what NLAT does, so the comparator was blind to the
+single most likely real failure. And the reference "fingerprint" that was
+supposed to prove the run had not overwritten the references hashed `ls -l`
+output, i.e. permissions, size and mtime, so a content change preserving size and
+mtime was invisible.
+
+**Root cause:** Writing a lesson down, and even citing it at the point of use,
+does not transfer the lesson. The pikoe entry from the same day says "every
+destructive command needs its guard written against its own literal argument".
+The NLAT guard was then written against the wrong operand while quoting that
+sentence. What actually caught it, both times, was an adversarial agent running
+the script with a hostile argument. The written rule is worth keeping, but it
+should be understood as a prompt for the test, not as a substitute for it.
+
+**Lesson:** For any destructive operation, the test is cheap and the reasoning
+is not. Write the repro first: point the workdir at the install, at the sample
+directory, at the deck's own directory, and through a symlink, and confirm each
+one refuses. Four `run_nlat.sh` invocations would have caught this before Codex
+did. The same applies to the comparator: feed it NaN, feed it a truncated file,
+feed it a real 1e-3 discrepancy, and check the exit status each time. All of
+those are now in the skill's own repro set.
+
+Second lesson, a repeat of the TALYS one: two numbers in `verification.md` were
+wrong, a copy-pasted token count and a headline "worst 5.95e-14" that the table
+two lines above contradicted with 2.067e-11. Both came from summarising by hand
+rather than from re-deriving through the shipped comparator. The number in a
+verification document must come out of the same code path the tool uses.
+
+**A fifth upstream find, from the benchmark itself:** the nonlocal
+`TransferCS.txt` reference has 180 angles where the shipped deck and code produce
+179. Rather than wave it off as compiler noise, the mtimes settle it: the
+nonlocal reference output is dated 2016-04-12, a month BEFORE the deck it ships
+with (2016-05-13), while the local reference is same-day as its deck and matches
+exactly. The 179 shared angles agree to 1.3e-12. The comparator was NOT relaxed
+to absorb this; it takes one declared deviation with both counts pinned
+(`--prefix-ok TransferCS.txt:360:358`), and refuses to fire on any other count.
+The general principle: when a benchmark disagrees, find out whose fault it is
+before deciding what to do about it, and if the answer is "upstream", encode the
+exception narrowly enough that a real regression still fails.
+
+**Also worth recording, on the code rather than the skill:** the review surfaced
+three genuine upstream defects in NLAT, none of which affect the shipped
+benchmarks but all of which affect a user driving the code themselves.
+`front_end.f90:476` reads a neutron diffuseness into `DeuteronScatParameters(8,3)`
+where `(9,3)` belongs, so a user-defined nonlocal ADWA deck silently gets zero
+real-volume diffuseness for the neutron. Print flags 16 and 17 are swapped
+between the parser's comments and `diffCS.f90`'s use of them. And the convergence
+tolerance the decks label "percent" is a dimensionless relative tolerance, so the
+default 0.001 means 0.1 percent, not 0.001 percent. Separately, the paper's
+Sec. 6.4 advice to raise the small-radius cutoff from 2 to 3 at
+`StepSize = 0.01` fm **cannot be followed in the released code**: there is no
+such input, the value is hardcoded as `nmin = int(2*L)` in `nm.f90`, and the two
+distributed decks both use 0.01. Worth an email to Nunes.
+
 ## 2026-07-21: pikoe, and a guard that watched the wrong path
 
 **Why we tried it:** Sixth per-code skill, first of the Wave 1b optical-potential

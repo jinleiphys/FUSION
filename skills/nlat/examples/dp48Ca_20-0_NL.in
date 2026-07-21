@@ -1,0 +1,152 @@
+5                       What Calculation? 1=n+p (B), 2=N+A (B), 3=d+A (S), 4=N+A (S), 5=(d,N), 6=(N,d)
+ 
+0.010                   Step Size
+30.000                  Maximum Radius
+20.000                  Elab
+20                      Lmax
+2.946                   Q-Value
+ 
+1                       Pre-Defined Deuteron Binding Potential. [1]=Gaussian
+ 
+1     48                Mass number of fragement and core (N+A BOUND STATE)
+0     20                Charge of fragement and core
+0.5   0.0               Spin of fragement and core
+1.0   1.0               Parity of fragement and core
+1     1.5               L and J of Bound State
+2                       Number of nodes in bound state?
+1                       What Local Potential To Use? (1=User defined)
+50.301   1.250  0.650   Local Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Real Surface Depth, Radius, Diffuseness
+6.000    1.250  0.650   Local Real Spin-Orbit Depth, Radius, Diffuseness
+1.250                   Local Coulomb Radius
+1                       Use Nonlocality? [0]=No, [1]=Yes
+1                       What Nonlocal Potential? (1=User defined, 2=Read in)
+0.000    0.000  0.000   Local Part of NL: Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Real Surface Depth, Radius, Diffuseness
+6.000    1.250  0.650   Local Part of NL: Real Spin-Orbit Depth, Radius, Diffuseness
+1.220                   Local Part of NL: Coulomb Radius
+63.040   1.250  0.650   Nonlocal Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Real Surface Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Real Spin-Orbit Depth, Radius, Diffuseness
+0.850                   Beta: Range of Nonlocality
+ 
+2     48                Mass number of projectile and target (NUCLEON SCATTERING STATE)
+1     20                Charge of projectile and target
+1.0   0.0               Spin of projectile and target
+1.0   1.0               Parity of projectile and target
+1                       What Local Potential? (1=Deuteron Optical Potential, 2=Nucleon Potentials)
+1                       What Local Potential To Use? (1=User defined, 2=Pre-defined)
+97.842   1.251  0.629   Local Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Imag Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Real Surface Depth, Radius, Diffuseness
+8.697    1.236  0.440   Local Imag Surface Depth, Radius, Diffuseness
+7.180    1.220  0.650   Local Real Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Imag Spin-Orbit Depth, Radius, Diffuseness
+1.220                   Local Coulomb Radius
+1                       Use Nonlocality? [0]=No, [1]=Yes
+2                       What Type of Nonlocal Potential? (1=Deuteron Potential, 2=Nucleon Potentials)
+1                       What Local Nucleon Potentials To Use? (1=User defined, 2=Pre-defined)
+0.000    0.000  0.000   Local Part of NL: Neutron Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Neutron Imag Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Neutron Real Surface Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Neutron Imag Surface Depth, Radius, Diffuseness
+7.180    1.220  0.650   Local Part of NL: Neutron Real Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Neutron Imag Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Proton Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Proton Imag Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Proton Real Surface Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Proton Imag Surface Depth, Radius, Diffuseness
+7.180    1.220  0.650   Local Part of NL: Proton Real Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Proton Imag Spin-Orbit Depth, Radius, Diffuseness
+1.220                   Local Part of NL: Proton Coulomb Radius
+71.000   1.220  0.650   Nonlocal Neutron Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Neutron Imag Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Neutron Real Surface Depth, Radius, Diffuseness
+15.000   1.220  0.470   Nonlocal Neutron Imag Surface Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Neutron Real Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Neutron  Imag Spin-Orbit Depth, Radius, Diffuseness
+0.850                   Neutron Beta
+71.000   1.220  0.650   Nonlocal Proton Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Proton Imag Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Proton Real Surface Depth, Radius, Diffuseness
+15.000   1.220  0.470   Nonlocal Proton Imag Surface Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Proton Real Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Proton Imag Spin-Orbit Depth, Radius, Diffuseness
+0.850                   Proton Beta
+ 
+1     49                Mass number of projectile and target (NUCLEON SCATTERING STATE)
+1     20                Charge of projectile and target
+0.5   1.5               Spin of projectile and target
+1.0   1.0               Parity of projectile and target
+1                       What Local Potential To Use? (1=User defined, 2=Pre-defined)
+47.842   1.251  0.629   Local Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Imag Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Real Surface Depth, Radius, Diffuseness
+8.697    1.236  0.440   Local Imag Surface Depth, Radius, Diffuseness
+7.180    1.220  0.650   Local Real Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Imag Spin-Orbit Depth, Radius, Diffuseness
+1.220                   Local Coulomb Radius
+1                       Use Nonlocality? [0]=No, [1]=Yes
+1                       What Nonlocal Potential? (1=User defined, 2=Pre-defined, 3=Read in)
+0.000    0.000  0.000   Local Part of NL: Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Imag Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Real Surface Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Imag Surface Depth, Radius, Diffuseness
+7.180    1.220  0.650   Local Part of NL: Real Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Local Part of NL: Imag Spin-Orbit Depth, Radius, Diffuseness
+1.220                   Local Part of NL: Coulomb Radius
+71.000   1.220  0.650   Nonlocal Real Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Imag Volume Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Real Surface Depth, Radius, Diffuseness
+15.000   1.220  0.470   Nonlocal Imag Surface Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Real Spin-Orbit Depth, Radius, Diffuseness
+0.000    0.000  0.000   Nonlocal Imag Spin-Orbit Depth, Radius, Diffuseness
+0.850                   Beta: Range of Nonlocality
+
+931.4940                Mass Unit
+20                      Number of Mesh Points for Gaussian NL Integration
+0.00001                 Step in theta when calculating the spherical harmonics
+2.00000                 Rmatch for n+p Bound State
+2.50000                 Matching radius for nucleon bound state
+-20.00000               Energy to start searching for bound state
+0.00100                 Energy step when scanning for bound state
+20.00000                Energy to back up after each iteration in nonlocal bound state
+0.00100                 Percent diff in energy at convergence of nonlocal bound state
+0.00100                 % Diff of Log Deriv. at Convergence
+0.05000                 Step size for the source in d+A nonlocal integration
+15.00000                Maximum radius to calculate nonlocal adiabatic source
+4.00000                 Maximum radius of dr integral in nonlocal adiabatic source
+1.20000                 Maximum radius of ds integral in nonlocal adiabatic source
+15                      Number Of Mesh Points for d+A Source, dr Integral
+2                       Number Of Mesh Points for d+A Source, theta_r Integral
+30                      Number Of Mesh Points for d+A Source, ds Integral
+30                      Number Of Mesh Points for d+A Source, theta_s Integral
+6                       Number Of Mesh Points for d+A Source, phi_s Integral
+20.00000                Maximum value of dR integral in calculation of T-matrix
+20.00000                Maximum value of dr integral in calculation of T-matrix
+30                      Number Of Mesh Points for T-Matrix Angular Integral
+30                      Number Of Mesh Points for T-Matrix dR Radial Integral
+30                      Number Of Mesh Points for T-Matrix dr Radial Integral
+1.00000                 Angular step when calculating transfer cross section
+1.00000                 Angular step when calculating elastic cross section
+
+NONLOCAL_SAMPLE
+1                       DeuteronBoundWF.txt (0=DO NOT PRINT, 1=PRINT)
+1                       NucleonBoundWF.txt
+1                       DeuteronScatWFs.txt
+1                       NucleonScatWFs.txt
+1                       LocalBoundWF.txt
+1                       NonlocalBoundWF.txt
+1                       DeuteronLocalIntegral.txt
+1                       NucleonLocalIntegral.txt
+1                       DeuteronNonlocalIntegral.txt
+1                       NucleonNonlocalIntegral.txt
+1                       DeuteronLocalSmatrix.txt
+1                       NucleonLocalSmatrix.txt
+1                       DeuteronNonlocalSmatrix.txt
+1                       NucleonNonlocalSmatrix.txt
+1                       DeuteronRatioToRuth.txt
+1                       NucleonRatioToRuth.txt
+1                       DeuteronElasticCS.txt
+1                       NucleonElasticCS.txt
+1                       TransferCS.txt
