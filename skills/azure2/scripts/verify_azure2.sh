@@ -24,7 +24,7 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 SKILL="$(cd "$HERE/.." && pwd)"
-CASE="${1:-16O}"
+CASE="${1:-all}"
 
 BIN="${AZURE2_BIN:-}"
 if [ -z "$BIN" ]; then
@@ -146,9 +146,41 @@ verify_16O () {
   rm -rf "$TMP"
 }
 
+verify_14N () {
+  local SRC="$SKILL/examples/14N_pg_15O_679"
+  echo
+  echo "case 14N(p,gamma)15O, 6.79 MeV transition  [same paper, Table II/III/IV]"
+  local TMP D; TMP="$(mktemp -d)"; D="$TMP/14N"
+  mkdir -p "$D"; cp -R "$SRC/." "$D/"
+  rm -rf "$D/output" "$D/checks"; mkdir -p "$D/output" "$D/checks"
+
+  bash "$HERE/run_azure2.sh" "$D/14N_pg_15O_679.azr" 3 >/dev/null || {
+    fail "extrapolation run"; rm -rf "$TMP"; return; }
+  local s0
+  s0="$(awk 'NR==1{print $5*1000}' "$D/output/AZUREOut_aa=1_R=2.extrap" 2>/dev/null || true)"
+  if [ -z "$s0" ]; then fail "could not read S(0) from the output"; rm -rf "$TMP"; return; fi
+  printf "  S_6.79 at E_cm = 1 keV: %s keV b\n" "$s0"
+
+  if rel_ok "$s0" 1.2572 0.002; then
+    pass "S_6.79(0) reproduces this deck's pinned 1.2572 keV b (0.2%)"
+  else
+    fail "S_6.79(0) = $s0, pinned value is 1.2572 keV b"
+  fi
+  # The paper's OWN caption puts a 0.1 keV b data-selection sensitivity on this
+  # number, so 5% is the honest window, not a generous one.
+  if rel_ok "$s0" 1.30 0.05; then
+    pass "S_6.79(0) within 5% of the published 1.30 keV b (actual -3.2%)"
+  else
+    fail "S_6.79(0) = $s0 is not within 5% of the published 1.30"
+  fi
+  rm -rf "$TMP"
+}
+
 case "$CASE" in
-  16O|all) verify_16O ;;
-  *) echo "verify_azure2: unknown case '$CASE' (have: 16O, all)" >&2; exit 2 ;;
+  16O) verify_16O ;;
+  14N) verify_14N ;;
+  all) verify_16O; verify_14N ;;
+  *) echo "verify_azure2: unknown case '$CASE' (have: 16O, 14N, all)" >&2; exit 2 ;;
 esac
 
 echo

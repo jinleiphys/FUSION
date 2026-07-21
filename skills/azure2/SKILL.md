@@ -167,6 +167,18 @@ and Table V. `scripts/verify_azure2.sh` checks three levels:
 L2c is the only check independent of the paper's own number, and it is the
 strongest evidence the external-capture machinery is wired correctly.
 
+**14N(p,gamma)15O, the 6.79 MeV transition**, from Tables II and III of the same
+paper: S_6.79(0) = **1.257 keV b** against the published **1.30**, i.e. **-3.2%**.
+That is inside the 0.1 keV b data-selection sensitivity the paper's own Table IV
+caption puts on this number. Deliberately partial: it is one transition of seven,
+because the rest are not reconstructable (below). It is the largest one, 72% of
+the total, and is tractable precisely because the paper says its resonance term
+is "added incoherently", so no relative sign is needed. Checks: dummy levels
+inert across 15/20/30 MeV, channel radius flat to 1.6% over 5.0-6.0 fm, ANC
+scaling within 2% of exact C^2, and the resonance worth 0.6% at E -> 0, which
+bounds the paper's unstated M1-vs-E2 multipolarity to an immaterial effect.
+Note ac = **5.5 fm** here, not the 5.0 fm of the 16O case.
+
 The −5.7% is real and its causes were bounded, not waved away: the channel
 radius (0.4%), the resonance parameters (0.02 keV b), the li = 3 pathway
 (0.07%), nuclear masses, lab-vs-CM energy, GSL Coulomb functions and the
@@ -187,9 +199,9 @@ the answer.
 
 The lesson to carry: **a table of results is only an anchor if the table of
 inputs is complete, including signs and phases.** Check the input side before
-promising a benchmark. The tractable subset here is the 6.79 MeV transition
-(72% of the total, dominated by external capture, and explicitly "added
-incoherently" so no sign ambiguity), which is not yet built.
+promising a benchmark. The tractable subset, the 6.79 MeV transition (72% of the total, dominated by
+external capture, explicitly "added incoherently" so no sign ambiguity), **is
+built**: see `examples/14N_pg_15O_679/`.
 
 ## References
 
