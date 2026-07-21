@@ -17,7 +17,7 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 
 - [ ] Port the existing ~30 research skills (writing, review, literature, figures) to FUSION format; strip Claude-Code-only mechanics per skill
 - [ ] TALYS follow-up: the 11 GB install (8.6 GB structure DB) is the heaviest skill so far and will dominate any `install.sh` bundle in Phase 4; decide whether the distribution offers TALYS as an opt-in extra rather than a default [user decision]
-- [ ] **New Wave 1b from the community optical-potential code list (2026-07-20)**, ahead of Wave 2 because each is small, CPC-published-and-distributed (openness already settled), ships author test cases, and sits on an active research line. Order: **pikoe** (Ogata/Yoshida/Chazono, DWIA proton knockout; QFS-RB invited talk + quenching paper, Yoshida is a co-author), **NLAT** (Titus/Ross/Nunes, nonlocal ADWA/DWBA transfer; independent cross-check of the LG18891CR nonlocality engine), **CNOK** (Glauber knockout; partner for the IAV-vs-Glauber line), **SWANLOP + SIDES** as a pair (nonlocal-OMP scattering, siblings of COLOSS's Perey-Buck path)
+- [ ] **New Wave 1b from the community optical-potential code list (2026-07-20)**, ahead of Wave 2 because each is small, CPC-published-and-distributed (openness already settled), ships author test cases, and sits on an active research line. Order: ~~**pikoe**~~ (done 2026-07-21), **NLAT** (next) (Titus/Ross/Nunes, nonlocal ADWA/DWBA transfer; independent cross-check of the LG18891CR nonlocality engine), **CNOK** (Glauber knockout; partner for the IAV-vs-Glauber line), **SWANLOP + SIDES** as a pair (nonlocal-OMP scattering, siblings of COLOSS's Perey-Buck path)
 - [ ] Look at **JITR** (Beyer, Python R-matrix built for calibration/UQ, github.com/beykyle/jitr) before deciding on a skill: it is the closest external code to Line D / DREAM / the emulator work, so it may be more useful as something to read and compare against than as a skill
 - [ ] Verify publications for JITR and YAHFC, and licenses for the Alex Brown bundle, before any of them get a skill (open repo alone does not satisfy the hard rule)
 - [ ] Decide FRESCO upstream: the skill builds I-Thompson/fresco, but LLNL/Frescox is the actively maintained fork [user decision]
@@ -26,7 +26,7 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 - [ ] Then Wave 2 community heavyweights: KSHELL, GEMINI++, GEF, AZURE2, SkyNet
 - [ ] Eligible Lei codes when convenient: SLAM.jl, PINN-ECS, inhomoR (COLOSS done)
 - [ ] Each per-code skill meets the quality bar in skills-catalog.md (install from public source, verified deck examples, run/parse, benchmark to N digits with a CLEAN-ROOM build test, failure modes) before it ships. Since 2026-07-20 this also requires a **Codex adversarial pass** and **live citation verification**, and the skill must declare its benchmark tier (see CLAUDE.md Key decisions)
-- [ ] **pikoe skill, IN PROGRESS** (2026-07-20). Source fetched and building (single Fortran 90 file, gfortran, ~3 s); sample 1 (12C(p,2p)11B at 392 MeV, TDX normal kinematics) runs clean and writes its output table. Remaining: run samples 2 to 5, establish the internal-consistency checks that stand in for the missing reference output (sample1 normal vs sample4 inverse kinematics are the same reaction; sample2 vs sample3 are the same observable at 392 vs 100 MeV), write SKILL.md + input-format.md from `input_man.txt`, then Codex pass. Ships as a tier-2 benchmark, stated plainly
+- [ ] **pikoe follow-up**: pin the MD case (12Cp2pMD.cnt, 392A MeV momentum distributions). It is the one shipped deck not yet measured to completion (over an hour of CPU); `check_pikoe.py` reports SKIPPED for it rather than passing, so nothing is claimed that was not run. MD100 is pinned (LG peak 36.724, centroid -63.9691 MeV/c). Also worth an opportunistic email to the authors for the missing reference output (Yoshida is a co-author and the QFS-RB inviter); that would lift pikoe from figure-anchored to tier 1
 
 ## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki + semantic relations)
 
@@ -104,10 +104,23 @@ documented reference values) cannot be run as things stand. Three options:
 (a) is still worth doing opportunistically, since the packaging defect is the
 authors' and they likely do not know, but it is no longer blocking.
 
-Drop the PDFs anywhere convenient and point me at the directory. Papers 1 to 3
-are also worth ingesting into the literature-wiki afterwards: all three sit on
-active research lines (knockout/QFS, nonlocality, Glauber-vs-IAV) and none of
-them currently has a wiki source page.
+**All five PDFs delivered 2026-07-21** and read in full (structured extractions
+of the program summaries, formalism, test cases and input formats). The pikoe
+paper was used the same day to build the pikoe skill, where it turned out to be
+worth more than expected: its five figures correspond exactly to the five shipped
+sample decks and carry numeric axes, so it supplies the quantitative benchmark
+that the distribution's missing reference output cannot.
+
+Still open: ingesting all five into the literature-wiki. The ingest is paused at
+the vocabulary-approval step (proposed: methods `dwia`, `johnson-tandy-adwa`,
+`nonlocal-iteration-scheme`, `nonlocal-matrix-inversion-scheme`,
+`t-rho-rho-folding`; observables `residue-momentum-distribution`,
+`triple-differential-cs`; system `16c-12c`; five code entities plus lead-author
+entities). Two findings from the reading worth filing when it resumes: SIDES
+defines itself against NLAT by name ("without resorting to any ad-hoc seed as
+required in iterative methods [4,13]", where [4] is NLAT), which is a real
+methodological debate page; and NLAT's headline "4% accuracy" and "Ed = 10 to 70
+MeV" appear only in its abstract, never derived in the body.
 
 ## Repo hygiene
 
@@ -118,6 +131,8 @@ them currently has a wiki source page.
 - TALYS code paper: Koning, Hilaire, Goriely, *TALYS: modeling of nuclear reactions*, Eur. Phys. J. A **59**, 131 (2023), DOI `10.1140/epja/s10050-023-01034-3`. Wiki precheck on 2026-07-20 returned **Related-only**: TALYS is named in 11 pages (methods/hauser-feshbach, entities/koning-aj, entities/ripl-library, and others) but has no source page of its own, so every mention is currently unanchored. Open access on SpringerLink, so no download trip needed.
 
 ## Completed
+
+- [x] 2026-07-21: Sixth per-code skill: pikoe (skills/pikoe/, Ogata + Yoshida + Chazono, CPC 297, 109058 (2024), MIT). Exclusive (p,pN) knockout in DWIA: TDX, QDX, analyzing power, residue momentum distributions, normal and inverse kinematics. install/run/verify/check scripts; the run wrapper recreates the upstream sampleN/ layout with symlinks so the shipped decks are used verbatim. **Benchmark is figure-anchored, not reference-anchored**: upstream ships no reference output (readme documents one per sample directory, archive contains none, in both releases), but the five decks are exactly the paper's five figures, so peaks were compared against numeric axes (TDX 127.03 at 40.5 deg and 128.32 at 61.0 deg vs about 130 and 135; QDX 0.18147 at 185 MeV and 0.17408 at 325 MeV vs about 0.175 and 0.168; LG peak 36.724 vs about 37). Codex adversarial pass confirmed **24 defects, all fixed**, four of them ship blockers (an rm -rf guarding a different path than it deleted; zero-byte tables counted as results; a skipped check printing VERIFY OK; an unreachable diagnostic under set -euo pipefail). FUSION now has 6 per-code skills (FRESCO, COLOSS, CCFULL, GSM, TALYS, pikoe)
 
 - [x] 2026-07-20: Fifth per-code skill: TALYS (skills/talys/, Koning + Hilaire + Goriely, EPJA 59, 131 (2023), MIT). install/run/verify scripts; 5 clean-room sample benchmarks (n-Nb093-14MeV-full, n-Sn120-omp-KD03, n-Th232-fis-wkb, n-Os187-astro-ng, p-Mo100-medical) reproducing 1415 of 1438 distributed reference files byte for byte, the remaining 18 data files to ~6 sig figs on 4633 observables (the precision of TALYS's own output format). Three traps found and handled, all of which produce confident-looking wrong results: locale-collation source glob dropping 13 files without LC_ALL=C; character(len=132) path cap forcing a short install root; and **exit status 0 on fatal error** (the CCFULL false-positive trap in a new guise). Citations verified live against CrossRef + INSPIRE; input reference written from the shipped 890-page manual, not from memory. FUSION now has 5 per-code skills (FRESCO, COLOSS, CCFULL, GSM, TALYS)
 - [x] 2026-07-20: Fourth per-code skill: GSM (skills/gsm/, Michel + Ploszajczak, LNP 983 Springer 2021, github.com/GSMUTNSR/book_codes, AFL v3.0). Covers the whole Berggren/Gamow stack: one-body Gamow states, pole and antibound searches, complex-scaling widths, two-body and many-body GSM, GSM-CC. install_gsm.sh clones + unpacks the shipped zips + patches + builds any of 10 targets; run_gsm.sh runs with a clean-room guard; compare_gsm.sh does magnitude-split numeric comparison (a plain diff is wrong here: shipped references are GSM-1.0, sources are GSM-2.0, print format changed). Three clean-room benchmarks vs the book's own exercise outputs: Ch2 Ex XV neutron resonance 11 sig figs / 35 observables, Ch3 Ex XIII Berggren diagonalization in a foreign basis 9 sig figs / 562, Ch5 Ex II 18O many-body 8 sig figs / 2539 (ground state 12 figs). Found + patched an upstream infinite recursion in numlib `finite()` (see devlog). FUSION now has 4 per-code skills (FRESCO, COLOSS, CCFULL, GSM)

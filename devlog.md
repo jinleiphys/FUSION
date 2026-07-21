@@ -2,6 +2,62 @@
 
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 
+## 2026-07-21: pikoe, and a guard that watched the wrong path
+
+**Why we tried it:** Sixth per-code skill, first of the Wave 1b optical-potential
+batch, built the same day the user delivered the five CPC papers.
+
+**What failed:** Codex's adversarial pass found 24 defects in a skill that had
+already passed its own clean-room verification twice. Four were ship blockers,
+and the worst is the one worth naming: `run_pikoe.sh` carried a comment saying it
+had fixed "the self-destruct failure the TALYS wrapper hit", and it had, for the
+exact case TALYS hit. The guard compared the deck's directory against `$WORK/case`
+while the `rm -rf` two lines below deleted `$WORK`. So a deck sitting in the
+workdir was destroyed before it could be read, and pointing the workdir at the
+install tree deleted the binary and 50 MB of data tables. Second blocker: the
+success test counted `.dat` files without testing size, and pikoe creates every
+output file named in the deck header at zero bytes before computing anything, so
+a run that produced nothing reported success. Third: `verify_pikoe.sh MD` printed
+`VERIFY OK` having compared zero anchors, because no pin existed for that case.
+Fourth: under `set -euo pipefail`, `ls *.dat` on an empty glob aborted the script
+before the "no data table" message could print, so the most informative failure
+mode produced silence.
+
+**Root cause:** The first is the more instructive one. Knowing a failure shape
+and having fixed it once produces a comment claiming immunity, and the comment
+then discourages re-reading the code beneath it. The fix had been applied to the
+path that appeared in the previous incident rather than to the path the
+destructive command actually names. A guard is only meaningful against the exact
+argument of the operation it guards.
+
+The second is the fourth consecutive per-code skill where a failed run can look
+successful, and each time in a new costume: CCFULL leaves a stale reference file
+behind, GSM exits 139 with an empty stderr, TALYS exits 0 on a fatal error, pikoe
+opens every output file empty at startup. The common shape is now clear enough to
+state as a rule: **verify content, never presence, and never status.**
+
+**Lesson:** Three. First, every destructive command needs its guard written
+against its own literal argument, and a comment asserting a class of bug is fixed
+should be treated as a claim to re-test, not as evidence. Second, "does the
+output exist" is never a completion check for a scientific code; only size and
+content are. Third, the review must run the scripts, not just read them: the
+`.mod` pollution (gfortran writes module files into the caller's working
+directory, so building from the skill directory littered it with six `.mod`
+files, which then landed in the first commit) was invisible in review and
+obvious in `git status`. Fixed with `-J`.
+
+**Also worth recording:** the benchmark tier came out better than the 2026-07-20
+ruling assumed. pikoe genuinely ships no reference output, so the FUSION standard
+is unreachable, but its five sample decks are exactly the five figures of the CPC
+paper and those figures carry numeric axes. Reading peaks off them gives a real
+quantitative check (a few percent, positions to the plotted resolution) rather
+than the "builds and looks sensible" of a plain tier-2 skill. Where a paper's
+figures correspond one-to-one to its shipped decks, that is a benchmark, and it
+is worth checking for before settling for tier 2. The MD case (392A MeV, over an
+hour of CPU) was left explicitly unpinned rather than filled in from the figure
+by eye; an early draft of the checker did carry two such eyeballed pins, which is
+precisely the fabricated-anchor failure the clean-room rule exists to prevent.
+
 ## 2026-07-20: the TALYS skill's own verification harness had the false-positive bug it was written to prevent
 
 **Why we tried it:** User directive to run Codex adversarial cross-validation on each finished skill instead of shipping on Claude's self-check alone.
