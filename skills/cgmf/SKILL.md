@@ -24,11 +24,12 @@ in FUSION and GEF (FreeBASIC, no Apple-Silicon toolchain) is not.
    bit-identical output. The repo ships byte-exact `.reference` history files,
    and this skill's `verify_cgmf.sh` reproduces them exactly. That is a genuine
    **tier 1** benchmark, unusual for a Monte Carlo code.
-2. **Content is the verdict, never exit status.** cgmf.x can fail to find its
-   data tables and `exit(-1)` after printing to stderr; a diverged run is
-   detectable only in the output. `run_cgmf.sh` asserts a well-formed history
-   file whose header matches the request and a finite positive `<nu>_tot`, and
-   it treats any stderr as failure.
+2. **Content is the verdict; the exit status is necessary but not sufficient.**
+   cgmf.x can fail to find its data tables and `exit(-1)`, but it can also exit
+   0 having written a truncated or diverged history, so a clean exit alone
+   proves nothing. `run_cgmf.sh` requires all of: a zero exit, empty stderr, a
+   header matching the request, exactly 2*nevents fragment blocks, and a finite
+   positive `<nu>_tot`.
 3. **cgmf.x never reads the current directory for its data.** It resolves the
    102 MB data path as `-d`, then `$CGMFDATA`, then two compiled-in paths. The
    wrappers export `CGMFDATA` from the installer so a run works from any cwd.
@@ -75,8 +76,10 @@ cgmf.x -i <ZAID> -e <Einc_MeV> -n <nevents> [-s <start>] [-f <base>] [-t <window
   rejected.
 - `-d` data directory, overriding `$CGMFDATA`.
 
-There is no `-h` (an unknown flag prints `illegal option` to stderr but still
-exits 0) and no seed flag; reproducibility is structural (rule 1).
+There is no `-h`: an unknown flag makes getopt print `illegal option` to stderr
+and the run then continues, so with valid `-i -e -n` it still completes, but
+`cgmf.x -h` alone (no required args) segfaults. There is no seed flag;
+reproducibility is structural (rule 1).
 
 Full field-level reference: `references/input-format.md` and
 `references/output-format.md`, both derived from the source and the shipped

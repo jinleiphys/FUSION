@@ -24,6 +24,19 @@ NEV="${3:?missing number of events}"
 OUTBASE="${4:-histories.cgmf}"
 WORK="${5:-$(pwd)/cgmf-run}"
 
+# Validate the numeric arguments BEFORE running cgmf.x. Unvalidated input reaches
+# both C's atoi (which reads "1.5" as 1 and "abc" as 0, then segfaults on a zero
+# event count) and this script's own `$(( 2 * NEV ))` arithmetic (which errors on
+# a non-integer). An earlier version passed "1.5" straight through and reported
+# "OK ... over 1.5 events". Reject anything that is not what cgmf.x actually
+# accepts, with a clear message, up front.
+case "$ZAID" in ''|*[!0-9]*) echo "run_cgmf: ZAID must be a positive integer (got '$ZAID')" >&2; exit 2;; esac
+[ "$ZAID" -gt 0 ] 2>/dev/null || { echo "run_cgmf: ZAID must be > 0 (got '$ZAID')" >&2; exit 2; }
+case "$NEV" in ''|-|*[!0-9-]*|*-*[!0-9]*|?*-*) echo "run_cgmf: nevents must be a nonzero integer (got '$NEV')" >&2; exit 2;; esac
+[ "$NEV" -ne 0 ] 2>/dev/null || { echo "run_cgmf: nevents must be nonzero (got '$NEV')" >&2; exit 2; }
+python3 -c "import sys; float('$EINC')" 2>/dev/null || { echo "run_cgmf: Einc must be a number in MeV (got '$EINC')" >&2; exit 2; }
+python3 -c "import sys; sys.exit(0 if float('$EINC')>=0 else 1)" 2>/dev/null || { echo "run_cgmf: Einc must be >= 0 (got '$EINC')" >&2; exit 2; }
+
 # Resolve binary and data directory from the installer's last two lines.
 # CGMF_BIN / CGMFDATA may be supplied directly (used by the self-test to inject
 # a stub binary); otherwise resolve them from the installer.
@@ -75,10 +88,13 @@ fi
 # with a real numeric test, not string surgery.
 if [ "$NEV" -lt 0 ] 2>/dev/null; then
   want=$(( -NEV ))
-  # Each event contributes two scission fragments (light + heavy).
+  # Each event contributes exactly two scission fragments (light + heavy), so a
+  # complete yields file has exactly 2*want records. Require equality, not a
+  # lower bound: an overlong file is as wrong as a short one, and the real
+  # cgmf.x produces the exact count.
   recs="$(grep -c . "$OUTFILE" || true)"
-  if [ "$recs" -lt $(( 2 * want )) ]; then
-    echo "run_cgmf: yields file has $recs records, expected $(( 2 * want )) for $want events" >&2
+  if [ "$recs" -ne $(( 2 * want )) ]; then
+    echo "run_cgmf: yields file has $recs records, expected exactly $(( 2 * want )) for $want events" >&2
     tail -3 "$OUTFILE" >&2; exit 1
   fi
   echo "run_cgmf: OK, yields in $OUTFILE ($recs fragment records for $want events)"

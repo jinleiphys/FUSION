@@ -75,5 +75,5 @@ from CGMFtk's `nubartot()` on the history file.
 ```bash
 bash ../../scripts/install_cgmf.sh
 bash ../../scripts/verify_cgmf.sh       # L1 (bit-exact) + L2 (nu-bar)
-bash ../../scripts/selftest_cgmf.sh     # the harness guards, 7 cases
+bash ../../scripts/selftest_cgmf.sh     # the harness guards
 ```

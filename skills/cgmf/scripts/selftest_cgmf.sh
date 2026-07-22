@@ -52,7 +52,16 @@ case "$mode" in
   nonzero_exit) emit_event "\$nev" > "\${base}.0"; echo "<nu>_tot = 3.8"; exit 99;;
   truncated)    emit_event 1 > "\${base}.0"   # only 1 event for a many-event request
                 echo "<nu>_tot = 3.8"; exit 0;;
+  wrong_einc)   # full-length body so ONLY the Einc header guard can reject it,
+                # not the fragment-count guard.
+                { printf '# %s 9.9 1e-08\n' "\$zaid"
+                  for k in \$(seq 1 \$((2*\$nev))); do echo " 1 1 0 0 1 0 0 0 0 0"; done; } > "\${base}.0"
+                echo "<nu>_tot = 3.8"; exit 0;;
+  stderr_only)  emit_event "\$nev" > "\${base}.0"; echo "<nu>_tot = 3.8"
+                echo "some warning" >&2; exit 0;;
   good_yields)  for k in \$(seq 1 \$((2*\${nev#-}))); do echo "44 115 103.9 22.1 10.5 1 4000 100 -2000"; done > "\${base}.0"
+                echo "Y(Z,A,KE,U,J,Pi,px,py,pz)"; exit 0;;
+  bad_yields)   for k in \$(seq 1 \$((2*\${nev#-}+2))); do echo "44 115 103.9 22.1 10.5 1 4000 100 -2000"; done > "\${base}.0"
                 echo "Y(Z,A,KE,U,J,Pi,px,py,pz)"; exit 0;;
 esac
 STUB
@@ -90,6 +99,32 @@ S="$(make_stub truncated)"
 must_refuse "truncated history (1 event written for a 40-event request)" \
   env CGMF_BIN="$S" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 40 h "$(mktemp -d)"
 rm -f "$S"
+
+S="$(make_stub wrong_einc)"
+must_refuse "history header Einc does not match the request" \
+  env CGMF_BIN="$S" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 40 h "$(mktemp -d)"
+rm -f "$S"
+
+S="$(make_stub stderr_only)"
+must_refuse "stderr written even with exit 0 and valid output" \
+  env CGMF_BIN="$S" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 40 h "$(mktemp -d)"
+rm -f "$S"
+
+S="$(make_stub bad_yields)"
+must_refuse "yields file with the wrong record count (42 for 20 events)" \
+  env CGMF_BIN="$S" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 -20 y "$(mktemp -d)"
+rm -f "$S"
+
+# Malformed numeric arguments must be rejected BEFORE cgmf.x runs. The binary
+# here is irrelevant because validation happens first; use the real one.
+for badn in 1.5 abc 0 ""; do
+  must_refuse "nevents='$badn' rejected up front" \
+    env CGMF_BIN="$REAL_BIN" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 "$badn" h "$(mktemp -d)"
+done
+must_refuse "non-integer ZAID rejected up front" \
+  env CGMF_BIN="$REAL_BIN" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98x 0.0 40 h "$(mktemp -d)"
+must_refuse "non-numeric Einc rejected up front" \
+  env CGMF_BIN="$REAL_BIN" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 abc 40 h "$(mktemp -d)"
 
 echo
 echo "run_cgmf.sh: inputs that must be ACCEPTED"

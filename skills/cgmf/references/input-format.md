@@ -20,8 +20,9 @@ flag takes an argument.
 | `-d` | data-directory path, overriding `$CGMFDATA` and the compiled-in default | path | "" |
 
 No `-h`/help flag exists: an unknown flag makes `getopt` print `illegal option`
-to stderr, though the run still exits 0 (`cgmf.cpp:402-403`). There is no
-random-seed flag; reproducibility is structural (below).
+to stderr and the run continues (`cgmf.cpp:402-403`), so it completes only if the
+required `-i -e -n` are also present; `cgmf.x -h` on its own segfaults. There is
+no random-seed flag; reproducibility is structural (below).
 
 ## ZAID and energy conventions
 
