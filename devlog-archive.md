@@ -2,6 +2,58 @@
 
 Older entries moved out of devlog.md to keep the auto-loaded portion under ~5 KB. NOT auto-imported.
 
+## 2026-07-21: four skills, one failure shape, consolidated
+
+Full text of all four entries in `devlog-archive.md`. Consolidated here because
+they repeat one theme; every distinct mechanism is preserved below.
+
+**The shape: a failed run that looks successful.** Six distinct mechanisms found
+so far, each in a new costume:
+
+| code | how a failure looked like success |
+|---|---|
+| CCFULL | leaves a stale reference file behind |
+| GSM | exits 139 with empty stderr |
+| TALYS | exits 0 on a fatal error |
+| pikoe | opens every output file at zero bytes before computing |
+| GEF | memoizes completed cases in `ctl/done.ctl`, silently skips, exits 0 |
+| codex plugin (2026-07-22) | orchestration broker dies, task still reports "running" |
+
+**Rule: verify content, never presence, and never status.** Corollary from GEF: a
+scientific code may carry state between runs, so a clean room means clearing that
+state (`ctl/`, a stale `Fitpar.dat`), not just the output directory.
+
+**The second shape: destructive-command guards written against the wrong path.**
+pikoe's `rm -rf` guard tested `$WORK/case` while deleting `$WORK`. NLAT's tested
+whether the install contained the workdir when the danger was the reverse, in a
+function whose comment cited the pikoe incident. AZURE2's (2026-07-22) escaped
+through a symlinked path component. Three times, the third while quoting the
+lesson from the first. **Writing a lesson down, and even citing it at the point
+of use, does not transfer it. What caught all three was an adversarial agent
+running the script with a hostile argument.** The guard must name the same
+operand as the command, and the repro must be written before the guard.
+
+**Verification philosophy, settled 2026-07-21:** the author's reference output is
+produced by the SAME source as your run, so it certifies build integrity only,
+never physics; a genuine physics bug sits in their reference too. Cross-build
+reproduction certifies that same property over more configurations. Measured on
+pikoe: bit-identical across macOS ARM64 gfortran 15.2 and Linux x86_64 gfortran
+13.3, at `-O2`, `-O0` and `-finit-real=snan`, 5642 numbers. Consequence: do not
+email authors for missing reference output. Physics correctness must be carried
+separately, by published figures or tables.
+
+**Other findings that must survive:** GEF is FreeBASIC and Linux-only, the first
+platform-pinned row. `pkill -f GEF64` on a remote one-liner matches the ssh
+session's own command line and self-kills silently. gfortran writes `.mod` files
+into the caller's cwd unless given `-J`, which poisons a rebuild after any
+compiler upgrade with an error naming neither cause nor fix. NLAT carries three
+genuine upstream defects (a `(8,3)`/`(9,3)` index error at `front_end.f90:476`,
+swapped print flags 16/17, a tolerance labelled "percent" that is dimensionless)
+plus a paper recommendation that cannot be followed in the released code; worth
+an email to Nunes. When a benchmark disagrees, find out whose fault it is before
+deciding what to do about it, and encode any upstream exception narrowly enough
+that a real regression still fails.
+
 ## 2026-07-21: "email the authors for the missing reference output" was the wrong plan for two skills at once
 
 **Why we tried it:** pikoe and AZURE2 both ship without reference output, and the

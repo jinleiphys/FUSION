@@ -1,0 +1,100 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 475e6f3..a2588e8 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -109,6 +109,11 @@ add_library(SkyNet SHARED
+   ${SKYNET_LIBS}
+ )
+ 
++# FUSION portability: macOS does not permit undefined symbols in a dylib
++# (Linux resolves them lazily at load time), so the shared library must link
++# its external dependencies (HDF5, GSL, Boost, LAPACK) explicitly.
++target_link_libraries(SkyNet ${SKYNET_EXTERNAL_LIBS})
++
+ # create SWIG Python bindings
+ if(USE_SWIG)
+   SET_SOURCE_FILES_PROPERTIES("src/SkyNet.i" PROPERTIES CPLUSPLUS ON)
+diff --git a/CMakeLists_Requirements.txt b/CMakeLists_Requirements.txt
+index fa66530..23bf5e7 100644
+--- a/CMakeLists_Requirements.txt
++++ b/CMakeLists_Requirements.txt
+@@ -10,7 +10,11 @@ find_package(GSL REQUIRED)
+ set(SKYNET_EXTERNAL_LIBS "${SKYNET_EXTERNAL_LIBS};${GSL_LIBRARIES}")
+ include_directories(${GSL_INCLUDES})
+ 
+-find_package(Boost REQUIRED system filesystem serialization)
++# FUSION portability: Boost.System is header-only since Boost 1.69 and modern
++# Boost CMake configs (>= 1.85) no longer ship a linkable boost_system target,
++# so requesting it as a component fails to configure. Boost.Filesystem no longer
++# needs it linked. Drop it; filesystem and serialization are still required.
++find_package(Boost REQUIRED filesystem serialization)
+ set(SKYNET_EXTERNAL_LIBS "${SKYNET_EXTERNAL_LIBS};${Boost_LIBRARIES}")
+ include_directories(${Boost_INCLUDE_DIRS})
+ 
+diff --git a/src/Utilities/Constants.hpp b/src/Utilities/Constants.hpp
+index a4edae2..370a414 100644
+--- a/src/Utilities/Constants.hpp
++++ b/src/Utilities/Constants.hpp
+@@ -48,15 +48,17 @@ struct ConstantsStruct {
+       * SpeedOfLightInCmPerSec * SpeedOfLightInCmPerSec);
+ 
+   // 2 pi hbar^2 c^2 N_A^{2/3}
+-#if defined(__ICC) || defined(__INTEL_COMPILER)
+-  // we cannot use pow with the Intel compiler, it's a bug:
+-  // https://software.intel.com/en-us/forums/topic/484936
+-  static constexpr double TwoPiHbar2C2NA23 = TwoPiHbar2C2 * 7.13127680E15;
+-
+-#else
+-  static constexpr double TwoPiHbar2C2NA23 = TwoPiHbar2C2
+-      * pow(AvogadroConstantInPerGram, 2.0 / 3.0);
+-#endif
++  // FUSION portability: std::pow is not constexpr outside GCC's extension, so
++  // Apple clang rejects the pow() form. The literal 7131276797594583.0 is the
++  // correctly-rounded IEEE double of pow(6.02214129E23, 2.0/3.0) using the
++  // DOUBLE exponent 2.0/3.0 (= 0.66666666666666663), i.e. exactly the value the
++  // original GCC compile-time pow folds to; it is byte-reproduced by libm
++  // pow(double,double). (Using the exact rational 2/3 would give a different
++  // double, 7131276797594598.0, 15 ULP away, but the code's exponent is the
++  // double 2.0/3.0, so 583 is the faithful value.) This replaces the upstream
++  // compiler fork that hardcoded a 9-figure Intel literal (7.13127680E15),
++  // whose 3.4E-10 relative error would exceed the NSE tolerance of 1E-10.
++  static constexpr double TwoPiHbar2C2NA23 = TwoPiHbar2C2 * 7131276797594583.0;
+ 
+   // k_B / (2 pi hbar^2 c^2)
+   static constexpr double BoltzmannConstantDivBy2PiHbar2C2InPerMeVPerGKPerCm2 =
+diff --git a/src/Utilities/FloatingPointExceptions.hpp b/src/Utilities/FloatingPointExceptions.hpp
+index cddc37d..b4501ce 100644
+--- a/src/Utilities/FloatingPointExceptions.hpp
++++ b/src/Utilities/FloatingPointExceptions.hpp
+@@ -12,11 +12,17 @@
+ // find out whether we are using a GNU compiler, use information given at
+ // http://nadeausoftware.com/articles/2012/10/c_c_tip_how_detect_compiler_name_and_version_using_compiler_predefined_macros
+ 
+-#if (defined(__GNUC__) || defined(__GNUG__))
++// FUSION portability: feenableexcept/fedisableexcept are glibc extensions, not
++// compiler features. Apple clang defines __GNUC__ (it masquerades as GCC 4.2),
++// so the original "is a GNU compiler" test wrongly enabled FPE trapping on
++// macOS and failed to link. The correct test is for glibc. FPE trapping is a
++// debugging aid (raises SIGFPE on NaN/Inf), not physics, so on non-glibc
++// platforms Enable()/Disable() become no-ops and the computed results are
++// unchanged.
++#if (defined(__GNUC__) || defined(__GNUG__)) && defined(__GLIBC__)
+ #define SKYNET_ENABLE_FPE
+ #else
+ #undef SKYNET_ENABLE_FPE
+-#warning "Floating point exceptions are only supported with GNU"
+ #endif
+ 
+ #ifdef SKYNET_ENABLE_FPE
+diff --git a/tests/NSE_screening/NSE_screening.cpp b/tests/NSE_screening/NSE_screening.cpp
+index 29b48ce..71bb20d 100644
+--- a/tests/NSE_screening/NSE_screening.cpp
++++ b/tests/NSE_screening/NSE_screening.cpp
+@@ -17,6 +17,7 @@
+ #include "EquationsOfState/SkyNetScreening.hpp"
+ #include "Reactions/REACLIBReactionLibrary.hpp"
+ #include "Network/NSE.hpp"
++#include "Utilities/Exp10.hpp"
+ #include "Utilities/FloatingPointExceptions.hpp"
+ 
+ int main(int, char**) {
