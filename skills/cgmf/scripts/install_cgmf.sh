@@ -26,10 +26,41 @@ SRCDIR="$ROOT_DIR/CGMF"
 BIN="$SRCDIR/build/utils/cgmf/cgmf.x"
 DATADIR="$SRCDIR/data"
 
+# Prove a binary runs and produces a well-formed history file, rather than
+# assuming its existence means it works. Two events, spontaneous 252Cf, in a
+# scratch dir; assert a clean exit, clean stderr, and the expected header. Runs
+# on BOTH the cache fast path and after a fresh build: an adversarial pass showed
+# the fast path returning a cached binary that just exits nonzero, because
+# presence was checked and behaviour was not. Returns 0 if the binary works.
+probe_binary () {
+  local probe; probe="$(mktemp -d)"
+  local rc
+  set +e
+  ( cd "$probe" && CGMFDATA="$DATADIR" "$BIN" -n 2 -e 0.0 -i 98252 -f probe > run.out 2> run.err )
+  rc=$?
+  set -e
+  if [ "$rc" -ne 0 ]; then
+    echo "install_cgmf: cgmf.x exited $rc on a 2-event probe" >&2
+    tail -5 "$probe/run.err" 2>/dev/null >&2; rm -rf "$probe"; return 1
+  fi
+  if [ -s "$probe/run.err" ]; then
+    echo "install_cgmf: cgmf.x wrote to stderr on a clean probe:" >&2
+    head -5 "$probe/run.err" >&2; rm -rf "$probe"; return 1
+  fi
+  if ! head -1 "$probe/probe.0" 2>/dev/null | grep -q "^# 98252 0"; then
+    echo "install_cgmf: probe history file lacks the expected '# 98252 0' header" >&2
+    rm -rf "$probe"; return 1
+  fi
+  rm -rf "$probe"; return 0
+}
+
 if [ -x "$BIN" ] && [ -d "$DATADIR" ] && [ -z "${CGMF_FORCE:-}" ]; then
-  echo "CGMF=$BIN"
-  echo "CGMFDATA=$DATADIR"
-  exit 0
+  if probe_binary; then
+    echo "CGMF=$BIN"
+    echo "CGMFDATA=$DATADIR"
+    exit 0
+  fi
+  echo "install_cgmf: cached binary failed its probe; rebuilding" >&2
 fi
 
 command -v git   >/dev/null || { echo "install_cgmf: git required" >&2; exit 1; }
@@ -54,28 +85,7 @@ mkdir -p "$SRCDIR/build"
 
 [ -x "$BIN" ] || { echo "install_cgmf: no cgmf.x after build" >&2; exit 1; }
 
-# Prove the binary runs and produces a well-formed history file, rather than
-# assuming a successful link means a working code. Two events, spontaneous
-# 252Cf, in a scratch dir; assert the header line and at least one fragment
-# block, and that stderr is clean. A bad data path fails here loudly.
-probe="$(mktemp -d)"
-set +e
-( cd "$probe" && CGMFDATA="$DATADIR" "$BIN" -n 2 -e 0.0 -i 98252 -f probe > run.out 2> run.err )
-rc=$?
-set -e
-if [ "$rc" -ne 0 ]; then
-  echo "install_cgmf: the built cgmf.x exited $rc on a 2-event probe" >&2
-  tail -5 "$probe/run.err" >&2; rm -rf "$probe"; exit 1
-fi
-if [ -s "$probe/run.err" ]; then
-  echo "install_cgmf: cgmf.x wrote to stderr on a clean probe:" >&2
-  head -5 "$probe/run.err" >&2; rm -rf "$probe"; exit 1
-fi
-if ! head -1 "$probe/probe.0" 2>/dev/null | grep -q "^# 98252 0"; then
-  echo "install_cgmf: probe history file lacks the expected '# 98252 0' header" >&2
-  rm -rf "$probe"; exit 1
-fi
-rm -rf "$probe"
+probe_binary || { echo "install_cgmf: freshly built cgmf.x failed its probe" >&2; exit 1; }
 
 echo "CGMF=$BIN"
 echo "CGMFDATA=$DATADIR"

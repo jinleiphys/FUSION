@@ -38,15 +38,22 @@ make_stub () {
 zaid=""; einc=""; nev=""; base="histories.cgmf"
 while getopts "e:n:i:f:t:d:s:" o; do case \$o in
   e) einc=\$OPTARG;; n) nev=\$OPTARG;; i) zaid=\$OPTARG;; f) base=\$OPTARG;; esac; done
+# emit a complete history of one full event (2 fragment blocks, 10-field headers)
+emit_event () { printf '%s %s 1e-08\n' "# \$zaid" "\$einc"
+  for k in \$(seq 1 \$((2*\${1:-1}))); do echo " 1 1 0 0 1 0 0 0 0 0"; done; }
 case "$mode" in
   stderr_exit)  echo "Cannot find valid path to CGMF data" >&2; exit 255;;
   no_output)    echo "*** Prompt Fission Neutrons ***"; echo "<nu>_tot = 3.8"; exit 0;;
-  wrong_zaid)   printf '# 99999 %s 1e-08\n 1 1 0 0 1 0 0 0 0 0\n' "\$einc" > "\${base}.0"
+  wrong_zaid)   printf '# 99999 %s 1e-08\n 1 1 0 0 1 0 0 0 0 0\n 1 1 0 0 1 0 0 0 0 0\n' "\$einc" > "\${base}.0"
                 echo "<nu>_tot = 3.8"; exit 0;;
-  no_nubar)     printf '# %s %s 1e-08\n 1 1 0 0 1 0 0 0 0 0\n' "\$zaid" "\$einc" > "\${base}.0"
-                echo "no summary here"; exit 0;;
+  no_nubar)     emit_event "\$nev" > "\${base}.0"; echo "no summary here"; exit 0;;
   wrong_result) printf '# %s %s 1e-08\n 9 9 9 9 9 9 9 9 9 9\n' "\$zaid" "\$einc" > "\${base}.0"
                 echo "<nu>_tot = 3.8"; exit 0;;
+  nonzero_exit) emit_event "\$nev" > "\${base}.0"; echo "<nu>_tot = 3.8"; exit 99;;
+  truncated)    emit_event 1 > "\${base}.0"   # only 1 event for a many-event request
+                echo "<nu>_tot = 3.8"; exit 0;;
+  good_yields)  for k in \$(seq 1 \$((2*\${nev#-}))); do echo "44 115 103.9 22.1 10.5 1 4000 100 -2000"; done > "\${base}.0"
+                echo "Y(Z,A,KE,U,J,Pi,px,py,pz)"; exit 0;;
 esac
 STUB
   chmod +x "$f"; echo "$f"
@@ -74,10 +81,26 @@ must_refuse "summary has no finite <nu>_tot" \
   env CGMF_BIN="$S" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 40 h "$(mktemp -d)"
 rm -f "$S"
 
+S="$(make_stub nonzero_exit)"
+must_refuse "nonzero exit with valid-looking output (exit status IS checked)" \
+  env CGMF_BIN="$S" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 40 h "$(mktemp -d)"
+rm -f "$S"
+
+S="$(make_stub truncated)"
+must_refuse "truncated history (1 event written for a 40-event request)" \
+  env CGMF_BIN="$S" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 40 h "$(mktemp -d)"
+rm -f "$S"
+
 echo
-echo "run_cgmf.sh: input that must be ACCEPTED"
+echo "run_cgmf.sh: inputs that must be ACCEPTED"
 must_accept "a real 40-event 252Cf(sf) run" \
   bash "$HERE/run_cgmf.sh" 98252 0.0 40 h "$(mktemp -d)"
+
+# Yields mode (negative n) has no history header; the wrapper must not parse one.
+S="$(make_stub good_yields)"
+must_accept "a yields-mode run (negative n, headerless file)" \
+  env CGMF_BIN="$S" CGMFDATA="$REAL_DATA" bash "$HERE/run_cgmf.sh" 98252 0.0 -20 y "$(mktemp -d)"
+rm -f "$S"
 
 echo
 echo "verify_cgmf.sh: must fail when the output does not match the reference"

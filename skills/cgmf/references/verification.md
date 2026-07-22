@@ -21,18 +21,24 @@ runs the same arguments.
 | 252Cf(sf) | `-n 40 -e 0.0 -i 98252` | **bit-exact**, 0 differing lines |
 | n(thermal)+235U | `-n 40 -e 2.53e-8 -i 92235` | **bit-exact**, 0 differing lines |
 
-Measured on **macOS / Apple Silicon** against LANL's shipped reference, which was
-generated on their own platform. The match being bit-exact across two different
-build environments is a stronger statement than a same-platform reproduction: it
-shows the RNG and the physics are integer-deterministic and platform-independent
-to the last written digit, so it doubles as the cross-build check the FUSION
-standard asks for, achieved for free.
+Measured on **macOS / Apple Silicon** against LANL's shipped reference. What is
+established, and what is not, stated precisely because an earlier draft overclaimed:
 
-**The one honest caveat:** this holds on a matching toolchain. A different
-compiler or optimisation level could in principle perturb the last floating-point
-digits of a trajectory and break the byte match. If a future build stops
-matching, that is a toolchain difference to record, and the physics should then
-be confirmed with an observable (nu-bar) rather than a byte diff.
+- **Established:** this build reproduces the shipped reference byte-for-byte, and
+  a **separate Release-vs-Debug build on the same machine also reproduces it**
+  (checked in an adversarial pass). So the match is stable across at least two
+  build configurations, not a single lucky binary.
+- **Not established:** the shipped reference files carry no compiler or platform
+  metadata, and their local timestamps are just clone times, so it is **not**
+  proven that LANL generated them on a different platform. The honest claim is
+  "the LANL-shipped reference is reproduced bit-for-bit on this macOS/ARM build",
+  not "cross-platform reproduction for free".
+
+**The caveat that remains:** byte-exactness holds on a matching toolchain. A
+different compiler or optimisation level could perturb the last floating-point
+digits of a trajectory and break the match. If a future build stops matching,
+suspect the toolchain, and confirm the physics with an observable (nu-bar) rather
+than a byte diff.
 
 ## L2: physics, average total prompt-neutron multiplicity of 252Cf(sf)
 

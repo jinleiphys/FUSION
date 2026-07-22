@@ -41,8 +41,13 @@ fail () { echo "  FAIL  $1"; FAIL=1; }
 # rank order, which is exactly how the repo's own CTest reconstructs it.
 serial_ref () {
   local testdir="$1" out="$2"
-  cat "$SRC/utils/cgmf/tests/$testdir/histories.cgmf.parallel.0.reference" \
-      "$SRC/utils/cgmf/tests/$testdir/histories.cgmf.parallel.1.reference" > "$out"
+  local r0="$SRC/utils/cgmf/tests/$testdir/histories.cgmf.parallel.0.reference"
+  local r1="$SRC/utils/cgmf/tests/$testdir/histories.cgmf.parallel.1.reference"
+  # A missing reference must fail loudly, not produce an empty file that then
+  # "matches" an empty (also failed) run. Both are pre-conditions for a real
+  # comparison.
+  [ -s "$r0" ] && [ -s "$r1" ] || { echo "verify_cgmf: reference files missing under $testdir" >&2; return 1; }
+  cat "$r0" "$r1" > "$out"
 }
 
 # exact_case <label> <testdir> <ZAID> <Einc> : run -n 40 and require byte-exact
@@ -50,7 +55,7 @@ serial_ref () {
 exact_case () {
   local label="$1" testdir="$2" zaid="$3" einc="$4"
   local d; d="$(mktemp -d)"
-  serial_ref "$testdir" "$d/ref.0"
+  if ! serial_ref "$testdir" "$d/ref.0"; then fail "$label: no reference to compare against"; rm -rf "$d"; return; fi
   ( cd "$d" && CGMFDATA="$DATA" "$BIN" -n 40 -e "$einc" -i "$zaid" -f h >/dev/null 2>err )
   if [ -s "$d/err" ]; then fail "$label: cgmf.x wrote to stderr"; rm -rf "$d"; return; fi
   if [ ! -f "$d/h.0" ]; then fail "$label: no history file produced"; rm -rf "$d"; return; fi

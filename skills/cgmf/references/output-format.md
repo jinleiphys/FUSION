@@ -40,8 +40,11 @@ Filename `<base>.<rank>`, e.g. `histories.cgmf.0`.
 
 ## Yields file (negative `-n`)
 
-`yields.cgmf.<rank>`, header `Y(Z,A,KE,U,J,Pi,px,py,pz)`, one line per scission
-fragment, e.g. `44 115 103.915 22.1845 10.5 1 4157.66 121.856 -2224.46`.
+`yields.cgmf.<rank>`, **no header line** (the `Y(Z,A,KE,U,J,Pi,px,py,pz)` string
+is printed to stdout, not written to the file). Each line is one scission
+fragment: `Z A KE U J parity px py pz`, e.g.
+`44 115 103.915 22.1845 10.5 1 4157.66 121.856 -2224.46`. Two lines per event
+(light then heavy fragment).
 
 ## CGMFtk post-processing (`tools/CGMFtk`)
 

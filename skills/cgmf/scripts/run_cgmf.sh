@@ -48,20 +48,47 @@ CGMFDATA="$DATA" "$BIN" -n "$NEV" -e "$EINC" -i "$ZAID" -f "$OUTBASE" > "$LOG" 2
 RC=$?
 set -e
 
-# The data-path failure and any fatal path print to stderr; surface it.
+# Exit status IS checked: cgmf.x returns 0 on a normal run and nonzero on a
+# fatal path (e.g. the data-path failure exits -1). A nonzero exit is a failure
+# even if it left a plausible-looking file behind.
+if [ "$RC" -ne 0 ]; then
+  echo "run_cgmf: cgmf.x exited $RC" >&2
+  [ -s "$ERR" ] && head -5 "$ERR" >&2 || tail -8 "$LOG" >&2
+  exit 1
+fi
+# The data-path failure and any fatal path also print to stderr; surface it.
 if [ -s "$ERR" ]; then
-  echo "run_cgmf: cgmf.x wrote to stderr (RC=$RC):" >&2
+  echo "run_cgmf: cgmf.x wrote to stderr:" >&2
   head -5 "$ERR" >&2
   exit 1
 fi
 
 [ -f "$OUTFILE" ] || {
-  echo "run_cgmf: cgmf.x exited $RC but wrote no output file $OUTFILE" >&2
+  echo "run_cgmf: cgmf.x exited 0 but wrote no output file $OUTFILE" >&2
   tail -8 "$LOG" >&2; exit 1; }
 
-# The header is "# ZAID Einc timewindow". Assert it matches what was requested,
-# so a silently-substituted case cannot pass. Einc is compared numerically
-# because 0.0 is written as 0 and 2.53e-8 stays in exponent form.
+# YIELDS MODE (negative n) is handled FIRST and separately, because a yields
+# file has NO header line: its first line is already a fragment record
+# (cgmf.cpp writes the Y(...) string to stdout, not to the file). Parsing a
+# history header here would read that data row as a header and reject a valid
+# run, which is exactly the defect an adversarial pass found. Detect negative n
+# with a real numeric test, not string surgery.
+if [ "$NEV" -lt 0 ] 2>/dev/null; then
+  want=$(( -NEV ))
+  # Each event contributes two scission fragments (light + heavy).
+  recs="$(grep -c . "$OUTFILE" || true)"
+  if [ "$recs" -lt $(( 2 * want )) ]; then
+    echo "run_cgmf: yields file has $recs records, expected $(( 2 * want )) for $want events" >&2
+    tail -3 "$OUTFILE" >&2; exit 1
+  fi
+  echo "run_cgmf: OK, yields in $OUTFILE ($recs fragment records for $want events)"
+  exit 0
+fi
+
+# --- EVENT MODE -------------------------------------------------------------
+# The header is "# ZAID Einc timewindow". Assert it matches the request so a
+# silently-substituted case cannot pass. Einc is compared numerically because
+# 0.0 is written as 0 and 2.53e-8 stays in exponent form.
 read -r hdr < "$OUTFILE"
 h_zaid="$(echo "$hdr" | awk '{print $2}')"
 h_einc="$(echo "$hdr" | awk '{print $3}')"
@@ -72,16 +99,17 @@ if ! python3 -c "import sys; sys.exit(0 if abs(float('$h_einc')-float('$EINC'))<
   echo "run_cgmf: output header Einc $h_einc != requested $EINC" >&2; exit 1
 fi
 
-if [ "${NEV%%-*}" = "" ] || [ "$NEV" -lt 0 ] 2>/dev/null; then
-  # yields mode: assert at least one fragment record beyond the header
-  [ "$(grep -c . "$OUTFILE")" -ge 2 ] || {
-    echo "run_cgmf: yields file has no fragment records" >&2; exit 1; }
-  echo "run_cgmf: OK, yields in $OUTFILE ($(($(grep -c . "$OUTFILE")-1)) records)"
-  exit 0
+# Every event writes exactly two fragment-header lines (light then heavy), so a
+# complete run has 2*NEV of them. This catches a run killed mid-write, which
+# leaves a valid header and a partial body: header-plus-nubar alone is not proof
+# the requested number of events completed.
+FRAGH="$(grep -cE '^ *[0-9]+ +[0-9]+ +[-0-9.eE]+ +[0-9.]+ +[0-9-]+ +[0-9.]+ +[0-9.]+ +[0-9]+ +[0-9]+ +[0-9]+ *$' "$OUTFILE" || true)"
+if [ "$FRAGH" -ne $(( 2 * NEV )) ]; then
+  echo "run_cgmf: history has $FRAGH fragment blocks, expected $(( 2 * NEV )) for $NEV events (truncated run?)" >&2
+  exit 1
 fi
 
-# Event mode: assert a finite, positive average total neutron multiplicity in
-# the stdout summary. A diverged or empty run cannot fake this.
+# Assert a finite, positive average total neutron multiplicity in the summary.
 NU="$(sed -n 's/.*<nu>_tot = *\([0-9.eE+-]*\).*/\1/p' "$LOG" | tail -1)"
 if [ -z "$NU" ] || ! python3 -c "
 import math,sys
@@ -90,5 +118,4 @@ v=float('$NU'); sys.exit(0 if math.isfinite(v) and v>0 else 1)" 2>/dev/null; the
   tail -8 "$LOG" >&2; exit 1
 fi
 
-NBLK="$(grep -c '^ *[0-9]' "$OUTFILE" || true)"
-echo "run_cgmf: OK, <nu>_tot = $NU over $NEV events; history in $OUTFILE"
+echo "run_cgmf: OK, <nu>_tot = $NU over $NEV events ($FRAGH fragment blocks); history in $OUTFILE"

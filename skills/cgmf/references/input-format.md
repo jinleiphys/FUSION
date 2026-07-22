@@ -16,11 +16,12 @@ flag takes an argument.
 | `-n` | number of Monte Carlo events; **negative = initial-yields mode** Y(Z,A,KE,U,J,p) | integer | 0 |
 | `-s` | starting-event offset (seed skip-ahead) | integer | 1 |
 | `-f` | output base name; **the MPI rank is appended** (`-f h` writes `h.0`) | string | `histories.cgmf` / `yields.cgmf` |
-| `-t` | isomer time-coincidence window; **negative = infinite window** and adds a gamma emission-age column | seconds | 1e-8 |
+| `-t` | isomer time-coincidence window; **`-1` = infinite window** (adds a gamma emission-age column); any other negative value is rejected with exit 255 | seconds | 1e-8 |
 | `-d` | data-directory path, overriding `$CGMFDATA` and the compiled-in default | path | "" |
 
-No `-h`/help flag exists (unknown flags are silently ignored, `cgmf.cpp:402-403`),
-and there is no random-seed flag: reproducibility is structural (below).
+No `-h`/help flag exists: an unknown flag makes `getopt` print `illegal option`
+to stderr, though the run still exits 0 (`cgmf.cpp:402-403`). There is no
+random-seed flag; reproducibility is structural (below).
 
 ## ZAID and energy conventions
 

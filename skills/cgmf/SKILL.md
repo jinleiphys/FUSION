@@ -70,11 +70,13 @@ cgmf.x -i <ZAID> -e <Einc_MeV> -n <nevents> [-s <start>] [-f <base>] [-t <window
 - `-s` starting-event offset (seed skip-ahead), default 1.
 - `-f` output base name; **the MPI rank is always appended**, so `-f h` writes
   `h.0`.
-- `-t` isomer time-coincidence window in seconds (default 1e-8); a negative
-  value means an infinite window and adds a gamma emission-age column.
+- `-t` isomer time-coincidence window in seconds (default 1e-8); **`-1`** means
+  an infinite window and adds a gamma emission-age column, other negatives are
+  rejected.
 - `-d` data directory, overriding `$CGMFDATA`.
 
-There is no `-h` and no seed flag; reproducibility is structural (rule 1).
+There is no `-h` (an unknown flag prints `illegal option` to stderr but still
+exits 0) and no seed flag; reproducibility is structural (rule 1).
 
 Full field-level reference: `references/input-format.md` and
 `references/output-format.md`, both derived from the source and the shipped
@@ -111,8 +113,10 @@ files shipped in `utils/cgmf/tests/`:
 | L2 nu-bar_tot(252Cf sf), n=500 | 3.78, within MC error of the manual's 3.82 |
 
 L1 is tier 1: the distribution ships reference output and this build reproduces
-it byte for byte, on macOS/ARM against LANL's own file, because the code is
-integer-deterministic. The manual quotes nu-bar_tot = 3.82 for 252Cf(sf) at 1e6
+it byte for byte, on macOS/ARM, because the code is integer-deterministic. The
+match is stable across Release and Debug builds here; the reference's origin
+platform is not documented, so this is a reproduction of the LANL-shipped file,
+not a proven cross-platform result. The manual quotes nu-bar_tot = 3.82 for 252Cf(sf) at 1e6
 events; a fixed-seed run converges to that (see `references/verification.md`),
 while low event counts scatter around it (3.80 at 40, 3.78 at 500, 3.72 at 3000)
 as Monte Carlo noise.
