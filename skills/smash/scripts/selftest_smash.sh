@@ -146,7 +146,7 @@ for mode in exitfail nooutput headeronly nan oneevent realerror; do
   write_stub "stub_$mode" "$mode"
   case "$mode" in
     exitfail)  d="a nonzero exit status fails"; m="exited with status" ;;
-    nooutput)  d="a missing particle list fails"; m="no non-empty output files" ;;
+    nooutput)  d="a missing particle list fails"; m="no output beyond the copy of its own configuration" ;;
     headeronly) d="a header with no particles fails"; m="no complete event block" ;;
     nan)       d="NaN in the particle list fails"; m="non-finite" ;;
     oneevent)  d="fewer events than requested fails"; m="stopped early" ;;
@@ -198,7 +198,13 @@ SMASH="$TMP/stub_ok" SMASH_BUILD="$TMP/fakebuild" SMASH_ROOT="$TMP/no_such_root"
 # exactly ONE of the checks and asserts that that check is the one that fired.
 SREAL="$HOME/.cache/fusion/smash/smash"
 BREAL="$SREAL/build"
-if [ -d "$SREAL/.git" ] && [ -f "$BREAL/CMakeCache.txt" ]; then
+# The real STAMP is a precondition, not just the clone and the cache. Without
+# it, mk_fakebuild's `head -1` of a missing file contributed nothing and the
+# synthetic stamp collapsed to a single line holding the digest, which the
+# identity check then read as the build-identity line. Every identity and
+# ctest case failed with "records identity <sha256>", on a Linux box whose
+# build simply predates the stamp. The fixture was fabricating its input.
+if [ -d "$SREAL/.git" ] && [ -f "$BREAL/CMakeCache.txt" ] && [ -s "$BREAL/.fusion_build_stamp" ]; then
   cp "$TMP/stub_ok" "$TMP/impostor"
   # (a) binary outside the build tree
   SMASH="$TMP/impostor" SMASH_BUILD="$BREAL" SMASH_ROOT="$SREAL" \
@@ -216,9 +222,15 @@ if [ -d "$SREAL/.git" ] && [ -f "$BREAL/CMakeCache.txt" ]; then
   mk_fakebuild () {   # mk_fakebuild <dir> <home_dir> <cachefile_dir>
     mkdir -p "$1"
     { echo "CMAKE_HOME_DIRECTORY:INTERNAL=$2"; echo "CMAKE_CACHEFILE_DIR:INTERNAL=$3"; } > "$1/CMakeCache.txt"
-    cp "$BREAL/smash" "$1/smash" 2>/dev/null || cp "$TMP/stub_ok" "$1/smash"
-    head -1 "$BREAL/.fusion_build_stamp" > "$1/.fusion_build_stamp"
-    shasum -a 256 "$1/smash" | cut -d' ' -f1 >> "$1/.fusion_build_stamp"
+    # The REAL binary, or these cases test a stub instead of a build.
+    cp "$BREAL/smash" "$1/smash" || { bad "mk_fakebuild: no real binary at $BREAL/smash"; return 1; }
+    # Assert the inputs exist rather than letting a missing file produce a
+    # plausible-looking stamp. See the precondition comment above.
+    [ -s "$BREAL/.fusion_build_stamp" ] || { bad "mk_fakebuild: no real stamp to copy"; return 1; }
+    { head -1 "$BREAL/.fusion_build_stamp"; shasum -a 256 "$1/smash" | cut -d' ' -f1; } \
+      > "$1/.fusion_build_stamp"
+    [ "$(wc -l < "$1/.fusion_build_stamp")" -eq 2 ] \
+      || { bad "mk_fakebuild: synthetic stamp is not two lines"; return 1; }
   }
   mk_fakebuild "$TMP/bd_wrongsrc" "$TMP/somewhere/else" "$TMP/bd_wrongsrc"
   SMASH="$TMP/bd_wrongsrc/smash" SMASH_BUILD="$TMP/bd_wrongsrc" SMASH_ROOT="$SREAL" \
@@ -269,7 +281,7 @@ if [ -d "$SREAL/.git" ] && [ -f "$BREAL/CMakeCache.txt" ]; then
     *) bad "a stale digest still rejects a legitimate relink: $(printf '%s' "$out" | tail -2 | tr '\n' ' ')" ;;
   esac
 else
-  ok "skipped the identity-guard cases (no local SMASH build to test against)"
+  ok "skipped the identity-guard cases (no local stamped SMASH build to test against)"
 fi
 
 echo
@@ -352,6 +364,19 @@ write_other_stub () {
 write_other_stub
 SMASH="$TMP/stub_other" expect_pass "a Binary-only configuration is accepted, not failed for a missing OSCAR" \
   "$RUN" --config "$CFG" --outdir "$TMP/w_other" --seed 1
+# ... but SMASH ALWAYS copies its configuration into the output directory, so a
+# bare "the directory is not empty" test would certify a run that produced no
+# physics output at all. config.yaml must not count as output.
+cat > "$TMP/stub_cfgonly" <<'EOF'
+#!/bin/bash
+OUT=""; while [ $# -gt 0 ]; do case "$1" in -o) OUT="$2"; shift 2;; --version) echo SMASH-3.3; exit 0;; *) shift;; esac; done
+mkdir -p "$OUT"; printf 'General:\n    Nevents: 2\n' > "$OUT/config.yaml"
+exit 0
+EOF
+chmod +x "$TMP/stub_cfgonly"
+SMASH="$TMP/stub_cfgonly" expect_fail_with "a run that wrote only its own config.yaml is rejected" \
+  "no output beyond the copy of its own configuration" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_cfgonly" --seed 1
 # Captured into a variable rather than piped into `grep -q`: under `pipefail`,
 # grep -q exits at the first match and SIGPIPEs the writer, so the pipeline
 # reports 141 and a passing case reads as a failure.
@@ -411,7 +436,7 @@ echo "verify_smash.sh ctest-result parsing (stub ctest, identity satisfied)"
 # had a test: they were reasoned about, not exercised. A stub ctest on PATH lets
 # each be driven with the exact output shape it was written for. Needs the real
 # clone, because the git pin is the one thing that cannot be synthesized.
-if [ -d "$SREAL/.git" ] && [ -f "$BREAL/CMakeCache.txt" ]; then
+if [ -d "$SREAL/.git" ] && [ -f "$BREAL/CMakeCache.txt" ] && [ -s "$BREAL/.fusion_build_stamp" ]; then
   mk_fakebuild "$TMP/bd_ctest" "$SREAL" "$TMP/bd_ctest"
   mkdir -p "$TMP/bin"
   write_ctest () {   # write_ctest <mode>
@@ -488,7 +513,7 @@ CTESTEOF
     *) bad "the overridden-count run gave an unexpected verdict: $(printf '%s' "$out" | tail -2 | tr '\n' ' ')" ;;
   esac
 else
-  ok "skipped the ctest-parsing cases (no local SMASH build to test against)"
+  ok "skipped the ctest-parsing cases (no local stamped SMASH build to test against)"
 fi
 
 echo

@@ -187,9 +187,12 @@ fi
 # there is not, instead of pretending the run failed.
 OSCAR="$OUTDIR/out/particle_lists.oscar"
 if [ ! -e "$OSCAR" ]; then
-  PRODUCED="$(find "$OUTDIR/out" -type f -size +0c 2>/dev/null | wc -l | tr -d ' ')"
+  # SMASH ALWAYS writes the configuration it used into the output directory, so
+  # "the directory is not empty" is satisfied by a run that produced no physics
+  # output whatsoever. Count only files that are not that echo of the input.
+  PRODUCED="$(find "$OUTDIR/out" -type f -size +0c ! -name config.yaml 2>/dev/null | wc -l | tr -d ' ')"
   [ "${PRODUCED:-0}" -gt 0 ] \
-    || die "the run produced no non-empty output files in $OUTDIR/out"
+    || die "the run wrote no output beyond the copy of its own configuration; the Output: block requests nothing this produced"
   log "no particle_lists.oscar (this configuration requests other output formats);"
   log "$PRODUCED non-empty output files were written, but NOT structurally validated"
   echo "RESULT_DIR=$OUTDIR"
