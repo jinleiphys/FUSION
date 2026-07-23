@@ -478,10 +478,15 @@ CTESTEOF
         SMASH="$TMP/bd_ctest/smash" SMASH_BUILD="$TMP/bd_ctest" SMASH_ROOT="$SREAL" \
         "$@" "$VERIFY" --tests-only 2>&1
   }
+  # A supplied build can no longer print the tier-1 verdict, however clean its
+  # suite: provenance is asserted rather than established on that path. This
+  # case is therefore the positive control for "the run PASSED", not for
+  # certification, and it doubles as the regression test for that downgrade.
   out="$(run_verify_with_ctest allpass)"
   case "$out" in
-    *"VERIFY OK"*) ok "a clean 104-of-104 suite certifies (positive control)" ;;
-    *) bad "the stub-ctest positive control did not certify: $(printf '%s' "$out" | tail -2 | tr '\n' ' ')" ;;
+    *"VERIFY OK"*) bad "a build supplied through SMASH_BUILD still printed the tier-1 VERIFY OK" ;;
+    *"PASSED-NOT-CERTIFIED"*) ok "a clean 104-of-104 suite on a SUPPLIED build passes but does not certify" ;;
+    *) bad "the stub-ctest positive control did not pass: $(printf '%s' "$out" | tail -2 | tr '\n' ' ')" ;;
   esac
   out="$(run_verify_with_ctest clean_but_nonzero)"
   case "$out" in
@@ -644,6 +649,69 @@ cat > "$TMP/afterend.oscar" <<'EOF'
 EOF
 expect_fail_with "a block after its event already ended is rejected" "already ended" \
   python3 "$CC" "$TMP/afterend.oscar" --structure-only
+
+echo
+echo "residuals found by the round-3 adversarial pass"
+# Each of these was a real false-pass in the round-2 fixes themselves.
+
+# (a) The non-OSCAR branch exited BEFORE the log scan, so a Binary-only run that
+#     logged a genuine ERROR returned success. Checks that apply to every run
+#     must precede any branch that can exit.
+cat > "$TMP/stub_binerr" <<'EOF'
+#!/bin/bash
+OUT=""; while [ $# -gt 0 ]; do case "$1" in -o) OUT="$2"; shift 2;; --version) echo SMASH-3.3; exit 0;; *) shift;; esac; done
+mkdir -p "$OUT"; printf 'payload\n' > "$OUT/particles_binary.bin"
+printf "[15'04'57]  ERROR        Main        : something exploded\n"
+exit 0
+EOF
+chmod +x "$TMP/stub_binerr"
+SMASH="$TMP/stub_binerr" expect_fail_with "a Binary-only run that logged an ERROR fails" "logged an error" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_binerr" --seed 1
+
+# (b) `Nevents: 2 # comment` is valid YAML. Without comment stripping the value
+#     read back was "2 # comment", is_uint rejected it, no --events expectation
+#     was passed, and the event-count check silently did nothing.
+sed 's/    Nevents:        2/    Nevents:        2 # two events please/' "$CFG" > "$TMP/cfg_comment.yaml"
+SMASH="$TMP/stub_oneevent" expect_fail_with "an inline YAML comment does not disable the event-count check" \
+  "stopped early" "$RUN" --config "$TMP/cfg_comment.yaml" --outdir "$TMP/w_comment" --seed 1
+SMASH="$TMP/stub_ok" expect_pass "and a commented Nevents still runs normally (control)" \
+  "$RUN" --config "$TMP/cfg_comment.yaml" --outdir "$TMP/w_comment2" --seed 1
+
+# (c) An integer too large for bash to compare bypassed the negative-seed guard:
+#     `[ "$SEED" -lt 0 ]` printed "integer expression expected" and the run went
+#     ahead anyway.
+for sd in 9223372036854775808 -9223372036854775809; do
+  SMASH="$TMP/stub_ok" expect_fail_with "an oversized --seed '$sd' is rejected" "must be an integer" \
+    "$RUN" --config "$CFG" --outdir "$TMP/w_big$sd" --seed "$sd"
+done
+
+# (d) The marker grammar accepted a truncated 'out' with no count and an 'end'
+#     with an arbitrary tail, which is precisely the corruption it exists to catch.
+cat > "$TMP/nocount.oscar" <<'EOF'
+#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge
+# event 0 ensemble 0 out
+  3.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 0 1
+# event 0 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes
+EOF
+expect_fail_with "an 'out' marker with no particle count is rejected" "malformed event marker" \
+  python3 "$CC" "$TMP/nocount.oscar" --structure-only
+cat > "$TMP/badend.oscar" <<'EOF'
+#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge
+# event 0 ensemble 0 out 1
+  3.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 0 1
+# event 0 ensemble 0 end nonsense tokens
+EOF
+expect_fail_with "an 'end' marker with a corrupted tail is rejected" "malformed event marker" \
+  python3 "$CC" "$TMP/badend.oscar" --structure-only
+expect_pass "the real end-marker spelling is still accepted (control)" \
+  python3 "$CC" "$GOOD" --structure-only --events 2
+
+# (e) --workdir, for shipped configs that resolve their paths from a different cwd
+mkdir -p "$TMP/elsewhere"
+SMASH="$TMP/stub_ok" expect_pass "--workdir runs the binary from the given directory" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_wd" --seed 1 --workdir "$TMP/elsewhere"
+SMASH="$TMP/stub_ok" expect_fail_with "--workdir rejects a directory that does not exist" "is not a directory" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_wd2" --seed 1 --workdir "$TMP/no_such_dir"
 
 echo
 echo "-------------------------------------------"

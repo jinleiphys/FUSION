@@ -3,6 +3,58 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-23: SMASH round 3, where four of six new defects came from round 2's fixes
+
+**Why we tried it:** cross-AI validation is mandatory before a per-code skill
+ships, so the round-2 fixes went straight into a third adversarial pass.
+
+**Verdict:** Part A 8 FIXED, 4 PARTIAL, 0 NOT FIXED. Both blockers and the
+previously unfixed item are closed. Part B found six residuals, and **four of
+them were introduced by the round-2 fixes themselves**, the third time in this
+skill that a repair has shipped a defect shaped like the one it repaired.
+
+**The four self-inflicted ones, all false passes:**
+
+- The non-OSCAR branch added for Binary/Root configs exited BEFORE the
+  `ERROR`-severity log scan, so a Binary-only run that logged a real error
+  returned success. Checks that apply to every run must precede every branch
+  that can exit.
+- `config.yaml` counted as produced output. SMASH always copies its
+  configuration into the output directory, so "produced at least one non-empty
+  file" was satisfied by a run that produced nothing.
+- `Nevents: 2 # comment` is valid YAML, and `read_key` did not strip the
+  comment, so `is_uint` rejected `2 # comment`, no `--events` expectation was
+  passed, and the event-count check silently did nothing.
+- `--seed 9223372036854775808` matched an unbounded integer regex, bash could
+  not compare it, printed "integer expression expected", and the run proceeded,
+  bypassing the negative-seed guard entirely.
+
+**Two that were merely too loose:** the marker grammar left `COUNT` optional and
+the `end` tail unconstrained, so a truncated `out` and an `end nonsense tokens`
+both passed; and the shipped `List` example could not be run at all, because
+`run_smash.sh` runs from the config's directory while
+`input/list/config.yaml` sets `File_Directory: "../input/list"`, which resolves
+only from the build directory (measured: `FATAL List: example_list0 does not
+exist!`). Fixed with a documented `--workdir`.
+
+**The identity finding was accepted rather than patched.** Round 3 demonstrated
+that a constructed build tree (native stub, fabricated CMakeCache and stamp,
+fake ctest on PATH) yields `VERIFY OK`. That is true and unfixable by more
+metadata checking, because the metadata is what is being forged. What changed is
+the claim, not the check: a build supplied through `SMASH`/`SMASH_BUILD`/
+`SMASH_ROOT` now ends in `VERIFY PASSED-NOT-CERTIFIED`, and the tier-1 verdict
+is reserved for the path where this harness built the code itself.
+
+**Lesson:** "a validation that a comment can disable is not a validation", and
+neither is one a large number steps around. Every one of these is the original
+blocker's shape: a rule written for the inputs in front of me. The practical
+countermeasure that keeps working is not more care while writing, it is the flip
+test plus running the harness somewhere else, which is what exposed the
+fabricated-fixture bug that macOS could not see.
+
+**Status:** all six addressed, selftest 84 to 94 cases, every fix flip-tested,
+94/94 on macOS/ARM and Linux/x86-64.
+
 ## 2026-07-23: SMASH round-2 blockers, or: a guard is only as good as its worst input
 
 **Why we tried it:** the two round-2 blockers had to be cleared before SMASH

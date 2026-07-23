@@ -6,6 +6,8 @@
 #
 #   run_smash.sh --config <config.yaml> [--outdir <dir>] [--seed <int>]
 #                [--nevents <int>] [--end-time <fm/c>] [--allow-random-seed]
+#                [--particles <f>] [--decaymodes <f>] [--no-auto-tables]
+#                [--workdir <dir>]
 #
 # --config     a SMASH YAML configuration. Copied into the output directory, so
 #              the run records the input it actually used.
@@ -15,6 +17,11 @@
 #              irreproducible. A benchmark MUST pin the seed; run_smash.sh
 #              therefore refuses -1 unless --allow-random-seed is given.
 # --nevents, --end-time   convenience overrides for a shorter run.
+# --workdir    directory to run SMASH from. Defaults to the config's directory,
+#              which is what a Modus resolving paths relative to its config
+#              needs. The shipped List example is the exception: its
+#              File_Directory is relative to the BUILD directory, so it needs
+#              --workdir "$SMASH_ROOT/build".
 #
 # Prints RESULT_DIR= and RESULT_OSCAR= on the last two lines.
 #
@@ -23,7 +30,7 @@ set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG=""; OUTDIR=""; SEED=""; NEVENTS=""; END_TIME=""; ALLOW_RANDOM=0
-PARTICLES=""; DECAYMODES=""; AUTO_TABLES=1
+PARTICLES=""; DECAYMODES=""; AUTO_TABLES=1; WORKDIR=""
 
 log () { echo "run_smash: $*" >&2; }
 die () { log "$*"; exit 1; }
@@ -41,6 +48,7 @@ while [ $# -gt 0 ]; do
     --end-time) END_TIME="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
     --particles)  PARTICLES="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
     --decaymodes) DECAYMODES="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
+    --workdir)  WORKDIR="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
     --no-auto-tables) AUTO_TABLES=0; shift ;;
     --allow-random-seed) ALLOW_RANDOM=1; shift ;;
     -h|--help)  sed -n '2,22p' "$0"; exit 0 ;;
@@ -57,12 +65,27 @@ grep -q "General:" "$CONFIG" || die "config '$CONFIG' has no 'General:' block; i
 # Full-match validation. The earlier character-class test accepted '--', '1-2'
 # and '1..2', which are not numbers even though they contain only permitted
 # characters.
-is_int ()  { printf '%s' "$1" | grep -qE '^-?[0-9]+$'; }
-is_uint () { printf '%s' "$1" | grep -qE '^[0-9]+$'; }
+# Bounded to 18 digits. The regex accepted an integer of ANY length, and the
+# `-lt` comparison that follows is done by bash, which cannot represent one:
+# `--seed 9223372036854775808` printed "integer expression expected" and then
+# ran anyway, so the negative-seed guard was bypassed by a number too large to
+# compare. 18 digits is comfortably inside int64 and far beyond any real seed.
+is_int ()  { printf '%s' "$1" | grep -qE '^-?[0-9]{1,18}$'; }
+is_uint () { printf '%s' "$1" | grep -qE '^[0-9]{1,18}$'; }
 # Accepts every non-negative decimal literal SMASH's YAML reader does, including
 # the ones the previous pattern wrongly rejected: '.5', '5.', '1e-3', '1.5E3'.
 # Still rejects '.', '--', '1-2', '1..2' and anything negative.
 is_num ()  { printf '%s' "$1" | grep -qE '^([0-9]+\.?[0-9]*|\.[0-9]+)([eE][+-]?[0-9]+)?$'; }
+
+# Strips an inline YAML comment. `Nevents: 2 # two events` is valid YAML, and
+# without this the value read back was "2 # two events", is_uint rejected it, no
+# --events expectation was passed, and the event-count check silently did
+# nothing: a run that wrote one of two events passed. A validation that a
+# comment can disable is not a validation.
+read_key () {
+  grep -E "^[[:space:]]*$1:" "$WORKCFG" 2>/dev/null | head -1 \
+    | sed -E "s/.*$1:[[:space:]]*//; s/[[:space:]]*#.*$//; s/[[:space:]]*$//" | tr -d '\r' || true
+}
 
 if [ -n "$SEED" ]; then
   is_int "$SEED" || die "--seed must be an integer, got '$SEED'"
@@ -127,7 +150,7 @@ apply End_Time "$END_TIME"
 # Read the seed that will ACTUALLY be used, from the config as it now stands,
 # and judge it numerically. A literal test against "-1" missed every other
 # negative value, which SMASH treats identically.
-EFFECTIVE_SEED="$(grep -E "^[[:space:]]*Randomseed:" "$WORKCFG" | head -1 | sed -E 's/.*Randomseed:[[:space:]]*//' | tr -d '\r')"
+EFFECTIVE_SEED="$(read_key Randomseed)"
 if [ "$ALLOW_RANDOM" = "0" ]; then
   if ! is_int "$EFFECTIVE_SEED"; then
     die "the configuration's Randomseed is '$EFFECTIVE_SEED', which is not an integer; pin it with --seed"
@@ -166,9 +189,17 @@ if [ -n "$DECAYMODES" ]; then
   log "using decay table $DECAYMODES"
 fi
 
+# SMASH is run from the config's directory so that a Modus resolving paths
+# relative to the config finds them. Some shipped configs assume a DIFFERENT
+# cwd: input/list/config.yaml sets File_Directory: "../input/list", which
+# resolves only from the build directory, so that example fails here with
+# "External particle list does not exist". --workdir overrides the cwd for
+# exactly those cases.
+RUNDIR="${WORKDIR:-$CFGDIR}"
+[ -d "$RUNDIR" ] || die "--workdir '$RUNDIR' is not a directory"
 log "running $(basename "$BIN") with seed $EFFECTIVE_SEED into $OUTDIR"
 set +e
-( cd "$CFGDIR" && "$BIN" -i "$WORKCFG" -o "$OUTDIR/out" ${EXTRA+"${EXTRA[@]}"} ) > "$OUTDIR/smash.log" 2> "$OUTDIR/stderr.txt"
+( cd "$RUNDIR" && "$BIN" -i "$WORKCFG" -o "$OUTDIR/out" ${EXTRA+"${EXTRA[@]}"} ) > "$OUTDIR/smash.log" 2> "$OUTDIR/stderr.txt"
 STATUS=$?
 set -e
 
@@ -176,6 +207,21 @@ if [ "$STATUS" -ne 0 ]; then
   log "SMASH exited with status $STATUS"
   tail -15 "$OUTDIR/stderr.txt" >&2 2>/dev/null
   tail -5 "$OUTDIR/smash.log" >&2 2>/dev/null
+  exit 1
+fi
+
+# The log scan runs BEFORE the output branching below, and must stay there.
+# When the non-OSCAR path was added it exited early, ahead of this check, so a
+# Binary-only run that logged a genuine ERROR returned success. Checks that
+# apply to EVERY run belong before any branch that can exit.
+#
+# Match SMASH's log SEVERITY FIELD, not the word "error" anywhere in the text.
+# SMASH lines look like "[15'04'57]  WARN   Fpe : Failed to setup trap on pole
+# error." and a case-insensitive search for "error" flags that benign warning on
+# every macOS run. Severity is the second field; aborts are matched literally.
+ERROR_RE="^\[[^]]*\][[:space:]]+(ERROR|FATAL)\b|terminate called|Assertion .* failed"
+if grep -qE "$ERROR_RE" "$OUTDIR/smash.log" "$OUTDIR/stderr.txt" 2>/dev/null; then
+  log "the run logged an error:"; grep -E "$ERROR_RE" "$OUTDIR/smash.log" "$OUTDIR/stderr.txt" 2>/dev/null | head -5 >&2
   exit 1
 fi
 
@@ -200,16 +246,6 @@ if [ ! -e "$OSCAR" ]; then
 fi
 [ -s "$OSCAR" ] || die "the particle output at $OSCAR is empty; the run produced nothing usable"
 
-# Match SMASH's log SEVERITY FIELD, not the word "error" anywhere in the text.
-# SMASH lines look like "[15'04'57]  WARN   Fpe : Failed to setup trap on pole
-# error." and a case-insensitive search for "error" flags that benign warning on
-# every macOS run. Severity is the second field; aborts are matched literally.
-ERROR_RE="^\[[^]]*\][[:space:]]+(ERROR|FATAL)\b|terminate called|Assertion .* failed"
-if grep -qE "$ERROR_RE" "$OUTDIR/smash.log" "$OUTDIR/stderr.txt" 2>/dev/null; then
-  log "the run logged an error:"; grep -E "$ERROR_RE" "$OUTDIR/smash.log" "$OUTDIR/stderr.txt" 2>/dev/null | head -5 >&2
-  exit 1
-fi
-
 # Structural validation is DELEGATED to check_conservation_smash.py, which
 # transcribes the grammar from src/oscaroutput.cc. It used to be re-implemented
 # here in shell, and the two copies then disagreed: this one required the 'out'
@@ -225,7 +261,6 @@ fi
 # shipped config), so a miss must return empty and succeed. Without the `|| true`
 # the failing grep killed the whole script under `set -e`, after the run had
 # already completed, with no message at all.
-read_key () { grep -E "^[[:space:]]*$1:" "$WORKCFG" 2>/dev/null | head -1 | sed -E "s/.*$1:[[:space:]]*//" | tr -d '\r' || true; }
 WANT_EVENTS="$(read_key Nevents)"
 WANT_ENS="$(read_key Ensembles)"
 EXPECT_ARG=()

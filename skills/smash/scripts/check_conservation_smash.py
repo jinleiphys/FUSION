@@ -96,8 +96,22 @@ def baryon_number(pdg):
 # while 0/0 is still open" on its second block. Counting any comment that
 # contains " end" was a separate, earlier bug: it accepted a file with no event
 # blocks at all as long as some comment happened to contain that substring.
-BLOCK = re.compile(r'^#\s+event\s+(\d+)\s+ensemble\s+(\d+)\s+(in|out)\b(?:\s+(\d+))?')
-EVENT_END = re.compile(r'^#\s+event\s+(\d+)\s+ensemble\s+(\d+)\s+end\b')
+#
+# Both patterns are ANCHORED to the full line and the COUNT is mandatory,
+# because SMASH always writes one. Leaving the count optional and letting the
+# end marker carry any tail accepted `# event 0 ensemble 0 out` with no count
+# and `# event 0 ensemble 0 end nonsense tokens` as valid, and a truncated or
+# corrupted marker is exactly the damage this parser exists to catch. The end
+# line's tail is fixed by at_eventend: `end 0 impact %7.3f
+# scattering_projectile_target yes|no`.
+BLOCK = re.compile(r'^#\s+event\s+(\d+)\s+ensemble\s+(\d+)\s+(in|out)\s+(\d+)\s*$')
+EVENT_END = re.compile(
+    r'^#\s+event\s+(\d+)\s+ensemble\s+(\d+)\s+end\s+0\s+impact\s+\S+'
+    r'\s+scattering_projectile_target\s+(?:yes|no)\s*$')
+# A line that looks like a marker but does not match the grammar above is a
+# corrupted marker, not a comment to skip past. Matched separately so it can be
+# reported rather than silently ignored.
+MARKER_ISH = re.compile(r'^#\s+event\s+\d+\s+ensemble\s+\d+\s+(?:in|out|end)\b')
 
 # A block is one full particle list. Conservation is asserted on each.
 Block = collections.namedtuple('Block', 'event kind baryons charge n declared')
@@ -199,7 +213,7 @@ def main():
                         print(f"FAIL: event {label} has an 'in' block that is not its first block")
                         return 1
                     close_current()
-                    declared = int(m.group(4)) if m.group(4) else None
+                    declared = int(m.group(4))
                     cur = [label, kind, 0, 0, 0, declared]
                     continue
                 m = EVENT_END.match(line)
@@ -216,6 +230,10 @@ def main():
                     close_current()
                     cur = None
                     ended.add(label)
+                    continue
+                if MARKER_ISH.match(line):
+                    print(f"FAIL: malformed event marker: {line.strip()[:100]!r}")
+                    return 1
                 continue
 
             fields = line.split()

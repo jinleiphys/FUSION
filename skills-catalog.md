@@ -116,13 +116,21 @@ source, and send a commercial user to the authors.**
 **IN PROGRESS 2026-07-23: SMASH**, `skills/smash/`, intended as the seventeenth
 per-code skill and the first of this row. **NOT yet shipped**: round 1 of the
 adversarial audit passed, round 2 found 2 new blockers caused by the round-1
-fixes themselves, and **both blockers plus all 10 remaining round-2 items are
-now fixed** (identity check no longer rejects the relink that SMASH's own
-library test performs; the OSCAR grammar now covers all three `Only_Final`
-shapes from a single transcribed parser). Selftest 49 to 83 cases, every new
-guard shown to flip. What remains before it ships is a round-3 Codex pass and a
-Linux re-run, since the round-2 fixes were measured on macOS/ARM only. Details
-in TODO.md and `skills/smash/references/verification.md`. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
+fixes themselves, and **three rounds have now been applied**: both blockers and
+all 10 remaining round-2 items are fixed, and round 3 returned 8 FIXED / 4
+PARTIAL / 0 NOT FIXED with its six residuals also addressed. Selftest 49 to 94
+cases, **94/94 on macOS/ARM and Linux/x86-64**, full verify `VERIFY OK` and
+ctest 104/104 first attempt on both. What remains is one confirmation pass,
+because the measured base rate is four self-inflicted defects per round: in
+round 3, four of the six new findings were created by round 2's own fixes.
+
+The running lesson from this skill, worth carrying to the rest of the row: a
+guard validated against one configuration has been demonstrated, not tested, and
+the two things that actually caught defects here were the flip test (disable the
+guard, confirm exactly its own case fails) and running the harness on a second
+machine. The latter exposed selftest fixtures that were FABRICATING their input
+on Linux while passing cleanly on macOS. Details in TODO.md and
+`skills/smash/references/verification.md`. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
 GSL, Eigen 3.x and Pythia exactly 8.316. **Zero source patches** on macOS/ARM and
 Linux/x86-64. **TIER 1**: reproduces SMASH's own 104-case ctest suite, 104/104
 first attempt on Linux.

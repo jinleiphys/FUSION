@@ -70,6 +70,7 @@ else
   GSL="$(printf '%s\n' "$OUT" | sed -n 's/^SMASH_GSL_PREFIX=//p')"
   PYPFX="$(printf '%s\n' "$OUT" | sed -n 's/^SMASH_PYTHIA_PREFIX=//p')"
 fi
+CERTIFIED=1
 [ -x "$BIN" ] || die "no usable SMASH executable"
 [ -d "$BUILD" ] || die "no build directory at '$BUILD'"
 
@@ -167,8 +168,26 @@ if ! check_identity; then
 fi
 log "identity OK: pinned commit, clean tree, stamped binary"
 
+# Everything check_identity inspects is metadata the caller can write, so a
+# deliberately constructed build tree (a native stub, a fabricated CMakeCache
+# and stamp, a fake ctest on PATH) can satisfy all of it. That was demonstrated,
+# not theorised. No amount of additional metadata checking closes it, because
+# the metadata is the thing being forged.
+#
+# What actually distinguishes the two cases is WHO produced the build. On the
+# default path this script runs install_smash.sh, which clones the pinned
+# commit and builds it here. When SMASH/SMASH_BUILD/SMASH_ROOT are pre-set, the
+# build arrives from outside and its provenance is asserted, not established,
+# so that route may still be run and still catches mistakes, but it no longer
+# ends in the tier-1 verdict.
+if [ "$PRESET" = "1" ]; then
+  log "NOTE: the build was supplied through SMASH/SMASH_BUILD/SMASH_ROOT rather than"
+  log "      produced by install_smash.sh in this run, so its provenance is asserted"
+  log "      rather than established; this run will NOT print the tier-1 verdict"
+  CERTIFIED=0
+fi
+
 FAILED=0
-CERTIFIED=1
 
 # The usage_of_SMASH_as_library test spawns a FRESH cmake for the library
 # example, and that child inherits NONE of this build's -D cache variables, so
@@ -303,8 +322,8 @@ if [ "$FAILED" = "0" ]; then
   # Deliberately NOT a superstring of "VERIFY OK": a caller grepping for that
   # must not match the uncertified verdict.
   if [ "$CERTIFIED" = "0" ]; then
-    echo "VERIFY PASSED-NOT-CERTIFIED (the expected test count was overridden, so this"
-    echo "  run does not certify the pinned SMASH-3.3 release at tier 1)"
+    echo "VERIFY PASSED-NOT-CERTIFIED (see the NOTE above: this run does not certify"
+    echo "  the pinned SMASH-3.3 release at tier 1)"
     exit 0
   fi
   echo "VERIFY OK"

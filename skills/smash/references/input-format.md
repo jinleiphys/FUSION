@@ -80,13 +80,37 @@ Output:
 `Format` values are content-specific and case-sensitive, and the spelling is not
 what you would guess: it is `Root`, not `ROOT`. Depending on the output block,
 SMASH accepts `Oscar2013`, `Oscar2013_bin`, `Oscar1999`, `Binary`, `Root`,
-`VTK`, `ASCII`, `HepMC_asciiv3`, `HepMC_treeroot`, `For_vHLLE`, `Lattice_ASCII`
-and `Lattice_Binary`; the ROOT, HepMC and Rivet ones exist only if those optional
-libraries were found at configure time. Read
-`src/include/smash/input_keys.h` for the per-block list rather than assuming one
-global set.
+`VTK`, `ASCII`, **`HepMC`**, `HepMC_asciiv3`, `HepMC_treeroot`, **`YODA`**,
+**`YODA-full`**, `For_vHLLE`, `Lattice_ASCII` and `Lattice_Binary`; the ROOT,
+HepMC and Rivet/YODA ones exist only if those optional libraries were found at
+configure time, and SMASH aborts at startup naming the format when they were
+not. The bare `HepMC`, `YODA` and `YODA-full` spellings were missing from this
+list until the round-3 audit; the authority is the validation in
+`src/include/smash/experiment.h`, and the per-block list is in
+`src/include/smash/input_keys.h`. Do not assume one global set.
+
 `Only_Final: Yes` writes just the final state, which is what you want unless you
-are studying the time evolution. Content of the file: see `output-format.md`.
+are studying the time evolution. The three values (`Yes`, `IfNotEmpty`, `No`)
+change the BLOCK STRUCTURE of the file, not only its size: see
+`output-format.md`.
+
+## Configurations that do not run from their own directory
+
+`run_smash.sh` runs SMASH from the configuration's directory, so that a Modus
+resolving paths relative to the config finds them. The shipped `List` example
+assumes a different cwd: `input/list/config.yaml` sets
+`File_Directory: "../input/list"`, which resolves only from the BUILD directory,
+so running it in place fails with `External particle list does not exist`. Pass
+the cwd it expects:
+
+```bash
+scripts/run_smash.sh --config "$SMASH_ROOT/input/list/config.yaml" \
+  --seed 1 --end-time 10.0 --workdir "$SMASH_ROOT/build"
+```
+
+This is a property of that configuration, not a defect in SMASH: a relative
+`File_Directory` is resolved against the working directory, so it only ever
+worked from one place.
 
 ## `Collision_Term`
 

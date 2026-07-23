@@ -240,6 +240,44 @@ failed against an input the fixture had invented. The blocks now require a real
 stamp as a precondition and say plainly when they are skipped. **On macOS the
 bug was invisible, because there the file exists.**
 
+## What the THIRD adversarial pass found
+
+Round 3 was run against the round-2 fixes. Part A: **8 FIXED, 4 PARTIAL, 0 NOT
+FIXED**, so both blockers and the previously unfixed item are closed. Part B
+found six residuals, and the instructive thing is that **four of them were
+created by the round-2 fixes themselves**, which is the third time in this
+skill's history that a fix has introduced a defect of the same shape as the one
+it repaired.
+
+| finding | what actually happened | fix |
+|---|---|---|
+| the non-OSCAR branch skipped the log scan | the branch added for Binary/Root configs exited BEFORE the `ERROR`-severity check, so a Binary-only run that logged a genuine error returned success | the log scan moved above every branch that can exit |
+| `config.yaml` counted as output | SMASH always copies its configuration into the output directory, so "produced at least one non-empty file" was satisfied by a run that produced nothing | that one filename excluded from the count |
+| an inline YAML comment disabled the event count | `Nevents: 2 # comment` is valid YAML; the value read back was `2 # comment`, `is_uint` rejected it, no `--events` expectation was passed, and a run that wrote one of two events passed | `read_key` strips the comment, and the seed is read through it too |
+| an oversized seed bypassed the negative-seed guard | `--seed 9223372036854775808` matched the unbounded integer regex, then bash could not compare it, printed "integer expression expected", and the run went ahead | the integer patterns are bounded to 18 digits |
+| the marker grammar was too loose | `COUNT` was optional and the `end` tail was unconstrained, so `# event 0 ensemble 0 out` and `# event 0 ensemble 0 end nonsense tokens` both passed | both patterns anchored to the full line, `COUNT` mandatory, and a marker-shaped line that does not match is REPORTED rather than skipped |
+| the shipped `List` example could not be run | `run_smash.sh` runs from the config's directory, but `input/list/config.yaml` sets `File_Directory: "../input/list"`, which resolves only from the build directory. Measured: `FATAL List: example_list0 does not exist!` | a `--workdir` override, documented with the exact command |
+
+**A validation that a comment can disable is not a validation**, and neither is
+one that a large number can step around. Both are the same failure as the
+original blockers: a rule that held for the inputs in front of me.
+
+### On the remaining identity finding
+
+Round 3 demonstrated, rather than argued, that identity can be satisfied by a
+constructed build tree: a native stub, a fabricated `CMakeCache.txt` and stamp,
+and a fake `ctest` earlier on `PATH` produced `VERIFY OK`. That is correct and
+was already stated in the code: everything the check inspects is metadata the
+caller can write, so no amount of further metadata checking closes it.
+
+What DOES distinguish the two cases is who produced the build. On the default
+path this script runs `install_smash.sh`, which clones the pinned commit and
+builds it here; when `SMASH`/`SMASH_BUILD`/`SMASH_ROOT` are pre-set the build
+arrives from outside and its provenance is asserted rather than established.
+So that path now still runs and still catches mistakes, but it **cannot print
+the tier-1 verdict**: it ends in `VERIFY PASSED-NOT-CERTIFIED`. Certification
+is reserved for the route where this harness produced the build itself.
+
 ## The guard-flip discipline, applied
 
 Per the project rule, no new guard is counted as tested until it is shown to
@@ -248,6 +286,12 @@ one** case, the case written for it, and nothing else:
 
 | guard disabled | case that flipped |
 |---|---|
+| log scan before the output branch | a Binary-only run that logged an ERROR |
+| `config.yaml` excluded from the output count | a run that wrote only its own config |
+| `read_key` comment stripping | an inline YAML comment disabling the event count |
+| 18-digit bound on integers | two oversized seeds |
+| mandatory `out COUNT` | an `out` marker with no count |
+| preset-path certification downgrade | a supplied build printing the tier-1 verdict |
 | Mach-O/ELF check | a shell script named `smash` is rejected |
 | `particle_lists` content check | a `full_event_history` file is refused |
 | `CMAKE_HOME_DIRECTORY` binding | a build configured from another source tree |
@@ -283,8 +327,8 @@ field this document originally omitted.
 
 ## Harness
 
-`scripts/selftest_smash.sh`, **84 cases** (49 before the second adversarial
-pass), a few seconds, and 84/84 on BOTH platforms. The run and ctest tests use stub executables, so no SMASH
+`scripts/selftest_smash.sh`, **94 cases** (49 before the second adversarial
+pass, 84 after it), a few seconds, and 94/94 on BOTH platforms. The run and ctest tests use stub executables, so no SMASH
 build is required; the identity and ctest-parsing cases additionally use the
 local clone when there is one, because the git pin is the one thing that cannot
 be synthesized, and they announce themselves as skipped when there is not.
