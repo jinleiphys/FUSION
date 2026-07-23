@@ -169,6 +169,42 @@ healthy_for006 > "$TMP/ref_short"; healthy_for006 >> "$TMP/ref_short"
 expect_fail "a differing number of printed blocks fails"    python3 "$CMP" "$A" "$TMP/ref_short"
 
 echo
+echo "check_collision_sky3d.py"
+CC="$HERE/check_collision_sky3d.py"
+mkdir -p "$TMP/coll"
+res () {  # write an energies.res with the given rows
+  printf '#    Time    N(n)    N(p)       E(sum)        E(integ)      Ekin\n' > "$TMP/coll/energies.res"
+  cat >> "$TMP/coll/energies.res"
+}
+res <<'EOT'
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
+     10.00  16.000  16.000   -133.3085319   -133.3387907   558.93
+     20.00  16.000  16.000   -133.2739812   -133.3447324   561.17
+EOT
+expect_pass "a conserving collision passes (control)"        python3 "$CC" "$TMP/coll"
+res <<'EOT'
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
+     10.00  15.000  16.000   -133.3085319   -133.3387907   558.93
+EOT
+expect_fail "particle-number loss fails"                     python3 "$CC" "$TMP/coll"
+res <<'EOT'
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
+     10.00  16.000  16.000   -120.0000000   -133.3387907   558.93
+EOT
+expect_fail "an E(sum) jump fails"                           python3 "$CC" "$TMP/coll"
+res <<'EOT'
+      0.00  16.000  16.000            NaN   -133.3342577   560.04
+     10.00  16.000  16.000   -133.3085319   -133.3387907   558.93
+EOT
+expect_fail "a non-finite energy fails"                      python3 "$CC" "$TMP/coll"
+res <<'EOT'
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
+EOT
+expect_fail "a single-row (non-evolving) run fails"          python3 "$CC" "$TMP/coll"
+rm -f "$TMP/coll/energies.res"
+expect_fail "a missing energies.res fails"                   python3 "$CC" "$TMP/coll"
+
+echo
 echo "verify_sky3d.sh"
 expect_fail "verify rejects an unknown argument"            "$HERE/verify_sky3d.sh" --bogus
 SKY3D=/bin/true SKY3D_TESTS="$TMP/no_such_tests" \

@@ -56,7 +56,7 @@ SKY3D_ROOT=<repository root>
 SKY3D_TESTS=<Test/ directory with the distributed cases>
 ```
 
-About 30 s from a cold clone. Needs `git`, `gfortran`, `python3`, FFTW3, and
+About 16 s from a cold clone (measured: clone, build and probe; 37 MB on disk). Needs `git`, `gfortran`, `python3`, FFTW3, and
 LAPACK/BLAS (Accelerate provides it on macOS; on Linux use `-llapack -lopenblas`,
 and get FFTW from conda-forge if the box lacks it).
 
@@ -87,7 +87,7 @@ The destination is relative to the working directory because the deck's
 ## Verifying
 
 ```bash
-scripts/verify_sky3d.sh                  # static 16O, about 4 minutes
+scripts/verify_sky3d.sh                  # static 16O, about 20 seconds
 scripts/verify_sky3d.sh --with-collision # plus the 16O + 16O case, about 45 min
 scripts/selftest_sky3d.sh                # harness only, seconds, no build needed
 ```

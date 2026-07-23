@@ -4,8 +4,8 @@
 # Reproduce the benchmark cases that the Sky3D distribution itself ships, in a
 # clean room, and compare against the distributed reference output.
 #
-#   verify_sky3d.sh                    static 16O case only (about 4 minutes)
-#   verify_sky3d.sh --with-collision   also the 16O + 16O collision (about 45 min)
+#   verify_sky3d.sh                    static 16O case only (about 20 seconds)
+#   verify_sky3d.sh --with-collision   also the 16O + 16O collision (about 45 minutes)
 #
 # The static case is the tier-1 anchor: Test/Static ships both the input
 # (for005.static) and the authors' output (for006.static), so this is a genuine
@@ -99,10 +99,6 @@ fi
 if [ "$WITH_COLLISION" = "1" ]; then
   COLL_IN="$TESTS/Collision/for005.coll"
   [ -s "$COLL_IN" ] || die "distributed collision input '$COLL_IN' is missing or empty"
-  RES_LIST="energies.res dipoles.res momenta.res monopoles.res quadrupoles.res spin.res"
-  for r in $RES_LIST; do
-    [ -s "$TESTS/Collision/$r" ] || die "distributed collision reference '$r' is missing or empty"
-  done
 
   # The collision deck reads its two fragments from ../Static/O16, which is the
   # wavefunction the static case above just wrote. Reproduce that layout.
@@ -122,10 +118,13 @@ if [ "$WITH_COLLISION" = "1" ]; then
   [ "${STEPS:-0}" -gt 0 ] || die "collision run printed no time steps"
   log "collision run: $STEPS time steps"
 
-  if python3 "$HERE/compare_res_sky3d.py" "$WORK/Collision" "$TESTS/Collision" $RES_LIST; then
-    log "collision case: reproduces the distributed .res tables"
+  # Gate on physics, report on the reference. The shipped .res cannot be
+  # reproduced because their initial wavefunction is not distributed; see the
+  # header of check_collision_sky3d.py and references/verification.md.
+  if python3 "$HERE/check_collision_sky3d.py" "$WORK/Collision" --reference "$TESTS/Collision"; then
+    log "collision case: physics checks pass (conservation), reference deviation reported above"
   else
-    log "FAIL: collision case does not reproduce the distributed .res tables"
+    log "FAIL: collision case failed its physics checks"
     FAILED=1
   fi
 fi

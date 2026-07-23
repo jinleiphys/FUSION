@@ -9,7 +9,7 @@ the clone that `scripts/install_sky3d.sh` makes, under `$SKY3D_TESTS`.
 `$SKY3D_TESTS/Static/for005.static`. SV-bas, no pairing, 24^3 grid at 1.0 fm,
 `serr=1D-6`, cap 2000 iterations. Converges in 370 iterations to a binding energy
 of -116.6577 MeV and an rms radius of 2.6884 fm, and writes the wavefunction file
-`O16`. About 4 minutes on one modern core.
+`O16`. About 20 seconds on one modern core.
 
 ```bash
 eval "$(scripts/install_sky3d.sh | grep '^SKY3D')"
@@ -32,7 +32,7 @@ scripts/run_sky3d.sh --deck "$SKY3D_TESTS/Collision/for005.coll" \
   --workdir /tmp/coll --fragment /tmp/o16/O16:../Static/O16
 ```
 
-About 45 minutes. **Its shipped `.res` tables are not a benchmark**: their real
+About 45 minutes (943 time steps). **Its shipped `.res` tables are not a benchmark**: their real
 input is a binary wavefunction the distribution does not ship, so an independently
 converged O16 does not reproduce them. Read `references/verification.md` before
 drawing any conclusion from a comparison against them.
