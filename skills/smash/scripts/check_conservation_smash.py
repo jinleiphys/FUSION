@@ -21,10 +21,26 @@ import sys
 
 
 def baryon_number(pdg):
-    """Baryon number from a PDG code: 4-digit codes are baryons, sign follows."""
+    """Baryon number from a PDG code.
+
+    Two cases, and getting only the first right is a real bug rather than an
+    edge case: SMASH's particle table contains light NUCLEI (deuteron
+    1000010020, triton 1000010030, He3 1000020030, hypertriton 1010010030) and
+    the `light_nuclei` configuration produces them.
+
+      * Ordinary baryons have 4-digit codes, |code| in [1000, 10000), B = +-1.
+      * Nuclei use the PDG nuclear code +-10LZZZAAAI, a 10-digit number whose
+        baryon number is A, read from digits 7 to 9. A deuteron counted as a
+        4-digit baryon, or ignored, costs 2 units of baryon number and turns an
+        exact conservation check into a wrong one.
+    """
     a = abs(pdg)
+    sign = 1 if pdg > 0 else -1
     if 1000 <= a < 10000:
-        return 1 if pdg > 0 else -1
+        return sign
+    if 1000000000 <= a < 10000000000:      # +-10LZZZAAAI
+        A = (a // 10) % 1000
+        return sign * A
     return 0
 
 

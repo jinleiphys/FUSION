@@ -71,11 +71,23 @@ fail the rules. Low-energy heavy-ion transport (ImQMD, AMD, CoMD, IBUU) and the 
 are request-based or registration-gated, so they fail "publicly clonable" exactly as Theo4Exp does.
 The cleanly open codes cluster at relativistic energies, a different community.
 
+**Build notes found while starting SMASH on 2026-07-23** (they apply to anyone in
+this row, not only to SMASH): its `INSTALL.md` tells you to fetch Pythia from
+`pythia.org/download/pythia83/...`, which now **404s**, since Pythia moved the
+path to `/releases/`. The 404 arrives as a 3.7 KB HTML page named `.tgz`, so the
+first real symptom is `tar: Unrecognized archive format`, which points nowhere
+near the cause. Separately, `brew --prefix eigen` prints a path even when Eigen
+is NOT installed, and once installed Homebrew now gives **Eigen 5.0.1**, which
+renamed `EIGEN_WORLD_VERSION`, so SMASH 3.3's bundled `FindEigen3.cmake` cannot
+parse it and reports "version .. found ... but at least 3.0 is required", a
+message that reads like the opposite of the truth. The fix is Eigen 3.4.0
+headers (2.7 MB, header-only), not a patch to SMASH.
+
 **Verified eligible (repo + license + paper all confirmed live):**
 
 | code | repo | license (GitHub API) | language | paper (CrossRef-verified) |
 |---|---|---|---|---|
-| **SMASH** | smash-transport/smash | GPLv3 per `LICENSE.md` (GitHub reports NOASSERTION because the file also bundles BSD-3 / CC0 / Unlicense third-party terms) | C++ / CMake | Weil et al., Phys. Rev. C **94**, 054905 (2016), `10.1103/physrevc.94.054905` |
+| ~~**SMASH**~~ **DONE 2026-07-23, see below** | smash-transport/smash | GPLv3, confirmed twice | C++17 / CMake | PRC **94**, 054905 (2016) |
 | **GiBUU** | gibuu/GiBUU_2017 | GPL-2.0 | Fortran | Buss et al., Phys. Rept. **512**, 1-124 (2012), `10.1016/j.physrep.2011.12.001` |
 | **Thermal-FIST** | vlvovch/Thermal-FIST | GPL-3.0 | C++ | Vovchenko, Stoecker, Comput. Phys. Commun. **244**, 295-310 (2019), `10.1016/j.cpc.2019.06.024` |
 | **vHLLE** | yukarpenko/vhlle | GPL-2.0 | C++ | Karpenko et al., Comput. Phys. Commun. **185**, 3016-3027 (2014), `10.1016/j.cpc.2014.07.010` |
@@ -100,6 +112,45 @@ build the source, not what the license permits commercially, and the skill clone
 redistributes nothing, so each user receives the code from the authors under the authors' own terms.
 **Hard requirement on the skill: SKILL.md must state that Sky3D is CPC non-profit and not open
 source, and send a commercial user to the authors.**
+
+**SHIPPED 2026-07-23: SMASH**, `skills/smash/`, the seventeenth per-code skill and
+the first of this row. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
+GSL, Eigen 3.x and Pythia exactly 8.316. **Zero source patches** on macOS/ARM and
+Linux/x86-64. **TIER 1**: reproduces SMASH's own 104-case ctest suite, 104/104
+first attempt on Linux.
+
+Two design decisions here are measurements, not preferences, and both generalize
+to any Monte Carlo code in this row:
+
+1. **Two of the 104 tests are non-deterministic BY UPSTREAM CONSTRUCTION.**
+   `src/tests/potentials.cc` and `random.cc` open with
+   `std::random_device rd; random::set_seed(rd())` and then assert statistical
+   quantities to fixed tolerances; only 2 of 82 test files do this. Measured:
+   `potentials` passed 4 of 5 standalone runs. verify therefore retries exactly
+   those two BY NAME, once, requires the total to be exactly 104, and treats
+   every other failure as fatal. Do not generalize this to "allow one failure".
+2. **The physics anchor is a conservation law, not a multiplicity**, and the
+   cross-build data is why: same seed, same config, same source, and macOS vs
+   Linux multiplicities differ by up to 25 per cent (n 450 vs 442, pi+ 57 vs 43)
+   while baryon number 788 and charge 316 are identical integers on both.
+   Anchoring on multiplicities would have produced a skill that only works on
+   the machine that built it.
+
+Three dependency traps, each with a message pointing away from its cause, are in
+`references/failure-modes.md`: the dead Pythia URL whose 404 page gets saved as a
+`.tgz` (symptom: `tar: Unrecognized archive format`); Eigen 5 making SMASH report
+"at least version 3.0 is required" when the problem is that Eigen is too NEW; and
+the library-example test spawning a fresh cmake that inherits no cache variables,
+so it needs `EIGEN3_ROOT`, the GSL hints AND `LD_LIBRARY_PATH`, each discovered
+only after the previous fix moved the error rather than removing it.
+
+Self-caught defect worth recording: the baryon-number rule `1000 <= |code| <
+10000` silently gives light NUCLEI a baryon number of 0. SMASH's particle table
+carries the deuteron (1000010020), triton, He3 and hypertriton, and ships a
+`light_nuclei` configuration that produces them, so the check now reads A out of
+the PDG nuclear code +-10LZZZAAAI. The Au+Au anchor happened not to produce any,
+which is exactly how this would have shipped as a wrong "exact" conservation
+check on a different configuration.
 
 **Equation of state, surveyed but not yet verified:** CompOSE (compose.obspm.fr, database plus
 its own tools, not on GitHub), SROEOS (Schneider-Roberts-Ott finite-temperature EOS), HFBTHO and
