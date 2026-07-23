@@ -47,7 +47,7 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 - [V] **NuShellX** (Brown/Rae) — free binaries, NOT open source; decide skill-with-binary policy.
 - [ ] **imsrg++** (Stroberg) — VS-IMSRG, open.
 - [ ] **NuHamil** (Miyagi) — chiral-EFT matrix elements, open; already in daily use here.
-- [ ] **NuclearToolkit.jl** (Yoshida) — Julia chiral EFT + IMSRG + shell model, open.
+- [x] **NuclearToolkit.jl** (Yoshida) — Julia chiral EFT + IMSRG + shell model. **SHIPPED 2026-07-23, `skills/nucleartoolkit/`, TIER 1.** MIT, JOSS 7(79), 4694 (2022), DOI 10.21105/joss.04694, CrossRef-verified. **First Julia-package skill and first ab-initio code.** Installed via a pinned `Pkg.add` (v0.5.2) into an ISOLATED depot + project (never touches the user's global Julia env); no source patches (Julia is cross-platform). Reproduces the shipped `@test` references: CKpot Be-8 shell-model spectrum (10 eigenvalues to |dE|<1e-3, g.s. -31.1194) and the full `Pkg.test` 30/30 (chiral EFT -> HFMBPT -> IMSRG He-4 g.s. -4.05225276 to 1e-6 -> shell model). Codex pass: 6 findings all fixed (exit-status-over-content in run/verify, L2 accepting <30 tests, unpinned version check, NTK_PIN injection, selftest isolation); isolation + ARGS-safety + L1-tolerance confirmed clean. Complements KSHELL (phenomenological); adds the IMSRG/chiral-EFT capability for Line D.
 - [ ] **HFBTHO / HFODD** — Skyrme HFB, published open versions.
 - [ ] **Sky3D** — time-dependent Skyrme HF, open.
 - [ ] **DIRHB** — relativistic Hartree-Bogoliubov, CPC-published.
@@ -111,7 +111,7 @@ Note on the whole list: openness is *asserted by the page*, not verified by us. 
 
 Wave 1 (small, classic, self-benchmarking, community): CCFULL done, GSM done, TALYS done. (THOx dropped: not public.)
 Wave 1b (added 2026-07-20, CPC-Library codes: small, published, distributed with the paper, so the openness question is already settled and each ships author test cases): **pikoe, NLAT, CNOK, SWANLOP/SIDES**. These jumped the queue over Wave 2 because they are cheap to verify and every one of them sits directly on an active research line (knockout/QFS, nonlocality, Glauber-vs-IAV). Suggested order: pikoe, NLAT, CNOK, SIDES+SWANLOP as a pair. **Status: Wave 1b COMPLETE (2026-07-22). All five shipped: pikoe, NLAT (07-21), CNOK, SIDES, SWANLOP (07-22).**
-Wave 2 (community heavyweights): KSHELL done 2026-07-22; SkyNet done 2026-07-23 (AZURE2 done 2026-07-22; GEF dropped 2026-07-22, not buildable on target platform). Remaining clean-license Wave-2 structure options: NuclearToolkit.jl (MIT, Julia), imsrg (GPL-2.0, C++).
+Wave 2 (community heavyweights): KSHELL done 2026-07-22; SkyNet done 2026-07-23 (AZURE2 done 2026-07-22; GEF dropped 2026-07-22, not buildable on target platform). NuclearToolkit.jl done 2026-07-23 (first Julia-package + first ab-initio skill). Remaining clean-license Wave-2 option: imsrg (GPL-2.0, C++, ab-initio).
 Wave 3 (verify-then-build): ECIS, TWOFNR (+FRONT/KDUQ), OPTMAN, JITR, YAHFC, DWUCK, SAMMY, NuShellX-policy, OpenMC, NJOY.
 Wave 4 (ecosystem monsters, scoped): Geant4.
 Lei family (eligible only): COLOSS done; SLAM.jl, PINN-ECS, inhomoR when convenient.
