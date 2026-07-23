@@ -52,9 +52,11 @@ MOM_ROW = re.compile(r'^\s*(Total|Neutron|Proton):\s+([\d.]+)\s+([\d.]+)\s+([-\d
                      r'([-\d.E+]+)\s+([-\d.E+]+)\s+([-\d.E+]+)')
 
 
-# Sky3D decorates headers as " ***** Force definition *****", so the field
-# overflow test must skip that symmetric form or it fires on every healthy run.
-HEADER = re.compile(r'^\s*\*{3,}.*\*{3,}\s*$')
+# Sky3D decorates headers with asterisks, and not only symmetrically: a collision
+# log carries " ***** Data for fragment # 1 from file ..." and "******* Fragment
+# # 0". A data line never begins with an asterisk, so skip any line that does,
+# rather than only the symmetric " ***** X *****" form.
+HEADER = re.compile(r'^\s*\*')
 NONFINITE = re.compile(r'(?i)\b(nan|infinity)\b|\*{4,}')
 
 # Physical bounds on the columns the COMPARISON excludes. Excluding a column from
@@ -103,7 +105,11 @@ def parse(path):
                                      f"{line.strip()[:90]!r}")
                 energy.append(tuple(float(v) for v in vals))
                 continue
-            m = SP_FULL.match(line)
+            m_full = SP_FULL.match(line)
+            if SP_ROW.match(line) and not m_full:
+                raise ValueError(f"{path}:{lineno}: single-particle row is malformed past the energy "
+                                 f"columns, so its bounds could not be checked: {line.strip()[:90]!r}")
+            m = m_full
             if m:
                 # The excluded columns are excluded from the COMPARISON, not from
                 # inspection: an unconverged or unphysical run must not slip
@@ -129,6 +135,9 @@ def parse(path):
             if m:
                 mom.append(tuple(float(m.group(i)) for i in range(2, 8)))
                 c = MOM_CENTROID.match(line)
+                if not c:
+                    raise ValueError(f"{path}:{lineno}: moments row is malformed past <z2>, so the "
+                                     f"centroid bounds could not be checked: {line.strip()[:90]!r}")
                 if c:
                     cen = [float(c.group(i)) for i in (7, 8, 9)]
                     if max(abs(x) for x in cen) > MAX_CENTROID:

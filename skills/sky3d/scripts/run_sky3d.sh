@@ -58,7 +58,8 @@ done
 [ -n "$DECK" ] || die "--deck is required"
 [ -f "$DECK" ] || die "deck '$DECK' does not exist"
 DECK="$(cd "$(dirname "$DECK")" && pwd)/$(basename "$DECK")"
-grep -q '&main' "$DECK" || die "deck '$DECK' has no &main namelist; is it really a Sky3D input?"
+# Fortran namelist names are case-insensitive, so '&MAIN' is a valid deck.
+grep -qi '&main' "$DECK" || die "deck '$DECK' has no &main namelist; is it really a Sky3D input?"
 
 if [ -n "${SKY3D:-}" ]; then
   BIN="$SKY3D"
@@ -102,10 +103,20 @@ cp "$DECK" "$WORKDIR/for005"
 # is what makes '../Static/O16' usable without opening a path-traversal hole: a
 # textual ".." ban would reject the shipped collision deck's own layout, and a
 # textual ban alone would not stop a symlinked component anyway.
-canonical_parent () {
-  local dir="$1"
-  mkdir -p "$dir" 2>/dev/null || return 1
-  ( cd "$dir" && pwd -P )
+# Resolve a path that may not exist yet WITHOUT creating it: walk up to the
+# nearest existing ancestor, canonicalize that, then re-append the missing tail.
+# The previous version called mkdir -p first, so a rejected destination had
+# already created directories outside the sandbox by the time it was rejected.
+resolve_noncreating () {
+  local path="$1" tail="" base
+  while [ ! -d "$path" ]; do
+    base="$(basename "$path")"
+    path="$(dirname "$path")"
+    tail="$base${tail:+/$tail}"
+    [ "$path" = "/" ] && break
+  done
+  local real; real="$(cd "$path" 2>/dev/null && pwd -P)" || return 1
+  if [ -n "$tail" ]; then echo "$real/$tail"; else echo "$real"; fi
 }
 
 for spec in ${FRAGMENTS+"${FRAGMENTS[@]}"}; do
@@ -117,12 +128,13 @@ for spec in ${FRAGMENTS+"${FRAGMENTS[@]}"}; do
     /*) die "fragment destination '$dest' must be relative to the working directory" ;;
     "") die "fragment destination is empty" ;;
   esac
-  destdir="$(canonical_parent "$WORKDIR/$(dirname "$dest")")" \
-    || die "cannot create the directory for fragment destination '$dest'"
+  destdir="$(resolve_noncreating "$WORKDIR/$(dirname "$dest")")" \
+    || die "cannot resolve the directory for fragment destination '$dest'"
   case "$destdir/" in
     "$ROOT"/*) : ;;
     *) die "fragment destination '$dest' resolves to '$destdir', outside --root '$ROOT'" ;;
   esac
+  mkdir -p "$destdir" || die "cannot create '$destdir'"
   cp "$src" "$destdir/$(basename "$dest")"
 done
 

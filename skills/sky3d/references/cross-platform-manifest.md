@@ -9,17 +9,25 @@ for someone else to repeat it. Measured 2026-07-23.
 macOS (Apple Silicon):
 
 ```
-git clone https://github.com/manybody/sky3d && git checkout be42efc7fba93aeb3a18ed0b5155b5f6bc9c6c1b
-cd Code && make apple LIBS_SKY="-L<fftw>/lib -lfftw3 -framework Accelerate"
-mkdir w && cp Test/Static/for005.static w/for005 && (cd w && ../Code/sky3d.seq > for006)
-python3 scripts/compare_sky3d.py w/for006 Test/Static/for006.static
+FUSION=$PWD                       # the FUSION checkout, for the comparator
+git clone https://github.com/manybody/sky3d /tmp/sky3d
+cd /tmp/sky3d
+git checkout be42efc7fba93aeb3a18ed0b5155b5f6bc9c6c1b
+make -C Code apple LIBS_SKY="-L$(brew --prefix fftw)/lib -lfftw3 -framework Accelerate"
+mkdir /tmp/sky3d/w
+cp /tmp/sky3d/Test/Static/for005.static /tmp/sky3d/w/for005
+(cd /tmp/sky3d/w && /tmp/sky3d/Code/sky3d.seq > for006 2> stderr.txt)
+python3 "$FUSION/skills/sky3d/scripts/compare_sky3d.py" \
+  /tmp/sky3d/w/for006 /tmp/sky3d/Test/Static/for006.static
 ```
 
 Linux (heliumx, x86-64):
 
 ```
-cd Code && make seq LIBS_SKY="-L$CONDA/lib -Wl,-rpath,$CONDA/lib -lfftw3 -llapack -lopenblas"
-# same run and comparison
+CONDA=$HOME/miniforge3/envs/sky3d
+make -C /tmp/sky3d/Code seq \
+  LIBS_SKY="-L$CONDA/lib -Wl,-rpath,$CONDA/lib -lfftw3 -llapack -lopenblas"
+# then the same mkdir / cp / run / compare block as above
 ```
 
 FFTW on heliumx came from `conda create -n sky3d -c conda-forge fftw`; the box

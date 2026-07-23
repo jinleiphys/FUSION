@@ -74,15 +74,22 @@ Prints `RESULT_DIR=` and `RESULT_FOR006=`. It asserts a zero exit, a non-empty
 `for006`, no fatal error on stderr, no NaN or numeric-field overflow, a finite
 total energy, and at least one printed iteration (static) or time step (dynamic).
 
-A dynamic run needs its fragments staged:
+A dynamic run needs its fragments staged. The shipped collision deck reads
+`../Static/O16`, so give `--root`, the directory that holds both `Static/` and
+`Collision/`, and the destination is then allowed to leave the workdir as long as
+it stays inside that root:
 
 ```bash
-scripts/run_sky3d.sh --deck collision.in --workdir /tmp/coll \
-  --fragment /tmp/run1/O16:../Static/O16
+mkdir -p /tmp/run/Collision
+scripts/run_sky3d.sh --deck collision.in \
+  --workdir /tmp/run/Collision --root /tmp/run \
+  --fragment /tmp/o16/O16:../Static/O16
 ```
 
 The destination is relative to the working directory because the deck's
-`filename=` is; absolute paths and `..`-escapes are rejected.
+`filename=` is. It is resolved canonically, symlinks included, and rejected if it
+lands outside `--root`; without `--root` the root is the workdir, so a `..`
+destination is refused.
 
 ## Verifying
 

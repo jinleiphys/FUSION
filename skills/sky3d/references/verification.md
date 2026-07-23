@@ -135,14 +135,14 @@ compiler version strings, file hashes and comparator output are recorded in
 
 ## Harness
 
-`scripts/selftest_sky3d.sh`, 60 cases, no Sky3D build required (the run tests use
+`scripts/selftest_sky3d.sh`, 69 cases, no Sky3D build required (the run tests use
 a stub executable). Every guard has a negative case that fails only that guard,
 including the one that matters most here: the overflow guard must fire on a run
 of asterisks in a numeric field while NOT firing on Sky3D's `***** header *****`
 decorations, and the passing control is asserted to actually contain those
 headers, so the negative case cannot pass vacuously.
 
-Twenty-three of those cases were added on 2026-07-23 after an adversarial pass
+Thirty-two of those cases were added on 2026-07-23 across two adversarial passes
 found real holes, and each one replays an attack that previously succeeded: a
 `NaN` substituted into an energy line that the numeric regex silently skipped, a
 run that hit `maxiter` without converging, an unconverged residual of 1e5, an
@@ -153,3 +153,12 @@ Negative cases now assert WHICH guard fired, because the pass also showed two of
 them failing on the wrong guard entirely: they named `/bin/true`, which does not
 exist on macOS, so they tripped the executable check instead of the check they
 claimed to test.
+
+The second pass found a defect that only the expensive path could show: the
+numeric-overflow guard excluded Sky3D's SYMMETRIC `***** X *****` headers but not
+the one-sided ones a real collision log carries (`***** Data for fragment # 1
+from file ...`, `******* Fragment # 0`), so `verify_sky3d.sh --with-collision`
+would have failed after completing a 45-minute run. Static-only testing could
+never have exposed it. The guard now skips any line beginning with an asterisk,
+since a data line never does, and the regression case asserts both directions on
+a fixture carrying those exact headers.

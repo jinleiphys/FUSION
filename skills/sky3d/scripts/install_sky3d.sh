@@ -144,7 +144,10 @@ build_identity () {
   local head dirty fc
   head="$(cd "$SRCROOT" 2>/dev/null && git rev-parse HEAD 2>/dev/null || echo nohead)"
   if (cd "$SRCROOT" 2>/dev/null && git diff --quiet HEAD 2>/dev/null); then dirty=clean; else dirty=DIRTY; fi
-  fc="$(gfortran -dumpversion 2>/dev/null || echo nofc)"
+  # -dumpversion gives only the major on some builds ("15"), so a different
+  # compiler with the same major would match. Record the full banner and the
+  # resolved path instead.
+  fc="$(command -v gfortran 2>/dev/null || echo nofc)|$(gfortran --version 2>/dev/null | head -1 || echo nover)"
   echo "$head|$dirty|$MAKE_TARGET|$fc|$(uname -s)|$(uname -m)|${FFTW_USED:-unset}"
 }
 
@@ -180,9 +183,17 @@ else
     # Clone to a temporary path and move into place, so an interrupted clone
     # never leaves a half-tree where a complete one used to be.
     TMPCLONE="$ROOT_DIR/.clone.$$"
+    # $$ can be reused after a crash, so refuse to reuse a leftover path unless
+    # it carries this script's own marker.
+    if [ -e "$TMPCLONE" ] && [ ! -f "$TMPCLONE/.fusion_tmpclone" ]; then
+      log "refusing to reuse '$TMPCLONE': it exists and is not one of this script's temporary clones"
+      exit 1
+    fi
     safe_rmrf "$TMPCLONE"
     log "cloning $REPO"
-    git clone -q "$REPO" "$TMPCLONE" || { log "clone failed"; safe_rmrf "$TMPCLONE"; exit 1; }
+    mkdir -p "$TMPCLONE" && : > "$TMPCLONE/.fusion_tmpclone"
+    git clone -q "$REPO" "$TMPCLONE/repo" || { log "clone failed"; safe_rmrf "$TMPCLONE"; exit 1; }
+    mv "$TMPCLONE/repo" "$TMPCLONE.repo" && safe_rmrf "$TMPCLONE" && mv "$TMPCLONE.repo" "$TMPCLONE"
     safe_rmrf "$SRCROOT"
     mv "$TMPCLONE" "$SRCROOT"
   fi

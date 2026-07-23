@@ -9,13 +9,13 @@
 # Returns 0 when the run is usable, 1 otherwise, and explains itself on stderr.
 
 validate_sky3d_output () {
-  local w="$1" status="$2" allow="${3:-0}"
+  local w="$1" rc="$2" allow="${3:-0}"
   local out="$w/for006" err="$w/stderr.txt" deck="$w/for005"
 
   _v () { echo "validate_sky3d: $*" >&2; }
 
-  if [ "$status" -ne 0 ]; then
-    _v "Sky3D exited with status $status"
+  if [ "$rc" -ne 0 ]; then
+    _v "Sky3D exited with status $rc"
     [ -s "$err" ] && tail -10 "$err" >&2
     return 1
   fi
@@ -36,12 +36,15 @@ validate_sky3d_output () {
 
   # A Fortran numeric field that overflows its format prints as a run of
   # asterisks, which downstream parsers skip silently. Sky3D decorates headers
-  # the same way (" ***** Force definition *****"), so exclude that symmetric
-  # header form first, or the check fires on every healthy run. Exercised in both
-  # directions by selftest_sky3d.sh.
-  if grep -vE '^[[:space:]]*\*{3,}.*\*{3,}[[:space:]]*$' "$out" | grep -qE '\*{4,}'; then
+  # with asterisks too, and NOT only in the symmetric " ***** X *****" form: a
+  # real collision log carries " ***** Data for fragment # 1 from file ..." and
+  # "******* Fragment # 0". Excluding only the symmetric form rejected every
+  # legitimate collision run, which the static-only testing never exposed.
+  # A data line never begins with an asterisk, so skip any line that does.
+  # Exercised in both directions by selftest_sky3d.sh.
+  if grep -vE '^[[:space:]]*\*' "$out" | grep -qE '\*{4,}'; then
     _v "for006 contains a Fortran numeric field overflow (asterisks outside a header)"
-    grep -vE '^[[:space:]]*\*{3,}.*\*{3,}[[:space:]]*$' "$out" | grep -nE '\*{4,}' | head -3 >&2
+    grep -vE '^[[:space:]]*\*' "$out" | grep -nE '\*{4,}' | head -3 >&2
     return 1
   fi
 
@@ -67,8 +70,9 @@ PY
       if [ "$allow" = "1" ]; then
         _v "WARNING: static run hit maxiter=$maxiter without converging; accepted because --allow-unconverged was given"
       else
-        _v "static run hit maxiter=$maxiter without reaching serr, so it did NOT converge"
-        _v "(it still exits 0 and prints a full final block; pass --allow-unconverged to accept it)"
+        _v "static run used all $maxiter permitted iterations, so it almost certainly did NOT converge"
+        _v "(Sky3D prints no convergence marker, so a run that happened to converge exactly on the"
+        _v " last permitted iteration looks the same; pass --allow-unconverged if that is your case)"
         return 1
       fi
     fi

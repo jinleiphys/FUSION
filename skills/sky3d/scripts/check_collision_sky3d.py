@@ -74,6 +74,9 @@ def main():
                          'so a table of zeros would pass')
     ap.add_argument('--expect-z', type=float, default=None,
                     help='expected proton number')
+    ap.add_argument('--no-expect', action='store_true',
+                    help='run without expected particle numbers. Drift alone cannot tell a real '
+                         'trajectory from a fabricated one, so this weakens the check and says so.')
     args = ap.parse_args()
 
     for name, val in (('--max-particle-drift', args.max_particle_drift),
@@ -85,6 +88,12 @@ def main():
         if val is not None and (not math.isfinite(val) or val <= 0.0):
             print(f"FAIL: {name}={val!r} is not a finite positive particle number")
             return 1
+
+    if args.expect_n is None and args.expect_z is None and not args.no_expect:
+        print("FAIL: give --expect-n and --expect-z (the deck's neutron and proton numbers), or "
+              "--no-expect to accept a weaker check. Conservation drift alone cannot distinguish "
+              "a real trajectory from a fabricated table.")
+        return 1
 
     path = os.path.join(args.rundir, 'energies.res')
     if not os.path.isfile(path):
@@ -103,6 +112,9 @@ def main():
         return 1
 
     ok = True
+    if args.no_expect:
+        print("NOTE: running without expected particle numbers, so this check is weaker than "
+              "the one verify_sky3d.sh performs")
     print(f"collision run: {len(rows)} printed points, t = {rows[0][0]:.1f} to {rows[-1][0]:.1f} fm/c")
 
     n0, p0 = rows[0][1], rows[0][2]

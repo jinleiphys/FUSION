@@ -194,28 +194,28 @@ res <<'EOT'
      10.00  16.000  16.000   -133.3085319   -133.3387907   558.93   45.104   43.829
      20.00  16.000  16.000   -133.2739812   -133.3447324   561.17   43.681   42.216
 EOT
-expect_pass "a conserving collision passes (control)"        python3 "$CC" "$TMP/coll"
+expect_pass "a conserving collision passes (control)"        python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 res <<'EOT'
       0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.434   45.421
      10.00  15.000  16.000   -133.3085319   -133.3387907   558.93   45.104   43.829
 EOT
-expect_fail "particle-number loss fails"                     python3 "$CC" "$TMP/coll"
+expect_fail "particle-number loss fails"                     python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 res <<'EOT'
       0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.434   45.421
      10.00  16.000  16.000   -120.0000000   -133.3387907   558.93   45.104   43.829
 EOT
-expect_fail "an E(sum) jump fails"                           python3 "$CC" "$TMP/coll"
+expect_fail "an E(sum) jump fails"                           python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 res <<'EOT'
       0.00  16.000  16.000            NaN   -133.3342577   560.04   45.434   45.421
      10.00  16.000  16.000   -133.3085319   -133.3387907   558.93   45.104   43.829
 EOT
-expect_fail "a non-finite energy fails"                      python3 "$CC" "$TMP/coll"
+expect_fail "a non-finite energy fails"                      python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 res <<'EOT'
       0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.434   45.421
 EOT
-expect_fail "a single-row (non-evolving) run fails"          python3 "$CC" "$TMP/coll"
+expect_fail "a single-row (non-evolving) run fails"          python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 rm -f "$TMP/coll/energies.res"
-expect_fail "a missing energies.res fails"                   python3 "$CC" "$TMP/coll"
+expect_fail "a missing energies.res fails"                   python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 
 echo
 echo "verify_sky3d.sh"
@@ -309,27 +309,78 @@ res <<'EOT'
       0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
      10.00  16.000  16.000   -133.3085319   -133.3387907   558.93
 EOT
-expect_fail_with "a wrong column count is rejected" "columns, expected 8" python3 "$CC" "$TMP/coll"
+expect_fail_with "a wrong column count is rejected" "columns, expected 8" python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 res <<'EOT'
       0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.4   45.4
       0.00  16.000  16.000   -133.3085319   -133.3387907   558.93   45.1   43.8
 EOT
-expect_fail_with "a non-increasing time column is rejected" "strictly increasing" python3 "$CC" "$TMP/coll"
+expect_fail_with "a non-increasing time column is rejected" "strictly increasing" python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 res <<'EOT'
       0.00   0.000   0.000      0.0000000      0.0000000     0.00    0.0    0.0
      10.00   0.000   0.000      0.0000000      0.0000000     0.00    0.0    0.0
 EOT
-expect_fail_with "an all-zero table is rejected" "neither" python3 "$CC" "$TMP/coll"
+expect_fail_with "an all-zero table is rejected" "neither" python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16
 res <<'EOT'
       0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.4   45.4
      10.00  16.000  16.000   -133.3085319   -133.3387907   558.93   45.1   43.8
 EOT
 expect_fail_with "a requested but missing --reference fails, never skips" "--reference was given" \
-  python3 "$CC" "$TMP/coll" --reference "$TMP/no_such_reference"
+  python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16 --reference "$TMP/no_such_reference"
 expect_fail_with "a nan drift bound cannot disable the gate" "not a finite" \
-  python3 "$CC" "$TMP/coll" --max-energy-drift nan
+  python3 "$CC" "$TMP/coll" --expect-n 16 --expect-z 16 --max-energy-drift nan
 expect_fail_with "a wrong --expect-n is caught" "is not the expected" \
   python3 "$CC" "$TMP/coll" --expect-n 8
+
+echo
+echo "guards added after the re-verification pass (2026-07-23, round 2)"
+# The one-sided asterisk headers a REAL collision log carries. Excluding only the
+# symmetric " ***** X *****" form rejected every legitimate collision run, and
+# static-only testing never showed it.
+COLLHDR="$TMP/collhdr"; mkdir -p "$COLLHDR"
+printf ' &main imode=2 /\n &dynamic nt=2 /\n' > "$COLLHDR/for005"
+{
+  echo ' ***** Running sequential version *****'
+  echo ' ***** Data for fragment # 1 from file ../Static/O16'
+  echo '******* Fragment # 0'
+  echo ' Starting time step #     1 at time=    0.20 fm/c'
+  echo ' Starting time step #     2 at time=    0.40 fm/c'
+  echo ' Total: -1.333134E+02 MeV. t0 part: -9.7E+02 MeV. t1 part: 1.2E+01 MeV. t2 part: 4.3E+01 MeV'
+  echo ' Final separation distance reached'
+} > "$COLLHDR/for006"
+: > "$COLLHDR/stderr.txt"
+( . "$HERE/validate_sky3d_output.sh"; validate_sky3d_output "$COLLHDR" 0 0 ) >/dev/null 2>&1 \
+  && ok "one-sided '***** Data for fragment' headers are NOT read as overflow" \
+  || bad "a legitimate collision log is rejected as numeric overflow"
+printf ' Starting time step #  ******** at time= 0.20 fm/c\n' >> "$COLLHDR/for006"
+( . "$HERE/validate_sky3d_output.sh"; validate_sky3d_output "$COLLHDR" 0 0 ) >/dev/null 2>&1 \
+  && bad "an overflowed numeric field in the same file was not caught" \
+  || ok "an overflowed numeric field is still caught alongside those headers"
+
+# A malformed value in an EXCLUDED column must not be invisible.
+sed 's/ -0.000 -0.000  0.000  0.500/ BAD -0.000  0.000  0.500/' "$B" > "$TMP/mal_spin"
+expect_fail_with "a malformed spin column is rejected, not skipped" "malformed" python3 "$CMP" "$TMP/mal_spin" "$B"
+sed 's/-3.1657359E-16/BAD/' "$B" > "$TMP/mal_cen"
+expect_fail_with "a malformed centroid column is rejected, not skipped" "malformed" python3 "$CMP" "$TMP/mal_cen" "$B"
+
+# Fortran namelists are case-insensitive.
+sed 's/&main/\&MAIN/' "$DECK" > "$TMP/deck_upper"
+SKY3D="$TMP/stub_healthy" expect_pass "an uppercase &MAIN deck is accepted" \
+  "$RUN" --deck "$TMP/deck_upper" --workdir "$TMP/w_upper"
+
+# Containment must be decided before anything is created.
+rm -rf "$TMP/nc_root"; mkdir -p "$TMP/nc_root/work"
+SKY3D="$TMP/stub_healthy" expect_fail_with "an out-of-root destination is refused" "outside --root" \
+  "$RUN" --deck "$DECK" --workdir "$TMP/nc_root/work" --fragment "$TMP/frag:../nc_outside/sub/O16"
+[ -d "$TMP/nc_root/nc_outside" ] && bad "the rejected destination still created directories" \
+  || ok "a rejected destination created nothing"
+
+# The collision checker must not certify without a particle-number anchor.
+res <<'EOT'
+      0.00   1.000   1.000      0.0000000      0.0000000     0.00    0.0    0.0
+     10.00   1.000   1.000      0.1000000      0.1000000     0.10    0.0    0.0
+EOT
+expect_fail_with "the checker refuses to run without --expect-n/--expect-z" "--expect-n" python3 "$CC" "$TMP/coll"
+expect_pass "--no-expect runs it deliberately, weaker and labelled" python3 "$CC" "$TMP/coll" --no-expect
 
 echo
 echo "-------------------------------------------"

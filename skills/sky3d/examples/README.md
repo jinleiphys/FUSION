@@ -12,7 +12,14 @@ of -116.6577 MeV and an rms radius of 2.6884 fm, and writes the wavefunction fil
 `O16`. About 20 seconds on one modern core.
 
 ```bash
-eval "$(scripts/install_sky3d.sh | grep '^SKY3D')"
+# Parse the installer's output explicitly. Do NOT `eval` it: the values are
+# filesystem paths that the environment can influence, and eval would run
+# anything they contained.
+out="$(scripts/install_sky3d.sh)"
+SKY3D="$(printf '%s\n' "$out" | sed -n 's/^SKY3D=//p')"
+SKY3D_TESTS="$(printf '%s\n' "$out" | sed -n 's/^SKY3D_TESTS=//p')"
+export SKY3D SKY3D_TESTS
+
 scripts/run_sky3d.sh --deck "$SKY3D_TESTS/Static/for005.static" --workdir /tmp/o16
 python3 scripts/compare_sky3d.py /tmp/o16/for006 "$SKY3D_TESTS/Static/for006.static"
 ```
@@ -28,9 +35,15 @@ two copies of the O16 wavefunction from example 1 through
 `filename=2*'../Static/O16'`, so run example 1 first and stage its output:
 
 ```bash
+mkdir -p /tmp/run/Collision
 scripts/run_sky3d.sh --deck "$SKY3D_TESTS/Collision/for005.coll" \
-  --workdir /tmp/coll --fragment /tmp/o16/O16:../Static/O16
+  --workdir /tmp/run/Collision --root /tmp/run \
+  --fragment /tmp/o16/O16:../Static/O16
 ```
+
+`--root` is required here: the deck reads `../Static/O16`, which leaves the
+working directory, and a fragment destination may only leave the workdir inside
+an explicitly named root.
 
 About 45 minutes (943 time steps). **Its shipped `.res` tables are not a benchmark**: their real
 input is a binary wavefunction the distribution does not ship, so an independently
