@@ -14,9 +14,12 @@ defect:
      The energies of those states are identical; only the orientation is not.
 
   2. Quantities that vanish by symmetry, printed as numerical noise. For a
-     spherical nucleus q20 comes out around 1e-9 and the centre-of-mass <x>,
-     <y>, <z> around 1e-16 to 1e-11. Their relative difference between two runs
-     is order unity and means nothing.
+     spherical nucleus q20 falls to around 1e-9 AT CONVERGENCE, having passed
+     through roughly 1e-3 to 1e-2 in the transient while the initial Gaussian
+     relaxes, and the centre-of-mass <x>, <y>, <z> sit around 1e-16 to 1e-11
+     throughout. Their relative difference between two runs is order unity and
+     means nothing. The dimensionless test below is what makes this precise: it
+     is |q20| / (N * rms^2) that stays tiny, not |q20| itself.
 
 So this comparator checks what is physically determined, and says plainly what
 it excludes. The energy functional, the single-particle ENERGIES, and the
@@ -49,16 +52,70 @@ MOM_ROW = re.compile(r'^\s*(Total|Neutron|Proton):\s+([\d.]+)\s+([\d.]+)\s+([-\d
                      r'([-\d.E+]+)\s+([-\d.E+]+)\s+([-\d.E+]+)')
 
 
+# Sky3D decorates headers as " ***** Force definition *****", so the field
+# overflow test must skip that symmetric form or it fires on every healthy run.
+HEADER = re.compile(r'^\s*\*{3,}.*\*{3,}\s*$')
+NONFINITE = re.compile(r'(?i)\b(nan|infinity)\b|\*{4,}')
+
+# Physical bounds on the columns the COMPARISON excludes. Excluding a column from
+# the comparison is not a reason to stop looking at it: a run with residuals of
+# 1e5 is not converged and a spin component of 999 is not a spin-1/2 orbital,
+# and both used to pass.
+MAX_RESIDUAL = 1.0e3    # var_h1/var_h2 in MeV^2; the benchmark reaches < 1e-5
+MAX_SPIN = 0.5001       # |S_i| for a spin-1/2 orbital, with printing slack
+MAX_CENTROID = 1.0e3    # |<x>| in fm; any real box is far smaller
+
+# Full s.p. row including the six Lx..Sz columns, used for bounds checking only.
+SP_FULL = re.compile(
+    r'^\s*(\d+)\s+(-?1)\.\s+([\d.]+)\s+([\d.E+-]+)\s+([\d.E+-]+)\s+'
+    r'([\d.]+)\s+(-?[\d.]+)\s+(-?[\d.]+)'
+    r'\s+(-?[\d.E+-]+)\s+(-?[\d.E+-]+)\s+(-?[\d.E+-]+)'
+    r'\s+(-?[\d.E+-]+)\s+(-?[\d.E+-]+)\s+(-?[\d.E+-]+)\s*$')
+# Moments row extended to the three centroid columns.
+MOM_CENTROID = re.compile(
+    r'^\s*(Total|Neutron|Proton):\s+([\d.]+)\s+([\d.]+)\s+([-\d.E+]+)\s+'
+    r'([-\d.E+]+)\s+([-\d.E+]+)\s+([-\d.E+]+)\s+'
+    r'([-\d.E+]+)\s+([-\d.E+]+)\s+([-\d.E+]+)')
+# A "Total:" line carries 4 values and its "t3 part" continuation carries 3.
+# Anything else means the line was corrupted (a value replaced by NaN or by a
+# field overflow drops silently out of the SCI regex, which is how a 265-value
+# candidate once compared EXACT against a 266-value reference).
+ENERGY_WIDTH = {'Total:': 4, 't3 part': 3}
+
+
 def parse(path):
-    """Return (energy_block_lines, sp_energies, moments)."""
+    """Return (energy_rows, sp_rows, moment_rows). Raises ValueError on corruption."""
     energy, sp, mom = [], [], []
     with open(path, errors='replace') as fh:
-        for line in fh:
-            if ENERGY_LINE.match(line) and 'MeV' in line:
-                vals = SCI.findall(line)
-                if vals:
-                    energy.append(tuple(float(v) for v in vals))
+        for lineno, line in enumerate(fh, 1):
+            # Detect non-finite and overflowed fields TEXTUALLY, before any
+            # numeric regex gets the chance to skip over them.
+            if HEADER.match(line):
                 continue
+            if NONFINITE.search(line):
+                raise ValueError(f"{path}:{lineno}: non-finite value or field overflow: {line.strip()[:90]!r}")
+            if ENERGY_LINE.match(line) and 'MeV' in line:
+                key = 'Total:' if line.lstrip().startswith('Total:') else 't3 part'
+                vals = SCI.findall(line)
+                want = ENERGY_WIDTH[key]
+                if len(vals) != want:
+                    raise ValueError(f"{path}:{lineno}: energy line has {len(vals)} values, expected {want}: "
+                                     f"{line.strip()[:90]!r}")
+                energy.append(tuple(float(v) for v in vals))
+                continue
+            m = SP_FULL.match(line)
+            if m:
+                # The excluded columns are excluded from the COMPARISON, not from
+                # inspection: an unconverged or unphysical run must not slip
+                # through just because its differing columns are not compared.
+                v_h1, v_h2 = float(m.group(4)), float(m.group(5))
+                if max(abs(v_h1), abs(v_h2)) > MAX_RESIDUAL:
+                    raise ValueError(f"{path}:{lineno}: single-particle residual var_h1/var_h2 = "
+                                     f"{v_h1:g}/{v_h2:g} exceeds {MAX_RESIDUAL:g}; the run is not converged")
+                spins = [float(m.group(i)) for i in (12, 13, 14)]
+                if max(abs(x) for x in spins) > MAX_SPIN:
+                    raise ValueError(f"{path}:{lineno}: spin component {max(spins, key=abs):g} exceeds "
+                                     f"{MAX_SPIN:g}, impossible for a spin-1/2 orbital")
             m = SP_ROW.match(line)
             if m:
                 # v**2, Norm, Ekin, Energy. var_h1 and var_h2 are convergence
@@ -71,6 +128,15 @@ def parse(path):
             m = MOM_ROW.match(line)
             if m:
                 mom.append(tuple(float(m.group(i)) for i in range(2, 8)))
+                c = MOM_CENTROID.match(line)
+                if c:
+                    cen = [float(c.group(i)) for i in (7, 8, 9)]
+                    if max(abs(x) for x in cen) > MAX_CENTROID:
+                        raise ValueError(f"{path}:{lineno}: centre-of-mass coordinate "
+                                         f"{max(cen, key=abs):g} fm is outside any sane box")
+    if not energy or not sp or not mom:
+        raise ValueError(f"{path}: parsed {len(energy)} energy, {len(sp)} single-particle and "
+                         f"{len(mom)} moment rows; at least one block is missing")
     return energy, sp, mom
 
 
@@ -184,17 +250,23 @@ def main():
                          'and q20 is a symmetry residue rather than an observable')
     args = ap.parse_args()
 
-    ca = parse(args.candidate)
-    rb = parse(args.reference)
+    # A threshold of nan or inf makes every comparison below pass. Reject any
+    # non-finite, negative or absurd tolerance rather than letting it disable
+    # the check it is supposed to parameterize.
+    for name, val, upper in (('--rtol', args.rtol, 1.0),
+                             ('--sphere-tol', args.sphere_tol, 1.0)):
+        if not math.isfinite(val) or val < 0.0 or val > upper:
+            print(f"FAIL: {name}={val!r} is not a finite tolerance in [0, {upper}]")
+            return 1
+
+    try:
+        ca = parse(args.candidate)
+        rb = parse(args.reference)
+    except ValueError as exc:
+        print(f"FAIL: {exc}")
+        return 1
 
     for label, idx in (('energy functional', 0), ('single-particle table', 1), ('moments', 2)):
-        if not ca[idx]:
-            print(f"FAIL: no {label} rows parsed from {args.candidate}; the run did not "
-                  f"produce a usable for006")
-            return 1
-        if not rb[idx]:
-            print(f"FAIL: no {label} rows parsed from the reference {args.reference}")
-            return 1
         if not check_finite(label, ca[idx], args.candidate):
             return 1
         if not check_finite(label, rb[idx], args.reference):

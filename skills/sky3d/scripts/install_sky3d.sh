@@ -26,6 +26,8 @@
 set -euo pipefail
 
 ROOT_DIR="${SKY3D_ROOT_DIR:-$HOME/.cache/fusion/sky3d}"
+mkdir -p "$ROOT_DIR"
+ROOT_CANON="$(cd "$ROOT_DIR" && pwd -P)"
 REPO="${SKY3D_REPO:-https://github.com/manybody/sky3d}"
 PIN="${SKY3D_PIN:-be42efc7fba93aeb3a18ed0b5155b5f6bc9c6c1b}"
 SRCROOT="$ROOT_DIR/sky3d"
@@ -38,16 +40,28 @@ log () { echo "install_sky3d: $*" >&2; }
 # rm -rf safety. The devlog records this class of bug three times over; the guard
 # must name the very path that is deleted, and refuse anything short or absolute.
 safe_rmrf () {
-  local target="$1"
+  local target="$1" canon parent
+  [ -n "$target" ] || { log "refusing to delete an empty path"; return 1; }
   case "$target" in
-    ""|"/"|"$HOME"|"$HOME/") log "refusing to delete '$target'"; return 1 ;;
+    /*) : ;;
+    *) log "refusing to delete relative path '$target'"; return 1 ;;
   esac
-  [ "${#target}" -ge 12 ] || { log "refusing to delete suspiciously short path '$target'"; return 1; }
-  case "$target" in
-    "$ROOT_DIR"|"$ROOT_DIR"/*) : ;;
-    *) log "refusing to delete '$target' outside \$SKY3D_ROOT_DIR ($ROOT_DIR)"; return 1 ;;
+  [ -e "$target" ] || return 0
+  # Canonicalize both sides before the containment test: a string-prefix test
+  # alone is defeated by a symlinked component, and the comment used to promise
+  # a canonical check the code did not perform.
+  parent="$(cd "$(dirname "$target")" 2>/dev/null && pwd -P)" || {
+    log "cannot resolve the parent of '$target'"; return 1; }
+  canon="$parent/$(basename "$target")"
+  case "$canon" in
+    "/"|"$HOME"|"$HOME/"|"/usr"|"/etc"|"/var"|"/tmp") log "refusing to delete '$canon'"; return 1 ;;
   esac
-  rm -rf "$target"
+  [ "${#canon}" -ge 12 ] || { log "refusing to delete suspiciously short path '$canon'"; return 1; }
+  case "$canon/" in
+    "$ROOT_CANON"/*) : ;;
+    *) log "refusing to delete '$canon' outside \$SKY3D_ROOT_DIR ($ROOT_CANON)"; return 1 ;;
+  esac
+  rm -rf "$canon"
 }
 
 # Which executable the chosen make target produces.
@@ -66,19 +80,39 @@ BIN="$CODE/$EXE_NAME"
 # FFTW3 is the one dependency neither platform supplies by default. Locate it
 # rather than trusting the Makefile's hardcoded /opt/homebrew/lib, which is wrong
 # on Intel Macs (/usr/local) and on any Linux box.
+# A prefix reaches the upstream Makefile's link recipe as unquoted shell text, so
+# a semicolon or a command substitution in it would execute. Restrict it to a
+# conservative path grammar and require it to exist.
+valid_prefix () {
+  case "$1" in
+    /*) : ;;
+    *) return 1 ;;
+  esac
+  case "$1" in
+    *[!A-Za-z0-9/._+-]*) return 1 ;;
+  esac
+  [ -d "$1" ]
+}
+
 find_fftw_prefix () {
   local p
-  if [ -n "${SKY3D_FFTW_PREFIX:-}" ]; then echo "$SKY3D_FFTW_PREFIX"; return 0; fi
+  if [ -n "${SKY3D_FFTW_PREFIX:-}" ]; then
+    valid_prefix "$SKY3D_FFTW_PREFIX" || {
+      log "SKY3D_FFTW_PREFIX='$SKY3D_FFTW_PREFIX' is not an existing absolute path over [A-Za-z0-9/._+-]"
+      return 1
+    }
+    echo "$SKY3D_FFTW_PREFIX"; return 0
+  fi
   if command -v pkg-config >/dev/null 2>&1 && pkg-config --exists fftw3 2>/dev/null; then
     p="$(pkg-config --variable=libdir fftw3 2>/dev/null || true)"
-    [ -n "$p" ] && [ -d "$p" ] && { echo "${p%/lib}"; return 0; }
+    if [ -n "$p" ] && valid_prefix "${p%/lib}"; then echo "${p%/lib}"; return 0; fi
   fi
   if command -v brew >/dev/null 2>&1; then
     p="$(brew --prefix fftw 2>/dev/null || true)"
-    [ -n "$p" ] && [ -d "$p/lib" ] && { echo "$p"; return 0; }
+    if [ -n "$p" ] && [ -d "$p/lib" ] && valid_prefix "$p"; then echo "$p"; return 0; fi
   fi
   for p in /opt/homebrew /usr/local "$HOME/miniforge3/envs/sky3d" "${CONDA_PREFIX:-/nonexistent}" /usr; do
-    if ls "$p"/lib/libfftw3.* >/dev/null 2>&1; then echo "$p"; return 0; fi
+    if ls "$p"/lib/libfftw3.* >/dev/null 2>&1 && valid_prefix "$p"; then echo "$p"; return 0; fi
   done
   return 1
 }
@@ -94,18 +128,52 @@ build_libs () {
   fi
 }
 
+# Resolve FFTW up front: it is part of the build identity, and a binary linked
+# against an FFTW that has since disappeared cannot run anyway.
+FFTW_USED="$(find_fftw_prefix || true)"
+
 # ----------------------------------------------------------------- fast path
 # Skip the rebuild only when the binary exists AND was built from the pinned
 # commit by this script with the same target. A bare "the file exists" fast path
 # is how a stale binary from another commit silently certifies a later run.
-build_identity () { echo "$PIN|$MAKE_TARGET|$(uname -s)|$(uname -m)"; }
+# The stamp answers "is this binary the one this script would build right now?".
+# A stamp of the requested pin alone answered a different and useless question:
+# a clone sitting at another commit still matched it, so the fast path certified
+# a binary built from source that was no longer there.
+build_identity () {
+  local head dirty fc
+  head="$(cd "$SRCROOT" 2>/dev/null && git rev-parse HEAD 2>/dev/null || echo nohead)"
+  if (cd "$SRCROOT" 2>/dev/null && git diff --quiet HEAD 2>/dev/null); then dirty=clean; else dirty=DIRTY; fi
+  fc="$(gfortran -dumpversion 2>/dev/null || echo nofc)"
+  echo "$head|$dirty|$MAKE_TARGET|$fc|$(uname -s)|$(uname -m)|${FFTW_USED:-unset}"
+}
 
-if [ -x "$BIN" ] && [ -f "$STAMP" ] && [ "$(cat "$STAMP")" = "$(build_identity)" ]; then
-  log "found $EXE_NAME built from the pinned commit, probing it"
+binary_digest () { shasum -a 256 "$BIN" 2>/dev/null | cut -d' ' -f1 || echo nodigest; }
+
+fast_path_ok () {
+  [ -x "$BIN" ] || return 1
+  [ -f "$STAMP" ] || return 1
+  local want_head want_rest
+  # Recompute identity from the tree as it is NOW, and require the stamp to match
+  # it, the requested pin, and the binary that is actually on disk.
+  want_head="$(cd "$SRCROOT" 2>/dev/null && git rev-parse HEAD 2>/dev/null || echo nohead)"
+  [ "$want_head" = "$PIN" ] || { log "clone HEAD $want_head is not the pinned $PIN, rebuilding"; return 1; }
+  (cd "$SRCROOT" && git diff --quiet HEAD 2>/dev/null) || { log "clone has uncommitted modifications, rebuilding"; return 1; }
+  want_rest="$(head -1 "$STAMP")"
+  [ "$want_rest" = "$(build_identity)" ] || { log "build identity changed since the stamp, rebuilding"; return 1; }
+  [ "$(sed -n 2p "$STAMP")" = "$(binary_digest)" ] || { log "the binary changed since it was stamped, rebuilding"; return 1; }
+  return 0
+}
+
+if fast_path_ok; then
+  log "found $EXE_NAME built from the pinned commit with a matching build identity, probing it"
 else
   # ------------------------------------------------------------------- clone
   if [ -d "$SRCROOT/.git" ]; then
     log "reusing clone at $SRCROOT"
+  elif [ -e "$SRCROOT" ]; then
+    log "$SRCROOT exists but is not a git clone; refusing to delete a directory this script did not create"
+    exit 1
   else
     command -v git >/dev/null || { log "git not found"; exit 1; }
     mkdir -p "$ROOT_DIR"
@@ -121,6 +189,13 @@ else
 
   # Pin the commit. A pin that only warns is not a pin: upstream can change the
   # physics under a skill whose benchmark numbers were measured elsewhere.
+  # git checkout of the commit you are already on leaves local modifications in
+  # place, so a dirty tree has to be refused explicitly rather than assumed away.
+  ( cd "$SRCROOT" && git diff --quiet HEAD 2>/dev/null ) || {
+    log "the clone at $SRCROOT has uncommitted modifications; refusing to build from it"
+    log "(remove the directory, or set SKY3D_ROOT_DIR to a fresh location)"
+    exit 1
+  }
   ( cd "$SRCROOT" && git checkout -q "$PIN" 2>/dev/null ) || {
     log "cannot check out pinned commit $PIN"
     log "the upstream history moved or the clone is shallow; set SKY3D_PIN to re-pin deliberately"
@@ -130,7 +205,8 @@ else
 
   # ------------------------------------------------------------------- build
   command -v gfortran >/dev/null || { log "gfortran not found"; exit 1; }
-  FFTW="$(find_fftw_prefix)" || {
+  FFTW="$FFTW_USED"
+  [ -n "$FFTW" ] || {
     log "FFTW3 not found. Install it (macOS: brew install fftw; Linux: conda install -c conda-forge fftw,"
     log "or the distribution's libfftw3-dev) or set SKY3D_FFTW_PREFIX to its prefix."
     exit 1
@@ -145,7 +221,7 @@ else
   ( cd "$CODE" && make "$MAKE_TARGET" LIBS_SKY="$LIBS" ) >"$ROOT_DIR/build.log" 2>&1 || {
     log "build failed, last 20 lines of $ROOT_DIR/build.log:"; tail -20 "$ROOT_DIR/build.log" >&2; exit 1; }
   [ -x "$BIN" ] || { log "build reported success but $BIN is missing"; exit 1; }
-  build_identity > "$STAMP"
+  { build_identity; binary_digest; } > "$STAMP"
 fi
 
 # ------------------------------------------------------------------- probe

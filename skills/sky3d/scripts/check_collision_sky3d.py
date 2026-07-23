@@ -29,6 +29,9 @@ import os
 import sys
 
 
+EXPECTED_COLUMNS = 8   # Time N(n) N(p) E(sum) E(integ) Ekin Ecoll(n) Ecoll(p)
+
+
 def read_res(path):
     rows = []
     with open(path) as fh:
@@ -42,12 +45,19 @@ def read_res(path):
     if not rows:
         return None, f"{path} contains no data rows"
     width = len(rows[0])
+    if width != EXPECTED_COLUMNS:
+        return None, (f"{path} has {width} columns, expected {EXPECTED_COLUMNS} "
+                      f"(Time, N(n), N(p), E(sum), E(integ), Ekin, Ecoll(n), Ecoll(p)); "
+                      f"this is not a Sky3D collision energies.res")
     for r in rows:
         if len(r) != width:
             return None, f"{path} has ragged rows ({width} vs {len(r)} columns)"
         for v in r:
             if not math.isfinite(v):
                 return None, f"{path} contains a non-finite value"
+    for a, b in zip(rows, rows[1:]):
+        if b[0] <= a[0]:
+            return None, f"{path} time column is not strictly increasing ({a[0]} then {b[0]})"
     return rows, None
 
 
@@ -59,7 +69,22 @@ def main():
                     help='allowed drift of N(n) or N(p) from their initial values, in particles')
     ap.add_argument('--max-energy-drift', type=float, default=0.5,
                     help='allowed spread of E(sum) over the trajectory, in MeV')
+    ap.add_argument('--expect-n', type=float, default=None,
+                    help='expected neutron number; without it only the drift is checked, '
+                         'so a table of zeros would pass')
+    ap.add_argument('--expect-z', type=float, default=None,
+                    help='expected proton number')
     args = ap.parse_args()
+
+    for name, val in (('--max-particle-drift', args.max_particle_drift),
+                      ('--max-energy-drift', args.max_energy_drift)):
+        if not math.isfinite(val) or val < 0.0:
+            print(f"FAIL: {name}={val!r} is not a finite, non-negative bound")
+            return 1
+    for name, val in (('--expect-n', args.expect_n), ('--expect-z', args.expect_z)):
+        if val is not None and (not math.isfinite(val) or val <= 0.0):
+            print(f"FAIL: {name}={val!r} is not a finite positive particle number")
+            return 1
 
     path = os.path.join(args.rundir, 'energies.res')
     if not os.path.isfile(path):
@@ -81,6 +106,19 @@ def main():
     print(f"collision run: {len(rows)} printed points, t = {rows[0][0]:.1f} to {rows[-1][0]:.1f} fm/c")
 
     n0, p0 = rows[0][1], rows[0][2]
+    # Drift alone is not enough: a table of all zeros has zero drift. Anchor the
+    # absolute values too, against the deck's numbers when they are given.
+    if n0 <= 0 or p0 <= 0:
+        print(f"FAIL: initial particle numbers are N(n)={n0}, N(p)={p0}; a collision has neither")
+        ok = False
+    for label, got, want in (('N(n)', n0, args.expect_n), ('N(p)', p0, args.expect_z)):
+        if want is not None and abs(got - want) > args.max_particle_drift:
+            print(f"FAIL: initial {label}={got} is not the expected {want}")
+            ok = False
+    if all(r[3] == rows[0][3] for r in rows) and all(r[5] == rows[0][5] for r in rows):
+        print("FAIL: E(sum) and Ekin are constant to the last digit across every row; "
+              "nothing evolved, so this is not a real trajectory")
+        ok = False
     dn = max(max(abs(r[1] - n0) for r in rows), max(abs(r[2] - p0) for r in rows))
     if dn > args.max_particle_drift:
         print(f"FAIL: particle number drifts by {dn:.4f}, above the allowed "
@@ -102,17 +140,29 @@ def main():
     if args.reference:
         ref_path = os.path.join(args.reference, 'energies.res')
         if not os.path.isfile(ref_path):
-            print(f"NOTE: no reference table at {ref_path}, skipping the report")
+            print(f"FAIL: --reference was given but {ref_path} does not exist")
+            return 1
         else:
             ref, err = read_res(ref_path)
             if err:
-                print(f"NOTE: reference unreadable ({err}), skipping the report")
+                print(f"FAIL: --reference was given but is unusable: {err}")
+                return 1
             else:
-                n = min(len(rows), len(ref))
-                d0 = abs(rows[0][3] - ref[0][3])
-                dmax = max(abs(rows[i][3] - ref[i][3]) for i in range(n))
-                print(f"  REPORT ONLY, not a gate: E(sum) differs from the distributed reference "
-                      f"by {d0:.2e} MeV at t=0 and by up to {dmax:.2e} MeV over {n} shared points")
+                # Align by the TIME column, not by row index: two runs can print
+                # at different intervals, and index alignment would then compare
+                # unrelated times and report a meaningless deviation.
+                refmap = {r[0]: r for r in ref}
+                shared = [(r, refmap[r[0]]) for r in rows if r[0] in refmap]
+                if not shared:
+                    print("  REPORT ONLY: no time points shared with the reference, nothing to compare")
+                    shared = []
+                n = len(shared)
+                d0 = abs(shared[0][0][3] - shared[0][1][3]) if shared else float('nan')
+                dmax = max((abs(a[3] - b[3]) for a, b in shared), default=float('nan'))
+                if shared:
+                    print(f"  REPORT ONLY, not a gate: E(sum) differs from the distributed reference "
+                          f"by {d0:.2e} MeV at the first shared time and by up to {dmax:.2e} MeV "
+                          f"over {n} time-matched points")
                 if len(rows) != len(ref):
                     print(f"  REPORT ONLY: trajectory lengths differ ({len(rows)} vs {len(ref)} points); "
                           f"the separation criterion is reached at a different time")

@@ -56,7 +56,7 @@ SKY3D_ROOT=<repository root>
 SKY3D_TESTS=<Test/ directory with the distributed cases>
 ```
 
-About 16 s from a cold clone (measured: clone, build and probe; 37 MB on disk). Needs `git`, `gfortran`, `python3`, FFTW3, and
+About 16 s from a cold clone (measured: clone, build and probe). It occupies 37 MB, of which 26 MB is git history, so a shallow clone lands nearer 11 MB. Needs `git`, `gfortran`, `python3`, FFTW3, and
 LAPACK/BLAS (Accelerate provides it on macOS; on Linux use `-llapack -lopenblas`,
 and get FFTW from conda-forge if the box lacks it).
 

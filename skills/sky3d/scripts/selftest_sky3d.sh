@@ -21,9 +21,22 @@ trap 'rm -rf "$TMP"' EXIT
 
 ok   () { PASS=$((PASS+1)); echo "  ok    $*"; }
 bad  () { FAIL=$((FAIL+1)); echo "  FAIL  $*"; }
-# expect_fail <description> <command...>: the command MUST exit nonzero
+# expect_fail <description> <command...>: the command MUST exit nonzero.
 expect_fail () { local d="$1"; shift; if "$@" >/dev/null 2>&1; then bad "$d (expected failure, got success)"; else ok "$d"; fi; }
 expect_pass () { local d="$1"; shift; if "$@" >/dev/null 2>&1; then ok "$d"; else bad "$d (expected success, got failure)"; fi; }
+# expect_fail_with <description> <marker> <command...>: it must exit nonzero AND
+# say the expected thing. Without the marker a negative case can pass because a
+# DIFFERENT guard fired, which is exactly how this file's verify tests were
+# passing while proving nothing (a missing /bin/true on macOS tripped the
+# executable check, never the reference check they claimed to exercise).
+expect_fail_with () {
+  local d="$1" marker="$2"; shift 2
+  local out; out="$("$@" 2>&1)" && { bad "$d (expected failure, got success)"; return; }
+  case "$out" in
+    *"$marker"*) ok "$d" ;;
+    *) bad "$d (failed, but on the wrong guard: no '$marker' in the output)" ;;
+  esac
+}
 
 # ------------------------------------------------------------------ fixtures
 DECK="$TMP/deck"
@@ -32,7 +45,7 @@ cat > "$DECK" <<'EOF'
  &force name='SV-bas', pairing='NONE' /
  &main mprint=1,mplot=0,imode=1,tfft=T,nof=0 /
  &grid nx=16,ny=16,nz=16,dx=1.0,periodic=F /
- &static nprot=8,nneut=8,maxiter=1,serr=1D-6 /
+ &static nprot=8,nneut=8,maxiter=100,serr=1D-6 /
 EOF
 
 # A healthy for006, as the stub writes it. Header asterisks are present on
@@ -172,33 +185,33 @@ echo
 echo "check_collision_sky3d.py"
 CC="$HERE/check_collision_sky3d.py"
 mkdir -p "$TMP/coll"
-res () {  # write an energies.res with the given rows
-  printf '#    Time    N(n)    N(p)       E(sum)        E(integ)      Ekin\n' > "$TMP/coll/energies.res"
+res () {  # write an energies.res with the given rows (full 8-column schema)
+  printf '#    Time    N(n)    N(p)       E(sum)        E(integ)      Ekin     Ecoll(n)  Ecoll(p)\n' > "$TMP/coll/energies.res"
   cat >> "$TMP/coll/energies.res"
 }
 res <<'EOT'
-      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
-     10.00  16.000  16.000   -133.3085319   -133.3387907   558.93
-     20.00  16.000  16.000   -133.2739812   -133.3447324   561.17
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.434   45.421
+     10.00  16.000  16.000   -133.3085319   -133.3387907   558.93   45.104   43.829
+     20.00  16.000  16.000   -133.2739812   -133.3447324   561.17   43.681   42.216
 EOT
 expect_pass "a conserving collision passes (control)"        python3 "$CC" "$TMP/coll"
 res <<'EOT'
-      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
-     10.00  15.000  16.000   -133.3085319   -133.3387907   558.93
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.434   45.421
+     10.00  15.000  16.000   -133.3085319   -133.3387907   558.93   45.104   43.829
 EOT
 expect_fail "particle-number loss fails"                     python3 "$CC" "$TMP/coll"
 res <<'EOT'
-      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
-     10.00  16.000  16.000   -120.0000000   -133.3387907   558.93
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.434   45.421
+     10.00  16.000  16.000   -120.0000000   -133.3387907   558.93   45.104   43.829
 EOT
 expect_fail "an E(sum) jump fails"                           python3 "$CC" "$TMP/coll"
 res <<'EOT'
-      0.00  16.000  16.000            NaN   -133.3342577   560.04
-     10.00  16.000  16.000   -133.3085319   -133.3387907   558.93
+      0.00  16.000  16.000            NaN   -133.3342577   560.04   45.434   45.421
+     10.00  16.000  16.000   -133.3085319   -133.3387907   558.93   45.104   43.829
 EOT
 expect_fail "a non-finite energy fails"                      python3 "$CC" "$TMP/coll"
 res <<'EOT'
-      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.434   45.421
 EOT
 expect_fail "a single-row (non-evolving) run fails"          python3 "$CC" "$TMP/coll"
 rm -f "$TMP/coll/energies.res"
@@ -206,12 +219,117 @@ expect_fail "a missing energies.res fails"                   python3 "$CC" "$TMP
 
 echo
 echo "verify_sky3d.sh"
+# /bin/true does NOT exist on macOS, so using it as the executable made these
+# tests fail at the "no usable Sky3D executable" check instead of the checks they
+# name. Use a real stub, and assert the marker of the intended guard.
+NOOP="$TMP/noop"; printf '#!/bin/bash\nexit 0\n' > "$NOOP"; chmod +x "$NOOP"
+[ -x "$NOOP" ] && ok "the verify stub executable exists (macOS has no /bin/true)" \
+  || bad "could not create the verify stub"
+
 expect_fail "verify rejects an unknown argument"            "$HERE/verify_sky3d.sh" --bogus
-SKY3D=/bin/true SKY3D_TESTS="$TMP/no_such_tests" \
-  expect_fail "verify fails when the Test/ directory is absent" "$HERE/verify_sky3d.sh"
-mkdir -p "$TMP/tests/Static"; : > "$TMP/tests/Static/for005.static"; : > "$TMP/tests/Static/for006.static"
-SKY3D=/bin/true SKY3D_TESTS="$TMP/tests" \
-  expect_fail "verify fails on an EMPTY distributed reference rather than skipping" "$HERE/verify_sky3d.sh"
+
+SKY3D="$NOOP" SKY3D_TESTS="$TMP/no_such_tests" \
+  expect_fail_with "verify fails when the Test/ directory is absent" "no Test/ directory" \
+  "$HERE/verify_sky3d.sh"
+
+# Isolation: the INPUT stays valid so the only broken precondition is the empty
+# reference. The previous version emptied both, so it tripped the input check.
+mkdir -p "$TMP/tests/Static"
+printf ' &main imode=1 /\n' > "$TMP/tests/Static/for005.static"
+: > "$TMP/tests/Static/for006.static"
+SKY3D="$NOOP" SKY3D_TESTS="$TMP/tests" \
+  expect_fail_with "verify fails on an EMPTY reference, naming the reference" "for006.static' is missing or empty" \
+  "$HERE/verify_sky3d.sh"
+
+# And the complementary case: a valid reference with an empty INPUT must name the
+# input, proving the two conditions are distinguished rather than conflated.
+mkdir -p "$TMP/tests2/Static"
+: > "$TMP/tests2/Static/for005.static"
+printf ' Total: -1.0E+00 MeV\n' > "$TMP/tests2/Static/for006.static"
+SKY3D="$NOOP" SKY3D_TESTS="$TMP/tests2" \
+  expect_fail_with "verify fails on an EMPTY input, naming the input" "for005.static' is missing or empty" \
+  "$HERE/verify_sky3d.sh"
+
+echo
+echo "guards added after the 2026-07-23 adversarial pass (each attack Codex landed)"
+# --- run_sky3d.sh: non-convergence, workdir reuse, sandbox escape
+UNCONV="$TMP/deck_unconv"
+sed 's/maxiter=100/maxiter=1/' "$DECK" > "$UNCONV"
+write_stub stub_healthy healthy
+SKY3D="$TMP/stub_healthy" expect_fail_with "a static run that hits maxiter is rejected" "did NOT converge" \
+  "$RUN" --deck "$UNCONV" --workdir "$TMP/w_unconv"
+SKY3D="$TMP/stub_healthy" expect_pass "--allow-unconverged accepts it deliberately" \
+  "$RUN" --deck "$UNCONV" --workdir "$TMP/w_unconv2" --allow-unconverged
+
+mkdir -p "$TMP/w_dirty"; : > "$TMP/w_dirty/leftover"
+SKY3D="$TMP/stub_healthy" expect_fail_with "a non-empty workdir is rejected" "is not empty" \
+  "$RUN" --deck "$DECK" --workdir "$TMP/w_dirty"
+
+# '..' is allowed only inside an explicit --root, which is what the shipped
+# collision deck's '../Static/O16' layout needs, and refused without one.
+mkdir -p "$TMP/root/Collision"
+SKY3D="$TMP/stub_healthy" expect_fail_with "'..' without --root escapes and is rejected" "outside --root" \
+  "$RUN" --deck "$DECK" --workdir "$TMP/root/Collision" --fragment "$TMP/frag:../Static/O16"
+rm -rf "$TMP/root"; mkdir -p "$TMP/root/Collision"
+SKY3D="$TMP/stub_healthy" expect_pass "'..' inside --root is allowed (the shipped collision layout)" \
+  "$RUN" --deck "$DECK" --workdir "$TMP/root/Collision" --root "$TMP/root" --fragment "$TMP/frag:../Static/O16"
+[ -f "$TMP/root/Static/O16" ] && ok "the fragment landed at root/Static/O16" || bad "fragment not staged under --root"
+
+# A symlinked component must not defeat the containment test. The workdir itself
+# must be empty, so the symlink is planted in the --root beside it, which is the
+# path a real escape would take.
+rm -rf "$TMP/link_root" "$TMP/link_target"
+mkdir -p "$TMP/link_root/Collision" "$TMP/link_target"
+ln -s "$TMP/link_target" "$TMP/link_root/Static"
+SKY3D="$TMP/stub_healthy" expect_fail_with "a symlinked path component cannot escape --root" "outside --root" \
+  "$RUN" --deck "$DECK" --workdir "$TMP/link_root/Collision" --root "$TMP/link_root" \
+  --fragment "$TMP/frag:../Static/O16"
+[ -f "$TMP/link_target/O16" ] && bad "the symlink escape wrote outside the sandbox" \
+  || ok "nothing was written through the symlink"
+
+# --- compare_sky3d.py: the four injections that used to return COMPARE OK
+sed 's/Coulomb:  1.354168E+01/Coulomb:  NaN/' "$A" > "$TMP/inj_nan"
+expect_fail_with "NaN replacing an energy value fails" "non-finite" python3 "$CMP" "$TMP/inj_nan" "$B"
+sed 's/Coulomb:  1.354168E+01/Coulomb:/' "$A" > "$TMP/inj_short"
+expect_fail_with "a short energy line fails instead of silently dropping a value" "expected" \
+  python3 "$CMP" "$TMP/inj_short" "$B"
+sed 's/  0.00000  0.00000 1.000000/  99999.0  99999.0 1.000000/' "$A" > "$TMP/inj_res"
+expect_fail_with "huge var_h1/var_h2 (unconverged) fails" "not converged" python3 "$CMP" "$TMP/inj_res" "$B"
+sed 's/ -0.000  0.000  0.500$/ 999.0  999.0  999.0/' "$A" > "$TMP/inj_spin"
+expect_fail_with "an impossible spin component fails" "spin-1/2" python3 "$CMP" "$TMP/inj_spin" "$B"
+sed 's/-3.1657359E-16/1.0000000E+100/' "$A" > "$TMP/inj_cen"
+expect_fail_with "a centroid outside any box fails" "outside any sane box" python3 "$CMP" "$TMP/inj_cen" "$B"
+expect_fail_with "--rtol nan cannot disable the comparison" "not a finite tolerance" \
+  python3 "$CMP" "$TMP/cand_def" "$TMP/ref_def" --rtol nan
+expect_fail_with "--sphere-tol inf cannot disable the comparison" "not a finite tolerance" \
+  python3 "$CMP" "$A" "$B" --sphere-tol inf
+
+# --- check_collision_sky3d.py
+res <<'EOT'
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04
+     10.00  16.000  16.000   -133.3085319   -133.3387907   558.93
+EOT
+expect_fail_with "a wrong column count is rejected" "columns, expected 8" python3 "$CC" "$TMP/coll"
+res <<'EOT'
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.4   45.4
+      0.00  16.000  16.000   -133.3085319   -133.3387907   558.93   45.1   43.8
+EOT
+expect_fail_with "a non-increasing time column is rejected" "strictly increasing" python3 "$CC" "$TMP/coll"
+res <<'EOT'
+      0.00   0.000   0.000      0.0000000      0.0000000     0.00    0.0    0.0
+     10.00   0.000   0.000      0.0000000      0.0000000     0.00    0.0    0.0
+EOT
+expect_fail_with "an all-zero table is rejected" "neither" python3 "$CC" "$TMP/coll"
+res <<'EOT'
+      0.00  16.000  16.000   -133.3082692   -133.3342577   560.04   45.4   45.4
+     10.00  16.000  16.000   -133.3085319   -133.3387907   558.93   45.1   43.8
+EOT
+expect_fail_with "a requested but missing --reference fails, never skips" "--reference was given" \
+  python3 "$CC" "$TMP/coll" --reference "$TMP/no_such_reference"
+expect_fail_with "a nan drift bound cannot disable the gate" "not a finite" \
+  python3 "$CC" "$TMP/coll" --max-energy-drift nan
+expect_fail_with "a wrong --expect-n is caught" "is not the expected" \
+  python3 "$CC" "$TMP/coll" --expect-n 8
 
 echo
 echo "-------------------------------------------"

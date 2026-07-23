@@ -75,8 +75,12 @@ set +e
 ( cd "$WORK/Static" && "$BIN" > for006 2> stderr.txt )
 STATUS=$?
 set -e
-[ "$STATUS" -eq 0 ] || { log "static run exited $STATUS"; tail -5 "$WORK/Static/stderr.txt" >&2; exit 1; }
-[ -s "$WORK/Static/for006" ] || die "static run produced no output"
+# Verification used to stop at the exit status here and thereby skipped every
+# guard run_sky3d.sh applies, so a fatal stderr message or a NaN could pass.
+# Both now share one validator.
+# shellcheck source=validate_sky3d_output.sh
+. "$HERE/validate_sky3d_output.sh"
+validate_sky3d_output "$WORK/Static" "$STATUS" 0 || die "the static run failed output validation"
 
 ITERS="$(grep -c 'Static Iteration No' "$WORK/Static/for006" || true)"
 REF_ITERS="$(grep -c 'Static Iteration No' "$STATIC_REF" || true)"
@@ -112,16 +116,15 @@ if [ "$WITH_COLLISION" = "1" ]; then
   ( cd "$WORK/Collision" && "$BIN" > for006 2> stderr.txt )
   STATUS=$?
   set -e
-  [ "$STATUS" -eq 0 ] || { log "collision run exited $STATUS"; tail -5 "$WORK/Collision/stderr.txt" >&2; exit 1; }
-
+  validate_sky3d_output "$WORK/Collision" "$STATUS" 0 || die "the collision run failed output validation"
   STEPS="$(grep -c 'Starting time step' "$WORK/Collision/for006" || true)"
-  [ "${STEPS:-0}" -gt 0 ] || die "collision run printed no time steps"
   log "collision run: $STEPS time steps"
 
   # Gate on physics, report on the reference. The shipped .res cannot be
   # reproduced because their initial wavefunction is not distributed; see the
   # header of check_collision_sky3d.py and references/verification.md.
-  if python3 "$HERE/check_collision_sky3d.py" "$WORK/Collision" --reference "$TESTS/Collision"; then
+  if python3 "$HERE/check_collision_sky3d.py" "$WORK/Collision" --reference "$TESTS/Collision" \
+       --expect-n 16 --expect-z 16; then
     log "collision case: physics checks pass (conservation), reference deviation reported above"
   else
     log "FAIL: collision case failed its physics checks"

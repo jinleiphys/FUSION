@@ -23,9 +23,25 @@ inside that module rather than at parse time.
 | 4 | `&grid` | `grids.f90` | yes |
 | 5 | `&static` | `static.f90` | when `imode=1` |
 | 5 | `&dynamic` | `dynamic.f90` | when `imode=2` |
-| 6 | `&fragments` | `fragments.f90` | when `nof` /= 0 |
-| 7 | `&extern` | `external.f90` | when `texternal=T` |
-| 7 | `&user` | `user.f90` | only with a user-supplied routine |
+| 6 | `&extern` | `external.f90` | when `imode=2` and `texternal=T` |
+| 7 | `&fragments` | `fragments.f90` | when `nof > 0` |
+
+`&extern` is read from inside `getin_dynamic` (`dynamic.f90:62`), which
+`main3d.f90` calls at line 144, BEFORE `getin_fragments` at line 153. So it comes
+before `&fragments`, not after it.
+
+`nof` selects the initialization and only a POSITIVE value reads `&fragments`:
+
+| `nof` | initialization |
+|---|---|
+| `> 0` | read that many fragment wavefunction files through `&fragments` |
+| `= 0` | harmonic-oscillator-like initial wavefunctions, particle numbers from `&static` |
+| `< 0` | user-supplied initialization in `user.f90` |
+
+The shipped `Code/user.f90` is a placeholder that contains no `&user` namelist and
+simply stops; the worked example with a `&user` namelist (`d`, `r`, Gaussian
+wavefunctions for three alpha-like nuclei) is `Code/user_sample.f90`, which you
+would copy over `user.f90` before building.
 
 ## `&files`
 
@@ -59,11 +75,13 @@ imode, tfft, nof, r0`.
 - `mplot` interval for the ASCII contour plots and the `*.tdd` density dumps;
   `0` disables them, which is what you want for a benchmark.
 - `mrest` interval for writing the restart file.
-- `nof` number of fragments to read through `&fragments`. `0` means a fresh
-  static calculation from harmonic-oscillator-like initial wavefunctions; the
-  shipped collision deck uses `2`.
+- `nof` selects the initialization, see the table above. Only `nof > 0` reads
+  `&fragments`; the shipped collision deck uses `2`.
 - `tcoul` include the Coulomb interaction, `tfft` use FFT derivatives.
-- `writeselect` selects which observables are written to the `.res` tables.
+- `writeselect` selects which FIELDS go into the binary `*.tdd` density files
+  (`params.f90:113` calls `nselect` "the length of the character string
+  writeselect", and `inout.f90:187` walks it character by character). It does NOT
+  choose which `.res` tables are written.
 
 ## `&grid`
 
@@ -98,7 +116,12 @@ Declared as `nt, dt, mxpact, mrescm, rsep, texternal`.
 - `rsep` separation in fm at which the calculation stops or the two-body analysis
   triggers.
 - `texternal` switches on the `&extern` boost, used for the strength-function
-  (GR) mode rather than for a collision.
+  (GR) mode rather than for a collision. `&extern` is then read immediately, from
+  inside `getin_dynamic`, and declares 13 fields: `ampl_ext, L_val, M_val,
+  radext, widext, isoext, ipulse, omega, tau0, taut, textfield_periodic, r_avg,
+  only_P`. `L_val`/`M_val` pick the multipole, `ampl_ext` its strength, and the
+  `ipulse`/`omega`/`tau0`/`taut` group shapes the time profile (an instantaneous
+  boost for a strength function, a pulse otherwise).
 
 ## `&fragments`
 

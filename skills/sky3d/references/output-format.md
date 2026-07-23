@@ -9,12 +9,17 @@ A Sky3D run writes into the CURRENT DIRECTORY, so give every run its own
 |---|---|---|
 | `for006` | always (it is stdout) | the human-readable log: echo of the input, per-iteration or per-step energies, single-particle tables, moments, ASCII contour plots |
 | `<wffile>` | static, and at `mrest` intervals | binary wavefunction / restart file, named by `&files wffile`. **This is a real output**, and it is the input a later collision run reads as a fragment |
-| `energies.res` | always | time or iteration series of the energies |
-| `monopoles.res`, `dipoles.res`, `quadrupoles.res` | per `writeselect` | multipole moment series |
-| `momenta.res`, `spin.res` | per `writeselect` | momenta and angular-momentum series |
-| `octupoles.res`, `hexadecapoles.res`, `diatriacontapoles.res` | per `writeselect` | higher multipoles |
-| `NNNNNN.tdd` | dynamic, every `mplot` steps | density snapshot for plotting; large, and disabled by `mplot=0` |
+| `conver.res` | static | convergence series (this is the static run's energy table, not `energies.res`) |
+| `energies.res` | **dynamic only** | time series of the energies |
+| `dipoles.res`, `spin.res` | both modes | dipole and angular-momentum series |
+| `monopoles.res`, `quadrupoles.res`, `octupoles.res`, `hexadecapoles.res`, `diatriacontapoles.res` | dynamic | multipole moment series |
+| `momenta.res` | dynamic | momentum series |
+| `NNNNNN.tdd` | **both modes**, every `mplot` iterations or steps | binary density snapshot; large, and disabled by `mplot=0`. `writeselect` chooses which fields go inside these |
 | `Restart` | dynamic with `mrest` | restart file |
+
+Verified rather than assumed: the static 16O benchmark directory contains
+`conver.res`, `dipoles.res`, `spin.res`, the wavefunction `O16`, and 38 `.tdd`
+files, and NO `energies.res`.
 
 `for006` is the process's standard output, so it exists only because the caller
 redirects it. If you run Sky3D without redirecting, the log goes to the terminal
@@ -64,8 +69,9 @@ exactly. `var_h1`/`var_h2` are likewise noise-dominated near convergence.
 
 `Part.Num.`, `rms-radius` and the three `<x_i**2>` are determined observables.
 `q20` and `<x>`, `<y>`, `<z>` are zero by symmetry for a spherical nucleus and
-print as numerical residue (`q20` around 1e-9, the centroids around 1e-16 to
-1e-11); their run-to-run relative difference is order unity and means nothing.
+print as numerical residue (`q20` reaches about 1e-9 at convergence after passing
+through 1e-3 to 1e-2 in the transient, the centroids stay around 1e-16 to 1e-11);
+their run-to-run relative difference is order unity and means nothing.
 For a genuinely deformed case `q20` IS an observable, which is why the comparator
 decides adaptively from `|q20| / (N * rms^2)` rather than always excluding it.
 

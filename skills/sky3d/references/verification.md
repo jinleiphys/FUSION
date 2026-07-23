@@ -59,8 +59,8 @@ not determined by the physics:
 
 | category | lines (macOS vs Linux) | why |
 |---|---|---|
-| `Lx` ... `Sz` of degenerate single-particle states | 1208 | 16O is spherical, so the levels form degenerate multiplets; any unitary mixing inside a degenerate subspace is an equally valid eigenbasis |
-| moments rows differing only in q20 and `<x>`, `<y>`, `<z>` | 228 | zero by symmetry; q20 lands around 1e-9 and the centroids around 1e-16 to 1e-11, so their relative difference is order unity and means nothing |
+| single-particle rows, differing in the `Lx` ... `Sz` columns and in the `var_h1`/`var_h2` residuals | 1208 | 16O is spherical, so the levels form degenerate multiplets and any unitary mixing inside a degenerate subspace is an equally valid eigenbasis; the residuals are the quantity the iteration drives to zero. Every `Ekin` and `Energy` in these same rows is identical |
+| moments rows differing only in q20 and `<x>`, `<y>`, `<z>` | 228 | zero by symmetry; q20 reaches about 1e-9 at convergence (about 1e-3 in the transient, and the reference's largest is 6.7e-3) and the centroids stay around 1e-16 to 1e-11, so their relative difference is order unity and means nothing |
 | ASCII plot axis labels | 76 | signed zero, `-0.00` against `0.00` |
 | `de/e` convergence residual | 10 | last digit of a quantity at 1e-9 to 1e-11 that the iteration is driving to zero |
 | energy-functional lines | **0** | |
@@ -87,7 +87,7 @@ Measured consequence, from a run started from this skill's own converged O16:
 | E(sum) at t = 0 | -133.3082692 MeV | -133.3074922 MeV |
 | max deviation of E(sum) over the trajectory | | 2.62e-02 MeV |
 | max deviation of E(integ) | | 2.06 MeV |
-| trajectory endpoint | t = 180 fm/c, 943 steps, stopped by `rsep` | t = 200 fm/c, 1000 steps |
+| trajectory endpoint | last `.res` sample at t = 180 fm/c; termination during step 943, which starts at t = 188.40 fm/c, through `rsep` | t = 200 fm/c, 1000 steps |
 
 The deviation is present at t = 0, before a single time step, so it is a
 difference of initial state rather than of dynamics, and a near-grazing
@@ -111,7 +111,9 @@ distributed reference, which places the difference in the un-shipped input, not
 in the build.
 
 One observation worth recording: the two platforms' `O16` wavefunction files are
-NOT byte-identical, yet they drive a bit-identical collision. That is consistent
+NOT byte-identical, yet they drive the same trajectory to the precision in the
+table above (energies byte-identical, the two 15-decimal multipole tables to
+1e-10 and 1e-13). That is consistent
 with the printed static difference being confined to the orientation within
 degenerate multiplets: the observables depend on the Slater determinant, which is
 invariant under a unitary mixing of the occupied orbitals, not on the individual
@@ -125,11 +127,29 @@ must hold for any correct run, and only REPORTS the distance from the reference:
 | particle-number drift | 0.0000 | 0.05 |
 | E(sum) spread over the trajectory | 0.1443 MeV | 0.5 MeV |
 
+## Auditability
+
+The Linux numbers above were produced on another machine, so the commands,
+compiler version strings, file hashes and comparator output are recorded in
+`cross-platform-manifest.md` rather than only asserted here.
+
 ## Harness
 
-`scripts/selftest_sky3d.sh`, 37 cases, no Sky3D build required (the run tests use
+`scripts/selftest_sky3d.sh`, 60 cases, no Sky3D build required (the run tests use
 a stub executable). Every guard has a negative case that fails only that guard,
 including the one that matters most here: the overflow guard must fire on a run
 of asterisks in a numeric field while NOT firing on Sky3D's `***** header *****`
 decorations, and the passing control is asserted to actually contain those
 headers, so the negative case cannot pass vacuously.
+
+Twenty-three of those cases were added on 2026-07-23 after an adversarial pass
+found real holes, and each one replays an attack that previously succeeded: a
+`NaN` substituted into an energy line that the numeric regex silently skipped, a
+run that hit `maxiter` without converging, an unconverged residual of 1e5, an
+impossible spin component, a centre of mass at 1e100 fm, a tolerance of `nan`
+that disabled its own check, a collision table of zeros, a `--reference` that did
+not exist, and a symlinked path component staging a file outside the sandbox.
+Negative cases now assert WHICH guard fired, because the pass also showed two of
+them failing on the wrong guard entirely: they named `/bin/true`, which does not
+exist on macOS, so they tripped the executable check instead of the check they
+claimed to test.
