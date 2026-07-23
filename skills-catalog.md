@@ -113,8 +113,10 @@ redistributes nothing, so each user receives the code from the authors under the
 **Hard requirement on the skill: SKILL.md must state that Sky3D is CPC non-profit and not open
 source, and send a commercial user to the authors.**
 
-**SHIPPED 2026-07-23: SMASH**, `skills/smash/`, the seventeenth per-code skill and
-the first of this row. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
+**IN PROGRESS 2026-07-23: SMASH**, `skills/smash/`, intended as the seventeenth
+per-code skill and the first of this row. **NOT shipped**: it passed round 1 of
+the adversarial audit but round 2 found 2 new blockers caused by the round-1
+fixes themselves. Resume state and the full outstanding list are in TODO.md. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
 GSL, Eigen 3.x and Pythia exactly 8.316. **Zero source patches** on macOS/ARM and
 Linux/x86-64. **TIER 1**: reproduces SMASH's own 104-case ctest suite, 104/104
 first attempt on Linux.
@@ -154,7 +156,7 @@ transcribes `PdgCode::baryon_number()` from the source. The Au+Au anchor is take
 at 20 fm/c, after the resonances decay, which is why the first fix looked
 sufficient: the test case could not see the error.
 
-**Adversarial pass: 19 defects, 7 blockers, all fixed** (commit 842cbabd5).
+**Adversarial round 1: 19 defects, 7 blockers, all fixed** (commit 842cbabd5). **Round 2: 11 fixed, 7 partial, 1 not fixed, 2 NEW blockers**, both regressions from the round-1 fixes: the new build-identity check rejects a legitimate build (the library test relinks the binary after the installer stamps it) while remaining spoofable, and real `Only_Final: No` output (one event with an `in` block and multiple `out` blocks) is rejected outright. Lesson for the next Monte Carlo skill: a guard validated against ONE configuration will reject legitimate output from the others.
 Besides the above: `--seed -2` pinned nothing because SMASH randomizes ANY
 negative seed while `config_used.yaml` still read `-2`; verify discarded ctest's
 exit status; a mixed `(Failed)` + `(Timeout)` slipped past a regex matching only

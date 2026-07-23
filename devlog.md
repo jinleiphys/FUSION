@@ -37,8 +37,18 @@ SMASH treats ANY negative seed as random while `config_used.yaml` still recorded
 than against the code's actual behaviour is a guard that certifies exactly the
 thing it was meant to prevent.
 
-**Status:** Fixed. selftest 29 to 49 cases, every landed attack a regression
-test. SMASH ships tier 1.
+**Third lesson, from round 2, and the one that actually cost the most:** the two
+NEW blockers were caused by my own round-1 fixes. The build-identity check I
+added to close a bypass rejects a LEGITIMATE build, because SMASH's own library
+test reruns `make install` and relinks the binary after the installer stamped
+it; and the structural OSCAR check I added rejects real `Only_Final: No` output,
+which has one `in` block and several `out` blocks per event. Both guards were
+validated against exactly one configuration, the default collider run with final
+output only. A guard that has only met one input has not been tested, it has
+been demonstrated.
+
+**Status:** IN PROGRESS, not shipped. Round 1's 19 defects are fixed; round 2
+left 2 blockers, 7 partials and 1 unfixed item, all listed in TODO.md.
 
 ## 2026-07-23: Sky3D, and a guard that only the expensive path could falsify
 
