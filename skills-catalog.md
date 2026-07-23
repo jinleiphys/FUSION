@@ -144,13 +144,26 @@ the library-example test spawning a fresh cmake that inherits no cache variables
 so it needs `EIGEN3_ROOT`, the GSL hints AND `LD_LIBRARY_PATH`, each discovered
 only after the previous fix moved the error rather than removing it.
 
-Self-caught defect worth recording: the baryon-number rule `1000 <= |code| <
-10000` silently gives light NUCLEI a baryon number of 0. SMASH's particle table
+Defect worth recording, because it was wrong TWICE: the baryon-number rule
+`1000 <= |code| < 10000` silently gives light NUCLEI a baryon number of 0. SMASH's particle table
 carries the deuteron (1000010020), triton, He3 and hypertriton, and ships a
-`light_nuclei` configuration that produces them, so the check now reads A out of
-the PDG nuclear code +-10LZZZAAAI. The Au+Au anchor happened not to produce any,
-which is exactly how this would have shipped as a wrong "exact" conservation
-check on a different configuration.
+`light_nuclei` configuration that produces them. Adding the nuclear branch did
+NOT fix it: "four digits" is not what makes a baryon, and every resonance SMASH
+propagates breaks it (N(1440) is 12112, Lambda(1405) is 13122). It now
+transcribes `PdgCode::baryon_number()` from the source. The Au+Au anchor is taken
+at 20 fm/c, after the resonances decay, which is why the first fix looked
+sufficient: the test case could not see the error.
+
+**Adversarial pass: 19 defects, 7 blockers, all fixed** (commit 842cbabd5).
+Besides the above: `--seed -2` pinned nothing because SMASH randomizes ANY
+negative seed while `config_used.yaml` still read `-2`; verify discarded ctest's
+exit status; a mixed `(Failed)` + `(Timeout)` slipped past a regex matching only
+the first; a retry that selected NO tests exited 0 and counted as a pass;
+pre-set environment variables bypassed every identity check; `run_smash.sh`
+accepted a forged OSCAR file; and shipped examples ran against the DEFAULT
+particle tables because `-p/-d` were never passed, succeeding while computing
+something other than the example. Conservation is now checked PER EVENT, since
+equal and opposite violations cancel in a total. selftest 29 -> 49.
 
 **Equation of state, surveyed but not yet verified:** CompOSE (compose.obspm.fr, database plus
 its own tools, not on GitHub), SROEOS (Schneider-Roberts-Ott finite-temperature EOS), HFBTHO and
