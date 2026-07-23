@@ -3,6 +3,43 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-23: SMASH, and a rule that was wrong twice in the same way
+
+**Why we tried it:** SMASH was the first code of the newly opened heavy-ion row.
+Building it was routine; the interesting failures were again all in the harness,
+and one of them repeated a mistake I had already made and thought I had fixed.
+
+**What failed:** the skill failed its adversarial pass with 19 defects, 7 of them
+blockers. The one worth keeping is the baryon-number rule. I first wrote "a
+four-digit PDG code is a baryon". Told that light nuclei break it, I added the
+ten-digit nuclear codes and considered it fixed. It was still wrong: N(1440) is
+`12112` and Lambda(1405) is `13122`, and resonances are the BULK of a transport
+run's intermediate state, so the "exact conservation" anchor would have been
+silently wrong on any output taken before they decay.
+
+**Root cause:** both versions generalized from the sample in front of me instead
+of reading the code's own definition. SMASH answers the question directly in
+`PdgCode::baryon_number()`: a non-nuclear hadron whose `n_q1` digit is nonzero.
+Once transcribed, protons, resonances, anti-resonances and hypernuclei all fall
+out of one rule. The 2-event Au+Au anchor is taken at 20 fm/c, after the
+resonances have decayed, which is exactly why the first fix looked sufficient:
+the test case could not see the error.
+
+**Lesson:** when a code ships the predicate you are reimplementing, transcribe
+it rather than inferring it from examples, and cite the file and function in a
+comment so the next person can check. And when a fix is prompted by one
+counterexample, ask whether the counterexample is the only thing wrong with the
+rule, or just the first thing noticed.
+
+**Second lesson, from a different blocker:** `--seed -2` pinned nothing, because
+SMASH treats ANY negative seed as random while `config_used.yaml` still recorded
+`-2` and looked pinned. A guard written against the literal default (`-1`) rather
+than against the code's actual behaviour is a guard that certifies exactly the
+thing it was meant to prevent.
+
+**Status:** Fixed. selftest 29 to 49 cases, every landed attack a regression
+test. SMASH ships tier 1.
+
 ## 2026-07-23: Sky3D, and a guard that only the expensive path could falsify
 
 **Why we tried it:** Sky3D (TDHF) was the first skill of the newly opened
