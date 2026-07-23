@@ -77,8 +77,14 @@ Output:
         Only_Final: No
 ```
 
-`Format` chooses among `Oscar2013`, `Oscar1999`, `Binary`, `ROOT`, `VTK` and
-`HepMC` (the last two need optional libraries found at configure time).
+`Format` values are content-specific and case-sensitive, and the spelling is not
+what you would guess: it is `Root`, not `ROOT`. Depending on the output block,
+SMASH accepts `Oscar2013`, `Oscar2013_bin`, `Oscar1999`, `Binary`, `Root`,
+`VTK`, `ASCII`, `HepMC_asciiv3`, `HepMC_treeroot`, `For_vHLLE`, `Lattice_ASCII`
+and `Lattice_Binary`; the ROOT, HepMC and Rivet ones exist only if those optional
+libraries were found at configure time. Read
+`src/include/smash/input_keys.h` for the per-block list rather than assuming one
+global set.
 `Only_Final: Yes` writes just the final state, which is what you want unless you
 are studying the time evolution. Content of the file: see `output-format.md`.
 

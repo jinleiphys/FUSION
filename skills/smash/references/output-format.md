@@ -9,13 +9,16 @@ its own input.
 | file | when | content |
 |---|---|---|
 | `particle_lists.oscar` | `Output: Particles: Format: ["Oscar2013"]` | the particle list, the main result |
-| `collisions_binary.bin` | `Collisions:` with `Binary` format | every interaction, for reaction-by-reaction analysis |
+| `collisions_custom.bin` | `Collisions:` with `Binary` format | every interaction, for reaction-by-reaction analysis |
+| `collisions_oscar2013.bin` | `Collisions:` with `Oscar2013_bin` | the same, in binary OSCAR |
 | `config.yaml` | always | the configuration as SMASH parsed it |
 | `thermodynamics.dat`, `*.vtk` | on request | densities and fields on a grid |
-| `SMASH.log` | if configured | the run log; otherwise it goes to stdout |
 
-`run_smash.sh` additionally keeps `smash.log`, `stderr.txt` and
-`config_used.yaml` beside the output directory.
+
+SMASH logs to stdout; there is no configurable log FILE. `run_smash.sh` captures
+that stream as `smash.log`, alongside `stderr.txt`, `config_used.yaml` and, when
+a shipped example carries its own tables, `particles_used.txt` and
+`decaymodes_used.txt`.
 
 ## OSCAR2013 particle lists
 
@@ -23,10 +26,10 @@ its own input.
 #!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge
 # Units: fm fm fm fm GeV GeV GeV GeV GeV none none e
 # SMASH-3.3
-# event 0 out
+# event 0 ensemble 0 out 497
       20.0   1.23  -4.56   7.89  0.938   1.02   0.11  -0.05   0.30  2212   17   1
 ...
-# event 0 end 0 impact   4.321 empty no
+# event 0 ensemble 0 end 0 impact   0.000 scattering_projectile_target yes
 ```
 
 Twelve columns, in the order named on the first line: time, three positions,
@@ -34,10 +37,14 @@ mass, four-momentum, PDG code, particle ID within the event, and electric charge
 in units of e. **The header line is the authority on the column order**, since it
 changes with the output content requested; parse it rather than assuming.
 
-Events are delimited by `# event N out` and `# event N end`. The `end` line
-carries the impact parameter and an `empty` flag. Counting `# event .* end`
-markers is how `run_smash.sh` checks that the run wrote every event it was asked
-for instead of stopping early with a zero exit status.
+Events are delimited by `# event N ensemble E out COUNT` and
+`# event N ensemble E end 0 impact X scattering_projectile_target yes|no`, the
+grammar in `src/oscaroutput.cc`. The `out` line DECLARES how many particles
+follow, which is worth checking against the records that actually follow.
+Counting matched pairs of those markers is how `run_smash.sh` checks that the run
+wrote every event it was asked for instead of stopping early with a zero exit
+status. Note the `ensemble` field: matching only `# event N out` misses the real
+output entirely.
 
 `Only_Final: No` writes an intermediate list at each `Output_Interval`, so the
 same particle appears many times and multiplicities must be taken from the final

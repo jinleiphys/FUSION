@@ -52,17 +52,17 @@ write_oscar () {   # write_oscar <path> [extra body lines on stdin]
     echo '#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge'
     echo '# Units: fm fm fm fm GeV GeV GeV GeV GeV none none e'
     echo '# SMASH-3.3'
-    echo '# event 0 out'
+    echo '# event 0 ensemble 0 out 4'
     echo '  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 0 1'
     echo '  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2112 1 0'
     echo '  20.0 0.1 0.2 0.3 0.138 0.3 0.1 0.0 0.0  211 2 1'
     echo '  20.0 0.1 0.2 0.3 0.138 0.3 0.1 0.0 0.0 -211 3 -1'
-    echo '# event 0 end 0 impact 4.0 empty no'
-    echo '# event 1 out'
+    echo '# event 0 ensemble 0 end 0 impact   4.000 scattering_projectile_target yes'
+    echo '# event 1 ensemble 0 out 3'
     echo '  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 0 1'
     echo '  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2112 1 0'
     echo '  20.0 0.1 0.2 0.3 0.138 0.3 0.1 0.0 0.0  111 2 0'
-    echo '# event 1 end 0 impact 4.0 empty no'
+    echo '# event 1 ensemble 0 end 0 impact   4.000 scattering_projectile_target yes'
   } > "$1"
 }
 GOOD="$TMP/good.oscar"; write_oscar "$GOOD"
@@ -100,7 +100,7 @@ STUB
     cat <<'STUB2'
 case "$MODE" in
   nan)      sed -i.bak 's/0.938 1.0/0.938 nan/' "$F"; rm -f "$F.bak" ;;
-  oneevent) sed -i.bak '/# event 1 end/d' "$F"; rm -f "$F.bak" ;;
+  oneevent) sed -i.bak '/# event 1 ensemble 0/d' "$F"; rm -f "$F.bak" ;;
   realerror) printf "[15'04'57]  ERROR        Main        : something exploded\n" ;;
 esac
 exit 0
@@ -116,7 +116,7 @@ printf 'not: a smash config\n' > "$TMP/notcfg"
 expect_fail_with "a file with no General: block is rejected" "no 'General:' block" "$RUN" --config "$TMP/notcfg"
 expect_fail_with "an unknown argument is rejected" "unknown argument" "$RUN" --config "$CFG" --bogus
 expect_fail_with "a non-integer --seed is rejected" "must be an integer" "$RUN" --config "$CFG" --seed 1.5
-expect_fail_with "a non-numeric --end-time is rejected" "must be a number" "$RUN" --config "$CFG" --end-time abc
+expect_fail_with "a non-numeric --end-time is rejected" "must be a non-negative number" "$RUN" --config "$CFG" --seed 1 --end-time abc
 
 echo
 echo "run_smash.sh seed policy"
@@ -155,8 +155,8 @@ grep -q "Fpe" "$TMP/w_ok/smash.log" \
 echo
 echo "check_conservation_smash.py"
 expect_pass "a conserving list passes (control)" python3 "$CC" "$GOOD" --baryons 4 --charge 2
-expect_fail_with "a wrong baryon expectation fails" "baryon number" python3 "$CC" "$GOOD" --baryons 5 --charge 2
-expect_fail_with "a wrong charge expectation fails" "total charge" python3 "$CC" "$GOOD" --baryons 4 --charge 3
+expect_fail_with "a wrong baryon expectation fails" "baryon number" python3 "$CC" "$GOOD" --baryons 8 --charge 2
+expect_fail_with "a wrong charge expectation fails" "charge" python3 "$CC" "$GOOD" --baryons 4 --charge 6
 sed 's/^#!OSCAR2013/#!SOMETHINGELSE/' "$GOOD" > "$TMP/badhdr.oscar"
 expect_fail_with "a non-OSCAR2013 header fails" "does not start with an OSCAR2013 header" \
   python3 "$CC" "$TMP/badhdr.oscar" --baryons 4 --charge 2
@@ -165,14 +165,16 @@ expect_fail_with "a non-finite kinematic value fails" "non-finite" python3 "$CC"
 grep -v '^ ' "$GOOD" > "$TMP/empty.oscar"
 expect_fail_with "a list with no particle records fails" "no particle records" \
   python3 "$CC" "$TMP/empty.oscar" --baryons 4 --charge 2
-grep -v 'end' "$GOOD" > "$TMP/noend.oscar"
-expect_fail_with "a truncated list with no event-end marker fails" "no event-end marker" \
-  python3 "$CC" "$TMP/noend.oscar" --baryons 4 --charge 2
+sed -n '1,7p' "$GOOD" | grep -v 'ensemble 0 end' > "$TMP/noend.oscar"
+expect_fail_with "an unclosed event block fails" "never closed" \
+  python3 "$CC" "$TMP/noend.oscar" --baryons 2 --charge 1
 sed 's/  20.0 0.1 0.2 0.3 0.138 0.3 0.1 0.0 0.0  211 2 1/  20.0 0.1 BAD/' "$GOOD" > "$TMP/mal.oscar"
 expect_fail_with "a malformed record fails rather than being skipped" "malformed" \
   python3 "$CC" "$TMP/mal.oscar" --baryons 4 --charge 2
-expect_fail_with "too few species fails" "distinct species" \
+expect_fail_with "too few species fails when --species-min is given" "distinct species" \
   python3 "$CC" "$GOOD" --baryons 4 --charge 2 --species-min 99
+expect_pass "--species-min is off by default (it was overstated as proof of physics)" \
+  python3 "$CC" "$GOOD" --baryons 4 --charge 2
 
 echo
 echo "verify_smash.sh"
@@ -181,8 +183,121 @@ SMASH="$TMP/stub_ok" SMASH_BUILD="$TMP/no_such_build" SMASH_ROOT="$TMP" \
   expect_fail_with "verify fails when the build directory is absent" "no build directory" "$VERIFY" --tests-only
 mkdir -p "$TMP/fakebuild"
 SMASH="$TMP/stub_ok" SMASH_BUILD="$TMP/fakebuild" SMASH_ROOT="$TMP/no_such_root" \
-  expect_fail_with "verify fails when the shipped config is absent" "shipped collider config is missing" \
+  expect_fail_with "verify refuses a build it cannot trace to the pinned source" "not verifiably come from the pinned source" \
   "$VERIFY" --anchor-only
+# The identity guard must also reject a REAL clone whose binary is not the
+# stamped one, which is the attack that a fake build directory represented.
+if [ -d "$HOME/.cache/fusion/smash/smash/.git" ]; then
+  cp "$TMP/stub_ok" "$TMP/impostor"
+  SMASH="$TMP/impostor" \
+    SMASH_BUILD="$HOME/.cache/fusion/smash/smash/build" \
+    SMASH_ROOT="$HOME/.cache/fusion/smash/smash" \
+    expect_fail_with "an impostor binary beside a real build is rejected" "does not match the build stamp" \
+    "$VERIFY" --tests-only
+else
+  ok "skipped the impostor-binary case (no local SMASH clone to test against)"
+fi
+
+echo
+echo "guards added after the 2026-07-23 adversarial pass"
+# --- negative seeds other than -1 (SMASH treats every negative seed as random)
+for sd in -2 -999; do
+  SMASH="$TMP/stub_ok" expect_fail_with "--seed $sd is refused (SMASH randomizes any negative seed)" "irreproducible" \
+    "$RUN" --config "$CFG" --outdir "$TMP/w_neg$sd" --seed "$sd"
+done
+SMASH="$TMP/stub_ok" expect_pass "--seed 0 is accepted (non-negative)" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_zero" --seed 0
+for bad in -- 1-2 . 1..2 "1e3" "-5"; do
+  SMASH="$TMP/stub_ok" expect_fail "a malformed --end-time '$bad' is rejected" \
+    "$RUN" --config "$CFG" --outdir "$TMP/w_bad" --seed 1 --end-time "$bad"
+done
+SMASH="$TMP/stub_ok" expect_fail_with "--nevents 0 is rejected" "at least 1" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_ev0" --seed 1 --nevents 0
+
+# --- structural OSCAR validation: forged output must not pass
+write_bad_stub () {   # $1 name, $2 the body written to particle_lists.oscar
+  local path="$TMP/$1"
+  { echo '#!/bin/bash'
+    echo 'OUT=""; while [ $# -gt 0 ]; do case "$1" in -o) OUT="$2"; shift 2;; --version) echo SMASH-3.3; exit 0;; *) shift;; esac; done'
+    echo 'mkdir -p "$OUT"'
+    echo "cat > \"\$OUT/particle_lists.oscar\" <<'EOSC'"
+    cat
+    echo 'EOSC'
+    echo 'exit 0'
+  } > "$path"
+  chmod +x "$path"
+}
+write_bad_stub stub_forged <<'EOF'
+# not an oscar header at all
+# event 0 ensemble 0 end 0
+# event 1 ensemble 0 end 0
+  garbage record here
+EOF
+SMASH="$TMP/stub_forged" expect_fail_with "a forged non-OSCAR header is rejected" "OSCAR2013 header" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_forged" --seed 1
+write_bad_stub stub_unpaired <<'EOF'
+#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge
+# event 0 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes
+# event 1 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes
+  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 0 1
+EOF
+SMASH="$TMP/stub_unpaired" expect_fail_with "event-end markers with no matching starts are rejected" "must pair" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_unpaired" --seed 1
+write_bad_stub stub_cols <<'EOF'
+#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge
+# event 0 ensemble 0 out 1
+  20.0 0.1 0.2 2212 1
+# event 0 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes
+# event 1 ensemble 0 out 1
+  20.0 0.1 0.2 2212 1
+# event 1 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes
+EOF
+SMASH="$TMP/stub_cols" expect_fail_with "records with the wrong column count are rejected" "columns the header declares" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_cols" --seed 1
+
+# --- conservation checker: resonances, per-event, strict grammar
+python3 - <<'PYEOF' > "$TMP/reso.oscar"
+print('#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge')
+print('# Units: fm fm fm fm GeV GeV GeV GeV GeV none none e')
+print('# event 0 ensemble 0 out 2')
+print('  20.0 0.1 0.2 0.3 1.440 1.5 0.1 0.1 0.1 12112 0 0')   # N(1440)0, B=1
+print('  20.0 0.1 0.2 0.3 1.405 1.5 0.1 0.1 0.1 13122 1 0')   # Lambda(1405), B=1
+print('# event 0 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes')
+PYEOF
+expect_pass "five-digit baryon resonances are counted (B=2, Q=0)" \
+  python3 "$CC" "$TMP/reso.oscar" --baryons 2 --charge 0
+expect_fail_with "and a wrong expectation on them still fails" "baryon number" \
+  python3 "$CC" "$TMP/reso.oscar" --baryons 0 --charge 0
+
+# Per-event: two events whose violations cancel in the sum must NOT pass.
+python3 - <<'PYEOF' > "$TMP/cancel.oscar"
+print('#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge')
+print('# event 0 ensemble 0 out 2')
+print('  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 0 1')
+print('  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 1 1')   # event 0: B=2
+print('# event 0 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes')
+print('# event 1 ensemble 0 out 0')
+print('# event 1 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes')  # event 1: B=0
+PYEOF
+expect_fail_with "equal-and-opposite per-event violations do not cancel" "event" \
+  python3 "$CC" "$TMP/cancel.oscar" --baryons 2 --charge 2
+# A comment merely containing " end" is not an event end.
+python3 - <<'PYEOF' > "$TMP/fakeend.oscar"
+print('#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge')
+print('# this comment contains the word end but is not an event marker')
+print('  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 0 1')
+PYEOF
+expect_fail_with "a comment containing 'end' is not an event marker" "outside any event block" \
+  python3 "$CC" "$TMP/fakeend.oscar" --baryons 1 --charge 1
+# The declared per-event count must match the records that follow.
+python3 - <<'PYEOF' > "$TMP/miscount.oscar"
+print('#!OSCAR2013 particle_lists t x y z mass p0 px py pz pdg ID charge')
+print('# event 0 ensemble 0 out 5')
+print('  20.0 0.1 0.2 0.3 0.938 1.0 0.1 0.1 0.1 2212 0 1')
+print('# event 0 ensemble 0 end 0 impact 1.0 scattering_projectile_target yes')
+PYEOF
+expect_fail_with "a declared particle count that does not match is rejected" "declares 5" \
+  python3 "$CC" "$TMP/miscount.oscar" --baryons 1 --charge 1
 
 echo
 echo "-------------------------------------------"

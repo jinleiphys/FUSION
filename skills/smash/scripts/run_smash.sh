@@ -23,6 +23,7 @@ set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG=""; OUTDIR=""; SEED=""; NEVENTS=""; END_TIME=""; ALLOW_RANDOM=0
+PARTICLES=""; DECAYMODES=""; AUTO_TABLES=1
 
 log () { echo "run_smash: $*" >&2; }
 die () { log "$*"; exit 1; }
@@ -34,6 +35,9 @@ while [ $# -gt 0 ]; do
     --seed)     SEED="${2:-}"; shift 2 ;;
     --nevents)  NEVENTS="${2:-}"; shift 2 ;;
     --end-time) END_TIME="${2:-}"; shift 2 ;;
+    --particles)  PARTICLES="${2:-}"; shift 2 ;;
+    --decaymodes) DECAYMODES="${2:-}"; shift 2 ;;
+    --no-auto-tables) AUTO_TABLES=0; shift ;;
     --allow-random-seed) ALLOW_RANDOM=1; shift ;;
     -h|--help)  sed -n '2,22p' "$0"; exit 0 ;;
     *) die "unknown argument '$1'" ;;
@@ -46,13 +50,29 @@ CONFIG="$(cd "$(dirname "$CONFIG")" && pwd)/$(basename "$CONFIG")"
 grep -q "General:" "$CONFIG" || die "config '$CONFIG' has no 'General:' block; is it a SMASH configuration?"
 
 # Numeric arguments must be numeric before they are spliced into YAML.
-for pair in "seed:$SEED" "nevents:$NEVENTS"; do
-  name="${pair%%:*}"; val="${pair#*:}"
-  [ -z "$val" ] && continue
-  case "$val" in ''|*[!0-9-]*) die "--$name must be an integer, got '$val'" ;; esac
-done
+# Full-match validation. The earlier character-class test accepted '--', '1-2'
+# and '1..2', which are not numbers even though they contain only permitted
+# characters.
+is_int ()  { printf '%s' "$1" | grep -qE '^-?[0-9]+$'; }
+is_uint () { printf '%s' "$1" | grep -qE '^[0-9]+$'; }
+is_num ()  { printf '%s' "$1" | grep -qE '^[0-9]+(\.[0-9]+)?$'; }
+
+if [ -n "$SEED" ]; then
+  is_int "$SEED" || die "--seed must be an integer, got '$SEED'"
+  # SMASH treats EVERY negative seed as "draw a random one", not just -1: two
+  # runs with --seed -2 produced seeds 8409242248972502135 and
+  # 4845130125537222390 and different output, while config_used.yaml still read
+  # -2 and looked pinned.
+  if [ "$SEED" -lt 0 ] && [ "$ALLOW_RANDOM" = "0" ]; then
+    die "--seed $SEED is negative, and SMASH treats any negative seed as random, so the run would be irreproducible. Use a non-negative seed, or --allow-random-seed."
+  fi
+fi
+if [ -n "$NEVENTS" ]; then
+  is_uint "$NEVENTS" || die "--nevents must be a non-negative integer, got '$NEVENTS'"
+  [ "$NEVENTS" -ge 1 ] || die "--nevents must be at least 1"
+fi
 if [ -n "$END_TIME" ]; then
-  case "$END_TIME" in ''|*[!0-9.]*) die "--end-time must be a number, got '$END_TIME'" ;; esac
+  is_num "$END_TIME" || die "--end-time must be a non-negative number, got '$END_TIME'"
 fi
 
 if [ -n "${SMASH:-}" ]; then
@@ -97,14 +117,43 @@ apply End_Time "$END_TIME"
 
 # Refuse an unpinned seed by default. SMASH's shipped configs carry -1, and a
 # run made with it cannot be compared with anything, including itself.
-EFFECTIVE_SEED="$(grep -E "^[[:space:]]*Randomseed:" "$WORKCFG" | head -1 | sed -E 's/.*Randomseed:[[:space:]]*//')"
-if [ "$EFFECTIVE_SEED" = "-1" ] && [ "$ALLOW_RANDOM" = "0" ]; then
-  die "Randomseed is -1, so this run would be irreproducible. Pass --seed <int>, or --allow-random-seed if that is what you want."
+# Read the seed that will ACTUALLY be used, from the config as it now stands,
+# and judge it numerically. A literal test against "-1" missed every other
+# negative value, which SMASH treats identically.
+EFFECTIVE_SEED="$(grep -E "^[[:space:]]*Randomseed:" "$WORKCFG" | head -1 | sed -E 's/.*Randomseed:[[:space:]]*//' | tr -d '\r')"
+if [ "$ALLOW_RANDOM" = "0" ]; then
+  if ! is_int "$EFFECTIVE_SEED"; then
+    die "the configuration's Randomseed is '$EFFECTIVE_SEED', which is not an integer; pin it with --seed"
+  fi
+  if [ "$EFFECTIVE_SEED" -lt 0 ]; then
+    die "the configuration's Randomseed is $EFFECTIVE_SEED; SMASH treats ANY negative seed as random, so this run would be irreproducible. Pass --seed <non-negative>, or --allow-random-seed."
+  fi
+fi
+
+# Several shipped examples (box, sphere, multi_particle_box) carry their OWN
+# particles.txt and decaymodes.txt next to the configuration, and SMASH does not
+# pick those up implicitly: without -p/-d it silently runs the DEFAULT tables, so
+# the run succeeds and is simply not the example you asked for. Auto-detect them.
+CFGDIR="$(dirname "$CONFIG")"
+if [ "$AUTO_TABLES" = "1" ]; then
+  [ -z "$PARTICLES" ]  && [ -f "$CFGDIR/particles.txt" ]   && PARTICLES="$CFGDIR/particles.txt"
+  [ -z "$DECAYMODES" ] && [ -f "$CFGDIR/decaymodes.txt" ] && DECAYMODES="$CFGDIR/decaymodes.txt"
+fi
+EXTRA=()
+if [ -n "$PARTICLES" ]; then
+  [ -f "$PARTICLES" ] || die "--particles '$PARTICLES' does not exist"
+  cp "$PARTICLES" "$OUTDIR/particles_used.txt"; EXTRA+=(-p "$PARTICLES")
+  log "using particle table $PARTICLES"
+fi
+if [ -n "$DECAYMODES" ]; then
+  [ -f "$DECAYMODES" ] || die "--decaymodes '$DECAYMODES' does not exist"
+  cp "$DECAYMODES" "$OUTDIR/decaymodes_used.txt"; EXTRA+=(-d "$DECAYMODES")
+  log "using decay table $DECAYMODES"
 fi
 
 log "running $(basename "$BIN") with seed $EFFECTIVE_SEED into $OUTDIR"
 set +e
-"$BIN" -i "$WORKCFG" -o "$OUTDIR/out" > "$OUTDIR/smash.log" 2> "$OUTDIR/stderr.txt"
+( cd "$CFGDIR" && "$BIN" -i "$WORKCFG" -o "$OUTDIR/out" ${EXTRA+"${EXTRA[@]}"} ) > "$OUTDIR/smash.log" 2> "$OUTDIR/stderr.txt"
 STATUS=$?
 set -e
 
@@ -134,16 +183,29 @@ if grep -qE "$ERROR_RE" "$OUTDIR/smash.log" "$OUTDIR/stderr.txt" 2>/dev/null; th
   exit 1
 fi
 
+# Structural validation, not a line count. A stub that wrote a non-OSCAR header,
+# two garbage records and two forged "# event ... end" comments used to be
+# reported as a complete run.
+head -1 "$OSCAR" | grep -qE '^#!OSCAR2013' \
+  || die "the particle output does not start with an OSCAR2013 header"
 NPART="$(grep -cvE '^#' "$OSCAR" || true)"
 [ "${NPART:-0}" -gt 0 ] || die "the particle output has a header but no particles"
 
-# The number of events actually written must match what was asked for, or the
-# run stopped early while still exiting 0.
 WANT_EVENTS="$(grep -E "^[[:space:]]*Nevents:" "$WORKCFG" | head -1 | sed -E 's/.*Nevents:[[:space:]]*//')"
-GOT_EVENTS="$(grep -cE '^# event .* end' "$OSCAR" || true)"
+# Match SMASH-3.3's real grammar, "# event N ensemble E out/end ...", and require
+# the out and end blocks to pair up.
+GOT_OUT="$(grep -cE '^# event [0-9]+ ensemble [0-9]+ out\b' "$OSCAR" || true)"
+GOT_EVENTS="$(grep -cE '^# event [0-9]+ ensemble [0-9]+ end\b' "$OSCAR" || true)"
+[ "${GOT_OUT:-0}" -eq "${GOT_EVENTS:-0}" ] \
+  || die "the output has $GOT_OUT event-start and $GOT_EVENTS event-end markers; they must pair"
 if [ -n "$WANT_EVENTS" ] && [ "${GOT_EVENTS:-0}" -ne "$WANT_EVENTS" ]; then
-  die "requested $WANT_EVENTS events but the output ends $GOT_EVENTS of them; the run stopped early"
+  die "requested $WANT_EVENTS events but the output completes $GOT_EVENTS of them; the run stopped early"
 fi
+# Every record must have the number of columns the header declares.
+NCOL="$(head -1 "$OSCAR" | awk '{print NF-2}')"
+BADCOL="$(awk -v n="$NCOL" '!/^#/ && NF != n' "$OSCAR" | wc -l | tr -d ' ')"
+[ "${BADCOL:-0}" -eq 0 ] \
+  || die "$BADCOL particle records do not have the $NCOL columns the header declares"
 
 log "run complete: $GOT_EVENTS events, $NPART particle records"
 echo "RESULT_DIR=$OUTDIR"

@@ -38,7 +38,11 @@ DO_ANCHOR=1
 # The only tests permitted a retry, because they seed themselves from
 # std::random_device. Keep this list minimal and justified.
 FLAKY_TESTS="potentials random"
-EXPECTED_TESTS="${SMASH_EXPECTED_TESTS:-104}"
+# 104 is the count for the pinned SMASH-3.3. An override is allowed for a
+# deliberately different pin, but then the run is NOT tier-1 certifying and says
+# so, because "reproduces the shipped suite" means the shipped suite.
+EXPECTED_TESTS_PINNED=104
+EXPECTED_TESTS="${SMASH_EXPECTED_TESTS:-$EXPECTED_TESTS_PINNED}"
 
 log () { echo "verify_smash: $*" >&2; }
 die () { log "$*"; exit 1; }
@@ -55,7 +59,9 @@ done
 if [ -n "${SMASH:-}" ] && [ -n "${SMASH_BUILD:-}" ] && [ -n "${SMASH_ROOT:-}" ]; then
   BIN="$SMASH"; BUILD="$SMASH_BUILD"; SRCROOT="$SMASH_ROOT"; EIGEN="${SMASH_EIGEN3_ROOT:-}"
   GSL="${SMASH_GSL_PREFIX:-}"; PYPFX="${SMASH_PYTHIA_PREFIX:-}"
+  PRESET=1
 else
+  PRESET=0
   OUT="$("$HERE/install_smash.sh")" || die "install_smash.sh failed"
   BIN="$(printf '%s\n' "$OUT" | sed -n 's/^SMASH=//p')"
   BUILD="$(printf '%s\n' "$OUT" | sed -n 's/^SMASH_BUILD=//p')"
@@ -66,6 +72,34 @@ else
 fi
 [ -x "$BIN" ] || die "no usable SMASH executable"
 [ -d "$BUILD" ] || die "no build directory at '$BUILD'"
+
+# Pre-set SMASH/SMASH_BUILD/SMASH_ROOT used to skip every identity check, so a
+# fake build directory next to the real binary certified tier 1. Whatever the
+# route, the tree must be the pinned commit, the build must carry the
+# installer's stamp, and the binary must be the one that stamp describes.
+PIN="${SMASH_PIN:-d1a1c6cf0a0002ee064eec1b929b9a7c14b3d5bc}"
+check_identity () {
+  local head stamp
+  [ -d "$SRCROOT/.git" ] || { log "'$SRCROOT' is not a git clone, so its commit cannot be established"; return 1; }
+  head="$(cd "$SRCROOT" && git rev-parse HEAD 2>/dev/null || echo none)"
+  [ "$head" = "$PIN" ] || { log "source tree is at $head, not the pinned $PIN"; return 1; }
+  ( cd "$SRCROOT" && git diff --quiet HEAD 2>/dev/null ) || { log "source tree has uncommitted modifications"; return 1; }
+  stamp="$BUILD/.fusion_build_stamp"
+  [ -f "$stamp" ] || { log "no build stamp at $stamp; this build was not produced by install_smash.sh"; return 1; }
+  local want got
+  want="$(sed -n 2p "$stamp")"
+  got="$(shasum -a 256 "$BIN" 2>/dev/null | cut -d' ' -f1 || echo none)"
+  [ "$want" = "$got" ] || { log "the binary does not match the build stamp (stamped $want, found $got)"; return 1; }
+  case "$BIN" in
+    "$BUILD"/*) : ;;
+    *) log "the binary '$BIN' does not live inside the build directory '$BUILD'"; return 1 ;;
+  esac
+  return 0
+}
+if ! check_identity; then
+  die "refusing to certify: the build does not verifiably come from the pinned source (see above)"
+fi
+log "identity OK: pinned commit, clean tree, stamped binary"
 
 FAILED=0
 
@@ -95,14 +129,28 @@ if [ "$DO_TESTS" = "1" ]; then
   log "running SMASH's own test suite (about 6 minutes)"
   set +e
   run_ctest -j"$( (command -v nproc >/dev/null && nproc) || sysctl -n hw.ncpu 2>/dev/null || echo 4 )" > "$LOG" 2>&1
+  CTEST_RC=$?
   set -e
 
   TOTAL="$(sed -nE 's/.* tests passed, [0-9]+ tests failed out of ([0-9]+).*/\1/p' "$LOG" | tail -1)"
   NFAIL="$(sed -nE 's/.* tests passed, ([0-9]+) tests failed out of [0-9]+.*/\1/p' "$LOG" | tail -1)"
   [ -n "$TOTAL" ] || { log "could not parse a ctest summary; last lines:"; tail -10 "$LOG" >&2; rm -f "$LOG"; exit 1; }
 
+  # The exit status is checked INDEPENDENTLY of the parsed text. A ctest that
+  # printed a clean "104 of 104" summary and then exited nonzero used to be
+  # accepted, because only the text was read.
+  if [ "$CTEST_RC" -ne 0 ] && [ "${NFAIL:-0}" -eq 0 ]; then
+    log "FAIL: ctest exited $CTEST_RC while reporting no failures; the summary and the status disagree"
+    tail -10 "$LOG" >&2
+    FAILED=1
+  fi
+
   # An EXACT count, never "at least": a suite that silently skipped cases would
   # otherwise certify the build.
+  if [ "$EXPECTED_TESTS" != "$EXPECTED_TESTS_PINNED" ]; then
+    log "NOTE: SMASH_EXPECTED_TESTS=$EXPECTED_TESTS overrides the pinned $EXPECTED_TESTS_PINNED;"
+    log "      this run is NOT a tier-1 certification of the pinned release"
+  fi
   if [ "$TOTAL" != "$EXPECTED_TESTS" ]; then
     log "FAIL: ctest ran $TOTAL cases, expected exactly $EXPECTED_TESTS"
     log "      (set SMASH_EXPECTED_TESTS if you deliberately pinned a different SMASH version)"
@@ -112,8 +160,20 @@ if [ "$DO_TESTS" = "1" ]; then
   if [ "${NFAIL:-0}" -eq 0 ]; then
     log "test suite: $TOTAL of $TOTAL passed on the first attempt"
   else
-    FAILING="$(sed -nE 's/^[[:space:]]+[0-9]+ - ([A-Za-z0-9_]+) \(Failed\).*/\1/p' "$LOG" | sort -u)"
-    [ -n "$FAILING" ] || { log "FAIL: $NFAIL tests failed but their names could not be parsed"; tail -10 "$LOG" >&2; FAILED=1; FAILING=""; }
+    # Parse EVERY ctest failure status, not only "(Failed)": a case that timed
+    # out or was not run is still a failure, and matching only "(Failed)" let a
+    # real regression through while the one self-seeded flake was retried.
+    FAILING="$(sed -nE 's/^[[:space:]]+[0-9]+ - ([A-Za-z0-9_.-]+) \(([A-Za-z ]+)\).*/\1/p' "$LOG" | sort -u)"
+    NPARSED="$(printf '%s\n' "$FAILING" | grep -c . || true)"
+    # The number of names parsed must equal the number ctest reported, or
+    # something was missed and the retry logic below is reasoning about a
+    # different set than the one that actually failed.
+    if [ "${NPARSED:-0}" -ne "${NFAIL:-0}" ]; then
+      log "FAIL: ctest reported $NFAIL failures but $NPARSED names could be parsed; refusing to guess"
+      sed -nE 's/^[[:space:]]+[0-9]+ - .*/&/p' "$LOG" | head -10 >&2
+      FAILED=1
+      FAILING=""
+    fi
     for t in $FAILING; do
       case " $FLAKY_TESTS " in
         *" $t "*)
@@ -122,10 +182,15 @@ if [ "$DO_TESTS" = "1" ]; then
           run_ctest -R "^$t\$" > "$LOG.retry" 2>&1
           RC=$?
           set -e
-          if [ "$RC" -eq 0 ]; then
-            log "'$t' passed on retry, which is what a statistical fluke does"
+          # Exit status alone is not enough: `ctest -R` that matches NOTHING
+          # prints "No tests were found!!!" and exits 0, which used to be read
+          # as a clean retry. Require exactly one test selected and passed.
+          RTOTAL="$(sed -nE 's/.* tests passed, [0-9]+ tests failed out of ([0-9]+).*/\1/p' "$LOG.retry" | tail -1)"
+          RFAIL="$(sed -nE 's/.* tests passed, ([0-9]+) tests failed out of [0-9]+.*/\1/p' "$LOG.retry" | tail -1)"
+          if [ "$RC" -eq 0 ] && [ "${RTOTAL:-0}" = "1" ] && [ "${RFAIL:-1}" = "0" ]; then
+            log "'$t' passed on retry (1 of 1), which is what a statistical fluke does"
           else
-            log "FAIL: '$t' failed twice, so this is not statistical"
+            log "FAIL: retry of '$t' did not cleanly pass exactly one test (rc=$RC, total=${RTOTAL:-none}, failed=${RFAIL:-none})"
             tail -15 "$LOG.retry" >&2
             FAILED=1
           fi

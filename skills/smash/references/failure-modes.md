@@ -72,7 +72,7 @@ made with it cannot be compared with a reference, with another machine, or with
 itself. `run_smash.sh` refuses `-1` unless `--allow-random-seed` is given. With a
 pinned seed the output is byte-identical between two runs of the same build.
 
-## 5. Two of the shipped unit tests fail at random, by construction
+## 5. Four test files seed themselves; two of them are observed flakes
 
 `src/tests/potentials.cc` and `src/tests/random.cc` open with
 
@@ -82,8 +82,15 @@ TEST(set_random_seed) { std::random_device rd; random::set_seed(rd()); }
 
 and then assert statistical quantities against fixed tolerances, so they fail
 occasionally on a correct build. Measured: `potentials` passed 4 of 5
-consecutive standalone runs on macOS. Only 2 of 82 test files do this; the rest
-are deterministic.
+consecutive standalone runs on macOS.
+
+**Those two are the observed flakes, not the complete list of self-seeded
+tests.** `src/tests/scatteraction.cc` (three call sites) and
+`src/tests/dynamic_fluidization.cc` (one) also seed themselves, through
+`random::generate_63bit_seed()`, which draws from `std::random_device` as well.
+Neither has been seen to fail, so they are not on the retry list, but the claim
+"the other 102 are deterministic" is false and is not made. Audit this set before
+extending the retry policy.
 
 `verify_smash.sh` therefore retries **only those two by name, once**, and treats
 any other failure as fatal. Do not relax this into "allow one failure": that is
@@ -98,8 +105,10 @@ match SMASH's severity FIELD (`^[time] ERROR`) instead. `run_smash.sh` does.
 
 ## 7. A run can exit 0 having written fewer events than requested
 
-Check the number of `# event N end` markers against `Nevents` rather than
-trusting the exit status. `run_smash.sh` does this and fails when they disagree.
+Check matched `# event N ensemble E out` / `... end` pairs against `Nevents`
+rather than trusting the exit status. `run_smash.sh` does this and fails when
+they disagree. Note the `ensemble` field: a pattern written as `# event N end`
+matches nothing in real SMASH-3.3 output.
 
 ## 8. Comparing multiplicities across machines is not a test
 
@@ -109,6 +118,12 @@ within one build and should NOT be expected to match another build. Anchor on
 baryon number and electric charge, which are integers fixed by the initial
 nuclei and identical on every platform, for every seed. See
 `scripts/check_conservation_smash.py`.
+
+Be honest about what that buys, though. B and Q are a **limited invariant**, not
+a general broken-build detector: most cross-section, collision-ordering, spectra,
+flow and timing regressions preserve both. They catch a build that has lost
+particles or corrupted its bookkeeping, and the test suite catches the rest. Do
+not present a passing conservation check as evidence that the physics is right.
 
 ## 9. Licensing
 
