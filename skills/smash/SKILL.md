@@ -102,7 +102,7 @@ tables under non-standard names that auto-staging cannot find: see
 ```bash
 scripts/verify_smash.sh              # test suite + seeded anchor, about 8 min
 scripts/verify_smash.sh --tests-only
-scripts/selftest_smash.sh            # harness only, 94 cases, seconds, no build needed
+scripts/selftest_smash.sh            # harness only, 100 cases, seconds, no build needed
 ```
 
 A clean run ends in `VERIFY OK`. If the expected test count was overridden with

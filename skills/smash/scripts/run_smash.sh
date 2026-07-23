@@ -65,13 +65,25 @@ grep -q "General:" "$CONFIG" || die "config '$CONFIG' has no 'General:' block; i
 # Full-match validation. The earlier character-class test accepted '--', '1-2'
 # and '1..2', which are not numbers even though they contain only permitted
 # characters.
-# Bounded to 18 digits. The regex accepted an integer of ANY length, and the
-# `-lt` comparison that follows is done by bash, which cannot represent one:
-# `--seed 9223372036854775808` printed "integer expression expected" and then
-# ran anyway, so the negative-seed guard was bypassed by a number too large to
-# compare. 18 digits is comfortably inside int64 and far beyond any real seed.
-is_int ()  { printf '%s' "$1" | grep -qE '^-?[0-9]{1,18}$'; }
-is_uint () { printf '%s' "$1" | grep -qE '^[0-9]{1,18}$'; }
+# Range-checked against int64, not digit-counted.
+#
+# Two wrong versions preceded this one, in opposite directions. First the regex
+# was unbounded, so `--seed 9223372036854775808` reached a bash `-lt` that could
+# not represent it, printed "integer expression expected", and the run proceeded
+# with the negative-seed guard bypassed. The fix for that capped the value at 18
+# digits, which then REJECTED `--seed 9223372036854775807`: SMASH's Randomseed
+# is an int64_t, that is its exact maximum, and raw SMASH runs with it happily.
+# A digit count is not a range. Ask python for the real bound.
+in_int64 () {
+  python3 -c 'import sys
+try:
+    v = int(sys.argv[1])
+except ValueError:
+    sys.exit(1)
+sys.exit(0 if -(2**63) <= v < 2**63 else 1)' "$1" 2>/dev/null
+}
+is_int ()  { printf '%s' "$1" | grep -qE '^-?[0-9]+$' && in_int64 "$1"; }
+is_uint () { printf '%s' "$1" | grep -qE '^[0-9]+$'  && in_int64 "$1"; }
 # Accepts every non-negative decimal literal SMASH's YAML reader does, including
 # the ones the previous pattern wrongly rejected: '.5', '5.', '1e-3', '1.5E3'.
 # Still rejects '.', '--', '1-2', '1..2' and anything negative.
@@ -82,10 +94,25 @@ is_num ()  { printf '%s' "$1" | grep -qE '^([0-9]+\.?[0-9]*|\.[0-9]+)([eE][+-]?[
 # --events expectation was passed, and the event-count check silently did
 # nothing: a run that wrote one of two events passed. A validation that a
 # comment can disable is not a validation.
+# Also strips surrounding quotes: `Randomseed: "123"` and `Nevents: "2"` are
+# valid YAML that SMASH accepts, and without this the value came back with the
+# quotes attached, so the seed was rejected as non-integer and, far worse,
+# Nevents silently failed is_uint and the event-count expectation was never
+# passed at all.
+#
+# NOT a general YAML reader. It is correct only for the unquoted or
+# simply-quoted NUMERIC scalars it is used on (Randomseed, Nevents, Ensembles);
+# on a path or a string containing '#' the comment strip would corrupt the
+# value. Do not reuse it for anything else.
 read_key () {
   grep -E "^[[:space:]]*$1:" "$WORKCFG" 2>/dev/null | head -1 \
-    | sed -E "s/.*$1:[[:space:]]*//; s/[[:space:]]*#.*$//; s/[[:space:]]*$//" | tr -d '\r' || true
+    | sed -E "s/.*$1:[[:space:]]*//; s/[[:space:]]*#.*$//; s/[[:space:]]*$//; s/^[\"']//; s/[\"']$//" \
+    | tr -d '\r' || true
 }
+# Does the key appear at all? A key that is PRESENT but unreadable must be an
+# error, never a silently skipped check: that is how the quoted `Nevents: "2"`
+# turned the event-count validation off while the run still reported success.
+has_key () { grep -qE "^[[:space:]]*$1:" "$WORKCFG" 2>/dev/null; }
 
 if [ -n "$SEED" ]; then
   is_int "$SEED" || die "--seed must be an integer, got '$SEED'"
@@ -261,8 +288,18 @@ fi
 # shipped config), so a miss must return empty and succeed. Without the `|| true`
 # the failing grep killed the whole script under `set -e`, after the run had
 # already completed, with no message at all.
+# FAIL CLOSED. The previous version simply skipped the expectation when a value
+# would not parse, so any spelling the reader did not understand disabled the
+# event-count check while the run still reported success: `Nevents: "2"` did
+# exactly that. If the key is present it must be readable, or this is an error.
 WANT_EVENTS="$(read_key Nevents)"
 WANT_ENS="$(read_key Ensembles)"
+if has_key Nevents && ! is_uint "${WANT_EVENTS:-}"; then
+  die "the configuration's Nevents is '${WANT_EVENTS}', which this wrapper cannot read as a count, so the number of events written could not be checked. Fix the value, or pass --nevents."
+fi
+if has_key Ensembles && ! is_uint "${WANT_ENS:-}"; then
+  die "the configuration's Ensembles is '${WANT_ENS}', which this wrapper cannot read as a count, so the number of events written could not be checked."
+fi
 EXPECT_ARG=()
 if is_uint "${WANT_EVENTS:-}"; then
   if is_uint "${WANT_ENS:-}" && [ "${WANT_ENS:-1}" -ge 1 ]; then

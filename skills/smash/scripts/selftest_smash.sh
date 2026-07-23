@@ -714,6 +714,38 @@ SMASH="$TMP/stub_ok" expect_fail_with "--workdir rejects a directory that does n
   "$RUN" --config "$CFG" --outdir "$TMP/w_wd2" --seed 1 --workdir "$TMP/no_such_dir"
 
 echo
+echo "residuals found by the round-4 adversarial pass"
+# Both were introduced by the round-3 fixes, in the same two lines.
+
+# (a) The 18-digit cap was a digit count standing in for a range, and it
+#     rejected the exact int64 maximum, which SMASH's Randomseed is and which
+#     raw SMASH runs with happily.
+SMASH="$TMP/stub_ok" expect_pass "the int64 maximum seed 9223372036854775807 is accepted" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_maxseed" --seed 9223372036854775807
+SMASH="$TMP/stub_ok" expect_fail_with "one past the int64 maximum is still rejected" "must be an integer" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_overseed" --seed 9223372036854775808
+
+# (b) Quoted YAML numerics. `Randomseed: "123"` was rejected outright, and
+#     `Nevents: "2"` SILENTLY DISABLED the event-count check, which is the
+#     dangerous half: the run reported success having written one event of two.
+sed -e 's/    Randomseed:     -1/    Randomseed:     "4242"/' -e 's/    Nevents:        2/    Nevents:        "2"/' \
+  "$CFG" > "$TMP/cfg_quoted.yaml"
+SMASH="$TMP/stub_ok" expect_pass "a quoted Randomseed and Nevents are read, not rejected" \
+  "$RUN" --config "$TMP/cfg_quoted.yaml" --outdir "$TMP/w_quoted"
+SMASH="$TMP/stub_oneevent" expect_fail_with "a quoted Nevents still enforces the event count" "stopped early" \
+  "$RUN" --config "$TMP/cfg_quoted.yaml" --outdir "$TMP/w_quoted2"
+
+# (c) The structural lesson: a value the reader cannot parse must be an ERROR,
+#     not a skipped check. Fail closed, or every unhandled spelling silently
+#     turns the validation off.
+sed 's/    Nevents:        2/    Nevents:        two/' "$CFG" > "$TMP/cfg_badnev.yaml"
+SMASH="$TMP/stub_ok" expect_fail_with "an unreadable Nevents is an error, not a skipped check" \
+  "cannot read as a count" "$RUN" --config "$TMP/cfg_badnev.yaml" --outdir "$TMP/w_badnev" --seed 1
+sed 's/    Nevents:        2/    Ensembles:      x\n    Nevents:        2/' "$CFG" > "$TMP/cfg_badens.yaml"
+SMASH="$TMP/stub_ok" expect_fail_with "an unreadable Ensembles is an error too" \
+  "cannot read as a count" "$RUN" --config "$TMP/cfg_badens.yaml" --outdir "$TMP/w_badens" --seed 1
+
+echo
 echo "-------------------------------------------"
 echo "selftest: $PASS passed, $FAIL failed"
 [ "$FAIL" -eq 0 ] || exit 1

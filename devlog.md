@@ -3,6 +3,44 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-23: SMASH round 4, and the pattern is now a measurement
+
+**Why we tried it:** the round-3 fixes were single-source. Given that rounds 2
+and 3 had each found that the previous round's fixes carried new defects, the
+question for round 4 was aimed accordingly: not "were the findings fixed" but
+"did the fixes break something new".
+
+**Result:** all six round-3 findings confirmed FIXED against real output. Two
+NEW defects, both from round 3, both in the same two lines of input validation.
+
+- **The 18-digit cap rejected a legitimate seed.** `Randomseed` is an `int64_t`
+  and `9223372036854775807` is exactly its maximum; raw SMASH runs with it. The
+  round-3 fix had replaced an unbounded regex with a DIGIT COUNT, and a digit
+  count is not a range. Now range-checked properly, so the maximum is accepted
+  and one past it is still refused.
+- **Quoted YAML numerics.** `Randomseed: "123"` was rejected outright, and
+  `Nevents: "2"` did something worse: `is_uint` failed, no `--events`
+  expectation was passed, and the event-count check SILENTLY SWITCHED OFF while
+  the run reported success having written one event of two.
+
+**Root cause of the second, which is the one that generalizes:** the quoting was
+only the trigger. The defect was that an unparseable value took the FAIL-OPEN
+branch. Stripping quotes fixes the reported case; what fixes the class is that a
+key present but unreadable is now an error. Any validation whose "I could not
+read this" path is `skip` rather than `fail` is one unexpected spelling away
+from not existing.
+
+**Lesson, four rounds in.** Every round has introduced a defect of the same
+shape as the one it repaired. That is a base rate, not bad luck, and the useful
+consequence is knowing what actually catches them. In order of yield: running
+the harness on a second machine, the flip test, and an adversarial reader with
+permission to run the real code. **Nothing in four rounds was found by
+inspection**, including my own inspection immediately after writing the code.
+
+**Status:** both fixed and flip-tested, selftest 94 to 100 cases, 100/100 on
+macOS/ARM and Linux/x86-64. One more confirmation pass before it ships; stop
+when a round comes back clean.
+
 ## 2026-07-23: SMASH round 3, where four of six new defects came from round 2's fixes
 
 **Why we tried it:** cross-AI validation is mandatory before a per-code skill

@@ -278,6 +278,52 @@ So that path now still runs and still catches mistakes, but it **cannot print
 the tier-1 verdict**: it ends in `VERIFY PASSED-NOT-CERTIFIED`. Certification
 is reserved for the route where this harness produced the build itself.
 
+## The FOURTH pass, and what four rounds of this actually measured
+
+Round 4 was aimed squarely at the round-3 fixes, on the reasoning that the
+interesting question was no longer "were the findings fixed" but "did the fixes
+break something new". Part A: **all six round-3 findings confirmed FIXED**,
+each against real output. Part B found **two new defects, both introduced by
+round 3, both in the same two lines of input validation**:
+
+1. **The 18-digit cap rejected a legitimate seed.** SMASH's `Randomseed` is an
+   `int64_t`, and `9223372036854775807` is exactly its maximum; raw SMASH runs
+   with it. The round-3 fix had replaced an unbounded regex (which let an
+   uncomparable value bypass the negative-seed guard) with a DIGIT COUNT, and a
+   digit count is not a range. It now asks python for the real int64 bound, so
+   the maximum is accepted and one past it is still refused.
+2. **Quoted YAML numerics.** `Randomseed: "123"` and `Nevents: "2"` are valid
+   YAML that SMASH accepts. The quoted seed was rejected outright, and the
+   quoted `Nevents` did something worse: `is_uint` failed, no `--events`
+   expectation was passed, and **the event-count check silently switched off**
+   while the run still reported success having written one event of two.
+
+The second is the one worth keeping, because the quoting was only the trigger.
+The defect was that an unparseable value took the FAIL-OPEN branch. Stripping
+quotes fixes the reported case; what fixes the class is that a key which is
+present but unreadable is now an ERROR:
+
+```
+the configuration's Nevents is 'two', which this wrapper cannot read as a count,
+so the number of events written could not be checked. Fix the value, or pass --nevents.
+```
+
+Four rounds in, the honest summary is that **every round has introduced defects
+of the same shape as the ones it repaired**: rounds 2, 3 and 4 each found that
+the previous round's fix had a new false-pass or false-reject in it. The
+countermeasures that actually caught things were never careful reading. They
+were, in order of yield: running the harness on a second machine, the flip test,
+and an adversarial reader with permission to run the real code. Nothing here was
+found by inspection.
+
+Round 4 also confirmed, by running them, that the tightened marker grammar
+rejects nothing legitimate: `Only_Final` Yes / No / IfNotEmpty (empty and
+non-empty), `Ensembles: 2`, `OSCAR2013Extended`, and the Collider, Box, Sphere,
+List and ListBox modi all parse. The hardcoded `end 0 impact <x>
+scattering_projectile_target yes|no` tail matches every real particle-list
+event; `SMASH_IC` writes a bare `end`, and that content is correctly refused as
+not `particle_lists` rather than mis-parsed.
+
 ## The guard-flip discipline, applied
 
 Per the project rule, no new guard is counted as tested until it is shown to
@@ -292,6 +338,9 @@ one** case, the case written for it, and nothing else:
 | 18-digit bound on integers | two oversized seeds |
 | mandatory `out COUNT` | an `out` marker with no count |
 | preset-path certification downgrade | a supplied build printing the tier-1 verdict |
+| int64 range check (vs the 18-digit cap) | the int64 maximum seed being accepted |
+| quote stripping in `read_key` | a quoted Randomseed, and a quoted Nevents enforcing the count |
+| fail-closed on an unreadable Nevents/Ensembles | both unreadable-value cases |
 | Mach-O/ELF check | a shell script named `smash` is rejected |
 | `particle_lists` content check | a `full_event_history` file is refused |
 | `CMAKE_HOME_DIRECTORY` binding | a build configured from another source tree |
@@ -327,8 +376,9 @@ field this document originally omitted.
 
 ## Harness
 
-`scripts/selftest_smash.sh`, **94 cases** (49 before the second adversarial
-pass, 84 after it), a few seconds, and 94/94 on BOTH platforms. The run and ctest tests use stub executables, so no SMASH
+`scripts/selftest_smash.sh`, **100 cases** (49, then 84, then 94 after the
+second, third and fourth adversarial passes), a few seconds, 100/100 on BOTH
+platforms. The run and ctest tests use stub executables, so no SMASH
 build is required; the identity and ctest-parsing cases additionally use the
 local clone when there is one, because the git pin is the one thing that cannot
 be synthesized, and they announce themselves as skipped when there is not.
