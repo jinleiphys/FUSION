@@ -212,6 +212,34 @@ Two smaller results from the same pass, both measured rather than argued:
   directory, so the file checked was not always the file used. Paths are now
   made absolute at the point of validation.
 
+### Both platforms re-verified after the round-2 fixes
+
+The fixes are harness code, so they were re-run end to end on both platforms
+rather than only where they were written:
+
+| | macOS/ARM | Linux/x86-64 (heliumx) |
+|---|---|---|
+| `selftest_smash.sh` | 84/84, no block skipped | 84/84, no block skipped |
+| ctest | **104/104 on the first attempt** | **104/104 on the first attempt** |
+| anchor B / Q | 788 / 316 exact | 788 / 316 exact |
+| verdict | `VERIFY OK` | `VERIFY OK` |
+
+The Linux anchor reproduced the multiplicities this document already recorded
+for that platform (978 records, n/p 442/344, pi 70/71/43), which is a useful
+consistency check that the rebuilt Linux binary is the same code, and another
+reminder that those numbers differ from macOS by up to 25 per cent while the
+two conserved integers do not move at all.
+
+Taking the harness to Linux was not a formality. It exposed that the identity
+and ctest selftest blocks were **fabricating their fixture**: they synthesized a
+stamp with `head -1` of the real build's stamp, and the Linux build predated the
+stamp, so that file did not exist, `head -1` contributed nothing, and the
+synthetic stamp collapsed to a single line holding the digest, which the
+identity check dutifully reported as a bad build-identity line. Eight cases
+failed against an input the fixture had invented. The blocks now require a real
+stamp as a precondition and say plainly when they are skipped. **On macOS the
+bug was invisible, because there the file exists.**
+
 ## The guard-flip discipline, applied
 
 Per the project rule, no new guard is counted as tested until it is shown to
@@ -255,8 +283,8 @@ field this document originally omitted.
 
 ## Harness
 
-`scripts/selftest_smash.sh`, **83 cases** (49 before the second adversarial
-pass), a few seconds. The run and ctest tests use stub executables, so no SMASH
+`scripts/selftest_smash.sh`, **84 cases** (49 before the second adversarial
+pass), a few seconds, and 84/84 on BOTH platforms. The run and ctest tests use stub executables, so no SMASH
 build is required; the identity and ctest-parsing cases additionally use the
 local clone when there is one, because the git pin is the one thing that cannot
 be synthesized, and they announce themselves as skipped when there is not.
