@@ -3,6 +3,50 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-23: fresco skill unified across FUSION and the global copy; exfor-data is the first research skill
+
+**Direction change (user ruling):** the 2026-07-14 decision that the auto-install
+variant lives only in FUSION is **withdrawn**. The global skill and the FUSION copy
+are now kept byte-identical and `diff -r` between them must be empty. Both check the
+bin dir, then PATH, and build from upstream only if neither has a binary, so a deck
+authored in one place runs unchanged in the other. CLAUDE.md line amended in place
+rather than appended to, because a stale rule there actively misleads a later session.
+
+**New in the fresco skill: `scripts/omp.py`.** Emits KD02 and CH89 global nucleon
+optical potentials as ready-to-paste `&POT` blocks. Pure Python, standard library,
+so it needs no Fortran toolchain even though it is a transcription of Fortran.
+
+Why a generator rather than letting the model write the parameters: the formulas are
+the easy part, the handoff into FRESCO is not. Three failure modes are silent, meaning
+the deck runs and prints a plausible cross section that is wrong. FRESCO builds radii
+as `R = r0*(Ap^1/3 + At^1/3)` while KD02 and CH89 are defined on `R = r0*At^1/3`, so
+without `ap=0` every radius is ~22% too large. `W_d` must land in `p4` of the `type=2`
+line, since `p1` makes it a real surface well and the absorption quietly drops. And a
+`type=0` line is required even for neutrons because it is what declares the convention.
+
+**Precision finding worth keeping.** `--selftest` pins 39 values against the reference
+Fortran and passes at 2e-7, not machine epsilon. First diagnosis (single-precision cube
+root) was wrong and Codex caught it: **every unsuffixed real literal in that kd02.f is
+single precision**, so `59.30` enters as `59.2999992370605`. Proof that the cube root is
+not the mechanism: neutron `V` contains no cube root at all yet still deviates, and
+recompiling with `-fdefault-real-8` matches the Python to 16 digits. The reference
+`ch89.f` suffixes everything with `d0` and reproduces exactly. So the Python is the more
+accurate of the two and the residual belongs to the Fortran. End to end the generated
+deck gives sigma_R = 1301.64017 mb for n+90Zr at 50 MeV, identical to a hand-built deck.
+
+**First research skill embedded: `skills/exfor-data/`.** Drives no code, so the per-code
+bar does not apply; see skills-catalog.md for the EXFOR-specific traps (unscriptable
+search servlet, fixed-width blank-preserving records, `DATA-ERR` sometimes in per cent,
+`COMMON` and `DATA` counting their header lines differently).
+
+**Codex adversarial pass on both:** 3 defects, all confirmed and fixed. (1) the precision
+diagnosis above; (2) `omp.py` accepted impossible nuclides, so `--target 90,40` silently
+returned parameters for Z=90 A=40 when the user meant 90Zr, now rejected with a message
+naming the correct spelling; (3) `exfor.py` documented a header-count consistency check
+that the code never actually performed, so a truncated wrapped record vanished silently.
+Fixing (3) then exposed that EXFOR counts `COMMON` and `DATA` header lines differently,
+which caused 33 false warnings on real entries before both readings were accepted.
+
 ## 2026-07-23: SkyNet macOS NSE block-3 is libm-limited, not a flag fix
 
 **Why we tried it:** the full-network NSE (Saha) block at T9=3 reproduced the
@@ -26,49 +70,3 @@ reproduce cross-platform, document the delta, and encode the exception narrowly
 Full reasoning in the 2026-07-23 CLAUDE.md key decision.
 
 **Status:** Parked (documented macOS caveat; SkyNet ships tier-1-with-caveat).
-
-## 2026-07-22: a results table is not an anchor, and 14N(p,g)15O cannot be built
-
-**Why we tried it:** After the 16O(p,g)17F benchmark worked, 14N(p,g)15O was the
-obvious next case and TODO called its Table IV "a better check than pikoe ever
-had", because it tabulates S(0) per transition plus a total of 1.81 keV b.
-
-**What failed:** the reconstruction, before a single run. Auditing the INPUT
-side against the paper: Table II covers gamma widths for "the three strongest
-transitions" only; the 5.18 MeV final state has neither an ANC in Table III nor
-a gamma width anywhere, so it is 100% unspecified; and decisively, **the signs of
-the reduced-width amplitudes are never published**, while the ground-state S(0)
-is set by destructive interference among four 3/2+ components. Table III adds
-its own warning that "there is a sign ambiguity in the conversion". Four
-components give eight sign combinations spanning orders of magnitude in S(0).
-
-**Root cause:** the attractiveness of a benchmark was judged from its OUTPUT
-side. A table of results says nothing about whether the inputs that generated it
-were all printed. 16O(p,g)17F happened to publish a complete parameter set;
-14N(p,g)15O publishes a better-looking answer and an incomplete question.
-
-**Lesson:** before promising a constructed benchmark, audit the input table for
-completeness including signs and phases. Picking a sign to match a published
-number is fitting to the answer, which is the exact failure the clean-room rule
-exists to prevent. Tractable subsets can still be worth building: here the
-6.79 MeV transition is 72% of the total, external-capture dominated with a single
-ANC, and explicitly "added incoherently", so it carries no sign ambiguity.
-
-**Status:** Full Table IV case abandoned. 6.79 MeV subset parked, in TODO.
-
-**Also this session, two smaller dead-ends:**
-
-- **`--no-transform` for entering published reduced-width amplitudes: rejected on
-  physics.** It agrees with transform mode at the one radius where the
-  amplitudes were converted and diverges by a **factor of 4** across
-  ac = 4.0 to 6.0 fm, because it bypasses the ANC-to-amplitude conversion.
-  Transform mode is flat to 0.4%, which is what ANC-normalised external capture
-  must be. A single-radius check rates the two equally good. **Lesson: when a
-  quantity is supposed to be invariant, test the invariance, not one point.**
-- **The `codex:codex-rescue` plugin path was silently dead** for an hour: broker
-  never started (0-byte log, no pid file), no live process, and the task kept
-  reporting "still running". The Codex CLI itself was fine. This is a sixth
-  false-success costume and the first at the ORCHESTRATION layer rather than in
-  a physics code: silence was indistinguishable from work. **Lesson: a
-  long-running delegated job needs a liveness check, not just a status string.**
-  Workaround: drive `codex exec` directly.

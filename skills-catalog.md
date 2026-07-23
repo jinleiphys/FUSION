@@ -59,6 +59,53 @@ Status legend: [ ] not started, [S] skill exists, [V] open-source status needs v
 - [V] **Geant4** — huge; a skill is feasible but scope must be narrowed (physics-list selection + common nuclear setups).
 - [x] excluded: MCNP (export-controlled), FLUKA/PHITS (restrictive licenses).
 
+## Heavy-ion collisions and the equation of state (opened 2026-07-23)
+
+Scope opened by the user ruling of 2026-07-23 (CLAUDE.md Key decisions): FUSION serves the whole
+nuclear-physics community, so a row does not need an interface to Lines A/E/F to be built. Every
+fact in this section was verified live on 2026-07-23, by the GitHub API for the repo and license
+and by CrossRef for the paper; nothing here is from memory. None of these is built yet.
+
+The asymmetry worth stating up front: the codes NEAREST the user's own field are the ones that
+fail the rules. Low-energy heavy-ion transport (ImQMD, AMD, CoMD, IBUU) and the NRV web platform
+are request-based or registration-gated, so they fail "publicly clonable" exactly as Theo4Exp does.
+The cleanly open codes cluster at relativistic energies, a different community.
+
+**Verified eligible (repo + license + paper all confirmed live):**
+
+| code | repo | license (GitHub API) | language | paper (CrossRef-verified) |
+|---|---|---|---|---|
+| **SMASH** | smash-transport/smash | GPLv3 per `LICENSE.md` (GitHub reports NOASSERTION because the file also bundles BSD-3 / CC0 / Unlicense third-party terms) | C++ / CMake | Weil et al., Phys. Rev. C **94**, 054905 (2016), `10.1103/physrevc.94.054905` |
+| **GiBUU** | gibuu/GiBUU_2017 | GPL-2.0 | Fortran | Buss et al., Phys. Rept. **512**, 1-124 (2012), `10.1016/j.physrep.2011.12.001` |
+| **Thermal-FIST** | vlvovch/Thermal-FIST | GPL-3.0 | C++ | Vovchenko, Stoecker, Comput. Phys. Commun. **244**, 295-310 (2019), `10.1016/j.cpc.2019.06.024` |
+| **vHLLE** | yukarpenko/vhlle | GPL-2.0 | C++ | Karpenko et al., Comput. Phys. Commun. **185**, 3016-3027 (2014), `10.1016/j.cpc.2014.07.010` |
+| **MUSIC** | MUSIC-fluid/MUSIC | GPL-2.0 | C++ | (paper not yet CrossRef-verified) |
+| **TRENTO** | Duke-QCD/trento | MIT | C++ | (paper not yet CrossRef-verified) |
+| **iEBE / iEBE-MUSIC** | chunshen1987/iEBE, chunshen1987/iEBE-MUSIC | GPL-3.0 both | Fortran / Python | (papers not yet CrossRef-verified) |
+
+**Blocked on a user ruling: Sky3D.** `manybody/sky3d` (nuclear time-dependent Hartree-Fock,
+3D cartesian box, static + time-dependent). This is by far the most relevant code in the section,
+since TDHF fusion/dissipation touches the superheavy white paper and the Line A CF-suppression
+work. It is publicly clonable and published twice, Maruhn et al., Comput. Phys. Commun. **185**,
+2195-2216 (2014), `10.1016/j.cpc.2014.04.008`, and version 1.1, Comput. Phys. Commun. **229**,
+211-213 (2018), `10.1016/j.cpc.2018.03.012`, both CrossRef-verified. **But it carries no
+open-source license.** Following the KSHELL lesson (grep the README and the paper, not just the
+LICENSE file), the check was run in all three places: no LICENSE file, nothing in the README,
+no copyright header in the Fortran sources, and the CPC paper's program summary states
+`Licensing provisions: none`, whose template comment reads "enter 'none' if CPC non-profit use
+license is sufficient". So Sky3D is under the **CPC non-profit use license**, which restricts use
+to non-profit and is not an open-source license. This is genuinely different from KSHELL, where
+the grep FOUND a GPLv3 declaration; here the grep found a restrictive one. The skill would clone
+from upstream and redistribute nothing, which is how KSHELL and SWANLOP already ship, so the
+question is whether a CPC non-profit license satisfies the "publicly open-source" clause of the
+hard rule or fails it the way Theo4Exp does. **User decision needed before any work starts.**
+
+**Equation of state, surveyed but not yet verified:** CompOSE (compose.obspm.fr, database plus
+its own tools, not on GitHub), SROEOS (Schneider-Roberts-Ott finite-temperature EOS), HFBTHO and
+HFODD (Skyrme DFT, distributed through the CPC library). None located on GitHub in the 2026-07-23
+pass, so each needs its channel, license and paper found before it can enter the table above.
+Thermal-FIST already covers the hadron-resonance-gas branch of "EOS" and is verified.
+
 ## Lei code family (ONLY published + publicly-open ones; hard rule, see CLAUDE.md)
 
 Eligible (published paper + public repo, skills double as student onboarding docs):
@@ -76,6 +123,12 @@ EXCLUDED (not publicly released, never get a FUSION skill):
 - STARS / pstars (internal repo only)
 - smoothie (not public)
 - transfer (not public)
+
+## Research skills (not per-code)
+
+These drive no single code, so the per-code bar (install, build, benchmark against a published value) does not apply. Their integrity check is that what they report can be traced back to a primary source.
+
+- [x] **exfor-data** DONE 2026-07-23: `skills/exfor-data/`, retrieval and parsing of measured nuclear reaction data from the IAEA EXFOR database. Partner to every reaction skill, because comparing a calculation with experiment needs real data and inventing a data point is worse than having none. Two things it encodes that cost real time to discover: the interactive search servlet **cannot be scripted** (it answers `Define Search Criteria!` to every GET and POST, since the form is JavaScript-built and session-bound), so the workflow is to find the accession number by other means and then pull the entry through `X4sGetEntry`; and the data blocks are **fixed width** (6 fields of 11 characters, wrapping past 6 columns) where a blank field means "not measured", so whitespace splitting silently shifts every later column. Also handles the trap that `DATA-ERR` is sometimes `PER-CENT` and sometimes absolute, and that `COMMON` and `DATA` count their header line differently. Designed to answer "there is no measurement at that energy" as a first-class result: verified live on n+90Zr, where nothing exists at 50 MeV and the nearest sets are 24 MeV (enriched, full angular range) and 55 MeV (natural Zr, forward angles).
 
 ## Where the community keeps these codes (source registry)
 

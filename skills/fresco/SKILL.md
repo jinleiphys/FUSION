@@ -63,11 +63,41 @@ DWBA vs CRC is the solution mode (`iter`/`iblock` + reverse-coupling sign), not 
 1. **Pick the calculation type** from the routing table above. This fixes which namelists you populate and which example to copy.
 2. **Copy the nearest verified deck** from `examples/` (table below).
 3. **Edit only what the physics requires**: masses, charges, energies, potentials, states, coupling. Keep the numerical/grid block from the reference deck until you have a reason to change it.
-4. **Set the grid and partial waves** using `references/namelist-reference.md` (radial: `hcm`, `rmatch`/`rasym`; partial waves: `jtmin`, `jtmax`, `jump`/`jbord`; cutoffs: `cutr`, `cutl`).
-5. **Run locally** with `scripts/run_fresco.sh <deck>`; it runs in a scratch dir and pulls out the integrated cross sections.
-6. **Verify convergence** per `references/verification.md`: vary `hcm`, `rmatch`, `jtmax`, bin count; the observable must be stable to the precision you quote. If you have a published number or a reference deck, compare to N digits with `scripts/check_xsec.py`.
-7. **Extract observables** from the right `fort.*` file (`references/output-files.md`): fort.13 (total xsec per channel), fort.16 (angular distributions, xmgrace-ready), fort.56 (xsec per J and partition: reaction/nonelastic), fort.201+ (per-state).
-8. **If a step fails**, go to `references/failure-modes.md` (symptom to cause to fix) before guessing.
+4. **Generate the optical potential with `scripts/omp.py`, do not type the parameters by hand.** For a nucleon entrance or exit channel, `omp.py --code kd02 --proj n --target 90Zr --energy 50` prints a ready-to-paste `&POT` block. Writing 13 KD02 numbers from memory is the single easiest way to produce a deck that runs cleanly and is wrong, and the radius-convention trap below is invisible in the output. See **Optical potentials** for what the script does and does not cover.
+5. **Set the grid and partial waves** using `references/namelist-reference.md` (radial: `hcm`, `rmatch`/`rasym`; partial waves: `jtmin`, `jtmax`, `jump`/`jbord`; cutoffs: `cutr`, `cutl`).
+6. **Run locally** with `scripts/run_fresco.sh <deck>`; it runs in a scratch dir and pulls out the integrated cross sections.
+7. **Verify convergence** per `references/verification.md`: vary `hcm`, `rmatch`, `jtmax`, bin count; the observable must be stable to the precision you quote. If you have a published number or a reference deck, compare to N digits with `scripts/check_xsec.py`.
+8. **Extract observables** from the right `fort.*` file (`references/output-files.md`): fort.13 (total xsec per channel), fort.16 (angular distributions, xmgrace-ready), fort.56 (xsec per J and partition: reaction/nonelastic), fort.201+ (per-state).
+9. **If a step fails**, go to `references/failure-modes.md` (symptom to cause to fix) before guessing.
+
+## Optical potentials
+
+`scripts/omp.py` produces global nucleon optical potentials as ready-to-paste `&POT` blocks. Pure Python, standard library only, so it runs anywhere FRESCO does and needs no Fortran toolchain of its own.
+
+| Code | Reference | Projectiles |
+|------|-----------|-------------|
+| `kd02` | Koning and Delaroche, Nucl. Phys. A713 (2003) 231 | n, p |
+| `ch89` | Varner et al. (Chapel Hill 89), Phys. Rep. 201 (1991) 57 | n, p |
+
+```bash
+python scripts/omp.py --code kd02 --proj n --target 90Zr --energy 50
+python scripts/omp.py --code ch89 --proj p --target 208Pb --energy 30 --format table
+python scripts/omp.py --selftest
+```
+
+Targets parse as `90Zr`, `Zr-90`, or `40,90` (Z,A); an impossible nuclide is rejected rather than quietly evaluated, and a target or energy outside the published fit range is flagged on stderr as extrapolation (KD02 A=24-209, CH89 A=40-209 and E=10-65 MeV). `--format` gives `fresco` (default), `table`, or `json`. `--kp` sets the potential index when a deck needs several.
+
+**Why to use it rather than typing the parameters.** The formulas are not the hard part; the handoff into FRESCO is. Three things go wrong silently, meaning the deck runs and prints a plausible cross section that is wrong:
+
+- **The radius convention.** FRESCO builds radii as `R = r0*(Ap^1/3 + At^1/3)`, while KD02 and CH89 are both defined on `R = r0*At^1/3`. The fix is `ap=0` in the `type=0` line, which the script always emits. Get it wrong on a nucleon projectile and every radius is about 22% too large.
+- **The surface term is imaginary.** `W_d` goes in `p4` of the `type=2` line, not `p1`. In `p1` it becomes a real surface well and the absorption quietly drops.
+- **`type=0` is mandatory even for neutrons**, because that line is what declares the radius convention. `rc` is then unused but must still be there.
+
+**Verification.** Both parameterizations are transcribed from production Fortran (Koning's own `kd02.f`, and the TWOFNR-derived `ch89.f`), and `--selftest` checks 39 values pinned from those sources. CH89 matches to machine precision. KD02 agrees to about 7 digits and no more, for an understood reason: **that `kd02.f` is single precision wherever Fortran lets it be.** The declared variables are `real*8`, but that does not make the arithmetic double: the literals are truncated, with `59.30` entering as `59.2999992370605`, and some subexpressions are evaluated in single precision before ever meeting a `real*8`, since `1./3.` is a single-precision divide and `real(N-Z)` carries no kind argument so it drops to `real(4)`. The `ch89.f` suffixes every constant with `d0`, which is why it reproduces exactly. Recompiling the reference `kd02.f` with `-fdefault-real-8` matches this module to 16 digits, so the Python is the more accurate of the two and the residual belongs to the Fortran. At the three or four physically meaningful digits of a global optical potential this is irrelevant, but anything above the 2e-7 tolerance is a real bug rather than the literal artifact. End to end, the generated deck reproduces `sigma_R = 1301.64017 mb` for n+90Zr at 50 MeV, identical to a hand-built deck.
+
+**Two deliberate differences from the reference Fortran**, both in CH89: that `ch89.f` computes the spin-orbit term internally but never returns it, and its caller has those lines commented out, so the reference CH89 path carries no spin-orbit at all. Elastic scattering needs it, so `omp.py` returns it; pass `--no-spin-orbit` to reproduce the reference behaviour. Separately, the reference caller hardcodes `rc = 1.24` while `omp.py` uses the Varner form `(1.24*A^1/3 + 0.12)/A^1/3`.
+
+**Scope.** Nucleon global potentials only. The script does not fit, does not build local-equivalent potentials, and does not touch nonlocality. Composite projectiles are out of scope: for deuteron CDCC the fragment potentials are p+A and n+A at roughly half the deuteron energy, which you build by calling this script twice, not by asking it for a deuteron potential. If a calculation needs Becchetti-Greenlees, Daehnick, or an alpha potential, take it from the literature and say so in the deck comments.
 
 ## Verified example decks
 
@@ -98,6 +128,7 @@ The `-lowlevel` CDCC decks are in the fully expanded standard namelist format (e
 ## Scripts
 
 - `scripts/install_fresco.sh [--force] [--verify]`: ensures a `fresco`/`sfresco` binary exists, building it from https://github.com/I-Thompson/fresco with `gfortran` if missing (see Environment above). `--verify` runs the B1-elastic anchor and checks it reproduces σ_R = 1575.175 mb. Idempotent; safe to call before any run.
+- `scripts/omp.py --code <kd02|ch89> --proj <n|p> --target <90Zr> --energy <MeV>`: prints a KD02 or CH89 global nucleon optical potential as a ready-to-paste `&POT` block, with the `ap=0` radius convention already applied. `--format table|json` for other output, `--selftest` to verify against the reference values. See **Optical potentials** above.
 - `scripts/run_fresco.sh <deck.in> [runname]`: copies the deck into a fresh scratch dir, runs the fresco binary (auto-installing it via `install_fresco.sh` on first use), and prints the integrated cross sections. Keeps you from polluting source trees with fort.* files.
 - `scripts/check_xsec.py <output> [--ref <refoutput>] [--sigfig N]`: parses the cumulative reaction / outgoing / absorption cross sections from a FRESCO output and, given a reference, reports agreement to N significant figures.
 
