@@ -53,6 +53,9 @@ perfectly good build. Only 2 of the 82 test source files do this.
 
 Measured flake rate on macOS: **`potentials` passed 4 of 5 consecutive
 standalone runs**. Across two full-suite runs it failed once and passed once.
+On Linux the suite passed **104 of 104 on the first attempt**, which is what a
+statistical failure looks like: present on one machine's run and absent on
+another's, with no platform meaning to it at all.
 
 The policy this justifies is deliberately narrow: the other 102 cases must pass
 on the **first** attempt, and only those two names may be retried, **once**. A
@@ -86,8 +89,24 @@ n 450, p 336, pi- 76, pi0 65, pi+ 57, eta 2, K0 2, Lambda 1, Sigma- 1
 
 Those are recorded **only** as a same-build reproducibility check. They are a
 2-event Monte Carlo sample; they are not a reference, they carry no quoted
-uncertainty, and comparing them against another build would prove nothing. This
-distinction is the whole reason the anchor is a conservation law.
+uncertainty, and comparing them against another build would prove nothing.
+
+That is not an argument, it is a measurement. The identical seeded configuration
+on Linux gave a DIFFERENT sample:
+
+| | macOS | Linux |
+|---|---|---|
+| particle records | 990 | 978 |
+| n / p | 450 / 336 | 442 / 344 |
+| pi- / pi0 / pi+ | 76 / 65 / 57 | 70 / 71 / 43 |
+| **baryon number** | **788** | **788** |
+| **electric charge** | **316** | **316** |
+
+Same seed, same configuration, same source, and the multiplicities move by up to
+25 per cent while the two conservation laws are identical integers. Anchoring a
+Monte Carlo transport code on multiplicities would therefore have produced a
+skill that fails on every machine but the one it was built on. This is the whole
+reason the anchor is a conservation law.
 
 ## The library test needs three environment hints, each found the hard way
 
