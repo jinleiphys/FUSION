@@ -324,6 +324,45 @@ scattering_projectile_target yes|no` tail matches every real particle-list
 event; `SMASH_IC` writes a bare `end`, and that content is correctly refused as
 not `particle_lists` rather than mis-parsed.
 
+## Round 5: the streak ends
+
+Round 5 was aimed at the round-4 fixes, the same way round 4 was aimed at
+round 3's. **It found no new false pass.** That is the first round in five that
+did not, and it is the stopping condition this skill was held to: not "we have
+done N rounds" but "a round came back without a new defect of the same shape".
+
+What it did find was one wrapper-only incompatibility in the opposite,
+harmless direction: `Randomseed: +123` is a valid YAML integer that raw SMASH
+runs with, and the wrapper rejected it. A false REJECT fails closed, so nothing
+was ever certified wrongly by it, but there is no reason for the wrapper to be
+stricter than the code it drives. Fixed and covered.
+
+Everything else it checked held, and the checks were run rather than reasoned:
+
+- the int64 boundary from both ends (`+/-9223372036854775807/8/9`), with the
+  negative-seed guard still firing for `-1` and `-2`
+- quoted numerics in both quote styles, including that a quoted `Nevents` still
+  ENFORCES the event count rather than silently skipping it
+- `in_int64` passes its argument as argv, not through a shell: a metacharacter
+  payload was rejected and its probe file never appeared
+- **the python3 dependency fails CLOSED**: with `python3` absent, and with a
+  `python3` that is not python 3, `--seed 1` is rejected rather than waved
+  through. The message is not diagnostic, which is worth improving, but the
+  direction is right
+- **every shipped config under `input/` was run through the wrapper**, which is
+  what the new fail-closed branch most risked breaking. None was falsely
+  rejected. `input/list/` needs `--end-time 10` because its particles have a
+  formation time of 5, and raw SMASH refuses the short run too, so that is the
+  configuration, not the wrapper. `potentials/config.yaml` correctly counted
+  `1 x 20 = 20` events through the ensembles path
+- the round-2 and round-3 fixes had not regressed: default path `VERIFY OK`,
+  supplied build `VERIFY PASSED-NOT-CERTIFIED`, selftest 100/100 at that point
+
+One documented gap, not a defect: a configuration using
+`Minimum_Nonempty_Ensembles` instead of `Nevents` is accepted with **no exact
+event-count check**, because the number of events is not fixed in advance. That
+is inherent to the option and is stated rather than hidden.
+
 ## The guard-flip discipline, applied
 
 Per the project rule, no new guard is counted as tested until it is shown to
@@ -341,6 +380,7 @@ one** case, the case written for it, and nothing else:
 | int64 range check (vs the 18-digit cap) | the int64 maximum seed being accepted |
 | quote stripping in `read_key` | a quoted Randomseed, and a quoted Nevents enforcing the count |
 | fail-closed on an unreadable Nevents/Ensembles | both unreadable-value cases |
+| `+` accepted in the integer patterns | the two signed-seed cases |
 | Mach-O/ELF check | a shell script named `smash` is rejected |
 | `particle_lists` content check | a `full_event_history` file is refused |
 | `CMAKE_HOME_DIRECTORY` binding | a build configured from another source tree |
@@ -376,9 +416,9 @@ field this document originally omitted.
 
 ## Harness
 
-`scripts/selftest_smash.sh`, **100 cases** (49, then 84, then 94 after the
-second, third and fourth adversarial passes), a few seconds, 100/100 on BOTH
-platforms. The run and ctest tests use stub executables, so no SMASH
+`scripts/selftest_smash.sh`, **103 cases** (49, then 84, 94 and 100 after the
+second, third, fourth and fifth adversarial passes), a few seconds, 103/103 on
+BOTH platforms. The run and ctest tests use stub executables, so no SMASH
 build is required; the identity and ctest-parsing cases additionally use the
 local clone when there is one, because the git pin is the one thing that cannot
 be synthesized, and they announce themselves as skipped when there is not.

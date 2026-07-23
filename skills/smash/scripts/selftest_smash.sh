@@ -745,6 +745,18 @@ sed 's/    Nevents:        2/    Ensembles:      x\n    Nevents:        2/' "$CF
 SMASH="$TMP/stub_ok" expect_fail_with "an unreadable Ensembles is an error too" \
   "cannot read as a count" "$RUN" --config "$TMP/cfg_badens.yaml" --outdir "$TMP/w_badens" --seed 1
 
+# (d) Round 5: a leading '+' is a valid YAML integer that raw SMASH accepts, so
+#     rejecting it was a wrapper-only incompatibility. Harmless direction (a
+#     false reject, not a false pass), but there is no reason to be stricter
+#     than the code being driven.
+SMASH="$TMP/stub_ok" expect_pass "a '+' signed seed is accepted, as raw SMASH accepts it" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_plusseed" --seed +123
+sed -e 's/    Randomseed:     -1/    Randomseed:     +7/' "$CFG" > "$TMP/cfg_plus.yaml"
+SMASH="$TMP/stub_ok" expect_pass "a '+' signed Randomseed in the config is accepted" \
+  "$RUN" --config "$TMP/cfg_plus.yaml" --outdir "$TMP/w_pluscfg"
+SMASH="$TMP/stub_ok" expect_fail_with "a '+' signed seed is still range-checked" "must be an integer" \
+  "$RUN" --config "$CFG" --outdir "$TMP/w_plusbig" --seed +9223372036854775808
+
 echo
 echo "-------------------------------------------"
 echo "selftest: $PASS passed, $FAIL failed"

@@ -3,6 +3,45 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-23: SMASH round 5, the streak ends, and the skill ships
+
+**Why we tried it:** four rounds in a row had found that the previous round's
+fixes carried a new defect of the same shape. The stopping condition was never
+a round count, it was "a round comes back without one".
+
+**Result: round 5 found no new false pass.** First time in five rounds. It found
+one wrapper-only incompatibility in the opposite direction: `Randomseed: +123`
+is a valid YAML integer that raw SMASH runs with, and the wrapper rejected it.
+A false REJECT fails closed, so nothing was ever wrongly certified by it, but
+being stricter than the code you drive is a defect too. One character, covered
+by three tests.
+
+**What makes this round's negative result trustworthy** is that it was measured,
+not asserted. It ran the int64 boundary from both ends, both quote styles,
+`in_int64` with a shell-metacharacter payload (confirming argv, not eval), and
+`python3` both absent and replaced by a python2, confirming that dependency
+fails CLOSED rather than waving a seed through. Most importantly it ran **every
+shipped config under `input/`** through the wrapper, which is what the new
+fail-closed branch most risked breaking, and none was falsely rejected. The one
+that needed `--end-time 10` (`input/list/`) is refused by raw SMASH at the short
+time too, because its particles have a formation time of 5, so that is the
+configuration and not the harness.
+
+**The five-round arc, since it is the transferable part.** Severity decayed
+monotonically: round 2 produced two blockers (a legitimate build rejected, real
+output rejected), round 3 four silent false passes, round 4 two input-validation
+boundary defects, round 5 one false reject. What never worked was inspection,
+including my own immediately after writing the code. What worked, in order of
+yield: running the harness on a SECOND MACHINE, the flip test, and an
+adversarial reader allowed to run the real code. The one structural fix that
+retired a whole class rather than a case was replacing a fail-open branch with
+a fail-closed one: any validation whose "I could not read this" path is `skip`
+is one unexpected spelling away from not existing.
+
+**Status:** SHIPPED. Seventeenth per-code skill, tier 1. selftest 103/103 on
+macOS/ARM and Linux/x86-64, ctest 104/104 first attempt on both, anchor
+conservation exact on both.
+
 ## 2026-07-23: SMASH round 4, and the pattern is now a measurement
 
 **Why we tried it:** the round-3 fixes were single-source. Given that rounds 2

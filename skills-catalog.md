@@ -113,24 +113,22 @@ redistributes nothing, so each user receives the code from the authors under the
 **Hard requirement on the skill: SKILL.md must state that Sky3D is CPC non-profit and not open
 source, and send a commercial user to the authors.**
 
-**IN PROGRESS 2026-07-23: SMASH**, `skills/smash/`, intended as the seventeenth
-per-code skill and the first of this row. **NOT yet shipped**: round 1 of the
-adversarial audit passed, round 2 found 2 new blockers caused by the round-1
-fixes themselves, and **three rounds have now been applied**: both blockers and
-all 10 remaining round-2 items are fixed, and round 3 returned 8 FIXED / 4
-PARTIAL / 0 NOT FIXED with its six residuals also addressed. Selftest 49 to 94
-cases, **94/94 on macOS/ARM and Linux/x86-64**, full verify `VERIFY OK` and
-ctest 104/104 first attempt on both. What remains is one confirmation pass,
-because the measured base rate is four self-inflicted defects per round: in
-round 3, four of the six new findings were created by round 2's own fixes.
+**DONE 2026-07-23: SMASH**, `skills/smash/`, the **seventeenth per-code skill**
+and the first of this row, **TIER 1**. Five adversarial rounds, stopping when
+round 5 came back with no new false pass (the condition was a clean round, not a
+round count). Severity decayed monotonically across them: 2 blockers, then 4
+silent false passes, then 2 input-validation boundary defects, then 1 false
+reject. selftest 103/103 and ctest 104/104 first attempt on macOS/ARM and
+Linux/x86-64.
 
-The running lesson from this skill, worth carrying to the rest of the row: a
-guard validated against one configuration has been demonstrated, not tested, and
-the two things that actually caught defects here were the flip test (disable the
-guard, confirm exactly its own case fails) and running the harness on a second
-machine. The latter exposed selftest fixtures that were FABRICATING their input
-on Linux while passing cleanly on macOS. Details in TODO.md and
-`skills/smash/references/verification.md`. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
+Carry these into the rest of the row, because they cost five rounds to learn:
+nothing was ever found by inspection, and what did find defects was, in order of
+yield, running the harness on a SECOND MACHINE, the flip test (disable the guard,
+confirm exactly its own case fails), and an adversarial reader allowed to run the
+real code. The single fix that retired a whole class rather than one case was
+replacing a fail-open branch with fail-closed. Running on Linux exposed selftest
+fixtures that were FABRICATING their input while passing cleanly on macOS.
+Details in `skills/smash/references/verification.md`. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
 GSL, Eigen 3.x and Pythia exactly 8.316. **Zero source patches** on macOS/ARM and
 Linux/x86-64. **TIER 1**: reproduces SMASH's own 104-case ctest suite, 104/104
 first attempt on Linux.

@@ -82,8 +82,13 @@ except ValueError:
     sys.exit(1)
 sys.exit(0 if -(2**63) <= v < 2**63 else 1)' "$1" 2>/dev/null
 }
-is_int ()  { printf '%s' "$1" | grep -qE '^-?[0-9]+$' && in_int64 "$1"; }
-is_uint () { printf '%s' "$1" | grep -qE '^[0-9]+$'  && in_int64 "$1"; }
+# A leading '+' is a valid YAML integer and raw SMASH runs with
+# `Randomseed: +123`, so rejecting it was a wrapper-only incompatibility. It is
+# a false REJECT, not a false pass, which is the harmless direction, but there
+# is no reason to be stricter than the code being driven. bash's `test -lt`
+# handles the sign, verified.
+is_int ()  { printf '%s' "$1" | grep -qE '^[+-]?[0-9]+$' && in_int64 "$1"; }
+is_uint () { printf '%s' "$1" | grep -qE '^\+?[0-9]+$'   && in_int64 "$1"; }
 # Accepts every non-negative decimal literal SMASH's YAML reader does, including
 # the ones the previous pattern wrongly rejected: '.5', '5.', '1e-3', '1.5E3'.
 # Still rejects '.', '--', '1-2', '1..2' and anything negative.
