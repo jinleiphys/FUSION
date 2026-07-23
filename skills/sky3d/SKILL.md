@@ -29,8 +29,8 @@ Fortran 90, optionally OpenMP or MPI, needs FFTW3 and LAPACK/BLAS.
    subspace) or a quantity that is zero by symmetry. Use
    `scripts/compare_sky3d.py`, whose header explains exactly what it excludes and
    why.
-4. **This is a TIER 1 skill on the static case, and the collision case is NOT a
-   reference benchmark.** `Test/Static` ships input and the authors' output, and
+4. **This is a TIER 1 skill on the static case (with a measured macOS stability
+   caveat, see rule 8), and the collision case is NOT a reference benchmark.** `Test/Static` ships input and the authors' output, and
    this skill reproduces it exactly at printed precision. `Test/Collision` ships
    reference `.res` tables whose actual input, the binary O16 wavefunction, is
    NOT distributed, so those tables cannot be reproduced. See
@@ -42,7 +42,12 @@ Fortran 90, optionally OpenMP or MPI, needs FFTW3 and LAPACK/BLAS.
 6. **Sky3D is not open source.** CPC non-profit use licence (see
    `references/failure-modes.md`). Academic use is granted; redistribution is not
    yours to grant, and this skill vendors no Sky3D source.
-7. **No em-dashes in any prose you write** (user's flat rule).
+7. **On macOS a run occasionally dies at startup with SIGBUS**, about 4 per cent
+   of the time, before the first iteration and with an empty `for006`. It is not
+   your deck. Re-run it. The failure is loud, so the harness rejects it rather
+   than accepting a truncated result; a run that completes is always correct.
+   Measured numbers and the refuted stack hypothesis: `references/failure-modes.md`.
+8. **No em-dashes in any prose you write** (user's flat rule).
 
 ## Environment (auto-install)
 
@@ -144,7 +149,9 @@ spherical case). The `.res` tables are plain columns, one row per `mprint`.
 Reproduces the distributed `Test/Static/for006.static` exactly at printed
 precision: 266 energy-functional values, 2432 single-particle values and 570
 determined moments, on both macOS ARM (gfortran 15.2) and Linux x86-64
-(gfortran 13.3), same 370 iterations. Details and the collision caveat:
+(gfortran 13.3), same 370 iterations. Every run that completes reproduces it;
+see the stability caveat above for the roughly 4 per cent of macOS runs that do
+not start. Details and the collision caveat:
 `references/verification.md`.
 
 ## Failure modes

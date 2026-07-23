@@ -1,6 +1,6 @@
 # Sky3D verification
 
-**Tier 1 on the static case.** `Test/Static` ships both the input and the
+**Tier 1 on the static case, with a measured macOS stability caveat.** `Test/Static` ships both the input and the
 authors' output, and this skill reproduces that output exactly at printed
 precision, on two platforms, with zero source patches. **The collision case is
 NOT a benchmark**, for a structural reason given below; do not present it as one.
@@ -126,6 +126,21 @@ must hold for any correct run, and only REPORTS the distance from the reference:
 |---|---|---|
 | particle-number drift | 0.0000 | 0.05 |
 | E(sum) spread over the trajectory | 0.1443 MeV | 0.5 MeV |
+
+## Stability
+
+Separate from correctness, and stated because a student will meet it: on macOS a
+run occasionally dies at startup with SIGBUS before the first iteration.
+Measured on 2026-07-23, **1 failure in 25 consecutive runs of the static case on
+macOS** (plus one more during verification, so about 4 per cent) against **0 in
+25 on Linux**. Stack exhaustion was tested and refuted (a deliberately reduced
+2 MB stack gave 0 failures in 6 runs). The cause is unknown.
+
+This does not weaken the reproduction claim, because the failure is loud: the
+process exits nonzero having written nothing, and both `run_sky3d.sh` and
+`verify_sky3d.sh` reject it. A run that COMPLETES reproduces the reference
+exactly, every time. The cost is a repeat, never a wrong number. See
+`failure-modes.md` item 10.
 
 ## Auditability
 

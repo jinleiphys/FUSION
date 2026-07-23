@@ -2,6 +2,30 @@
 
 Older entries moved out of devlog.md to keep the auto-loaded portion under ~5 KB. NOT auto-imported.
 
+## 2026-07-23: SkyNet macOS NSE block-3 is libm-limited, not a flag fix
+
+**Why we tried it:** the full-network NSE (Saha) block at T9=3 reproduced the
+shipped reference to 7.0e-3 on macOS against a 3.5e-5 gate. FMA contraction is a
+common cause of such cross-platform deltas, so `-ffp-contract=off` was the first
+suspect, cheap to test.
+
+**What failed:** `-ffp-contract=off` gave the byte-identical 0.00701498, and -O3
+and -O0 also agree. So it is neither FMA contraction nor optimization-sensitive UB.
+
+**Root cause:** Apple libm vs glibc `exp`/`log` differences, amplified through a
+Newton iteration over abundances spanning ~200 decades (ni56 ~ 5e-201 at T9=3).
+The reference tolerance was calibrated on the authors' glibc platform; the
+identical patched source passes 19/19 on Linux, so it is a platform numerical
+property, not a build or patch defect.
+
+**Lesson:** a stiff nonlinear solve's tightest reference may not survive a libm
+change. Do not chase it with flags or by loosening the passing platform's gate:
+reproduce cross-platform, document the delta, and encode the exception narrowly
+(other blocks pass on both platforms; the excepted case bounded to a window).
+Full reasoning in the 2026-07-23 CLAUDE.md key decision.
+
+**Status:** Parked (documented macOS caveat; SkyNet ships tier-1-with-caveat).
+
 ## 2026-07-22: a results table is not an anchor, and 14N(p,g)15O cannot be built
 
 **Why we tried it:** After the 16O(p,g)17F benchmark worked, 14N(p,g)15O was the

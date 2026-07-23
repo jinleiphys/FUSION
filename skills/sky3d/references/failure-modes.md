@@ -95,7 +95,37 @@ and `apple_omp` produce `sky3d.omp`; the MPI targets produce `sky3d.mpi`. A
 script that hardcodes one name breaks when someone builds another target.
 `install_sky3d.sh` derives the name from the target it was asked for.
 
-## 10. Licensing
+## 10. Intermittent SIGBUS at startup on macOS (measured, unexplained)
+
+On macOS/Apple Silicon a run occasionally dies at startup with
+
+```
+Program received signal SIGBUS: Access to an undefined portion of a memory object.
+```
+
+before the first iteration: `for006` is zero bytes and no `Static Iteration No`
+line was printed, though `conver.res` and friends were already created. Same
+binary, same deck, so it is not reproducible on demand.
+
+Measured 2026-07-23: **1 failure in 25 consecutive runs of the shipped static
+16O case on macOS (gfortran 15.2, Apple Silicon), plus one more seen during
+verification, so roughly 4 per cent**, against **0 failures in 25 runs of the
+same case on Linux** (gfortran 13.3, x86-64). The sample is small and one event
+cannot prove a platform difference, but every occurrence so far has been on
+macOS.
+
+**Refuted:** stack exhaustion. Deliberately running with a 2 MB stack
+(`ulimit -s 2048`) produced 0 failures in 6 runs, where a stack-limited crash
+would have become far more frequent, not less. Do not spend time on `ulimit`
+again.
+
+**What to do:** re-run it. This failure is loud, not silent: the process exits
+nonzero and writes nothing, so `run_sky3d.sh` and `verify_sky3d.sh` both reject
+it rather than accepting a truncated result. It costs a repeat, never a wrong
+number. If you can reproduce it deterministically, that is worth reporting
+upstream, since the cause is still unknown.
+
+## 11. Licensing
 
 Sky3D is NOT open source. There is no LICENSE file, no copyright header in the
 sources, and the CPC program summary in `Paper/v1.0/Sky3D.tex` reads

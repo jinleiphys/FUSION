@@ -3,6 +3,51 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-23: Sky3D, and a guard that only the expensive path could falsify
+
+**Why we tried it:** Sky3D (TDHF) was the first skill of the newly opened
+heavy-ion row. The static 16O case reproduces the shipped reference exactly, so
+the physics side was settled early; the interesting failures were all in the
+harness.
+
+**What failed:** the skill failed its adversarial pass with 21 defects, and then
+its RE-verification pass with 8 more, one a blocker. The blocker is the one
+worth keeping. The numeric-overflow guard excluded Sky3D's symmetric
+`***** X *****` headers, but a real collision log also carries one-sided ones
+(`***** Data for fragment # 1 from file ...`, `******* Fragment # 0`), so every
+legitimate collision run was rejected, and `verify --with-collision` would have
+failed AFTER completing a 45-minute run. Second worst: `compare_sky3d.py`
+silently dropped a `NaN` from an energy line, because the numeric regex does not
+match "NaN", and then reported 265 values EXACT against a 266-value reference.
+
+**Root cause:** both are the same mistake in two costumes. A guard was written
+against the output I happened to have in front of me (a static run, a well-formed
+number) and never confronted with the output it would actually meet. I had never
+put a real collision `for006` through the validator, and never put a genuinely
+malformed value through the comparator; my own NaN test "passed" only through
+column misalignment, so it proved nothing.
+
+**Lesson:** a guard must be exercised against REAL output from every path it
+gates, not only the path that is cheap to run. If a path takes 45 minutes,
+extract one real output file from it once and keep that as a fixture, so the
+guard is tested in seconds forever after. Corollary that paid twice here: make
+every negative case assert WHICH guard fired. That mechanism caught two silent
+diversions in this session, including five pre-existing cases that a newly added
+requirement had rerouted onto the wrong guard.
+
+**Also measured, and left open:** an intermittent SIGBUS at startup on macOS,
+1 failure in 25 consecutive static runs (plus one during verification, so about
+4 per cent), against 0 in 25 on Linux. It dies before the first iteration with an
+empty for006. **Stack exhaustion is refuted**: a deliberately reduced 2 MB stack
+gave 0 failures in 6 runs, where a stack-limited crash would have got worse, not
+better. Do not retry `ulimit`. Cause unknown. It is a loud failure, so the
+harness rejects it instead of accepting a truncated run, and the skill ships as
+tier-1-with-a-stability-caveat rather than a bare tier 1.
+
+**Status:** Fixed, selftest 33 to 69 cases. Every landed attack is now a
+permanent regression test with a real-output fixture. The SIGBUS is documented,
+not solved.
+
 ## 2026-07-23: fresco skill unified across FUSION and the global copy; exfor-data is the first research skill
 
 **Direction change (user ruling):** the 2026-07-14 decision that the auto-install
@@ -46,27 +91,3 @@ naming the correct spelling; (3) `exfor.py` documented a header-count consistenc
 that the code never actually performed, so a truncated wrapped record vanished silently.
 Fixing (3) then exposed that EXFOR counts `COMMON` and `DATA` header lines differently,
 which caused 33 false warnings on real entries before both readings were accepted.
-
-## 2026-07-23: SkyNet macOS NSE block-3 is libm-limited, not a flag fix
-
-**Why we tried it:** the full-network NSE (Saha) block at T9=3 reproduced the
-shipped reference to 7.0e-3 on macOS against a 3.5e-5 gate. FMA contraction is a
-common cause of such cross-platform deltas, so `-ffp-contract=off` was the first
-suspect, cheap to test.
-
-**What failed:** `-ffp-contract=off` gave the byte-identical 0.00701498, and -O3
-and -O0 also agree. So it is neither FMA contraction nor optimization-sensitive UB.
-
-**Root cause:** Apple libm vs glibc `exp`/`log` differences, amplified through a
-Newton iteration over abundances spanning ~200 decades (ni56 ~ 5e-201 at T9=3).
-The reference tolerance was calibrated on the authors' glibc platform; the
-identical patched source passes 19/19 on Linux, so it is a platform numerical
-property, not a build or patch defect.
-
-**Lesson:** a stiff nonlinear solve's tightest reference may not survive a libm
-change. Do not chase it with flags or by loosening the passing platform's gate:
-reproduce cross-platform, document the delta, and encode the exception narrowly
-(other blocks pass on both platforms; the excepted case bounded to a window).
-Full reasoning in the 2026-07-23 CLAUDE.md key decision.
-
-**Status:** Parked (documented macOS caveat; SkyNet ships tier-1-with-caveat).
