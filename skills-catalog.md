@@ -114,9 +114,15 @@ redistributes nothing, so each user receives the code from the authors under the
 source, and send a commercial user to the authors.**
 
 **IN PROGRESS 2026-07-23: SMASH**, `skills/smash/`, intended as the seventeenth
-per-code skill and the first of this row. **NOT shipped**: it passed round 1 of
-the adversarial audit but round 2 found 2 new blockers caused by the round-1
-fixes themselves. Resume state and the full outstanding list are in TODO.md. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
+per-code skill and the first of this row. **NOT yet shipped**: round 1 of the
+adversarial audit passed, round 2 found 2 new blockers caused by the round-1
+fixes themselves, and **both blockers plus all 10 remaining round-2 items are
+now fixed** (identity check no longer rejects the relink that SMASH's own
+library test performs; the OSCAR grammar now covers all three `Only_Final`
+shapes from a single transcribed parser). Selftest 49 to 83 cases, every new
+guard shown to flip. What remains before it ships is a round-3 Codex pass and a
+Linux re-run, since the round-2 fixes were measured on macOS/ARM only. Details
+in TODO.md and `skills/smash/references/verification.md`. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
 GSL, Eigen 3.x and Pythia exactly 8.316. **Zero source patches** on macOS/ARM and
 Linux/x86-64. **TIER 1**: reproduces SMASH's own 104-case ctest suite, 104/104
 first attempt on Linux.

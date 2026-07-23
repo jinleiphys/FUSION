@@ -77,22 +77,39 @@ scripts/run_smash.sh --config <config.yaml> --outdir /tmp/run1 \
 
 Prints `RESULT_DIR=` and `RESULT_OSCAR=`. It copies the configuration it actually
 used into the output directory, then asserts a zero exit, an OSCAR2013 header,
-records with the column count that header declares, matched event-start and
-event-end markers whose number equals `Nevents` (a run can stop early and still
-exit 0), no NaN, and no `ERROR`-severity log line.
+records with the column count that header declares, a well-formed block grammar
+whose completed `(event, ensemble)` count equals `Nevents x Ensembles` (a run can
+stop early and still exit 0), no non-finite value, and no `ERROR`-severity log
+line. The grammar itself lives in `scripts/check_conservation_smash.py`, which
+`run_smash.sh` calls with `--structure-only`; it handles all three `Only_Final`
+shapes, including the `in` block and the several `out` blocks that
+`Only_Final: No` writes inside one event.
+
+A configuration that requests only non-OSCAR output (`Binary`, `Root`, `HepMC`,
+`YODA`, ...) is accepted rather than failed for a missing `particle_lists.oscar`;
+the wrapper then states plainly that nothing was structurally validated.
 
 It also stages a shipped example's own `particles.txt` and `decaymodes.txt` when
 they sit beside the configuration. SMASH does NOT pick those up implicitly, so
-without `-p/-d` the box and sphere examples run against the default tables and
-quietly compute something other than the example you asked for.
+without `-p/-d` the box, multi_particle_box and photons examples run against the
+default tables and quietly compute something other than the example you asked
+for. `input/sphere/` ships no tables at all, and `input/stochastic_box/` ships
+tables under non-standard names that auto-staging cannot find: see
+`references/input-format.md` for which example ships what.
 
 ## Verifying
 
 ```bash
 scripts/verify_smash.sh              # test suite + seeded anchor, about 8 min
 scripts/verify_smash.sh --tests-only
-scripts/selftest_smash.sh            # harness only, seconds, no build needed
+scripts/selftest_smash.sh            # harness only, 83 cases, seconds, no build needed
 ```
+
+A clean run ends in `VERIFY OK`. If the expected test count was overridden with
+`SMASH_EXPECTED_TESTS`, it ends in `VERIFY PASSED-NOT-CERTIFIED` instead, which
+is deliberately not a superstring of `VERIFY OK`: the run passed, but it did not
+certify the pinned SMASH-3.3 release at tier 1. Evidence, measurements and what
+two adversarial passes found: `references/verification.md`.
 
 ## Writing an input
 

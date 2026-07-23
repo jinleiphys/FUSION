@@ -9,13 +9,21 @@ EXACTLY by the transport, whatever the seed, the platform or the statistics. A
 build that is subtly broken shows up here as an integer that does not match,
 which no amount of statistical spread can excuse.
 
-Conservation is checked PER EVENT, not only on the total. Two events with equal
-and opposite violations sum to the right answer, so a total-only check can be
-satisfied by output that is wrong twice over.
+Conservation is checked PER BLOCK, not only on the total and not only per event.
+Two events with equal and opposite violations sum to the right answer, so a
+total-only check can be satisfied by output that is wrong twice over. And with
+`Only_Final: No` each event contains SEVERAL full particle lists, one per output
+interval, each of which must balance on its own; checking only the last one
+would miss a transport that loses baryon number mid-evolution and recovers it.
+
+This module is also the single authority on the OSCAR2013 particle_lists
+grammar: run_smash.sh calls it with --structure-only instead of re-implementing
+the same parsing in shell, so there is one place where the grammar can be wrong.
 
 Usage:
   check_conservation_smash.py <particle_lists.oscar> --baryons N --charge Z
-                              [--species-min 3]
+                              [--events N] [--species-min 3]
+  check_conservation_smash.py <particle_lists.oscar> --structure-only [--events N]
 --baryons and --charge are TOTALS over all events; they must divide evenly by
 the number of events found, because every event starts from the same nuclei.
 Exit 0 when the conservation laws hold, 1 otherwise.
@@ -67,33 +75,64 @@ def baryon_number(pdg):
 
 
 
-# Real SMASH-3.3 grammar, from src/oscaroutput.cc:
-#   # event N ensemble E out COUNT
+# Real SMASH-3.3 grammar, transcribed from src/oscaroutput.cc rather than
+# inferred from one sample run. OscarOutput writes exactly three shapes for
+# particle_lists (at_eventstart, at_intermediate_time, at_eventend):
+#
+#   # event N ensemble E in  COUNT      once, at event start
+#   # event N ensemble E out COUNT      at every output interval, and at the end
 #   # event N ensemble E end 0 impact X scattering_projectile_target yes|no
-# Counting any comment that contains " end" accepted a file with no event blocks
-# at all, as long as some comment happened to contain that substring.
-EVENT_OUT = re.compile(r'^#\s+event\s+(\d+)\s+ensemble\s+(\d+)\s+out\b(?:\s+(\d+))?')
+#
+# and each in/out line is followed by COUNT particle records: a COMPLETE list of
+# the particles present at that time, not an interaction. Which of them appear
+# is set by Output.Particles.Only_Final:
+#
+#   Yes         one 'out' block per event                  (the shipped default)
+#   IfNotEmpty  one 'out' block, or NONE for an empty event
+#   No          one 'in', then one 'out' per output interval, then one at the end
+#
+# The earlier version of this parser knew only the Only_Final: Yes shape, so a
+# real Box or collider run with Only_Final: No failed with "event 0/0 starts
+# while 0/0 is still open" on its second block. Counting any comment that
+# contains " end" was a separate, earlier bug: it accepted a file with no event
+# blocks at all as long as some comment happened to contain that substring.
+BLOCK = re.compile(r'^#\s+event\s+(\d+)\s+ensemble\s+(\d+)\s+(in|out)\b(?:\s+(\d+))?')
 EVENT_END = re.compile(r'^#\s+event\s+(\d+)\s+ensemble\s+(\d+)\s+end\b')
+
+# A block is one full particle list. Conservation is asserted on each.
+Block = collections.namedtuple('Block', 'event kind baryons charge n declared')
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('oscar')
-    ap.add_argument('--baryons', type=int, required=True,
+    ap.add_argument('--baryons', type=int,
                     help='expected TOTAL baryon number over all events (Au+Au: Nevents * 2 * 197)')
-    ap.add_argument('--charge', type=int, required=True,
+    ap.add_argument('--charge', type=int,
                     help='expected TOTAL electric charge in units of e (Au+Au: Nevents * 2 * 79)')
+    ap.add_argument('--events', type=int,
+                    help='number of (event, ensemble) pairs the configuration asked for, i.e. '
+                         'Nevents * Ensembles. Every one of them must be closed by an end marker.')
+    ap.add_argument('--structure-only', action='store_true',
+                    help='validate the OSCAR grammar and stop; do not require --baryons/--charge. '
+                         'This is the mode run_smash.sh uses, so that the grammar lives in one place.')
     ap.add_argument('--species-min', type=int, default=0,
                     help='minimum number of distinct species. Off by default: a species count is '
                          'weak evidence and was overstated as proof that inelastic physics happened.')
     args = ap.parse_args()
 
+    if not args.structure_only and (args.baryons is None or args.charge is None):
+        print("FAIL: --baryons and --charge are required unless --structure-only is given")
+        return 1
     for name, val in (('--baryons', args.baryons), ('--charge', args.charge)):
-        if abs(val) > 10 ** 9:
+        if val is not None and abs(val) > 10 ** 9:
             print(f"FAIL: {name}={val} is not a plausible expectation")
             return 1
     if args.species_min < 0:
         print(f"FAIL: --species-min cannot be negative, got {args.species_min}")
+        return 1
+    if args.events is not None and args.events < 1:
+        print(f"FAIL: --events must be at least 1, got {args.events}")
         return 1
 
     try:
@@ -103,19 +142,33 @@ def main():
         return 1
 
     pdg_counts = collections.Counter()
-    events = []          # (label, baryons, charge, n_records, declared)
-    open_ev = None       # (label, baryons, charge, n_records, declared)
+    blocks = []          # one entry per in/out block, each a full particle list
+    ended = set()        # (event, ensemble) pairs closed by an 'end' marker
+    cur = None           # [label, kind, baryons, charge, n, declared]
     bad_lines = 0
     stray = 0
 
+    def close_current():
+        if cur is not None:
+            blocks.append(Block(cur[0], cur[1], cur[2], cur[3], cur[4], cur[5]))
+
     with fh:
         header = fh.readline()
-        if not header.startswith('#!OSCAR2013'):
+        tokens = header.split()
+        if not tokens or not tokens[0].startswith('#!OSCAR2013'):
             print(f"FAIL: {args.oscar} does not start with an OSCAR2013 header: {header.strip()[:80]!r}")
+            return 1
+        # The content name decides what the blocks MEAN. In full_event_history
+        # an 'in'/'out' pair is one interaction's incoming and outgoing
+        # particles, not a particle list, so summing it would report a
+        # conservation result that is meaningless rather than wrong-looking.
+        if len(tokens) < 2 or tokens[1] != 'particle_lists':
+            print(f"FAIL: {args.oscar} is OSCAR content {tokens[1] if len(tokens) > 1 else '(none)'!r}, "
+                  f"not 'particle_lists'; this checker reads full particle lists only")
             return 1
         # The header NAMES its columns and the set changes with the requested
         # content, so read the positions rather than assuming 9 and 11.
-        cols = header.split()[2:]
+        cols = tokens[2:]
         try:
             i_pdg = cols.index('pdg')
             i_chg = cols.index('charge')
@@ -123,29 +176,46 @@ def main():
             print(f"FAIL: the OSCAR header does not declare both 'pdg' and 'charge' columns: {cols}")
             return 1
         ncols = len(cols)
+        int_cols = {i_pdg, i_chg}
 
         for line in fh:
             if line.startswith('#'):
-                m = EVENT_OUT.match(line)
+                m = BLOCK.match(line)
                 if m:
-                    if open_ev is not None:
-                        print(f"FAIL: event {m.group(1)}/{m.group(2)} starts while "
-                              f"{open_ev[0]} is still open")
+                    label = f"{m.group(1)}/{m.group(2)}"
+                    kind = m.group(3)
+                    # A new block header implicitly ends the previous BLOCK;
+                    # only an 'end' marker ends the EVENT. So several blocks of
+                    # the same event in a row are legal, and a block of a
+                    # DIFFERENT event before the current one ended is not.
+                    if cur is not None and cur[0] != label:
+                        print(f"FAIL: block for event {label} starts while event {cur[0]} "
+                              f"has not been closed by an 'end' marker")
                         return 1
-                    declared = int(m.group(3)) if m.group(3) else None
-                    open_ev = [f"{m.group(1)}/{m.group(2)}", 0, 0, 0, declared]
+                    if label in ended:
+                        print(f"FAIL: a block for event {label} appears after that event already ended")
+                        return 1
+                    if kind == 'in' and cur is not None and cur[0] == label:
+                        print(f"FAIL: event {label} has an 'in' block that is not its first block")
+                        return 1
+                    close_current()
+                    declared = int(m.group(4)) if m.group(4) else None
+                    cur = [label, kind, 0, 0, 0, declared]
                     continue
                 m = EVENT_END.match(line)
                 if m:
                     label = f"{m.group(1)}/{m.group(2)}"
-                    if open_ev is None:
-                        print(f"FAIL: event {label} ends without a matching 'out' line")
+                    if cur is not None and cur[0] != label:
+                        print(f"FAIL: event {label} ends while a block of event {cur[0]} is open")
                         return 1
-                    if open_ev[0] != label:
-                        print(f"FAIL: event {label} ends while {open_ev[0]} is open")
+                    if label in ended:
+                        print(f"FAIL: event {label} ends twice")
                         return 1
-                    events.append(tuple(open_ev))
-                    open_ev = None
+                    # An event with no block at all is legitimate: Only_Final:
+                    # IfNotEmpty writes only the 'end' marker for an empty event.
+                    close_current()
+                    cur = None
+                    ended.add(label)
                 continue
 
             fields = line.split()
@@ -153,7 +223,9 @@ def main():
                 bad_lines += 1
                 continue
             try:
-                for f in fields[:i_pdg]:
+                for i, f in enumerate(fields):
+                    if i in int_cols:
+                        continue
                     if not math.isfinite(float(f)):
                         print(f"FAIL: non-finite value in {args.oscar}: {line.strip()[:90]!r}")
                         return 1
@@ -162,13 +234,13 @@ def main():
             except ValueError:
                 bad_lines += 1
                 continue
-            if open_ev is None:
+            if cur is None:
                 stray += 1
                 continue
             pdg_counts[pdg] += 1
-            open_ev[1] += baryon_number(pdg)
-            open_ev[2] += charge
-            open_ev[3] += 1
+            cur[2] += baryon_number(pdg)
+            cur[3] += charge
+            cur[4] += 1
 
     if bad_lines:
         print(f"FAIL: {bad_lines} malformed particle records in {args.oscar}")
@@ -176,45 +248,64 @@ def main():
     if stray:
         print(f"FAIL: {stray} particle records lie outside any event block")
         return 1
-    if open_ev is not None:
-        print(f"FAIL: event {open_ev[0]} was never closed; the run was truncated")
+    if cur is not None:
+        print(f"FAIL: event {cur[0]} was never closed by an 'end' marker; the run was truncated")
         return 1
-    if not events:
+    if not ended:
         print(f"FAIL: {args.oscar} contains no complete event block")
         return 1
 
-    n_ev = len(events)
-    n_records = sum(e[3] for e in events)
+    n_ev = len(ended)
+    n_records = sum(b.n for b in blocks)
+
+    print(f"particles: {n_records} records in {len(blocks)} particle-list blocks, "
+          f"{len(pdg_counts)} distinct species, {n_ev} events")
+
+    ok = True
+    # The declared count on each in/out line must match what followed it.
+    for b in blocks:
+        if b.declared is not None and b.declared != b.n:
+            print(f"FAIL: the '{b.kind}' block of event {b.event} declares {b.declared} "
+                  f"particles but {b.n} records follow")
+            ok = False
+
+    if args.events is not None and n_ev != args.events:
+        print(f"FAIL: the configuration asks for {args.events} (event, ensemble) pairs "
+              f"but {n_ev} were completed; the run stopped early")
+        ok = False
+
+    if args.structure_only:
+        if ok:
+            print("STRUCTURE OK")
+            return 0
+        print("STRUCTURE FAILED")
+        return 1
+
     if n_records == 0:
         print(f"FAIL: {args.oscar} contains no particle records")
         return 1
 
-    print(f"particles: {n_records} records, {len(pdg_counts)} distinct species, {n_ev} events")
-
-    ok = True
-    # The declared count on each 'out' line must match what followed it.
-    for label, _, _, got, declared in events:
-        if declared is not None and declared != got:
-            print(f"FAIL: event {label} declares {declared} particles but {got} records follow")
-            ok = False
-
-    # Per event, not just on the total: equal and opposite violations in two
-    # events would otherwise cancel into a clean-looking sum.
+    # Per BLOCK, not just on the total and not just at the end of an event:
+    # equal and opposite violations in two events would otherwise cancel into a
+    # clean-looking sum, and with Only_Final: No a violation that appears and
+    # heals between output intervals would never be seen at all.
     if args.baryons % n_ev or args.charge % n_ev:
         print(f"FAIL: expectations {args.baryons}/{args.charge} do not divide evenly by {n_ev} events; "
               f"every event starts from the same nuclei, so they must")
         return 1
     b_per, q_per = args.baryons // n_ev, args.charge // n_ev
-    for label, b, q, _, _ in events:
-        if b != b_per:
-            print(f"FAIL: event {label} has baryon number {b}, expected {b_per}")
+    for b in blocks:
+        if b.baryons != b_per:
+            print(f"FAIL: the '{b.kind}' block of event {b.event} has baryon number "
+                  f"{b.baryons}, expected {b_per}")
             ok = False
-        if q != q_per:
-            print(f"FAIL: event {label} has charge {q}, expected {q_per}")
+        if b.charge != q_per:
+            print(f"FAIL: the '{b.kind}' block of event {b.event} has charge "
+                  f"{b.charge}, expected {q_per}")
             ok = False
     if ok:
-        print(f"  baryon number conserved EXACTLY in every event: {b_per} each, {args.baryons} total")
-        print(f"  electric charge conserved EXACTLY in every event: {q_per} each, {args.charge} total")
+        print(f"  baryon number conserved EXACTLY in all {len(blocks)} blocks: {b_per} each, {args.baryons} total")
+        print(f"  electric charge conserved EXACTLY in all {len(blocks)} blocks: {q_per} each, {args.charge} total")
 
     if args.species_min and len(pdg_counts) < args.species_min:
         print(f"FAIL: only {len(pdg_counts)} distinct species, expected at least {args.species_min}")

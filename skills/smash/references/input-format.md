@@ -110,5 +110,36 @@ cannot reconstruct is not a measurement.
 ## Particle and decay data
 
 `particles.txt` and `decaymodes.txt` next to a configuration override the
-built-in tables. The box and sphere examples ship their own copies, which is why
-their multiplicities differ from a collider run using the defaults.
+built-in tables, and SMASH does NOT pick them up implicitly: they must be passed
+with `-p` and `-d` or the run silently uses the defaults.
+
+Which examples actually ship them, checked in the SMASH-3.3 tree rather than
+assumed:
+
+| example | ships |
+|---|---|
+| `input/box/` | `particles.txt`, `decaymodes.txt` |
+| `input/multi_particle_box/` | `particles.txt`, `decaymodes.txt` |
+| `input/photons/` | `particles.txt`, `decaymodes.txt` |
+| `input/dileptons/` | `decaymodes.txt` only |
+| `input/stochastic_box/` | `particles_only_pi0.txt`, `decaymodes_all_off.txt` |
+| `input/sphere/` | **nothing**: config.yaml only |
+| `input/` itself | `particles.txt`, `decaymodes.txt`, **and these ARE the built-in defaults** |
+
+That last row matters for the shipped collider config, which lives in `input/`:
+auto-staging passes `-p input/particles.txt -d input/decaymodes.txt`, and that
+changes nothing, because `src/CMakeLists.txt` calls
+`generate_headers(particles.txt decaymodes.txt)` on exactly those two files to
+compile the default tables into the binary. Passing them explicitly is the same
+physics, not a silent override.
+
+`run_smash.sh` auto-stages by exact filename, so it covers the first four rows
+and does nothing for `sphere`, which needs nothing. **`stochastic_box` is the
+trap**: its tables are real but differently named, so auto-staging misses them
+and the run quietly uses the defaults. Pass them explicitly:
+
+```bash
+scripts/run_smash.sh --config .../input/stochastic_box/config.yaml --seed 1 \
+  --particles  .../input/stochastic_box/particles_only_pi0.txt \
+  --decaymodes .../input/stochastic_box/decaymodes_all_off.txt
+```

@@ -188,7 +188,16 @@ fast_path_ok () {
   [ -f "$STAMP" ] || return 1
   [ "$(cd "$SRCROOT" && git rev-parse HEAD)" = "$PIN" ] || { log "clone HEAD is not the pin, rebuilding"; return 1; }
   [ "$(head -1 "$STAMP")" = "$(build_identity)" ] || { log "build identity changed, rebuilding"; return 1; }
-  [ "$(sed -n 2p "$STAMP")" = "$(binary_digest)" ] || { log "the binary changed since it was stamped, rebuilding"; return 1; }
+  # A CHANGED BINARY IS NOT A REASON TO REBUILD. SMASH's own
+  # usage_of_SMASH_as_library ctest case reruns cmake and `make install`, which
+  # relinks build/smash, so the digest goes stale after every verify run and
+  # this used to force a full reconfigure on the next call. The build inputs
+  # (line 1) are what decide whether a rebuild is needed; the digest only
+  # records which binary was last stamped, so refresh it and move on.
+  if [ "$(sed -n 2p "$STAMP")" != "$(binary_digest)" ]; then
+    log "the binary was relinked since it was stamped (SMASH's library test does this); re-stamping"
+    { build_identity; binary_digest; } > "$STAMP"
+  fi
   return 0
 }
 

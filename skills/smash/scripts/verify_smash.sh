@@ -74,26 +74,92 @@ fi
 [ -d "$BUILD" ] || die "no build directory at '$BUILD'"
 
 # Pre-set SMASH/SMASH_BUILD/SMASH_ROOT used to skip every identity check, so a
-# fake build directory next to the real binary certified tier 1. Whatever the
-# route, the tree must be the pinned commit, the build must carry the
-# installer's stamp, and the binary must be the one that stamp describes.
+# fake build directory next to the real binary certified tier 1.
+#
+# What this check is FOR, stated honestly: it catches the wrong build being
+# certified by MISTAKE, which is the failure that actually happens. It is not
+# an adversarial boundary and cannot be one, because everything it inspects
+# lives inside a directory the caller can write. Do not add checks that only
+# look like security; add checks that bind the binary to the pinned source.
+#
+# The binding that does real work is CMakeCache.txt: cmake records the source
+# and build directories it was configured with, so a build directory borrowed
+# from some other SMASH, or a cache copied in from elsewhere, is caught. The
+# git pin plus a clean tree fixes WHICH source that is.
+#
+# What is deliberately NOT gated: the binary's SHA-256. SMASH's own
+# `usage_of_SMASH_as_library` ctest case reruns cmake and `make install`, which
+# RELINKS build/smash, so after any full verify the binary no longer matches the
+# digest install_smash.sh stamped. Measured on macOS: two consecutive relinks of
+# an unchanged source tree produced three different digests, because the link is
+# not reproducible. Gating on that digest rejected legitimate builds and, since
+# the stamp file is writable by anyone who can write the binary, bought no
+# safety in exchange. The stamp's build-identity line (commit, tree state,
+# compiler, dependency versions) IS stable across a relink, so that is what is
+# checked; a digest mismatch is reported as a note, not a failure.
 PIN="${SMASH_PIN:-d1a1c6cf0a0002ee064eec1b929b9a7c14b3d5bc}"
+canon () { ( cd "$1" 2>/dev/null && pwd -P ); }
+cache_value () {   # cache_value <key>: read a CMakeCache.txt INTERNAL entry
+  sed -nE "s|^$1:[A-Z]+=(.*)$|\1|p" "$BUILD/CMakeCache.txt" 2>/dev/null | head -1
+}
 check_identity () {
   local head stamp
   [ -d "$SRCROOT/.git" ] || { log "'$SRCROOT' is not a git clone, so its commit cannot be established"; return 1; }
   head="$(cd "$SRCROOT" && git rev-parse HEAD 2>/dev/null || echo none)"
   [ "$head" = "$PIN" ] || { log "source tree is at $head, not the pinned $PIN"; return 1; }
   ( cd "$SRCROOT" && git diff --quiet HEAD 2>/dev/null ) || { log "source tree has uncommitted modifications"; return 1; }
+
+  local csrc cbld wsrc wbld
+  [ -f "$BUILD/CMakeCache.txt" ] || {
+    log "no CMakeCache.txt in '$BUILD'; that directory is not a cmake build tree"; return 1; }
+  wsrc="$(canon "$SRCROOT")"; wbld="$(canon "$BUILD")"
+  csrc="$(canon "$(cache_value CMAKE_HOME_DIRECTORY)")"
+  cbld="$(canon "$(cache_value CMAKE_CACHEFILE_DIR)")"
+  [ -n "$csrc" ] && [ "$csrc" = "$wsrc" ] || {
+    log "the build in '$BUILD' was configured from '$(cache_value CMAKE_HOME_DIRECTORY)', not from the pinned source '$wsrc'"
+    return 1; }
+  [ -n "$cbld" ] && [ "$cbld" = "$wbld" ] || {
+    log "the CMakeCache.txt in '$BUILD' belongs to build directory '$(cache_value CMAKE_CACHEFILE_DIR)'; it was copied here"
+    return 1; }
+
+  # Canonicalised, so a symlink pointing out of the build tree is caught.
+  local cbin
+  cbin="$(canon "$(dirname "$BIN")")/$(basename "$BIN")"
+  case "$cbin" in
+    "$wbld"/*) : ;;
+    *) log "the binary '$BIN' does not live inside the build directory '$wbld'"; return 1 ;;
+  esac
+  # A shell script that prints a SMASH banner satisfies every textual check
+  # there is; requiring a native executable rules that whole class out. Match
+  # the object format POSITIVELY (Mach-O on macOS, ELF on Linux): a pattern of
+  # '*executable*' does NOT work, because `file` describes a shell script as
+  # "Bourne-Again shell script text executable" and the stub sailed through.
+  local ftype
+  ftype="$(file -b "$cbin" 2>/dev/null)"
+  case "$ftype" in
+    Mach-O*|ELF*) : ;;
+    *) log "'$BIN' is not a native executable (file says: $ftype)"; return 1 ;;
+  esac
+  local ver want_ver
+  ver="$("$BIN" --version 2>/dev/null | head -1)" || { log "'$BIN' --version exited nonzero"; return 1; }
+  want_ver="$(cd "$SRCROOT" && git describe 2>/dev/null || echo unknown)"
+  [ "$ver" = "$want_ver" ] || {
+    log "'$BIN' reports version '$ver' but the pinned source describes as '$want_ver'"; return 1; }
+
   stamp="$BUILD/.fusion_build_stamp"
   [ -f "$stamp" ] || { log "no build stamp at $stamp; this build was not produced by install_smash.sh"; return 1; }
-  local want got
-  want="$(sed -n 2p "$stamp")"
-  got="$(shasum -a 256 "$BIN" 2>/dev/null | cut -d' ' -f1 || echo none)"
-  [ "$want" = "$got" ] || { log "the binary does not match the build stamp (stamped $want, found $got)"; return 1; }
-  case "$BIN" in
-    "$BUILD"/*) : ;;
-    *) log "the binary '$BIN' does not live inside the build directory '$BUILD'"; return 1 ;;
+  # Line 1 is "<commit>|<clean|DIRTY>|<compiler>|<pythia>|<eigen>|<gsl>|<os>|<arch>"
+  # and survives a relink; line 2 is the digest and does not.
+  local sid
+  sid="$(head -1 "$stamp")"
+  case "$sid" in
+    "$PIN|clean|"*) : ;;
+    *) log "the build stamp records identity '$sid', which is not a clean build of the pinned commit"; return 1 ;;
   esac
+  if [ "$(sed -n 2p "$stamp")" != "$(shasum -a 256 "$cbin" 2>/dev/null | cut -d' ' -f1)" ]; then
+    log "note: the binary has been relinked since it was stamped, which SMASH's own"
+    log "      usage_of_SMASH_as_library test does on every full verify. Not an error."
+  fi
   return 0
 }
 if ! check_identity; then
@@ -102,6 +168,7 @@ fi
 log "identity OK: pinned commit, clean tree, stamped binary"
 
 FAILED=0
+CERTIFIED=1
 
 # The usage_of_SMASH_as_library test spawns a FRESH cmake for the library
 # example, and that child inherits NONE of this build's -D cache variables, so
@@ -150,6 +217,11 @@ if [ "$DO_TESTS" = "1" ]; then
   if [ "$EXPECTED_TESTS" != "$EXPECTED_TESTS_PINNED" ]; then
     log "NOTE: SMASH_EXPECTED_TESTS=$EXPECTED_TESTS overrides the pinned $EXPECTED_TESTS_PINNED;"
     log "      this run is NOT a tier-1 certification of the pinned release"
+    # A note on stderr was not enough. The run still ended in "VERIFY OK" and
+    # exit 0, so any caller reading either signal, including this skill's own
+    # documentation, would record a certification that did not happen. The
+    # final verdict line has to carry the caveat, because that is what gets read.
+    CERTIFIED=0
   fi
   if [ "$TOTAL" != "$EXPECTED_TESTS" ]; then
     log "FAIL: ctest ran $TOTAL cases, expected exactly $EXPECTED_TESTS"
@@ -228,6 +300,13 @@ if [ "$DO_ANCHOR" = "1" ]; then
 fi
 
 if [ "$FAILED" = "0" ]; then
+  # Deliberately NOT a superstring of "VERIFY OK": a caller grepping for that
+  # must not match the uncertified verdict.
+  if [ "$CERTIFIED" = "0" ]; then
+    echo "VERIFY PASSED-NOT-CERTIFIED (the expected test count was overridden, so this"
+    echo "  run does not certify the pinned SMASH-3.3 release at tier 1)"
+    exit 0
+  fi
   echo "VERIFY OK"
   exit 0
 fi

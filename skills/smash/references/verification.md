@@ -162,6 +162,86 @@ worth carrying forward because both looked like the skill's strong points:
 Both share a shape: a rule that held for the sample in front of me, generalized
 without checking it against the code's own definition.
 
+## What the SECOND adversarial pass found, and why it matters more
+
+Round 2 confirmed 11 of the 19 as fixed and found **two new blockers, both
+caused by round 1's own fixes.** They are recorded here in full because the
+shape repeats:
+
+1. **The identity check rejected a legitimate build.** Round 1 added a
+   binary-digest comparison against the installer's stamp. But SMASH's own
+   `usage_of_SMASH_as_library` case reruns cmake and `make install`, which
+   **relinks `build/smash`**, so the stamp goes stale during the very run that
+   is supposed to certify the build, and the next `verify` died at the identity
+   check before testing anything. Measured: two consecutive relinks of an
+   unchanged source tree gave `51e39a9e...`, `a8b05efc...` and `c0031eeb...`,
+   three different digests, because the link is not reproducible on macOS. The
+   digest was also never a real defence, since the stamp file sits in the same
+   writable directory as the binary it vouches for.
+2. **Real `Only_Final: No` output was rejected outright.** Round 1 added "the
+   `out` and `end` markers must pair one-to-one", which is true only of the
+   shipped `Only_Final: Yes` collider configuration. A real run writes one `in`
+   block and one `out` block per output interval inside a single event.
+   Measured on a live Au+Au run: 10 block-start markers against 2 end markers,
+   so `run_smash.sh` refused it, and `check_conservation_smash.py` failed with
+   "event 0/0 starts while 0/0 is still open".
+
+Both guards had been validated against exactly one configuration. **A guard that
+has met only one input has not been tested, it has been demonstrated.**
+
+The fixes, and the evidence for each:
+
+| | fix | evidence |
+|---|---|---|
+| identity | bind the build to the source through `CMakeCache.txt` (`CMAKE_HOME_DIRECTORY` and `CMAKE_CACHEFILE_DIR`), require a native Mach-O/ELF binary inside that build tree reporting the pinned `git describe`, and gate the stamp's build-identity LINE (stable across a relink) instead of the digest | a relinked binary now certifies; six negative cases each reject on their own guard |
+| grammar | one parser for the OSCAR2013 block grammar, transcribed from `src/oscaroutput.cc`, covering all three `Only_Final` shapes; `run_smash.sh` calls it with `--structure-only` instead of re-parsing in shell | a live `Only_Final: No` run: 4824 records in **12** blocks across 2 events, baryon number 394 and charge 158 **in every one of the 12**, including the intermediate blocks that still contain Delta resonances |
+
+That second measurement is also the strongest live test of the round-1 baryon
+rule: the intermediate blocks balance only because `2224` and friends are
+counted as baryons, and the particle count grows from 394 to 439 as resonances
+decay while both conserved integers do not move.
+
+Two smaller results from the same pass, both measured rather than argued:
+
+- **Parallel ensembles are separate systems.** `Nevents: 1, Ensembles: 3`
+  completes THREE `(event, ensemble)` pairs, labelled `event 0 ensemble 0..2`,
+  each with its own 394 baryons. The old check compared against `Nevents` alone
+  and rejected the run.
+- **A relative `--particles` path resolved twice.** It was validated against the
+  caller's directory and then handed to SMASH, which runs from the config's
+  directory, so the file checked was not always the file used. Paths are now
+  made absolute at the point of validation.
+
+## The guard-flip discipline, applied
+
+Per the project rule, no new guard is counted as tested until it is shown to
+flip. Each was disabled in turn and the suite rerun; every one failed **exactly
+one** case, the case written for it, and nothing else:
+
+| guard disabled | case that flipped |
+|---|---|
+| Mach-O/ELF check | a shell script named `smash` is rejected |
+| `particle_lists` content check | a `full_event_history` file is refused |
+| `CMAKE_HOME_DIRECTORY` binding | a build configured from another source tree |
+| `CMAKE_CACHEFILE_DIR` binding | a `CMakeCache.txt` copied from another build |
+| stamp build-identity check | a stamp recording another commit |
+| `CMakeCache.txt` existence | a build directory that is not a cmake tree |
+
+That exercise immediately caught a defect in a guard I had just written: the
+file-type check was `case ... in *executable*)`, and `file` describes a shell
+script as "Bourne-Again shell script text **executable**", so the stub sailed
+through the check meant to exclude it. It now matches `Mach-O*|ELF*`
+positively. Writing the guard is not the work; proving it fires is.
+
+Three of the negative cases were themselves wrong when first written, and the
+flip discipline is what exposed them: the missing-`CMakeCache` case pointed at a
+binary that did not exist and so tripped the "no usable executable" check first;
+the fewer-events case deleted an event's two marker lines but left its three
+records behind, so it failed on the stray-record guard rather than the
+event-count guard it was written for; and the `Only_Final: No` fixture I wrote by
+hand did not actually conserve baryon number (p + n going to Delta++ + pi-),
+so a correct parser rightly rejected it.
+
 Other blockers were false-success paths: verify discarded ctest's exit status; a
 mixed `(Failed)` plus `(Timeout)` slipped through a regex that matched only the
 first; a retry that selected NO tests exited 0 and counted as a pass; pre-set
@@ -175,9 +255,14 @@ field this document originally omitted.
 
 ## Harness
 
-`scripts/selftest_smash.sh`, 49 cases, no SMASH build required (the run tests use
-a stub executable). Every guard has a negative case that fails only that guard,
-and each asserts WHICH guard fired. The one that most needed it: SMASH prints
+`scripts/selftest_smash.sh`, **83 cases** (49 before the second adversarial
+pass), a few seconds. The run and ctest tests use stub executables, so no SMASH
+build is required; the identity and ctest-parsing cases additionally use the
+local clone when there is one, because the git pin is the one thing that cannot
+be synthesized, and they announce themselves as skipped when there is not.
+
+Every guard has a negative case that fails only that guard, and each asserts
+WHICH guard fired. The one that most needed it: SMASH prints
 `WARN Fpe : Failed to setup trap on pole error.` on every macOS run, so a
 case-insensitive search for "error" flags a healthy run. The passing control is
 asserted to actually contain that warning line, so the error-guard test cannot

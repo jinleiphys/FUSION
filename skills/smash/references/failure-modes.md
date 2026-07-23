@@ -105,10 +105,21 @@ match SMASH's severity FIELD (`^[time] ERROR`) instead. `run_smash.sh` does.
 
 ## 7. A run can exit 0 having written fewer events than requested
 
-Check matched `# event N ensemble E out` / `... end` pairs against `Nevents`
-rather than trusting the exit status. `run_smash.sh` does this and fails when
-they disagree. Note the `ensemble` field: a pattern written as `# event N end`
-matches nothing in real SMASH-3.3 output.
+Count the `# event N ensemble E end` markers rather than trusting the exit
+status. Three traps, all of which this skill fell into once:
+
+- The comparison is against **`Nevents` x `Ensembles`**, not `Nevents`. Each
+  parallel ensemble is an independent system with its own end marker, so
+  `Nevents: 1, Ensembles: 20` must produce 20 of them.
+- The `ensemble` field is not optional: a pattern written as `# event N end`
+  matches nothing in real SMASH-3.3 output.
+- **Do NOT require the `out` and `end` markers to pair one-to-one.** That holds
+  only for `Only_Final: Yes`. Under `Only_Final: No` one event contains an `in`
+  block and several `out` blocks, and under `IfNotEmpty` an empty event has no
+  block at all. Requiring the pairing rejected every legitimate `Only_Final: No`
+  run. `run_smash.sh` now delegates the whole grammar to
+  `check_conservation_smash.py --structure-only`; see
+  `references/output-format.md` for the three block shapes.
 
 ## 8. Comparing multiplicities across machines is not a test
 
@@ -132,3 +143,24 @@ GPL-3.0-or-later, confirmed twice: `LICENSE.md` in the repository and the
 NOASSERTION only because `LICENSE.md` additionally reproduces the BSD-3, CC0 and
 Unlicense terms covering bundled third-party code. Unlike Sky3D, nothing here is
 restricted to non-profit use.
+
+## 10. The library test relinks the binary, so a digest stamp goes stale
+
+`usage_of_SMASH_as_library` reruns cmake and `make install` for its example
+project, which **relinks `build/smash`**. Any check that compares the binary
+against a digest recorded at install time therefore fails on the second run,
+after the first full verify has "invalidated" a build that is perfectly sound.
+Measured: two consecutive relinks of an unchanged tree produced three different
+SHA-256 values, because the link is not byte-reproducible on macOS.
+
+Bind a build to its source through `CMakeCache.txt` (`CMAKE_HOME_DIRECTORY` and
+`CMAKE_CACHEFILE_DIR`) and through properties that survive a relink, not through
+the binary's bytes. A digest stamp sitting in the same writable directory as the
+binary it vouches for was never a defence anyway.
+
+## 11. `file` calls a shell script "executable"
+
+`file -b` describes a bash script as `Bourne-Again shell script text
+executable`, so a guard written as `case ... in *executable*)` accepts exactly
+the stub it was meant to reject. Match the object format positively:
+`Mach-O*|ELF*`.

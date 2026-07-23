@@ -28,15 +28,19 @@ PARTICLES=""; DECAYMODES=""; AUTO_TABLES=1
 log () { echo "run_smash: $*" >&2; }
 die () { log "$*"; exit 1; }
 
+# An option given an EMPTY value is a caller bug, not a request for the default:
+# `--end-time ""` used to skip validation entirely, because every check below is
+# guarded by [ -n ... ], and the run then silently used the config's value.
+need_val () { [ -n "${2:-}" ] || die "$1 requires a non-empty value"; printf '%s' "$2"; }
 while [ $# -gt 0 ]; do
   case "$1" in
-    --config)   CONFIG="${2:-}"; shift 2 ;;
-    --outdir)   OUTDIR="${2:-}"; shift 2 ;;
-    --seed)     SEED="${2:-}"; shift 2 ;;
-    --nevents)  NEVENTS="${2:-}"; shift 2 ;;
-    --end-time) END_TIME="${2:-}"; shift 2 ;;
-    --particles)  PARTICLES="${2:-}"; shift 2 ;;
-    --decaymodes) DECAYMODES="${2:-}"; shift 2 ;;
+    --config)   CONFIG="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
+    --outdir)   OUTDIR="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
+    --seed)     SEED="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
+    --nevents)  NEVENTS="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
+    --end-time) END_TIME="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
+    --particles)  PARTICLES="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
+    --decaymodes) DECAYMODES="$(need_val "$1" "${2:-}")" || exit 1; shift 2 ;;
     --no-auto-tables) AUTO_TABLES=0; shift ;;
     --allow-random-seed) ALLOW_RANDOM=1; shift ;;
     -h|--help)  sed -n '2,22p' "$0"; exit 0 ;;
@@ -55,7 +59,10 @@ grep -q "General:" "$CONFIG" || die "config '$CONFIG' has no 'General:' block; i
 # characters.
 is_int ()  { printf '%s' "$1" | grep -qE '^-?[0-9]+$'; }
 is_uint () { printf '%s' "$1" | grep -qE '^[0-9]+$'; }
-is_num ()  { printf '%s' "$1" | grep -qE '^[0-9]+(\.[0-9]+)?$'; }
+# Accepts every non-negative decimal literal SMASH's YAML reader does, including
+# the ones the previous pattern wrongly rejected: '.5', '5.', '1e-3', '1.5E3'.
+# Still rejects '.', '--', '1-2', '1..2' and anything negative.
+is_num ()  { printf '%s' "$1" | grep -qE '^([0-9]+\.?[0-9]*|\.[0-9]+)([eE][+-]?[0-9]+)?$'; }
 
 if [ -n "$SEED" ]; then
   is_int "$SEED" || die "--seed must be an integer, got '$SEED'"
@@ -139,14 +146,22 @@ if [ "$AUTO_TABLES" = "1" ]; then
   [ -z "$PARTICLES" ]  && [ -f "$CFGDIR/particles.txt" ]   && PARTICLES="$CFGDIR/particles.txt"
   [ -z "$DECAYMODES" ] && [ -f "$CFGDIR/decaymodes.txt" ] && DECAYMODES="$CFGDIR/decaymodes.txt"
 fi
+# SMASH is invoked from inside CFGDIR (below), so a relative --particles path
+# would be validated here against the CALLER's directory and then resolved by
+# SMASH against a different one, silently loading another table or none. Make
+# both paths absolute at the point of validation so the file checked is the file
+# used.
+abspath () { ( cd "$(dirname "$1")" 2>/dev/null && printf '%s/%s\n' "$(pwd -P)" "$(basename "$1")" ); }
 EXTRA=()
 if [ -n "$PARTICLES" ]; then
   [ -f "$PARTICLES" ] || die "--particles '$PARTICLES' does not exist"
+  PARTICLES="$(abspath "$PARTICLES")" || die "cannot resolve --particles path"
   cp "$PARTICLES" "$OUTDIR/particles_used.txt"; EXTRA+=(-p "$PARTICLES")
   log "using particle table $PARTICLES"
 fi
 if [ -n "$DECAYMODES" ]; then
   [ -f "$DECAYMODES" ] || die "--decaymodes '$DECAYMODES' does not exist"
+  DECAYMODES="$(abspath "$DECAYMODES")" || die "cannot resolve --decaymodes path"
   cp "$DECAYMODES" "$OUTDIR/decaymodes_used.txt"; EXTRA+=(-d "$DECAYMODES")
   log "using decay table $DECAYMODES"
 fi
@@ -164,15 +179,24 @@ if [ "$STATUS" -ne 0 ]; then
   exit 1
 fi
 
+# The OSCAR particle list is what this wrapper can VALIDATE, not what SMASH is
+# required to write. A configuration whose Output block asks only for Binary,
+# Root, HepMC, YODA or Vtk is perfectly legitimate and used to fail here purely
+# because particle_lists.oscar was absent. So: require the run to have produced
+# SOMETHING, validate the OSCAR list when there is one, and say plainly when
+# there is not, instead of pretending the run failed.
 OSCAR="$OUTDIR/out/particle_lists.oscar"
-[ -s "$OSCAR" ] || die "no particle output at $OSCAR; the run produced nothing usable"
-
-# Word-bounded: a bare substring search for "inf" would also match ordinary
-# text, and the OSCAR header is text.
-if grep -qiE "(^|[^a-z])(nan|inf|infinity)([^a-z]|$)" "$OSCAR"; then
-  log "the particle output contains NaN or Inf"
-  grep -niE "(^|[^a-z])(nan|inf|infinity)([^a-z]|$)" "$OSCAR" | head -3 >&2; exit 1
+if [ ! -e "$OSCAR" ]; then
+  PRODUCED="$(find "$OUTDIR/out" -type f -size +0c 2>/dev/null | wc -l | tr -d ' ')"
+  [ "${PRODUCED:-0}" -gt 0 ] \
+    || die "the run produced no non-empty output files in $OUTDIR/out"
+  log "no particle_lists.oscar (this configuration requests other output formats);"
+  log "$PRODUCED non-empty output files were written, but NOT structurally validated"
+  echo "RESULT_DIR=$OUTDIR"
+  exit 0
 fi
+[ -s "$OSCAR" ] || die "the particle output at $OSCAR is empty; the run produced nothing usable"
+
 # Match SMASH's log SEVERITY FIELD, not the word "error" anywhere in the text.
 # SMASH lines look like "[15'04'57]  WARN   Fpe : Failed to setup trap on pole
 # error." and a case-insensitive search for "error" flags that benign warning on
@@ -183,30 +207,38 @@ if grep -qE "$ERROR_RE" "$OUTDIR/smash.log" "$OUTDIR/stderr.txt" 2>/dev/null; th
   exit 1
 fi
 
-# Structural validation, not a line count. A stub that wrote a non-OSCAR header,
-# two garbage records and two forged "# event ... end" comments used to be
-# reported as a complete run.
-head -1 "$OSCAR" | grep -qE '^#!OSCAR2013' \
-  || die "the particle output does not start with an OSCAR2013 header"
-NPART="$(grep -cvE '^#' "$OSCAR" || true)"
-[ "${NPART:-0}" -gt 0 ] || die "the particle output has a header but no particles"
-
-WANT_EVENTS="$(grep -E "^[[:space:]]*Nevents:" "$WORKCFG" | head -1 | sed -E 's/.*Nevents:[[:space:]]*//')"
-# Match SMASH-3.3's real grammar, "# event N ensemble E out/end ...", and require
-# the out and end blocks to pair up.
-GOT_OUT="$(grep -cE '^# event [0-9]+ ensemble [0-9]+ out\b' "$OSCAR" || true)"
-GOT_EVENTS="$(grep -cE '^# event [0-9]+ ensemble [0-9]+ end\b' "$OSCAR" || true)"
-[ "${GOT_OUT:-0}" -eq "${GOT_EVENTS:-0}" ] \
-  || die "the output has $GOT_OUT event-start and $GOT_EVENTS event-end markers; they must pair"
-if [ -n "$WANT_EVENTS" ] && [ "${GOT_EVENTS:-0}" -ne "$WANT_EVENTS" ]; then
-  die "requested $WANT_EVENTS events but the output completes $GOT_EVENTS of them; the run stopped early"
+# Structural validation is DELEGATED to check_conservation_smash.py, which
+# transcribes the grammar from src/oscaroutput.cc. It used to be re-implemented
+# here in shell, and the two copies then disagreed: this one required the 'out'
+# and 'end' markers to pair one-to-one, which is true only for the shipped
+# Only_Final: Yes configuration. A real Only_Final: No run writes one 'in' and
+# one 'out' per output interval inside a single event, and every such run was
+# rejected. One grammar, one parser.
+#
+# Independent events = Nevents * Ensembles: each parallel ensemble is a separate
+# system with its own initialisation and its own end marker, so a config with
+# Nevents: 1 and Ensembles: 20 completes 20 of them, not 1.
+# Both keys are OPTIONAL (Ensembles defaults to 1 and is absent from every
+# shipped config), so a miss must return empty and succeed. Without the `|| true`
+# the failing grep killed the whole script under `set -e`, after the run had
+# already completed, with no message at all.
+read_key () { grep -E "^[[:space:]]*$1:" "$WORKCFG" 2>/dev/null | head -1 | sed -E "s/.*$1:[[:space:]]*//" | tr -d '\r' || true; }
+WANT_EVENTS="$(read_key Nevents)"
+WANT_ENS="$(read_key Ensembles)"
+EXPECT_ARG=()
+if is_uint "${WANT_EVENTS:-}"; then
+  if is_uint "${WANT_ENS:-}" && [ "${WANT_ENS:-1}" -ge 1 ]; then
+    EXPECT_ARG=(--events "$((WANT_EVENTS * WANT_ENS))")
+  else
+    EXPECT_ARG=(--events "$WANT_EVENTS")
+  fi
 fi
-# Every record must have the number of columns the header declares.
-NCOL="$(head -1 "$OSCAR" | awk '{print NF-2}')"
-BADCOL="$(awk -v n="$NCOL" '!/^#/ && NF != n' "$OSCAR" | wc -l | tr -d ' ')"
-[ "${BADCOL:-0}" -eq 0 ] \
-  || die "$BADCOL particle records do not have the $NCOL columns the header declares"
-
-log "run complete: $GOT_EVENTS events, $NPART particle records"
+if ! python3 "$HERE/check_conservation_smash.py" "$OSCAR" --structure-only \
+       ${EXPECT_ARG+"${EXPECT_ARG[@]}"} >"$OUTDIR/structure.txt" 2>&1; then
+  log "the particle output is not a well-formed OSCAR2013 particle list:"
+  cat "$OUTDIR/structure.txt" >&2
+  exit 1
+fi
+log "run complete: $(sed -n 's/^particles: //p' "$OUTDIR/structure.txt" | head -1)"
 echo "RESULT_DIR=$OUTDIR"
 echo "RESULT_OSCAR=$OSCAR"

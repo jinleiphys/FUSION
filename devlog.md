@@ -3,6 +3,69 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-23: SMASH round-2 blockers, or: a guard is only as good as its worst input
+
+**Why we tried it:** the two round-2 blockers had to be cleared before SMASH
+could ship, and both were regressions introduced by round 1's own fixes. That
+made them worth more than their fix cost, because the same mistake produced
+both.
+
+**What failed, reproduced before touching anything:**
+
+- The identity check rejected a legitimate build. SMASH's own
+  `usage_of_SMASH_as_library` ctest case reruns cmake and `make install` and
+  **relinks `build/smash`**, so the digest the installer stamped goes stale
+  during the very run meant to certify the build. Measured: three consecutive
+  relinks of an unchanged tree gave three different SHA-256 values, so the link
+  is not byte-reproducible on macOS and a digest was never a stable identity.
+  It was not a security boundary either: the stamp file sits in the same
+  writable directory as the binary it vouches for.
+- Real `Only_Final: No` output was rejected outright. A live Au+Au run wrote 10
+  block-start markers against 2 end markers, and the "out and end must pair"
+  rule refused it; the conservation checker failed alongside with "event 0/0
+  starts while 0/0 is still open".
+
+**Root cause, identical in both:** each guard was written against the one
+configuration in front of me, the shipped `Only_Final: Yes` collider run, and
+never confronted with the output it would actually meet. The SMASH source
+answers both questions directly, in `oscaroutput.cc` and in what the library
+test's CMake actually does.
+
+**The fixes.** Identity now binds the build to the source through
+`CMakeCache.txt` (`CMAKE_HOME_DIRECTORY` and `CMAKE_CACHEFILE_DIR`), requires a
+native Mach-O/ELF binary inside that tree reporting the pinned `git describe`,
+and gates the stamp's build-identity LINE, which survives a relink, instead of
+the digest. The OSCAR grammar now lives in ONE place: it was transcribed from
+`oscaroutput.cc` into `check_conservation_smash.py`, covers all three
+`Only_Final` shapes, and `run_smash.sh` calls it with `--structure-only` rather
+than re-parsing in shell. Conservation is checked per BLOCK, not per event.
+
+**Evidence:** a live `Only_Final: No` run gives 4824 records in 12 blocks over 2
+events, with baryon number 394 and charge 158 in every one of the 12, including
+the intermediate blocks that still hold Delta resonances while the particle
+count climbs 394 to 439. That is simultaneously the strongest live test of the
+round-1 baryon-number rule.
+
+**The part worth keeping.** Applying the flip discipline immediately caught a
+defect in a guard written minutes earlier: the "must be a native executable"
+check was `case ... in *executable*)`, and `file` calls a bash script
+"Bourne-Again shell script text **executable**", so it accepted exactly the stub
+it existed to reject. Three of the negative CASES were also wrong when first
+written, each failing on a different guard than the one it claimed to test, and
+one hand-written OSCAR fixture did not conserve baryon number at all, so a
+correct parser rightly rejected it.
+
+**Lesson:** when a guard encodes a rule, find the code that already defines it
+and transcribe it; when a guard is written from a sample, assume the sample is
+unrepresentative until a second one says otherwise. And run the flip check on
+the guard you just wrote, not only on the old ones, because that is when the
+rule is least tested.
+
+**Status:** both blockers fixed, plus all 10 remaining round-2 items including
+the one previously NOT FIXED (`run_smash.sh` hard-requiring
+`particle_lists.oscar`, so Binary/Root/HepMC-only configs always failed).
+Selftest 49 to 83 cases.
+
 ## 2026-07-23: SMASH, and a rule that was wrong twice in the same way
 
 **Why we tried it:** SMASH was the first code of the newly opened heavy-ion row.
