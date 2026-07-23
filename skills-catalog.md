@@ -83,22 +83,23 @@ The cleanly open codes cluster at relativistic energies, a different community.
 | **TRENTO** | Duke-QCD/trento | MIT | C++ | (paper not yet CrossRef-verified) |
 | **iEBE / iEBE-MUSIC** | chunshen1987/iEBE, chunshen1987/iEBE-MUSIC | GPL-3.0 both | Fortran / Python | (papers not yet CrossRef-verified) |
 
-**Blocked on a user ruling: Sky3D.** `manybody/sky3d` (nuclear time-dependent Hartree-Fock,
-3D cartesian box, static + time-dependent). This is by far the most relevant code in the section,
-since TDHF fusion/dissipation touches the superheavy white paper and the Line A CF-suppression
-work. It is publicly clonable and published twice, Maruhn et al., Comput. Phys. Commun. **185**,
-2195-2216 (2014), `10.1016/j.cpc.2014.04.008`, and version 1.1, Comput. Phys. Commun. **229**,
-211-213 (2018), `10.1016/j.cpc.2018.03.012`, both CrossRef-verified. **But it carries no
-open-source license.** Following the KSHELL lesson (grep the README and the paper, not just the
-LICENSE file), the check was run in all three places: no LICENSE file, nothing in the README,
-no copyright header in the Fortran sources, and the CPC paper's program summary states
+**Cleared 2026-07-23, and the next thing to build: Sky3D.** `manybody/sky3d` (nuclear
+time-dependent Hartree-Fock, symmetry-unrestricted 3D cartesian box, static and time-dependent
+modes; Fortran 90 with OpenMP, FFTW and LAPACK). The most research-relevant code in this section,
+since TDHF fusion and dissipation touch the superheavy white paper and the Line A CF-suppression
+work. Published twice, Maruhn et al., Comput. Phys. Commun. **185**, 2195-2216 (2014),
+`10.1016/j.cpc.2014.04.008`, and version 1.1, Comput. Phys. Commun. **229**, 211-213 (2018),
+`10.1016/j.cpc.2018.03.012`, both CrossRef-verified. **It carries no open-source license.**
+Following the KSHELL lesson the check was run in all three places: no LICENSE file, nothing in the
+README, no copyright header in the Fortran sources, and the CPC paper's program summary states
 `Licensing provisions: none`, whose template comment reads "enter 'none' if CPC non-profit use
-license is sufficient". So Sky3D is under the **CPC non-profit use license**, which restricts use
-to non-profit and is not an open-source license. This is genuinely different from KSHELL, where
-the grep FOUND a GPLv3 declaration; here the grep found a restrictive one. The skill would clone
-from upstream and redistribute nothing, which is how KSHELL and SWANLOP already ship, so the
-question is whether a CPC non-profit license satisfies the "publicly open-source" clause of the
-hard rule or fails it the way Theo4Exp does. **User decision needed before any work starts.**
+license is sufficient". So Sky3D is under the CPC non-profit use license. This is the opposite of
+KSHELL, where the same grep found a GPLv3 declaration. It ships anyway under the boundary
+amendment of 2026-07-23 (CLAUDE.md Key decisions): the rule tests whether a student can obtain and
+build the source, not what the license permits commercially, and the skill clones from upstream and
+redistributes nothing, so each user receives the code from the authors under the authors' own terms.
+**Hard requirement on the skill: SKILL.md must state that Sky3D is CPC non-profit and not open
+source, and send a commercial user to the authors.**
 
 **Equation of state, surveyed but not yet verified:** CompOSE (compose.obspm.fr, database plus
 its own tools, not on GitHub), SROEOS (Schneider-Roberts-Ott finite-temperature EOS), HFBTHO and
@@ -142,7 +143,7 @@ the "verify canonical source" flags above.
 - **Alex Brown's repository**: `people.nscl.msu.edu/~brown/reaction-codes/`. A large bundle of classics in one place: Fr2in, faCE, STURMXX, EFADDY, TWOFNR variants, wspot, RADCAP, Dweiko, MOMDIS, EMPIRE-II, DW81, DW91, DWBA91, DWBA98, ECIS, CHUCK3, DWUCK4, DWUCK5, CCFULL. Licensing per code is unstated, so treat as "source located, license unverified" rather than automatically eligible.
 - **Surrey NPG**: `nucleartheory.surrey.ac.uk/NPG/code.htm`. TWOFNR + FRONT.
 - **LLNL GitHub**: YAHFC, and **Frescox** (`github.com/LLNL/Frescox`), the actively maintained FRESCO fork. Worth noting in the fresco skill: the skill currently builds I-Thompson/fresco, and whether to track Frescox instead is an open question.
-- EXCLUDED for now: **Theo4Exp** (`institucional.us.es/theo4exp`, IFJ PAN Krakow + Seville + Milano; MeanField4Exp / Reaction4Exp / Structure4Exp). It is a **registration-gated web platform**, not a repository anyone can clone, so it fails the "publicly obtainable" half of the hard rule. Flagged rather than deleted because it is a Moro-adjacent Seville product and the user may know its terms; ask before acting.
+- EXCLUDED, reason clarified 2026-07-23: **Theo4Exp** (`institucional.us.es/theo4exp`, IFJ PAN Krakow + Seville + Milano; MeanField4Exp / Reaction4Exp / Structure4Exp). The reason was never licensing, and it is not the registration gate either: **there is no source distribution at all.** It is a server-side web platform where the calculation runs on their machine and the user fills in a browser form, so there is nothing to clone, nothing to build, nothing to benchmark to N digits, and no cross-build check. A "skill" could only be a guide to someone else's web form: unverifiable, and liable to break silently on their next redesign. This is why the 2026-07-23 obtainability rule excludes it while admitting Sky3D, whose license is far more restrictive but whose source is right there. Contrast also the AZURE2 precedent (2026-07-21): a gate on a SECONDARY channel does not make a code unobtainable when an open channel exists; Theo4Exp has no such channel. Still worth asking Moro about the platform's terms out of interest, but not as a skill candidate.
 
 Note on the whole list: openness is *asserted by the page*, not verified by us. Every entry above stays [V] until someone actually fetches the code and reads its license.
 
