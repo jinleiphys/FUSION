@@ -124,8 +124,8 @@ fi
 # a failed run.
 OUT="$OUTDIR/$EXPFILE"
 [ -s "$OUT" ] || die "$BINNAME did not produce the expected output '$EXPFILE' in $OUTDIR"
-python3 "$HERE/check_output_thermalfist.py" "$OUT" --min-rows "$EXPROWS" --min-cols "$EXPCOLS" >/dev/null \
-  || die "$BINNAME output '$EXPFILE' failed structural validation (expected >= $EXPROWS rows, $EXPCOLS numeric cols)"
+python3 "$HERE/check_output_thermalfist.py" "$OUT" --rows "$EXPROWS" --cols "$EXPCOLS" >/dev/null \
+  || die "$BINNAME output '$EXPFILE' failed structural validation (expected EXACTLY $EXPROWS rows, $EXPCOLS numeric cols)"
 log "output table OK: $EXPFILE"
 
 # If the repository root is known AND this output is reproducible, compare against

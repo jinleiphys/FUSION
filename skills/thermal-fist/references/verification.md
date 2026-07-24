@@ -12,16 +12,19 @@ source patches on both platforms:
 | macOS 26.5, Apple Silicon | Apple clang 21.0.0 | 93 / 93 | exact |
 | Linux (heliumx), x86-64 | gcc 13.3.0 | 93 / 93 | exact |
 
-**Tier 1, with an honest qualifier: the benchmark is a TOLERANCE, not a byte
-match.** The 93 cases are Thermal-FIST's own ctest suite, which runs each cpc/EoS
-example and compares its output against `test/ReferenceOutput/` using the code's
-own `test_CompareOutputs` (absolute 1e-6 per column). Upstream itself declares
-cpc1 possibly non-deterministic across compilers (its `INCLUDE_ALL_TESTS` option
-switches cpc1 to exact `compare_files` and its comment names those cases
-"non-deterministic among compilers/hardware"), which is exactly why the shipped
-default is the tolerance comparator. So the claim is "reproduces the shipped
-reference within the code's own 1e-6 comparator, on two platforms and two
-compilers", never bit-identical.
+**Tier 1, reproducing the shipped `test/ReferenceOutput` with a MIXED comparator.**
+The 93 cases are Thermal-FIST's own ctest suite. It does NOT use one comparator:
+cpc2 (4 cases) and cpc4's `analyt.dat` (1 case) are compared BYTE-EXACT with
+`cmake -E compare_files`, while cpc1 (3 cases), Thermodynamics (6),
+Susceptibilities (6) and NeutronStar (1) use `test_CompareOutputs` with an
+absolute 1e-6 tolerance. cpc4's Monte Carlo output (`cpc4.montecarlo.dat`) is not
+compared at all. Both platforms (macOS/Apple clang 21, Linux/gcc 13.3) pass every
+case. So the honest claim is "reproduces the shipped reference, byte-exact where
+upstream compares byte-exact and within 1e-6 where upstream uses its tolerance
+comparator, on two platforms", never a blanket bit-identical (cpc1 is not) nor a
+blanket 1e-6 (cpc2/cpc4 are byte-exact). Upstream flags cpc1 as possibly
+non-deterministic across compilers (its `INCLUDE_ALL_TESTS` option would switch
+cpc1 to `compare_files`), which is why cpc1 stays on the tolerance comparator.
 
 Zero external dependencies at build time except a one-time GoogleTest fetch:
 Eigen 3.4.0 and Minuit2 are bundled under `thirdparty/`, and with no `ROOTSYS`
@@ -89,8 +92,9 @@ the label text in reference mode).
 
 ## Harness self-test
 
-`scripts/selftest_thermalfist.sh` covers 48 cases and needs no build for 45 of
-them: structural validation of `check_output_thermalfist.py` (clean numeric
+`scripts/selftest_thermalfist.sh` covers 50 cases (46 without a pinned clone, plus
+4 identity sub-guards when the clone is present) and needs no build: structural
+validation of `check_output_thermalfist.py` (clean numeric
 table, leading-label table, empty file, header-only, mid-row label, NaN, Inf,
 inconsistent numeric-column and label-column counts, min-rows/min-cols, bad
 accuracy, a numeric-only first line rejected as a non-header, NaN accuracy and NaN
@@ -107,9 +111,28 @@ is built to fail ONLY the guard under test.
 
 ## What the adversarial passes found
 
-TWO Codex adversarial passes (`codex exec`, allowed to build and run the code)
+THREE Codex adversarial passes (`codex exec`, allowed to build and run the code)
 ran. Round 1 returned 13 findings, round 2 found 4 more that round 1's fixes had
-introduced or left, ALL fixed; selftest grew 35 -> 48 -> 50.
+introduced or left, round 3 found 7 more (1 blocker, 3 major, 3 minor), ALL
+fixed; selftest grew 35 -> 48 -> 50.
+
+Round 3: (1, BLOCKER) `verify_thermalfist.sh` had been committed non-executable
+(mode 100644), so the documented command returned permission denied; fixed to
+100755. (2, MAJOR) `git status --porcelain` and `git diff --quiet HEAD` both skip
+GIT-IGNORED untracked files, so a source injected under a CMake glob and listed in
+`.git/info/exclude` passed the clean-tree check while the build compiled it; the
+predicate now also requires `git ls-files --others` (no --exclude-standard) empty,
+in install, verify and the selftest gate. (3, MAJOR) verify ran cpc3 from the
+caller-supplied `TFIST_EXAMPLES`, which is not identity-checked, so an external
+cpc3 stub was accepted; the example binaries are now derived from the
+identity-checked `TFIST_BUILD` and required to be non-symlinked files inside it.
+(4, MAJOR) the wrapper and the cpc3-NEQ structural check used lower-bound
+row/column counts, so an 8-column, 182-row spoof with the right filename passed
+when no reference was available; `check_output_thermalfist.py` gained `--rows`
+and `--cols` EXACT options, now used by both. (5-7, MINOR) the selftest
+reachability gate used the weaker predicate; the docs said 48 selftests (now 50)
+and described the suite as uniformly 1e-6 (it is MIXED: byte-exact for cpc2/cpc4,
+1e-6 for cpc1/EoS).
 
 Round 2 (the round-1 fixes introduced their own defects, the recurring FUSION
 pattern): (1, BLOCKER) the ctest stage counted `Passed` lines but no longer failed
@@ -152,7 +175,7 @@ probe validates full shape + anchor); cpc3 was documented as tested but is not i
 the 93 (now stated, and covered by the new stage 3); the `eval` install pattern
 was a path-injection vector (README now extracts variables with `sed`); the
 checker discarded header and label identity (now validates a named header and
-compares label text); the selftest coverage was incomplete (now 48 cases with the
+compares label text); the selftest coverage was incomplete (grown with the
 new guards); and the docs said all cpc examples read `thermus23` while cpc3/cpc4
 read `PDG2014` (corrected per program). Codex could NOT falsify the 93 serial-test
 count, the config ranges, the citation, the GPL-3.0 license, or the `-j1` +

@@ -92,18 +92,20 @@ fi
 ( cd "$SRCROOT" && git checkout -q "$PIN" 2>/dev/null ) || {
   log "cannot check out pinned commit $PIN (shallow clone, or upstream history moved)"
   log "set TFIST_PIN to re-pin deliberately"; exit 1; }
-# `git status --porcelain`, not `git diff --quiet HEAD`: the latter ignores
-# UNTRACKED files, and an injected extra source in the tree would be compiled by a
-# glob-based build while the tree still looked clean.
-[ -z "$(cd "$SRCROOT" && git status --porcelain 2>/dev/null)" ] || {
-  log "the clone at $SRCROOT has uncommitted or untracked files; refusing to build from it"; exit 1; }
+# A pristine tree has no tracked modifications AND no untracked files, including
+# git-ignored ones: `git status --porcelain` and `git diff --quiet HEAD` both skip
+# ignored files, so an injected source added to .git/info/exclude would pass them
+# while a glob build still compiled it. `git ls-files --others` (no
+# --exclude-standard) lists every untracked file.
+( cd "$SRCROOT" && git diff --quiet HEAD 2>/dev/null && [ -z "$(git ls-files --others 2>/dev/null)" ] ) || {
+  log "the clone at $SRCROOT has tracked modifications or untracked files (including ignored); refusing to build"; exit 1; }
 log "pinned at $PIN (release v1.6.1)"
 
 # ------------------------------------------------------------------- build
 build_identity () {
   local head dirty cxx
   head="$(cd "$SRCROOT" 2>/dev/null && git rev-parse HEAD 2>/dev/null || echo nohead)"
-  if [ -z "$(cd "$SRCROOT" 2>/dev/null && git status --porcelain 2>/dev/null)" ]; then dirty=clean; else dirty=DIRTY; fi
+  if ( cd "$SRCROOT" 2>/dev/null && git diff --quiet HEAD 2>/dev/null && [ -z "$(git ls-files --others 2>/dev/null)" ] ); then dirty=clean; else dirty=DIRTY; fi
   cxx="$(command -v c++ 2>/dev/null || echo nocxx)|$(c++ --version 2>/dev/null | head -1 || echo nover)"
   echo "$head|$dirty|$cxx|$(uname -s)|$(uname -m)"
 }

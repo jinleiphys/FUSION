@@ -164,6 +164,8 @@ def main():
     ap.add_argument('table')
     ap.add_argument('--min-rows', type=int, default=1)
     ap.add_argument('--min-cols', type=int, default=1)
+    ap.add_argument('--rows', type=int, help='require EXACTLY this many data rows')
+    ap.add_argument('--cols', type=int, help='require EXACTLY this many numeric columns')
     ap.add_argument('--reference')
     ap.add_argument('--accuracy', type=float, default=1e-6)
     ap.add_argument('--row-at', nargs=2, metavar=('COL', 'VAL'),
@@ -192,6 +194,12 @@ def main():
         return 1
     if ncols < args.min_cols:
         print(f"FAIL: {args.table} has {ncols} numeric columns, expected at least {args.min_cols}")
+        return 1
+    if args.rows is not None and len(rows) != args.rows:
+        print(f"FAIL: {args.table} has {len(rows)} data rows, expected EXACTLY {args.rows}")
+        return 1
+    if args.cols is not None and ncols != args.cols:
+        print(f"FAIL: {args.table} has {ncols} numeric columns, expected EXACTLY {args.cols}")
         return 1
     print(f"table OK: {len(rows)} data rows, {ncols} numeric columns")
 

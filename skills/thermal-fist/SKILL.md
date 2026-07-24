@@ -24,12 +24,13 @@ dependency; only the test build fetches GoogleTest. Qt is optional (GUI only).
    output file with no declared dependency, so under parallelism a Compare reads
    the file before the matching Run has written it. `verify_thermalfist.sh`
    forces `-j1` and clears `CTEST_PARALLEL_LEVEL`. Run serially, all 93 pass.
-2. **This is a TIER 1 skill, and the benchmark is a TOLERANCE, not a byte match.**
-   It reproduces the shipped `test/ReferenceOutput` through the code's OWN
-   comparator, an absolute 1e-6 per column. Upstream itself flags cpc1 as
-   possibly non-deterministic across compilers, which is exactly why the default
-   comparator is tolerance-based. Never claim bit-identical; the authors
-   deliberately did not.
+2. **This is a TIER 1 skill reproducing the shipped `test/ReferenceOutput`, with
+   a MIXED comparator.** The suite compares cpc2 and cpc4's `analyt.dat`
+   BYTE-EXACT (`cmake -E compare_files`) and cpc1, Thermodynamics, Susceptibilities
+   and NeutronStar with an absolute 1e-6 tolerance (`test_CompareOutputs`); cpc4's
+   Monte Carlo output is not compared at all. Both platforms pass all of it. Do
+   not describe the whole suite as bit-identical (cpc1 is not) nor as uniformly
+   1e-6 (cpc2/cpc4 are byte-exact).
 3. **cpc3 output has a leading LABEL column** (`NA49-30GeV-4pi`, then numbers).
    A parser that treats every token as a float breaks on it, and the shipped
    comparator silently compares NOTHING on those rows. Handle it as a labelled
@@ -77,7 +78,7 @@ columns tolerated). Prints `RESULT_DIR=` and `RESULT_FILES=`.
 scripts/verify_thermalfist.sh              # anchor + ctest suite + cpc3, about 5 min
 scripts/verify_thermalfist.sh --anchor-only  # full cpc1 output vs the shipped reference
 scripts/verify_thermalfist.sh --tests-only   # the 93-case ctest suite + cpc3 stage
-scripts/selftest_thermalfist.sh            # harness only, 48 cases, seconds, no build needed
+scripts/selftest_thermalfist.sh            # harness only, 50 cases (46 without a clone), seconds
 ```
 
 The anchor compares the FULL cpc1 output against the shipped reference (not just

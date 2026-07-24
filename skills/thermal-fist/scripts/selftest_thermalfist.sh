@@ -206,7 +206,7 @@ expect_msg 1 "not a git clone" "verify: non-clone source rejected" -- \
 PIN_CANON=fe5c61af00cf84765afa4746120d0bdb58c419ae
 REALSRC="${TFIST_ROOT_DIR:-$HOME/.cache/fusion/thermal-fist}/src"
 if [ -d "$REALSRC/.git" ] && [ "$(cd "$REALSRC" && git rev-parse HEAD 2>/dev/null)" = "$PIN_CANON" ] \
-   && (cd "$REALSRC" && git diff --quiet HEAD 2>/dev/null); then
+   && (cd "$REALSRC" && git diff --quiet HEAD 2>/dev/null && [ -z "$(git ls-files --others 2>/dev/null)" ]); then
   # (a) empty CMakeCache: no source-dir bindings -> rejected.
   FB="$TMP/fakebuild1"; mkdir -p "$FB"; : > "$FB/CMakeCache.txt"
   printf '#!/bin/sh\nexit 0\n' > "$FB/cpc1HRGTDep"; chmod +x "$FB/cpc1HRGTDep"
@@ -228,9 +228,11 @@ if [ -d "$REALSRC/.git" ] && [ "$(cd "$REALSRC" && git rev-parse HEAD 2>/dev/nul
   # (d) THE ROUND-2 BLOCKER: a ctest that prints 93 "Passed" lines but reports a
   #     failure and exits nonzero must be REJECTED. A nonzero NFAIL is always a
   #     fail, regardless of the Passed-line count.
-  FB4="$TMP/fakebuild4"; mkdir -p "$FB4"
+  FB4="$TMP/fakebuild4"; mkdir -p "$FB4/bin/examples"
   { echo "ThermalFIST_SOURCE_DIR:STATIC=$SC"; echo "CMAKE_HOME_DIRECTORY:INTERNAL=$SC"; echo "INCLUDE_TESTS:BOOL=ON"; } > "$FB4/CMakeCache.txt"
-  printf '#!/bin/sh\nexit 0\n' > "$FB4/cpc1HRGTDep"; chmod +x "$FB4/cpc1HRGTDep"
+  # The example binaries must sit where verify derives them ($BUILD/bin/examples).
+  printf '#!/bin/sh\nexit 0\n' > "$FB4/bin/examples/cpc1HRGTDep"; chmod +x "$FB4/bin/examples/cpc1HRGTDep"
+  printf '#!/bin/sh\nexit 0\n' > "$FB4/bin/examples/cpc3chi2NEQ"; chmod +x "$FB4/bin/examples/cpc3chi2NEQ"
   FAKEBIN="$TMP/fakebin"; mkdir -p "$FAKEBIN"
   cat > "$FAKEBIN/ctest" <<'CT'
 #!/bin/bash
@@ -239,7 +241,7 @@ printf '\n98%% tests passed, 1 tests failed out of 93\n'; exit 1
 CT
   chmod +x "$FAKEBIN/ctest"
   expect_msg 1 "reported 1 failed" "verify: ctest failure not masked by 93 Passed lines" -- \
-    env PATH="$FAKEBIN:$PATH" TFIST="$FB4/cpc1HRGTDep" TFIST_BUILD="$FB4" TFIST_ROOT="$REALSRC" TFIST_EXAMPLES="$FB4" \
+    env PATH="$FAKEBIN:$PATH" TFIST="$FB4/bin/examples/cpc1HRGTDep" TFIST_BUILD="$FB4" TFIST_ROOT="$REALSRC" TFIST_EXAMPLES="$FB4/bin/examples" \
     bash "$VERIFY" --tests-only
 else
   echo "  note  identity sub-guards (cache binding / INCLUDE_TESTS / symlinked binary) skipped: no pinned clone at $REALSRC"

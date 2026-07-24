@@ -14,16 +14,17 @@ pass. `verify_thermalfist.sh` forces `-j1` and clears `CTEST_PARALLEL_LEVEL`; if
 run ctest by hand, do the same. This is the single most important fact about the
 suite.
 
-## 2. The benchmark is a tolerance, not a byte match, on purpose
+## 2. The benchmark uses a MIXED comparator, not a uniform tolerance
 
-Upstream itself flags cpc1 as possibly non-deterministic across compilers: the
-`INCLUDE_ALL_TESTS=ON` option switches cpc1 to an exact `compare_files` and its own
-comment calls those cases "`non-deterministic` among compilers/hardware". The
-default suite therefore compares with `test_CompareOutputs`, an absolute 1e-6
-per-column tolerance. So the honest claim is "reproduces the shipped reference
-within the code's own 1e-6 comparator", verified on macOS/Apple clang and
-Linux/gcc. Do not upgrade this to "bit-identical"; the authors deliberately did
-not.
+The 93-case suite does not compare everything the same way. cpc2 (4 cases) and
+cpc4's `analyt.dat` (1 case) are compared BYTE-EXACT with `cmake -E compare_files`,
+while cpc1 (3), Thermodynamics (6), Susceptibilities (6) and NeutronStar (1) use
+`test_CompareOutputs`, an absolute 1e-6 per-column tolerance. cpc4's Monte Carlo
+output (`cpc4.montecarlo.dat`) is not compared at all. Both platforms pass every
+case. Upstream flags cpc1 as possibly non-deterministic across compilers (its
+`INCLUDE_ALL_TESTS=ON` option would switch cpc1 to `compare_files`), which is why
+cpc1 stays on the tolerance comparator. Do not describe the suite as uniformly
+byte-identical (cpc1 is not) nor as uniformly 1e-6 (cpc2/cpc4 are byte-exact).
 
 ## 3. cpc3's label column breaks all-numeric parsers
 

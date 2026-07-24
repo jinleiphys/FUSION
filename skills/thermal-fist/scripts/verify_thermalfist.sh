@@ -92,6 +92,15 @@ fi
 # Canonicalize a path, following symlinks, or print nothing.
 canon () { cd "$1" 2>/dev/null && pwd -P || true; }
 
+# A tree is pristine iff there are no tracked modifications AND no untracked
+# files, INCLUDING git-ignored ones. `git status --porcelain` and
+# `git diff --quiet HEAD` both skip ignored files, so an injected source added to
+# .git/info/exclude would pass them while a glob build still compiled it.
+# `git ls-files --others` (no --exclude-standard) lists every untracked file.
+tree_pristine () {
+  ( cd "$1" 2>/dev/null && git diff --quiet HEAD 2>/dev/null && [ -z "$(git ls-files --others 2>/dev/null)" ] )
+}
+
 # Identity: the tree must be the pinned commit, clean, and the build must be
 # CONFIGURED FROM that tree (both CMake cache variables must be present, both
 # must equal the canonical source, and INCLUDE_TESTS must be ON). The binary must
@@ -101,10 +110,7 @@ check_identity () {
   [ -d "$SRCROOT/.git" ] || { log "'$SRCROOT' is not a git clone"; return 1; }
   head="$(cd "$SRCROOT" && git rev-parse HEAD 2>/dev/null || echo none)"
   [ "$head" = "$PIN" ] || { log "source tree is at $head, not the pin $PIN"; return 1; }
-  # `git status --porcelain`, not `git diff --quiet HEAD`: the latter ignores
-  # UNTRACKED files, so an injected extra source could sit in the tree and be
-  # picked up by a glob-based build while the tree still looked clean.
-  [ -z "$(cd "$SRCROOT" && git status --porcelain 2>/dev/null)" ] || { log "source tree has uncommitted or untracked files"; return 1; }
+  tree_pristine "$SRCROOT" || { log "source tree has tracked modifications or untracked files (including ignored)"; return 1; }
   src_canon="$(canon "$SRCROOT")"
   [ -n "$src_canon" ] || { log "cannot canonicalize source '$SRCROOT'"; return 1; }
   cache="$BUILD/CMakeCache.txt"
@@ -130,6 +136,19 @@ check_identity () {
 }
 check_identity || die "refusing to certify: the build does not verifiably come from the pinned source (see above)"
 log "identity OK: pinned commit, clean tree, build configured from that tree with tests on"
+
+# The example binaries used by the anchor and by stage 3 must come from the
+# identity-checked BUILD, NOT from a caller-supplied TFIST_EXAMPLES that could
+# point at an external stub. Derive them from BUILD and require non-symlink
+# regular files inside it.
+EXAMPLES="$BUILD/bin/examples"
+CPC1BIN="$EXAMPLES/cpc1HRGTDep"
+CPC3BIN="$EXAMPLES/cpc3chi2NEQ"
+for e in "$CPC1BIN" "$CPC3BIN"; do
+  [ -f "$e" ] && [ ! -L "$e" ] || die "example binary '$e' is missing or a symlink; the build is not intact"
+done
+# The anchor uses cpc1 from the build, not the possibly-external $BIN.
+BIN="$CPC1BIN"
 
 FAILED=0
 
@@ -216,9 +235,7 @@ if [ "$DO_TESTS" = "1" ]; then
   for spec in "0:cpc3.EQ.chi2.out:strict" "1:cpc3.NEQ.chi2.out:structure"; do
     cfg="${spec%%:*}"; rest="${spec#*:}"; fn="${rest%%:*}"; mode="${rest#*:}"
     cwd="$(mktemp -d)"; ref="$SRCROOT/test/ReferenceOutput/$fn"
-    if [ ! -x "$EXAMPLES/cpc3chi2NEQ" ]; then
-      log "FAIL: cpc3chi2NEQ binary missing from $EXAMPLES"; FAILED=1
-    elif ! ( cd "$cwd" && "$EXAMPLES/cpc3chi2NEQ" "$cfg" ) >/dev/null 2>&1; then
+    if ! ( cd "$cwd" && "$CPC3BIN" "$cfg" ) >/dev/null 2>&1; then
       log "FAIL: cpc3chi2NEQ $cfg exited nonzero"; FAILED=1
     elif [ "$mode" = "strict" ]; then
       if [ ! -s "$ref" ]; then
@@ -229,7 +246,7 @@ if [ "$DO_TESTS" = "1" ]; then
         log "FAIL: cpc3 $fn does not reproduce the shipped reference within $REF_TOL"; FAILED=1
       fi
     else
-      if python3 "$HERE/check_output_thermalfist.py" "$cwd/$fn" --min-rows 5 --min-cols 9 >/dev/null; then
+      if python3 "$HERE/check_output_thermalfist.py" "$cwd/$fn" --rows 5 --cols 9 >/dev/null; then
         log "cpc3 $fn (NEQ fit) runs and is structurally valid (under-constrained, not compared)"
       else
         log "FAIL: cpc3 $fn is structurally invalid"; FAILED=1
