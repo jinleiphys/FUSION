@@ -111,10 +111,28 @@ is built to fail ONLY the guard under test.
 
 ## What the adversarial passes found
 
-THREE Codex adversarial passes (`codex exec`, allowed to build and run the code)
+FOUR Codex adversarial passes (`codex exec`, allowed to build and run the code)
 ran. Round 1 returned 13 findings, round 2 found 4 more that round 1's fixes had
-introduced or left, round 3 found 7 more (1 blocker, 3 major, 3 minor), ALL
-fixed; selftest grew 35 -> 48 -> 50.
+introduced or left, round 3 found 7 more, round 4 found 4 more (1 blocker, 2
+major, 1 minor), ALL fixed; selftest grew 35 -> 48 -> 50.
+
+Round 4: (1, BLOCKER, systemic) build identity was still spoofable: an external
+build dir with a cache bound to the pinned source, 93 `/usr/bin/true` CTest
+entries and reference-copying cpc stubs passed `VERIFY OK`. Being a regular file
+inside the build does not prove cmake produced it. Fixed by design: a tier-1
+certification (`VERIFY OK`) now requires verify to BUILD from the pinned source
+itself via install; a caller-supplied build (`TFIST_*` preset) yields
+`VERIFY PASSED-NOT-CERTIFIED`. This is a pattern shared by the whole skill family
+(they all accepted a preset build); Thermal-FIST is the first to make the preset
+path explicitly non-certifying. (2, MAJOR, FALSE REJECT) the run wrapper required
+151 rows for every cpc2 config, but only config 0 has 151 (1 and 3 have 76, 2 has
+61); the row count is now per-config. (3, MAJOR, FALSE REJECT) `git ls-files
+--others` lists git-IGNORED files too, so a macOS `.DS_Store` (covered by the
+repo's own `.gitignore`) false-rejected a legitimate clone; the predicate now uses
+`--exclude-per-directory=.gitignore`, which honours every tracked `.gitignore` but
+still not `.git/info/exclude`, so the injection attack stays caught while
+`.DS_Store` does not. (4, MINOR) the `--help` header still described a uniform
+1e-6 comparator; corrected to the mixed policy.
 
 Round 3: (1, BLOCKER) `verify_thermalfist.sh` had been committed non-executable
 (mode 100644), so the documented command returned permission denied; fixed to

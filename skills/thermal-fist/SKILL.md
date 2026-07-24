@@ -85,6 +85,12 @@ The anchor compares the FULL cpc1 output against the shipped reference (not just
 one row), the ctest stage runs the 93 cases serially and rejects skipped cases,
 and a third stage covers cpc3 (which upstream leaves out of the suite).
 
+A tier-1 certification (`VERIFY OK`) requires verify to BUILD from the pinned
+source itself via `install_thermalfist.sh`. If you preset `TFIST_*` to hand it an
+existing build, it validates that build but ends in `VERIFY PASSED-NOT-CERTIFIED`,
+because the identity checks prove a build was configured from the pinned source
+but cannot prove its binaries were produced by cmake rather than hand-forged.
+
 A clean run ends in `VERIFY OK`. If the expected test count was overridden with
 `TFIST_EXPECTED_TESTS`, it ends in `VERIFY PASSED-NOT-CERTIFIED` instead (not a
 superstring of `VERIFY OK`): the run passed but did not certify the pinned v1.6.1

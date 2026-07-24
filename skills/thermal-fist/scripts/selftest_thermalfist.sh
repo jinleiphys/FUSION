@@ -206,7 +206,7 @@ expect_msg 1 "not a git clone" "verify: non-clone source rejected" -- \
 PIN_CANON=fe5c61af00cf84765afa4746120d0bdb58c419ae
 REALSRC="${TFIST_ROOT_DIR:-$HOME/.cache/fusion/thermal-fist}/src"
 if [ -d "$REALSRC/.git" ] && [ "$(cd "$REALSRC" && git rev-parse HEAD 2>/dev/null)" = "$PIN_CANON" ] \
-   && (cd "$REALSRC" && git diff --quiet HEAD 2>/dev/null && [ -z "$(git ls-files --others 2>/dev/null)" ]); then
+   && (cd "$REALSRC" && git diff --quiet HEAD 2>/dev/null && [ -z "$(git ls-files --others --exclude-per-directory=.gitignore 2>/dev/null)" ]); then
   # (a) empty CMakeCache: no source-dir bindings -> rejected.
   FB="$TMP/fakebuild1"; mkdir -p "$FB"; : > "$FB/CMakeCache.txt"
   printf '#!/bin/sh\nexit 0\n' > "$FB/cpc1HRGTDep"; chmod +x "$FB/cpc1HRGTDep"

@@ -12,15 +12,17 @@
 # a grossly broken build in seconds.
 #
 # STAGE 2, the tier-1 evidence: reproduce Thermal-FIST's OWN shipped ctest suite,
-# 93 cases, comparing each cpc/EoS example against test/ReferenceOutput with the
-# code's own 1e-6 comparator (NOT a byte match; upstream flags cpc1 as
-# compiler-dependent). All 93 must PASS; skipped or not-run cases are rejected,
-# not counted as passes.
+# 93 cases, comparing each cpc/EoS example against test/ReferenceOutput with a
+# MIXED comparator: BYTE-EXACT (cmake -E compare_files) for cpc2 and cpc4.analyt.dat,
+# and a 1e-6 tolerance (test_CompareOutputs) for cpc1, Thermodynamics,
+# Susceptibilities and NeutronStar. All 93 must PASS; skipped or not-run cases are
+# rejected, not counted as passes.
 #
 # STAGE 3, cpc3: the shipped ctest suite does NOT include cpc3 (its RunCPC3 /
 # CompareCPC3 entries are commented out upstream), so this stage runs both cpc3
-# configs and compares their numeric columns against the shipped reference, so
-# cpc3 is covered rather than merely assumed.
+# configs. The EQUILIBRIUM fit (config 0) is compared to the reference at 1e-6;
+# the chemically-frozen NEQ fit (config 1) is under-constrained and not
+# reproducible across builds, so it is validated structurally only.
 #
 # THE CTEST SUITE MUST RUN SERIALLY. The Run<X> and Compare<X> tests share an
 # output file with NO declared dependency, so `ctest -j` lets a Compare read the
@@ -77,8 +79,19 @@ if [ "$EXPECTED_TESTS" != "$EXPECTED_TESTS_PINNED" ]; then
   CERTIFIED=0
 fi
 
+# The CERTIFYING path builds from the pinned source via install_thermalfist.sh,
+# which clones the pinned commit, checks the tree is pristine, builds with cmake,
+# and stamps the result. A caller-supplied build (TFIST_* preset) is accepted for
+# a fast dev-iteration run, but it CANNOT be tier-1 certified: the identity checks
+# below prove a build was configured from the pinned source, but not that its
+# binaries and CTest graph were actually PRODUCED by cmake rather than hand-forged
+# (an external build dir with a source-bound cache, `true` ctest entries and
+# reference-copying stubs would otherwise pass). So a preset build yields
+# VERIFY PASSED-NOT-CERTIFIED; only the from-source build certifies.
 if [ -n "${TFIST:-}" ] && [ -n "${TFIST_BUILD:-}" ] && [ -n "${TFIST_ROOT:-}" ] && [ -n "${TFIST_EXAMPLES:-}" ]; then
   BIN="$TFIST"; BUILD="$TFIST_BUILD"; SRCROOT="$TFIST_ROOT"; EXAMPLES="$TFIST_EXAMPLES"
+  log "NOTE: using a caller-supplied build (TFIST_* preset); this run validates it but is NOT a tier-1 certification"
+  CERTIFIED=0
 else
   OUT="$("$HERE/install_thermalfist.sh")" || die "install_thermalfist.sh failed"
   BIN="$(printf '%s\n' "$OUT" | sed -n 's/^TFIST=//p')"
@@ -92,13 +105,13 @@ fi
 # Canonicalize a path, following symlinks, or print nothing.
 canon () { cd "$1" 2>/dev/null && pwd -P || true; }
 
-# A tree is pristine iff there are no tracked modifications AND no untracked
-# files, INCLUDING git-ignored ones. `git status --porcelain` and
-# `git diff --quiet HEAD` both skip ignored files, so an injected source added to
-# .git/info/exclude would pass them while a glob build still compiled it.
-# `git ls-files --others` (no --exclude-standard) lists every untracked file.
+# A tree is pristine iff there are no tracked modifications AND no untracked file
+# that the IN-TREE .gitignore does not cover. `--exclude-per-directory=.gitignore`
+# honours every tracked .gitignore (so .DS_Store, build*/, .idea, .vscode are not
+# false positives) but NOT `.git/info/exclude`, which is where an attacker would
+# hide a source injected under a CMake glob, so that injection is still caught.
 tree_pristine () {
-  ( cd "$1" 2>/dev/null && git diff --quiet HEAD 2>/dev/null && [ -z "$(git ls-files --others 2>/dev/null)" ] )
+  ( cd "$1" 2>/dev/null && git diff --quiet HEAD 2>/dev/null && [ -z "$(git ls-files --others --exclude-per-directory=.gitignore 2>/dev/null)" ] )
 }
 
 # Identity: the tree must be the pinned commit, clean, and the build must be

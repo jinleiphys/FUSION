@@ -54,12 +54,15 @@ case "$EXAMPLE" in
     BINNAME="cpc1HRGTDep"; MAXCFG=2; EXPROWS=181; EXPCOLS=7
     case "$CONFIG" in 0) EXPFILE="cpc1.Id-HRG.TDep.out";; 1) EXPFILE="cpc1.EV-HRG.TDep.out";; 2) EXPFILE="cpc1.QvdW-HRG.TDep.out";; esac ;;
   cpc2)
-    BINNAME="cpc2chi2"; MAXCFG=3; EXPROWS=151; EXPCOLS=4
+    # Each cpc2 model variant scans a DIFFERENT temperature window, so the row
+    # counts differ per config (measured against the shipped references):
+    #   0 Id-HRG 151, 1 EV-TwoComponent 76, 2 EV-BagModel 61, 3 QvdW 76.
+    BINNAME="cpc2chi2"; MAXCFG=3; EXPCOLS=4
     case "$CONFIG" in
-      0) EXPFILE="cpc2.Id-HRG.ALICE2_76.chi2.TDep.out";;
-      1) EXPFILE="cpc2.EV-HRG-TwoComponent.ALICE2_76.chi2.TDep.out";;
-      2) EXPFILE="cpc2.EV-HRG-BagModel.ALICE2_76.chi2.TDep.out";;
-      3) EXPFILE="cpc2.QvdW-HRG.ALICE2_76.chi2.TDep.out";;
+      0) EXPFILE="cpc2.Id-HRG.ALICE2_76.chi2.TDep.out"; EXPROWS=151 ;;
+      1) EXPFILE="cpc2.EV-HRG-TwoComponent.ALICE2_76.chi2.TDep.out"; EXPROWS=76 ;;
+      2) EXPFILE="cpc2.EV-HRG-BagModel.ALICE2_76.chi2.TDep.out"; EXPROWS=61 ;;
+      3) EXPFILE="cpc2.QvdW-HRG.ALICE2_76.chi2.TDep.out"; EXPROWS=76 ;;
     esac ;;
   cpc3)
     BINNAME="cpc3chi2NEQ"; MAXCFG=1; EXPROWS=5; EXPCOLS=9
