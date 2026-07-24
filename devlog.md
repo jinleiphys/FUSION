@@ -3,6 +3,34 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-24: direction change, skill-building paused, pivot to the paper
+
+**The standard for "a skill passes" was wrong, and the fix reframes the whole
+queue.** A skill does not pass by building from a pinned source and clearing an
+anti-spoof rebuild (the `VERIFY OK` vs `PASSED-NOT-CERTIFIED` machinery I added on
+Thermal-FIST and vHLLE). It passes by REPRODUCING THE PUBLISHED WORK, the specific
+figure/table/number in the code's paper. That is exactly the fusion-paper
+benchmark's L2 (reproduce the author reference case) and L3 (unseen system vs
+published values), and the measurement lives in that repo's harness, not in the
+platform verify scripts. So: the TODO item to retrofit certification across the
+family is DROPPED, and the published-work audit belongs with the paper.
+
+**Skill-building is over-extended for the paper and is now PAUSED.** The paper's
+coverage gate closed 2026-07-23; the platform has 20 per-code skills; the paper
+keeps a final 12-13. So new skills add pruning and disclosure burden, not paper
+progress. The heavy-ion row is the proof: SMASH + GiBUU + Thermal-FIST + vHLLE are
+four skills for what the paper treats as ONE row, i.e. the last several builds
+(vHLLE included) were already past the point of paper-usefulness. FUSION stays a
+long-term maintained platform, so the rest of the code list resumes a few at a
+time after submission, never as a race to cover the field.
+
+**Critical path is now fusion-paper**, not FUSION: Phase B harness, the 2026-08-31
+axis + cell-list freeze, L3 published-anchor pre-registration, then the Sep-Oct
+matrix. Next platform-side task when it resumes: map each shipped skill's
+benchmark to the published result it reproduces (or flag it as code-self-test-only
+and needing an anchor), which is the L2/L3 pre-registration draft. Full statement
+in CLAUDE.md Key decisions 2026-07-24.
+
 ## 2026-07-24: vHLLE, the first analytic-solution benchmark in the series
 
 **What it is:** the 20th per-code skill (relativistic viscous hydrodynamics,
