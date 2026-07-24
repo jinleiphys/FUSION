@@ -2,6 +2,51 @@
 
 Older entries moved out of devlog.md to keep the auto-loaded portion under ~5 KB. NOT auto-imported.
 
+## 2026-07-23: Sky3D, and a guard that only the expensive path could falsify
+
+**Why we tried it:** Sky3D (TDHF) was the first skill of the newly opened
+heavy-ion row. The static 16O case reproduces the shipped reference exactly, so
+the physics side was settled early; the interesting failures were all in the
+harness.
+
+**What failed:** the skill failed its adversarial pass with 21 defects, and then
+its RE-verification pass with 8 more, one a blocker. The blocker is the one
+worth keeping. The numeric-overflow guard excluded Sky3D's symmetric
+`***** X *****` headers, but a real collision log also carries one-sided ones
+(`***** Data for fragment # 1 from file ...`, `******* Fragment # 0`), so every
+legitimate collision run was rejected, and `verify --with-collision` would have
+failed AFTER completing a 45-minute run. Second worst: `compare_sky3d.py`
+silently dropped a `NaN` from an energy line, because the numeric regex does not
+match "NaN", and then reported 265 values EXACT against a 266-value reference.
+
+**Root cause:** both are the same mistake in two costumes. A guard was written
+against the output I happened to have in front of me (a static run, a well-formed
+number) and never confronted with the output it would actually meet. I had never
+put a real collision `for006` through the validator, and never put a genuinely
+malformed value through the comparator; my own NaN test "passed" only through
+column misalignment, so it proved nothing.
+
+**Lesson:** a guard must be exercised against REAL output from every path it
+gates, not only the path that is cheap to run. If a path takes 45 minutes,
+extract one real output file from it once and keep that as a fixture, so the
+guard is tested in seconds forever after. Corollary that paid twice here: make
+every negative case assert WHICH guard fired. That mechanism caught two silent
+diversions in this session, including five pre-existing cases that a newly added
+requirement had rerouted onto the wrong guard.
+
+**Also measured, and left open:** an intermittent SIGBUS at startup on macOS,
+1 failure in 25 consecutive static runs (plus one during verification, so about
+4 per cent), against 0 in 25 on Linux. It dies before the first iteration with an
+empty for006. **Stack exhaustion is refuted**: a deliberately reduced 2 MB stack
+gave 0 failures in 6 runs, where a stack-limited crash would have got worse, not
+better. Do not retry `ulimit`. Cause unknown. It is a loud failure, so the
+harness rejects it instead of accepting a truncated run, and the skill ships as
+tier-1-with-a-stability-caveat rather than a bare tier 1.
+
+**Status:** Fixed, selftest 33 to 69 cases. Every landed attack is now a
+permanent regression test with a real-output fixture. The SIGBUS is documented,
+not solved.
+
 ## 2026-07-23: SMASH round 5, the streak ends, and the skill ships
 
 **Why we tried it:** four rounds in a row had found that the previous round's

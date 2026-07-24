@@ -88,7 +88,7 @@ headers (2.7 MB, header-only), not a patch to SMASH.
 | code | repo | license (GitHub API) | language | paper (CrossRef-verified) |
 |---|---|---|---|---|
 | ~~**SMASH**~~ **DONE 2026-07-23, see below** | smash-transport/smash | GPLv3, confirmed twice | C++17 / CMake | PRC **94**, 054905 (2016) |
-| **GiBUU** | gibuu/GiBUU_2017 | GPL-2.0 | Fortran | Buss et al., Phys. Rept. **512**, 1-124 (2012), `10.1016/j.physrep.2011.12.001` |
+| ~~**GiBUU**~~ **DONE 2026-07-24, see below** | gibuu.hepforge.org release2025 | GPL-2.0 | Fortran | Buss et al., Phys. Rept. **512**, 1-124 (2012), `10.1016/j.physrep.2011.12.001` |
 | **Thermal-FIST** | vlvovch/Thermal-FIST | GPL-3.0 | C++ | Vovchenko, Stoecker, Comput. Phys. Commun. **244**, 295-310 (2019), `10.1016/j.cpc.2019.06.024` |
 | **vHLLE** | yukarpenko/vhlle | GPL-2.0 | C++ | Karpenko et al., Comput. Phys. Commun. **185**, 3016-3027 (2014), `10.1016/j.cpc.2014.07.010` |
 | **MUSIC** | MUSIC-fluid/MUSIC | GPL-2.0 | C++ | (paper not yet CrossRef-verified) |
@@ -128,7 +128,34 @@ confirm exactly its own case fails), and an adversarial reader allowed to run th
 real code. The single fix that retired a whole class rather than one case was
 replacing a fail-open branch with fail-closed. Running on Linux exposed selftest
 fixtures that were FABRICATING their input while passing cleanly on macOS.
-Details in `skills/smash/references/verification.md`. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
+Details in `skills/smash/references/verification.md`.
+
+**DONE 2026-07-24: GiBUU**, `skills/gibuu/`, the **eighteenth per-code skill**
+and second of this row, **TIER 2**. GPL-2.0, release 2025 patch 5, pinned by
+tarball SHA-256 + version.txt (the repo distributes tarballs from hepforge and
+closed anonymous svn in 2018, so there is no commit to pin, and the skill states
+that the provenance is weaker than a git pin rather than implying otherwise).
+Builds unpatched on macOS/ARM (gfortran 15.2) and Linux/x86-64 (gfortran 13.3).
+Its reach is the reason it is here: neutrino- and lepton-nucleus final-state
+interactions, which SMASH does not model.
+
+Tier 2 stated up front: GiBUU ships NO reference output of any kind, so the
+tier-1 route does not exist. Build integrity is cross-build reproduction (all 8
+output files bit-identical at a fixed seed across both platforms), physics is
+NOT claimed. One candidate physics anchor, the two total columns of the pion
+table, was AUDITED AND DEMOTED: reading LoPionAnalysis.f90 they agree by
+construction (set complements), not as an independent identity, so it is kept as
+a bookkeeping check and labelled that way.
+
+One Codex adversarial pass, 1 blocker + 8 lesser, all fixed. The blocker was the
+familiar shape (a rule that held for my sample, not for what the code accepts):
+the seed readback grepped the first `SEED=` line anywhere while GiBUU reads the
+first `&initRandom` namelist, so an empty first block clock-seeded a run the
+wrapper called reproducible. Two defects were found ONLY by the second platform:
+the `-lbz2` retry (Linux-only, never exercisable on macOS) and a native-exe
+guard that rejected the real Linux build because GiBUU.x is a symlink and GNU
+`file` does not follow symlinks by default. selftest 50/50 and VERIFY OK on both
+platforms. Full write-up in `skills/gibuu/references/verification.md`. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
 GSL, Eigen 3.x and Pythia exactly 8.316. **Zero source patches** on macOS/ARM and
 Linux/x86-64. **TIER 1**: reproduces SMASH's own 104-case ctest suite, 104/104
 first attempt on Linux.

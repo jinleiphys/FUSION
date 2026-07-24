@@ -3,6 +3,50 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-24: GiBUU adversarial pass, one blocker, all in the seed/parse edges
+
+**Why we tried it:** first Codex pass on the GiBUU skill (18th per-code skill,
+tier 2). Nine findings, one blocker, all fixed and re-verified on both platforms.
+
+**The blocker, same shape as everything SMASH kept hitting.** The effective-seed
+readback grepped the first `SEED=` line ANYWHERE in the job card, but GiBUU reads
+the first `&initRandom` NAMELIST. An empty first `&initRandom` with a seeded
+second block, or a stray `SEED=` outside any block, made the wrapper report a
+seeded run while GiBUU fell back to the clock. Both injection and readback now
+operate strictly on the first `&initRandom` block; verified against the real
+binary. It is the SMASH lesson restated: a rule ("the seed is the first SEED=
+line") that held for my sample and not for what the code accepts.
+
+**Two that only Linux could show, both about following symlinks / env:**
+- the `-lbz2` conditional retry (added blind for Linux, never exercised on
+  macOS) fired correctly on the first Linux run;
+- the new native-exe fast-path guard rejected the REAL Linux build, because
+  GiBUU.x is a symlink and GNU `file` does not follow symlinks by default while
+  macOS `file` does. Fixed with `file -bL`. This is a fresh instance of "a guard
+  validated on one platform," and it was caught only by running on the second.
+
+**Other fixes:** Inf slipped past a guard matching only `infinity`; GiBUU's own
+`!!!!! ERROR ... STOPPING !!` fatal line was missed by an anchored `^ERROR`
+regex; the seed range was int64 but GiBUU's Seed is a 32-bit integer that aborts
+above 2^31-1; the checker read only the last row and one sum rule (now every row
+and both `col2+3+4=col5` and `col5+6=col7`); the vacuity guard was exact-zero
+only (the pion-absorption card gives -3.7e-11).
+
+**A number claim retracted.** "343,039 numbers bit-identical" was false
+precision: the per-number count is tokenizer-dependent (three methods, three
+answers, because Fortran line-wraps records). Replaced with the exact,
+reproducible unit: 5 of 8 output files are seed-driven, 3 are lookup tables, and
+all 8 are bit-identical across platforms at a fixed seed.
+
+**Lesson:** first-pass discipline (dual-platform + flip + fixture self-assert)
+caught two defects during construction, but the seed blocker and the symlink
+guard were caught only by an adversary running the real binary on both
+platforms. Construction-time testing against your own model of a Fortran
+namelist reader has a floor; the real binary is the only authority.
+
+**Status:** all nine fixed, selftest 37 to 50 cases, every new guard flipped,
+VERIFY OK on macOS/ARM and Linux/x86-64.
+
 ## 2026-07-23: SMASH shipped after five adversarial rounds, and what actually found the defects
 
 **Why it matters beyond SMASH:** four of the five rounds found that the PREVIOUS
@@ -49,48 +93,3 @@ digit count is not a range: capping a seed at 18 digits rejected
 
 **Status:** SHIPPED, tier 1, seventeenth per-code skill. selftest 103/103 and
 ctest 104/104 first attempt on macOS/ARM and Linux/x86-64.
-
-## 2026-07-23: Sky3D, and a guard that only the expensive path could falsify
-
-**Why we tried it:** Sky3D (TDHF) was the first skill of the newly opened
-heavy-ion row. The static 16O case reproduces the shipped reference exactly, so
-the physics side was settled early; the interesting failures were all in the
-harness.
-
-**What failed:** the skill failed its adversarial pass with 21 defects, and then
-its RE-verification pass with 8 more, one a blocker. The blocker is the one
-worth keeping. The numeric-overflow guard excluded Sky3D's symmetric
-`***** X *****` headers, but a real collision log also carries one-sided ones
-(`***** Data for fragment # 1 from file ...`, `******* Fragment # 0`), so every
-legitimate collision run was rejected, and `verify --with-collision` would have
-failed AFTER completing a 45-minute run. Second worst: `compare_sky3d.py`
-silently dropped a `NaN` from an energy line, because the numeric regex does not
-match "NaN", and then reported 265 values EXACT against a 266-value reference.
-
-**Root cause:** both are the same mistake in two costumes. A guard was written
-against the output I happened to have in front of me (a static run, a well-formed
-number) and never confronted with the output it would actually meet. I had never
-put a real collision `for006` through the validator, and never put a genuinely
-malformed value through the comparator; my own NaN test "passed" only through
-column misalignment, so it proved nothing.
-
-**Lesson:** a guard must be exercised against REAL output from every path it
-gates, not only the path that is cheap to run. If a path takes 45 minutes,
-extract one real output file from it once and keep that as a fixture, so the
-guard is tested in seconds forever after. Corollary that paid twice here: make
-every negative case assert WHICH guard fired. That mechanism caught two silent
-diversions in this session, including five pre-existing cases that a newly added
-requirement had rerouted onto the wrong guard.
-
-**Also measured, and left open:** an intermittent SIGBUS at startup on macOS,
-1 failure in 25 consecutive static runs (plus one during verification, so about
-4 per cent), against 0 in 25 on Linux. It dies before the first iteration with an
-empty for006. **Stack exhaustion is refuted**: a deliberately reduced 2 MB stack
-gave 0 failures in 6 runs, where a stack-limited crash would have got worse, not
-better. Do not retry `ulimit`. Cause unknown. It is a loud failure, so the
-harness rejects it instead of accepting a truncated run, and the skill ships as
-tier-1-with-a-stability-caveat rather than a bare tier 1.
-
-**Status:** Fixed, selftest 33 to 69 cases. Every landed attack is now a
-permanent regression test with a real-output fixture. The SIGBUS is documented,
-not solved.

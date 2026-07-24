@@ -74,7 +74,8 @@ Prints `RESULT_DIR=`. It copies the job card into the output directory as
 `jobcard_used.job`, rewrites `path_To_Input` to the real database (every shipped
 card carries the authors' own `'~/GiBUU/buuinput'`), applies the seed, then
 asserts a zero exit, the `BUU simulation: finished` banner, at least one
-non-empty `.dat` file, no NaN or Infinity, and no `ERROR`-severity log line.
+non-empty `.dat` file, no NaN or Inf, and none of GiBUU's fatal error lines
+(including its decorated `!!!!! ERROR ... STOPPING !!` form).
 
 GiBUU writes into the **current working directory**, so the wrapper runs it
 inside the output directory.
@@ -84,7 +85,7 @@ inside the output directory.
 ```bash
 scripts/verify_gibuu.sh              # three stages, about 2 minutes
 scripts/verify_gibuu.sh --stage 1
-scripts/selftest_gibuu.sh            # harness only, 37 cases, seconds, no build needed
+scripts/selftest_gibuu.sh            # harness only, 50 cases, seconds, no build needed
 ```
 
 The three stages are determinism in **both** directions (same seed identical,
@@ -123,10 +124,10 @@ in one place.
 
 `references/output-format.md`. Two things to know before quoting any number:
 
-- Most of the output is **not** results. A pion run writes 343,039 numbers of
-  which only **1,026** are driven by the Monte Carlo; the rest are potential and
-  density lookup tables. The split was measured by re-running with a second
-  seed, not assumed.
+- Most of the output is **not** results. A pion run writes 8 output
+  files, of which only **5 are driven by the Monte Carlo**; the other 3 are
+  potential and density lookup tables (about 342,000 of the ~343,000 numbers).
+  The split was measured by re-running with a second seed, not assumed.
 - In `pionInduced_xSections.dat`, columns 7 and 8 agree **by construction**, not
   as an independent physics check, and column 6 (`absorption_xSection`) comes
   out **negative** at modest statistics because of how it is defined. Neither is
@@ -138,7 +139,7 @@ in one place.
 | stage | what | result |
 |---|---|---|
 | build | macOS/ARM gfortran 15.2, Linux/x86-64 gfortran 13.3 | unpatched on both |
-| cross-build | same card and seed, all 8 output files | bit-identical; 1,026 MC-driven numbers |
+| cross-build | same card and seed, all 8 output files | bit-identical; 5 files MC-driven, 3 deterministic |
 | determinism | same seed / different seed | identical / differs, both asserted |
 | identity | two routes to the total | agree (by construction, see verification.md) |
 

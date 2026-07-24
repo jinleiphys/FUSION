@@ -163,9 +163,21 @@ build_identity () {
   echo "$SRC_SHA|$INP_SHA|$($FC --version 2>/dev/null | head -1)|$(uname -s)|$(uname -m)"
 }
 
+# A native executable, not a script wearing GiBUU.x's name. This does not make
+# identity adversarial: with by-checksum provenance a compiled fake that prints
+# the banner is inherently indistinguishable without rebuilding, and the header
+# says so. What it does close is the cheap impostor, a shell stub, which the
+# stamp's identity string (writable, copyable) would otherwise wave through on
+# the fast path.
+# -L follows the symlink: GiBUU.x is a link to objects/GiBUU.x, and GNU file does
+# NOT follow it by default (macOS file does), so without -L this reported
+# "symbolic link to ..." on Linux and wrongly rejected a real ELF build.
+is_native_exe () { case "$(file -bL "$1" 2>/dev/null)" in Mach-O*|ELF*) return 0 ;; *) return 1 ;; esac; }
+
 fast_path_ok () {
   [ -x "$BIN" ] || return 1
   [ -f "$STAMP" ] || return 1
+  is_native_exe "$BIN" || { log "'$BIN' is not a native executable, rebuilding"; return 1; }
   [ "$(head -1 "$STAMP")" = "$(build_identity)" ] || { log "build identity changed, rebuilding"; return 1; }
   return 0
 }
@@ -214,6 +226,7 @@ else
     fi
   fi
   [ -x "$BIN" ] || die "the build reported success but $BIN is missing"
+  is_native_exe "$BIN" || die "the build produced '$BIN' but it is not a native executable"
   { build_identity; printf '%s\n' "$LIBPATH"; } > "$STAMP"
 fi
 

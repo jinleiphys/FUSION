@@ -50,11 +50,21 @@ import math
 import sys
 
 N_COLUMNS = 15
-I_ELAB, I_QESUM, I_ABS, I_TOTAL, I_CHECK = 0, 4, 5, 6, 7
+I_ELAB, I_PIM, I_PI0, I_PIP, I_QESUM, I_ABS, I_TOTAL, I_CHECK = 0, 1, 2, 3, 4, 5, 6, 7
+# A total below this (in mb) is numerically zero, not a small cross section. The
+# pion-absorption card produces totals like -3.7e-11, and an identity check on
+# two numerically-zero routes is vacuous. Measured cross sections in this file
+# are hundreds to thousands of mb, so the floor cannot reject a real result.
+ZERO_FLOOR = 1e-6
 
 
-def read_row(path):
-    """Return the single data row as floats, or (None, message)."""
+def read_rows(path):
+    """Return ALL data rows as lists of floats, or (None, message).
+
+    The earlier version read only the last row, so a corrupted earlier row (a
+    different energy point, or a truncated line) was never seen. GiBUU appends
+    one row per energy, and every one must be well formed.
+    """
     try:
         with open(path) as fh:
             lines = [ln for ln in fh if ln.strip() and not ln.lstrip().startswith('#')]
@@ -62,19 +72,22 @@ def read_row(path):
         return None, f"cannot read {path}: {exc}"
     if not lines:
         return None, f"{path} has a header but no data row"
-    fields = lines[-1].split()
-    if len(fields) != N_COLUMNS:
-        return None, (f"{path} has {len(fields)} columns, expected {N_COLUMNS}; "
-                      f"the output format changed and this parser would silently "
-                      f"read the wrong quantities")
-    try:
-        row = [float(f) for f in fields]
-    except ValueError:
-        return None, f"{path} has a non-numeric field in its data row: {lines[-1].strip()[:90]!r}"
-    for i, v in enumerate(row):
-        if not math.isfinite(v):
-            return None, f"{path} column {i + 1} is not finite: {v}"
-    return row, None
+    rows = []
+    for ln in lines:
+        fields = ln.split()
+        if len(fields) != N_COLUMNS:
+            return None, (f"{path} has a row with {len(fields)} columns, expected {N_COLUMNS}; "
+                          f"the output format changed and this parser would silently "
+                          f"read the wrong quantities: {ln.strip()[:90]!r}")
+        try:
+            row = [float(f) for f in fields]
+        except ValueError:
+            return None, f"{path} has a non-numeric field in a data row: {ln.strip()[:90]!r}"
+        for i, v in enumerate(row):
+            if not math.isfinite(v):
+                return None, f"{path} column {i + 1} is not finite: {v}"
+        rows.append(row)
+    return rows, None
 
 
 def close(a, b, tol):
@@ -100,43 +113,64 @@ def main():
         print("FAIL: --tolerance must be positive")
         return 1
 
-    row, err = read_row(args.datfile)
-    if row is None:
+    rows, err = read_rows(args.datfile)
+    if rows is None:
         print(f"FAIL: {err}")
         return 1
 
     ok = True
-    total, check = row[I_TOTAL], row[I_CHECK]
-    # Guard the guard: if BOTH routes are zero the comparison below is vacuous.
-    if total == 0.0 and check == 0.0:
-        print("FAIL: both total columns are zero, so the identity check would pass vacuously")
-        return 1
-    if close(total, check, args.tolerance):
-        print(f"  bookkeeping identity holds: sigma Total = {total:g}, "
-              f"sigma Total(check) = {check:g} (agree to {args.tolerance:g} relative)")
-        print("    NB this is true by construction, see the module docstring; it catches a "
-              "lost or double-counted event, not wrong physics")
-    else:
-        print(f"FAIL: the two totals disagree: {total:g} vs {check:g}; "
-              f"events are being lost or double counted")
-        ok = False
+    # Structural checks apply to EVERY row; the pinned-value checks only to the
+    # last one (single-energy cards write exactly one row, and for a multi-energy
+    # card the caller pins a specific expectation, not all of them).
+    for r, row in enumerate(rows):
+        total, check = row[I_TOTAL], row[I_CHECK]
+        label = "" if len(rows) == 1 else f" (row {r + 1})"
 
-    if not args.identity_only:
-        # The sum rule the row is built from. Cheap, and it catches a column
-        # shift that the identity above would survive.
+        # Vacuity: two numerically-zero totals make the identity meaningless, so
+        # it must not pass on them. A hard exact-zero test missed -3.7e-11.
+        if max(abs(total), abs(check)) < ZERO_FLOOR:
+            print(f"FAIL: both total columns are ~0{label} ({total:g}, {check:g}), so the "
+                  f"identity check would be vacuous")
+            ok = False
+            continue
+
+        if close(total, check, args.tolerance):
+            if not args.identity_only or r == len(rows) - 1:
+                print(f"  bookkeeping identity holds{label}: sigma Total = {total:g}, "
+                      f"sigma Total(check) = {check:g} (agree to {args.tolerance:g} relative)")
+        else:
+            print(f"FAIL: the two totals disagree{label}: {total:g} vs {check:g}; "
+                  f"events are being lost or double counted")
+            ok = False
+
+        # Two sum rules the row is built from, both cheap, both catching a
+        # column shift the identity above would survive. Column 5 is the sum of
+        # the three pion channels, and column 7 is column 5 plus column 6.
+        if not close(row[I_PIM] + row[I_PI0] + row[I_PIP], row[I_QESUM], args.tolerance):
+            print(f"FAIL: columns 2+3+4 = {row[I_PIM] + row[I_PI0] + row[I_PIP]:g} does not "
+                  f"equal Sigma_QElastic (column 5) = {row[I_QESUM]:g}{label}; the columns are "
+                  f"not the ones this parser expects")
+            ok = False
         if not close(row[I_QESUM] + row[I_ABS], total, args.tolerance):
             print(f"FAIL: column 5 + column 6 = {row[I_QESUM] + row[I_ABS]:g} does not equal "
-                  f"column 7 = {total:g}; the columns are not the ones this parser expects")
+                  f"column 7 = {total:g}{label}; the columns are not the ones this parser expects")
             ok = False
+
+    if ok:
+        print("    NB the identity is true by construction, see the module docstring; it catches a "
+              "lost or double-counted event, not wrong physics")
+
+    if not args.identity_only:
+        last = rows[-1]
         for name, idx, want in (('elab', I_ELAB, args.expect_elab),
                                 ('Sigma_QElastic', I_QESUM, args.expect_qe),
                                 ('sigma Total', I_TOTAL, args.expect_total)):
             if want is None:
                 continue
-            if close(row[idx], want, args.tolerance):
-                print(f"  {name}: {row[idx]:g} matches the pinned {want:g}")
+            if close(last[idx], want, args.tolerance):
+                print(f"  {name}: {last[idx]:g} matches the pinned {want:g}")
             else:
-                print(f"FAIL: {name} is {row[idx]:g}, pinned value is {want:g} "
+                print(f"FAIL: {name} is {last[idx]:g}, pinned value is {want:g} "
                       f"(relative tolerance {args.tolerance:g})")
                 ok = False
 

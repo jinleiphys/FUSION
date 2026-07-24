@@ -49,28 +49,31 @@ behaviour-preserving does not arise here.
 ## Cross-build reproduction, and what it is actually worth
 
 The same job card (`002_Pion.job`, pion-induced at 50 MeV) with the same
-explicit seed was run on both platforms and every output file compared.
+explicit seed was run on both platforms and **all 8 output files are
+bit-identical**. That headline would overstate the result, so it is decomposed
+by FILE, which is the robust unit: files were classified as deterministic or
+Monte-Carlo-dependent **by measurement**, running the same case with a second
+seed and seeing which files changed.
 
-| | |
-|---|---|
-| output files | 8 of 8 **bit-identical** |
-| numbers compared | 343,039 |
-
-That headline would overstate the result, so it is decomposed. Files were
-classified as deterministic or Monte-Carlo-dependent **by measurement**, not by
-assumption: the same case was run with a second seed and the files that changed
-are the ones the MC actually drives.
-
-| class | numbers | files |
+| class | files | roughly how many numbers |
 |---|---|---|
-| deterministic tables | 342,013 (99.7%) | potential plot, density table, mass-assignment table |
-| **MC-dependent output** | **1,026** | angular distribution, QE generation, cross-section rows |
+| deterministic tables | `ReAdjust.PlotPot`, `massass_nBody`, `DensTab_target` | ~342,000 |
+| **MC-dependent output** | `pionInduced_dTheta`, `massAssStatus`, `pionInduced_QE_generation`, `pionInduced_xSections`, `pionInduced_xSections_all` | ~1,000 |
 
 So the honest claim is: **GiBUU's Monte Carlo path is bit-reproducible across
-two architectures and two gfortran major versions**, on 1,026 numbers. That is
-stronger than SkyNet (libm-limited, bit-identity unattainable) and the same
-shape as pikoe. It is NOT 343,039 numbers of evidence, because 94 per cent of
-those come from one potential-plot table that no random number touches.
+two architectures and two gfortran major versions**, on the five files the seed
+actually drives. That is stronger than SkyNet (libm-limited, bit-identity
+unattainable) and the same shape as pikoe. It is NOT ~343,000 numbers of
+evidence, because 99.7 per cent of those are lookup tables no random number
+touches.
+
+**The number counts are approximate on purpose.** An exact "343,039" was
+quoted in an earlier version and was false precision: how many numbers a file
+holds depends on the tokenizer (a Fortran line-wrapped record can be counted as
+one field per token or per wrapped line), and three counting methods gave three
+answers. What is exact and reproducible is the per-file classification: **5 of
+8 files change with the seed, 3 do not, and all 8 are bit-identical across the
+two platforms at a fixed seed.**
 
 ## The seed trap, measured in both directions
 
@@ -118,7 +121,7 @@ section.
 
 ## Harness
 
-`scripts/selftest_gibuu.sh`, **37 cases**, seconds, no GiBUU build required
+`scripts/selftest_gibuu.sh`, **50 cases**, seconds, no GiBUU build required
 (the runs use a stub executable). Every guard has a negative case that fails
 only that guard and asserts WHICH guard fired.
 
@@ -147,6 +150,48 @@ adversarial pass afterwards:
   and the intended message never printed. Restructured into `if ! python3 ...`.
 - A selftest marker used a regex alternation (`non-numeric\|not finite`) inside
   a `case` statement, which matches globs, not regexes. It could never fire.
+
+## What the adversarial pass found
+
+One Codex pass, run against the shipped scripts and the real binary. It found
+one blocker and eight lesser defects, all fixed, and confirmed the demoted
+identity and the eventtype table were right.
+
+- **BLOCKER: `--seed` could be silently ignored.** The effective-seed readback
+  grepped the first `SEED=` line anywhere in the file, but GiBUU reads the first
+  `&initRandom` namelist. A card with an empty first `&initRandom` and a seeded
+  second one, or a stray `SEED=` outside any block, made the wrapper report a
+  seeded run while GiBUU used the clock. Both seed injection and readback now
+  operate strictly on the first `&initRandom` block. Verified against the real
+  binary: the injected seed lands in the first block and GiBUU echoes it.
+- **HIGH: `Inf` slipped past the non-finite guard**, which matched only `nan`
+  and `infinity`. Fortran writes `Inf`; now matched.
+- **HIGH: GiBUU's own fatal line was missed.** Its format is `--- !!!!! ERROR
+  while reading namelist "X" !!!!! STOPPING !!` (output.f90:426), and the guard
+  required `ERROR` at the start of the line. Now matches the decoration.
+- **HIGH: the install fast path could certify a shell-script stub** named
+  `GiBUU.x`, because it checked only the stamp and the completion banner, both
+  forgeable. A native Mach-O/ELF check now rejects a stub. A compiled fake that
+  prints the banner remains indistinguishable without rebuilding; that is
+  inherent to by-checksum provenance and is stated, not papered over.
+- **MEDIUM: the seed range was int64, but GiBUU's Seed is a 32-bit Fortran
+  integer** and aborts above 2147483647 (measured, exit 134). The wrapper now
+  bounds the seed to signed int32, so it never accepts a value the code rejects.
+- **MEDIUM: the checker read only the last data row and only one sum rule.** It
+  now validates every row, and checks both `col2+col3+col4 = col5` and
+  `col5+col6 = col7`, so a component-column shift the total-only rule survived is
+  caught.
+- **LOW: the vacuity guard was exact-zero only**, and the pion-absorption card
+  produces totals like -3.7e-11 that are numerically zero; now floored.
+- **LOW: the number counts were false precision** (see the note above); replaced
+  with the tokenizer-independent per-file split.
+
+The seed blocker is the same shape as everything the SMASH skill kept hitting: a
+rule (here "the seed is the first SEED= line") that held for the sample in front
+of me and not for the inputs the code actually accepts. It was caught here in
+one pass rather than five because the harness ran on the real binary, but it was
+NOT caught by construction, which is the honest limit of writing tests against
+your own mental model of a Fortran namelist reader.
 
 The verification of the seed injection deserves its own note: it does not stop
 at checking that the job card now contains the seed. It checks that **GiBUU

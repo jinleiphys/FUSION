@@ -29,13 +29,16 @@ with two different seeds and seeing which files changed:
 | `DensTab_target.dat` | 8,004 | no, density table |
 | `pionInduced_dTheta*.dat` | 906 | **yes** |
 | `massAssStatus.dat` | 58 | **yes** |
-| `pionInduced_QE_generation.dat` | 42 | **yes** |
+| `pionInduced_QE_generation.dat` | ~42 | **yes** |
 | `pionInduced_xSections.dat` | 17 | **yes** |
 | `pionInduced_xSections_all.dat` | 3 | **yes** |
 
-So of 343,039 numbers only **1,026** are driven by the Monte Carlo. Any claim
-about reproducibility should be stated over those, not over the total, or it
-overstates the evidence by a factor of 300.
+So of the eight files only **five** are driven by the Monte Carlo, about 1,000
+of the roughly 343,000 numbers; the other three are lookup tables. Any claim
+about reproducibility should be stated over those five files, not over the
+total, or it overstates the evidence by a factor of 300. The per-number counts
+are approximate (they depend on how Fortran line-wrapped records are tokenized);
+the per-file split is exact.
 
 ## The cross-section table, column by column
 

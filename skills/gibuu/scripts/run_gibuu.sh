@@ -54,17 +54,22 @@ JOBCARD="$(cd "$(dirname "$JOBCARD")" && pwd -P)/$(basename "$JOBCARD")"
 grep -qiE '^[[:space:]]*&input([[:space:]]|$)' "$JOBCARD" \
   || die "job card '$JOBCARD' has no '&input' namelist; is it a GiBUU job card?"
 
-# Range-checked, not digit-counted: a digit count is not a range, and an integer
+# GiBUU's Seed is a DEFAULT Fortran integer, i.e. 32-bit (random.f90:
+# `integer,save :: Seed = 0`, and it converts the clock value with
+# `int(mod(seed8,int(huge(seed),8)),4)`). A value above 2147483647 makes GiBUU
+# abort while reading the namelist (measured: exit 134), so accepting the int64
+# range here would let the wrapper pass a seed the code then rejects. Bound it
+# to signed int32, and range-check rather than digit-count, because an integer
 # too large for the shell to compare would otherwise slip past the zero test.
-in_int64 () {
+in_int32 () {
   python3 -c 'import sys
 try:
     v = int(sys.argv[1])
 except ValueError:
     sys.exit(1)
-sys.exit(0 if -(2**63) <= v < 2**63 else 1)' "$1" 2>/dev/null
+sys.exit(0 if -(2**31) <= v <= 2**31 - 1 else 1)' "$1" 2>/dev/null
 }
-is_int () { printf '%s' "$1" | grep -qE '^[+-]?[0-9]+$' && in_int64 "$1"; }
+is_int () { printf '%s' "$1" | grep -qE '^[+-]?[0-9]+$' && in_int32 "$1"; }
 
 if [ -n "$SEED" ]; then
   is_int "$SEED" || die "--seed must be an integer, got '$SEED'"
@@ -118,27 +123,50 @@ then
   die "the job card has no 'path_To_Input' entry, so GiBUU cannot be pointed at the input database"
 fi
 
-# Apply the seed. GiBUU accepts either spelling of the namelist entry.
-if [ -n "$SEED" ]; then
-  python3 - "$WORKCARD" "$SEED" <<'PY'
+# Apply the seed, AND read back the seed GiBUU will actually use, in ONE place
+# that mirrors GiBUU's own namelist semantics. Fortran reads the FIRST namelist
+# group of a given name, so only the first `&initRandom ... /` block matters and
+# a SEED anywhere else in the file is inert. The earlier version grepped "the
+# first SEED= line anywhere", which two initRandom blocks (first one empty) or a
+# stray SEED outside any block defeated: the wrapper reported the run as seeded
+# while GiBUU fell back to SYSTEM_CLOCK. So the helper below operates strictly on
+# the first initRandom block, inserts one only when there is none, and prints the
+# effective seed (empty means "no seed in the first block", i.e. the clock).
+EFFECTIVE_SEED="$(python3 - "$WORKCARD" "${SEED:-}" <<'PY'
 import re, sys
-path, seed = sys.argv[1], sys.argv[2]
+path, seed = sys.argv[1], (sys.argv[2] if len(sys.argv) > 2 else "")
 text = open(path).read()
-new, n = re.subn(r'(?im)^(\s*SEED\s*=\s*)[-+]?\d+', lambda m: m.group(1) + seed, text)
-if n == 0:
-    # No initRandom block in this card: append one.
-    new = text.rstrip('\n') + "\n\n&initRandom\n      SEED = %s\n/\n" % seed
-open(path, 'w').write(new)
-PY
-fi
 
-# Judge the seed that will ACTUALLY be used, read back from the card as it now
-# stands. Zero means "draw from the clock", so it is refused like an absent one.
-EFFECTIVE_SEED="$(grep -iE '^[[:space:]]*SEED[[:space:]]*=' "$WORKCARD" | head -1 \
-  | sed -E 's/.*[Ss][Ee][Ee][Dd][[:space:]]*=[[:space:]]*//; s/[[:space:]]*!.*$//; s/[[:space:]]*$//' | tr -d '\r' || true)"
+# The first &initRandom ... / block, case-insensitively. Group 1 is its body.
+blk = re.compile(r'(?is)(^[ \t]*&initRandom\b.*?)^[ \t]*/[ \t]*$', re.M)
+m = blk.search(text)
+
+def seed_in(body):
+    s = re.search(r'(?im)^[ \t]*SEED[ \t]*=[ \t]*([-+]?\d+)', body)
+    return s.group(1) if s else ""
+
+if seed:                       # --seed given: set it inside the first block
+    if m:
+        body = m.group(1)
+        if re.search(r'(?im)^[ \t]*SEED[ \t]*=', body):
+            body = re.sub(r'(?im)^([ \t]*SEED[ \t]*=[ \t]*)[-+]?\d+', r'\g<1>' + seed, body, count=1)
+        else:
+            body = body.rstrip('\n') + '\n      SEED = %s\n' % seed
+        text = text[:m.start(1)] + body + text[m.end(1):]
+    else:                      # no initRandom block at all: append one
+        text = text.rstrip('\n') + '\n\n&initRandom\n      SEED = %s\n/\n' % seed
+    open(path, 'w').write(text)
+    m = blk.search(text)       # re-locate after the edit
+
+# Effective seed = the SEED of the FIRST block, or empty (block absent, or no
+# SEED in it, both of which make GiBUU use the clock).
+print(seed_in(m.group(1)) if m else "")
+PY
+)" || die "failed to process the job card's initRandom block"
+
 if [ "$ALLOW_RANDOM" = "0" ]; then
   if [ -z "$EFFECTIVE_SEED" ]; then
-    die "the job card sets no initRandom Seed, so GiBUU would draw one from the system clock and the run would be irreproducible. Pass --seed <non-zero>, or --allow-random-seed."
+    die "the job card's first &initRandom block sets no Seed, so GiBUU would draw one from the system clock and the run would be irreproducible. Pass --seed <non-zero>, or --allow-random-seed."
   fi
   if ! is_int "$EFFECTIVE_SEED"; then
     die "the job card's Seed is '$EFFECTIVE_SEED', which is not an integer; pin it with --seed"
@@ -168,23 +196,30 @@ grep -q "BUU simulation: finished" "$OUTDIR/out.log" \
   || { log "the run did not report 'BUU simulation: finished'; it stopped early"
        tail -10 "$OUTDIR/out.log" >&2; exit 1; }
 
-# GiBUU reports namelist trouble in words rather than in the exit status, and a
-# job card whose namelist name is misspelled is simply IGNORED, so the run
-# succeeds with default physics. That is the quiet failure worth catching.
-if grep -qiE "^ *(ERROR|FATAL)|severe error|namelist.*not (found|read)" "$OUTDIR/out.log" "$OUTDIR/err.log" 2>/dev/null; then
-  log "the run logged an error:"
-  grep -inE "^ *(ERROR|FATAL)|severe error|namelist.*not (found|read)" "$OUTDIR/out.log" "$OUTDIR/err.log" 2>/dev/null | head -5 >&2
+# GiBUU reports fatal trouble in words rather than in the exit status. Its own
+# fatal format is, from output.f90 line 426,
+#     --- !!!!! ERROR while reading namelist "X" !!!!! STOPPING !!
+# so the ERROR is NOT at the start of the line and an anchored `^ *ERROR` misses
+# it. Match GiBUU's decoration (`!!!!! ERROR`, `STOPPING !!`) as well as a
+# line-leading ERROR/FATAL. Do NOT match the bare word "error" anywhere, because
+# the benign banners and physics labels contain it.
+ERROR_RE="!!!!![[:space:]]*ERROR|ERROR[[:space:]]+while[[:space:]]+reading|STOPPING[[:space:]]*!!|^[[:space:]]*(ERROR|FATAL)\b|severe error"
+if grep -qE "$ERROR_RE" "$OUTDIR/out.log" "$OUTDIR/err.log" 2>/dev/null; then
+  log "the run logged a fatal error:"
+  grep -nE "$ERROR_RE" "$OUTDIR/out.log" "$OUTDIR/err.log" 2>/dev/null | head -5 >&2
   exit 1
 fi
 
 NDAT="$(find "$OUTDIR" -maxdepth 1 -name '*.dat' -size +0c 2>/dev/null | wc -l | tr -d ' ')"
 [ "${NDAT:-0}" -gt 0 ] || die "the run produced no non-empty .dat output"
 
-# Non-finite values must never reach a result file. Word-bounded, because the
-# headers are prose: a bare search for "inf" matches ordinary words.
-if grep -qiE "(^|[^a-z])(nan|infinity)([^a-z]|$)" "$OUTDIR"/*.dat 2>/dev/null; then
-  log "the output contains NaN or Infinity:"
-  grep -liE "(^|[^a-z])(nan|infinity)([^a-z]|$)" "$OUTDIR"/*.dat 2>/dev/null | head -3 >&2
+# Non-finite values must never reach a result file. Fortran writes these as
+# NaN, Inf, Infinity or -Inf, so `inf` has to be matched too, not only the long
+# spelling. Word-bounded, because the headers are prose: the trailing [^a-z]
+# stops `inf` from matching "info" and the leading one lets "-Inf" through.
+if grep -qiE "(^|[^a-z])(nan|inf|infinity)([^a-z]|$)" "$OUTDIR"/*.dat 2>/dev/null; then
+  log "the output contains NaN or Inf:"
+  grep -liE "(^|[^a-z])(nan|inf|infinity)([^a-z]|$)" "$OUTDIR"/*.dat 2>/dev/null | head -3 >&2
   exit 1
 fi
 

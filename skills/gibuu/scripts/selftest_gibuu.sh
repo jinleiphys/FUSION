@@ -79,11 +79,13 @@ STUB
     echo 'case "$MODE" in'
     echo '  nooutput) echo "########## BUU simulation: finished"; exit 0 ;;'
     echo '  errorlog) echo " ERROR   something went wrong" ;;'
+    echo '  errordecor) echo '"'"'--- !!!!! ERROR while reading namelist "initRandom" !!!!! STOPPING !!'"'"' ;;'
     echo 'esac'
     echo 'cp '"$GOODXS"' ./pionInduced_xSections.dat'
     cat <<'STUB2'
 case "$MODE" in
-  nan) sed -i.bak 's/716.2       716.2/716.2         NaN/' ./pionInduced_xSections.dat; rm -f ./pionInduced_xSections.dat.bak ;;
+  nan)     sed -i.bak 's/716.2       716.2/716.2         NaN/' ./pionInduced_xSections.dat; rm -f ./pionInduced_xSections.dat.bak ;;
+  inf)     sed -i.bak 's/716.2       716.2/716.2         Inf/' ./pionInduced_xSections.dat; rm -f ./pionInduced_xSections.dat.bak ;;
 esac
 echo "########## BUU simulation: finished"
 exit 0
@@ -102,8 +104,12 @@ expect_fail_with "a file with no &input namelist is rejected" "no '&input' namel
 expect_fail_with "an unknown argument is rejected" "unknown argument" "$RUN" --jobcard "$CARD" --bogus
 expect_fail_with "an empty --seed value is rejected" "requires a non-empty value" "$RUN" --jobcard "$CARD" --seed ""
 expect_fail_with "a non-integer --seed is rejected" "must be an integer" "$RUN" --jobcard "$CARD" --seed 1.5
-expect_fail_with "an oversized --seed is rejected" "must be an integer" "$RUN" --jobcard "$CARD" --seed 9223372036854775808
-expect_pass "the int64 maximum seed is accepted" "$RUN" --jobcard "$CARD" --outdir "$TMP/w_max" --seed 9223372036854775807
+# GiBUU's Seed is a 32-bit Fortran integer: it ABORTS on a value above
+# 2147483647 (measured, exit 134), so the wrapper must not accept the int64
+# range. The int32 maximum is fine, one past it is refused.
+expect_pass "the int32 maximum seed is accepted" "$RUN" --jobcard "$CARD" --outdir "$TMP/w_max" --seed 2147483647
+expect_fail_with "one past the int32 maximum is rejected" "must be an integer" "$RUN" --jobcard "$CARD" --seed 2147483648
+expect_fail_with "an int64-sized --seed is rejected" "must be an integer" "$RUN" --jobcard "$CARD" --seed 9223372036854775807
 
 echo
 echo "run_gibuu.sh seed policy (GiBUU reads Seed=0 as 'use the system clock')"
@@ -121,7 +127,7 @@ grep -q "SEED=0" "$TMP/seed0.job" && ok "fixture: Seed=0 substitution applied" |
 expect_fail_with "a card with Seed=0 is refused" "SYSTEM_CLOCK" "$RUN" --jobcard "$TMP/seed0.job" --outdir "$TMP/w_z"
 sed '/&initRandom/,/^\//d' "$CARD" > "$TMP/noseed.job"
 grep -qi "initRandom" "$TMP/noseed.job" && bad "fixture: initRandom was NOT removed" || ok "fixture: initRandom removed"
-expect_fail_with "a card with no initRandom at all is refused" "sets no initRandom Seed" \
+expect_fail_with "a card with no initRandom at all is refused" "first &initRandom block sets no Seed" \
   "$RUN" --jobcard "$TMP/noseed.job" --outdir "$TMP/w_n"
 expect_pass "--allow-random-seed accepts a Seed=0 card deliberately" \
   "$RUN" --jobcard "$TMP/seed0.job" --outdir "$TMP/w_allow" --allow-random-seed
@@ -130,6 +136,31 @@ expect_pass "--seed on a card with no initRandom appends the block" \
 grep -q "Seed: 5150" "$TMP/w_app/out.log" \
   && ok "and the appended block is really read by the binary" \
   || bad "the appended initRandom block was not honoured"
+
+# GiBUU reads the FIRST &initRandom namelist, so only that block matters. These
+# cases defend the blocker Codex found: a first empty block or a stray SEED
+# outside any block used to make the wrapper report a seeded run while GiBUU
+# fell back to the clock.
+# (a) two blocks, first empty, no --seed: the FIRST block has no seed, refuse.
+{ printf '&input\n  eventtype = 2\n  path_To_Input = %s\n/\n\n&initRandom\n/\n\n&initRandom\n  SEED = 99\n/\n' "'~/GiBUU/buuinput'"; } > "$TMP/two_first_empty.job"
+grep -c "&initRandom" "$TMP/two_first_empty.job" | grep -q 2 && ok "fixture: two initRandom blocks" || bad "fixture: not two initRandom blocks"
+expect_fail_with "an empty first initRandom (with a seeded second) is refused" "first &initRandom block sets no Seed" \
+  "$RUN" --jobcard "$TMP/two_first_empty.job" --outdir "$TMP/w_2fe"
+# (b) two blocks, first empty, --seed given: the seed must land in the FIRST block.
+expect_pass "--seed with an empty first block runs" \
+  "$RUN" --jobcard "$TMP/two_first_empty.job" --outdir "$TMP/w_2fs" --seed 4242
+FIRSTBLK="$(awk '/&initRandom/{n++} n==1{print} /^\//&&n==1{exit}' "$TMP/w_2fs/jobcard_used.job")"
+printf '%s' "$FIRSTBLK" | grep -q "SEED = 4242" \
+  && ok "the seed was injected into the FIRST initRandom block, not a later one" \
+  || bad "the seed did not land in the first initRandom block: $FIRSTBLK"
+grep -q "Seed: 4242" "$TMP/w_2fs/out.log" \
+  && ok "and GiBUU reported using it, not a clock seed" \
+  || bad "GiBUU did not report the injected seed"
+# (c) a SEED outside any initRandom block, no real block: refuse (it is inert).
+{ printf '&input\n  eventtype = 2\n  path_To_Input = %s\n  SEED = 45678\n/\n' "'~/GiBUU/buuinput'"; } > "$TMP/stray_seed.job"
+grep -qi "&initRandom" "$TMP/stray_seed.job" && bad "fixture: stray_seed unexpectedly has initRandom" || ok "fixture: stray seed has no initRandom block"
+expect_fail_with "a SEED outside any initRandom block is treated as absent" "first &initRandom block sets no Seed" \
+  "$RUN" --jobcard "$TMP/stray_seed.job" --outdir "$TMP/w_stray"
 
 echo
 echo "run_gibuu.sh input-path handling"
@@ -145,14 +176,16 @@ expect_fail_with "a nonexistent --input directory is rejected" "does not exist" 
 
 echo
 echo "run_gibuu.sh output guards (stub, one broken property each)"
-for mode in exitfail noboom nooutput nan errorlog; do
+for mode in exitfail noboom nooutput nan inf errorlog errordecor; do
   write_stub "stub_$mode" "$mode"
   case "$mode" in
-    exitfail) d="a nonzero exit status fails";           m="exited with status" ;;
-    noboom)   d="a missing completion banner fails";     m="stopped early" ;;
-    nooutput) d="a run with no .dat output fails";       m="no non-empty .dat output" ;;
-    nan)      d="NaN in the output fails";               m="NaN or Infinity" ;;
-    errorlog) d="an ERROR line in the log fails";        m="logged an error" ;;
+    exitfail)   d="a nonzero exit status fails";                m="exited with status" ;;
+    noboom)     d="a missing completion banner fails";          m="stopped early" ;;
+    nooutput)   d="a run with no .dat output fails";            m="no non-empty .dat output" ;;
+    nan)        d="NaN in the output fails";                    m="NaN or Inf" ;;
+    inf)        d="Inf in the output fails (not only 'infinity')"; m="NaN or Inf" ;;
+    errorlog)   d="a plain ERROR line in the log fails";        m="logged a fatal error" ;;
+    errordecor) d="GiBUU's decorated '!!!!! ERROR ... STOPPING' fails"; m="logged a fatal error" ;;
   esac
   GIBUU="$TMP/stub_$mode" expect_fail_with "$d" "$m" \
     "$RUN" --jobcard "$CARD" --outdir "$TMP/w_$mode" --seed 1
@@ -167,13 +200,30 @@ expect_pass "the pinned total matches" python3 "$CHECK" "$GOODXS" --expect-total
 write_xs "$TMP/broken.dat" 8869. -8153. 716.2 800.0
 expect_fail_with "a broken bookkeeping identity is caught" "events are being lost or double counted" \
   python3 "$CHECK" "$TMP/broken.dat"
-# A column shift would survive the identity but not the sum rule.
+# A column shift would survive the col7==col8 identity but not the col5+col6=col7 sum rule.
 write_xs "$TMP/shifted.dat" 1000. -8153. 716.2 716.2
 expect_fail_with "a column that no longer satisfies col5+col6=col7 is caught" "not the ones this parser expects" \
   python3 "$CHECK" "$TMP/shifted.dat"
-# Both totals zero would make the identity pass vacuously.
+# The component sum rule col2+col3+col4==col5 catches a shift the other two miss.
+# GOODXS has piMinus/Null/Plus = 3189/3226/2453 = 8868 ~ col5 8869 (rounding);
+# break col5 to a value the totals still satisfy but the components do not.
+{ echo '# elab, Sigma piMinus, Sigma piNull,Sigma piPlus, Sigma_QElastic, absorption_xSection, sigma Total, sigma Total(check), absorption Events ,number of runs, error of quasiElastic(-1:1), error of absorption_xSection, error of sigma Total'
+  printf '   50.00       1.       2.       3.       8869.       -8153.       716.2       716.2            4290           1  0.1100E+06  0.1100E+06  0.1100E+06   9999.       9999.\n'
+} > "$TMP/badcomp.dat"
+expect_fail_with "a broken component sum col2+col3+col4=col5 is caught" "columns 2+3+4" \
+  python3 "$CHECK" "$TMP/badcomp.dat"
+# A malformed EARLIER row must not be ignored just because the last row is fine.
+{ head -1 "$GOODXS"; echo "   GARBAGE ROW"; tail -1 "$GOODXS"; } > "$TMP/badfirst.dat"
+expect_fail_with "a malformed earlier row is caught, not just the last one" "columns, expected 15" \
+  python3 "$CHECK" "$TMP/badfirst.dat"
+# Exactly-zero totals: vacuous.
 write_xs "$TMP/zeros.dat" 0. 0. 0. 0.
-expect_fail_with "an all-zero table does not pass vacuously" "vacuously" python3 "$CHECK" "$TMP/zeros.dat"
+expect_fail_with "an all-zero table does not pass vacuously" "vacuous" python3 "$CHECK" "$TMP/zeros.dat"
+# Numerically-zero (not exactly zero) totals are also vacuous: the pion
+# absorption card produces totals like -3.7e-11.
+write_xs "$TMP/tiny.dat" 0.00000000004 -0.00000000008 -0.00000000004 -0.00000000004
+expect_fail_with "numerically-zero totals do not pass vacuously either" "vacuous" \
+  python3 "$CHECK" "$TMP/tiny.dat" --identity-only
 # A changed column count must be an error, not a silent misread.
 { head -1 "$GOODXS"; echo "   50.00       3189.       3226."; } > "$TMP/short.dat"
 expect_fail_with "a row with the wrong column count is rejected" "columns, expected 15" \
