@@ -30,6 +30,9 @@ ROOT_CANON="$(cd "$ROOT_DIR" && pwd -P)"
 
 REPO="${TFIST_REPO:-https://github.com/vlvovch/Thermal-FIST.git}"
 PIN="${TFIST_PIN:-fe5c61af00cf84765afa4746120d0bdb58c419ae}"       # release v1.6.1
+# A pin is a 40-hex commit hash. Validating the FORMAT also blocks an
+# option-injection like TFIST_PIN=--detach reaching `git checkout` as a flag.
+printf '%s' "$PIN" | grep -qE '^[0-9a-f]{40}$' || { echo "install_thermalfist: TFIST_PIN must be a 40-char hex hash, got '$PIN'" >&2; exit 1; }
 
 SRCROOT="$ROOT_DIR/src"
 BUILD="$ROOT_DIR/build"
@@ -53,6 +56,19 @@ safe_rmrf () {
   case "$canon/" in "$ROOT_CANON"/*) : ;; *) log "refusing to delete '$canon' outside $ROOT_CANON"; return 1 ;; esac
   rm -rf "$canon"
 }
+
+# A symlinked src or build lets git, cmake and the CMakeCache/CMakeFiles deletion
+# operate on a directory OUTSIDE the cache root: a symlinked build would make
+# `rm -rf CMakeFiles` escape, and a symlinked src would let `git fetch/checkout`
+# mutate an external repository. Refuse both, and require anything that exists to
+# resolve strictly inside the cache root.
+for p in "$SRCROOT" "$BUILD"; do
+  if [ -L "$p" ]; then log "refusing to use '$p': it is a symlink"; exit 1; fi
+  if [ -e "$p" ]; then
+    rp="$(cd "$p" 2>/dev/null && pwd -P || echo none)"
+    case "$rp/" in "$ROOT_CANON"/*) : ;; *) log "refusing to use '$p': it resolves to '$rp', outside the cache root"; exit 1 ;; esac
+  fi
+done
 
 # -------------------------------------------------------------------- clone
 if [ -d "$SRCROOT/.git" ]; then
@@ -94,15 +110,13 @@ fast_path_ok () {
   [ -x "$BIN" ] || return 1
   [ -f "$STAMP" ] || return 1
   [ "$(cd "$SRCROOT" && git rev-parse HEAD)" = "$PIN" ] || { log "clone HEAD is not the pin, rebuilding"; return 1; }
-  # The build INPUTS (line 1: commit + compiler + platform) decide whether a
-  # rebuild is needed. A changed binary digest alone does not force a rebuild;
-  # it is only re-stamped, matching the lesson from SMASH where a ctest case
-  # relinked the binary and stale-digest logic forced needless reconfigures.
   [ "$(head -1 "$STAMP")" = "$(build_identity)" ] || { log "build identity changed, rebuilding"; return 1; }
-  if [ "$(sed -n 2p "$STAMP")" != "$(binary_digest)" ]; then
-    log "the representative binary was relinked since it was stamped; re-stamping"
-    { build_identity; binary_digest; } > "$STAMP"
-  fi
+  # Unlike SMASH (whose own library ctest relinks the binary during a run, so a
+  # digest change is expected and merely re-stamped), Thermal-FIST's examples are
+  # never relinked by its tests. So an UNEXPLAINED digest change means the binary
+  # was swapped or corrupted, and the honest response is to REBUILD from source,
+  # not to bless whatever is there.
+  [ "$(sed -n 2p "$STAMP")" = "$(binary_digest)" ] || { log "the binary's digest changed with no build-input change; rebuilding from source"; return 1; }
   return 0
 }
 
@@ -125,20 +139,27 @@ else
 fi
 
 # ------------------------------------------------------------------- probe
-# Content is the verdict AND the exit status must be zero. A crash after
-# writing a partial banner would otherwise pass. cpc1HRGTDep writes its output
-# to CWD, so probe in a throwaway directory.
+# Content is the verdict AND the exit status must be zero. A crash after writing
+# a partial banner would otherwise pass, and a substituted binary that merely
+# prints 100+ lines used to slip through a line count. The probe now validates
+# the FULL structure (181 rows, 7 numeric columns) and the physics anchor
+# (T=150 MeV thermodynamics) via check_output_thermalfist.py.
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CHECK="$HERE/check_output_thermalfist.py"
 probe_binary () {
-  local wd out
+  local wd
   wd="$(mktemp -d)"
   ( cd "$wd" && "$BIN" 0 ) > "$wd/stdout.txt" 2>&1 || { log "cpc1HRGTDep exited nonzero"; rm -rf "$wd"; return 1; }
   if [ ! -s "$wd/cpc1.Id-HRG.TDep.out" ]; then
     log "cpc1HRGTDep produced no cpc1.Id-HRG.TDep.out"; rm -rf "$wd"; return 1
   fi
-  out="$(grep -cvE '^#|T\[MeV\]' "$wd/cpc1.Id-HRG.TDep.out" 2>/dev/null || echo 0)"
+  if ! python3 "$CHECK" "$wd/cpc1.Id-HRG.TDep.out" --min-rows 181 --min-cols 7 \
+        --row-at 0 150 --expect 1 0.647513 2 3.846843 3 4.494356 --accuracy 1e-5 >/dev/null; then
+    log "cpc1HRGTDep output failed structural/anchor validation (truncated, wrong shape, or wrong physics)"
+    rm -rf "$wd"; return 1
+  fi
   rm -rf "$wd"
-  [ "${out:-0}" -ge 100 ] || { log "cpc1HRGTDep output has only $out data rows, expected ~181"; return 1; }
-  log "probe: cpc1HRGTDep produced $out temperature rows"
+  log "probe: cpc1HRGTDep output has 181 rows, 7 columns, and the T=150 MeV anchor matches"
 }
 probe_binary || { log "the built binary failed its probe"; exit 1; }
 

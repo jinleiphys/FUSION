@@ -9,8 +9,16 @@ so there is nothing to fork out of sync.
 After `install_thermalfist.sh`, the binaries live in `$TFIST_EXAMPLES`
 (`build/bin/examples/`). Each writes its table into the current directory.
 
+Do NOT `eval` the installer output: its lines are `KEY=value` with filesystem
+paths that can contain spaces or shell metacharacters (the cache root is
+user-settable via `TFIST_ROOT_DIR`), and `eval` would execute them. Extract the
+one variable you need instead:
+
 ```bash
-eval "$(scripts/install_thermalfist.sh)"        # sets TFIST_EXAMPLES etc. in this shell
+INSTALL_OUT="$(scripts/install_thermalfist.sh)"
+TFIST_EXAMPLES="$(printf '%s\n' "$INSTALL_OUT" | sed -n 's/^TFIST_EXAMPLES=//p')"
+TFIST_ROOT="$(printf '%s\n' "$INSTALL_OUT" | sed -n 's/^TFIST_ROOT=//p')"
+export TFIST_EXAMPLES TFIST_ROOT
 
 # cpc1: HRG thermodynamics vs temperature at mu = 0, three model variants
 scripts/run_thermalfist.sh --example cpc1 --config 0 --outdir /tmp/idHRG    # ideal

@@ -1,11 +1,13 @@
 #!/bin/bash
 # selftest_thermalfist.sh
 #
-# Harness self-test: exercises every guard in check_output_thermalfist.py and the
-# argument validation in run_/verify_thermalfist.sh, WITHOUT building Thermal-FIST.
-# Each negative case asserts that the guard FIRES on its own targeted input, and
-# each positive case asserts the guard does NOT over-fire on clean input. Run it
-# after any edit to the harness.
+# Harness self-test for check_output_thermalfist.py and the argument/identity
+# guards in run_/verify_thermalfist.sh, mostly WITHOUT building Thermal-FIST. Each
+# negative case asserts that the guard FIRES on its own targeted input, and each
+# positive case asserts the guard does NOT over-fire on clean input. Three verify
+# identity sub-guards (cache binding, INCLUDE_TESTS, symlinked binary) are only
+# REACHABLE when the pinned source clone is present and are exercised then, else
+# skipped with a printed note. Run it after any edit to the harness.
 #
 # No em-dashes (user rule).
 set -uo pipefail
@@ -98,7 +100,7 @@ expect_msg 1 "at least 5" "min-rows enforced" -- python3 "$CHECK" "$CLEAN" --min
 expect_msg 1 "at least 9" "min-cols enforced" -- python3 "$CHECK" "$CLEAN" --min-cols 9
 
 # Bad argument values.
-expect_msg 1 "must be positive" "non-positive accuracy rejected" -- python3 "$CHECK" "$CLEAN" --accuracy 0
+expect_msg 1 "finite positive" "non-positive accuracy rejected" -- python3 "$CHECK" "$CLEAN" --accuracy 0
 expect_msg 1 "non-negative" "negative min-rows rejected" -- python3 "$CHECK" "$CLEAN" --min-rows -1
 
 echo "== check_output: --reference comparison =="
@@ -147,22 +149,81 @@ expect_msg 1 "not empty" "run: non-empty outdir refused" -- env TFIST_EXAMPLES="
 # A stub cpc1 that writes NOTHING must be caught as "no table produced".
 NOOUT="$TMP/noout"; mkdir -p "$NOOUT"
 printf '#!/bin/sh\nexit 0\n' > "$NOOUT/cpc1HRGTDep"; chmod +x "$NOOUT/cpc1HRGTDep"
-expect_msg 1 "no .out or .dat" "run: empty producer caught" -- env TFIST_EXAMPLES="$NOOUT" bash "$RUN" --example cpc1 --config 0 --outdir "$TMP/o_empty"
+expect_msg 1 "did not produce the expected output" "run: empty producer caught" -- env TFIST_EXAMPLES="$NOOUT" bash "$RUN" --example cpc1 --config 0 --outdir "$TMP/o_empty"
 
 # A stub cpc1 that exits nonzero must be caught.
 FAILP="$TMP/failp"; mkdir -p "$FAILP"
 printf '#!/bin/sh\necho boom >&2\nexit 7\n' > "$FAILP/cpc1HRGTDep"; chmod +x "$FAILP/cpc1HRGTDep"
 expect_msg 1 "exited with status 7" "run: nonzero exit caught" -- env TFIST_EXAMPLES="$FAILP" bash "$RUN" --example cpc1 --config 0 --outdir "$TMP/o_fail"
 
+echo "== check_output: hardening guards (adversarial pass) =="
+
+# An all-numeric first line is not a named header (truncated / headerless dump).
+{ echo "1 2 3"; echo "4 5 6"; } > "$TMP/numhdr.out"
+expect_msg 1 "not a named header" "numeric first line rejected as header" -- python3 "$CHECK" "$TMP/numhdr.out"
+# A NaN accuracy must not make every comparison vacuously pass.
+expect_msg 1 "finite positive" "NaN accuracy rejected" -- python3 "$CHECK" "$CLEAN" --reference "$REF" --accuracy nan
+expect_msg 1 "finite positive" "NaN accuracy rejected (row-at)" -- python3 "$CHECK" "$CLEAN" --row-at 0 150 --expect 1 0.999 --accuracy nan
+# A NaN expected value must be rejected, not silently satisfied.
+expect_msg 1 "must be finite" "NaN expected value rejected" -- python3 "$CHECK" "$CLEAN" --row-at 0 150 --expect 1 nan
+# Negative column indices.
+expect_msg 1 "non-negative" "negative row-at column rejected" -- python3 "$CHECK" "$CLEAN" --row-at -1 150 --expect 1 0.6
+expect_msg 1 "non-negative" "negative expect column rejected" -- python3 "$CHECK" "$CLEAN" --row-at 0 150 --expect -1 0.6
+# Reference mode must compare LABEL text, not only numbers.
+{ echo "Dataset T x"; echo "RIGHT 150 1"; } > "$TMP/lab_ref.out"
+{ echo "Dataset T x"; echo "WRONG 150 1"; } > "$TMP/lab_out.out"
+expect_msg 1 "label" "reference label mismatch caught" -- python3 "$CHECK" "$TMP/lab_out.out" --reference "$TMP/lab_ref.out" --accuracy 1e-6
+
+echo "== run_thermalfist: hardening guards (no build) =="
+
+# cpc2 accepts 0..3; config 4 must be rejected (upper bound).
+expect_msg 1 "must be 0..3" "run: cpc2 config upper bound" -- env TFIST_EXAMPLES="$FAKE" bash "$RUN" --example cpc2 --config 4
+# A stub that writes the WRONG filename must be caught (unrelated-output scenario).
+WRONGF="$TMP/wrongf"; mkdir -p "$WRONGF"
+printf '#!/bin/sh\nprintf "x y\\n1 2\\n3 4\\n" > unrelated.dat\nexit 0\n' > "$WRONGF/cpc1HRGTDep"; chmod +x "$WRONGF/cpc1HRGTDep"
+expect_msg 1 "did not produce the expected output" "run: wrong output filename caught" -- \
+  env TFIST_EXAMPLES="$WRONGF" bash "$RUN" --example cpc1 --config 0 --outdir "$TMP/o_wrong"
+
 echo "== verify_thermalfist: argument + identity guards (no build) =="
 
 expect_msg 1 "unknown argument" "verify: unknown flag" -- bash "$VERIFY" --bogus
+# A malformed TFIST_PIN (not 40-hex) must be rejected, blocking option injection.
+expect_msg 1 "40-character hex" "verify: malformed PIN rejected" -- env TFIST_PIN="--detach" bash "$VERIFY" --anchor-only
 # Identity must fail when TFIST_ROOT is not a git clone.
 NOGIT="$TMP/notaclone"; mkdir -p "$NOGIT/build"; : > "$NOGIT/build/CMakeCache.txt"
 printf '#!/bin/sh\nexit 0\n' > "$NOGIT/build/cpc1HRGTDep"; chmod +x "$NOGIT/build/cpc1HRGTDep"
 expect_msg 1 "not a git clone" "verify: non-clone source rejected" -- \
   env TFIST="$NOGIT/build/cpc1HRGTDep" TFIST_BUILD="$NOGIT/build" TFIST_ROOT="$NOGIT" TFIST_EXAMPLES="$NOGIT/build" \
   bash "$VERIFY" --anchor-only
+
+# The identity sub-guards (cache binding, INCLUDE_TESTS, symlinked binary) are
+# only REACHABLE when the source HEAD equals the pin, which needs the real pinned
+# clone. Exercise them when it is present; otherwise skip with a note.
+PIN_CANON=fe5c61af00cf84765afa4746120d0bdb58c419ae
+REALSRC="${TFIST_ROOT_DIR:-$HOME/.cache/fusion/thermal-fist}/src"
+if [ -d "$REALSRC/.git" ] && [ "$(cd "$REALSRC" && git rev-parse HEAD 2>/dev/null)" = "$PIN_CANON" ] \
+   && (cd "$REALSRC" && git diff --quiet HEAD 2>/dev/null); then
+  # (a) empty CMakeCache: no source-dir bindings -> rejected.
+  FB="$TMP/fakebuild1"; mkdir -p "$FB"; : > "$FB/CMakeCache.txt"
+  printf '#!/bin/sh\nexit 0\n' > "$FB/cpc1HRGTDep"; chmod +x "$FB/cpc1HRGTDep"
+  expect_msg 1 "source-dir bindings" "verify: empty CMakeCache rejected" -- \
+    env TFIST="$FB/cpc1HRGTDep" TFIST_BUILD="$FB" TFIST_ROOT="$REALSRC" TFIST_EXAMPLES="$FB" bash "$VERIFY" --anchor-only
+  # (b) cache binds to the pinned source but INCLUDE_TESTS is OFF -> rejected.
+  FB2="$TMP/fakebuild2"; mkdir -p "$FB2"
+  SC="$(cd "$REALSRC" && pwd -P)"
+  { echo "ThermalFIST_SOURCE_DIR:STATIC=$SC"; echo "CMAKE_HOME_DIRECTORY:INTERNAL=$SC"; echo "INCLUDE_TESTS:BOOL=OFF"; } > "$FB2/CMakeCache.txt"
+  printf '#!/bin/sh\nexit 0\n' > "$FB2/cpc1HRGTDep"; chmod +x "$FB2/cpc1HRGTDep"
+  expect_msg 1 "WITHOUT -DINCLUDE_TESTS" "verify: INCLUDE_TESTS=OFF rejected" -- \
+    env TFIST="$FB2/cpc1HRGTDep" TFIST_BUILD="$FB2" TFIST_ROOT="$REALSRC" TFIST_EXAMPLES="$FB2" bash "$VERIFY" --anchor-only
+  # (c) a symlinked binary is rejected even with a good cache.
+  FB3="$TMP/fakebuild3"; mkdir -p "$FB3"
+  { echo "ThermalFIST_SOURCE_DIR:STATIC=$SC"; echo "CMAKE_HOME_DIRECTORY:INTERNAL=$SC"; echo "INCLUDE_TESTS:BOOL=ON"; } > "$FB3/CMakeCache.txt"
+  printf '#!/bin/sh\nexit 0\n' > "$TMP/realbin"; chmod +x "$TMP/realbin"; ln -s "$TMP/realbin" "$FB3/cpc1HRGTDep"
+  expect_msg 1 "symlink" "verify: symlinked binary rejected" -- \
+    env TFIST="$FB3/cpc1HRGTDep" TFIST_BUILD="$FB3" TFIST_ROOT="$REALSRC" TFIST_EXAMPLES="$FB3" bash "$VERIFY" --anchor-only
+else
+  echo "  note  identity sub-guards (cache binding / INCLUDE_TESTS / symlinked binary) skipped: no pinned clone at $REALSRC"
+fi
 
 echo
 echo "selftest_thermalfist: $PASS passed, $FAIL failed"

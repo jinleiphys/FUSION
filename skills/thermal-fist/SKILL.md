@@ -74,11 +74,15 @@ columns tolerated). Prints `RESULT_DIR=` and `RESULT_FILES=`.
 ## Verifying
 
 ```bash
-scripts/verify_thermalfist.sh              # anchor + ctest suite, about 5 min
-scripts/verify_thermalfist.sh --anchor-only  # fast deterministic physics anchor
-scripts/verify_thermalfist.sh --tests-only
-scripts/selftest_thermalfist.sh            # harness only, seconds, no build needed
+scripts/verify_thermalfist.sh              # anchor + ctest suite + cpc3, about 5 min
+scripts/verify_thermalfist.sh --anchor-only  # full cpc1 output vs the shipped reference
+scripts/verify_thermalfist.sh --tests-only   # the 93-case ctest suite + cpc3 stage
+scripts/selftest_thermalfist.sh            # harness only, 48 cases, seconds, no build needed
 ```
+
+The anchor compares the FULL cpc1 output against the shipped reference (not just
+one row), the ctest stage runs the 93 cases serially and rejects skipped cases,
+and a third stage covers cpc3 (which upstream leaves out of the suite).
 
 A clean run ends in `VERIFY OK`. If the expected test count was overridden with
 `TFIST_EXPECTED_TESTS`, it ends in `VERIFY PASSED-NOT-CERTIFIED` instead (not a
@@ -90,7 +94,10 @@ at tier 1. Evidence and what the adversarial pass found: `references/verificatio
 Thermal-FIST is a library; there is no monolithic input file. A calculation is a
 particle list plus a model plus thermal parameters, all covered in
 `references/input-format.md`. The cpc example programs take a single integer
-`<config>` selecting the model, and read `input/list/thermus23/list.dat`.
+`<config>` selecting the model. They do NOT all read the same particle list:
+cpc1 and cpc2 read `input/list/thermus23/list.dat`, while cpc3 and cpc4 read
+`input/list/PDG2014/list.dat`. The list is part of the physics, so reproducing a
+cpc3 fit with the thermus23 list would change the result.
 
 ## Reading the output
 
@@ -103,8 +110,9 @@ column.
 
 | stage | what | result |
 |---|---|---|
-| anchor | `cpc1HRGTDep 0`, Ideal HRG at T=150 MeV | p/T^4=0.647513, e/T^4=3.846843, s/T^3=4.494356, reproduced |
+| anchor | `cpc1HRGTDep 0`, full Ideal-HRG output vs shipped reference + T=150 MeV row | 181 rows / 7 cols reproduced within 1e-6; p/T^4=0.647513, e/T^4=3.846843, s/T^3=4.494356 |
 | test suite | Thermal-FIST's own 93 ctest cases, SERIAL | 93/93 on macOS/Apple clang 21 and Linux/gcc 13.3, within the code's 1e-6 comparator |
+| cpc3 | both cpc3 configs (not in the 93) | EQ fit reproduces the reference within 1e-6 both platforms; NEQ fit is under-constrained, validated structurally only |
 
 Tier 1: reproduces the shipped `test/ReferenceOutput` on two platforms through the
 code's own tolerance comparator. The first hadron-resonance-gas / equation-of-state

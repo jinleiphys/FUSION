@@ -59,34 +59,84 @@ test-suite defect, harmless once known: `verify_thermalfist.sh` forces `-j1` and
 clears `CTEST_PARALLEL_LEVEL`. A student who runs `ctest -j8` by hand and sees 21
 red comparisons has a working build, not a broken one.
 
-## A comparator limitation found while building this
+## cpc3 is not in the 93, and is covered separately
 
 `cpc3.{EQ,NEQ}.chi2.out` begins each row with a dataset LABEL
-(`NA49-30GeV-4pi`), then nine numbers. The shipped `test_CompareOutputs` reads
-each line with `istringstream >> double`, which fails on the label token, so it
-reads ZERO numbers from a cpc3 row and compares nothing. So the shipped cpc3
-comparison verifies only that the row counts match, not the values. The tier-1
-evidence therefore rests on the cpc1/cpc2/Thermodynamics/Susceptibilities tables,
-which are fully numeric and fully compared. `check_output_thermalfist.py` handles
-the label column correctly (strips consistent leading labels, requires everything
-after the first number to be numeric).
+(`NA49-30GeV-4pi`), then nine numbers. cpc3 is NOT one of the 93 ctest cases: its
+`RunCPC3` / `CompareCPC3` entries are commented out in `test/CMakeLists.txt`, and
+even the shipped `test_CompareOutputs` could not check it (its `>> double` fails
+on the label token, so it reads zero numbers from a cpc3 row). So the 93 tier-1
+cases rest on the cpc1/cpc2/Thermodynamics/Susceptibilities tables, which are
+fully numeric and fully compared. `verify_thermalfist.sh` adds a THIRD stage that
+covers cpc3, but honestly split by fit type:
+
+- **cpc3 config 0, the EQUILIBRIUM fit** (gammaq = gammaS = 1 fixed, only T, muB,
+  R free) is well-constrained and reproduces the shipped reference within 1e-6 on
+  BOTH macOS and Linux, so it is compared strictly.
+- **cpc3 config 1, the chemically-frozen NEQ fit** (gammaq and gammaS also free)
+  is under-constrained: the extra freedom flattens a chi2 direction, so the
+  minimiser lands on a DIFFERENT minimum per build. Measured: the ALICE muB comes
+  out 2.42 MeV on this build against 4.96 MeV in the reference, a 2.5 MeV gap, not
+  a last-digit drift, and both macOS and Linux disagree with the reference the
+  same way. This is almost certainly why upstream commented cpc3 out of its ctest
+  suite. So the NEQ output is validated STRUCTURALLY only (runs, 5 rows, 9 numeric
+  columns, finite), never compared numerically, and the skill says so plainly
+  rather than reporting a false match.
+
+`check_output_thermalfist.py` handles the label column (strips consistent leading
+labels, requires everything after the first number to be numeric, and compares
+the label text in reference mode).
 
 ## Harness self-test
 
-`scripts/selftest_thermalfist.sh` needs no build and covers 35 cases:
-structural validation of `check_output_thermalfist.py` (clean numeric table,
-leading-label table, empty file, header-only, mid-row label, NaN, Inf,
+`scripts/selftest_thermalfist.sh` covers 48 cases and needs no build for 45 of
+them: structural validation of `check_output_thermalfist.py` (clean numeric
+table, leading-label table, empty file, header-only, mid-row label, NaN, Inf,
 inconsistent numeric-column and label-column counts, min-rows/min-cols, bad
-accuracy), reference comparison (match, mismatch caught, loose-tolerance pass,
-row/column count mismatch), the `--row-at` anchor (match, missing value,
-out-of-range column, odd `--expect`, wrong value), `run_thermalfist.sh` argument
-validation (missing/unknown example, non-integer and out-of-range config, unknown
-flag, non-empty outdir, empty producer, nonzero exit), and `verify_thermalfist.sh`
-argument and identity guards. Each negative case is built to fail ONLY the guard
-under test; two selftest bugs found during construction were of exactly the shape
-the FUSION devlog warns about (a test input tripping a different guard first, and
-a `grep` needle beginning with `--` being read as an option), both fixed.
+accuracy, a numeric-only first line rejected as a non-header, NaN accuracy and NaN
+expected values, negative column indices), reference comparison (match, mismatch,
+loose-tolerance pass, row/column count mismatch, label-text mismatch), the
+`--row-at` anchor, `run_thermalfist.sh` argument validation (missing/unknown
+example, non-integer and out-of-range config for cpc1/cpc2/cpc3, unknown flag,
+non-empty outdir, empty producer, wrong output filename, nonzero exit), and
+`verify_thermalfist.sh` argument, PIN-format and identity guards. The three
+identity sub-guards that are only reachable when the source HEAD equals the pin
+(cache binding present, `INCLUDE_TESTS=ON`, non-symlinked binary) run when the
+pinned clone is present and are skipped with a note otherwise. Each negative case
+is built to fail ONLY the guard under test.
 
 ## What the adversarial pass found
 
-(to be filled in after the Codex pass)
+One Codex adversarial pass (`codex exec`, allowed to build and run the code)
+returned 13 findings, 5 blockers and 8 major, ALL fixed:
+
+Blockers: (1) a symlinked `src` or `build` under a user-set `TFIST_ROOT_DIR` let
+`git` and the `rm -rf CMakeFiles` step operate OUTSIDE the cache root; install now
+refuses a symlinked or escaping src/build. (2) 93 SKIPPED ctest cases were
+reported as 93 passes, because ctest counts skips as non-failures; verify now
+counts the actual `Passed` lines, requires exactly 93, and rejects any
+Skipped/Not-Run/Disabled/Timeout. (3) an empty `CMakeCache.txt` passed the
+source-build identity check because the binding was skipped when the cache
+variable was empty; verify now requires BOTH source-dir variables present and
+equal to the canonical source, plus `INCLUDE_TESTS:BOOL=ON`, and rejects a
+symlinked binary. (4) `--anchor-only` accepted a one-row truncated output; the
+anchor now compares the FULL cpc1 output (181 rows, 7 columns) against the
+shipped reference at 1e-6. (5) `run_thermalfist.sh` accepted any nonzero-exit
+table; it now requires the EXACT config-specific filename and shape and compares
+to the shipped reference.
+
+Major: NaN `--accuracy`/`--expect` made every comparison vacuously pass (now
+require finite positive); `TFIST_PIN` could certify a non-pinned build and
+`TFIST_PIN=--detach` was an option injection (now a 40-hex format check, and a
+non-canonical pin forces `VERIFY PASSED-NOT-CERTIFIED`); the installer blessed a
+swapped binary on a digest change instead of rebuilding (now rebuilds, and the
+probe validates full shape + anchor); cpc3 was documented as tested but is not in
+the 93 (now stated, and covered by the new stage 3); the `eval` install pattern
+was a path-injection vector (README now extracts variables with `sed`); the
+checker discarded header and label identity (now validates a named header and
+compares label text); the selftest coverage was incomplete (now 48 cases with the
+new guards); and the docs said all cpc examples read `thermus23` while cpc3/cpc4
+read `PDG2014` (corrected per program). Codex could NOT falsify the 93 serial-test
+count, the config ranges, the citation, the GPL-3.0 license, or the `-j1` +
+`CTEST_PARALLEL_LEVEL=1` serial enforcement, and found no bash-4 or GNU-only
+dependency.

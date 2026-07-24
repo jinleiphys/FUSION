@@ -50,12 +50,14 @@ line with `istringstream >> double` and compares column by column with an ABSOLU
 tolerance (1e-6 by default). Two consequences worth knowing:
 
 1. A row whose first token is a LABEL (cpc3) makes `>> double` fail on that token,
-   so the comparator reads NO numbers from that row and compares nothing on it. So
-   the shipped cpc3 comparison only checks that the row counts match, not the
-   numeric columns. This is an upstream comparator limitation, not something this
-   skill can fix; it is why cpc3 always "passes" its Compare test. The tier-1
-   evidence rests on the cpc1/cpc2/EoS tables, which are fully numeric and fully
-   compared.
+   so the comparator reads NO numbers from that row. But note that cpc3 is NOT in
+   the 93-case ctest suite at all: its `RunCPC3` / `CompareCPC3` entries are
+   commented out upstream (`test/CMakeLists.txt`). So the 93 tier-1 cases rest on
+   the cpc1/cpc2/EoS tables, which are fully numeric and fully compared.
+   `verify_thermalfist.sh` adds a SEPARATE stage for cpc3: the equilibrium fit
+   (config 0) is compared strictly at 1e-6, while the chemically-frozen NEQ fit
+   (config 1) is under-constrained and not reproducible across builds (its muB
+   differs by MeV, not the last digit), so it is validated structurally only.
 2. The comparison is a TOLERANCE, not a byte match. Upstream itself marks cpc1 as
    possibly non-deterministic across compilers (the `INCLUDE_ALL_TESTS` option
    switches cpc1 to exact `compare_files` and warns about it), which is why the

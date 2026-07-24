@@ -29,10 +29,17 @@ not.
 
 `cpc3.{EQ,NEQ}.chi2.out` begins each data row with a dataset NAME
 (`NA49-30GeV-4pi`), then nine numbers. A validator that does `float(token)` on the
-first column throws. Worse, the shipped `test_CompareOutputs` silently reads ZERO
-numbers from such a row (its `>> double` fails on the label and the rest is never
-reached), so its cpc3 comparison checks only the row count, not the values. Treat
-cpc3 as a row-labelled table; `check_output_thermalfist.py` does.
+first column throws. And cpc3 is NOT in the shipped 93-case ctest suite at all
+(its `RunCPC3`/`CompareCPC3` are commented out in `test/CMakeLists.txt`), so a
+corrupt cpc3 binary leaves all 93 cases green. `verify_thermalfist.sh` therefore
+runs both cpc3 configs in a separate stage. But only the EQUILIBRIUM fit (config
+0) reproduces: the chemically-frozen NEQ fit (config 1, gammaq and gammaS free) is
+under-constrained and lands on a different minimum per build (the ALICE muB is
+2.42 vs 4.96 MeV against the reference, on both macOS and Linux), which is almost
+certainly why upstream disabled cpc3 in the first place. So the stage compares
+cpc3.EQ strictly at 1e-6 and validates cpc3.NEQ structurally only. Do not tighten
+a fit result you did not converge yourself, and treat cpc3 as a row-labelled
+table.
 
 ## 4. cpc4 is Monte Carlo and is not a reproducible run
 

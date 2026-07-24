@@ -42,27 +42,52 @@ done
 [ -n "$EXAMPLE" ] || die "--example is required (cpc1, cpc2 or cpc3)"
 [ -n "$CONFIG" ]  || die "--config is required"
 
-# Map the example to its binary and the CLOSED set of config values the source
-# accepts. cpc1HRGTDep reads config with atoi and branches 0/1/2; anything else
-# is a silent fall-through, so we reject it here rather than run something the
-# source does not define.
+# Full-match integer validation before the value is used anywhere.
+printf '%s' "$CONFIG" | grep -qE '^[0-9]+$' || die "--config must be a non-negative integer, got '$CONFIG'"
+
+# Map (example, config) to its binary, the CLOSED set of config values the source
+# accepts, and the EXACT output file and shape the source produces. cpc1HRGTDep
+# reads config with atoi and branches 0/1/2; anything outside the set is a silent
+# fall-through, rejected here. Shapes are from the shipped test/ReferenceOutput.
 case "$EXAMPLE" in
-  cpc1) BINNAME="cpc1HRGTDep"; MAXCFG=2 ;;
-  cpc2) BINNAME="cpc2chi2";    MAXCFG=3 ;;
-  cpc3) BINNAME="cpc3chi2NEQ"; MAXCFG=1 ;;
+  cpc1)
+    BINNAME="cpc1HRGTDep"; MAXCFG=2; EXPROWS=181; EXPCOLS=7
+    case "$CONFIG" in 0) EXPFILE="cpc1.Id-HRG.TDep.out";; 1) EXPFILE="cpc1.EV-HRG.TDep.out";; 2) EXPFILE="cpc1.QvdW-HRG.TDep.out";; esac ;;
+  cpc2)
+    BINNAME="cpc2chi2"; MAXCFG=3; EXPROWS=151; EXPCOLS=4
+    case "$CONFIG" in
+      0) EXPFILE="cpc2.Id-HRG.ALICE2_76.chi2.TDep.out";;
+      1) EXPFILE="cpc2.EV-HRG-TwoComponent.ALICE2_76.chi2.TDep.out";;
+      2) EXPFILE="cpc2.EV-HRG-BagModel.ALICE2_76.chi2.TDep.out";;
+      3) EXPFILE="cpc2.QvdW-HRG.ALICE2_76.chi2.TDep.out";;
+    esac ;;
+  cpc3)
+    BINNAME="cpc3chi2NEQ"; MAXCFG=1; EXPROWS=5; EXPCOLS=9
+    # cpc3 config 1 is the chemically-frozen (NEQ) fit with gammaq AND gammaS
+    # free. That minimisation is under-constrained (a near-flat chi2 direction),
+    # so it lands on a DIFFERENT minimum on different builds: the shipped
+    # reference and a fresh run disagree by MeV in muB, not at the last digit.
+    # This is why upstream leaves cpc3 out of its ctest suite. So the NEQ output
+    # is validated structurally only, never compared to the reference.
+    case "$CONFIG" in
+      0) EXPFILE="cpc3.EQ.chi2.out"; REPRO=1 ;;
+      1) EXPFILE="cpc3.NEQ.chi2.out"; REPRO=0 ;;
+    esac ;;
   *) die "unknown --example '$EXAMPLE' (expected cpc1, cpc2 or cpc3)" ;;
 esac
-
-# Full-match integer validation before the value is passed to the binary.
-printf '%s' "$CONFIG" | grep -qE '^[0-9]+$' || die "--config must be a non-negative integer, got '$CONFIG'"
+REPRO="${REPRO:-1}"
 [ "$CONFIG" -le "$MAXCFG" ] || die "--config for $EXAMPLE must be 0..$MAXCFG, got $CONFIG"
 
-# Resolve the example binary.
-if [ -n "${TFIST_EXAMPLES:-}" ]; then
-  BINDIR="$TFIST_EXAMPLES"
-else
+# Resolve the example binary, and the repository root (for the shipped reference).
+# Only fall back to a build when the binary directory is unknown; the root is
+# needed only for the optional reference comparison, so a preset TFIST_EXAMPLES
+# without TFIST_ROOT must NOT trigger a build.
+BINDIR="${TFIST_EXAMPLES:-}"
+ROOT="${TFIST_ROOT:-}"
+if [ -z "$BINDIR" ]; then
   INSTALL_OUT="$("$HERE/install_thermalfist.sh")" || die "install_thermalfist.sh failed"
   BINDIR="$(printf '%s\n' "$INSTALL_OUT" | sed -n 's/^TFIST_EXAMPLES=//p')"
+  [ -n "$ROOT" ] || ROOT="$(printf '%s\n' "$INSTALL_OUT" | sed -n 's/^TFIST_ROOT=//p')"
 fi
 BIN="$BINDIR/$BINNAME"
 [ -x "$BIN" ] || die "no usable $BINNAME at '$BIN' (TFIST_EXAMPLES='${TFIST_EXAMPLES:-unset}')"
@@ -92,23 +117,34 @@ if [ "$STATUS" -ne 0 ]; then
   exit 1
 fi
 
-# The example writes one or more tables (.out / .dat) into CWD. Require at least
-# one, and validate every one structurally: header, all-numeric rows, no NaN/Inf,
-# consistent column count. A plain glob loop, not `mapfile`, because the default
-# macOS bash is 3.2 and mapfile is a bash 4 builtin.
-TABLES=()
-for f in "$OUTDIR"/*.out "$OUTDIR"/*.dat; do
-  [ -e "$f" ] || continue
-  TABLES+=("$(basename "$f")")
-done
-[ "${#TABLES[@]}" -ge 1 ] || die "$BINNAME produced no .out or .dat table in $OUTDIR"
+# The example must write the EXACT file the source produces for this config, with
+# the EXACT shape from test/ReferenceOutput. Requiring the specific filename and
+# shape is what rejects a stub that wrote an unrelated or truncated table and
+# exited zero. A missing expected file, or one with the wrong row/column count, is
+# a failed run.
+OUT="$OUTDIR/$EXPFILE"
+[ -s "$OUT" ] || die "$BINNAME did not produce the expected output '$EXPFILE' in $OUTDIR"
+python3 "$HERE/check_output_thermalfist.py" "$OUT" --min-rows "$EXPROWS" --min-cols "$EXPCOLS" >/dev/null \
+  || die "$BINNAME output '$EXPFILE' failed structural validation (expected >= $EXPROWS rows, $EXPCOLS numeric cols)"
+log "output table OK: $EXPFILE"
 
-for t in "${TABLES[@]}"; do
-  python3 "$HERE/check_output_thermalfist.py" "$OUTDIR/$t" --min-rows 2 --min-cols 2 >/dev/null \
-    || die "$BINNAME output '$t' failed structural validation"
-  log "output table OK: $t"
-done
+# If the repository root is known AND this output is reproducible, compare against
+# the shipped reference at the code's own 1e-6 tolerance. This turns a run into a
+# full check: exact rows, exact numeric columns, exact label text, and numeric
+# agreement, not just a shape. The under-constrained cpc3 NEQ fit is exempt (see
+# the REPRO note above): its parameters are not reproducible across builds, so it
+# is validated structurally only.
+REF="$ROOT/test/ReferenceOutput/$EXPFILE"
+if [ "$REPRO" = "0" ]; then
+  log "note: $EXPFILE is an under-constrained fit; validated shape only, not compared to the reference"
+elif [ -n "$ROOT" ] && [ -s "$REF" ]; then
+  python3 "$HERE/check_output_thermalfist.py" "$OUT" --reference "$REF" --accuracy 1e-6 >/dev/null \
+    || die "$BINNAME output '$EXPFILE' does not reproduce the shipped reference within 1e-6"
+  log "output reproduces the shipped reference within 1e-6"
+else
+  log "note: no shipped reference found at '$REF'; validated shape only, not numeric values"
+fi
 
-log "run complete: ${#TABLES[@]} table(s)"
+log "run complete"
 echo "RESULT_DIR=$OUTDIR"
-echo "RESULT_FILES=${TABLES[*]}"
+echo "RESULT_FILE=$EXPFILE"

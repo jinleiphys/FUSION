@@ -26,10 +26,13 @@ sets under `input/list/`:
 | `SMASH-1.8` | the SMASH hadron list |
 | `electroweak` | adds electroweak particles |
 
-The cpc examples deliberately use `thermus23/list.dat` so their numbers can be
-compared against THERMUS. Each list file is one particle per line: PDG code,
-name, mass, degeneracy, statistics, quark content, and quantum numbers. A
-`decays.dat` in the same folder carries the decay channels used for feed-down.
+The list is chosen per program in the source, and this matters for the physics:
+**cpc1 and cpc2 read `thermus23/list.dat`** (so their numbers can be compared
+against THERMUS), while **cpc3 and cpc4 read `PDG2014/list.dat`**. Reproducing a
+cpc3 fit with the thermus23 list would change the particle content and the
+result. Each list file is one particle per line: PDG code, name, mass,
+degeneracy, statistics, quark content, and quantum numbers. A `decays.dat` in the
+same folder carries the decay channels used for feed-down.
 
 ## 2. The model variant (the `<config>` argument)
 
