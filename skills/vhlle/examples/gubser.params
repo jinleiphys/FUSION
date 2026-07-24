@@ -1,0 +1,29 @@
+outputDir  out/gubser
+
+! Ideal conformal (p = e/3) Gubser flow test, icModel 4.
+! Requires the SIMPLE (conformal) EoS build; run with hlle_visc_simple.
+! Compared cell by cell against the analytic Gubser solution
+! (q = 1 fm^-1, reference proper time tau0 = 1). See references/verification.md.
+
+eosType    0        ! under SIMPLE this is the analytic p = e/3, T = (e/const)^{1/4}
+etaS       0.0      ! ideal hydrodynamics (Gubser reference is inviscid)
+zetaS      0.0
+e_crit     0.04     ! low enough that the run reaches tauMax before the blob freezes out
+
+nx         121
+ny         121
+nz         15        ! a real eta extent is needed or the surface finder returns 0 and the loop breaks
+xmin      -9.0
+xmax       9.0
+ymin      -9.0
+ymax       9.0
+etamin    -3.0
+etamax     3.0
+
+icModel    4        ! analytical Gubser solution (self-contained, no IS input file)
+glauberVar 1
+epsilon0   1.0      ! unused by the Gubser IC (it hardcodes the analytic profile)
+impactPar  0.0
+tau0       1.0      ! MUST be 1.0: the Gubser IC formula is written at reference time _t = 1
+tauMax     1.55
+dtau       0.025

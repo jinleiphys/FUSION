@@ -1,0 +1,29 @@
+outputDir  out/glauber
+
+! Optical-Glauber viscous run, icModel 1: a realistic 2+1D-ish heavy-ion setup
+! that uses the Laine lattice EoS (TABLE build) and needs NO initial-state file.
+! Runs on the production binary hlle_visc. There is no analytic reference here;
+! it is a production-path sanity run (finite output, sensible QGP temperatures).
+
+eosType    0        ! under TABLE this is the Laine nf3 lattice EoS
+etaS       0.08     ! eta/s = 1/(4 pi), the KSS-like shear value
+zetaS      0.0
+e_crit     0.5      ! particlization energy density (GeV/fm^3)
+
+nx         101
+ny         101
+nz         5
+xmin      -12.0
+xmax       12.0
+ymin      -12.0
+ymax       12.0
+etamin    -0.5
+etamax     0.5
+
+icModel    1        ! optical Glauber (parametrized, self-contained)
+glauberVar 1
+epsilon0   30.0     ! normalization of the initial energy density
+impactPar  7.0      ! impact parameter (fm)
+tau0       0.6      ! hydro start time (fm/c)
+tauMax     3.0
+dtau       0.05

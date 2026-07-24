@@ -90,7 +90,7 @@ headers (2.7 MB, header-only), not a patch to SMASH.
 | ~~**SMASH**~~ **DONE 2026-07-23, see below** | smash-transport/smash | GPLv3, confirmed twice | C++17 / CMake | PRC **94**, 054905 (2016) |
 | ~~**GiBUU**~~ **DONE 2026-07-24, see below** | gibuu.hepforge.org release2025 | GPL-2.0 | Fortran | Buss et al., Phys. Rept. **512**, 1-124 (2012), `10.1016/j.physrep.2011.12.001` |
 | ~~**Thermal-FIST**~~ **DONE 2026-07-24, see below** | vlvovch/Thermal-FIST | GPL-3.0 | C++ | Vovchenko, Stoecker, Comput. Phys. Commun. **244**, 295-310 (2019), `10.1016/j.cpc.2019.06.024` |
-| **vHLLE** | yukarpenko/vhlle | GPL-2.0 | C++ | Karpenko et al., Comput. Phys. Commun. **185**, 3016-3027 (2014), `10.1016/j.cpc.2014.07.010` |
+| ~~**vHLLE**~~ **DONE 2026-07-24, see below** | yukarpenko/vhlle | GPL-2.0 | C++ | Karpenko et al., Comput. Phys. Commun. **185**, 3016-3027 (2014), `10.1016/j.cpc.2014.07.010` |
 | **MUSIC** | MUSIC-fluid/MUSIC | GPL-2.0 | C++ | (paper not yet CrossRef-verified) |
 | **TRENTO** | Duke-QCD/trento | MIT | C++ | (paper not yet CrossRef-verified) |
 | **iEBE / iEBE-MUSIC** | chunshen1987/iEBE, chunshen1987/iEBE-MUSIC | GPL-3.0 both | Fortran / Python | (papers not yet CrossRef-verified) |
@@ -178,6 +178,34 @@ caller-supplied or cached build is spoofable, so a tier-1 certification now forc
 a CLEAN REBUILD from the SHA-pinned pristine source and a preset build is
 `VERIFY PASSED-NOT-CERTIFIED`. Full write-up in
 `skills/thermal-fist/references/verification.md`.
+
+**DONE 2026-07-24: vHLLE**, `skills/vhlle/`, the **twentieth per-code skill**,
+fourth of this row and the relativistic viscous-hydro branch. GPL-2.0, pinned
+vhlle main @ `c3480d62` + companion data repo vhlle_params @ `ae2ba98`, Karpenko,
+Huovinen, Bleicher, CPC 185, 3016 (2014), CrossRef-verified. 3+1D second-order
+(Israel-Stewart) viscous hydrodynamics of the QGP; plain `make`, GSL, C++17, **no
+source patches** (the EoS is the code's own documented `TABLE`/`SIMPLE` compile
+toggle, restored pristine). **TIER 2 with an analytic physics benchmark**: vHLLE
+ships no reference output, so the anchor is CODE-INDEPENDENT, its Gubser-flow run
+compared cell by cell to the analytic ideal-conformal solution (eps max reldiff
+0.0247 / rms 0.0092 at tau=1.5, exact left-right symmetry, degrading cleanly with
+time as numerical viscosity accrues, central eps 0.157676), plus a production
+optical-Glauber run (central T=213 MeV). **VERIFY OK on both macOS/ARM clang 21
+and Linux/gcc 13.3** (full clean-rebuild certification), every benchmark number
+identical across platforms; the Gubser physical columns are bit-identical, only
+the numerically-zero vy differs at ~4e-16. Two binaries (`hlle_visc_table`
+production Laine-EoS, `hlle_visc_simple` conformal for Gubser) from ONE pinned
+source. Traps carried into the row: a Gubser run stops after one step on a thin
+eta grid (the freeze-out surface finder returns zero, `nz 15` fixes it);
+`eos/eosHadronLog.dat` is read unconditionally even by a pure-hydro run; the Linux
+binary needs an rpath to a conda GSL; `outdiag.dat` wraps each record across two
+lines. Added `VHLLE_URL`/`VHLLE_PARAMS_URL` overrides for slow/blocked GitHub
+(used a local mirror for the heliumx certification). **One Codex adversarial pass,
+6 findings fixed** (biggest: verify certified with a non-canonical params pin;
+run_vhlle passed on stale output), plus 4 confirmed-clean; selftest grew to 39.
+The `check_gubser.py` analytic comparator and the from-source certification model
+(now gating on BOTH pins) are the reusable parts. Full write-up in
+`skills/vhlle/references/verification.md`.
 
 SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
 GSL, Eigen 3.x and Pythia exactly 8.316. **Zero source patches** on macOS/ARM and

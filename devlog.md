@@ -3,6 +3,60 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-24: vHLLE, the first analytic-solution benchmark in the series
+
+**What it is:** the 20th per-code skill (relativistic viscous hydrodynamics,
+fourth of the heavy-ion row), tier 2, pinned vhlle main `c3480d62` + companion
+data repo vhlle_params `ae2ba98`. VERIFY OK on macOS/clang 21 and Linux/gcc 13.3,
+selftest 39/39, one Codex pass (6 fixed).
+
+**The benchmark is a CODE-INDEPENDENT analytic solution, not a shipped
+reference.** vHLLE ships no reference output, so tier 2, but the anchor is
+stronger than a build check: its Gubser-flow run is compared cell by cell to the
+closed-form ideal-conformal Gubser solution (eps within 2.5% at tau=1.5, exact
+left-right symmetry, and the error grows monotonically with time exactly as
+numerical viscosity predicts). This is the first skill whose physics is pinned by
+an analytic reference I computed independently rather than by the code's own
+numbers. Worth reaching for whenever a code has a known analytic limit.
+
+**Three build/physics traps, all of which produce a plausible wrong result:**
+1. **A Gubser run stops after ONE step on a thin eta grid.** The main-branch loop
+   breaks when the freeze-out surface finder returns zero elements, and a
+   boost-invariant blob on a thin nz grid produces no surface. `nz 15` with a real
+   eta extent fixes it; no e_crit value helps. Two silent timesteps look like a
+   converged short run.
+2. **The analytic Gubser test needs the conformal (SIMPLE) EoS.** Under the
+   default TABLE (Laine lattice) build the same deck runs fine and gives sensible
+   output that simply does NOT match the analytic solution, because the lattice
+   EoS is not conformal. So the skill builds TWO binaries from one pinned source
+   via the code's own documented `#define TABLE/SIMPLE` toggle.
+3. **eos/eosHadronLog.dat is read unconditionally**, even by a pure-hydro run that
+   never particlizes, so the companion data repo is mandatory. And on Linux the
+   binary needs an rpath to a conda GSL or it dies at runtime on libgsl.
+
+**Cross-platform bit-identity, unusual for a PDE solver.** The SIMPLE Gubser path
+is pure double arithmetic (no GSL spline), and with no FMA contraction the KT
+scheme gives identical IEEE results on ARM and x86-64: every physical column
+(tau, x, vx, eps, T) is bit-identical, only the numerically-zero vy differs at
+~4e-16. The TABLE/Glauber path (which does use the GSL spline) also reproduced its
+central anchor identically.
+
+**What the Codex pass found (its report was truncated by the provider's safety
+filter, again, but its experiments named the findings):** two mattered. (1) verify
+certified with a non-canonical `VHLLE_PARAMS_PIN`: certification checked only the
+code pin, not the EoS-data pin, though the EoS is physics. Now BOTH pins gate
+certification. This is a fresh instance of the Thermal-FIST round-5 lesson (pin
+every physics input, not just the obvious one). (2) run_vhlle passed on STALE
+output: a no-op binary plus a leftover outx.dat validated clean; it now clears the
+output dir first. The mutation testing also caught that the vx-threshold and
+Glauber-anchor guards were not flip-tested, so the Glauber anchor moved out of a
+verify heredoc into `check_glauber.py` and selftest now flips all of them.
+
+**GitHub from heliumx is intermittent** (one 134 s connect timeout mid-run wiped
+the cache the force-reclone had just deleted). Added `VHLLE_URL`/`VHLLE_PARAMS_URL`
+overrides and certified on Linux against a local `file://` mirror at the same
+pins. A useful pattern for any China-network or firewalled host.
+
 ## 2026-07-24: Thermal-FIST, the first HRG/EoS code, and five adversarial rounds
 
 **What it is:** the 19th per-code skill (first hadron-resonance-gas / equation-of-
