@@ -89,7 +89,7 @@ headers (2.7 MB, header-only), not a patch to SMASH.
 |---|---|---|---|---|
 | ~~**SMASH**~~ **DONE 2026-07-23, see below** | smash-transport/smash | GPLv3, confirmed twice | C++17 / CMake | PRC **94**, 054905 (2016) |
 | ~~**GiBUU**~~ **DONE 2026-07-24, see below** | gibuu.hepforge.org release2025 | GPL-2.0 | Fortran | Buss et al., Phys. Rept. **512**, 1-124 (2012), `10.1016/j.physrep.2011.12.001` |
-| **Thermal-FIST** | vlvovch/Thermal-FIST | GPL-3.0 | C++ | Vovchenko, Stoecker, Comput. Phys. Commun. **244**, 295-310 (2019), `10.1016/j.cpc.2019.06.024` |
+| ~~**Thermal-FIST**~~ **DONE 2026-07-24, see below** | vlvovch/Thermal-FIST | GPL-3.0 | C++ | Vovchenko, Stoecker, Comput. Phys. Commun. **244**, 295-310 (2019), `10.1016/j.cpc.2019.06.024` |
 | **vHLLE** | yukarpenko/vhlle | GPL-2.0 | C++ | Karpenko et al., Comput. Phys. Commun. **185**, 3016-3027 (2014), `10.1016/j.cpc.2014.07.010` |
 | **MUSIC** | MUSIC-fluid/MUSIC | GPL-2.0 | C++ | (paper not yet CrossRef-verified) |
 | **TRENTO** | Duke-QCD/trento | MIT | C++ | (paper not yet CrossRef-verified) |
@@ -155,7 +155,31 @@ wrapper called reproducible. Two defects were found ONLY by the second platform:
 the `-lbz2` retry (Linux-only, never exercisable on macOS) and a native-exe
 guard that rejected the real Linux build because GiBUU.x is a symlink and GNU
 `file` does not follow symlinks by default. selftest 50/50 and VERIFY OK on both
-platforms. Full write-up in `skills/gibuu/references/verification.md`. SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
+platforms. Full write-up in `skills/gibuu/references/verification.md`.
+
+**DONE 2026-07-24: Thermal-FIST**, `skills/thermal-fist/`, the **nineteenth
+per-code skill**, third of this row, and the FIRST hadron-resonance-gas /
+equation-of-state code (it also fills the HRG branch of the EOS row). GPL-3.0,
+pinned v1.6.1 (`fe5c61af`), Vovchenko + Stoecker, CPC 244, 295 (2019),
+CrossRef-verified. **TIER 1**: reproduces the shipped 93-case ctest suite with a
+MIXED comparator (byte-exact `compare_files` for cpc2 and cpc4.analyt.dat, 1e-6
+tolerance for cpc1/Thermodynamics/Susceptibilities/NeutronStar), 93/93 serial on
+macOS/Apple clang 21 and Linux/gcc 13.3, plus a separate cpc3 stage. Eigen 3.4 and
+Minuit2 are bundled, so no external dependency but a one-time GoogleTest fetch;
+zero source patches. **FIVE Codex adversarial rounds, ~28 defects, all fixed**;
+the SMASH pattern held (each round's fixes created the next round's). Two traps
+carried into the row: the ctest suite MUST run `-j1` (the Run/Compare pairs share
+an output file with no declared dependency, so `-j` fails 21 of 26 comparisons on
+a good build), and cpc3's chemically-frozen NEQ fit is under-constrained and not
+reproducible across builds (ALICE muB 2.42 vs the reference 4.96 MeV, both
+platforms), almost certainly why upstream left cpc3 out of its suite. Round 5's
+systemic finding, worth retrofitting across the family: verify trusting any
+caller-supplied or cached build is spoofable, so a tier-1 certification now forces
+a CLEAN REBUILD from the SHA-pinned pristine source and a preset build is
+`VERIFY PASSED-NOT-CERTIFIED`. Full write-up in
+`skills/thermal-fist/references/verification.md`.
+
+SMASH-3.3 (pinned commit `d1a1c6cf`), C++17 + CMake, needs
 GSL, Eigen 3.x and Pythia exactly 8.316. **Zero source patches** on macOS/ARM and
 Linux/x86-64. **TIER 1**: reproduces SMASH's own 104-case ctest suite, 104/104
 first attempt on Linux.

@@ -93,7 +93,10 @@ if [ -n "${TFIST:-}" ] && [ -n "${TFIST_BUILD:-}" ] && [ -n "${TFIST_ROOT:-}" ] 
   log "NOTE: using a caller-supplied build (TFIST_* preset); this run validates it but is NOT a tier-1 certification"
   CERTIFIED=0
 else
-  OUT="$("$HERE/install_thermalfist.sh")" || die "install_thermalfist.sh failed"
+  # Certifying path: force a clean rebuild from the pinned source, so the certified
+  # binaries and CTest graph are produced by cmake in THIS run rather than trusted
+  # from a possibly-forged cache stamp.
+  OUT="$(TFIST_FORCE_BUILD=1 "$HERE/install_thermalfist.sh")" || die "install_thermalfist.sh failed"
   BIN="$(printf '%s\n' "$OUT" | sed -n 's/^TFIST=//p')"
   SRCROOT="$(printf '%s\n' "$OUT" | sed -n 's/^TFIST_ROOT=//p')"
   BUILD="$(printf '%s\n' "$OUT" | sed -n 's/^TFIST_BUILD=//p')"

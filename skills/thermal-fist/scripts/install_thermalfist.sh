@@ -112,6 +112,13 @@ build_identity () {
 binary_digest () { shasum -a 256 "$BIN" 2>/dev/null | cut -d' ' -f1 || echo nodigest; }
 
 fast_path_ok () {
+  # A certifying caller (verify's from-source path) sets TFIST_FORCE_BUILD=1 to
+  # bypass the cached build entirely. The fast-path trusts the build stamp, which
+  # a local attacker with write access to the cache could forge alongside
+  # reference-copying stubs; a clean rebuild from the SHA-pinned, pristine source
+  # cannot be forged that way (cmake compiles the real source). So certification
+  # rebuilds; only reuse-for-speed trusts the stamp.
+  [ "${TFIST_FORCE_BUILD:-0}" = "1" ] && { log "TFIST_FORCE_BUILD=1: rebuilding from source rather than trusting the cached build"; return 1; }
   [ -x "$BIN" ] || return 1
   [ -f "$STAMP" ] || return 1
   [ "$(cd "$SRCROOT" && git rev-parse HEAD)" = "$PIN" ] || { log "clone HEAD is not the pin, rebuilding"; return 1; }

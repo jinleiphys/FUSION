@@ -111,10 +111,24 @@ is built to fail ONLY the guard under test.
 
 ## What the adversarial passes found
 
-FOUR Codex adversarial passes (`codex exec`, allowed to build and run the code)
-ran. Round 1 returned 13 findings, round 2 found 4 more that round 1's fixes had
-introduced or left, round 3 found 7 more, round 4 found 4 more (1 blocker, 2
-major, 1 minor), ALL fixed; selftest grew 35 -> 48 -> 50.
+FIVE Codex adversarial passes (`codex exec`, allowed to build and run the code)
+ran. Round 1 returned 13 findings, round 2 found 4, round 3 found 7, round 4 found
+4, round 5 found the certification-trust theme once more and confirmed NO new
+false rejection and no functional regression; ALL fixed. selftest grew 35 -> 48
+-> 50.
+
+Round 5: the round-4 fixes held (no new row-count false reject, the
+`.gitignore`-aware pristine filter caught the injection while passing `.DS_Store`),
+but the from-source certification was still spoofable at the cache layer: install's
+fast-path trusts the build stamp, which a local attacker with write access to the
+cache could forge alongside reference-copying stubs and a hand-written CTest graph.
+Closed concretely: the certifying path now forces a CLEAN REBUILD
+(`TFIST_FORCE_BUILD=1`) from the SHA-pinned, pristine source, so the certified
+binaries and CTest graph are produced by cmake in that run and cannot be forged
+(short of breaking git's SHA integrity or having write access to the repo/scripts,
+which is out of scope for every skill). This is the stopping point: the remaining
+threat model is a local attacker who controls the filesystem, which no FUSION skill
+defends against and which the clean rebuild now largely closes anyway.
 
 Round 4: (1, BLOCKER, systemic) build identity was still spoofable: an external
 build dir with a cache bound to the pinned source, 93 `/usr/bin/true` CTest

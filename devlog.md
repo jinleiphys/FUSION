@@ -3,6 +3,62 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-24: Thermal-FIST, the first HRG/EoS code, and five adversarial rounds
+
+**What it is:** the 19th per-code skill (first hadron-resonance-gas / equation-of-
+state code, third of the heavy-ion row after SMASH and GiBUU), tier 1, pinned
+v1.6.1. CERTIFIED VERIFY OK on macOS/Apple clang 21 and Linux/gcc 13.3, 93/93
+serial ctest, selftest 50/50 both platforms.
+
+**Two traps worth keeping, both physics/build, not harness:**
+1. **Parallel ctest gives 21 of 26 false Compare failures.** The Run/Compare pairs
+   share an output file with no declared ctest dependency, so `-j` lets a Compare
+   read before its Run writes. The suite MUST run `-j1`. A student who runs
+   `ctest -j8` sees red on a working build.
+2. **cpc3's chemically-frozen NEQ fit is not reproducible across builds.** Its
+   ALICE muB comes out 2.42 MeV here vs 4.96 in the shipped reference, the same
+   disagreement on both platforms, not a last-digit drift. The fit is
+   under-constrained (gammaq and gammaS free flatten a chi2 direction), so the
+   minimiser lands elsewhere. This is almost certainly why upstream commented cpc3
+   out of its own suite. The EQ fit (3 params) reproduces at 1e-6; the NEQ fit is
+   validated structurally only. A fit result you did not converge yourself is not
+   a benchmark.
+
+**The comparator was MIXED, not uniform**, and I claimed uniform 1e-6 for three
+rounds before Codex read the CMakeLists per test: cpc2 and cpc4.analyt.dat are
+byte-exact `compare_files`, the rest are 1e-6 tolerance, cpc4's Monte Carlo output
+is uncompared. Read the test definitions; do not infer one comparator from one
+example.
+
+**Why five rounds, and the transferable lesson of each:** the SMASH pattern held
+exactly, each round's fixes created the next round's defects.
+- R2: replacing a fail condition with a richer one and dropping the original. The
+  ctest check was rewritten to count Passed lines and lost the direct "fail on any
+  reported failure", so a ctest printing 93 Passed lines while reporting a failure
+  passed. A guard that failed on signal X must still fail on X after you add Y.
+- R3: `git status --porcelain` and `git diff --quiet HEAD` both skip git-IGNORED
+  files, so a source injected via `.git/info/exclude` under a CMake glob passed the
+  clean-tree check. `git ls-files --others --exclude-per-directory=.gitignore` is
+  the predicate that catches it while still ignoring in-tree-ignored files.
+- R4: the hardening's OWN false-rejects. Requiring 151 rows for every cpc2 config
+  (only config 0 has 151; 1/3 have 76, 2 has 61), and `ls-files --others` flagging
+  a macOS `.DS_Store`. A guard tightened against an attack rejected a normal user.
+- R5: the certification itself. verify trusting any caller-supplied or cached build
+  is spoofable (a build dir with a source-bound cache, `true` ctest entries and
+  reference-copying stubs passes). Closed by making a preset build
+  NON-CERTIFIED and the certifying path force a CLEAN REBUILD from the SHA-pinned,
+  pristine source, so cmake produces the certified binaries in-run. This pattern
+  is shared by all 18 prior skills; Thermal-FIST is the first to close it. Worth
+  retrofitting across the family.
+
+**Process cost worth noting:** Codex's provider truncated the round-2 and round-5
+reports at a safety filter, but the temp FIXTURES it left behind (a fake ctest, a
+hand-written CTestTestfile, header/label spoofs) named the findings precisely, so
+a truncated report is still actionable. And a self-inflicted scare: my cleanup
+`rm -f` deleted a TRACKED `src/library/.DS_Store` that upstream had committed,
+dirtying the clone and silently dropping 4 selftest cases to 46; `git checkout`
+restored it. Check whether a file you plant for a test was already tracked.
+
 ## 2026-07-24: GiBUU adversarial pass, one blocker, all in the seed/parse edges
 
 **Why we tried it:** first Codex pass on the GiBUU skill (18th per-code skill,

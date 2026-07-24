@@ -86,7 +86,10 @@ one row), the ctest stage runs the 93 cases serially and rejects skipped cases,
 and a third stage covers cpc3 (which upstream leaves out of the suite).
 
 A tier-1 certification (`VERIFY OK`) requires verify to BUILD from the pinned
-source itself via `install_thermalfist.sh`. If you preset `TFIST_*` to hand it an
+source itself: the no-preset path forces a clean rebuild (`TFIST_FORCE_BUILD=1`)
+from the SHA-pinned, pristine source, so the certified binaries and CTest graph
+are produced by cmake in that run and cannot be spoofed by a forged cache stamp.
+This costs a few minutes of rebuild. If you instead preset `TFIST_*` to hand it an
 existing build, it validates that build but ends in `VERIFY PASSED-NOT-CERTIFIED`,
 because the identity checks prove a build was configured from the pinned source
 but cannot prove its binaries were produced by cmake rather than hand-forged.
