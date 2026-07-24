@@ -173,6 +173,10 @@ expect_msg 1 "non-negative" "negative expect column rejected" -- python3 "$CHECK
 { echo "Dataset T x"; echo "RIGHT 150 1"; } > "$TMP/lab_ref.out"
 { echo "Dataset T x"; echo "WRONG 150 1"; } > "$TMP/lab_out.out"
 expect_msg 1 "label" "reference label mismatch caught" -- python3 "$CHECK" "$TMP/lab_out.out" --reference "$TMP/lab_ref.out" --accuracy 1e-6
+# Reference mode must compare the HEADER, not only the data.
+{ echo "T p e"; echo "150 1 2"; } > "$TMP/hdr_ref.out"
+{ echo "WRONG_A WRONG_B WRONG_C"; echo "150 1 2"; } > "$TMP/hdr_out.out"
+expect_msg 1 "header" "reference header mismatch caught" -- python3 "$CHECK" "$TMP/hdr_out.out" --reference "$TMP/hdr_ref.out" --accuracy 1e-6
 
 echo "== run_thermalfist: hardening guards (no build) =="
 
@@ -221,6 +225,22 @@ if [ -d "$REALSRC/.git" ] && [ "$(cd "$REALSRC" && git rev-parse HEAD 2>/dev/nul
   printf '#!/bin/sh\nexit 0\n' > "$TMP/realbin"; chmod +x "$TMP/realbin"; ln -s "$TMP/realbin" "$FB3/cpc1HRGTDep"
   expect_msg 1 "symlink" "verify: symlinked binary rejected" -- \
     env TFIST="$FB3/cpc1HRGTDep" TFIST_BUILD="$FB3" TFIST_ROOT="$REALSRC" TFIST_EXAMPLES="$FB3" bash "$VERIFY" --anchor-only
+  # (d) THE ROUND-2 BLOCKER: a ctest that prints 93 "Passed" lines but reports a
+  #     failure and exits nonzero must be REJECTED. A nonzero NFAIL is always a
+  #     fail, regardless of the Passed-line count.
+  FB4="$TMP/fakebuild4"; mkdir -p "$FB4"
+  { echo "ThermalFIST_SOURCE_DIR:STATIC=$SC"; echo "CMAKE_HOME_DIRECTORY:INTERNAL=$SC"; echo "INCLUDE_TESTS:BOOL=ON"; } > "$FB4/CMakeCache.txt"
+  printf '#!/bin/sh\nexit 0\n' > "$FB4/cpc1HRGTDep"; chmod +x "$FB4/cpc1HRGTDep"
+  FAKEBIN="$TMP/fakebin"; mkdir -p "$FAKEBIN"
+  cat > "$FAKEBIN/ctest" <<'CT'
+#!/bin/bash
+i=1; while [ "$i" -le 93 ]; do printf '%d/93 Test #%d: Fake .......   Passed    0.01 sec\n' "$i" "$i"; i=$((i+1)); done
+printf '\n98%% tests passed, 1 tests failed out of 93\n'; exit 1
+CT
+  chmod +x "$FAKEBIN/ctest"
+  expect_msg 1 "reported 1 failed" "verify: ctest failure not masked by 93 Passed lines" -- \
+    env PATH="$FAKEBIN:$PATH" TFIST="$FB4/cpc1HRGTDep" TFIST_BUILD="$FB4" TFIST_ROOT="$REALSRC" TFIST_EXAMPLES="$FB4" \
+    bash "$VERIFY" --tests-only
 else
   echo "  note  identity sub-guards (cache binding / INCLUDE_TESTS / symlinked binary) skipped: no pinned clone at $REALSRC"
 fi

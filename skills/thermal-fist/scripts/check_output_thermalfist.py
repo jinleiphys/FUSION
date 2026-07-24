@@ -98,9 +98,15 @@ def load_table(path):
 
 
 def cmp_reference(path, ref, accuracy):
-    """Stricter than test_CompareOutputs: numbers AND label text must match."""
-    _, a, na, la, alab = load_table(path)
-    _, b, nb, lb, blab = load_table(ref)
+    """Stricter than test_CompareOutputs: header, numbers AND label text match."""
+    ha, a, na, la, alab = load_table(path)
+    hb, b, nb, lb, blab = load_table(ref)
+    # The header names the columns; a run that produced a DIFFERENT header (wrong
+    # columns) with the same numbers must not match. Compare it tokenized so pure
+    # whitespace differences are ignored.
+    if ha.split() != hb.split():
+        print(f"FAIL: header {ha.strip()[:80]!r} != reference header {hb.strip()[:80]!r}")
+        return 1
     if len(a) != len(b):
         print(f"FAIL: {path} has {len(a)} rows, reference {ref} has {len(b)}")
         return 1

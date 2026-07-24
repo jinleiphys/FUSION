@@ -105,10 +105,28 @@ identity sub-guards that are only reachable when the source HEAD equals the pin
 pinned clone is present and are skipped with a note otherwise. Each negative case
 is built to fail ONLY the guard under test.
 
-## What the adversarial pass found
+## What the adversarial passes found
 
-One Codex adversarial pass (`codex exec`, allowed to build and run the code)
-returned 13 findings, 5 blockers and 8 major, ALL fixed:
+TWO Codex adversarial passes (`codex exec`, allowed to build and run the code)
+ran. Round 1 returned 13 findings, round 2 found 4 more that round 1's fixes had
+introduced or left, ALL fixed; selftest grew 35 -> 48 -> 50.
+
+Round 2 (the round-1 fixes introduced their own defects, the recurring FUSION
+pattern): (1, BLOCKER) the ctest stage counted `Passed` lines but no longer failed
+directly on a nonzero reported-failure count, so a ctest printing 93 `Passed`
+lines while reporting 1 failure and exiting nonzero would have passed; verify now
+fails on any nonzero exit OR nonzero `NFAIL`, independently of the Passed count.
+(2, MAJOR) `git diff --quiet HEAD` ignores UNTRACKED files, so an injected extra
+source could sit in the pinned tree and be compiled by a glob build while the tree
+looked clean; install and verify now use `git status --porcelain`. (3, MAJOR) the
+install probe used lower-bound `--min-rows/--min-cols`, so a swapped binary
+emitting an 8-column, 182-row table with a spoofed anchor row passed; the probe
+now compares the full output to the shipped reference. (4, MAJOR) reference
+comparison ignored the HEADER line; `cmp_reference` now compares the tokenized
+header too. Each fix has an isolated selftest case, including a fake `ctest` that
+prints 93 `Passed` lines then reports a failure.
+
+Round 1 returned 13 findings, 5 blockers and 8 major, ALL fixed:
 
 Blockers: (1) a symlinked `src` or `build` under a user-set `TFIST_ROOT_DIR` let
 `git` and the `rm -rf CMakeFiles` step operate OUTSIDE the cache root; install now

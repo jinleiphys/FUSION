@@ -101,7 +101,10 @@ check_identity () {
   [ -d "$SRCROOT/.git" ] || { log "'$SRCROOT' is not a git clone"; return 1; }
   head="$(cd "$SRCROOT" && git rev-parse HEAD 2>/dev/null || echo none)"
   [ "$head" = "$PIN" ] || { log "source tree is at $head, not the pin $PIN"; return 1; }
-  ( cd "$SRCROOT" && git diff --quiet HEAD 2>/dev/null ) || { log "source tree has uncommitted modifications"; return 1; }
+  # `git status --porcelain`, not `git diff --quiet HEAD`: the latter ignores
+  # UNTRACKED files, so an injected extra source could sit in the tree and be
+  # picked up by a glob-based build while the tree still looked clean.
+  [ -z "$(cd "$SRCROOT" && git status --porcelain 2>/dev/null)" ] || { log "source tree has uncommitted or untracked files"; return 1; }
   src_canon="$(canon "$SRCROOT")"
   [ -n "$src_canon" ] || { log "cannot canonicalize source '$SRCROOT'"; return 1; }
   cache="$BUILD/CMakeCache.txt"
@@ -171,16 +174,22 @@ if [ "$DO_TESTS" = "1" ]; then
   PASSED_CT="$(grep -cE '   Passed +[0-9]' "$LOG" || true)"
   SKIP_CT="$(grep -cE '\*\*\*(Skipped|Not Run|Disabled|Timeout|Exception|Failed)' "$LOG" || true)"
 
-  if [ "$CTEST_RC" -ne 0 ] && [ "${NFAIL:-0}" -eq 0 ]; then
-    log "FAIL: ctest exited $CTEST_RC while reporting no failures; the summary and status disagree"
-    tail -12 "$LOG" >&2; FAILED=1
+  # ctest passes ONLY if ALL of these hold. Each is checked independently so no
+  # single spoofed signal (a summary line, a Passed-line count) can carry the
+  # verdict alone. A nonzero exit or a nonzero reported failure count is ALWAYS a
+  # failure, regardless of how many "Passed" lines were printed.
+  if [ "$CTEST_RC" -ne 0 ]; then
+    log "FAIL: ctest exited $CTEST_RC"; tail -12 "$LOG" >&2; FAILED=1
+  fi
+  if [ "${NFAIL:-1}" -ne 0 ]; then
+    log "FAIL: ctest reported $NFAIL failed cases"; FAILED=1
   fi
   if [ "$TOTAL" != "$EXPECTED_TESTS" ]; then
     log "FAIL: ctest ran $TOTAL cases, expected exactly $EXPECTED_TESTS (a configure without -DINCLUDE_TESTS gives 0)"
     FAILED=1
   fi
-  if [ "${SKIP_CT:-0}" -ne 0 ]; then
-    log "FAIL: $SKIP_CT ctest cases were skipped, not-run, or failed; a skipped case is NOT a pass"
+  if [ "${SKIP_CT:-1}" -ne 0 ]; then
+    log "FAIL: $SKIP_CT ctest cases were skipped, not-run, disabled, timed out, or failed; a skipped case is NOT a pass"
     grep -E '\*\*\*(Skipped|Not Run|Disabled|Timeout|Exception|Failed)' "$LOG" | head -20 >&2
     FAILED=1
   fi
@@ -189,8 +198,9 @@ if [ "$DO_TESTS" = "1" ]; then
     log "      if these are Compare<X> failures, the suite was run in parallel; it MUST be serial (-j1)"
     FAILED=1
   fi
-  if [ "${NFAIL:-0}" -eq 0 ] && [ "${PASSED_CT:-0}" -eq "$EXPECTED_TESTS" ] && [ "${SKIP_CT:-0}" -eq 0 ]; then
-    log "test suite: $PASSED_CT of $TOTAL Passed serially, 0 skipped"
+  if [ "$CTEST_RC" -eq 0 ] && [ "${NFAIL:-1}" -eq 0 ] && [ "$TOTAL" = "$EXPECTED_TESTS" ] \
+     && [ "${SKIP_CT:-1}" -eq 0 ] && [ "${PASSED_CT:-0}" -eq "$EXPECTED_TESTS" ]; then
+    log "test suite: $PASSED_CT of $TOTAL Passed serially, 0 skipped, 0 failed"
   fi
   rm -f "$LOG"
 

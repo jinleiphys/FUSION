@@ -88,19 +88,22 @@ else
   mv "$TMPCLONE/repo" "$TMPCLONE.repo" && safe_rmrf "$TMPCLONE" && mv "$TMPCLONE.repo" "$SRCROOT"
 fi
 
-( cd "$SRCROOT" && git diff --quiet HEAD 2>/dev/null ) || {
-  log "the clone at $SRCROOT has uncommitted modifications; refusing to build from it"; exit 1; }
 ( cd "$SRCROOT" && git fetch -q --all 2>/dev/null || true )
 ( cd "$SRCROOT" && git checkout -q "$PIN" 2>/dev/null ) || {
   log "cannot check out pinned commit $PIN (shallow clone, or upstream history moved)"
   log "set TFIST_PIN to re-pin deliberately"; exit 1; }
+# `git status --porcelain`, not `git diff --quiet HEAD`: the latter ignores
+# UNTRACKED files, and an injected extra source in the tree would be compiled by a
+# glob-based build while the tree still looked clean.
+[ -z "$(cd "$SRCROOT" && git status --porcelain 2>/dev/null)" ] || {
+  log "the clone at $SRCROOT has uncommitted or untracked files; refusing to build from it"; exit 1; }
 log "pinned at $PIN (release v1.6.1)"
 
 # ------------------------------------------------------------------- build
 build_identity () {
   local head dirty cxx
   head="$(cd "$SRCROOT" 2>/dev/null && git rev-parse HEAD 2>/dev/null || echo nohead)"
-  if (cd "$SRCROOT" 2>/dev/null && git diff --quiet HEAD 2>/dev/null); then dirty=clean; else dirty=DIRTY; fi
+  if [ -z "$(cd "$SRCROOT" 2>/dev/null && git status --porcelain 2>/dev/null)" ]; then dirty=clean; else dirty=DIRTY; fi
   cxx="$(command -v c++ 2>/dev/null || echo nocxx)|$(c++ --version 2>/dev/null | head -1 || echo nover)"
   echo "$head|$dirty|$cxx|$(uname -s)|$(uname -m)"
 }
@@ -153,13 +156,19 @@ probe_binary () {
   if [ ! -s "$wd/cpc1.Id-HRG.TDep.out" ]; then
     log "cpc1HRGTDep produced no cpc1.Id-HRG.TDep.out"; rm -rf "$wd"; return 1
   fi
-  if ! python3 "$CHECK" "$wd/cpc1.Id-HRG.TDep.out" --min-rows 181 --min-cols 7 \
-        --row-at 0 150 --expect 1 0.647513 2 3.846843 3 4.494356 --accuracy 1e-5 >/dev/null; then
-    log "cpc1HRGTDep output failed structural/anchor validation (truncated, wrong shape, or wrong physics)"
+  # Compare the FULL output against the shipped reference, not a lower-bound
+  # shape: a swapped binary emitting an 8-column, 182-row table with a spoofed
+  # T=150 row would satisfy --min-rows/--min-cols but not an exact reference match.
+  local ref="$SRCROOT/test/ReferenceOutput/cpc1.Id-HRG.TDep.out"
+  if [ ! -s "$ref" ]; then
+    log "the shipped reference $ref is missing; cannot probe"; rm -rf "$wd"; return 1
+  fi
+  if ! python3 "$CHECK" "$wd/cpc1.Id-HRG.TDep.out" --reference "$ref" --accuracy 1e-6 >/dev/null; then
+    log "cpc1HRGTDep output does not reproduce the shipped reference (truncated, wrong shape, or wrong physics)"
     rm -rf "$wd"; return 1
   fi
   rm -rf "$wd"
-  log "probe: cpc1HRGTDep output has 181 rows, 7 columns, and the T=150 MeV anchor matches"
+  log "probe: cpc1HRGTDep reproduces the shipped reference within 1e-6"
 }
 probe_binary || { log "the built binary failed its probe"; exit 1; }
 
