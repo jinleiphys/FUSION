@@ -44,6 +44,7 @@ MAP_FILE = REPO / "data" / "concept-skill-map.json"
 CLASSIFICATION = REPO / "kb-wiki" / "classification.json"
 PAPERS = REPO / "kb-wiki" / "papers"
 CITATIONS = REPO / "kb-wiki" / "citations.tsv"
+THEME_FILE = REPO / "data" / "fusion-theme.json"
 
 PROVIDERS = [
     ("deepseek", "DeepSeek", "deepseek/deepseek-chat"),
@@ -142,7 +143,7 @@ def load_config(path: Path) -> dict:
         sys.exit(1)
 
 
-def merge_config(existing: dict, skills_dir: Path, model: str) -> dict:
+def merge_config(existing: dict, skills_dir: Path, model: str, theme: str = "") -> dict:
     """Add what FUSION needs, keep everything the user already had.
 
     Merged rather than replaced, and the skills path is appended only if absent,
@@ -151,6 +152,8 @@ def merge_config(existing: dict, skills_dir: Path, model: str) -> dict:
     cfg = json.loads(json.dumps(existing))  # deep copy
     if model:
         cfg["model"] = model
+    if theme:
+        cfg["theme"] = theme
     skills = cfg.setdefault("skills", {})
     paths = skills.setdefault("paths", [])
     entry = str(skills_dir)
@@ -419,7 +422,15 @@ def main():
     existing = load_config(cfg_path)
     if existing:
         say(f"You already have {cfg_path}; I will merge, not replace.")
-    merged = merge_config(existing, REPO / "skills", model)
+    # The theme is a customization-layer file, not a fork change: opencode reads
+    # custom themes from <config>/themes/ and they outrank the built-ins. Its
+    # palette is the website's, so the terminal and the web page are finally the
+    # same two colours, plasma blue and core orange.
+    theme_name = ""
+    if THEME_FILE.exists() and ask_yes("Use the FUSION colour theme in the terminal?", default=True):
+        write_file(cfg_dir / "themes" / "fusion.json", THEME_FILE.read_text())
+        theme_name = "fusion"
+    merged = merge_config(existing, REPO / "skills", model, theme_name)
     if existing and not DRY_RUN:
         backup = cfg_path.with_suffix(f".json.bak-{time.strftime('%Y%m%d-%H%M%S')}")
         shutil.copy2(cfg_path, backup)

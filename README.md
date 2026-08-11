@@ -6,6 +6,8 @@
 
 **F**ramework for **U**nified **S**cientific **I**ntelligence in **O**pen **N**uclear physics
 
+`FU ▸◂ SION`
+
 A coding agent that already knows how to drive the open-source codes nuclear
 physicists actually use, and that carries the nucl-th literature with it.
 
@@ -152,6 +154,11 @@ If you want to add a skill, read
 [CLAUDE.md](CLAUDE.md) first: it carries the rules a skill must satisfy,
 including that the code be publicly obtainable, buildable from source on the
 target platform, and backed by a published paper.
+
+## Visual identity
+
+Two nuclei meeting, in two colours, on every surface. Palette, mark, and where
+each is applied: [BRAND.md](BRAND.md).
 
 ## Licence
 
