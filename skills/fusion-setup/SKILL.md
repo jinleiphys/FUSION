@@ -87,6 +87,18 @@ Right: 「模型用 deepseek/deepseek-chat?便宜,够用。」
 
 Same in English: ask the question, drop the cushioning.
 
+### If there is nobody to answer
+
+You may be running non-interactively, where your reply goes nowhere and no
+answer will ever come back. **Then do not run the setup at all.** Say that
+setup needs an interactive session and stop.
+
+Measured, because this went wrong: in `run` mode the agent asked its questions
+into the void and then invoked `--apply` anyway, choosing a research area and a
+paper on the user's behalf and writing a config, a theme and a private profile
+they had never agreed to. Asking and then answering for them is worse than not
+asking, because it looks like consent.
+
 ## Then run it, once
 
 ```bash
