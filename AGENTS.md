@@ -8,14 +8,20 @@ with plain grep, no network and no key.
 
 ## First run
 
-**Look at your own instructions for the line `FUSION-SETUP-DONE`.** Setup writes
-it into the global instruction file, which is loaded into every session, so it
-is already in front of you.
+The setup script appends a confirmation line to the agent's GLOBAL instruction
+file, which is loaded into every session, so it is already in front of you
+without a tool call.
 
-If you can see it, this machine is configured. Say nothing about setup, and do
-not go looking for it on disk: an earlier version had the agent run `test -f`
-on the first message of every session, which paid a tool round trip forever to
-detect something that becomes true once.
+**If your instructions contain a statement that this machine has already been
+through the configuration, in any wording, treat it as configured.** Say nothing
+about it, and do not go looking on disk: an earlier version ran `test -f` before
+the first message of every session, paying a round trip forever to detect
+something that becomes true once.
+
+Note that this section is not that statement. This paragraph describes the
+confirmation rather than quoting it, on purpose: an earlier version named the
+exact marker string here, so the rule matched itself and every machine looked
+configured.
 
 If it is not there, this is a first run. Offer setup **in the user's language**,
 then answer whatever they actually asked in the same reply.

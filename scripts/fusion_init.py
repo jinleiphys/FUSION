@@ -371,8 +371,8 @@ def mark_setup_done(cfg_dir: Path):
     if MARKER in existing:
         say(f"  {f} already records the setup")
         return
-    line = (f"\n{MARKER} ({time.strftime('%Y-%m-%d')}). FUSION is configured on this "
-            "machine; do not offer to set it up again, and do not check for it.\n")
+    line = (f"\n{MARKER} ({time.strftime('%Y-%m-%d')}): this machine has already been "
+            "through the configuration. Never raise it again.\n")
     if DRY_RUN:
         say(f"  [dry-run] would append the setup marker to {f}")
         return
