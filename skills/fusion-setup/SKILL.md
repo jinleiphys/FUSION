@@ -17,23 +17,54 @@ The rule this replaces was "never answer the setup prompts on the user's
 behalf". That rule is still right. It is enforced by asking them, not by making
 a human type their answers into a second program.
 
-## Ask these, in the user's language
+## Ask ONE question at a time
 
-Keep it to one short message, not five round trips. Offer sensible defaults and
-let them answer in any form; you interpret. If they say "随便" or "you pick",
-take the defaults and say which you took.
+**Never present the whole thing at once.** A four-part questionnaire with ten
+numbered options is a form, and nobody wants to fill in a form. Ask one short
+question, wait for the answer, ask the next. Four exchanges of one line each
+feel faster than one wall of text, even though they take longer.
 
-1. **Model.** Which provider. `deepseek/deepseek-chat` is the cheap default and
-   the one most users here want; `alibaba/qwen-max`, `zhipuai/glm-4.6`,
-   `anthropic/claude-sonnet-5`, `openai/gpt-5.4` also work. If they already have
-   a model configured and are happy with it, skip this and pass nothing.
-2. **Research areas.** Run `python3 scripts/fusion_init.py --list-areas` to get
-   the ids with live paper counts, and present them in the user's language.
-   Multiple are fine.
-3. **Theme.** One yes or no question: the FUSION colour theme in the terminal.
-4. **Private layer.** Explain what it is in one sentence, that it is built from
-   their own arXiv ids, and that it lives outside the repository. Ask for the
-   ids. Blank is a fine answer and means skip it.
+Say how many steps there are when you start, so it does not feel open-ended:
+*"四个问题,一个一个来。"*
+
+**Never paste the area list.** Do not dump ten ids and paper counts on someone.
+Ask what they work on in their own words. A nuclear physicist will say "我做核
+反应,主要是破裂" or "shell model mostly", and mapping that to an area id is your
+job, not theirs. Say which one you matched, and move on. Only show the list if
+they ask for it or genuinely cannot say, and even then show four or five likely
+ones, not all ten. `python3 scripts/fusion_init.py --list-areas` gives the ids
+with live paper counts when you need them.
+
+### Step 1, model
+
+Check what they already have before asking. If `model` is already set in their
+config and they have not complained about it, say which one it is and ask only
+whether to keep it.
+
+Otherwise: one line. `deepseek/deepseek-chat` is cheap and the usual choice
+here; `alibaba/qwen-max`, `zhipuai/glm-4.6`, `anthropic/claude-sonnet-5` and
+`openai/gpt-5.4` also work. Do not list all five unless asked.
+
+### Step 2, what they work on
+
+Free text, then map it yourself. Multiple areas are fine. If they say something
+outside the ten, say so plainly rather than forcing it into the nearest box, and
+tell them which skills exist for it if any do.
+
+### Step 3, theme
+
+One yes or no. "要不要把终端配色换成 FUSION 的?" Default yes.
+
+### Step 4, their own papers
+
+Explain in one sentence what it buys them: a private page showing the topics
+their work carries, their co-authors, and who cites them inside the corpus.
+Ask for arXiv ids. Blank is a perfectly good answer and skips it. Say that it
+lives outside the repository, because people are right to be careful about
+where their own work gets written.
+
+If at any point they say 随便 or "you pick", take the defaults, tell them what
+you took, and stop asking.
 
 ## Then run it, once
 
@@ -49,6 +80,9 @@ python3 scripts/fusion_init.py --apply \
 Omit any flag the user did not choose. Omit `--private-dir` entirely to skip the
 private layer. Add `--dry-run` first if the user wants to see what it would
 write.
+
+One command at the end, not one per answer. The questions are a conversation;
+the writing is a single step.
 
 It prints `SETUP OK` with the config path, the skill count, and whether
 autoupdate was disabled. Report that back in plain words. If it exits non-zero,
