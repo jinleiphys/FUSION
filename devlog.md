@@ -37,11 +37,27 @@ a real calculation, which touches every artifact at once, so no enumeration can
 fall behind. Enumerating artifacts by hand (the fix applied here) is the weakest of
 the three and drifts as soon as a skill grows a new output.
 
-**Deliberately not "fixed": AZURE2 is the only skill whose fast path is a bare
-file-exists with no probe and no stamp.** Not the multi-artifact bug (Minuit2 is
-statically linked, so the lone binary really is the whole runtime install), but it
-is the one place a corrupt cached binary is waved through. Left as a documented
-inconsistency rather than a silent divergence from the rest of the family.
+**Third fix, same day (user asked for it after the first report): AZURE2 was the
+last skill whose fast path was a bare file-exists, no probe and no stamp.** Not the
+multi-artifact bug (Minuit2 is linked statically, so the lone binary really is the
+whole runtime install, and there is no second artifact to corroborate it with),
+but it was the one place a half-written cached binary was waved through. The
+post-build probe it already had (two assertions, bare invocation for the syntax
+banner and `--help` for `--no-gui`) is now a function called from both paths, so
+a failed probe falls through to a rebuild instead of being handed back.
+
+**And the flip test for it lied the first time, in the way this project keeps
+meeting.** The assertion was "must not hand back a path", but after a failed probe
+the CORRECT behaviour is to rebuild and then hand back a path, which is exactly
+what happened; the run also regenerated the `.app` bundle and took the backup
+binary inside it with it. Rewritten against a throwaway `AZURE2_ROOT` with the
+real discriminator (did the probe fire, and did it reach the rebuild rather than
+short-circuit), which passes both ways. Two lessons, both old: assert on the
+mechanism you are testing, not on a symptom that a correct run also produces; and
+do not flip-test a guard against the user's live cache when the env var for a
+scratch root is right there. Cache confirmed intact afterwards: verify VERIFY OK
+with both anchors unmoved (S(90 keV) = 7.6080 keV b, S_6.79(0) = 1.2572 keV b),
+selftest 25/25.
 
 **Guard discipline held:** both fixes flip-tested (hide exactly one artifact,
 confirm exactly that guard fires, restore), plus a no-false-reject case on a

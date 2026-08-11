@@ -56,9 +56,47 @@ resolve_bin () {
   return 1
 }
 
+# Prove the binary runs rather than assuming it. Two probes, because the two
+# outputs differ and an earlier version of this check asserted the wrong one:
+# with NO arguments AZURE2 prints only a short "A valid configuration file must
+# be specified" plus a one-line syntax banner, while the full option list
+# appears only under --help. Assert on both, each against its own output.
+#
+# This runs on the FAST PATH as well as after a build. A bare file-exists fast
+# path (what this script used to have, and the last one in the family to have
+# it) hands back a cached binary that a failed or interrupted build may have
+# left half-written, and the caller only finds out inside a real calculation.
+# AZURE2 has no build stamp to check instead: Minuit2 is linked statically, so
+# there is no second artifact whose presence would corroborate the binary.
+probe_binary () {
+  local b="$1" probe rc=0
+  probe="$(mktemp "${TMPDIR:-/tmp}/azure2probe.XXXXXX")"
+  set +e
+  "$b" > "$probe" 2>&1
+  if ! grep -q "Syntax: AZURE2" "$probe"; then
+    echo "install_azure2: the binary at $b did not print its syntax banner." >&2
+    head -5 "$probe" >&2
+    rc=1
+  fi
+  if [ "$rc" -eq 0 ]; then
+    "$b" --help > "$probe" 2>&1
+    if ! grep -q -- "--no-gui" "$probe"; then
+      echo "install_azure2: --help did not list the expected console-mode options." >&2
+      head -10 "$probe" >&2
+      rc=1
+    fi
+  fi
+  set -e
+  rm -f "$probe"
+  return "$rc"
+}
+
 if found="$(resolve_bin)" && [ -z "${AZURE2_FORCE:-}" ]; then
-  echo "AZURE2=$found"
-  exit 0
+  if probe_binary "$found"; then
+    echo "AZURE2=$found"
+    exit 0
+  fi
+  echo "install_azure2: the cached binary failed its probe; rebuilding" >&2
 fi
 
 command -v git >/dev/null || { echo "install_azure2: git required" >&2; exit 1; }
@@ -213,28 +251,6 @@ mkdir -p "$SRCDIR/build"
 
 found="$(resolve_bin)" || { echo "install_azure2: no AZURE2 binary after build" >&2; exit 1; }
 
-# Prove the binary runs rather than assuming it. Two probes, because the two
-# outputs differ and an earlier version of this check asserted the wrong one:
-# with NO arguments AZURE2 prints only a short "A valid configuration file must
-# be specified" plus a one-line syntax banner, while the full option list
-# appears only under --help. Assert on both, each against its own output.
-probe="$ROOT_DIR/probe.out"
-set +e
-"$found" > "$probe" 2>&1
-set -e
-if ! grep -q "Syntax: AZURE2" "$probe"; then
-  echo "install_azure2: the built binary did not print its syntax banner." >&2
-  head -5 "$probe" >&2
-  exit 1
-fi
-set +e
-"$found" --help > "$probe" 2>&1
-set -e
-if ! grep -q -- "--no-gui" "$probe"; then
-  echo "install_azure2: --help did not list the expected console-mode options." >&2
-  head -10 "$probe" >&2
-  exit 1
-fi
-rm -f "$probe"
+probe_binary "$found" || { echo "install_azure2: the freshly built binary failed its probe" >&2; exit 1; }
 
 echo "AZURE2=$found"
