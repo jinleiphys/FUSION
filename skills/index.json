@@ -130,7 +130,7 @@
     },
     {
       "name": "fusion-setup",
-      "version": "0-uncommitted",
+      "version": "96cfdad0b765",
       "files": [
         "AGENTS.md",
         "SKILL.md"

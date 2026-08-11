@@ -1,94 +1,89 @@
 ---
 name: fusion-setup
-description: Set up or reconfigure FUSION for this user: choose a model, pick research areas, wire the skills and the offline knowledge base into the agent's config, and seed a private layer from the user's own papers. Use when the user says 配置 FUSION, 初始化, set up FUSION, fusion init, configure fusion, 我第一次用, first time, 重新配置, or asks how to point this agent at the knowledge base. Also use when a skill fails to load and the cause may be configuration.
+description: Set up or reconfigure FUSION for this user: choose a model, pick research areas, wire the skills and the offline knowledge base into the agent's config, and seed a private layer from the user's own papers. Use when the user says 配置 FUSION, 初始化, 帮我配置, set up FUSION, fusion init, configure fusion, 我第一次用, first time, 重新配置, or accepts the first-run setup offer. Also use when a skill fails to load and the cause may be configuration.
 ---
 
 # Setting up FUSION
 
-The setup is a script, `scripts/fusion_init.py`, and your job is to run it and
-interpret what it says. **Do not reimplement it in conversation.** It writes
-config files, merges rather than clobbers, backs up what was there, and refuses
-to put personal notes inside the repository. Re-deriving that by hand in a chat
-loses every one of those protections.
+**You run the setup. Do not send the user away to run a script.**
 
-## Before you run anything
+They are already talking to you, in a terminal, and you can run commands. Telling
+them to open another terminal, run an interactive script and paste the output
+back is a bad answer to a question they just asked you. Ask the questions here,
+in conversation, which is the thing conversation is actually good at, then apply
+the answers in one command.
 
-The user is already talking to you, so the agent and the skills are working.
-That means setup is NOT required for the skills to function; it adds the model
-default, the theme, the knowledge-base wiring, and the private layer. Say so, so
-the user knows what they are getting rather than assuming it was mandatory.
+The rule this replaces was "never answer the setup prompts on the user's
+behalf". That rule is still right. It is enforced by asking them, not by making
+a human type their answers into a second program.
 
-Find the repository root: it is the directory containing `skills/`, `kb-wiki/`
-and `scripts/fusion_init.py`. If you cannot find it, ask where FUSION was
-cloned rather than guessing.
+## Ask these, in the user's language
 
-## Running it
+Keep it to one short message, not five round trips. Offer sensible defaults and
+let them answer in any form; you interpret. If they say "随便" or "you pick",
+take the defaults and say which you took.
 
-The script is interactive: it asks about six questions and needs a real
-terminal. You cannot answer for the user, and you must not try.
+1. **Model.** Which provider. `deepseek/deepseek-chat` is the cheap default and
+   the one most users here want; `alibaba/qwen-max`, `zhipuai/glm-4.6`,
+   `anthropic/claude-sonnet-5`, `openai/gpt-5.4` also work. If they already have
+   a model configured and are happy with it, skip this and pass nothing.
+2. **Research areas.** Run `python3 scripts/fusion_init.py --list-areas` to get
+   the ids with live paper counts, and present them in the user's language.
+   Multiple are fine.
+3. **Theme.** One yes or no question: the FUSION colour theme in the terminal.
+4. **Private layer.** Explain what it is in one sentence, that it is built from
+   their own arXiv ids, and that it lives outside the repository. Ask for the
+   ids. Blank is a fine answer and means skip it.
 
-**Tell the user to run it themselves**, in their own terminal:
+## Then run it, once
 
 ```bash
-cd <fusion-repo>
-python3 scripts/fusion_init.py
+python3 scripts/fusion_init.py --apply \
+  --model <provider/model> \
+  --areas <id,id> \
+  --theme \
+  --private-dir ~/.fusion \
+  --papers "<arxiv ids>"
 ```
 
-Offer `--dry-run` first if they want to see every write before it happens.
+Omit any flag the user did not choose. Omit `--private-dir` entirely to skip the
+private layer. Add `--dry-run` first if the user wants to see what it would
+write.
 
-If your harness lets the user run a command inline (Claude Code's `!` prefix,
-for example), suggest that. Otherwise plain instructions are correct. Running an
-interactive prompt inside a tool call and answering it yourself would silently
-pick their model, their research areas and their private-layer location for
-them.
+It prints `SETUP OK` with the config path, the skill count, and whether
+autoupdate was disabled. Report that back in plain words. If it exits non-zero,
+show the user what it said; do not paper over it.
 
-## What it does, in the order it asks
+## The one thing you must hand back
 
-1. **The engine.** Checks for `fusion` first, then `opencode`. If neither is on
-   PATH it says so and stops short of writing a broken config.
-2. **Model.** Provider and model id, written into the config. It does NOT write
-   the API key; keys go through `opencode auth login`, because that file's
-   format belongs to the agent and a wizard writing secrets into someone else's
-   schema breaks the first time upstream changes it.
-3. **Research areas.** Ten areas built from the concept tags the corpus actually
-   assigns, with live paper counts. Areas with no skill say so plainly.
-4. **Skills.** Recommends by area, and reports that every skill in the clone
-   loads regardless.
-5. **Theme.** Optional. Installs the FUSION palette into `<config>/themes/`.
-6. **Private layer.** Optional, and the interesting one. Give it the arXiv ids
-   of the user's own papers and it builds a starting profile: the concepts their
-   work carries, their co-authors, and who cites them inside the corpus. It
-   refuses to write this inside the repository.
+**The API key.** After the run, tell the user to run `opencode auth login`
+themselves, or `fusion auth login` if that is the binary they have. Do not offer
+to take the key and store it for them, and do not ask them to paste it into the
+chat: a key in a transcript is a leaked key. This is the only step that goes
+back to them, and say why, because being sent away for no reason is what makes a
+tool feel stupid.
 
-It finishes by asking the agent what it can now see and reporting any skill that
-did not load, separating "shadowed by a same-named skill elsewhere" from "did
-not load at all, cause unknown". Read that back to the user; it is the only part
-that can reveal a broken install.
+## Check it worked
 
-## Reading the result
-
-- `Every skill in this clone loaded.` Setup worked.
-- `N skill(s) came from somewhere else instead of this clone.` The user has
-  another skill by the same name, and the agent silently preferred it. Tell them
-  which, and that renaming or removing the other copy is the fix.
-- `N skill(s) in this clone did not load at all.` Something is wrong with those
-  skills. Worth reporting as a bug, with the names.
-- `Could not read the skill list back.` The self-check failed, not necessarily
-  setup. Suggest `opencode debug skill`.
+Run `opencode debug skill` (or `fusion debug skill`) and count how many skills
+came from this repository's `skills/` directory. There are 23. If some are
+missing, they were either shadowed by a same-named skill elsewhere, in which
+case say which and where the winning one lives, or they failed to load, in which
+case say so and that the cause is not visible from here. Do not report success
+because a command exited zero.
 
 ## Reconfiguring later
 
-Rerunning is safe and idempotent: the skills path is appended only if absent,
-and the config is merged. The private layer is regenerated, so tell the user to
-copy anything they hand-edited out of `profile.md` first, or to point the rerun
-at a different directory.
+Rerunning is safe: the config is merged, the skills path is appended only if
+absent, and the existing config is backed up first. The private layer is
+regenerated, so if they hand-edited `profile.md`, tell them to copy it aside or
+point the rerun at a different directory.
 
 ## What NOT to do
 
 - Do not write `auth.json` or any API key, by any route.
-- Do not create the private layer inside the FUSION repository, and do not
-  suggest a path there. It gets published.
-- Do not claim setup succeeded because the script exited zero. Read its
-  final report.
-- Do not edit the user's `opencode.json` by hand to "fix" something the script
-  would have done. If the script is wrong, that is a bug worth reporting.
+- Do not create the private layer inside the FUSION repository. The script
+  refuses, but do not propose it either: this repository is public.
+- Do not invent the user's answers. If they have not said, ask, or take a stated
+  default and tell them which one you took.
+- Do not claim setup succeeded because the exit code was zero. Read the report.

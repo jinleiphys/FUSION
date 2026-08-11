@@ -8,7 +8,7 @@ Codex does not inline markdown imports ([openai/codex#17401](https://github.com/
 
 ## When this skill applies
 
-Set up or reconfigure FUSION for this user: choose a model, pick research areas, wire the skills and the offline knowledge base into the agent's config, and seed a private layer from the user's own papers. Use when the user says 配置 FUSION, 初始化, set up FUSION, fusion init, configure fusion, 我第一次用, first time, 重新配置, or asks how to point this agent at the knowledge base. Also use when a skill fails to load and the cause may be configuration.
+Set up or reconfigure FUSION for this user: choose a model, pick research areas, wire the skills and the offline knowledge base into the agent's config, and seed a private layer from the user's own papers. Use when the user says 配置 FUSION, 初始化, 帮我配置, set up FUSION, fusion init, configure fusion, 我第一次用, first time, 重新配置, or accepts the first-run setup offer. Also use when a skill fails to load and the cause may be configuration.
 
 ## What is in this directory
 

@@ -351,12 +351,99 @@ you work on.
 
 # ------------------------------------------------------------------ the flow
 
+def apply(model, areas, theme, private_dir, papers):
+    """Do the setup from answers already collected, asking nothing.
+
+    This exists so an AGENT can run the setup. The agent holds the conversation,
+    which is what a conversation is for, and then calls this once with what the
+    user said. The earlier design told the user to go and run the interactive
+    script in another terminal and paste the output back, which is absurd when
+    they are already talking to something that can run commands. What must NOT
+    happen is the agent inventing the answers, and that is prevented by
+    requiring them as arguments rather than by making a human type them twice.
+
+    The API key is the one thing still handed back to the user: it goes through
+    `opencode auth login`, so it never passes through a chat transcript.
+    """
+    m, counts = load_areas()
+    area_labels = {a["id"]: a["label_en"] for a in m["areas"]}
+    known = set(area_labels)
+    unknown = [a for a in areas if a not in known]
+    if unknown:
+        sys.exit(f"unknown area(s): {', '.join(unknown)}. Valid: {', '.join(sorted(known))}")
+
+    all_skills = sorted(p.name for p in (REPO / "skills").iterdir() if p.is_dir())
+    cfg_dir = config_dir()
+    cfg_path = cfg_dir / "opencode.json"
+    existing = load_config(cfg_path)
+
+    theme_name = ""
+    if theme and THEME_FILE.exists():
+        write_file(cfg_dir / "themes" / "fusion.json", THEME_FILE.read_text())
+        theme_name = "fusion"
+
+    oc = find_opencode()
+    kill_autoupdate = bool(oc and Path(oc).name == "fusion")
+    merged = merge_config(existing, REPO / "skills", model, theme_name, kill_autoupdate)
+    if existing and not DRY_RUN:
+        backup = cfg_path.with_suffix(f".json.bak-{time.strftime('%Y%m%d-%H%M%S')}")
+        shutil.copy2(cfg_path, backup)
+        say(f"  backed up existing config to {backup}")
+    write_file(cfg_path, json.dumps(merged, indent=2) + "\n")
+
+    if private_dir:
+        home = Path(private_dir).expanduser()
+        try:
+            home.resolve().relative_to(REPO.resolve())
+            sys.exit("refusing to create the private layer inside the FUSION repository")
+        except ValueError:
+            pass
+        found, missing = find_my_papers(papers) if papers else ([], [])
+        if missing:
+            say(f"  not in the corpus: {', '.join(missing)}")
+        seed_private_layer(home, found, areas, area_labels)
+
+    write_file(Path.home() / ".fusion" / ".initialized",
+               f"set up by fusion_init.py on {time.strftime('%Y-%m-%d')}\n")
+
+    say("")
+    say(f"SETUP OK  config={cfg_path}  skills={len(all_skills)}  "
+        f"theme={theme_name or 'unchanged'}  autoupdate_disabled={kill_autoupdate}")
+    if not model:
+        say("NOTE no model was set; the user still needs to choose one")
+    say("NEXT the user must run `opencode auth login` themselves to store the API key; "
+        "it must not be pasted into a chat")
+
+
 def main():
     global DRY_RUN
-    ap = argparse.ArgumentParser(description="Set up FUSION by asking a few questions.")
+    ap = argparse.ArgumentParser(description="Set up FUSION.")
     ap.add_argument("--dry-run", action="store_true", help="show every write without making it")
+    ap.add_argument("--apply", action="store_true",
+                    help="non-interactive: apply the answers given by the flags below. "
+                         "Intended for an agent that has already asked the user.")
+    ap.add_argument("--model", default="", help="provider/model id, e.g. deepseek/deepseek-chat")
+    ap.add_argument("--areas", default="", help="comma-separated area ids from data/concept-skill-map.json")
+    ap.add_argument("--theme", action="store_true", help="install the FUSION colour theme")
+    ap.add_argument("--private-dir", default="", help="where to seed the private layer; omit to skip it")
+    ap.add_argument("--papers", default="", help="space or comma separated arXiv ids of the user's own papers")
+    ap.add_argument("--list-areas", action="store_true", help="print the area ids and paper counts, then exit")
     args = ap.parse_args()
     DRY_RUN = args.dry_run
+
+    if args.list_areas:
+        m, counts = load_areas()
+        for a in m["areas"]:
+            say(f"{a['id']}\t{counts.get(a['id'], 0)}\t{a['label_en']}")
+        return
+
+    if args.apply:
+        apply(args.model,
+              [x for x in args.areas.replace(",", " ").split() if x],
+              args.theme,
+              args.private_dir,
+              [x for x in args.papers.replace(",", " ").split() if x])
+        return
 
     say("\n\033[1mFUSION init\033[0m")
     say("A few questions, then a working setup. Ctrl-C aborts without writing anything.")
