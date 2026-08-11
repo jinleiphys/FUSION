@@ -1,0 +1,12 @@
+p90zr-closure.search
+q
+plot p90zr-closure-init.plot
+min
+set strategy 2
+migrad
+hesse
+end
+q
+show
+plot p90zr-closure-fit.plot
+ex

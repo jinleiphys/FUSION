@@ -1,0 +1,23 @@
+'p-cd-manual.in' 'p-cd-manual.frout'
+4 1
+! Published reference case: FRESCO: getting started, section 4, Boxes 7 and 8.
+! The manual quotes the fitted values V = 52.53 MeV, r0 = 1.179 fm, W = 3.46 MeV,
+! WD = 7.43 MeV with ChiSq/N = 2.19, from these 12 points and these start values.
+ &variable kind=1 name='r0' kp=1 pline=2 col=2 potential=1.  step=0.01/
+ &variable kind=1 name='V'  kp=1 pline=2 col=1 potential=50.0 step=0.1/
+ &variable kind=1 name='W'  kp=1 pline=2 col=4 potential=5.0  step=0.1/
+ &variable kind=1 name='WD' kp=1 pline=3 col=4 potential=10.  step=0.1/
+ &data iscale=0 idir=1 lab=F abserr=T/
+ 22.      0.548 0.044
+ 26.      0.475 0.024
+ 30.      0.481 0.014
+ 38.      0.447 0.009
+ 50.      0.144 0.004
+ 66.      0.499 0.010
+ 70.      0.248 0.005
+ 86.      0.463 0.014
+ 90.      0.485 0.015
+ 106.     0.087 0.003
+ 110.     0.135 0.004
+ 130.     0.161 0.005
+&

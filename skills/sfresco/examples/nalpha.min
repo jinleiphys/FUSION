@@ -1,0 +1,12 @@
+nalpha.search
+q
+plot nalpha-init.plot
+min
+set strategy 2
+migrad
+hesse
+end
+q
+show
+plot nalpha-fit.plot
+ex

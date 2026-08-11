@@ -1,0 +1,12 @@
+p-cd-manual.search
+q
+plot p-cd-manual-init.plot
+min
+set strategy 2
+migrad
+hesse
+end
+q
+show
+plot p-cd-manual-fit.plot
+ex

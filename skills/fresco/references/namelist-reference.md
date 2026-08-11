@@ -56,7 +56,7 @@ End all partitions with an empty `&partition /`.
 
 ## &POT: potentials, by TYPE and SHAPE
 
-First `&POT` of a given `kp` has `TYPE=0` (Coulomb + defines radii): `&POT kp= type=0 ap= at= rc= /` (or `p1=ap p2=at p3=rc`). Radii use `R = r0*(ap^1/3 + at^1/3)`. Then add components with `TYPE>0`, same `kp`, cumulatively. `kp<0` or empty `&pot /` ends the block.
+First `&POT` of a given `kp` has `TYPE=0` (Coulomb + defines radii): `&POT kp= type=0 ap= at= rc= /` (or `p1=at p2=ap p3=rc`, in that order: **`p1` is the target mass number and `p2` the projectile one**, per `frxx0.f` `p1=at; p2=ap; p3=rc; p4=ac` and the namelist manual §3.3). Radii use `R = r0*(ap^1/3 + at^1/3)`. Then add components with `TYPE>0`, same `kp`, cumulatively. `kp<0` or empty `&pot /` ends the block.
 
 `&POT kp= type= shape= p1= p2= p3= p4= p5= p6= /`
 

@@ -35,17 +35,27 @@ REPO="https://github.com/I-Thompson/fresco"
 BIN="$BIN_DIR/fresco"
 
 # 1) Already installed? (bin dir first, then anything on PATH)
+# Both binaries must be present: step 5 installs `fresco` and `sfresco` together,
+# so accepting a lone `fresco` here would leave the sfresco skill with nothing to
+# run and no way to trigger a build short of --force.
+have_both() {
+  local d="$1"
+  [ -x "$d/fresco" ] && [ -x "$d/sfresco" ]
+}
 if [ "$FORCE" -eq 0 ]; then
-  if [ -x "$BIN" ]; then
-    echo "# fresco already installed at $BIN"
+  if have_both "$BIN_DIR"; then
+    echo "# fresco and sfresco already installed in $BIN_DIR"
     echo "FRESCO=$BIN"
     exit 0
   fi
-  if command -v fresco >/dev/null 2>&1; then
+  if command -v fresco >/dev/null 2>&1 && command -v sfresco >/dev/null 2>&1; then
     P="$(command -v fresco)"
-    echo "# fresco already on PATH at $P"
+    echo "# fresco and sfresco already on PATH at $(dirname "$P")"
     echo "FRESCO=$P"
     exit 0
+  fi
+  if [ -x "$BIN_DIR/fresco" ] || command -v fresco >/dev/null 2>&1; then
+    echo "# fresco is present but sfresco is not; building both from source" >&2
   fi
 fi
 

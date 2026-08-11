@@ -1,0 +1,16 @@
+p + 90Zr elastic at 30 MeV, KD02
+NAMELIST
+ &FRESCO hcm=0.05 rmatch=25.0 jtmin=0.0 jtmax=40.0 absend=-1.0
+    thmin=0.0 thmax=180.0 thinc=1.0 iter=1 chans=1 xstabl=1
+    elab(1)=30.0 /
+ &PARTITION namep='p' massp=1.0 zp=1 nex=1
+            namet='90Zr' masst=90.0 zt=40 qval=0.0 /
+ &STATES jp=0.5 ptyp=1 ep=0.0 cpot=1 jt=0.0 ptyt=1 et=0.0 /
+ &partition /
+ &POT kp=1 type=0 ap=0.000 at=90.000 rc=1.239895 /
+ &POT kp=1 type=1 p1=49.023171 p2=1.213437 p3=0.664417 p4=2.718057 p5=1.213437 p6=0.664417 /
+ &POT kp=1 type=2 p4=7.215552 p5=1.271370 p6=0.565545 /
+ &POT kp=1 type=3 p1=5.336601 p2=1.041026 p3=0.590000 p4=-0.158715 p5=1.041026 p6=0.590000 /
+ &pot /
+ &overlap /
+ &coupling /

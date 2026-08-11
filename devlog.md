@@ -3,6 +3,49 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-07-30: SFRESCO added as a companion skill, and the auto-provision hole it exposed
+
+**This is not a new per-code row, and it does not reopen the treadmill.** SFRESCO
+ships inside the FRESCO distribution and its binary contains FRESCO, so
+`skills/sfresco/` extends the existing FRESCO row from forward calculation to
+parameter *estimation* (chi-squared fitting of potential parameters, spectroscopic
+amplitudes, R-matrix widths, dataset normalisations). Authored in
+`~/Desktop/claude_skills/skills/sfresco` and copied in; the two live in sync.
+
+**It meets the 2026-07-24 pass criterion the easy way, because the answer is in
+print.** Boxes 7 and 8 of *FRESCO: getting started* section 4 give a complete
+worked fit AND its result, so `examples/p-cd-manual.*` is a genuine L2 case:
+starting from r0 = 1.0 it returns V = 52.5280, r0 = 1.17958, W = 3.46041,
+W_d = 7.42937, chi2/N = 2.1910 against the manual's 52.53, 1.179, 3.46, 7.43,
+2.19. Every printed digit. Worth noting for the paper matrix: **a code whose own
+documentation publishes a worked example with numbers is the cheapest possible L2
+anchor**, and the FRESCO family is unusual in having one. Codes that ship only a
+test suite (Thermal-FIST's ctest, SkyNet's self-comparison) are expensive for
+exactly the opposite reason.
+
+**The real find was in the platform, not the skill.** `install_fresco.sh` checked
+only for `fresco` before declaring success, while its install step copies `fresco`
+and `sfresco` together. So any machine with a hand-built or older `fresco` (this
+laptop, for one) would get "already installed" and no `sfresco` at all, with no way
+to trigger a build short of `--force`. Detection now requires both binaries.
+Auto-provision was then tested for the first time end to end from an empty bin dir:
+clone, build, and the closure fit passes. Two facts fell out of that run: a fresh
+build is **FRES 3.5**, not the 3.4 in `~/bin`, and 3.5 accepts `type=9` (ANC) data
+that 3.4 rejects outright. **Lesson for the family: an auto-install path that has
+never actually run on a machine lacking the binary is not a feature, it is an
+untested claim.** Worth auditing the other install scripts for the same
+"check one artifact, install several" shape.
+
+**Cross-validation moved two documented facts.** Three bounded Codex passes over
+the FRESCO sources corrected `pline` (it also counts `&step` records for TYPE
+12-17, so a deck with matrix-element couplings numbers differently than the
+potential lines suggest) and the failure penalty (the CC-iteration 10000 is
+unconditional; only the bound-state and R-matrix ones are gated by
+`number_calls>5`, and within the first five calls those are fatal instead), plus 14
+script bugs. A fourth, unbounded pass hung for 28 minutes with no output and was
+killed: **the same bounded-prompt lesson as the opticalfisher appeal audit, now
+observed twice.**
+
 ## 2026-07-24: direction change, skill-building paused, pivot to the paper
 
 **The standard for "a skill passes" was wrong, and the fix reframes the whole

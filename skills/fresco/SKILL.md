@@ -1,7 +1,7 @@
 ---
 name: fresco
 description: >-
-  Drive Ian Thompson's FRESCO coupled-channels reaction code: write, run, debug, and verify FRESCO input decks for elastic, inelastic, transfer/DWBA, breakup, CDCC, and capture calculations. Use for 跑fresco, 写fresco输入, FRESCO input, CDCC calculation, coupled-channels, breakup, transfer DWBA, optical model scattering, fort.16/fort.13 output, sfresco fitting.
+  Drive Ian Thompson's FRESCO coupled-channels reaction code: write, run, debug, and verify FRESCO input decks for elastic, inelastic, transfer/DWBA, breakup, CDCC, and capture calculations. Use for 跑fresco, 写fresco输入, FRESCO input, CDCC calculation, coupled-channels, breakup, transfer DWBA, optical model scattering, fort.16/fort.13 output. For fitting a deck to data with SFRESCO, use the `sfresco` skill instead.
 ---
 
 # Driving FRESCO
@@ -134,4 +134,6 @@ The `-lowlevel` CDCC decks are in the fully expanded standard namelist format (e
 
 ## Scope
 
-FRESCO computes elastic, inelastic, transfer (DWBA and CRC), breakup, CDCC, and capture. It does **not** compute inclusive non-elastic breakup (IAV / NEB); that is a separate calculation done by the user's own `smoothie` code. If the task is really an IAV / inclusive-breakup problem, this is the wrong tool. This skill is for direct FRESCO work: optical-model fits, elastic/inelastic, plain CDCC breakup, transfer/DWBA, and capture.
+FRESCO computes elastic, inelastic, transfer (DWBA and CRC), breakup, CDCC, and capture. It does **not** compute inclusive non-elastic breakup (IAV / NEB); that is a separate calculation done by the user's own `smoothie` code. If the task is really an IAV / inclusive-breakup problem, this is the wrong tool. This skill is for direct FRESCO work: elastic/inelastic, plain CDCC breakup, transfer/DWBA, and capture.
+
+**Fitting a deck to data** (chi-squared search over potential parameters, spectroscopic amplitudes, R-matrix widths or dataset normalisations) belongs to the `sfresco` skill, which owns the `.search` file format, the MINUIT session, and the error/correlation reporting. Build and converge the deck here first; that is a hard precondition of any fit.
