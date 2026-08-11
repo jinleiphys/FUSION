@@ -77,8 +77,9 @@ everything here works under a stock `opencode` install too.
 finds all 23 skills on its own. Ask it something and it will reach for the right
 one.
 
-**On the first run it offers to set itself up**, and never asks again once you
-have. Accept and it walks you through your model, the areas you work in, the
+**The first time you ask it anything, it offers to set itself up**, and never
+asks again once you have. The offer arrives with your first message rather than
+at the splash screen, and it does not hold up the thing you actually asked for. Accept and it walks you through your model, the areas you work in, the
 colour theme, and a private space seeded from your own papers: the topics your
 work carries, who you write with, who cites you inside the corpus. Decline and
 it gets straight to what you asked. That private space is created outside this
