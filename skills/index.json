@@ -1,0 +1,402 @@
+{
+  "skills": [
+    {
+      "name": "azure2",
+      "version": "cd3bcdc6d310",
+      "files": [
+        "SKILL.md",
+        "examples/14N_pg_15O_679/.gitignore",
+        "examples/14N_pg_15O_679/14N_pg_15O_679.azr",
+        "examples/14N_pg_15O_679/verification.md",
+        "examples/16O_pg_17F/.gitignore",
+        "examples/16O_pg_17F/16O_pg_17F.azr",
+        "examples/16O_pg_17F/16O_pg_17F_data.azr",
+        "examples/16O_pg_17F/calibrate_widths.py",
+        "examples/16O_pg_17F/verification.md",
+        "examples/talent/Auchampaugh_12C_ntotal.dat",
+        "examples/talent/Chow_pp.dat",
+        "examples/talent/README.md",
+        "examples/talent/Rolfs_FES.dat",
+        "examples/talent/Rolfs_GS.dat",
+        "examples/talent/vogl.dat",
+        "references/azr-format.md",
+        "references/failure-modes.md",
+        "scripts/check_14N_inputs.py",
+        "scripts/check_output.py",
+        "scripts/install_azure2.sh",
+        "scripts/run_azure2.sh",
+        "scripts/selftest_azure2.sh",
+        "scripts/verify_azure2.sh"
+      ]
+    },
+    {
+      "name": "ccfull",
+      "version": "80069c63b1c1",
+      "files": [
+        "SKILL.md",
+        "examples/16O_144Sm.inp",
+        "references/16O_144Sm.OUTPUT.reference",
+        "references/input-format.md",
+        "references/verification.md",
+        "scripts/install_ccfull.sh",
+        "scripts/run_ccfull.sh"
+      ]
+    },
+    {
+      "name": "cgmf",
+      "version": "364b49b6e68b",
+      "files": [
+        ".gitignore",
+        "SKILL.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/install_cgmf.sh",
+        "scripts/run_cgmf.sh",
+        "scripts/selftest_cgmf.sh",
+        "scripts/verify_cgmf.sh"
+      ]
+    },
+    {
+      "name": "cnok",
+      "version": "6355a0f3b97d",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/install_cnok.sh",
+        "scripts/run_cnok.sh",
+        "scripts/selftest_cnok.sh",
+        "scripts/verify_cnok.sh"
+      ]
+    },
+    {
+      "name": "coloss",
+      "version": "65faa0bb0744",
+      "files": [
+        "SKILL.md",
+        "examples/6Li208Pb.in",
+        "examples/alpha40Ca.in",
+        "examples/n40Ca.in",
+        "references/verification.md",
+        "scripts/install_coloss.sh",
+        "scripts/run_coloss.sh"
+      ]
+    },
+    {
+      "name": "exfor-data",
+      "version": "32c67ea892df",
+      "files": [
+        "SKILL.md",
+        "references/exfor-format.md",
+        "scripts/exfor.py"
+      ]
+    },
+    {
+      "name": "fresco",
+      "version": "87c9a5f15155",
+      "files": [
+        "SKILL.md",
+        "examples/2n-transfer-li9tp-simseq.nin",
+        "examples/B1-elastic.in",
+        "examples/B2-inelastic.in",
+        "examples/B5-transfer.in",
+        "examples/B6-capture.in",
+        "examples/b8ex-cdcc-lowlevel.nin",
+        "examples/be11-cdcc-lowlevel.nin",
+        "examples/crc-16O-208Pb-multistep.nin",
+        "examples/dex-deuteron-cdcc.nin",
+        "references/cdcc-format.md",
+        "references/failure-modes.md",
+        "references/namelist-reference.md",
+        "references/output-files.md",
+        "references/verification.md",
+        "scripts/check_xsec.py",
+        "scripts/install_fresco.sh",
+        "scripts/omp.py",
+        "scripts/run_fresco.sh"
+      ]
+    },
+    {
+      "name": "gibuu",
+      "version": "969176b93a9a",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/check_gibuu_output.py",
+        "scripts/install_gibuu.sh",
+        "scripts/run_gibuu.sh",
+        "scripts/selftest_gibuu.sh",
+        "scripts/verify_gibuu.sh"
+      ]
+    },
+    {
+      "name": "gsm",
+      "version": "71fbd69cd4ab",
+      "files": [
+        "SKILL.md",
+        "examples/Exercise_II.in",
+        "examples/Exercise_XIII_1s1I2.in",
+        "examples/Exercise_XV_A_neutron_narrow_resonance.in",
+        "references/Exercise_II.out.reference",
+        "references/Exercise_XIII_1s1I2.out.reference",
+        "references/Exercise_XV_A_neutron_narrow_resonance.out.reference",
+        "references/input-format.md",
+        "references/verification.md",
+        "scripts/compare_gsm.sh",
+        "scripts/install_gsm.sh",
+        "scripts/run_gsm.sh"
+      ]
+    },
+    {
+      "name": "kshell",
+      "version": "28d450083bf8",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/install_kshell.sh",
+        "scripts/run_kshell.sh",
+        "scripts/selftest_kshell.sh",
+        "scripts/verify_kshell.sh"
+      ]
+    },
+    {
+      "name": "nlat",
+      "version": "41952152295c",
+      "files": [
+        ".gitignore",
+        "SKILL.md",
+        "examples/dp48Ca_10-0_DWBA.in",
+        "examples/dp48Ca_20-0_NL.in",
+        "references/failure-modes.md",
+        "references/input-reference.md",
+        "references/upstream-readme.txt",
+        "references/verification.md",
+        "scripts/compare_nlat.py",
+        "scripts/install_nlat.sh",
+        "scripts/run_nlat.sh",
+        "scripts/verify_nlat.sh"
+      ]
+    },
+    {
+      "name": "nucleartoolkit",
+      "version": "48ba838c9029",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/install_nucleartoolkit.sh",
+        "scripts/run_nucleartoolkit.sh",
+        "scripts/selftest_nucleartoolkit.sh",
+        "scripts/verify_nucleartoolkit.sh"
+      ]
+    },
+    {
+      "name": "pikoe",
+      "version": "c17e7f68561b",
+      "files": [
+        ".gitignore",
+        "SKILL.md",
+        "examples/12Cp2pMD.cnt",
+        "examples/12Cp2pMD100.cnt",
+        "examples/12Cp2pQDXinv.cnt",
+        "examples/12Cp2pTDXinv.cnt",
+        "examples/12Cp2pTDXnorm.cnt",
+        "references/failure-modes.md",
+        "references/input-reference.md",
+        "references/output-files.md",
+        "references/upstream-readme.txt",
+        "references/verification.md",
+        "scripts/check_pikoe.py",
+        "scripts/install_pikoe.sh",
+        "scripts/run_pikoe.sh",
+        "scripts/verify_pikoe.sh",
+        "scripts/xbuild_check.sh",
+        "scripts/xbuild_compare.py"
+      ]
+    },
+    {
+      "name": "sfresco",
+      "version": "87c9a5f15155",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "examples/nalpha.min",
+        "examples/nalpha.nin",
+        "examples/nalpha.search",
+        "examples/p-cd-manual.in",
+        "examples/p-cd-manual.min",
+        "examples/p-cd-manual.search",
+        "examples/p-cd.min",
+        "examples/p-cd.nin",
+        "examples/p-cd.search",
+        "examples/p90zr-closure.in",
+        "examples/p90zr-closure.min",
+        "examples/p90zr-closure.search",
+        "references/commands.md",
+        "references/failure-modes.md",
+        "references/fitting-strategy.md",
+        "references/output-files.md",
+        "references/search-file-format.md",
+        "scripts/fitreport.py",
+        "scripts/potmap.py",
+        "scripts/run_sfresco.sh"
+      ]
+    },
+    {
+      "name": "sides",
+      "version": "f6770e36be82",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/install_sides.sh",
+        "scripts/run_sides.sh",
+        "scripts/selftest_sides.sh",
+        "scripts/verify_sides.sh"
+      ]
+    },
+    {
+      "name": "sky3d",
+      "version": "f1351f86ef57",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/cross-platform-manifest.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/check_collision_sky3d.py",
+        "scripts/compare_sky3d.py",
+        "scripts/install_sky3d.sh",
+        "scripts/run_sky3d.sh",
+        "scripts/selftest_sky3d.sh",
+        "scripts/validate_sky3d_output.sh",
+        "scripts/verify_sky3d.sh"
+      ]
+    },
+    {
+      "name": "skynet",
+      "version": "e393148f9811",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/install_skynet.sh",
+        "scripts/run_skynet.sh",
+        "scripts/selftest_skynet.sh",
+        "scripts/skynet_macos_portability.patch",
+        "scripts/verify_skynet.sh"
+      ]
+    },
+    {
+      "name": "smash",
+      "version": "0e3ded70e6a2",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/check_conservation_smash.py",
+        "scripts/install_smash.sh",
+        "scripts/run_smash.sh",
+        "scripts/selftest_smash.sh",
+        "scripts/verify_smash.sh"
+      ]
+    },
+    {
+      "name": "swanlop",
+      "version": "69dc5826a855",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/install_swanlop.sh",
+        "scripts/run_swanlop.sh",
+        "scripts/selftest_swanlop.sh",
+        "scripts/verify_swanlop.sh"
+      ]
+    },
+    {
+      "name": "talys",
+      "version": "6348d275fd0f",
+      "files": [
+        "SKILL.md",
+        "examples/n-Nb093-14MeV-full.inp",
+        "examples/n-Os187-astro-ng.inp",
+        "examples/n-Sn120-omp-KD03.energies",
+        "examples/n-Sn120-omp-KD03.inp",
+        "references/input-format.md",
+        "references/verification.md",
+        "scripts/install_talys.sh",
+        "scripts/run_talys.sh",
+        "scripts/verify_talys.sh"
+      ]
+    },
+    {
+      "name": "thermal-fist",
+      "version": "6348d275fd0f",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/check_output_thermalfist.py",
+        "scripts/install_thermalfist.sh",
+        "scripts/run_thermalfist.sh",
+        "scripts/selftest_thermalfist.sh",
+        "scripts/verify_thermalfist.sh"
+      ]
+    },
+    {
+      "name": "vhlle",
+      "version": "f33887762dac",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "examples/glauber.params",
+        "examples/gubser.params",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/check_glauber.py",
+        "scripts/check_gubser.py",
+        "scripts/check_output.py",
+        "scripts/install_vhlle.sh",
+        "scripts/run_vhlle.sh",
+        "scripts/selftest_vhlle.sh",
+        "scripts/verify_vhlle.sh"
+      ]
+    }
+  ]
+}

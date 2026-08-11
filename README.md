@@ -88,22 +88,35 @@ is still yours.
 
 ## Trying it
 
-**There is no installer yet.** Writing one is the current priority; until then
-the manual route works and is short:
+FUSION runs inside [opencode](https://github.com/anomalyco/opencode), so install
+that first, then clone this repository and let the setup wizard ask you a few
+questions:
 
 ```bash
 git clone https://github.com/jinleiphys/FUSION.git      # ~229 MB, the knowledge base is most of it
 cd FUSION
-
-# point your agent at the skills
-ln -s "$PWD"/skills/* ~/.config/opencode/skills/        # opencode
-ln -s "$PWD"/skills/* ~/.claude/skills/                 # or Claude Code
+python3 scripts/fusion_init.py                          # add --dry-run to see it decide without writing
 ```
+
+The wizard picks your model, wires the skills and the knowledge base into your
+opencode config (merging, never clobbering, and it backs up what was there),
+hands you to `opencode auth login` for your API key, and then seeds a private
+space from your own papers: the topics your work actually carries, who you write
+with, who cites you inside the corpus. That private space is created outside
+this repository, so nothing personal can end up in a public clone.
 
 Then ask for what you want in plain language: *"run a CDCC calculation for
 d+58Ni at 21.6 MeV and compare the elastic angular distribution with the EXFOR
 data"*. The skill handles the rest, including building FRESCO from source if it
 is not already on your machine.
+
+**Skills only, without the knowledge base.** If you do not want the clone, point
+opencode at the skill index and it pulls and caches them itself:
+
+```jsonc
+// ~/.config/opencode/opencode.json
+{ "skills": { "urls": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/skills/"] } }
+```
 
 Skills are plain directories of Markdown and shell scripts, so they work with
 any agent that can read a `SKILL.md` and run a command. Nothing is locked to
@@ -119,7 +132,8 @@ out what other people need from it.
 
 Known rough edges, all of them things you may hit:
 
-- No installer, no setup wizard, no default model configuration.
+- `fusion_init.py` sets you up, but there is no packaged installer and no
+  FUSION binary: you run stock opencode with FUSION's skills and knowledge base.
 - Cold-start installs are under-tested. Every skill's install path works on a
   machine that already has the code; only FRESCO's has been exercised from a
   genuinely empty cache. Expect the occasional missing dependency and please

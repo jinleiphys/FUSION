@@ -1,0 +1,280 @@
+{
+  "_comment": [
+    "Maps research areas to the skills FUSION should offer a user who works in them.",
+    "",
+    "Areas are grouped from the concept slugs that kb-wiki/classification.json actually",
+    "assigns, not from the full PhySH subtree, so every option a user sees has papers",
+    "behind it. Counts in the comments are papers carrying that concept as of 2026-08-11",
+    "and are indicative only; the wizard recomputes them from classification.json.",
+    "",
+    "'skills' lists what to recommend. A skill may appear under several areas; the wizard",
+    "deduplicates. Keep this file honest: recommending a skill that does not exist, or",
+    "that cannot help with the area, is worse than recommending nothing."
+  ],
+  "areas": [
+    {
+      "id": "reactions",
+      "label_en": "Nuclear reactions: direct, transfer, breakup, optical model",
+      "label_zh": "核反应:直接反应、转移、破裂、光学模型",
+      "concepts": [
+        "nuclear-reactions",
+        "direct-reactions",
+        "transfer-reactions",
+        "breakup-reactions",
+        "knockout-reactions",
+        "coulomb-dissociation",
+        "coulomb-excitation",
+        "elastic-scattering-reactions",
+        "inelastic-scattering-reactions",
+        "charge-exchange-reactions",
+        "resonance-reactions",
+        "polarization-phenomena",
+        "radioactive-beams"
+      ],
+      "skills": [
+        "fresco",
+        "sfresco",
+        "coloss",
+        "nlat",
+        "pikoe",
+        "cnok",
+        "sides",
+        "swanlop",
+        "exfor-data"
+      ]
+    },
+    {
+      "id": "fusion-fission",
+      "label_en": "Fusion, fission and statistical decay",
+      "label_zh": "熔合、裂变与统计衰变",
+      "concepts": [
+        "nuclear-fusion",
+        "fission",
+        "scission-point",
+        "level-densities",
+        "fusion-evaporation-reactions",
+        "synthesis-of-new-superheavy-elements",
+        "nuclear-fragmentation",
+        "gamma-ray-strength-functions"
+      ],
+      "skills": [
+        "ccfull",
+        "cgmf",
+        "talys",
+        "sky3d",
+        "exfor-data"
+      ]
+    },
+    {
+      "id": "structure",
+      "label_en": "Nuclear structure: shell model, mean field, collective motion",
+      "label_zh": "核结构:壳模型、平均场、集体运动",
+      "concepts": [
+        "shell-model",
+        "energy-levels",
+        "nuclear-binding",
+        "shape-coexistence",
+        "giant-resonances",
+        "high-spin-states",
+        "collective-models",
+        "collective-levels",
+        "nuclear-density-functional-theory",
+        "electromagnetic-transitions",
+        "nuclear-charge-radii",
+        "nuclear-radii",
+        "charge-distributions",
+        "nuclear-charge-distribution",
+        "isomer-decays",
+        "multipole-matrix-elements",
+        "cluster-models"
+      ],
+      "skills": [
+        "kshell",
+        "gsm",
+        "sky3d",
+        "nucleartoolkit"
+      ]
+    },
+    {
+      "id": "ab-initio",
+      "label_en": "Ab initio and few-body theory, chiral EFT",
+      "label_zh": "从头算与少体理论、手征有效场论",
+      "concepts": [
+        "ab-initio-calculations",
+        "few-body-systems",
+        "nucleon-nucleon-interactions",
+        "nuclear-forces",
+        "effective-field-theory",
+        "chiral-perturbation-theory",
+        "quantum-monte-carlo",
+        "nuclear-many-body-theory",
+        "efimov-states",
+        "hyperspherical-method",
+        "path-integral-monte-carlo"
+      ],
+      "skills": [
+        "nucleartoolkit",
+        "gsm"
+      ]
+    },
+    {
+      "id": "astro",
+      "label_en": "Nuclear astrophysics and nucleosynthesis",
+      "label_zh": "核天体物理与核合成",
+      "concepts": [
+        "nuclear-astrophysics",
+        "r-process",
+        "s-process",
+        "rp-process",
+        "big-bang-nucleosynthesis",
+        "radiative-capture",
+        "s-factor",
+        "nuclear-reaction-rates",
+        "explosive-burning",
+        "solar-neutrinos"
+      ],
+      "skills": [
+        "azure2",
+        "skynet",
+        "talys",
+        "exfor-data"
+      ]
+    },
+    {
+      "id": "dense-matter",
+      "label_en": "Nuclear matter, equation of state, neutron stars",
+      "label_zh": "核物质、状态方程与中子星",
+      "concepts": [
+        "nuclear-matter",
+        "asymmetric-nuclear-matter",
+        "symmetry-energy",
+        "neutron-skin-thickness",
+        "neutron-star-crust",
+        "neutron-stars-pulsars",
+        "nuclear-matter-in-neutron-stars",
+        "equations-of-state-of-nuclear-matter",
+        "quark-matter"
+      ],
+      "skills": [
+        "thermal-fist",
+        "skynet",
+        "sky3d"
+      ]
+    },
+    {
+      "id": "heavy-ion",
+      "label_en": "Relativistic heavy-ion collisions and transport",
+      "label_zh": "相对论重离子碰撞与输运",
+      "concepts": [
+        "relativistic-heavy-ion-collisions",
+        "quark-gluon-plasma",
+        "collective-flow",
+        "jet-quenching",
+        "hydrodynamic-models",
+        "charged-particle-multiplicity",
+        "transport-in-heavy-ion-collisions",
+        "qcd-phase-transitions",
+        "color-deconfinement",
+        "thermal-statistical-models"
+      ],
+      "skills": [
+        "smash",
+        "gibuu",
+        "vhlle",
+        "thermal-fist"
+      ]
+    },
+    {
+      "id": "weak-decay",
+      "label_en": "Beta decay, double beta decay, weak processes",
+      "label_zh": "贝塔衰变、双贝塔衰变与弱过程",
+      "concepts": [
+        "beta-decay",
+        "double-beta-decay",
+        "neutrinoless-double-beta-decay",
+        "electron-muon-capture",
+        "alpha-decay",
+        "proton-emission",
+        "heavy-particle-decays"
+      ],
+      "skills": [
+        "kshell",
+        "nucleartoolkit",
+        "talys"
+      ]
+    },
+    {
+      "id": "qcd-hadron",
+      "label_en": "QCD and hadron structure",
+      "label_zh": "QCD 与强子结构",
+      "concepts": [
+        "quantum-chromodynamics",
+        "perturbative-qcd",
+        "lattice-qcd",
+        "lattice-gauge-theory",
+        "quark-model",
+        "strong-interaction",
+        "generalized-parton-distributions",
+        "parton-distribution-functions",
+        "fragmentation-functions",
+        "nucleon-spin-structure",
+        "hard-scattering",
+        "nonrelativistic-qcd",
+        "heavy-quark-effective-theory",
+        "color-confinement",
+        "qcd-phenomenology",
+        "electron-ion-collisions",
+        "multiquark-bound-states",
+        "transverse-momentum-dependent-distribution",
+        "spin-dependent-parton-distribution-functions",
+        "helicity-distribution-functions"
+      ],
+      "skills": []
+    },
+    {
+      "id": "data-methods",
+      "label_en": "Data, statistics and computational methods",
+      "label_zh": "数据、统计与计算方法",
+      "concepts": [
+        "monte-carlo-methods",
+        "random-matrix-theory",
+        "simulated-annealing",
+        "metropolis-algorithm",
+        "langevin-algorithm",
+        "hybrid-monte-carlo-algorithm",
+        "photonuclear-reactions",
+        "neutron-physics",
+        "nuclear-reactors",
+        "nuclear-engineering",
+        "radiation-detectors"
+      ],
+      "skills": [
+        "exfor-data",
+        "talys"
+      ]
+    }
+  ],
+  "always_on": {
+    "_comment": "Offered to everyone: the data skill is useful in any area, and FRESCO is the reference implementation the other reaction skills are written against.",
+    "skills": [
+      "exfor-data"
+    ]
+  },
+  "no_skill_yet": {
+    "_comment": "Areas with real corpus weight and no skill. Recorded so the wizard can say so plainly instead of silently recommending nothing, and so it is obvious where the gaps are.",
+    "areas": [
+      "qcd-hadron"
+    ]
+  },
+  "unassigned_concepts": {
+    "_comment": "Deliberately not assigned to any area. These are cross-cutting labels (spin, parity), size buckets (a-5, a-220) or one-off tags, not research areas; putting them under an area would make that area's paper count meaningless.",
+    "concepts": [
+      "spin",
+      "parity",
+      "a-5",
+      "a-220",
+      "nucleon-distribution",
+      "nuclear-explosions"
+    ]
+  }
+}
