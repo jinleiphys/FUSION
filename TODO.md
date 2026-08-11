@@ -57,7 +57,7 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 
 ## Phase 3: knowledge base ([kb-design.md](kb-design.md); PhySH taxonomy + pre-generated md wiki + semantic relations)
 
-- [ ] relations.tsv exceeds GitHub's 50 MB soft warning (51 MB at 431k edges, will grow to ~90 MB at full 728k). Decide handling after L3 completes: gzip in-repo, or Git LFS, or fold into the eventual kb-wiki repo split. Not blocking (push still works)
+- [ ] relations.tsv exceeds GitHub's 50 MB soft warning (51 MB at 431k edges, will grow to ~90 MB at full 728k). **The repo-split option is off the table (user ruling 2026-08-11: kb-wiki stays in the main repo, a ~229 MB clone is acceptable), so this is now a choice between gzip in-repo and Git LFS.** Not blocking (push still works), but worth settling before the public release rather than after
 - [ ] Abstract-only pages for the ~1,655 corpus papers without fulltext (lighter template, separate small batch)
 - [ ] Widen neighbor whitelist to cut the 36.4% unclassified rate (hadron structure, heavy-ion subconcepts; sampled unclassified = mix of true out-of-scope and concept gaps)
 - [ ] Tier-B citation edges (111k author-year heuristic edges) deserve a false-positive audit pass

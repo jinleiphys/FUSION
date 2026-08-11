@@ -4,3 +4,7 @@ kb-wiki/citations-inspire.tsv
 kb-wiki/backfill-run.log
 __pycache__/
 *.pyc
+
+# stray cross-validation reports must never ship inside a skill
+skills/**/.codex-*.txt
+.DS_Store

@@ -5,7 +5,10 @@
 # Arm once: nohup caffeinate -is bash scripts/run_full_relations.sh & disown
 set -u
 cd "$(dirname "$0")/.."
-PY=/Users/jinlei/anaconda3/bin/python
+# Interpreter: overridable, because a hardcoded home directory makes this script
+# work only on the author's laptop. Set FUSION_PY to pin a specific python.
+PY="${FUSION_PY:-$(command -v python3 || command -v python)}"
+[ -x "$PY" ] || { echo "no python found; set FUSION_PY=/path/to/python" >&2; exit 1; }
 REL=kb-wiki/relations.tsv
 LOG=kb-wiki/relations-run-$(date +%Y%m%d-%H%M).log
 
