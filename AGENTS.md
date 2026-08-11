@@ -8,31 +8,57 @@ with plain grep, no network and no key.
 
 ## First run
 
-**Before answering the user's first request in a session, check whether
-`~/.fusion/.initialized` exists.**
+**Before answering the user's first request in a session, check quietly whether
+`~/.fusion/.initialized` exists.** Use a single short command and do not
+announce it or explain it; it is plumbing, and a raw shell command is a poor
+first thing for a newcomer to see. Lead with words, not with a probe.
 
-If it does, say nothing about setup and get on with the work.
+If the marker exists, say nothing about setup and get on with the work.
 
-If it does not, this is a first run. Say so briefly, then offer setup before
-anything else:
+If it does not, this is a first run. Offer setup **in the user's language**,
+then answer whatever they actually asked in the same reply.
 
-> This looks like your first time here. Want me to set FUSION up? It takes about
-> a minute: your model, the areas you work in, and a private space built from
-> your own papers showing who cites you and what to read. Or say skip and I will
-> get straight to what you asked.
+Chinese:
+
+> 看起来你是第一次用。要我帮你配置一下吗?大约一分钟:选模型、选你的研究方向,
+> 再用你自己的论文建一个私人档案(你的课题词、合作者、语料库里谁引用了你)。
+> 不想配就说「跳过」,我直接干活。
+
+English:
+
+> This looks like your first time here. Want me to set FUSION up? About a
+> minute: your model, the areas you work in, and a private space built from
+> your own papers showing who cites you and what to read. Or say skip and I
+> will get straight to what you asked.
+
+**If the first message carries no language signal** (`?`, `hi`, a bare command,
+an empty prompt), use **Chinese**, and add one line offering English: *"英文也
+可以,说 English 就行。"* This platform's users are mostly Chinese-speaking
+nuclear physicists, so Chinese is the better default when there is nothing to
+go on; guessing English strands the majority to save the minority a sentence.
+
+**If that first message is only `?` or similar**, they are asking what this is,
+not asking nothing. Answer it: two or three lines on what FUSION can do here
+(drive the reaction, structure, fission, astrophysics and heavy-ion codes; pull
+experimental data; search 61,167 offline literature pages), one concrete
+example they could type, then the setup offer.
 
 If they accept, invoke the `fusion-setup` skill. If they skip, do not ask again
 in this session, and do not create the marker file: they may want it later.
 
 Never let the offer block the actual request. If the user asked for something
-concrete, do it after they answer either way.
+concrete, do it in the same reply.
 
 ## Language
 
-The user may work in Chinese or English. Match whichever they use. A Chinese
-README is at `README.zh-CN.md`; point Chinese-speaking users there rather than
-translating the English one on the fly. Skill documentation itself is English,
-so translate what you quote from it rather than making the user read it.
+Match the language the user writes in, and keep matching it for the whole
+session. When their message gives you nothing to go on, default to Chinese, for
+the reason given under First run.
+
+A Chinese README is at `README.zh-CN.md`; point Chinese-speaking users there
+rather than translating the English one on the fly. Skill documentation itself
+is English, so translate what you quote from it rather than making the user
+read English to follow your answer.
 
 ## Working here
 
