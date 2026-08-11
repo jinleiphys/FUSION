@@ -1,0 +1,49 @@
+MIT License
+
+Copyright (c) 2026 Jin Lei (金磊), Tongji University
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+SCOPE, AND WHAT THIS LICENSE DOES NOT COVER
+
+The MIT terms above apply to the contents of this repository: the skills, the
+scripts, the taxonomy and design documents, and the brand assets.
+
+They do NOT apply to, and this repository does not redistribute:
+
+1. The nuclear-physics codes the per-code skills drive. Every skill obtains its
+   code from that code's own upstream distribution at install time, so each
+   user receives it directly from its authors under the authors' own terms.
+   Those terms vary and some are not open source at all: Sky3D is distributed
+   under the Computer Physics Communications non-profit use licence, and
+   several others are GPL-2.0 or GPL-3.0. Read the licence of any code you
+   install through a skill; a commercial user should contact that code's
+   authors directly.
+
+2. The opencode editor this platform is built on. That fork lives in a separate
+   repository (github.com/jinleiphys/fusion-core) and carries its own MIT
+   licence and copyright notice from the upstream project
+   (github.com/anomalyco/opencode).
+
+3. The papers summarised under kb-wiki/. Those pages contain third-party
+   material: see kb-wiki/README.md for what they are, on what basis they are
+   distributed, and how to ask for one to be removed. The MIT grant above does
+   not purport to license anyone else's copyrighted work.

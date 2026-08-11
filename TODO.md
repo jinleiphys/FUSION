@@ -63,7 +63,7 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 - [ ] Tier-B citation edges (111k author-year heuristic edges) deserve a false-positive audit pass
 - [ ] Hook monthly re-run (digest new papers + kb_classify + build_wiki_layers + kb_citegraph + inject + kb_relations) into the corpus-update launchd job
 - [x] Distribution decision for kb-wiki: user decided 2026-07-10, pages live directly in the main repo (night-1 19,202 pages pushed in a1c4357; final ~250 MB, revisit only if GitHub complains)
-- [ ] Licensing decision for the public artifact: abstracts included vs snippets vs fetch-on-first-run [user decision]
+- [x] 2026-08-11: **Licensing decision for the public artifact RESOLVED (user ruling): kb-wiki ships AS-IS**, abstracts included, alongside the digests. Backed by `kb-wiki/README.md` (provenance table, the basis for distribution, an explicit warning that the digests are machine-generated and can be wrong, and a no-questions-asked author removal path) and by the amended corpus-redistribution hard rule, which still forbids shipping raw `.tex` or the full-text `corpus.db`. Repo licence is MIT; `LICENSE` disclaims the three things it cannot cover (the driven codes, the opencode fork, the summarised papers)
 - [ ] Optional later: MCP server exposing kb_search/kb_browse (demoted from load-bearing to sugar, per 2026-07-09 revision)
 
 ## Phase 4: onboarding + distribution (wizard design: [onboarding-design.md](onboarding-design.md))
