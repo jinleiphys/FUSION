@@ -1,0 +1,142 @@
+name: Release the FUSION CLI
+
+# Builds the FUSION-branded CLI and publishes it HERE, in the repository users
+# actually clone. The source lives in the engine fork
+# (jinleiphys/fusion-core, branch fusion-brand) and is checked out for the
+# build; nobody should have to visit that repo to download a binary.
+#
+# There is deliberately only ONE release workflow in the project. An earlier
+# copy lived in fusion-core and was removed when this replaced it: two places
+# holding the same procedure drift, which this project has already had to
+# repair twice.
+#
+# Small on purpose: CLI only, no desktop app, no VSCode extension, no Windows
+# signing, no npm publish. Bun cross-compiles every target from one Linux
+# runner, so it is a single job of about five minutes.
+#
+# macOS binaries are UNSIGNED and UNNOTARISED. Gatekeeper blocks them until the
+# user clears the quarantine attribute; the release notes say so rather than
+# letting people meet it as a crash.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to publish, without the leading v (e.g. 0.1.0)"
+        required: true
+        type: string
+      engine_ref:
+        description: "Branch or tag of jinleiphys/fusion-core to build"
+        required: false
+        default: fusion-brand
+        type: string
+      draft:
+        description: "Create the release as a draft"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # Only the engine is checked out. This repository is about 229 MB, almost
+      # all of it the knowledge base, and the build does not need a byte of it.
+      - name: Check out the engine
+        uses: actions/checkout@v4
+        with:
+          repository: jinleiphys/fusion-core
+          ref: ${{ inputs.engine_ref }}
+          path: engine
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          # Pinned to what the engine's package.json asks for; its own pre-push
+          # hook enforces the same locally, so anything else would build with a
+          # bun the project has never been tested against.
+          bun-version-file: engine/package.json
+
+      - name: Install dependencies
+        working-directory: engine
+        run: bun install --frozen-lockfile
+
+      - name: Build the CLI for every target
+        working-directory: engine
+        env:
+          OPENCODE_VERSION: ${{ inputs.version }}
+        run: ./packages/opencode/script/build.ts
+
+      - name: Package
+        id: package
+        working-directory: engine/packages/opencode/dist
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          made=0
+          for d in opencode-darwin-* opencode-linux-*; do
+            [ -d "$d/bin" ] || continue
+            # The build script emits `opencode`; someone installing FUSION should
+            # be running a command called fusion.
+            mv "$d/bin/opencode" "$d/bin/fusion"
+            tar -czf "fusion-${d#opencode-}.tar.gz" -C "$d/bin" fusion
+            made=$((made + 1))
+          done
+          # Fail loudly rather than publish an empty release. A build that
+          # silently produces nothing is exactly what this guard is for.
+          if [ "$made" -eq 0 ]; then
+            echo "no binaries were produced; refusing to publish an empty release" >&2
+            ls -la
+            exit 1
+          fi
+          echo "count=$made" >> "$GITHUB_OUTPUT"
+          ls -lh ./*.tar.gz
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ inputs.version }}
+          name: FUSION v${{ inputs.version }}
+          draft: ${{ inputs.draft }}
+          files: engine/packages/opencode/dist/*.tar.gz
+          body: |
+            The FUSION CLI, ${{ steps.package.outputs.count }} platform builds.
+            Engine source: `jinleiphys/fusion-core@${{ inputs.engine_ref }}`.
+
+            ## Install
+
+            ```bash
+            tar -xzf fusion-<your-platform>.tar.gz
+            mv fusion ~/.local/bin/          # anywhere on your PATH
+            ```
+
+            **macOS**: not signed or notarised, so the first run is blocked.
+            Clear the quarantine flag:
+
+            ```bash
+            xattr -d com.apple.quarantine ~/.local/bin/fusion
+            ```
+
+            ## Then
+
+            ```bash
+            git clone https://github.com/jinleiphys/FUSION.git && cd FUSION
+            fusion
+            ```
+
+            All 23 skills load with no configuration, and on the first run it
+            offers to set itself up.
+
+            ## One thing to know
+
+            The update check inherited from upstream points at
+            `anomalyco/opencode`, so this binary will offer to "upgrade" itself
+            into plain opencode and lose FUSION. The setup wizard turns that off
+            for you; to do it by hand, put this in
+            `~/.config/opencode/opencode.json`:
+
+            ```json
+            { "autoupdate": false }
+            ```
