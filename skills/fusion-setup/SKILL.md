@@ -19,12 +19,16 @@ a human type their answers into a second program.
 
 ## Ask ONE question at a time
 
-**Never present the whole thing at once.** A four-part questionnaire with ten
-numbered options is a form, and nobody wants to fill in a form. Ask one short
-question, wait for the answer, ask the next. Four exchanges of one line each
-feel faster than one wall of text, even though they take longer.
+**Never present the whole thing at once.** A questionnaire with ten numbered
+options is a form, and nobody wants to fill in a form. Ask one short question,
+wait for the answer, ask the next. Two exchanges of one line each feel faster
+than one wall of text, even though they take longer.
 
-Say how many there are at the start so it does not feel open-ended. "三个问题"
+There are only two questions, because everything else is either opencode's job
+or reversible with one command. Keep it that way: a setup that grows questions
+is a setup nobody finishes.
+
+Say how many there are at the start so it does not feel open-ended. "两个问题"
 is enough; do not add 我会逐一为您确认 or any other padding.
 
 **Never paste the area list.** Do not dump ten ids and paper counts on someone.
@@ -47,17 +51,20 @@ Switching models is `/model` in the TUI, and changing provider is
 `--model` flag on the script exists for scripted installs; leave it off and
 their setting stays untouched.
 
-### Step 1, what they work on
+### Question 1, what they work on
 
 Free text, then map it yourself. Multiple areas are fine. If they say something
 outside the ten, say so plainly rather than forcing it into the nearest box, and
 tell them which skills exist for it if any do.
 
-### Step 2, theme
+### Not a question either: the colours
 
-One yes or no. "配色换成 FUSION 的?" Default yes.
+Install the theme, do not ask. Changing it back is `/theme`, one command the
+user already has, so asking permission spends one of your two questions on a
+decision that costs nothing to reverse. Mention it in one clause when you
+report what you did: 「配色换成 FUSION 的了,不喜欢 /theme 换回去。」
 
-### Step 3, their own papers
+### Question 2, their own papers
 
 Explain in one sentence what it buys them: a private page showing the topics
 their work carries, their co-authors, and who cites them inside the corpus.

@@ -20,12 +20,12 @@ then answer whatever they actually asked in the same reply.
 
 Chinese:
 
-> 第一次用?可以先配一下,三个问题:你做哪块、终端配色、要不要拿你自己的论文
-> 建个私人档案。不想配就说「跳过」,我直接干活。
+> 第一次用?可以先配一下,两个问题:你做哪块、要不要拿你自己的论文建个私人
+> 档案。不想配就说「跳过」,我直接干活。
 
 English:
 
-> First time here? I can set things up: what you work on, the colours, and
+> First time here? I can set things up: two questions, what you work on and
 > whether to build a private page from your own papers. Say skip and I will get
 > on with what you asked.
 
