@@ -20,78 +20,63 @@
 
 ---
 
-> ### 这是测试版,公开测试中
+> ### v0.1.0 测试版
 >
-> v0.1.0 是第一个公开构建。它能用,作者每天在用,但**没有第二个人用过**。
-> 在你手上坏掉的地方,正是我们要的东西。
->
-> **大概率会遇到的三件事**
->
-> - **macOS 第一次运行会被拦。** 二进制没签名,执行
->   `xattr -d com.apple.quarantine fusion` 就能开。
-> - **别一上来就试 TALYS**,它要下约 11 GB。先试 FRESCO 或 CCFULL,一两分钟就编好。
-> - **冷启动装机是测得最少的部分。** 二十个程序里只有 FRESCO 真正从空缓存装过。
->   某个程序在你机器上编不出来,是你能提供的最有价值的反馈。
->
-> **最想收到什么,按价值排序**
->
-> 1. **看起来对、其实错的结果。** 这个项目存在的理由就是:通用 agent 会写出一份
->    半径约定错了的 FRESCO 输入卡,跑得通,截面错 20%,没有提示。如果 FUSION 也干了
->    这种事,请把输入卡、算出的数、以及正确的数发给我们。这是我们最怕的失败,
->    也是用户最不会主动报的一种。
-> 2. **装不上的程序**,附上报错、你的系统和编译器版本。
-> 3. **任何让你觉得傻的地方。** 首次配置流程里那些别扭的设计,全是一个人真的去用、
->    然后直说"这太傻了"找出来的。这个办法有效。
-> 4. **你希望哪个程序有技能。**
->
-> [提 issue](https://github.com/jinleiphys/FUSION/issues),或写信到
-> `jinl@tongji.edu.cn`。中文英文都行。
+> 这是第一个公开版本。作者已经在日常研究中使用，但还没有第二个人完整跑过一遍。
+> 遇到问题可以 [提 issue](https://github.com/jinleiphys/FUSION/issues)，也可以写信到
+> `jinl@tongji.edu.cn`。中文、英文都可以。
 
 
-一个已经会用核物理开源程序的 agent，而且把 nucl-th 的文献库随身带着，离线可查。
+FUSION 是面向核物理研究的 agent。它知道怎么使用一批核物理开源程序，本地还带着一份
+nucl-th 文献库，断网也能查。
 
-第一次跑一个核物理程序，大部分时间花的不是物理。是找源码、让它在你的机器上编译过去、学一份三百页手册里的输入格式，或者干脆没有手册；等算出来了，你还不知道这个数对不对。
+第一次跑一个核物理程序，时间往往花在计算之外：找源码，解决编译问题，从几百页手册里弄清输入格式。
+有的程序甚至没有完整手册。结果算出来以后，还得判断它是不是对的。
 
-通用的编程 agent 在这件事上会以一种很危险的方式失败。你让它写一份 FRESCO 输入卡，它给你一份看起来没问题的文件，半径约定是错的。卡片跑得通。截面错了 20%。没有任何提示。
+通用编程 agent 会犯一种很危险的错：程序能正常运行，结果看着也合理，物理却错了。比如一份半径约定写错的 FRESCO 输入卡，
+它给出的截面会错 20%，输出里却没有任何报错。
 
-FUSION 给每个程序配一个专家技能。每个技能教 agent 怎么从这个程序自己的上游装它、怎么正确写输入、怎么跑、怎么解析输出、它有哪些坑，以及怎么拿一个有明确容差的基准去核对结果。
+FUSION 用专门的 skill 记住这些细节。每个 skill 都包括安装、输入、运行和输出解析，也会列出已知陷阱，
+再用一个标明容差的基准结果做检查。
 
 ## 快速开始
 
 ```bash
-# 1. 把 FUSION 下载到本地
+# 1. 下载 FUSION
 git clone https://github.com/jinleiphys/FUSION.git && cd FUSION
 
-# 2. 下载 fusion 命令行程序，就下到这个目录里
-#    这条是 Apple 芯片 Mac；Intel Mac 换 darwin-x64，Linux 换 linux-x64
+# 2. 下载 fusion 命令行程序到当前目录
+#    这里以 Apple 芯片 Mac 为例；Intel Mac 换成 darwin-x64，Linux 换成 linux-x64
 curl -fsSL https://github.com/jinleiphys/FUSION/releases/latest/download/fusion-darwin-arm64.tar.gz | tar -xz
 xattr -d com.apple.quarantine fusion          # 只有 macOS 需要这一行
 
-# 3. 打开
+# 3. 启动
 ./fusion
 ```
 
-就这些。`./fusion` 在这个目录里运行，23 个技能和整个文献库都会自动就位，**不需要写任何配置文件**。
+在仓库目录里运行 `./fusion`，23 个 skill 和文献库都会自动加载，不需要另写配置文件。
 
-**你说第一句话时**它会问要不要帮你配置：模型、你的研究方向、配色，以及用你自己的论文建一个私人档案（你的课题词、合作者、语料库里谁引用了你）。问题跟着你的第一条消息出现，不是在启动画面上，而且不会挡着你问的事，它会一边问一边把活干了。配置过一次以后就不再问。想直接干活，说「跳过」。
+第一次对话时，FUSION 会顺便问你是否要配置模型、研究方向和配色，也可以用你的论文建一份私人档案，记下课题词、合作者和语料库内的引用。
+它会同时处理你已经提出的任务。配置完以后不会再问；想略过，直接说「跳过」。
 
 想在任何目录都能直接敲 `fusion`，把它移到 PATH 上：
 
 ```bash
 mkdir -p ~/.local/bin && mv fusion ~/.local/bin/
 
-# 如果之后提示 command not found，说明 ~/.local/bin 不在你的 PATH 里。
+# 如果之后提示 command not found，说明 ~/.local/bin 不在 PATH 里。
 # macOS 默认不会把它加进去：
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc && exec zsh
 ```
 
-macOS 和 Linux、x64 和 arm64 的构建都在 [releases 页](https://github.com/jinleiphys/FUSION/releases)。这些二进制没有做签名和公证，所以 macOS 第一次运行会拦，需要上面那行清掉隔离标记。如果你不愿意跑未签名的程序，`fusion` 本质上是换了品牌的 [opencode](https://github.com/anomalyco/opencode)，这里的一切在原版 opencode 下同样能用。
+macOS、Linux、x64 和 arm64 的构建都在 [releases 页](https://github.com/jinleiphys/FUSION/releases)。这些二进制还没有签名和公证，macOS 第一次运行时需要用上面的命令清掉隔离标记。
+不想运行未签名的二进制，也可以直接用原版 [opencode](https://github.com/anomalyco/opencode) 加载这个仓库的内容。
 
-然后用中文提要求就行：
+然后直接用中文说你要做什么。比如：
 
 > 帮我算 d+58Ni 在 21.6 MeV 的 CDCC，把弹性角分布和 EXFOR 上能找到的实验数据比一下
 
-剩下的它自己处理，包括在你机器上没有 FRESCO 时从源码把它编出来。
+FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游源码开始安装。
 
 **克隆下来大约 229 MB**，绝大部分是文献库。只想要技能、不想要文献库的话，可以不克隆，直接让 agent 从索引拉取：
 
@@ -100,13 +85,14 @@ macOS 和 Linux、x64 和 arm64 的构建都在 [releases 页](https://github.co
 { "skills": { "urls": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/skills/"] } }
 ```
 
-这条路验证过：一台没有克隆仓库的干净机器，23 个技能全部拉取并缓存成功。
+这种安装方式已在一台没有克隆仓库的机器上测过，23 个 skill 都能正常拉取和缓存。
 
-环境要求：`git`、`make`、`gfortran`、一个 C++ 编译器、`python3`。个别技能还需要别的依赖，它会在动手之前告诉你。
+基本环境需要 `git`、`make`、`gfortran`、C++ 编译器和 `python3`。个别 skill 还有额外依赖，运行前会提示。
 
 ## 里面有什么
 
-**23 个技能。** 二十个负责具体程序。SFRESCO 管拟合，EXFOR 技能取实验数据，`fusion-setup` 配置 FUSION。
+仓库里现有 23 个 skill。其中二十个负责具体程序，SFRESCO 负责拟合，EXFOR skill 取实验数据，
+`fusion-setup` 用来配置 FUSION。
 
 | 领域 | 程序 |
 |---|---|
@@ -117,15 +103,17 @@ macOS 和 Linux、x64 和 arm64 的构建都在 [releases 页](https://github.co
 | 重离子、状态方程 | SMASH、GiBUU、Thermal-FIST、vHLLE |
 | 实验数据 | EXFOR 检索与解析 |
 
-每个技能的 `SKILL.md` 会写明它覆盖什么、怎么验证的。哪些进来了、哪些被拒了、为什么：[skills-catalog.md](skills-catalog.md)。
+每个 skill 的 `SKILL.md` 都写明了覆盖范围和验证方法。已收录、已放弃和待处理的程序都记在
+[skills-catalog.md](skills-catalog.md)。
 
-**61,167 页文献**，离线，在 [`kb-wiki/`](kb-wiki/)：61,059 篇 arXiv nucl-th 论文各一页，108 个主题页，外加连接它们的引用层和语义关系层。agent 用普通的 grep 就能读。不需要服务、不需要 key、不需要联网。
+离线文献库在 [`kb-wiki/`](kb-wiki/)，共 61,167 页：61,059 篇 arXiv nucl-th 论文各有一页，另有 108 个主题页，
+以及引用和语义关系。agent 用 `grep` 就能检索，不需要服务、API key 或网络。
 
-这些页面是机器生成的摘要，**会出错**。依赖任何一页之前先读 [kb-wiki/README.md](kb-wiki/README.md)，并且永远引用论文本身，不要引用页面。
+这些页面是机器生成的摘要，可能有错。使用前请读 [kb-wiki/README.md](kb-wiki/README.md)；写论文时引用原文，不要引用这些摘要页。
 
-## 不绑定某一个 agent
+## 可在三个 agent 中使用
 
-技能就是一堆 markdown 和 shell 脚本组成的目录，而且每个技能同时带了两种入口文件，所以三个常见的 agent 都能加载。
+skill 是由 Markdown 和 shell 脚本组成的目录。每个 skill 同时提供两种入口文件，opencode、Claude Code 和 Codex 都能加载。
 
 | Agent | 入口 | 怎么装 | 验证程度 |
 |---|---|---|---|
@@ -133,41 +121,48 @@ macOS 和 Linux、x64 和 arm64 的构建都在 [releases 页](https://github.co
 | Claude Code | `SKILL.md` | `ln -s "$PWD"/skills/* ~/.claude/skills/` | **已验证**，与它已在加载的技能逐字节一致 |
 | Codex | `AGENTS.md` | `ln -s "$PWD"/skills/* ~/.codex/skills/` | 仅格式，**未**端到端验证 |
 
-Codex 的入口文件是**自动生成的指针**，不是手写的精简镜像。每个文件写明这是哪个技能、什么时候用，然后要求 Codex 用文件读取工具去读 `SKILL.md`，它必须这么做，因为 Codex 不支持 markdown 内联导入。能用，但比手写镜像弱，每个文件开头都如实标注了这一点。
+Codex 的入口是自动生成的指针文件。它会告诉 Codex 什么时候使用该 skill，并让 Codex 读取完整的 `SKILL.md`。
+这种方式还没有端到端验证，所以每个入口文件都明确写了这一限制。
 
-## 一个技能能信到什么程度
+## skill 验证到什么程度
 
-每个技能都是从这个程序的公开源码和它自己的手册里搭出来的，然后被要求复现某个东西。证据是明说的，不是暗示的：
+每个 skill 都基于程序的公开源码和手册，并且要复现一项可检查的结果。验证分两档：
 
 - **Tier 1**（14 个，含 FRESCO、TALYS、CGMF、SMASH、SkyNet、Thermal-FIST）：程序自己的发行包里带参考数值，技能能复现，其中几个是逐字节复现。
 - **Tier 2**（6 个，含 AZURE2、KSHELL、GiBUU、vHLLE）：程序不带参考输出，所以改用跨平台复现、物理恒等式（比如光学定理）、或者一个独立的解析解来锁定。vHLLE 是拿闭式 Gubser 流去对，而不是拿它自己的输出去对。
 
-大部分技能在**两个平台**上构建并验证过，macOS/ARM 和 Linux/x86-64；每个技能上线前都要过一遍第二个 AI 的对抗性审查。那个环节不是走过场：它抓到过跑着旧输入卡还报成功的技能、抓到过从来没被证明会触发的守卫、还抓到过一个自己伪造输入的测试。每次审查发现了什么，都写在各技能的 `references/verification.md` 里。
+多数 skill 已在 macOS/ARM 和 Linux/x86-64 上分别构建和验证。上线前还会交给第二个 AI 专门找错。这个过程曾经找出过几类实际缺陷：
+运行旧输入卡却报成功，检查条件从未真正触发，测试脚本自己伪造了输入。详细记录在各 skill 的 `references/verification.md` 里。
 
-**基准测试证明的是「这个构建复现了一个已知结果」，不是「你这次的计算是对的」。** 物理判断仍然是你的。
+基准测试只能证明当前构建复现了某个已知结果，不能替你判断新计算的物理是否正确。
 
 ## 现状
 
-一个在作者自己日常研究里天天用的平台，提前公开，是为了知道别人真正需要什么。你可能会遇到：
+FUSION 已经用于作者的日常研究，但公开版还有几个明确限制：
 
 - macOS 和 Linux 的二进制没有签名，第一次运行需要清掉隔离标记。Windows 没有构建。
-- **冷启动安装测试不足。** 每个技能的安装路径在「机器上已经有这个程序」的情况下都能工作，但只有 FRESCO 的路径真正从一个空缓存跑过。某个地方缺依赖是很可能的。
-- TALYS 要约 11 GB 磁盘，其中 8.6 GB 是核结构数据库。
+- 全新机器上的安装测试还不够。每个 skill 都测过已安装程序时的路径，只有 FRESCO 真正从空缓存安装过。其他程序可能遇到遗漏的依赖。
+- TALYS 要约 11 GB 磁盘，其中 8.6 GB 是核结构数据库。第一次试用建议选 FRESCO 或 CCFULL，通常一两分钟就能编好。
 - 文档目前只有英文和中文两份，技能内部的文档是英文。
 
 ## 怎么帮上忙
 
-现在最有价值的是一个真实的 bug 报告：某个技能在你机器上装不起来，或者它给了一个**看起来合理其实是错的**结果。第二有价值的是告诉我们你希望哪个程序有技能。
+如果某个 skill 在你的机器上装不起来，请附上报错、操作系统和编译器版本。如果结果能跑出来，看着也合理，但物理上是错的，
+请同时提供输入、FUSION 给出的数值和正确结果。用起来有别扭的地方也请直说。也欢迎告诉我们你希望添加哪个程序。
 
-想自己加一个技能，先读 [CLAUDE.md](CLAUDE.md)。一个程序要够格，必须是公开可获取的、能在目标平台上从源码编译的、并且有已发表的论文；而一个技能只有带着诚实的基准分级才能上线。
+想自己添加 skill，先读 [CLAUDE.md](CLAUDE.md)。只收录公开可获取、能在目标平台上从源码编译，并且有已发表论文的程序。
+新 skill 也必须给出如实的基准等级。
 
 ## 许可与视觉
 
-MIT，见 [LICENSE](LICENSE)。那份文件同时写明了它**不能**覆盖的三样东西：那些物理程序本身（你是从各自作者那里拿的，遵守他们自己的条款，其中几个是 GPL，一个是非商业授权）、[fusion-core](https://github.com/jinleiphys/fusion-core) 里的 opencode fork、以及 `kb-wiki/` 里被总结的第三方论文。
+FUSION 自身使用 MIT 许可，见 [LICENSE](LICENSE)。这份许可不包括各物理程序的源码、
+[fusion-core](https://github.com/jinleiphys/fusion-core) 中的 opencode fork，也不包括 `kb-wiki/` 总结的第三方论文。物理程序由各自作者发布，
+需要遵守它们各自的许可条款，其中包括 GPL 和非商业许可。
 
-基于 [opencode](https://github.com/anomalyco/opencode)（MIT）构建，所以你能连上哪个模型就用哪个：DeepSeek、Qwen、GLM 和 Claude、GPT 一样好使。与 opencode 项目没有隶属关系。
+FUSION 基于 [opencode](https://github.com/anomalyco/opencode)（MIT）构建，可以连接 DeepSeek、Qwen、GLM、Claude 和 GPT 等模型。
+本项目与 opencode 项目没有隶属关系。
 
-配色、标识、各处怎么用：[BRAND.md](BRAND.md)。
+配色和标识规范见 [BRAND.md](BRAND.md)。
 
 ## 作者
 
