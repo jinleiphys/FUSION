@@ -3,6 +3,52 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-11: install-script audit, 20 scripts, 2 real defects
+
+**Why:** the FRESCO auto-install hole found on 2026-07-30 (detection tested one
+artifact while the install produced two) was almost certainly not unique. Audited
+every `install_*.sh` on one question: does the fast path require EVERY artifact
+the skill later needs, or only the first one?
+
+**Two hits, both confirmed by running the script, not by reading it.**
+
+1. **TALYS, the same shape with a worse failure mode.** The fast path was
+   `[ -x "$BIN" ]` and exited 0. The structure-database check sat 20 lines BELOW
+   it, so it was unreachable whenever the binary existed, and its own comment says
+   exactly what that costs: "if the structure database is missing the run will
+   fail later in a way that looks like a physics problem". Reproduced with a stub
+   binary and no `structure/`: "talys already built", exit 0. It matters more than
+   FRESCO's because the database is 8.6 GB of the 11 GB install, i.e. precisely
+   what a user deletes to reclaim disk (and what TODO wants to make an opt-in
+   extra), and because a PARTIALLY missing database does not abort, it falls back
+   to Duflo-Zuker masses and still prints "successful calculation".
+2. **Thermal-FIST, one binary certifying four.** `fast_path_ok` checked
+   `cpc1HRGTDep`, while run and verify dispatch to `cpc2chi2`, `cpc3chi2NEQ` and
+   `cpc4mcHRG` as well. Lower severity, because the run wrapper does check its own
+   binary and dies with a clear message, so this is a misleading green install
+   rather than a wrong number.
+
+**The 18 clean ones show the pattern that works, and it is not "check harder".**
+Two designs made the question moot. (i) **Provision dependencies BEFORE the fast
+path**: GiBUU unpacks its input database and SMASH resolves Eigen/Pythia/GSL above
+the fast-path branch, so the check cannot be skipped. (ii) **Make the fast path
+probe rather than stat**: CGMF, KSHELL, SIDES, SWANLOP, SkyNet, CNOK and vHLLE run
+a real calculation, which touches every artifact at once, so no enumeration can
+fall behind. Enumerating artifacts by hand (the fix applied here) is the weakest of
+the three and drifts as soon as a skill grows a new output.
+
+**Deliberately not "fixed": AZURE2 is the only skill whose fast path is a bare
+file-exists with no probe and no stamp.** Not the multi-artifact bug (Minuit2 is
+statically linked, so the lone binary really is the whole runtime install), but it
+is the one place a corrupt cached binary is waved through. Left as a documented
+inconsistency rather than a silent divergence from the rest of the family.
+
+**Guard discipline held:** both fixes flip-tested (hide exactly one artifact,
+confirm exactly that guard fires, restore), plus a no-false-reject case on a
+complete tree, plus Thermal-FIST selftest 50/50 unchanged. `timeout` does not
+exist on macOS; `perl -e 'alarm N; exec @ARGV'` is the portable substitute for
+bounding a script that would otherwise rebuild.
+
 ## 2026-07-30: SFRESCO added as a companion skill, and the auto-provision hole it exposed
 
 **This is not a new per-code row, and it does not reopen the treadmill.** SFRESCO

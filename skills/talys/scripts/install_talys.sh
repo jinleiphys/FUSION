@@ -60,9 +60,24 @@ if [ "${#CODEDIR}" -gt "$MAXLEN" ]; then
 fi
 
 BIN="$ROOT/talys/bin/talys"
-if [ "$FORCE" = 0 ] && [ -x "$BIN" ]; then
+
+# The structure database is 8.6 GB of the 11 GB install and TALYS cannot run
+# without it, so the binary alone is NOT a complete install. Checking only the
+# binary here would report success for a tree whose database was never cloned,
+# was deleted to reclaim disk, or arrived truncated; TALYS then falls back to
+# Duflo-Zuker masses and, for a partially missing database, still prints
+# "successful calculation" while the numbers are wrong. One predicate, used by
+# both the fast path and the post-clone check below, so the two cannot drift.
+have_structure () {
+  [ -d "$ROOT/talys/structure/optical" ] && [ -d "$ROOT/talys/structure/masses" ]
+}
+
+if [ "$FORCE" = 0 ] && [ -x "$BIN" ] && have_structure; then
   echo "talys already built: $BIN" >&2
   echo "TALYS=$BIN"; exit 0
+fi
+if [ "$FORCE" = 0 ] && [ -x "$BIN" ]; then
+  echo "talys binary is present but the structure database is not; re-checking the install" >&2
 fi
 
 for tool in git make "$FC"; do
@@ -79,7 +94,7 @@ fi
 # ------------------------------------------------------------ sanity check
 # If the structure database is missing the run will fail later in a way that
 # looks like a physics problem, so check now.
-if [ ! -d "$ROOT/talys/structure/optical" ] || [ ! -d "$ROOT/talys/structure/masses" ]; then
+if ! have_structure; then
   echo "ERROR: the TALYS structure database is missing under $ROOT/talys/structure." >&2
   echo "Without it TALYS falls back to Duflo-Zuker masses and then aborts." >&2
   exit 4

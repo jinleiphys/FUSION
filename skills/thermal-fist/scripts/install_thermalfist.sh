@@ -120,6 +120,14 @@ fast_path_ok () {
   # rebuilds; only reuse-for-speed trusts the stamp.
   [ "${TFIST_FORCE_BUILD:-0}" = "1" ] && { log "TFIST_FORCE_BUILD=1: rebuilding from source rather than trusting the cached build"; return 1; }
   [ -x "$BIN" ] || return 1
+  # One build produces every example, but run and verify dispatch to four of them
+  # (cpc1HRGTDep, cpc2chi2, cpc3chi2NEQ, cpc4mcHRG), so a fast path that checks
+  # only cpc1HRGTDep certifies an install on the strength of a quarter of it. An
+  # interrupted or partially-cleaned build then reports success here and fails
+  # later in the run wrapper.
+  for _ex in cpc1HRGTDep cpc2chi2 cpc3chi2NEQ cpc4mcHRG; do
+    [ -x "$EXAMPLES/$_ex" ] || { log "$_ex missing from $EXAMPLES; rebuilding"; return 1; }
+  done
   [ -f "$STAMP" ] || return 1
   [ "$(cd "$SRCROOT" && git rev-parse HEAD)" = "$PIN" ] || { log "clone HEAD is not the pin, rebuilding"; return 1; }
   [ "$(head -1 "$STAMP")" = "$(build_identity)" ] || { log "build identity changed, rebuilding"; return 1; }
