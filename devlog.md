@@ -76,12 +76,13 @@ amplitudes, R-matrix widths, dataset normalisations). Authored in
 
 **It meets the 2026-07-24 pass criterion the easy way, because the answer is in
 print.** Boxes 7 and 8 of *FRESCO: getting started* section 4 give a complete
-worked fit AND its result, so `examples/p-cd-manual.*` is a genuine L2 case:
+worked fit AND its result, so `examples/p-cd-manual.*` reproduces a published
+result end to end:
 starting from r0 = 1.0 it returns V = 52.5280, r0 = 1.17958, W = 3.46041,
 W_d = 7.42937, chi2/N = 2.1910 against the manual's 52.53, 1.179, 3.46, 7.43,
-2.19. Every printed digit. Worth noting for the paper matrix: **a code whose own
-documentation publishes a worked example with numbers is the cheapest possible L2
-anchor**, and the FRESCO family is unusual in having one. Codes that ship only a
+2.19. Every printed digit. Worth noting: **a code whose own
+documentation publishes a worked example with numbers is the cheapest possible
+published anchor**, and the FRESCO family is unusual in having one. Codes that ship only a
 test suite (Thermal-FIST's ctest, SkyNet's self-comparison) are expensive for
 exactly the opposite reason.
 
@@ -108,33 +109,28 @@ script bugs. A fourth, unbounded pass hung for 28 minutes with no output and was
 killed: **the same bounded-prompt lesson as the opticalfisher appeal audit, now
 observed twice.**
 
-## 2026-07-24: direction change, skill-building paused, pivot to the paper
+## 2026-07-24, amended 2026-08-11: what "a skill passes" means, and the treadmill stopping
 
-**The standard for "a skill passes" was wrong, and the fix reframes the whole
-queue.** A skill does not pass by building from a pinned source and clearing an
-anti-spoof rebuild (the `VERIFY OK` vs `PASSED-NOT-CERTIFIED` machinery I added on
-Thermal-FIST and vHLLE). It passes by REPRODUCING THE PUBLISHED WORK, the specific
-figure/table/number in the code's paper. That is exactly the fusion-paper
-benchmark's L2 (reproduce the author reference case) and L3 (unseen system vs
-published values), and the measurement lives in that repo's harness, not in the
-platform verify scripts. So: the TODO item to retrofit certification across the
-family is DROPPED, and the published-work audit belongs with the paper.
+**The standard was wrong, and the fix reframes the whole queue.** A skill does not
+pass by building from a pinned source and clearing an anti-spoof rebuild (the
+`VERIFY OK` vs `PASSED-NOT-CERTIFIED` machinery added on Thermal-FIST and vHLLE).
+It passes by REPRODUCING THE PUBLISHED WORK, the specific figure, table or number
+in the code's paper, because that is what makes the skill trustworthy to someone
+who did not build it. So the TODO item to retrofit certification across the family
+is DROPPED.
 
-**Skill-building is over-extended for the paper and is now PAUSED.** The paper's
-coverage gate closed 2026-07-23; the platform has 20 per-code skills; the paper
-keeps a final 12-13. So new skills add pruning and disclosure burden, not paper
-progress. The heavy-ion row is the proof: SMASH + GiBUU + Thermal-FIST + vHLLE are
-four skills for what the paper treats as ONE row, i.e. the last several builds
-(vHLLE included) were already past the point of paper-usefulness. FUSION stays a
-long-term maintained platform, so the rest of the code list resumes a few at a
-time after submission, never as a race to cover the field.
+**Skill-building is PAUSED, as long-term maintenance rather than a queue to burn
+down.** Twenty-one skills is already broad coverage and the heavy-ion row alone
+holds four (SMASH, GiBUU, Thermal-FIST, vHLLE), so another row is worth less than
+depth on a code someone actually reaches for. The rest of the list resumes a few at
+a time, when a specific code is wanted, never as a race to cover the field.
 
-**Critical path is now fusion-paper**, not FUSION: Phase B harness, the 2026-08-31
-axis + cell-list freeze, L3 published-anchor pre-registration, then the Sep-Oct
-matrix. Next platform-side task when it resumes: map each shipped skill's
-benchmark to the published result it reproduces (or flag it as code-self-test-only
-and needing an anchor), which is the L2/L3 pre-registration draft. Full statement
-in CLAUDE.md Key decisions 2026-07-24.
+**What replaced it as the critical path (2026-08-11): getting the platform into
+other people's hands.** Phase 4, which has had zero work done. The standing
+platform-side task when skills resume is unchanged: map each shipped skill's
+benchmark to the published result it reproduces, or flag it as code-self-test-only
+and needing an anchor. Full statement in CLAUDE.md Key decisions 2026-07-24 and
+2026-08-11.
 
 ## 2026-07-24: vHLLE, the first analytic-solution benchmark in the series
 
