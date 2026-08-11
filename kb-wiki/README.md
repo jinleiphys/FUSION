@@ -1,8 +1,8 @@
 # kb-wiki: what these pages are, and where they come from
 
-This directory holds 61,187 generated pages, one per paper in the arXiv
-nucl-th corpus, plus topic pages and the citation and relation layers that
-connect them. It is the knowledge base FUSION ships with, so that a question
+This directory holds 61,167 generated pages: 61,059 paper pages, one per paper in
+the arXiv nucl-th corpus, and 108 topic pages, together with the citation and
+relation layers that connect them. It is the knowledge base FUSION ships with, so that a question
 about the literature can be answered offline instead of by a web search.
 
 **These pages are not written by the papers' authors, and they are not a

@@ -6,65 +6,147 @@
 
 **F**ramework for **U**nified **S**cientific **I**ntelligence in **O**pen **N**uclear physics
 
-A nuclear-physics research agent platform, built as a rebrand fork of [opencode](https://github.com/anomalyco/opencode) (MIT). Not affiliated with the opencode project.
+A coding agent that already knows how to drive the open-source codes nuclear
+physicists actually use, and that carries the nucl-th literature with it.
 
-## Project goal
+Built on [opencode](https://github.com/anomalyco/opencode) (MIT), so it runs on
+whatever model you can reach: DeepSeek, Qwen and GLM as readily as Claude or
+GPT. Not affiliated with the opencode project.
 
-Give nuclear physicists (starting with students and group members, extending to the community) an agent that comes out of the box with:
+**[vibeinscience.com](https://vibeinscience.com/)** has the illustrated tour:
+architecture, benchmark numbers, worked case studies and a corpus citation map.
 
-1. **One expert skill per nuclear open-source code, for the whole ecosystem.** Reactions (FRESCO, THOx, CCFULL, TALYS, GEF, ...), R-matrix/astro (AZURE2, SkyNet, ...), structure (KSHELL, BIGSTICK, imsrg++, HFBTHO, ...), scoped transport/data (OpenMC, NJOY), plus the group's own codes (smoothie, COLOSS, SLAM.jl, ...). Each skill teaches the agent to install, write inputs for, run, and parse that code, validated against a published benchmark. Living roadmap: [skills-catalog.md](skills-catalog.md).
-2. **A self-contained domain knowledge base.** The local arXiv nucl-th full-text corpus (62714 papers, 61357 with full text, 1992-09 to 2026-06, SQLite FTS5 + BM25), partitioned by domain keywords (reactions, structure, astro, EFT, ...) and exposed to the agent as a search tool. Offline, exhaustive, lexical.
-3. **A private personalization layer.** Each user mounts their own read-literature wiki and research profile; FUSION defines the interface but never ships anyone's personal layer.
+---
 
-Provider-agnostic by inheritance from opencode: runs on domestic models (DeepSeek, Qwen, GLM) as well as Claude/GPT, which is the point; the target users often cannot access Anthropic APIs.
+## What problem this solves
 
-## Repository layout: FUSION vs fusion-core
+Running a nuclear-physics code for the first time is mostly not physics. It is
+finding the source, getting it to compile on your machine, learning an input
+format documented in a 300-page manual or not at all, and then not knowing
+whether the number that came out is right.
 
-The platform lives in TWO repos with a strict division of labor:
+A general coding agent is bad at this in a specific way: it will confidently
+write you a FRESCO deck with the wrong radius convention, and the deck will
+run, and the cross section will be wrong by 20% with nothing to warn you.
 
-| | [jinleiphys/FUSION](https://github.com/jinleiphys/FUSION) (this repo) | [jinleiphys/fusion-core](https://github.com/jinleiphys/fusion-core) |
-|---|---|---|
-| Role | The platform itself: everything we write | The engine: fork of anomalyco/opencode |
-| Local path | `/Users/jinlei/Desktop/code/FUSION` | `/Users/jinlei/Desktop/code/fusion-core` |
-| Contents | docs, skills catalog, phase reports; later: skills/, agents/, mcp-servers/, config/, install.sh | full opencode source + the brand patch (branch `fusion-brand`, default; branch `dev` = pristine upstream mirror) |
-| Changes | freely, by us | brand assets ONLY (TUI logo, icons, name strings); functional code never touched |
-| Upstream sync | n/a | CI `fusion-rebase.yml` rebases the brand patch onto upstream `dev` every Monday and syncs the mirror; a failed run = a real conflict |
-| End-user view | the product repo they install from (install.sh pulls a fusion-core binary) | build source; users normally never clone it |
+FUSION ships one expert skill per code. Each skill teaches the agent to install
+that code from its own upstream source, write its inputs correctly, run it,
+parse its output, recognise its failure modes, and check the result against a
+benchmark with a stated tolerance.
 
-Analogy: FUSION is Ubuntu, fusion-core is the (rebadged) kernel. Development happens here; fusion-core only carries the badge.
+## What is in it today
 
-To see the current TUI branding: `cd fusion-core && git pull && bun install && bun dev` (dev mode runs the TS source directly, no rebuild step).
+**22 skills.** 20 drive a specific code, one is a fitting companion, one
+retrieves experimental data.
 
-## Architecture
+| Area | Codes covered |
+|---|---|
+| Reactions, optical model | FRESCO (+ SFRESCO fitting), COLOSS, CCFULL, pikoe, NLAT, CNOK, SIDES, SWANLOP |
+| Structure, ab initio | GSM, KSHELL, NuclearToolkit.jl, Sky3D |
+| Fission, statistical | CGMF, TALYS |
+| Astrophysics, R-matrix | AZURE2, SkyNet |
+| Heavy-ion, equation of state | SMASH, GiBUU, Thermal-FIST, vHLLE |
+| Experimental data | EXFOR retrieval and parsing |
 
+Each skill's own `SKILL.md` states what it covers and how it was verified.
+Roadmap and the reasoning behind what is in and what is out:
+[skills-catalog.md](skills-catalog.md).
+
+**A knowledge base of 61,167 pages** under [`kb-wiki/`](kb-wiki/): one page per
+paper in the arXiv nucl-th corpus (61,059 of them), 108 topic pages, plus
+citation and semantic-relation layers connecting them. The agent reads it with
+plain grep, offline, with no server and no API key. The pages are
+machine-generated summaries and can be wrong; read
+[kb-wiki/README.md](kb-wiki/README.md) before relying on one.
+
+## How a skill is verified, and how much to trust it
+
+Every skill is built from the code's public source and its own manual, then
+made to reproduce something. Skills state their evidence honestly rather than
+implying more:
+
+- **Tier 1** (14 skills, including FRESCO, TALYS, CGMF, SMASH, SkyNet,
+  Thermal-FIST): the distribution ships reference values and the skill
+  reproduces them, in several cases byte for byte.
+- **Tier 2** (6 skills, including AZURE2, KSHELL, GiBUU, vHLLE): the code
+  ships no reference output, so the skill is pinned by cross-platform
+  reproduction, physics invariants such as the optical theorem, or an
+  independent analytic solution. vHLLE, for instance, is checked against the
+  closed-form Gubser flow rather than against its own output.
+
+Beyond that, most skills are built and verified on **two platforms**
+(macOS/ARM and Linux/x86-64), and every skill goes through an adversarial
+review pass by a second AI before it ships. That pass is not a formality: it
+has caught skills that reported success while running a stale deck, harnesses
+whose guards had never been shown to fire, and one that fabricated its own test
+input. What each pass found is written down in each skill's
+`references/verification.md`.
+
+**What this does not mean.** A benchmark certifies that the build reproduces a
+known result. It does not certify that your calculation is right. The physics
+is still yours.
+
+## Trying it
+
+**There is no installer yet.** Writing one is the current priority; until then
+the manual route works and is short:
+
+```bash
+git clone https://github.com/jinleiphys/FUSION.git      # ~229 MB, the knowledge base is most of it
+cd FUSION
+
+# point your agent at the skills
+ln -s "$PWD"/skills/* ~/.config/opencode/skills/        # opencode
+ln -s "$PWD"/skills/* ~/.claude/skills/                 # or Claude Code
 ```
-┌─ FUSION binary ──────────────────────────────┐
-│ opencode upstream + brand patch (logo/name)  │  <- only fork surface, CI-rebased weekly
-└──────────────────────────────────────────────┘
-┌─ FUSION customization layer (this repo) ─────┐
-│ skills/        per-code + research skills    │
-│ agents/        literature / referee / runner │
-│ mcp-servers/   corpus search, INSPIRE, HPC   │
-│ config/        default opencode.json, models │
-│ install.sh     one-shot setup                │
-└──────────────────────────────────────────────┘
-┌─ user private layer (never shipped) ─────────┐
-│ ~/research-wiki, profile, credentials        │
-└──────────────────────────────────────────────┘
-```
 
-## Knowledge base design
+Then ask for what you want in plain language: *"run a CDCC calculation for
+d+58Ni at 21.6 MeV and compare the elastic angular distribution with the EXFOR
+data"*. The skill handles the rest, including building FRESCO from source if it
+is not already on your machine.
 
-Base: the existing `literature-corpus` stack (`corpus.db` ~5.5 GB, `query.py`; see `~/.claude/skills/literature-corpus/SKILL.md`). FUSION builds on top a **pre-generated markdown wiki** (`kb-wiki/`): one page per paper (frontmatter + abstract + DeepSeek full-text digest + in-corpus citation links) and one page per **PhySH concept** (APS Physics Subject Headings, CC0, Nuclear Physics subtree 176 concepts) with citation-ranked paper lists and a landscape synthesis. Agents browse it with plain grep/read; no server required. Full design, measured costs, and licensing constraints: [kb-design.md](kb-design.md). Public artifacts must not redistribute arXiv full text (hard rule in CLAUDE.md).
+Skills are plain directories of Markdown and shell scripts, so they work with
+any agent that can read a `SKILL.md` and run a command. Nothing is locked to
+one vendor.
 
-## How to run
+Requirements: `git`, `make`, a Fortran compiler (`gfortran`) and a C++
+compiler. Individual skills pull their own extra dependencies and say so.
 
-Not yet runnable. Phase 0 (quality validation on stock opencode) comes first; see [TODO.md](TODO.md).
+## Status, honestly
 
-## References
+This is a working platform in daily use by its author, released early to find
+out what other people need from it.
 
-No paper citations yet (platform project). When physics papers enter this README, tag them `[wiki]` or `[TO INGEST -> literature-wiki]` per the research-planning protocol.
+Known rough edges, all of them things you may hit:
+
+- No installer, no setup wizard, no default model configuration.
+- Cold-start installs are under-tested. Every skill's install path works on a
+  machine that already has the code; only FRESCO's has been exercised from a
+  genuinely empty cache. Expect the occasional missing dependency and please
+  report it.
+- TALYS wants about 11 GB of disk, 8.6 GB of it a structure database.
+- Documentation is in English only so far.
+
+## Contributing, and what would help most
+
+Bug reports about a skill that misbehaves are the most useful thing right now,
+especially cold-start install failures and any case where a skill produced a
+plausible but wrong result. The second most useful thing is telling us which
+code you wish had a skill.
+
+If you want to add a skill, read
+[CLAUDE.md](CLAUDE.md) first: it carries the rules a skill must satisfy,
+including that the code be publicly obtainable, buildable from source on the
+target platform, and backed by a published paper.
+
+## Licence
+
+MIT, see [LICENSE](LICENSE), which also explains the three things it cannot
+cover: the physics codes themselves (you get those from their authors, under
+their own terms, several of them GPL and one non-commercial), the opencode fork
+in [fusion-core](https://github.com/jinleiphys/fusion-core), and the
+third-party papers summarised in `kb-wiki/`.
 
 ## Author
 
-Jin Lei (金磊), Tongji University. Contact: jinl@tongji.edu.cn
+Jin Lei (金磊), Tongji University. `jinl@tongji.edu.cn`

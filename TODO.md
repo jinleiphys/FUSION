@@ -7,7 +7,7 @@ Validation rules and hard constraints live in [CLAUDE.md](CLAUDE.md); do not res
 - [ ] Remaining brand surfaces: desktop/web icons need an actual FUSION graphic (nature-figure skill or designer), TUI/CLI display-name strings sweep
 - [ ] TUI logo v2: current block-glyph version verified rendering as "FUSion" (user: 效果一般, acceptable for now); revisit in the visual design pass together with the icons
 - [ ] Build + release pipeline for FUSION binaries (adapt upstream release workflow; bun installed locally)
-- [ ] Domain name [Please specify preference]
+- [x] 2026-08-11: **Domain is `vibeinscience.com`** (user), live and serving the illustrated project site (architecture, benchmarks, case studies, corpus citation map). Linked from README. **The site is now STALE against the repo and needs a pass before the repo goes public**: it says 17 verified code skills (actually 20 per-code plus SFRESCO and exfor-data, 22 skill directories), its roadmap stops at Phase 3, and it advertises a planned peer-reviewed paper, which contradicts the 2026-08-11 rulings and is exactly the kind of public paper-planning that was just removed from these docs
 
 ## Phase 2: skill pack
 
