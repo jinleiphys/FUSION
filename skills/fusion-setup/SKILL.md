@@ -37,13 +37,19 @@ with live paper counts when you need them.
 
 ### Step 1, model
 
-Check what they already have before asking. If `model` is already set in their
-config and they have not complained about it, say which one it is and ask only
-whether to keep it.
+**Do not read their config to find out what they are using.** It lives outside
+the project directory, so reading it triggers a permission prompt, and a
+permission prompt as the first thing that happens after someone asks for help
+setting up is a bad first move. Measured: in non-interactive mode the read is
+auto-rejected outright and the skill stalls.
 
-Otherwise: one line. `deepseek/deepseek-chat` is cheap and the usual choice
-here; `alibaba/qwen-max`, `zhipuai/glm-4.6`, `anthropic/claude-sonnet-5` and
-`openai/gpt-5.4` also work. Do not list all five unless asked.
+Just ask, and offer the default: 「模型用 deepseek/deepseek-chat?便宜,够用。」
+If they say 不变 or 就用现在这个, pass no `--model` flag at all and their
+existing setting survives untouched, which is the same outcome as reading the
+file would have given you.
+
+`alibaba/qwen-max`, `zhipuai/glm-4.6`, `anthropic/claude-sonnet-5` and
+`openai/gpt-5.4` also work. Do not list them unless asked.
 
 ### Step 2, what they work on
 
