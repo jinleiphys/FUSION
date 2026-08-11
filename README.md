@@ -20,6 +20,37 @@
 
 ---
 
+> ### This is a beta. It is being tested in the open.
+>
+> v0.1.0 is the first public build. It works, it is used daily by its author,
+> and it has not been used by anyone else. **What breaks for you is the point.**
+>
+> **Three things you will probably hit**
+>
+> - **macOS blocks the first run.** The binary is not signed. Run
+>   `xattr -d com.apple.quarantine fusion` and it will start.
+> - **Do not begin with TALYS.** It downloads about 11 GB. Try FRESCO or CCFULL
+>   first; they build in a minute or two.
+> - **Cold-start installs are the least tested part.** Of the twenty codes, only
+>   FRESCO has been installed from a genuinely empty cache. If a code fails to
+>   build on your machine, that is the single most useful thing you can report.
+>
+> **What to report, in order of value**
+>
+> 1. **A result that looked right and was wrong.** The whole reason this project
+>    exists is that a general agent writes a plausible FRESCO deck with the wrong
+>    radius convention. If FUSION does something of that kind, we want the deck,
+>    the number, and what it should have been. This is the failure we are most
+>    afraid of and the one users are least likely to report.
+> 2. **A code that will not install**, with the error and your OS and compiler.
+> 3. **Anything that felt stupid.** Every awkward thing in the first-run flow was
+>    found by one person trying it and saying so plainly. That works.
+> 4. **Which code you wish had a skill.**
+>
+> [Open an issue](https://github.com/jinleiphys/FUSION/issues), or write to
+> `jinl@tongji.edu.cn`. Chinese or English, whichever you prefer.
+
+
 An agent that already knows how to drive the open-source codes nuclear
 physicists actually use, and that carries the nucl-th literature with it,
 offline.
