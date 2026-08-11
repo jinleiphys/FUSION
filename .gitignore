@@ -8,3 +8,6 @@ __pycache__/
 # stray cross-validation reports must never ship inside a skill
 skills/**/.codex-*.txt
 .DS_Store
+
+# the CLI, when a user downloads it into their clone
+/fusion

@@ -40,16 +40,28 @@ with a stated tolerance.
 ## Quickstart
 
 ```bash
-# 1. the CLI (pick your platform from the releases page)
-curl -fsSL https://github.com/jinleiphys/FUSION/releases/latest/download/fusion-darwin-arm64.tar.gz | tar -xz
-mv fusion ~/.local/bin/                       # anywhere on your PATH
-xattr -d com.apple.quarantine ~/.local/bin/fusion   # macOS only, see below
-
-# 2. FUSION itself
+# 1. FUSION itself
 git clone https://github.com/jinleiphys/FUSION.git && cd FUSION
 
+# 2. the CLI, into the clone (pick your platform from the releases page)
+curl -fsSL https://github.com/jinleiphys/FUSION/releases/latest/download/fusion-darwin-arm64.tar.gz | tar -xz
+xattr -d com.apple.quarantine fusion          # macOS only, see below
+
 # 3. work
-fusion
+./fusion
+```
+
+That is the whole thing: `./fusion` run inside the clone finds all 23 skills
+and the knowledge base with no configuration at all.
+
+To run it from anywhere instead of `./fusion`, move it onto your PATH:
+
+```bash
+mkdir -p ~/.local/bin && mv fusion ~/.local/bin/
+
+# if `fusion` is then "command not found", ~/.local/bin is not on your PATH.
+# macOS does not put it there by default:
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc && exec zsh
 ```
 
 Builds for macOS and Linux, x64 and arm64, are on the
