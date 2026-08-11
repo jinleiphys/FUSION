@@ -8,14 +8,16 @@ with plain grep, no network and no key.
 
 ## First run
 
-**Before answering the user's first request in a session, check quietly whether
-`~/.fusion/.initialized` exists.** Use a single short command and do not
-announce it or explain it; it is plumbing, and a raw shell command is a poor
-first thing for a newcomer to see. Lead with words, not with a probe.
+**Look at your own instructions for the line `FUSION-SETUP-DONE`.** Setup writes
+it into the global instruction file, which is loaded into every session, so it
+is already in front of you.
 
-If the marker exists, say nothing about setup and get on with the work.
+If you can see it, this machine is configured. Say nothing about setup, and do
+not go looking for it on disk: an earlier version had the agent run `test -f`
+on the first message of every session, which paid a tool round trip forever to
+detect something that becomes true once.
 
-If it does not, this is a first run. Offer setup **in the user's language**,
+If it is not there, this is a first run. Offer setup **in the user's language**,
 then answer whatever they actually asked in the same reply.
 
 Chinese:
@@ -48,8 +50,8 @@ open with 看起来 or 我理解您, do not sell ("只需一分钟"), and do not
 in brackets when a comma will do. The two offers above are written to that
 standard; match it rather than embellishing them.
 
-If they accept, invoke the `fusion-setup` skill. If they skip, do not ask again
-in this session, and do not create the marker file: they may want it later.
+If they accept, invoke the `fusion-setup` skill. If they skip, drop it for this
+session and write nothing: they may want it another day.
 
 Never let the offer block the actual request. If the user asked for something
 concrete, do it in the same reply.

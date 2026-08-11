@@ -351,6 +351,41 @@ you work on.
 
 # ------------------------------------------------------------------ the flow
 
+MARKER = "FUSION-SETUP-DONE"
+
+
+def mark_setup_done(cfg_dir: Path):
+    """Leave a line in the agent's GLOBAL instructions saying setup is finished.
+
+    opencode loads <config>/AGENTS.md into every session, so a line here is
+    already in the model's context and needs no tool call to read. That is the
+    whole point: the previous design had the agent run `test -f` on the first
+    message of every session forever, paying a round trip for the rest of the
+    user's life to detect a condition that becomes true exactly once.
+
+    Appended, never overwritten, and idempotent. This is the user's own file and
+    may contain their own instructions; it is backed up before being touched.
+    """
+    f = cfg_dir / "AGENTS.md"
+    existing = f.read_text(errors="replace") if f.exists() else ""
+    if MARKER in existing:
+        say(f"  {f} already records the setup")
+        return
+    line = (f"\n{MARKER} ({time.strftime('%Y-%m-%d')}). FUSION is configured on this "
+            "machine; do not offer to set it up again, and do not check for it.\n")
+    if DRY_RUN:
+        say(f"  [dry-run] would append the setup marker to {f}")
+        return
+    if existing:
+        backup = f.with_suffix(f".md.bak-{time.strftime('%Y%m%d-%H%M%S')}")
+        shutil.copy2(f, backup)
+        say(f"  backed up {f} to {backup}")
+    f.parent.mkdir(parents=True, exist_ok=True)
+    with f.open("a") as fh:
+        fh.write(line)
+    say(f"  recorded the setup in {f}")
+
+
 def apply(model, areas, theme, private_dir, papers):
     """Do the setup from answers already collected, asking nothing.
 
@@ -405,14 +440,13 @@ def apply(model, areas, theme, private_dir, papers):
 
     write_file(Path.home() / ".fusion" / ".initialized",
                f"set up by fusion_init.py on {time.strftime('%Y-%m-%d')}\n")
+    mark_setup_done(cfg_dir)
 
     say("")
     say(f"SETUP OK  config={cfg_path}  skills={len(all_skills)}  "
         f"theme={theme_name or 'unchanged'}  autoupdate_disabled={kill_autoupdate}")
-    if not model:
-        say("NOTE no model was set; the user still needs to choose one")
-    say("NEXT the user must run `opencode auth login` themselves to store the API key; "
-        "it must not be pasted into a chat")
+    if theme_name:
+        say("NOTE the theme is installed; `/theme` switches it back")
 
 
 def main():
