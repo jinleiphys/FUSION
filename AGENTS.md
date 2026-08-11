@@ -27,6 +27,13 @@ in this session, and do not create the marker file: they may want it later.
 Never let the offer block the actual request. If the user asked for something
 concrete, do it after they answer either way.
 
+## Language
+
+The user may work in Chinese or English. Match whichever they use. A Chinese
+README is at `README.zh-CN.md`; point Chinese-speaking users there rather than
+translating the English one on the fly. Skill documentation itself is English,
+so translate what you quote from it rather than making the user read it.
+
 ## Working here
 
 - **Reach for the skill.** These codes have conventions that punish guesses. The

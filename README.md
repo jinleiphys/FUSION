@@ -14,6 +14,8 @@
   23 skills
   ·
   61,167 offline literature pages
+  ·
+  <a href="README.zh-CN.md">中文</a>
 </p>
 
 ---
