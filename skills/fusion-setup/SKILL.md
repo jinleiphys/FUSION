@@ -24,8 +24,8 @@ numbered options is a form, and nobody wants to fill in a form. Ask one short
 question, wait for the answer, ask the next. Four exchanges of one line each
 feel faster than one wall of text, even though they take longer.
 
-Say how many steps there are when you start, so it does not feel open-ended:
-*"四个问题,一个一个来。"*
+Say how many there are at the start so it does not feel open-ended. "四个问题"
+is enough; do not add 我会逐一为您确认 or any other padding.
 
 **Never paste the area list.** Do not dump ten ids and paper counts on someone.
 Ask what they work on in their own words. A nuclear physicist will say "我做核
@@ -53,7 +53,7 @@ tell them which skills exist for it if any do.
 
 ### Step 3, theme
 
-One yes or no. "要不要把终端配色换成 FUSION 的?" Default yes.
+One yes or no. "配色换成 FUSION 的?" Default yes.
 
 ### Step 4, their own papers
 
@@ -65,6 +65,18 @@ where their own work gets written.
 
 If at any point they say 随便 or "you pick", take the defaults, tell them what
 you took, and stop asking.
+
+### How to word it
+
+Talk like a colleague, not like an assistant. In Chinese: no 首先/其次/另外/
+值得注意的是, no three-part parallel phrases, no summarising close, no
+「让我们」. Do not open a question with 看起来 or 关于这个问题. Do not sell the
+step ("只需一分钟", "非常简单"). Ask, then stop.
+
+Wrong: 「关于模型的选择,我建议您可以考虑使用 DeepSeek,它在性价比方面表现优异。」
+Right: 「模型用 deepseek/deepseek-chat?便宜,够用。」
+
+Same in English: ask the question, drop the cushioning.
 
 ## Then run it, once
 
