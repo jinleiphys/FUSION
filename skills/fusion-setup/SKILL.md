@@ -24,7 +24,7 @@ numbered options is a form, and nobody wants to fill in a form. Ask one short
 question, wait for the answer, ask the next. Four exchanges of one line each
 feel faster than one wall of text, even though they take longer.
 
-Say how many there are at the start so it does not feel open-ended. "四个问题"
+Say how many there are at the start so it does not feel open-ended. "三个问题"
 is enough; do not add 我会逐一为您确认 or any other padding.
 
 **Never paste the area list.** Do not dump ten ids and paper counts on someone.
@@ -35,33 +35,29 @@ they ask for it or genuinely cannot say, and even then show four or five likely
 ones, not all ten. `python3 scripts/fusion_init.py --list-areas` gives the ids
 with live paper counts when you need them.
 
-### Step 1, model
+### Not our business: the model and the API key
 
-**Do not read their config to find out what they are using.** It lives outside
-the project directory, so reading it triggers a permission prompt, and a
-permission prompt as the first thing that happens after someone asks for help
-setting up is a bad first move. Measured: in non-interactive mode the read is
-auto-rejected outright and the skill stalls.
+**Do not ask about either.** If the user is talking to you, a model is already
+running and its key is already stored, both handled by opencode before FUSION
+is involved. Asking again re-opens a solved problem and makes the setup look
+longer than it is.
 
-Just ask, and offer the default: 「模型用 deepseek/deepseek-chat?便宜,够用。」
-If they say 不变 or 就用现在这个, pass no `--model` flag at all and their
-existing setting survives untouched, which is the same outcome as reading the
-file would have given you.
+Switching models is `/model` in the TUI, and changing provider is
+`opencode auth login`. Say so only if the user brings it up. The
+`--model` flag on the script exists for scripted installs; leave it off and
+their setting stays untouched.
 
-`alibaba/qwen-max`, `zhipuai/glm-4.6`, `anthropic/claude-sonnet-5` and
-`openai/gpt-5.4` also work. Do not list them unless asked.
-
-### Step 2, what they work on
+### Step 1, what they work on
 
 Free text, then map it yourself. Multiple areas are fine. If they say something
 outside the ten, say so plainly rather than forcing it into the nearest box, and
 tell them which skills exist for it if any do.
 
-### Step 3, theme
+### Step 2, theme
 
 One yes or no. "配色换成 FUSION 的?" Default yes.
 
-### Step 4, their own papers
+### Step 3, their own papers
 
 Explain in one sentence what it buys them: a private page showing the topics
 their work carries, their co-authors, and who cites them inside the corpus.
@@ -106,15 +102,6 @@ It prints `SETUP OK` with the config path, the skill count, and whether
 autoupdate was disabled. Report that back in plain words. If it exits non-zero,
 show the user what it said; do not paper over it.
 
-## The one thing you must hand back
-
-**The API key.** After the run, tell the user to run `opencode auth login`
-themselves, or `fusion auth login` if that is the binary they have. Do not offer
-to take the key and store it for them, and do not ask them to paste it into the
-chat: a key in a transcript is a leaked key. This is the only step that goes
-back to them, and say why, because being sent away for no reason is what makes a
-tool feel stupid.
-
 ## Check it worked
 
 Run `opencode debug skill` (or `fusion debug skill`) and count how many skills
@@ -133,7 +120,8 @@ point the rerun at a different directory.
 
 ## What NOT to do
 
-- Do not write `auth.json` or any API key, by any route.
+- Do not write `auth.json` or any API key, by any route, and do not ask the
+  user to paste a key into the chat. A key in a transcript is a leaked key.
 - Do not create the private layer inside the FUSION repository. The script
   refuses, but do not propose it either: this repository is public.
 - Do not invent the user's answers. If they have not said, ask, or take a stated
