@@ -35,6 +35,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -469,7 +470,65 @@ def main():
                 say("  building your citation neighbourhood, this reads a 16 MB table and takes a moment")
         seed_private_layer(home, papers, picked, area_labels)
 
-    # ---- 7. done
+    # ---- 7. verify the config actually took effect
+    head("8. Checking it worked")
+    if oc and not DRY_RUN:
+        say("Asking opencode what it can now see, rather than assuming the config took.")
+        # Redirect to a FILE, not a pipe. Measured: `opencode debug skill` piped to
+        # a subprocess truncates at about 65 KB and still exits 0, so the JSON ends
+        # mid-string; the same command redirected to a file returns all 650 KB. A
+        # pipe here fails silently and looks like a config problem.
+        loaded = None
+        try:
+            with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as fh:
+                tmp = fh.name
+            try:
+                with open(tmp, "w") as out:
+                    res = subprocess.run([oc, "debug", "skill"], stdout=out,
+                                         stderr=subprocess.DEVNULL, timeout=180)
+                if res.returncode == 0:
+                    with open(tmp) as fh:
+                        loaded = json.load(fh)
+            finally:
+                os.unlink(tmp)
+        except (OSError, subprocess.TimeoutExpired, json.JSONDecodeError):
+            loaded = None
+        if loaded is None:
+            say("  Could not read the skill list back. Not necessarily broken; check with:")
+            say("    opencode debug skill")
+        else:
+            ours = str((REPO / "skills").resolve())
+            mine = {s["name"] for s in loaded if ours in (s.get("location") or "")}
+            elsewhere = {s["name"]: (s.get("location") or "unknown location")
+                         for s in loaded if ours not in (s.get("location") or "")}
+            say(f"  opencode sees {len(loaded)} skills, {len(mine)} of them from this clone")
+
+            # Two different failures, and they must not be reported as one. A name
+            # that loaded from somewhere else is SHADOWED (observed once: a
+            # pre-existing ~/.config/opencode/skills/sfresco won over this clone's
+            # copy, silently). A name that is absent entirely did not load at all,
+            # and the cause is unknown from here. Saying "shadowed" for the second
+            # case would assert a cause this check has not established.
+            missing = sorted(set(all_skills) - mine)
+            shadowed = [n for n in missing if n in elsewhere]
+            absent = [n for n in missing if n not in elsewhere]
+
+            if shadowed:
+                say("")
+                say(f"  {len(shadowed)} skill(s) came from somewhere else instead of this clone.")
+                say("  opencode resolves a duplicate name silently, in favour of one of them:")
+                for name in shadowed:
+                    say(f"    {name}  <-  {elsewhere[name]}")
+                say("  To get this clone's version, rename or remove the other copy.")
+            if absent:
+                say("")
+                say(f"  {len(absent)} skill(s) in this clone did not load at all, cause unknown")
+                say("  from here (a malformed SKILL.md would do it). Worth reporting:")
+                say(f"    {', '.join(absent)}")
+            if not shadowed and not absent:
+                say("  Every skill in this clone loaded.")
+
+    # ---- 8. done
     head("Done")
     say(f"  config      {cfg_path}")
     say(f"  skills      {REPO / 'skills'}  ({len(all_skills)} available)")
