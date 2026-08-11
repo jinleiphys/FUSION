@@ -503,6 +503,13 @@ def main():
                 say("  building your citation neighbourhood, this reads a 16 MB table and takes a moment")
         seed_private_layer(home, papers, picked, area_labels)
 
+    # ---- 6b. mark this machine as set up
+    # AGENTS.md tells the agent to offer setup on a first run and to stay quiet
+    # afterwards; this file is how it tells the two apart. Written last, so an
+    # aborted run does not silently count as a completed one.
+    marker = Path.home() / ".fusion" / ".initialized"
+    write_file(marker, f"set up by fusion_init.py on {time.strftime('%Y-%m-%d')}\n")
+
     # ---- 7. verify the config actually took effect
     head("8. Checking it worked")
     if oc and not DRY_RUN:

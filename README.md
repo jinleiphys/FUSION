@@ -11,7 +11,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  22 skills
+  23 skills
   ·
   61,167 offline literature pages
 </p>
@@ -46,19 +46,26 @@ curl -fsSL https://opencode.ai/install | bash
 # 2. FUSION
 git clone https://github.com/jinleiphys/FUSION.git && cd FUSION
 
-# 3. answer a few questions
-python3 scripts/fusion_init.py        # --dry-run to watch it decide without writing
-
-# 4. work
+# 3. work
 opencode
 ```
 
-The wizard picks your model, wires the skills and the knowledge base into your
-config (merging, never clobbering, backing up what was there), hands you to
-`opencode auth login` for your key, and seeds a private space from your own
-papers: the topics your work carries, who you write with, who cites you inside
-the corpus. That space is created outside this repository, so nothing personal
-can reach a public clone.
+**There is no configuration step.** Started from inside the clone, the agent
+finds all 23 skills on its own. Ask it something and it will reach for the right
+one.
+
+**On the first run it offers to set itself up**, and never asks again once you
+have. Accept and it walks you through your model, the areas you work in, the
+colour theme, and a private space seeded from your own papers: the topics your
+work carries, who you write with, who cites you inside the corpus. Decline and
+it gets straight to what you asked. That private space is created outside this
+repository, so nothing personal can reach a public clone.
+
+You can also run it whenever you like by saying *set up fusion*, or directly:
+
+```bash
+python3 scripts/fusion_init.py        # --dry-run to watch it decide without writing
+```
 
 Then ask for what you want, in words:
 
@@ -80,8 +87,8 @@ skills pull their own extra dependencies and say so before they do.
 
 ## What is in it
 
-**22 skills.** Twenty drive a specific code, one is a fitting companion, one
-retrieves experimental data.
+**23 skills.** Twenty drive a specific code, one is a fitting companion, one
+retrieves experimental data, one sets FUSION up.
 
 | Area | Codes |
 |---|---|
@@ -111,7 +118,7 @@ files, so all three common agents can load them.
 
 | Agent | Entry | Install | Verification status |
 |---|---|---|---|
-| opencode | `SKILL.md` | the wizard writes `skills.paths` | **verified**, all 22 load |
+| opencode | `SKILL.md` | none, auto-found in the clone | **verified**, all 23 load with zero config |
 | Claude Code | `SKILL.md` | `ln -s "$PWD"/skills/* ~/.claude/skills/` | **verified**, byte-identical to skills it already loads |
 | Codex | `AGENTS.md` | `ln -s "$PWD"/skills/* ~/.codex/skills/` | format only, **not** tested end to end |
 

@@ -2,7 +2,7 @@
   "skills": [
     {
       "name": "azure2",
-      "version": "cd3bcdc6d310",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -32,7 +32,7 @@
     },
     {
       "name": "ccfull",
-      "version": "80069c63b1c1",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -46,7 +46,7 @@
     },
     {
       "name": "cgmf",
-      "version": "364b49b6e68b",
+      "version": "2aac202c665c",
       "files": [
         ".gitignore",
         "AGENTS.md",
@@ -63,7 +63,7 @@
     },
     {
       "name": "cnok",
-      "version": "6355a0f3b97d",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -80,7 +80,7 @@
     },
     {
       "name": "coloss",
-      "version": "65faa0bb0744",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -94,7 +94,7 @@
     },
     {
       "name": "exfor-data",
-      "version": "32c67ea892df",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -104,7 +104,7 @@
     },
     {
       "name": "fresco",
-      "version": "87c9a5f15155",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -129,8 +129,16 @@
       ]
     },
     {
+      "name": "fusion-setup",
+      "version": "0-uncommitted",
+      "files": [
+        "AGENTS.md",
+        "SKILL.md"
+      ]
+    },
+    {
       "name": "gibuu",
-      "version": "969176b93a9a",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -148,7 +156,7 @@
     },
     {
       "name": "gsm",
-      "version": "71fbd69cd4ab",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -167,7 +175,7 @@
     },
     {
       "name": "kshell",
-      "version": "28d450083bf8",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -184,7 +192,7 @@
     },
     {
       "name": "nlat",
-      "version": "41952152295c",
+      "version": "2aac202c665c",
       "files": [
         ".gitignore",
         "AGENTS.md",
@@ -203,7 +211,7 @@
     },
     {
       "name": "nucleartoolkit",
-      "version": "48ba838c9029",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -220,7 +228,7 @@
     },
     {
       "name": "pikoe",
-      "version": "c17e7f68561b",
+      "version": "2aac202c665c",
       "files": [
         ".gitignore",
         "AGENTS.md",
@@ -245,7 +253,7 @@
     },
     {
       "name": "sfresco",
-      "version": "87c9a5f15155",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -274,7 +282,7 @@
     },
     {
       "name": "sides",
-      "version": "f6770e36be82",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -291,7 +299,7 @@
     },
     {
       "name": "sky3d",
-      "version": "f1351f86ef57",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -312,7 +320,7 @@
     },
     {
       "name": "skynet",
-      "version": "e393148f9811",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -330,7 +338,7 @@
     },
     {
       "name": "smash",
-      "version": "0e3ded70e6a2",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -348,7 +356,7 @@
     },
     {
       "name": "swanlop",
-      "version": "69dc5826a855",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -365,7 +373,7 @@
     },
     {
       "name": "talys",
-      "version": "6348d275fd0f",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -382,7 +390,7 @@
     },
     {
       "name": "thermal-fist",
-      "version": "6348d275fd0f",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -400,7 +408,7 @@
     },
     {
       "name": "vhlle",
-      "version": "f33887762dac",
+      "version": "2aac202c665c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
