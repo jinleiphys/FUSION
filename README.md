@@ -40,15 +40,24 @@ with a stated tolerance.
 ## Quickstart
 
 ```bash
-# 1. an agent to run it in
-curl -fsSL https://opencode.ai/install | bash
+# 1. the CLI (pick your platform from the releases page)
+curl -fsSL https://github.com/jinleiphys/FUSION/releases/latest/download/fusion-darwin-arm64.tar.gz | tar -xz
+mv fusion ~/.local/bin/                       # anywhere on your PATH
+xattr -d com.apple.quarantine ~/.local/bin/fusion   # macOS only, see below
 
-# 2. FUSION
+# 2. FUSION itself
 git clone https://github.com/jinleiphys/FUSION.git && cd FUSION
 
 # 3. work
-opencode
+fusion
 ```
+
+Builds for macOS and Linux, x64 and arm64, are on the
+[releases page](https://github.com/jinleiphys/FUSION/releases). They are not
+signed or notarised, so macOS blocks the first run until you clear the
+quarantine attribute as above. If you would rather not run an unsigned binary,
+`fusion` is a rebranded [opencode](https://github.com/anomalyco/opencode) and
+everything here works under a stock `opencode` install too.
 
 **There is no configuration step.** Started from inside the clone, the agent
 finds all 23 skills on its own. Ask it something and it will reach for the right
@@ -81,6 +90,8 @@ skills without it, skip the clone and point your agent at the index instead:
 // ~/.config/opencode/opencode.json
 { "skills": { "urls": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/skills/"] } }
 ```
+
+Verified: on a machine with no clone, that pulls and caches all 23 skills.
 
 Requirements: `git`, `make`, `gfortran`, a C++ compiler, `python3`. Individual
 skills pull their own extra dependencies and say so before they do.
@@ -157,10 +168,8 @@ certify that your calculation is right.** The physics is still yours.
 A working platform, in daily use by its author, released early to find out what
 other people need from it. Things you may hit:
 
-- No packaged installer and no FUSION binary. You run a stock agent with
-  FUSION's skills and knowledge base. A branded CLI build exists in
-  [fusion-core](https://github.com/jinleiphys/fusion-core) but has not been
-  released.
+- The macOS and Linux binaries are unsigned, so the first run needs the
+  quarantine attribute cleared. Windows is not built.
 - **Cold-start installs are under-tested.** Every skill's install path works on
   a machine that already has the code; only FRESCO's has been exercised from a
   genuinely empty cache. Expect a missing dependency somewhere.
