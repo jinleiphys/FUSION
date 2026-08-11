@@ -120,7 +120,10 @@ def write_file(path: Path, text: str):
 # ------------------------------------------------------------------ opencode
 
 def find_opencode():
-    return shutil.which("opencode") or shutil.which("fusion")
+    # `fusion` first. If someone installed the FUSION build, that is the binary
+    # they meant to use, and preferring opencode here would both run the wrong
+    # one and hide the FUSION build from the autoupdate check below.
+    return shutil.which("fusion") or shutil.which("opencode")
 
 
 def config_dir() -> Path:
@@ -143,7 +146,8 @@ def load_config(path: Path) -> dict:
         sys.exit(1)
 
 
-def merge_config(existing: dict, skills_dir: Path, model: str, theme: str = "") -> dict:
+def merge_config(existing: dict, skills_dir: Path, model: str, theme: str = "",
+                 disable_autoupdate: bool = False) -> dict:
     """Add what FUSION needs, keep everything the user already had.
 
     Merged rather than replaced, and the skills path is appended only if absent,
@@ -154,6 +158,8 @@ def merge_config(existing: dict, skills_dir: Path, model: str, theme: str = "") 
         cfg["model"] = model
     if theme:
         cfg["theme"] = theme
+    if disable_autoupdate:
+        cfg["autoupdate"] = False
     skills = cfg.setdefault("skills", {})
     paths = skills.setdefault("paths", [])
     entry = str(skills_dir)
@@ -430,7 +436,23 @@ def main():
     if THEME_FILE.exists() and ask_yes("Use the FUSION colour theme in the terminal?", default=True):
         write_file(cfg_dir / "themes" / "fusion.json", THEME_FILE.read_text())
         theme_name = "fusion"
-    merged = merge_config(existing, REPO / "skills", model, theme_name)
+    # A FUSION build must not be allowed to update itself. The upstream check is
+    # hardcoded to anomalyco/opencode and the npm opencode-ai package, so
+    # accepting its prompt silently replaces the FUSION binary with plain
+    # opencode and the branding disappears. Patching the updater would be
+    # functional code and is out of bounds for a brand fork, but `autoupdate` is
+    # a supported config key, so the fix belongs here.
+    #
+    # Only for a FUSION build. Someone running stock opencode gets to keep their
+    # own updater; silently disabling it on their tool would be presumptuous.
+    kill_autoupdate = False
+    if oc and Path(oc).name == "fusion":
+        say("")
+        say("This is a FUSION build, whose update check still points at upstream")
+        say("opencode, so accepting an update prompt would replace it with plain")
+        say("opencode and lose the branding. Turning autoupdate off.")
+        kill_autoupdate = True
+    merged = merge_config(existing, REPO / "skills", model, theme_name, kill_autoupdate)
     if existing and not DRY_RUN:
         backup = cfg_path.with_suffix(f".json.bak-{time.strftime('%Y%m%d-%H%M%S')}")
         shutil.copy2(cfg_path, backup)

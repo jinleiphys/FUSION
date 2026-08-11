@@ -4,6 +4,7 @@
       "name": "azure2",
       "version": "cd3bcdc6d310",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/14N_pg_15O_679/.gitignore",
         "examples/14N_pg_15O_679/14N_pg_15O_679.azr",
@@ -33,6 +34,7 @@
       "name": "ccfull",
       "version": "80069c63b1c1",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/16O_144Sm.inp",
         "references/16O_144Sm.OUTPUT.reference",
@@ -47,6 +49,7 @@
       "version": "364b49b6e68b",
       "files": [
         ".gitignore",
+        "AGENTS.md",
         "SKILL.md",
         "references/failure-modes.md",
         "references/input-format.md",
@@ -62,6 +65,7 @@
       "name": "cnok",
       "version": "6355a0f3b97d",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -78,6 +82,7 @@
       "name": "coloss",
       "version": "65faa0bb0744",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/6Li208Pb.in",
         "examples/alpha40Ca.in",
@@ -91,6 +96,7 @@
       "name": "exfor-data",
       "version": "32c67ea892df",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "references/exfor-format.md",
         "scripts/exfor.py"
@@ -100,6 +106,7 @@
       "name": "fresco",
       "version": "87c9a5f15155",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/2n-transfer-li9tp-simseq.nin",
         "examples/B1-elastic.in",
@@ -125,6 +132,7 @@
       "name": "gibuu",
       "version": "969176b93a9a",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -142,6 +150,7 @@
       "name": "gsm",
       "version": "71fbd69cd4ab",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/Exercise_II.in",
         "examples/Exercise_XIII_1s1I2.in",
@@ -160,6 +169,7 @@
       "name": "kshell",
       "version": "28d450083bf8",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -177,6 +187,7 @@
       "version": "41952152295c",
       "files": [
         ".gitignore",
+        "AGENTS.md",
         "SKILL.md",
         "examples/dp48Ca_10-0_DWBA.in",
         "examples/dp48Ca_20-0_NL.in",
@@ -194,6 +205,7 @@
       "name": "nucleartoolkit",
       "version": "48ba838c9029",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -211,6 +223,7 @@
       "version": "c17e7f68561b",
       "files": [
         ".gitignore",
+        "AGENTS.md",
         "SKILL.md",
         "examples/12Cp2pMD.cnt",
         "examples/12Cp2pMD100.cnt",
@@ -234,6 +247,7 @@
       "name": "sfresco",
       "version": "87c9a5f15155",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "examples/nalpha.min",
@@ -262,6 +276,7 @@
       "name": "sides",
       "version": "f6770e36be82",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -278,6 +293,7 @@
       "name": "sky3d",
       "version": "f1351f86ef57",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/cross-platform-manifest.md",
@@ -298,6 +314,7 @@
       "name": "skynet",
       "version": "e393148f9811",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -315,6 +332,7 @@
       "name": "smash",
       "version": "0e3ded70e6a2",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -332,6 +350,7 @@
       "name": "swanlop",
       "version": "69dc5826a855",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -348,6 +367,7 @@
       "name": "talys",
       "version": "6348d275fd0f",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/n-Nb093-14MeV-full.inp",
         "examples/n-Os187-astro-ng.inp",
@@ -364,6 +384,7 @@
       "name": "thermal-fist",
       "version": "6348d275fd0f",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "references/failure-modes.md",
@@ -381,6 +402,7 @@
       "name": "vhlle",
       "version": "f33887762dac",
       "files": [
+        "AGENTS.md",
         "SKILL.md",
         "examples/README.md",
         "examples/glauber.params",

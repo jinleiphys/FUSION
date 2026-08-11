@@ -120,9 +120,21 @@ opencode at the skill index and it pulls and caches them itself:
 { "skills": { "urls": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/skills/"] } }
 ```
 
-Skills are plain directories of Markdown and shell scripts, so they work with
-any agent that can read a `SKILL.md` and run a command. Nothing is locked to
-one vendor.
+**FUSION is not tied to opencode.** Skills are plain directories of Markdown
+and shell scripts, and each one ships both entry files, so all three of the
+common agents can load them:
+
+| Agent | Entry file | How to install | Verified |
+|---|---|---|---|
+| opencode | `SKILL.md` | the wizard writes `skills.paths` | yes, all 22 load |
+| Claude Code | `SKILL.md` | `ln -s "$PWD"/skills/* ~/.claude/skills/` | yes, same files Claude Code already loads |
+| Codex | `AGENTS.md` | `ln -s "$PWD"/skills/* ~/.codex/skills/` | format only, not end to end |
+
+The Codex entry files are **generated pointers**, not hand-written condensed
+mirrors: each one names the skill, says when it applies, and tells Codex to
+read `SKILL.md` with its file-read tool, which it must because Codex does not
+inline markdown imports. Good enough to work, weaker than a mirror, and marked
+as such at the top of every file.
 
 Requirements: `git`, `make`, a Fortran compiler (`gfortran`) and a C++
 compiler. Individual skills pull their own extra dependencies and say so.
