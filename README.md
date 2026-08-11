@@ -20,7 +20,7 @@
 
 ---
 
-> ### This is a beta. It is being tested in the open.
+> ### Beta release, tested in public
 >
 > v0.1.0 is the first public build. It works, it is used daily by its author,
 > and it has not been used by anyone else. **What breaks for you is the point.**
@@ -40,8 +40,8 @@
 > 1. **A result that looked right and was wrong.** The whole reason this project
 >    exists is that a general agent writes a plausible FRESCO deck with the wrong
 >    radius convention. If FUSION does something of that kind, we want the deck,
->    the number, and what it should have been. This is the failure we are most
->    afraid of and the one users are least likely to report.
+>    the number, and what it should have been. A plausible but wrong result is
+>    the failure we fear most, and the one users are least likely to report.
 > 2. **A code that will not install**, with the error and your OS and compiler.
 > 3. **Anything that felt stupid.** Every awkward thing in the first-run flow was
 >    found by one person trying it and saying so plainly. That works.
@@ -191,8 +191,8 @@ Every skill is built from the code's public source and its own manual, then made
 to reproduce something. The evidence is stated rather than implied:
 
 - **Tier 1** (14 skills, including FRESCO, TALYS, CGMF, SMASH, SkyNet,
-  Thermal-FIST): the distribution ships reference values and the skill
-  reproduces them, several byte for byte.
+  Thermal-FIST): the code's own distribution ships reference values and the
+  skill reproduces them, several byte for byte.
 - **Tier 2** (6 skills, including AZURE2, KSHELL, GiBUU, vHLLE): the code ships
   no reference output, so the skill is pinned by cross-platform reproduction,
   physics invariants such as the optical theorem, or an independent analytic
@@ -202,7 +202,7 @@ to reproduce something. The evidence is stated rather than implied:
 Most skills are built and verified on **two platforms**, macOS/ARM and
 Linux/x86-64, and every one goes through an adversarial review pass by a second
 AI before shipping. That pass is not ceremony. It has caught skills that
-reported success while running a stale deck, harnesses whose guards had never
+reported success while running a stale deck, test scripts whose checks had never
 been shown to fire, and a test that fabricated its own input. What each pass
 found is written down in each skill's `references/verification.md`.
 
@@ -220,7 +220,8 @@ other people need from it. Things you may hit:
   a machine that already has the code; only FRESCO's has been exercised from a
   genuinely empty cache. Expect a missing dependency somewhere.
 - TALYS wants about 11 GB of disk, 8.6 GB of it a structure database.
-- Documentation is English only.
+- The main README is available in English and Chinese. Skill documentation is
+  currently English only.
 
 ## Contributing
 

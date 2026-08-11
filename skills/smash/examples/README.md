@@ -37,11 +37,11 @@ what you want for physics, not for a check.
 ## 2. Thermal box
 
 `$SMASH_ROOT/input/box/config.yaml` fills a periodic box with thermal
-multiplicities at T = 0.15 GeV and lets it equilibrate. This is the setup for
+multiplicities at T = 0.15 GeV and lets it equilibrate. The setup is meant for
 detailed-balance and equilibration studies, and it ships its own `particles.txt`
 and `decaymodes.txt`, so its species content differs from a collider run.
 
-Note that the conservation anchor above does NOT transfer: a box created from
+The conservation anchor above does NOT transfer: a box created from
 thermal multiplicities has whatever baryon number the sampling gave it, so read
 it from the first event rather than computing it from a projectile and target.
 

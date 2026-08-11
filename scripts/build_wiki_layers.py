@@ -266,7 +266,7 @@ def generate_index():
 
             prefix = "  " * indent + "- "
             if has_topic:
-                link_part = f"[{label}](../topics/{slug}.md)"
+                link_part = f"[{label}](topics/{slug}.md)"
             else:
                 link_part = label
 
@@ -297,7 +297,7 @@ def generate_index():
             count = slug_counts.get(slug, 0)
             has_topic = (TOPICS_DIR / f"{slug}.md").exists()
             if has_topic:
-                lines.append(f"- [{label}](../topics/{slug}.md) ({count} papers)")
+                lines.append(f"- [{label}](topics/{slug}.md) ({count} papers)")
             else:
                 lines.append(f"- {label} ({count} papers)")
 

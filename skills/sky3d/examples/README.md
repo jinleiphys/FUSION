@@ -24,8 +24,7 @@ scripts/run_sky3d.sh --deck "$SKY3D_TESTS/Static/for005.static" --workdir /tmp/o
 python3 scripts/compare_sky3d.py /tmp/o16/for006 "$SKY3D_TESTS/Static/for006.static"
 ```
 
-This is the case `verify_sky3d.sh` runs, and it is a genuine reproduction of the
-authors' distributed output.
+`verify_sky3d.sh` runs this case and reproduces the authors' distributed output.
 
 ## 2. 16O + 16O collision
 

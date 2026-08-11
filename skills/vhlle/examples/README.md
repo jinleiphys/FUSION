@@ -8,7 +8,8 @@ which `install_vhlle.sh` clones and links.
 
 Ideal (inviscid) conformal Gubser flow, `icModel 4`. Must be run with the SIMPLE
 (conformal p=e/3) binary, because the analytic Gubser solution assumes conformal
-symmetry. This is the paper's Section 4.1 test and the skill's physics anchor.
+symmetry. The case comes from Section 4.1 of the paper and serves as the skill's
+physics anchor.
 
 ```bash
 scripts/run_vhlle.sh --params examples/gubser.params --eos simple --outdir /tmp/gub

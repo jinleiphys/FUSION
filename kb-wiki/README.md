@@ -1,9 +1,9 @@
 # kb-wiki: what these pages are, and where they come from
 
 This directory holds 61,167 generated pages: 61,059 paper pages, one per paper in
-the arXiv nucl-th corpus, and 108 topic pages, together with the citation and
-relation layers that connect them. It is the knowledge base FUSION ships with, so that a question
-about the literature can be answered offline instead of by a web search.
+the arXiv nucl-th corpus, and 108 topic pages. Citation and relation layers join
+the pages. FUSION ships the whole directory so literature searches can run
+offline.
 
 **These pages are not written by the papers' authors, and they are not a
 substitute for reading the papers.** Every claim on a page should be checked
@@ -40,8 +40,8 @@ evidence.
   full-text database. Those are read locally when the corpus is built and are
   never redistributed by this project. If you want the paper, follow the link.
 
-This is the project's own reading of the position, offered so you can judge it
-for yourself; it is not legal advice.
+This section records the project's basis for distribution. It is not legal
+advice.
 
 ## If you are an author and you want your page gone
 
