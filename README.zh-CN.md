@@ -11,7 +11,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  24 个技能
+  26 个技能
   ·
   61,167 页离线文献
   ·
@@ -54,7 +54,7 @@ xattr -d com.apple.quarantine fusion          # 只有 macOS 需要这一行
 ./fusion
 ```
 
-在仓库目录里运行 `./fusion`，24 个 skill 和文献库都会自动加载，不需要另写配置文件。
+在仓库目录里运行 `./fusion`，26 个 skill 和文献库都会自动加载，不需要另写配置文件。
 
 第一次对话时，FUSION 会顺便问你是否要配置模型、研究方向和配色，也可以用你的论文建一份私人档案，记下课题词、合作者和语料库内的引用。
 它会同时处理你已经提出的任务。配置完以后不会再问；想略过，直接说「跳过」。
@@ -91,8 +91,9 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 
 ## 里面有什么
 
-仓库里现有 24 个 skill。其中二十个负责具体程序，SFRESCO 负责拟合，EXFOR skill 取实验数据，
-`kb-search` 检索离线文献库，`fusion-setup` 用来配置 FUSION。
+仓库里现有 26 个 skill。其中二十个负责具体程序，SFRESCO 负责拟合，EXFOR skill 取实验数据，
+`kb-search` 检索离线文献库，`literature-wiki` 和 `research-profile` 维护你自己的读文献 wiki 和研究档案，
+`fusion-setup` 用来配置 FUSION。
 
 | 领域 | 程序 |
 |---|---|

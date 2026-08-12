@@ -3,6 +3,34 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-12 (later): literature-wiki + research-profile embedded from the public repo
+
+**The user's original question ("我们那个Wiki的skill是不是没复制过来") had a second,
+better answer.** kb-search covers the SHIPPED knowledge base; the personal-wiki
+skills (literature-wiki, research-profile) were also missing, and for those a
+clean public version already existed: github.com/jinleiphys/research_LLM_wiki
+(v2.1, sanitized for release in May 2026, cross-harness SKILL.md + AGENTS.md,
+templates included, configurable wiki path). Copied in byte-identical with
+`cp -RL` at c336c55; that repo stays the source of truth and re-syncs must
+leave `diff -r` empty, the same bidirectional-sync discipline as the fresco
+pair.
+
+**One tooling fact worth keeping:** these are the first skills in the family
+with HAND-WRITTEN AGENTS.md (the generator's marker comment is absent), and
+`build_agents_md.py` handles that correctly: "wrote 0 AGENTS.md, left 2
+hand-written alone". So the generated-pointer convention and the hand-written
+convention can coexist; do not "fix" a hand-written AGENTS.md by regenerating
+it.
+
+**Boundary check, so nobody reopens it:** these skills ship the method (schema,
+controlled vocabulary, lint, templates) and define the mount point; the user's
+actual wikis at ~/research-wiki and ~/research-wiki-personal remain private,
+exactly as the hard rule requires. Skill count 24 to 26 in both READMEs and
+fusion-setup. Their SKILL.md text references companion skills FUSION does not
+yet ship (pdf-extract, literature-search); left as-is, both because the copies
+must stay identical to the public repo and because the references are soft
+delegations, but it is a real reason to port those two next.
+
 ## 2026-08-12: kb-search shipped, closing the gap between shipping the KB and shipping a way to use it
 
 **The gap:** the README promised "the agent reads it with plain grep", but no

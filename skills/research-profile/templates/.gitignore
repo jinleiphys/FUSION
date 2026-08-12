@@ -1,0 +1,49 @@
+# research-profile wiki — privacy-default .gitignore
+#
+# This wiki holds material that should not be committed by accident:
+# unpublished ideas, embargoed results, peer reviews under referee
+# privilege, frank collaborator notes, and grant applications.
+#
+# The defaults below err on the side of NOT committing. Review and
+# adjust on first run. If you want something tracked, remove its line.
+
+# Raw paper PDFs — most are copyrighted, almost never belong in git
+raw/
+
+# Peer reviews you wrote — referee privilege is permanent
+reviews/
+
+# Grant applications and funding plans — often agency-confidential
+funding/
+
+# Frank collaborator notes — written for your future memory, not for sharing
+collaborators/
+
+# CV-style exports — change frequently, regeneratable, no value in history
+snapshots/
+
+# Editor/OS junk
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# Local-only overrides — anything you want to keep private even from your
+# private remote. Use this for keys, drafts you are deeply uncertain about,
+# or wiki experiments you do not want history for.
+*.local.md
+*.private.md
+
+# OPTIONAL: uncomment if you want even ideas kept local-only
+# ideas/promising/
+# ideas/parked/
+# ideas/killed/
+
+# OPTIONAL: uncomment if you want failures kept local-only (they are
+# usually safe to commit but the choice is yours)
+# failures/
+
+# OPTIONAL: uncomment if you do NOT want paper drafts in git
+# papers/drafts/
+# papers/rejected/

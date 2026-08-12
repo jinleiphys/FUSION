@@ -130,7 +130,7 @@
     },
     {
       "name": "fusion-setup",
-      "version": "e07f51c1fe94",
+      "version": "7768542ae9ae",
       "files": [
         "AGENTS.md",
         "SKILL.md"
@@ -175,7 +175,7 @@
     },
     {
       "name": "kb-search",
-      "version": "0-uncommitted",
+      "version": "7768542ae9ae",
       "files": [
         "AGENTS.md",
         "SKILL.md"
@@ -196,6 +196,16 @@
         "scripts/run_kshell.sh",
         "scripts/selftest_kshell.sh",
         "scripts/verify_kshell.sh"
+      ]
+    },
+    {
+      "name": "literature-wiki",
+      "version": "0-uncommitted",
+      "files": [
+        "AGENTS.md",
+        "README.md",
+        "SKILL.md",
+        "templates/CLAUDE.md"
       ]
     },
     {
@@ -257,6 +267,19 @@
         "scripts/verify_pikoe.sh",
         "scripts/xbuild_check.sh",
         "scripts/xbuild_compare.py"
+      ]
+    },
+    {
+      "name": "research-profile",
+      "version": "0-uncommitted",
+      "files": [
+        "AGENTS.md",
+        "README.md",
+        "SKILL.md",
+        "templates/.gitignore",
+        "templates/CLAUDE.md",
+        "templates/pre-commit-hook.sh",
+        "templates/profile.md"
       ]
     },
     {

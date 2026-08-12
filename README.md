@@ -11,7 +11,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  24 skills
+  26 skills
   ·
   61,167 offline literature pages
   ·
@@ -84,7 +84,7 @@ xattr -d com.apple.quarantine fusion          # macOS only, see below
 ./fusion
 ```
 
-That is the whole thing: `./fusion` run inside the clone finds all 24 skills
+That is the whole thing: `./fusion` run inside the clone finds all 26 skills
 and the knowledge base with no configuration at all.
 
 To run it from anywhere instead of `./fusion`, move it onto your PATH:
@@ -105,7 +105,7 @@ quarantine attribute as above. If you would rather not run an unsigned binary,
 everything here works under a stock `opencode` install too.
 
 **There is no configuration step.** Started from inside the clone, the agent
-finds all 24 skills on its own. Ask it something and it will reach for the right
+finds all 26 skills on its own. Ask it something and it will reach for the right
 one.
 
 **The first time you ask it anything, it offers to set itself up**, and never
@@ -144,9 +144,10 @@ skills pull their own extra dependencies and say so before they do.
 
 ## What is in it
 
-**24 skills.** Twenty drive a specific code, one is a fitting companion, one
-retrieves experimental data, one searches the offline knowledge base, one sets
-FUSION up.
+**26 skills.** Twenty drive a specific code, one is a fitting companion, one
+retrieves experimental data, one searches the offline knowledge base, two
+(`literature-wiki`, `research-profile`) maintain your own persistent research
+wikis, and one sets FUSION up.
 
 | Area | Codes |
 |---|---|
