@@ -3,6 +3,35 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-13: re-typing done, and two thirds of all contrasts labels were wrong
+
+**The headline number: of 17,408 edges labeled `contrasts`, only 6,000
+survived a second pass that asked one narrow question** (does the citing text
+dispute the cited paper's own claims?); 6,433 became `uses`, 2,631 `compares`,
+2,344 `background`. A dispute label users would reach for in "who challenged
+X" queries was wrong two times out of three. The general lesson for every
+LLM-typed layer in this project: when one label carries the sharp semantics
+(disagreement), measure its precision with a dedicated verification pass
+before anyone queries it; the first-pass prompt already carried carefully
+worded rules for exactly this case and overfired anyway, because a rule
+inside a six-way classification prompt is weaker than a single-question pass.
+
+**Phase 1 facts:** the 4,559 re-opened papers averaged 32 edges each (the
+no-context tail is the INSPIRE-backfill-heavy cohort), so throughput was a
+tenth of the July full run and the original cost estimate tripled mid-flight
+before landing at roughly $6 (13.0M in / 2.3M out); the recheck itself was
+light (7.5M in / 0.9M out, minutes at 40 workers). relations.tsv and
+citations.tsv are 1:1 again, 703,430 rows.
+
+**One real bug shipped in the recheck and cost a wasted phase-2 launch:**
+kb_relations.py has no module-level `threading` import (cmd_full imports it
+function-locally), so cmd_recheck_contrasts died at its first `Lock()` with a
+NameError, and the sequential runner chain went on to apply an empty sidecar.
+The count-only smoke test returns before the Lock, which is why testing
+missed it. Two lessons: a smoke test must penetrate to the code path that
+does the work, and a multi-step runner should chain with `&&` so a dead step
+stops the chain.
+
 ## 2026-08-12 (rebuild): collision guard live, the blocker edge is now a success story
 
 **The full KINGSTON rebuild took 11 minutes, not hours** (61,059 papers, zero

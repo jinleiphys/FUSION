@@ -34,14 +34,16 @@ query each layer, and where the trust boundaries sit.
   uncorroborated single-person match can still be the wrong person (surname
   truncations such as `Lei15` written for Leidemann). Treat an edge as a
   lead to verify against the citing paper's bibliography, not as a fact.
-- `relations.tsv`: the citation edges with a model-assigned type:
-  `citing  cited  type  confidence  evidence`. Types and current counts:
-  `background` 428,552, `uses` 169,877, `compares` 18,119, `contrasts`
-  15,797, `extends` 10,349, `applies` 4,084 (a few thousand re-typed rows
-  land with each maintenance pass, so treat counts as order-of-magnitude).
-  The evidence column is a model rationale that may paraphrase, not a
-  verbatim quote; in it, the marker `[the cited paper]` stands where the
-  citation sat in the source text.
+- `relations.tsv`: the same 703,430 edges with a model-assigned type:
+  `citing  cited  type  confidence  evidence`. Counts (2026-08-13 build):
+  `background` 469,656, `uses` 189,453, `compares` 22,760, `extends`
+  11,153, `contrasts` 6,000, `applies` 4,408. Every `contrasts` label
+  survived a focused second-pass check asking only whether the citing text
+  disputes the cited paper's own claims (the first pass had labeled nearly
+  three times as many, mostly neutral comparisons). The evidence column is
+  a model rationale that may paraphrase, not a verbatim quote; in it, the
+  marker `[the cited paper]` stands where the citation sat in the source
+  text.
 
 Find the directory relative to this skill: `../../kb-wiki` from the directory
 containing this SKILL.md, i.e. `kb-wiki/` at the repository root. Set
@@ -137,11 +139,10 @@ awk -F'\t' '$2=="1511.03214" && $3=="extends"{print $1}'         $KB/relations.t
 
 These relations are author-asserted: they record what the citing paper's text
 says about the cited one, not an independent judgment, and the type labels are
-model-assigned. `contrasts` is MEANT to flag disagreement with the cited paper
-itself, but the classifier overfires on contrast-shaped prose: a sentence like
-"by contrast, the cited model can also describe this" gets labeled `contrasts`
-though nobody disagrees. So never report a dispute from the label alone; quote
-the evidence column and, for anything that matters, the citing paper itself.
+model-assigned. `contrasts` means disagreement with the cited paper itself,
+and every such label has passed a dedicated dispute-only verification pass;
+it is still a model's reading, so when a dispute claim matters, quote the
+evidence column and confirm against the citing paper itself.
 Two thirds of all edges are `background` (plain reference-list citations); that
 is normal, not a defect.
 
