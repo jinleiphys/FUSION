@@ -8,7 +8,7 @@ Codex does not inline markdown imports ([openai/codex#17401](https://github.com/
 
 ## When this skill applies
 
-Search FUSION's offline literature knowledge base (kb-wiki): 61,059 arXiv nucl-th paper pages with digests, 108 PhySH topic pages, a 728k-edge citation graph, and typed semantic relations. Use for 查文献, 搜文献, 知识库, 谁引用了这篇, find papers about X, who cites this, cited-by, related work, literature survey, has anyone done X, offline literature search. Works with plain grep and awk, no network, no API key. A miss here is not proof that no paper exists.
+Search FUSION's offline literature knowledge base (kb-wiki): 61,059 arXiv nucl-th paper pages with digests, 108 PhySH topic pages, a 724k-edge citation graph, and typed semantic relations. Use for 查文献, 搜文献, 知识库, 谁引用了这篇, find papers about X, who cites this, cited-by, related work, literature survey, has anyone done X, offline literature search. Works with plain grep and awk, no network, no API key. A miss here is not proof that no paper exists.
 
 ## What is in this directory
 

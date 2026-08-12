@@ -32,9 +32,14 @@ def load_citations():
     return out_edges, in_edges
 
 
+def page_file(arxiv_id):
+    """Map an arXiv id to its page filename (old-style slash becomes underscore)."""
+    return PAPERS_DIR / f"{arxiv_id.replace('/', '_')}.md"
+
+
 def get_paper_date(arxiv_id):
     """Quickly read date from paper frontmatter (first 4KB only)."""
-    md_path = PAPERS_DIR / f"{arxiv_id}.md"
+    md_path = page_file(arxiv_id)
     if not md_path.exists():
         return "0000"
     try:
@@ -48,7 +53,7 @@ def get_paper_date(arxiv_id):
 
 def get_paper_title(arxiv_id):
     """Quickly read title from paper frontmatter."""
-    md_path = PAPERS_DIR / f"{arxiv_id}.md"
+    md_path = page_file(arxiv_id)
     if not md_path.exists():
         return arxiv_id
     try:
@@ -87,7 +92,9 @@ def inject_citations():
     skipped = 0
 
     for md_path in existing_pages:
-        arxiv_id = md_path.stem
+        # Filename underscore is the slash of an old-style id (stems never
+        # contain a second underscore); TSV edges use the slash form.
+        arxiv_id = md_path.stem.replace('_', '/')
 
         outs = out_edges.get(arxiv_id, set())
         ins = in_edges.get(arxiv_id, set())
@@ -102,26 +109,26 @@ def inject_citations():
 
         if outs:
             # Sort by date (newest first), cap at 30
-            outs_sorted = sorted(outs, key=lambda x: paper_dates.get(x, "0000"), reverse=True)[:30]
+            outs_sorted = sorted(outs, key=lambda x: (paper_dates.get(x, "0000"), x), reverse=True)[:30]
             section_lines.append(f"Cites ({len(outs)}):")
             section_lines.append("")
             for cited in outs_sorted:
                 title = paper_titles.get(cited, cited)
                 year = paper_dates.get(cited, "????")[:4]
-                section_lines.append(f"- [{cited}]({cited}.md) ({year}) {title[:100]}")
+                section_lines.append(f"- [{cited}]({cited.replace('/', '_')}.md) ({year}) {title[:100]}")
             section_lines.append("")
             if len(outs) > 30:
                 section_lines.append(f"*(showing 30 of {len(outs)}; full list in citations.tsv)*")
                 section_lines.append("")
 
         if ins:
-            ins_sorted = sorted(ins, key=lambda x: paper_dates.get(x, "0000"), reverse=True)[:30]
+            ins_sorted = sorted(ins, key=lambda x: (paper_dates.get(x, "0000"), x), reverse=True)[:30]
             section_lines.append(f"Cited by ({len(ins)}):")
             section_lines.append("")
             for citing in ins_sorted:
                 title = paper_titles.get(citing, citing)
                 year = paper_dates.get(citing, "????")[:4]
-                section_lines.append(f"- [{citing}]({citing}.md) ({year}) {title[:100]}")
+                section_lines.append(f"- [{citing}]({citing.replace('/', '_')}.md) ({year}) {title[:100]}")
             section_lines.append("")
             if len(ins) > 30:
                 section_lines.append(f"*(showing 30 of {len(ins)}; full list in citations.tsv)*")

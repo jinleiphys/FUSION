@@ -1,7 +1,7 @@
 ---
 name: kb-search
 description: >-
-  Search FUSION's offline literature knowledge base (kb-wiki): 61,059 arXiv nucl-th paper pages with digests, 108 PhySH topic pages, a 728k-edge citation graph, and typed semantic relations. Use for 查文献, 搜文献, 知识库, 谁引用了这篇, find papers about X, who cites this, cited-by, related work, literature survey, has anyone done X, offline literature search. Works with plain grep and awk, no network, no API key. A miss here is not proof that no paper exists.
+  Search FUSION's offline literature knowledge base (kb-wiki): 61,059 arXiv nucl-th paper pages with digests, 108 PhySH topic pages, a 724k-edge citation graph, and typed semantic relations. Use for 查文献, 搜文献, 知识库, 谁引用了这篇, find papers about X, who cites this, cited-by, related work, literature survey, has anyone done X, offline literature search. Works with plain grep and awk, no network, no API key. A miss here is not proof that no paper exists.
 ---
 
 # kb-search: the offline literature knowledge base
@@ -23,21 +23,20 @@ query each layer, and where the trust boundaries sit.
 - `topics/<slug>.md`: 108 PhySH concept pages: lineage, a newest-first paper
   list (capped at 100), and a landscape synthesis grounded in the topic's
   most-cited papers.
-- `citations.tsv`: 727,841 citation edges, `citing<TAB>cited`, both ends
-  arXiv ids, parsed from .tex bibliographies plus INSPIRE backfill. Mostly
-  right, not error-free: an author-plus-year fallback resolves some bibitem
-  keys to the wrong paper (a `\cite{Lei15}` meaning Leidemann 2015 can map to
-  a Lei 2015 paper), and 4,093 edges point at a cited id that has no page.
-  Treat an edge as a lead to verify against the citing paper's bibliography,
-  not as a fact.
+- `citations.tsv`: 723,748 citation edges, `citing<TAB>cited`, both ends
+  arXiv ids with pages in `papers/`, parsed from .tex bibliographies plus
+  INSPIRE backfill. Mostly right, not error-free: an author-plus-year
+  fallback resolves some bibitem keys to the wrong paper (a `\cite{Lei15}`
+  meaning Leidemann 2015 can map to a Lei 2015 paper). Treat an edge as a
+  lead to verify against the citing paper's bibliography, not as a fact.
 - `relations.tsv`: the same edges with a model-assigned type:
   `citing  cited  type  confidence  evidence`. Types and counts:
-  `background` 485,740, `uses` 187,742, `compares` 20,767, `contrasts`
-  17,505, `extends` 11,361, `applies` 4,726. Most were typed from the
+  `background` 482,393, `uses` 187,163, `compares` 20,706, `contrasts`
+  17,441, `extends` 11,327, `applies` 4,718. Most were typed from the
   citation's surrounding text, but about 3,200 recent citing papers were
   typed from titles and abstracts only, and the evidence column is a model
-  rationale that may paraphrase (253,032 rows carry a literal `[TARGET]`
-  placeholder), not a verbatim quote.
+  rationale that may paraphrase, not a verbatim quote; in it, the marker
+  `[the cited paper]` stands where the citation sat in the source text.
 
 Find the directory relative to this skill: `../../kb-wiki` from the directory
 containing this SKILL.md, i.e. `kb-wiki/` at the repository root. Set
@@ -68,9 +67,8 @@ against INSPIRE or arXiv online, not here.
 Old-style arXiv ids contain a slash; filenames replace it with an underscore.
 `nucl-th/0703083` lives at `papers/nucl-th_0703083.md`. The TSV files and the
 frontmatter keep the slash form. So to go from an id found in `citations.tsv`
-to its page: replace `/` with `_`, append `.md`. Some in-page relative links
-still use the slash form and will not resolve as file paths; resolve ids
-yourself instead of trusting page links.
+to its page: replace `/` with `_`, append `.md`. In-page links already use the
+underscore form.
 
 ## Recipes
 
@@ -116,7 +114,7 @@ awk -F'\t' '$2=="1511.03214"{print $1}' $KB/citations.tsv   # cited-by
 awk -F'\t' '$1=="1511.03214"{print $2}' $KB/citations.tsv   # cites
 ```
 
-An empty cited-by is NOT "uncited": the graph mostly holds in-base pairs, and
+An empty cited-by is NOT "uncited": the graph only holds in-base pairs, and
 anything outside the base is invisible to it. And a nonempty answer is not yet
 a fact: the very example above returns one `cites` edge, and that edge is an
 author-key collision (it points at an unrelated soliton paper). Check the hit

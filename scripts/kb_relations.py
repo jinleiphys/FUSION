@@ -20,7 +20,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 KB_WIKI = PROJECT_ROOT / "kb-wiki"
 PAPERS_DIR = KB_WIKI / "papers"
 CITATIONS_TSV = KB_WIKI / "citations.tsv"
-RELATIONS_TSV = KB_WIKI / "relations-sample.tsv"
+RELATIONS_TSV = KB_WIKI / "relations.tsv"
 
 DB = Path.home() / "literature-corpus/corpus.db"
 AUTH = Path.home() / ".local/share/opencode/auth.json"
@@ -564,6 +564,21 @@ def inject_relations(relations_tsv_path, papers_dir, arxiv_meta):
                 reverse[cited].append((citing, inv_label, confidence, evidence))
 
     all_touched = set(relations.keys()) | set(reverse.keys())
+
+    # Also revisit every page that already carries a Related work section:
+    # if the edges behind it were dropped from the tsv, the page would
+    # otherwise never be rewritten and stale entries would survive.
+    for md_path in papers_dir.glob("*.md"):
+        aid = md_path.stem.replace("_", "/")
+        if aid in all_touched:
+            continue
+        try:
+            with open(md_path) as f:
+                if "## Related work" in f.read():
+                    all_touched.add(aid)
+        except OSError:
+            pass
+
     updated = 0
 
     for arxiv_id in all_touched:

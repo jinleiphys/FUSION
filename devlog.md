@@ -3,6 +3,42 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-12 (repair): the mechanical half of the graph defects fixed, and two pipeline bugs found under them
+
+**What was repaired, zero tokens, all verified converged:** the 4,093 dangling
+edges are gone from both TSVs (723,748 edges remain, type counts restated in
+the skill), the `[TARGET]` evidence placeholder reads `[the cited paper]`, and
+every page's citation and related-work section was rebuilt corpus-wide.
+Left open, because they need KINGSTON hours or paid re-typing: the Tier-B
+collision guard + rebuild, the ~3,181 no-context papers, the contrasts
+overfire. Cost quote for the paid half: contrasts-only is ~2.5% of one $109
+full pass.
+
+**The repair found the bug Codex only grazed.** The broken slash links it
+reported were a symptom of `inject_citations.py` using `md_path.stem` as the
+arXiv id and `f"{id}.md"` as the path, neither mapped through the underscore
+convention. Consequence, worse than the symptom: **all 17,570 old-style pages
+carried "None detected within the corpus" while having edges in the TSV**
+(nucl-th/0703083 has 24), and old-style entries in new-style pages rendered as
+`(0000)` with the id for a title. One id-mapping function fixed both.
+
+**A second trap nearly caused a real mess: `kb_relations.py`'s DEFAULT tsv
+path was the 221 KB pilot `relations-sample.tsv`, not the real file.** A bare
+`scripts/kb_relations.py inject` therefore rebuilt pages from the sample, and
+combined with a revisit patch it overwrote ~44k Related-work sections with the
+literal text "No typed semantic relations in sample.", which is the sentence
+that gave it away. Nothing was committed; re-running with the full file
+restored everything (482,710 related-work links, 0 missing targets). The
+default now points at `relations.tsv`. Lesson: when a pipeline script has a
+`--path` flag that every documented invocation passes explicitly, the default
+is dead code aimed at your foot; align it or remove it.
+
+**Third find: the citation injector was nondeterministic.** It sorted edge
+lists by date only, over a Python set, so equal-date ordering followed the
+hash seed and consecutive runs kept "updating" thousands of pages. Tie-break
+by id added; convergence proven by two consecutive zero-update runs plus one
+under `PYTHONHASHSEED=random`, for both injectors.
+
 ## 2026-08-12 (later still): Codex pass on kb-search, FAIL, and the failure was in the DATA claims, not the commands
 
 **Verdict FAIL: 1 blocker + 8 major + 3 minor, and not one recipe failed to
