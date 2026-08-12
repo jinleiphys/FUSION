@@ -71,6 +71,9 @@ def build_cite_graph():
     first_author_surname_index = defaultdict(list)  # (surname, year) -> [arxiv_id]
     first_author_given_index = defaultdict(list)    # (given_name_part, year) -> [arxiv_id]
 
+    authors_of = {}          # arxiv_id -> full author string, lowercase
+    first_author_of = {}     # arxiv_id -> (surname_lower, first_author_lower)
+
     rows = conn.execute("SELECT arxiv_id, authors, date FROM papers").fetchall()
     for arxiv_id, authors_str, date_str in rows:
         if not authors_str:
@@ -87,6 +90,9 @@ def build_cite_graph():
             words = first_author.split()
             surname = words[-1].lower() if words else ""
             given = words[0].lower() if words else ""
+
+        authors_of[arxiv_id] = authors_str.lower()
+        first_author_of[arxiv_id] = (surname, first_author.lower())
 
         if surname and year:
             first_author_surname_index[(surname, year)].append(arxiv_id)
@@ -209,37 +215,64 @@ def build_cite_graph():
 
                 tier_b_candidates += 1
 
-                if len(candidates) == 1:
-                    aid = list(candidates)[0]
+                if not candidates:
+                    continue
+
+                # Collision guard (2026-08-12). The old rule broke a
+                # several-person tie with max(group size), which is arbitrary
+                # at 1v1 and resolved \cite{Jin15} in 1511.03214 (Lei, Jin
+                # self-citation, reachable only through the given-name index)
+                # to an unrelated paper whose first-author SURNAME is Jin.
+                # New rule: a person whose first author appears in the citing
+                # paper's own author list wins outright (self/collaborator
+                # citation, the strongest mechanical signal); otherwise a
+                # single-person candidate set is accepted as before; a
+                # several-person set without corroboration yields NO edge,
+                # because a wrong edge costs more than a missing one.
+                person_groups = defaultdict(set)
+                for aid in candidates:
+                    person_groups[first_author_of.get(aid, ("", ""))[0]].add(aid)
+
+                citing_authors = authors_of.get(arxiv_id, "")
+                corroborated = {
+                    sn: aids for sn, aids in person_groups.items()
+                    if any(first_author_of.get(a, ("", ""))[1]
+                           and first_author_of.get(a, ("", ""))[1] in citing_authors
+                           for a in aids)
+                }
+
+                if len(corroborated) == 1:
+                    accepted = next(iter(corroborated.values()))
+                elif not corroborated and len(person_groups) == 1:
+                    accepted = next(iter(person_groups.values()))
+                else:
+                    accepted = set()
+
+                for aid in accepted:
                     cited_ids.add(aid)
                     tier_b_edges += 1
-                elif len(candidates) >= 2:
-                    # Multiple candidates: group by first-author surname
-                    surname_groups = defaultdict(set)
-                    for aid in candidates:
-                        row = conn.execute("SELECT authors FROM papers WHERE arxiv_id=?", (aid,)).fetchone()
-                        if row and row[0]:
-                            fa = row[0].split(';')[0].strip()
-                            sn = fa.split(',')[0].strip().lower() if ',' in fa else fa.split()[-1].lower()
-                            surname_groups[sn].add(aid)
-                    if len(surname_groups) == 1:
-                        # All same author, multiple papers: accept all
-                        for aid in candidates:
-                            cited_ids.add(aid)
-                            tier_b_edges += 1
-                    elif len(surname_groups) >= 2:
-                        # Multiple different authors: prefer the largest group
-                        # (author with most publications that year is most likely citation target)
-                        best_group = max(surname_groups.values(), key=len)
-                        for aid in best_group:
-                            cited_ids.add(aid)
-                            tier_b_edges += 1
 
         for cited in cited_ids:
             edges.add((arxiv_id, cited))
 
     elapsed = time.time() - start_time
     print(f"\nCitation extraction finished in {elapsed:.0f}s ({elapsed/60:.1f} min)")
+
+    # Remove hand-verified false edges (kb-wiki/edge-blacklist.tsv:
+    # citing<TAB>cited<TAB>reason). These are resolutions the heuristics
+    # cannot get right mechanically, each verified against the citing
+    # paper's actual bibliography before being listed.
+    blacklist_path = KB_WIKI / "edge-blacklist.tsv"
+    if blacklist_path.exists():
+        removed = 0
+        with open(blacklist_path) as f:
+            f.readline()
+            for line in f:
+                p = line.rstrip('\n').split('\t')
+                if len(p) >= 2 and (p[0], p[1]) in edges:
+                    edges.discard((p[0], p[1]))
+                    removed += 1
+        print(f"Blacklist: removed {removed} hand-verified false edges")
 
     # Write citations.tsv
     with open(CITATIONS_TSV, 'w') as f:
@@ -273,6 +306,16 @@ def build_cite_graph():
     cal_edge = ("1711.07540", "1511.03214")
     present = cal_edge in edges
     print(f"\nCalibration: {cal_edge[0]} -> {cal_edge[1]}: {'PRESENT' if present else 'MISSING!'}")
+
+    # Collision-guard calibration (2026-08-12): \cite{Jin15} in 1511.03214
+    # means the authors' own preceding paper 1510.02602 (first author
+    # "Lei, Jin", reachable only via the given-name index and won by the
+    # self-citation corroboration), NOT 1508.03920 (first-author surname
+    # Jin, an unrelated soliton paper the old tie-break picked).
+    good = ("1511.03214", "1510.02602") in edges
+    bad = ("1511.03214", "1508.03920") in edges
+    print(f"Guard calibration: 1511.03214 -> 1510.02602 {'PRESENT' if good else 'MISSING!'}; "
+          f"-> 1508.03920 (false) {'ABSENT' if not bad else 'STILL PRESENT!'}")
 
     if not present:
         # Debug: why was it not found?

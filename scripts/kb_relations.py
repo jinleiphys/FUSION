@@ -1180,6 +1180,220 @@ def cmd_full(args):
     print(f"DONE full: {stats['n']} papers, {stats['edges']} edges, in={stats['in']} out={stats['out']}", flush=True)
 
 
+def classify_contrasts_recheck(citing_aid, cited_entries, api_key, arxiv_meta):
+    """Focused second pass over edges previously typed 'contrasts'.
+
+    The first-pass classifier overfires on contrast-shaped prose: a sentence
+    like "By contrast, [TARGET]'s approach can also describe this" got labeled
+    contrasts although nobody disputes anything. This pass asks only the
+    narrow question: does the citing text assert that [TARGET]'s OWN claims,
+    results, or conclusions are wrong, corrected, or in tension with the
+    citing paper's findings?
+
+    cited_entries: list of (cited_aid, title, context_snippet)
+    Returns: list of {cited, type, confidence, rationale}, usage
+    """
+    citing_meta = arxiv_meta.get(citing_aid, {})
+    citing_title = citing_meta.get("title", citing_aid)
+    citing_abstract = citing_meta.get("abstract", "")
+
+    items_text = []
+    for i, (cited_aid, cited_title, context) in enumerate(cited_entries):
+        ctx = context if context else "(no citation context extracted from tex)"
+        ctx = re.sub(r'\[TARGET\]\s*\[TARGET\]', '[TARGET]', ctx)
+        items_text.append(
+            f"{i + 1}. Paper: \"{cited_title}\"\n"
+            f"   Citation context in {citing_aid}: {ctx}"
+        )
+
+    prompt = f"""Task: verify previously assigned "contrasts" labels between a citing paper and cited papers. A "contrasts" label is correct ONLY if the citing paper asserts that the cited paper's OWN claims, results, or conclusions are wrong, are corrected by the citing paper, or are in quantitative or conceptual tension with the citing paper's findings.
+
+Citing paper: "{citing_title}"
+Abstract: {citing_abstract[:2000]}
+
+In each context below, [TARGET] marks the citation to the paper being verified; [cite] marks citations to other papers.
+
+For each item, decide whether the dispute reading actually holds:
+- Keep "contrasts" ONLY for a real dispute with [TARGET] itself.
+- The words "by contrast" or "in contrast" describing a DIFFERENCE (a different method, a different regime, or the observation that [TARGET]'s approach ALSO describes the data) are NOT a dispute. Use "compares" for a neutral comparison, "uses" if [TARGET] serves as a tool or as evidence.
+- A disagreement with a THIRD party where [TARGET] is cited as support is "uses", not "contrasts".
+- If the context is missing or too thin to establish a dispute, answer "background" with low confidence. Never keep "contrasts" on a guess.
+
+Cited papers:
+{chr(10).join(items_text)}
+
+Return a JSON array, one object per item, same order: [{{"type": "contrasts|compares|uses|background", "confidence": "high|medium|low", "rationale": "one short clause, no em-dashes"}}, ...].
+Return ONLY the JSON array."""
+
+    req = urllib.request.Request(
+        "https://api.deepseek.com/chat/completions",
+        data=json.dumps({
+            "model": MODEL,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.0,
+        }).encode(),
+        headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"},
+    )
+    resp = json.load(urllib.request.urlopen(req, timeout=60))
+    content = resp["choices"][0]["message"]["content"]
+    usage = resp.get("usage", {})
+
+    json_match = re.search(r'\[.*\]', content, re.DOTALL)
+    results = []
+    if json_match:
+        try:
+            results = json.loads(json_match.group(0))
+        except json.JSONDecodeError:
+            results = []
+
+    output = []
+    for i, (cited_aid, _, _) in enumerate(cited_entries):
+        if i < len(results) and isinstance(results[i], dict):
+            r = results[i]
+            t = r.get("type", "contrasts")
+            if t not in ("contrasts", "compares", "uses", "background"):
+                t = "contrasts"
+            output.append({
+                "cited": cited_aid,
+                "type": t,
+                "confidence": r.get("confidence", "low"),
+                "rationale": r.get("rationale", ""),
+            })
+        else:
+            # Unparseable response: keep the original label, marked done, so a
+            # poison paper cannot block every later window.
+            output.append({
+                "cited": cited_aid,
+                "type": "contrasts",
+                "confidence": "low",
+                "rationale": "recheck response unparseable, original label kept",
+            })
+    return output, usage
+
+
+def cmd_recheck_contrasts(args):
+    """Re-verify every relations.tsv row typed 'contrasts'; sidecar-resumable.
+
+    Writes kb-wiki/recheck-contrasts.tsv (citing, cited, new_type, confidence,
+    rationale). --apply merges the sidecar back into relations.tsv.
+    """
+    relations_path = Path(args.relations_tsv) if args.relations_tsv else RELATIONS_TSV
+    sidecar = KB_WIKI / "recheck-contrasts.tsv"
+
+    # Collect contrasts rows, grouped by citing paper
+    by_citing = defaultdict(list)
+    with open(relations_path) as f:
+        f.readline()
+        for line in f:
+            p = line.rstrip("\n").split("\t")
+            if len(p) >= 5 and p[2] == "contrasts":
+                by_citing[p[0]].append(p[1])
+
+    done = set()
+    if sidecar.exists():
+        with open(sidecar) as f:
+            f.readline()
+            for line in f:
+                p = line.rstrip("\n").split("\t")
+                if len(p) >= 2:
+                    done.add((p[0], p[1]))
+
+    if getattr(args, "apply", False):
+        verdicts = {}
+        counts = defaultdict(int)
+        if sidecar.exists():
+            with open(sidecar) as f:
+                f.readline()
+                for line in f:
+                    p = line.rstrip("\n").split("\t")
+                    if len(p) >= 5:
+                        verdicts[(p[0], p[1])] = (p[2], p[3], p[4])
+        changed = 0
+        out_lines = []
+        with open(relations_path) as f:
+            header = f.readline()
+            for line in f:
+                p = line.rstrip("\n").split("\t")
+                if len(p) >= 5 and p[2] == "contrasts" and (p[0], p[1]) in verdicts:
+                    t, c, r = verdicts[(p[0], p[1])]
+                    if t != "contrasts":
+                        p[2], p[3], p[4] = t, c, r.replace("[TARGET]", "[the cited paper]")
+                        changed += 1
+                    counts[t] += 1
+                out_lines.append("\t".join(p) + "\n")
+        with open(relations_path, "w") as f:
+            f.write(header)
+            f.writelines(out_lines)
+        print(f"apply: {changed} rows retyped; verdict counts: {dict(counts)}", flush=True)
+        return
+
+    todo = [a for a in sorted(by_citing) if any((a, c) not in done for c in by_citing[a])]
+    if getattr(args, "count_only", False):
+        print(f"{len(todo)} to go", flush=True)
+        return
+    total_edges = sum(len(v) for v in by_citing.values())
+    print(f"recheck: {total_edges} contrasts edges over {len(by_citing)} citing papers, "
+          f"{len(todo)} papers to go, {args.workers} workers", flush=True)
+
+    meta_index = build_corpus_index()
+    arxiv_meta, doi_to_aid, arxiv_id_set, surname_year_index, given_year_index = meta_index
+    api_key = load_api_key()
+
+    lock = threading.Lock()
+    header_needed = not sidecar.exists()
+    out_f = open(sidecar, "a")
+    if header_needed:
+        out_f.write("citing\tcited\tnew_type\tconfidence\trationale\n")
+
+    def work(citing_aid):
+        cited = [c for c in by_citing[citing_aid] if (citing_aid, c) not in done]
+        if not cited:
+            return citing_aid, [], 0, 0
+        entries = []
+        for c in cited:
+            cm = arxiv_meta.get(c, {})
+            entries.append((c, cm.get("title", c) if cm else c, ""))
+        try:
+            contexts = extract_contexts_for_citing(
+                citing_aid, set(cited), arxiv_meta, arxiv_id_set,
+                surname_year_index, given_year_index, doi_to_aid)
+        except Exception:
+            contexts = {}
+        ewc = [(c, t, contexts.get(c, "")) for c, t, _ in entries]
+        for attempt in range(3):
+            try:
+                results, usage = classify_contrasts_recheck(citing_aid, ewc, api_key, arxiv_meta)
+                return citing_aid, results, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
+            except Exception:
+                if attempt == 2:
+                    fallback = [{"cited": c, "type": "contrasts", "confidence": "low",
+                                 "rationale": "recheck failed after retries, original label kept"}
+                                for c, _, _ in ewc]
+                    return citing_aid, fallback, 0, 0
+                time.sleep(5)
+
+    stats = {"n": 0, "edges": 0, "in": 0, "out": 0}
+    with ThreadPoolExecutor(max_workers=args.workers) as ex:
+        futs = {ex.submit(work, a): a for a in todo}
+        for fut in as_completed(futs):
+            citing_aid, results, ti, to = fut.result()
+            with lock:
+                for r in results:
+                    ra = r.get("rationale", "").replace("\t", " ").replace("\n", " ")
+                    out_f.write(f"{citing_aid}\t{r['cited']}\t{r['type']}\t{r['confidence']}\t{ra}\n")
+                out_f.flush()
+                stats["n"] += 1
+                stats["edges"] += len(results)
+                stats["in"] += ti
+                stats["out"] += to
+                if stats["n"] % 100 == 0:
+                    print(f"  {stats['n']}/{len(todo)} papers, {stats['edges']} edges, "
+                          f"in={stats['in']} out={stats['out']}", flush=True)
+    out_f.close()
+    print(f"DONE recheck: {stats['n']} papers, {stats['edges']} edges, "
+          f"in={stats['in']} out={stats['out']}", flush=True)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="FUSION L3-semantic relation layer")
     sub = ap.add_subparsers(dest="command")
@@ -1202,6 +1416,12 @@ if __name__ == "__main__":
     p_full.add_argument("--count-only", action="store_true", help="Print remaining count and exit, no classification")
     p_full.add_argument("--no-context", action="store_true", help="Skip .tex context extraction (titles+abstracts only); use for backfill papers whose .tex has no inline cites")
 
+    p_recheck = sub.add_parser("recheck-contrasts", help="Re-verify contrasts rows with a focused prompt; sidecar-resumable")
+    p_recheck.add_argument("--relations-tsv", default=None)
+    p_recheck.add_argument("--workers", type=int, default=32)
+    p_recheck.add_argument("--count-only", action="store_true")
+    p_recheck.add_argument("--apply", action="store_true", help="Merge recheck-contrasts.tsv verdicts back into relations.tsv")
+
     args = ap.parse_args()
 
     if args.command == "extract":
@@ -1215,5 +1435,7 @@ if __name__ == "__main__":
         cmd_inject(args)
     elif args.command == "full":
         cmd_full(args)
+    elif args.command == "recheck-contrasts":
+        cmd_recheck_contrasts(args)
     else:
         ap.print_help()
