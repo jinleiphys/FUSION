@@ -23,20 +23,25 @@ query each layer, and where the trust boundaries sit.
 - `topics/<slug>.md`: 108 PhySH concept pages: lineage, a newest-first paper
   list (capped at 100), and a landscape synthesis grounded in the topic's
   most-cited papers.
-- `citations.tsv`: 723,748 citation edges, `citing<TAB>cited`, both ends
+- `citations.tsv`: 703,430 citation edges, `citing<TAB>cited`, both ends
   arXiv ids with pages in `papers/`, parsed from .tex bibliographies plus
-  INSPIRE backfill. Mostly right, not error-free: an author-plus-year
-  fallback resolves some bibitem keys to the wrong paper (a `\cite{Lei15}`
-  meaning Leidemann 2015 can map to a Lei 2015 paper). Treat an edge as a
+  INSPIRE backfill. Bibitem keys with no explicit id resolve through an
+  author-plus-year heuristic; since the 2026-08-12 rebuild an ambiguous
+  several-person match is accepted only when the candidate's first author
+  appears among the citing paper's own authors (a self or collaborator
+  citation) and is dropped otherwise, and hand-verified false resolutions
+  are excised via `edge-blacklist.tsv`. A residual risk remains: an
+  uncorroborated single-person match can still be the wrong person (surname
+  truncations such as `Lei15` written for Leidemann). Treat an edge as a
   lead to verify against the citing paper's bibliography, not as a fact.
-- `relations.tsv`: the same edges with a model-assigned type:
-  `citing  cited  type  confidence  evidence`. Types and counts:
-  `background` 482,393, `uses` 187,163, `compares` 20,706, `contrasts`
-  17,441, `extends` 11,327, `applies` 4,718. Most were typed from the
-  citation's surrounding text, but about 3,200 recent citing papers were
-  typed from titles and abstracts only, and the evidence column is a model
-  rationale that may paraphrase, not a verbatim quote; in it, the marker
-  `[the cited paper]` stands where the citation sat in the source text.
+- `relations.tsv`: the citation edges with a model-assigned type:
+  `citing  cited  type  confidence  evidence`. Types and current counts:
+  `background` 428,552, `uses` 169,877, `compares` 18,119, `contrasts`
+  15,797, `extends` 10,349, `applies` 4,084 (a few thousand re-typed rows
+  land with each maintenance pass, so treat counts as order-of-magnitude).
+  The evidence column is a model rationale that may paraphrase, not a
+  verbatim quote; in it, the marker `[the cited paper]` stands where the
+  citation sat in the source text.
 
 Find the directory relative to this skill: `../../kb-wiki` from the directory
 containing this SKILL.md, i.e. `kb-wiki/` at the repository root. Set
@@ -116,9 +121,11 @@ awk -F'\t' '$1=="1511.03214"{print $2}' $KB/citations.tsv   # cites
 
 An empty cited-by is NOT "uncited": the graph only holds in-base pairs, and
 anything outside the base is invisible to it. And a nonempty answer is not yet
-a fact: the very example above returns one `cites` edge, and that edge is an
-author-key collision (it points at an unrelated soliton paper). Check the hit
-against the citing paper's actual bibliography before repeating it.
+a fact: before the 2026-08-12 collision guard, the example paper's only
+`cites` edge pointed at an unrelated soliton paper through an author-key
+collision (it now resolves to the paper's true predecessor). Wrong
+resolutions can survive the guard, so check a hit against the citing paper's
+actual bibliography before repeating it.
 
 **Who disputes, extends, or uses a paper.** Filter `relations.tsv` by type and
 read the evidence sentence before believing the label:

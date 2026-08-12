@@ -3,6 +3,31 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-12 (rebuild): collision guard live, the blocker edge is now a success story
+
+**The full KINGSTON rebuild took 11 minutes, not hours** (61,059 papers, zero
+missing tex dirs), so a citegraph rebuild is now a cheap operation, worth
+knowing before the next data defect gets triaged as "expensive". Guard
+calibration passed in the build output: `\cite{Jin15}` in 1511.03214 resolves
+to the authors' true preceding paper 1510.02602 through the self-citation
+corroboration, and the soliton edge is gone, so the guard REPAIRED the edge
+rather than merely deleting it. The Leidemann `Lei15` edges died on their own
+under the several-person-no-corroboration rule; `edge-blacklist.tsv` stays as
+belt and braces. Pipeline: rebuild, INSPIRE re-merge (376,503 edges, zero
+overlap with the tex layer by construction, since backfill targeted papers
+with no tex edges), page-set + blacklist filter. Final graph 703,430 edges
+(the guard costs about 16k Tier-B edges against the old arbitrary tie-break,
+the price of not guessing); whole-wiki link audit: 1,538,412 links, 0 missing.
+
+**Relations re-opened for tonight's off-peak window:** the 3,181 no-context
+papers (recovered as the tail of relations.tsv by first appearance, matching
+the stuck count in the July run log exactly) plus 1,648 papers whose edge set
+the rebuild changed, 4,796 papers total, 4,559 with surviving edges;
+646,778 typed rows kept. `run_relations_repair.sh` is armed: phase 1 re-types
+those papers with context, phase 2 runs the focused contrasts recheck over
+all 15,797 contrasts rows, then one injection. Follow-up when it prints ALL
+DONE: refresh kb-search counts, commit the re-typed data.
+
 ## 2026-08-12 (repair): the mechanical half of the graph defects fixed, and two pipeline bugs found under them
 
 **What was repaired, zero tokens, all verified converged:** the 4,093 dangling
