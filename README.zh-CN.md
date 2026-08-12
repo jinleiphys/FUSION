@@ -11,7 +11,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  23 个技能
+  24 个技能
   ·
   61,167 页离线文献
   ·
@@ -54,7 +54,7 @@ xattr -d com.apple.quarantine fusion          # 只有 macOS 需要这一行
 ./fusion
 ```
 
-在仓库目录里运行 `./fusion`，23 个 skill 和文献库都会自动加载，不需要另写配置文件。
+在仓库目录里运行 `./fusion`，24 个 skill 和文献库都会自动加载，不需要另写配置文件。
 
 第一次对话时，FUSION 会顺便问你是否要配置模型、研究方向和配色，也可以用你的论文建一份私人档案，记下课题词、合作者和语料库内的引用。
 它会同时处理你已经提出的任务。配置完以后不会再问；想略过，直接说「跳过」。
@@ -85,14 +85,14 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 { "skills": { "urls": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/skills/"] } }
 ```
 
-这种安装方式已在一台没有克隆仓库的机器上测过，23 个 skill 都能正常拉取和缓存。
+这种安装方式已在一台没有克隆仓库的机器上测过，所有 skill 都能正常拉取和缓存。
 
 基本环境需要 `git`、`make`、`gfortran`、C++ 编译器和 `python3`。个别 skill 还有额外依赖，运行前会提示。
 
 ## 里面有什么
 
-仓库里现有 23 个 skill。其中二十个负责具体程序，SFRESCO 负责拟合，EXFOR skill 取实验数据，
-`fusion-setup` 用来配置 FUSION。
+仓库里现有 24 个 skill。其中二十个负责具体程序，SFRESCO 负责拟合，EXFOR skill 取实验数据，
+`kb-search` 检索离线文献库，`fusion-setup` 用来配置 FUSION。
 
 | 领域 | 程序 |
 |---|---|
@@ -107,7 +107,7 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 [skills-catalog.md](skills-catalog.md)。
 
 离线文献库在 [`kb-wiki/`](kb-wiki/)，共 61,167 页：61,059 篇 arXiv nucl-th 论文各有一页，另有 108 个主题页，
-以及引用和语义关系。agent 用 `grep` 就能检索，不需要服务、API key 或网络。
+以及引用和语义关系。agent 用 `grep` 就能检索，`kb-search` skill 是它的检索指南，不需要服务、API key 或网络。
 
 这些页面是机器生成的摘要，可能有错。使用前请读 [kb-wiki/README.md](kb-wiki/README.md)；写论文时引用原文，不要引用这些摘要页。
 
@@ -117,7 +117,7 @@ skill 是由 Markdown 和 shell 脚本组成的目录。每个 skill 同时提�
 
 | Agent | 入口 | 怎么装 | 验证程度 |
 |---|---|---|---|
-| opencode | `SKILL.md` | 不用装，在克隆目录里自动发现 | **已验证**，23 个零配置全部加载 |
+| opencode | `SKILL.md` | 不用装，在克隆目录里自动发现 | **已验证**，零配置全部加载 |
 | Claude Code | `SKILL.md` | `ln -s "$PWD"/skills/* ~/.claude/skills/` | **已验证**，与它已在加载的技能逐字节一致 |
 | Codex | `AGENTS.md` | `ln -s "$PWD"/skills/* ~/.codex/skills/` | 仅格式，**未**端到端验证 |
 

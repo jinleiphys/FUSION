@@ -124,7 +124,7 @@ show the user what it said; do not paper over it.
 ## Check it worked
 
 Run `opencode debug skill` (or `fusion debug skill`) and count how many skills
-came from this repository's `skills/` directory. There are 23. If some are
+came from this repository's `skills/` directory. There are 24. If some are
 missing, they were either shadowed by a same-named skill elsewhere, in which
 case say which and where the winning one lives, or they failed to load, in which
 case say so and that the cause is not visible from here. Do not report success

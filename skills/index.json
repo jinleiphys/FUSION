@@ -130,7 +130,7 @@
     },
     {
       "name": "fusion-setup",
-      "version": "030e84319d35",
+      "version": "e07f51c1fe94",
       "files": [
         "AGENTS.md",
         "SKILL.md"
@@ -171,6 +171,14 @@
         "scripts/compare_gsm.sh",
         "scripts/install_gsm.sh",
         "scripts/run_gsm.sh"
+      ]
+    },
+    {
+      "name": "kb-search",
+      "version": "0-uncommitted",
+      "files": [
+        "AGENTS.md",
+        "SKILL.md"
       ]
     },
     {
@@ -253,7 +261,7 @@
     },
     {
       "name": "sfresco",
-      "version": "2aac202c665c",
+      "version": "057c54465e8c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -299,7 +307,7 @@
     },
     {
       "name": "sky3d",
-      "version": "2aac202c665c",
+      "version": "057c54465e8c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -338,7 +346,7 @@
     },
     {
       "name": "smash",
-      "version": "2aac202c665c",
+      "version": "057c54465e8c",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -408,7 +416,7 @@
     },
     {
       "name": "vhlle",
-      "version": "2aac202c665c",
+      "version": "057c54465e8c",
       "files": [
         "AGENTS.md",
         "SKILL.md",

@@ -3,6 +3,34 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-12: kb-search shipped, closing the gap between shipping the KB and shipping a way to use it
+
+**The gap:** the README promised "the agent reads it with plain grep", but no
+skill told the agent HOW: the page anatomy, the underscore filename convention
+for old-style arXiv ids, the TSV schemas, or the trust boundaries. The personal
+`literature-corpus` skill could not be copied in, because it is bound to the
+full-text `corpus.db` (forbidden to ship), a hardcoded Anaconda python, and an
+external drive. So `skills/kb-search/` is a NEW skill covering only what ships:
+grep recipes over `papers/` and `topics/`, awk filters over `citations.tsv`
+and `relations.tsv`, and the three standard jobs (survey, missing-citation
+scan, who-disputes-X).
+
+**Verified before written:** every recipe was run against the shipped base
+(61,059 pages, full-tree grep ~1 s; 727,842 edges in both TSVs; relation type
+counts background 486k / uses 188k / compares 21k / contrasts 18k / extends
+11k / applies 5k; coverage through 2606 = June 2026). One real trap documented:
+filenames use `nucl-th_0703083.md` while the TSVs and in-page links keep the
+slash form, so ids must be mapped, and some in-page relative links are broken
+as file paths.
+
+**Carried the usual honesty rules into the skill:** hits must come from a grep
+run in-task with the arXiv id attached; cite the paper never the page (digests
+are machine-generated); a miss is not proof (nucl-th only, lexical, snapshot),
+escalate to INSPIRE/arXiv online. Skill count 23 to 24 updated in both READMEs
+and fusion-setup; the two cold-machine "verified" claims were reworded
+count-free rather than bumped, because the verification ran when there were 23.
+NOT yet done: a Codex adversarial pass on the skill text (single-source so far).
+
 ## 2026-08-11: install-script audit, 20 scripts, 2 real defects
 
 **Why:** the FRESCO auto-install hole found on 2026-07-30 (detection tested one

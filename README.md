@@ -11,7 +11,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  23 skills
+  24 skills
   ·
   61,167 offline literature pages
   ·
@@ -84,7 +84,7 @@ xattr -d com.apple.quarantine fusion          # macOS only, see below
 ./fusion
 ```
 
-That is the whole thing: `./fusion` run inside the clone finds all 23 skills
+That is the whole thing: `./fusion` run inside the clone finds all 24 skills
 and the knowledge base with no configuration at all.
 
 To run it from anywhere instead of `./fusion`, move it onto your PATH:
@@ -105,7 +105,7 @@ quarantine attribute as above. If you would rather not run an unsigned binary,
 everything here works under a stock `opencode` install too.
 
 **There is no configuration step.** Started from inside the clone, the agent
-finds all 23 skills on its own. Ask it something and it will reach for the right
+finds all 24 skills on its own. Ask it something and it will reach for the right
 one.
 
 **The first time you ask it anything, it offers to set itself up**, and never
@@ -137,15 +137,16 @@ skills without it, skip the clone and point your agent at the index instead:
 { "skills": { "urls": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/skills/"] } }
 ```
 
-Verified: on a machine with no clone, that pulls and caches all 23 skills.
+Verified: on a machine with no clone, that pulls and caches the full skill set.
 
 Requirements: `git`, `make`, `gfortran`, a C++ compiler, `python3`. Individual
 skills pull their own extra dependencies and say so before they do.
 
 ## What is in it
 
-**23 skills.** Twenty drive a specific code, one is a fitting companion, one
-retrieves experimental data, one sets FUSION up.
+**24 skills.** Twenty drive a specific code, one is a fitting companion, one
+retrieves experimental data, one searches the offline knowledge base, one sets
+FUSION up.
 
 | Area | Codes |
 |---|---|
@@ -161,8 +162,8 @@ in, what was dropped, and why: [skills-catalog.md](skills-catalog.md).
 
 **61,167 pages of literature**, offline, in [`kb-wiki/`](kb-wiki/): one page per
 paper for 61,059 arXiv nucl-th papers, 108 topic pages, and citation and
-semantic-relation layers connecting them. The agent reads it with plain grep. No
-server, no API key, no network.
+semantic-relation layers connecting them. The agent reads it with plain grep,
+guided by the `kb-search` skill. No server, no API key, no network.
 
 Those pages are machine-generated summaries and they can be wrong. Read
 [kb-wiki/README.md](kb-wiki/README.md) before relying on one, and cite the
