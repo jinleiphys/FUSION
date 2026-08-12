@@ -11,6 +11,7 @@ import os
 import re
 import sqlite3
 import sys
+import threading
 import time
 import urllib.request
 from collections import defaultdict
@@ -1277,6 +1278,7 @@ def cmd_recheck_contrasts(args):
     Writes kb-wiki/recheck-contrasts.tsv (citing, cited, new_type, confidence,
     rationale). --apply merges the sidecar back into relations.tsv.
     """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     relations_path = Path(args.relations_tsv) if args.relations_tsv else RELATIONS_TSV
     sidecar = KB_WIKI / "recheck-contrasts.tsv"
 
