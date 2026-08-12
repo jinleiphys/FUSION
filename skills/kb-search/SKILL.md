@@ -14,19 +14,30 @@ query each layer, and where the trust boundaries sit.
 ## What is in kb-wiki/
 
 - `papers/<id>.md`: 61,059 pages, one per arXiv nucl-th paper (including
-  cross-lists), covering arXiv from 1992 through June 2026. Each page has
-  frontmatter (id, title, authors, date, doi, PhySH concepts), the abstract,
-  a full-text digest (Key claim / Method / Key numbers / Context), typed
-  related-work links, and in-corpus citation lists.
-- `topics/<slug>.md`: 108 PhySH concept pages: lineage, top papers by
-  in-corpus citation rank, recent papers, and a landscape synthesis.
-- `citations.tsv`: 727,842 citation edges, `citing<TAB>cited`, both ends
-  arXiv ids. Mechanical (parsed from .tex bibliographies plus INSPIRE
-  backfill), trustable as-is.
-- `relations.tsv`: the same edges typed from the citing paper's own text:
+  cross-lists), covering arXiv from 1992 to mid-June 2026 (newest page dated
+  2026-06-16). Frontmatter keys: `arxiv`, `title`, `authors`, `date`, `doi`,
+  `categories`, `digest_model`, `digest_date`, and on 43,489 of the pages
+  `concepts` (absent when no PhySH concept matched; not an error). Then the
+  abstract, a full-text digest (Key claim / Method / Key numbers / Context),
+  typed related-work links, and in-corpus citation lists.
+- `topics/<slug>.md`: 108 PhySH concept pages: lineage, a newest-first paper
+  list (capped at 100), and a landscape synthesis grounded in the topic's
+  most-cited papers.
+- `citations.tsv`: 727,841 citation edges, `citing<TAB>cited`, both ends
+  arXiv ids, parsed from .tex bibliographies plus INSPIRE backfill. Mostly
+  right, not error-free: an author-plus-year fallback resolves some bibitem
+  keys to the wrong paper (a `\cite{Lei15}` meaning Leidemann 2015 can map to
+  a Lei 2015 paper), and 4,093 edges point at a cited id that has no page.
+  Treat an edge as a lead to verify against the citing paper's bibliography,
+  not as a fact.
+- `relations.tsv`: the same edges with a model-assigned type:
   `citing  cited  type  confidence  evidence`. Types and counts:
-  `background` 486k, `uses` 188k, `compares` 21k, `contrasts` 18k,
-  `extends` 11k, `applies` 5k.
+  `background` 485,740, `uses` 187,742, `compares` 20,767, `contrasts`
+  17,505, `extends` 11,361, `applies` 4,726. Most were typed from the
+  citation's surrounding text, but about 3,200 recent citing papers were
+  typed from titles and abstracts only, and the evidence column is a model
+  rationale that may paraphrase (253,032 rows carry a literal `[TARGET]`
+  placeholder), not a verbatim quote.
 
 Find the directory relative to this skill: `../../kb-wiki` from the directory
 containing this SKILL.md, i.e. `kb-wiki/` at the repository root. Set
@@ -41,8 +52,10 @@ and present it as a knowledge-base hit.
 **Cite the paper, never the page.** The digest sections are machine-generated
 (model and date are in each page's frontmatter) and can be wrong. Before a
 digest claim goes into anything that matters (a manuscript, a referee report, a
-design decision), verify it against the actual paper on arXiv. The frontmatter
-metadata and the citation edges are mechanical and trustable; the prose is not.
+design decision), verify it against the actual paper on arXiv. Only the
+frontmatter metadata comes straight from arXiv and can be taken as-is; the
+prose is model-generated and the citation edges are mechanical but carry a
+known error rate (see above), so both get verified before they are relied on.
 
 **A miss is not proof.** The base is nucl-th and its cross-lists only, through
 June 2026, matched lexically. A paper in hep-ph or astro-ph without a nucl-th
@@ -62,7 +75,7 @@ yourself instead of trusting page links.
 ## Recipes
 
 All tested against the shipped base; a full `grep -r` over the 61k pages takes
-about one second.
+a few seconds.
 
 **Look up one paper** (id in either form):
 
@@ -103,8 +116,11 @@ awk -F'\t' '$2=="1511.03214"{print $1}' $KB/citations.tsv   # cited-by
 awk -F'\t' '$1=="1511.03214"{print $2}' $KB/citations.tsv   # cites
 ```
 
-An empty cited-by is NOT "uncited": the graph only holds edges with both ends
-in the base.
+An empty cited-by is NOT "uncited": the graph mostly holds in-base pairs, and
+anything outside the base is invisible to it. And a nonempty answer is not yet
+a fact: the very example above returns one `cites` edge, and that edge is an
+author-key collision (it points at an unrelated soliton paper). Check the hit
+against the citing paper's actual bibliography before repeating it.
 
 **Who disputes, extends, or uses a paper.** Filter `relations.tsv` by type and
 read the evidence sentence before believing the label:
@@ -116,7 +132,11 @@ awk -F'\t' '$2=="1511.03214" && $3=="extends"{print $1}'         $KB/relations.t
 
 These relations are author-asserted: they record what the citing paper's text
 says about the cited one, not an independent judgment, and the type labels are
-model-assigned. `contrasts` means disagreement with the cited paper itself.
+model-assigned. `contrasts` is MEANT to flag disagreement with the cited paper
+itself, but the classifier overfires on contrast-shaped prose: a sentence like
+"by contrast, the cited model can also describe this" gets labeled `contrasts`
+though nobody disagrees. So never report a dispute from the label alone; quote
+the evidence column and, for anything that matters, the citing paper itself.
 Two thirds of all edges are `background` (plain reference-list citations); that
 is normal, not a defect.
 

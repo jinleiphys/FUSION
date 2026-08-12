@@ -3,6 +3,39 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-12 (later still): Codex pass on kb-search, FAIL, and the failure was in the DATA claims, not the commands
+
+**Verdict FAIL: 1 blocker + 8 major + 3 minor, and not one recipe failed to
+run.** Every defect that mattered was the skill VOUCHING for data quality it
+had not measured: "citation edges are mechanical, trustable as-is" was the
+central false sentence. Codex went to the raw .tex on KINGSTON and produced
+counterexamples: the blocker is that 1511.03214's ONLY `cites` edge resolves
+`\cite{Jin15}` to an unrelated Polyakov quark-meson soliton paper
+(author-year collision in kb_citegraph's Tier-B fallback), on the user's own
+IAV paper of all places; same shape for `Lei15` = Leidemann 2015 typed
+`extends high`; a `contrasts` edge whose own evidence sentence ("can also be
+described") is not a disagreement; 4,093 edges whose cited end has no page;
+253,032 evidence cells with a literal `[TARGET]` placeholder; ~3,181 backfill
+papers typed from titles+abstracts only. Plus honest-wording items: frontmatter
+key is `arxiv` not `id` and `concepts` covers 43,489 of 61,059 pages; topic
+lists are newest-first (the citation ranking lives in the Landscape synthesis,
+not the list); 727,841 edges not 727,842 (header line); newest page 2026-06-16
+so "through June" overstated; the "about one second" grep is 3-9 s cold.
+
+**All four load-bearing findings independently re-verified before fixing**
+(per the standing rule that a lint's finding is a hypothesis): soliton title,
+4,093 dangling, 253,032 placeholders, 43,489 concepts, all reproduced. The fix
+is disclosure, not deletion: the skill now states the error modes and uses the
+blocker itself as the in-text example of why an edge is a lead, not a fact.
+The data defects are logged as a TODO for a future kb refresh (collision guard
+in kb_citegraph.py is the real repair).
+
+**Two lessons for the family:** a research skill's adversarial pass must aim
+at the DATA CLAIMS, not the command syntax; commands that run are the easy
+part. And giving Codex the raw-source escape hatch (KINGSTON .tex, outside the
+shipped base) is what produced the blocker; a pass confined to the shipped
+directory would have called the graph internally consistent and missed it.
+
 ## 2026-08-12 (later): literature-wiki + research-profile embedded from the public repo
 
 **The user's original question ("我们那个Wiki的skill是不是没复制过来") had a second,
