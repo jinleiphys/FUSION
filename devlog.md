@@ -3,6 +3,44 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-13 (TALYS packaging): the disk question answered itself, and hid the real defect
+
+**The long-open "should TALYS be an opt-in extra" decision was never a real
+decision.** Provisioning is lazy (`run_talys.sh` calls `install_talys.sh` at
+run time), so nobody who does not ask for a statistical-model calculation ever
+downloads a byte: TALYS is opt-in by construction. Adding a flag would have
+created a decision point for a cost only incurred by asking for it. Made a
+standing rule instead of a per-skill call, in CLAUDE.md: **`install.sh` never
+pre-builds a code.** Eagerly building twenty codes is far larger than TALYS's
+11.2 GB and would fail on the first machine missing one system dependency.
+
+**Under the packaging question sat the actual risk, and it was live.**
+`have_structure()` checked that two directories existed. Its own comment
+described the failure it was meant to prevent, a partially missing structure
+database, after which TALYS falls back to Duflo-Zuker masses and still prints
+a successful calculation; but the predicate could not see it. A complete
+database is 16 top-level directories and 47,537 files, so the realistic move,
+deleting subdirectories to reclaim disk, leaves both checked directories
+standing. This is FUSION's founding fear (plausible, wrong, reported as
+success) sitting in the heaviest skill, reachable by exactly the user most
+likely to be short of disk.
+
+**Fixed by reading the expected count from the clone's own git index** rather
+than a hardcoded number or a written manifest: it follows the release, needs
+no maintenance, and costs 0.06 s (0.012 s index read plus a 47k-file find),
+cheap enough for every invocation. Trees with no git index (the frozen IAEA
+tarball) fall back to presence only and SAY so, rather than implying they were
+verified.
+
+**The flip test lied on the first attempt, in the way this project keeps
+meeting.** Hiding a subdirectory changed nothing, because the edit had not
+been committed and the remote box had pulled the old file. Asserting the
+guard's own message was present on the box first is what made the retest
+meaningful: 46,044 of 47,537 detected, exit 4, and stdout EMPTY, so
+`run_talys.sh` receives no path and cannot proceed on a broken database.
+Checking stdout mattered as much as the exit code: a guard that warns and
+still hands back a path is not a guard.
+
 ## 2026-08-13 (cold start): first install audit on a bare Linux box, six defects, and an architecture trap
 
 **Setup worth reusing.** Every skill's install script already takes a path
