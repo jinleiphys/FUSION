@@ -124,7 +124,12 @@ case, which the skill's `verification.md` documents as **1 h 26 min on one
 core**; the local case had already compared 14 files with zero failures. A
 timeout budget chosen without reading the skill's stated runtime is a harness
 artifact, not a finding, and the lesson generalises: **before calling a
-long-running verification hung, check what the skill says it costs.**
+long-running verification hung, check what the skill says it costs.** Re-run
+with a real budget: `VERIFY OK` in 6500 s, 25 files compared across both
+cases, zero failures.
+
+**Final state of the audit: all 20 skills cold-start verified**, TALYS
+included.
 
 ## 2026-08-13 (size): relations.tsv halved by deleting the rows that said nothing
 
