@@ -51,7 +51,9 @@ BIN_LINE="$(bash "$HERE/install_nlat.sh")"
 BIN="${BIN_LINE#NLAT=}"
 SRCDIR="$(cd "$(dirname "$BIN")" && pwd)"
 
-TMP="$(mktemp -d -t nlat-verify)"
+# `mktemp -d -t <prefix>` is a BSD spelling: GNU coreutils rejects it with
+# "too few X's in template". Give the full template instead, which both accept.
+TMP="$(mktemp -d "${TMPDIR:-/tmp}/nlat-verify.XXXXXX")"
 trap 'rm -rf "$TMP"' EXIT
 
 fail=0

@@ -151,7 +151,12 @@ fi
 [ -n "$CXX" ] || { echo "no GNU g++ found (install: brew install gcc)" >&2; exit 3; }
 
 MPICXX="$(command -v mpic++ || true)"
-[ -n "$MPICXX" ] || { echo "no mpic++ found (install: brew install open-mpi)" >&2; exit 3; }
+[ -n "$MPICXX" ] || {
+  echo "no mpic++ found. Install an MPI:" >&2
+  echo "  macOS: brew install open-mpi     Debian/Ubuntu: apt-get install libopenmpi-dev" >&2
+  echo "  or in a conda env: conda install -c conda-forge openmpi" >&2
+  exit 3
+}
 
 CXXFLAGS="-fopenmp -O2 -w"
 

@@ -10,9 +10,18 @@
 # Build:   adyo_v1_0/ (make -> libcwf_cpp.a), then top-level `make` (needs LAPACK/BLAS).
 #
 # Config (env overrides):
-#   COLOSS_BIN_DIR   where to install the binary   (default: ~/bin)
-#   COLOSS_SRC_DIR   where to clone/build source    (default: ~/.cache/fusion/coloss-src)
-#   COLOSS_FC        Fortran compiler               (default: gfortran)
+#   COLOSS_BIN_DIR     where to install the binary  (default: ~/bin)
+#   COLOSS_SRC_DIR     where to clone/build source  (default: ~/.cache/fusion/coloss-src)
+#   COLOSS_FC          Fortran compiler             (default: gfortran)
+#   COLOSS_LAPACK_LIB  LAPACK/BLAS link flags       (default: resolved per platform)
+#   COLOSS_CXXLIB      C++ runtime link flag        (default: -lc++ on macOS, -lstdc++ elsewhere)
+#
+# Portability note: the upstream Makefile hardcodes an Apple-Silicon Homebrew
+# LAPACK path and -lc++, the LLVM C++ runtime. Neither exists under a GNU
+# toolchain on Linux (nor on an Intel Mac, where Homebrew lives in /usr/local),
+# so the link step is resolved here per platform. This changes only WHICH
+# libraries are linked, never a source file, and the skill's n+40Ca anchor
+# (sigma_R = 1157.53 mb) is checked on both platforms.
 #
 # Exit 0 = a usable binary is in place. Prints the resolved path on the last
 # line as: COLOSS=/path/to/COLOSS
@@ -44,6 +53,26 @@ for tool in "$FC" git make g++ ar; do
   command -v "$tool" >/dev/null 2>&1 || { echo "missing required tool: $tool" >&2; exit 3; }
 done
 
+# Resolve the platform-dependent link flags the upstream Makefile hardcodes.
+if [ "$(uname -s)" = "Darwin" ]; then
+  CXXLIB="${COLOSS_CXXLIB:--lc++}"
+else
+  CXXLIB="${COLOSS_CXXLIB:--lstdc++}"
+fi
+if [ -n "${COLOSS_LAPACK_LIB:-}" ]; then
+  LAPACK_LIB="$COLOSS_LAPACK_LIB"
+elif _bp="$(brew --prefix lapack 2>/dev/null)" && [ -d "$_bp/lib" ]; then
+  LAPACK_LIB="-L$_bp/lib -llapack -lblas"
+else
+  LAPACK_LIB="-llapack -lblas"
+  if ! echo 'int main(){return 0;}' | "${CC:-cc}" -x c - -llapack -lblas -o /dev/null >/dev/null 2>&1; then
+    echo "install_coloss: LAPACK/BLAS not found. Install it:" >&2
+    echo "  macOS: brew install lapack     Debian/Ubuntu: apt-get install liblapack-dev libblas-dev" >&2
+    echo "  or set COLOSS_LAPACK_LIB to the link flags for your BLAS (e.g. -lopenblas)" >&2
+    exit 3
+  fi
+fi
+
 mkdir -p "$BIN_DIR" "$(dirname "$SRC_DIR")"
 if [ ! -d "$SRC_DIR/.git" ]; then
   rm -rf "$SRC_DIR"; git clone --depth 1 "$REPO" "$SRC_DIR" >&2
@@ -53,7 +82,12 @@ fi
 ( cd "$SRC_DIR/adyo_v1_0" && make >&2 )
 # 2) top-level Fortran build (uses LAPACK/BLAS; honors gfortran). The interactive
 #    compile.sh is bypassed; the Makefile does the real work non-interactively.
-( cd "$SRC_DIR" && make FC="$FC" >&2 )
+#    LIB is a Makefile variable so the command line overrides it, but -lc++ is
+#    written into the link recipe itself and has to be rewritten in place.
+if [ "$CXXLIB" != "-lc++" ]; then
+  sed -i.fusion.bak "s/-lc++/$CXXLIB/g" "$SRC_DIR/Makefile"
+fi
+( cd "$SRC_DIR" && make FC="$FC" LIB="$LAPACK_LIB" >&2 )
 
 [ -x "$SRC_DIR/COLOSS" ] || { echo "build failed: no COLOSS binary" >&2; exit 4; }
 cp "$SRC_DIR/COLOSS" "$BIN_DIR/COLOSS"

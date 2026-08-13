@@ -239,12 +239,18 @@ fi
 # Content is the verdict. A tiny 5-iteration static 16O run: require a zero exit
 # AND a finite, negative, physically plausible total energy in the output. Runs
 # in a scratch directory so nothing is written into the caller's cwd.
+#
+# mrest must be a real interval, never 0. Sky3D evaluates MOD(iter,mrest)
+# unconditionally (static.f90 step 9), so mrest=0 is an integer division by
+# zero: harmless on Apple Silicon, where AArch64 defines division by zero as
+# returning 0, and an immediate SIGFPE on x86-64. 1000 exceeds maxiter, so no
+# restart file is written, which was the intent of the 0.
 probe_binary () {
   local w; w="$(mktemp -d)"
   cat > "$w/for005" <<'EOF'
  &files wffile='probe' /
  &force name='SV-bas', pairing='NONE' /
- &main mprint=1,mplot=0,mrest=0,writeselect='r',imode=1,tfft=T,nof=0 /
+ &main mprint=1,mplot=0,mrest=1000,writeselect='r',imode=1,tfft=T,nof=0 /
  &grid nx=16,ny=16,nz=16,dx=1.0,dy=1.0,dz=1.0,periodic=F /
  &static nprot=8,nneut=8,radinx=3.1,radiny=3.1,radinz=3.1,
   x0dmp=0.40,e0dmp=100.0,tdiag=T,tlarge=F,maxiter=5,serr=1D-6 /

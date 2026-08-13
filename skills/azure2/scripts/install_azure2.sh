@@ -148,7 +148,7 @@ echo "install_azure2: using $CXX_BIN" >&2
 # quotes nor the SDK. Any non-empty CMAKE_CXX_FLAGS triggers it; SDKROOT does
 # not go through that variable at all.
 if [ "$(uname -s)" = "Darwin" ] && command -v xcrun >/dev/null 2>&1; then
-  _probe_c="$(mktemp -t az2probe).cc"; printf '#include <cstdio>\nint main(){return 0;}\n' > "$_probe_c"
+  _probe_c="$(mktemp "${TMPDIR:-/tmp}/az2probe.XXXXXX").cc"; printf '#include <cstdio>\nint main(){return 0;}\n' > "$_probe_c"
   if ! "$CXX_BIN" -c "$_probe_c" -o "${_probe_c}.o" >/dev/null 2>&1; then
     _sdk="$(xcrun --show-sdk-path 2>/dev/null || true)"
     if [ -n "$_sdk" ] && SDKROOT="$_sdk" "$CXX_BIN" -c "$_probe_c" -o "${_probe_c}.o" >/dev/null 2>&1; then

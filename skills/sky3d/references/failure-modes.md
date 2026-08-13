@@ -125,7 +125,26 @@ it rather than accepting a truncated result. It costs a repeat, never a wrong
 number. If you can reproduce it deterministically, that is worth reporting
 upstream, since the cause is still unknown.
 
-## 11. Licensing
+## 11. mrest=0 crashes with SIGFPE on x86-64 and is silent on Apple Silicon
+
+`&main mrest=0` looks like "never write a restart file". It is not: Sky3D
+evaluates `MOD(iter,mrest)` on every static iteration (`static.f90`, step 9),
+so mrest=0 is an integer division by zero. What happens next depends on the
+architecture, which is why this can pass every test on one machine and kill
+the first run on another:
+
+- **x86-64**: the `idiv` instruction raises `#DE`, the process dies with
+  SIGFPE and a core dump. The backtrace points at `static.f90:328`, which is
+  the `MOD` line, not at anything the input obviously did wrong.
+- **Apple Silicon (AArch64)**: `SDIV` by zero is defined to return 0. No
+  signal, no message, the run completes normally.
+
+To skip restart files, set `mrest` LARGER than `maxiter` (this skill's install
+probe uses 1000 for a 5-iteration run). Found 2026-08-13 by the first
+cold-start install of this skill on Linux; the probe had carried `mrest=0`
+since the skill was written and had never failed on the author's Mac.
+
+## 12. Licensing
 
 Sky3D is NOT open source. There is no LICENSE file, no copyright header in the
 sources, and the CPC program summary in `Paper/v1.0/Sky3D.tex` reads

@@ -39,7 +39,9 @@ else
   CASES=("$@")
 fi
 
-TMP="$(mktemp -d -t pikoe-verify)"
+# `mktemp -d -t <prefix>` is a BSD spelling: GNU coreutils rejects it with
+# "too few X's in template". Give the full template instead, which both accept.
+TMP="$(mktemp -d "${TMPDIR:-/tmp}/pikoe-verify.XXXXXX")"
 trap 'rm -rf "$TMP"' EXIT
 
 fail=0

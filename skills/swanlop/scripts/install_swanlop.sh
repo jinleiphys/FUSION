@@ -88,9 +88,20 @@ R="$(find_root || true)"
 [ -n "$R" ] || { log "sources/ not found after extraction"; exit 1; }
 [ -f "$R/sources/makefile" ] || { log "makefile not found in $R/sources"; exit 1; }
 
-( cd "$R/sources" && make >make.log 2>&1 ) || {
+# The upstream makefile sets SHELL = /bin/csh, which macOS ships and a stock
+# Debian/Ubuntu does not, so make dies with "/bin/csh: No such file" before
+# compiling anything. Its recipes are plain single commands with no csh syntax,
+# so /bin/sh runs them identically; switch only when csh is genuinely absent,
+# leaving the already-verified macOS path exactly as it was.
+MAKE_SHELL_ARG=()
+if [ ! -x /bin/csh ]; then
+  MAKE_SHELL_ARG=(SHELL=/bin/sh)
+  log "/bin/csh absent, building with SHELL=/bin/sh (recipes are csh-free)"
+fi
+
+( cd "$R/sources" && make "${MAKE_SHELL_ARG[@]}" >make.log 2>&1 ) || {
   log "build failed; see $R/sources/make.log"
-  grep -iE "error|undefined" "$R/sources/make.log" 2>/dev/null | head -8 >&2
+  grep -iE "error|undefined|No such file" "$R/sources/make.log" 2>/dev/null | head -8 >&2
   exit 1
 }
 [ -x "$R/sources/swanlop.x" ] || { log "no swanlop.x after build"; exit 1; }
