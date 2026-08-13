@@ -3,6 +3,63 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-13 (cold start): first install audit on a bare Linux box, six defects, and an architecture trap
+
+**Setup worth reusing.** Every skill's install script already takes a path
+override (`*_ROOT`, `*_ROOT_DIR`, or `*_BIN_DIR`+`*_SRC_DIR`), so all twenty
+can be cold-started into throwaway roots without touching a working install.
+heliumx turned out to be an ideal subject: full compiler toolchain, and NO
+GSL, FFTW, HDF5, Boost, Eigen or Julia, which is exactly a student's fresh
+Ubuntu. Harness in the session scratchpad, results in
+`~/fusion-coldstart/results.tsv` on that box.
+
+**GitHub is unreachable from heliumx** (`git ls-remote` fails 3/3, pythia.org
+too), so the run would have measured the network, not the skills. Fixed with a
+reverse tunnel from the laptop's proxy: `ssh -f -N -R 7897:127.0.0.1:7897
+heliumx`, then `http_proxy=http://127.0.0.1:7897` on the remote side. Worth
+keeping for any future upstream-fetching work on that box.
+
+**The best find, and the reason to test on another architecture at all:
+sky3d's install probe passed `mrest=0`.** Sky3D evaluates `MOD(iter,mrest)`
+unconditionally, so that is an integer division by zero. On x86-64 the `idiv`
+instruction raises `#DE` and the process dies with SIGFPE; on Apple Silicon,
+AArch64 defines `SDIV` by zero as returning 0, so it is silently harmless.
+The probe had shipped that input since the skill was written and had never
+failed on the author's Mac. Chasing it also killed a wrong first hypothesis
+(`-ffast-math` in the upstream `seq` target), which a debug build refuted in
+one run: **get the backtrace before theorising about optimisation flags.**
+
+**The other five, all Linux-fatal, none platform-specific in principle:**
+COLOSS's upstream Makefile hardcodes an Apple-Silicon Homebrew LAPACK path
+and `-lc++` (which would also break an Intel Mac); SWANLOP's makefile sets
+`SHELL = /bin/csh`, absent on stock Ubuntu, though its recipes contain no csh
+syntax; pikoe, nlat and azure2 used `mktemp -t <prefix>`, a BSD spelling GNU
+coreutils rejects; gsm told Linux users to run `brew install open-mpi`.
+
+**Note what the pikoe case says about the earlier evidence.** Its verification
+records a real Linux cross-build, and the verify SCRIPT still failed on the
+first Linux run, because that cross-build ran a bespoke harness rather than
+the skill's own scripts. Testing the code on a platform is not testing the
+skill on it.
+
+**One self-inflicted defect, caught by testing the fix rather than trusting
+it.** The first COLOSS fix passed `LIB=` on the make command line; the top
+level recurses into `adyo_v1_0`, whose own Makefile uses `LIB` for the archive
+it builds, so the sub-make ran `ar rv -llapack` and BOTH platforms broke. Make
+command-line variables propagate into sub-makes, so a generic name (LIB, CC,
+SRC) will collide; patch the file instead. The corrected patch is proven
+behaviour-preserving the CNOK way: same input on both platforms gives
+sigma_R = 1156.9048 mb, identical to every printed digit.
+
+**Scoreboard:** 7 installed and verified clean on the bare box (fresco,
+ccfull, cgmf, cnok, sides, kshell, thermal-fist), later joined by smash,
+gibuu, swanlop, pikoe, sky3d and coloss after the fixes; 4 correctly stopped
+with an actionable missing-dependency message (azure2 GSL, skynet
+HDF5/GSL/Boost, nucleartoolkit Julia, gsm MPI). nlat's second run hit a
+Mendeley download returning JSON instead of gzip, which its own guard caught
+and reported with the manual URL: the upstream being flaky is not a skill
+defect, and the guard behaved.
+
 ## 2026-08-13 (size): relations.tsv halved by deleting the rows that said nothing
 
 **87.8 MB to 34.7 MB by dropping the 469,656 `background` rows.** The file had
