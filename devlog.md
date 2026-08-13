@@ -55,10 +55,18 @@ sigma_R = 1156.9048 mb, identical to every printed digit.
 ccfull, cgmf, cnok, sides, kshell, thermal-fist), later joined by smash,
 gibuu, swanlop, pikoe, sky3d and coloss after the fixes; 4 correctly stopped
 with an actionable missing-dependency message (azure2 GSL, skynet
-HDF5/GSL/Boost, nucleartoolkit Julia, gsm MPI). nlat's second run hit a
-Mendeley download returning JSON instead of gzip, which its own guard caught
-and reported with the manual URL: the upstream being flaky is not a skill
-defect, and the guard behaved.
+HDF5/GSL/Boost, nucleartoolkit Julia, gsm MPI).
+
+**Two nlat runs, two non-defects, both worth naming so they are not re-filed
+as bugs.** One hit a Mendeley download that returned JSON instead of gzip;
+the script's own guard caught it and printed the manual URL, so a flaky
+upstream was reported correctly rather than producing a broken install. The
+next run then tripped the harness's own 5400 s ceiling inside the nonlocal
+case, which the skill's `verification.md` documents as **1 h 26 min on one
+core**; the local case had already compared 14 files with zero failures. A
+timeout budget chosen without reading the skill's stated runtime is a harness
+artifact, not a finding, and the lesson generalises: **before calling a
+long-running verification hung, check what the skill says it costs.**
 
 ## 2026-08-13 (size): relations.tsv halved by deleting the rows that said nothing
 
