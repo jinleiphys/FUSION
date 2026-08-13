@@ -68,8 +68,35 @@ BIN="$ROOT/talys/bin/talys"
 # Duflo-Zuker masses and, for a partially missing database, still prints
 # "successful calculation" while the numbers are wrong. One predicate, used by
 # both the fast path and the post-clone check below, so the two cannot drift.
+#
+# Checking that a couple of directories exist does NOT detect that case, which
+# is the one worth detecting: a complete database is 16 top-level directories
+# and 47,537 files, and deleting a few subdirectories to reclaim disk leaves
+# the top-level ones standing. The expected file count is read from the clone's
+# own git index rather than hardcoded, so it follows the release instead of
+# going stale, and the whole check costs about 0.06 s (index read plus one
+# find), cheap enough to run on every invocation.
 have_structure () {
-  [ -d "$ROOT/talys/structure/optical" ] && [ -d "$ROOT/talys/structure/masses" ]
+  local d="$ROOT/talys/structure" want have
+  [ -d "$d" ] || return 1
+  want="$(git -C "$ROOT/talys" ls-files -- structure 2>/dev/null | wc -l | tr -d ' ')"
+  if [ -z "$want" ] || [ "$want" -eq 0 ] 2>/dev/null; then
+    # Not a git clone (for example the frozen nds.iaea.org tarball), so the
+    # index cannot supply an expected count. Fall back to presence only, and
+    # say so rather than implying the database was verified complete.
+    echo "install_talys: no git index for the structure database; checking presence only" >&2
+    [ -d "$d/optical" ] && [ -d "$d/masses" ]
+    return
+  fi
+  have="$(find "$d" -type f 2>/dev/null | wc -l | tr -d ' ')"
+  if [ "$have" -lt "$want" ]; then
+    echo "install_talys: structure database is INCOMPLETE: $have files present, $want expected." >&2
+    echo "  TALYS would still run and print a successful calculation, using" >&2
+    echo "  Duflo-Zuker fallback masses, and the numbers would be wrong." >&2
+    echo "  Restore it with: git -C '$ROOT/talys' checkout -- structure" >&2
+    return 1
+  fi
+  return 0
 }
 
 if [ "$FORCE" = 0 ] && [ -x "$BIN" ] && have_structure; then
