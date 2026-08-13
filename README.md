@@ -87,6 +87,18 @@ xattr -d com.apple.quarantine fusion          # macOS only, see below
 That is the whole thing: `./fusion` run inside the clone finds all 26 skills
 and the knowledge base with no configuration at all.
 
+**Both of those commands need GitHub, and on a mainland-China network they
+will usually fail.** Measured from a university network on 2026-08-13:
+`github.com` answered 0 of 6 connection attempts, the clone died after 132
+seconds with `Failed to connect to github.com port 443`, and the release
+download timed out. Reachability comes and goes, so the same commands may
+work an hour later; a hang of one to two minutes followed by an error is the
+normal symptom, not a broken repository. If that is your situation you need a
+proxy for the two download steps. Nothing after them touches the network:
+the codes are fetched from their own upstreams on first use, and the
+knowledge base is already in the clone. A mirror that does not need a proxy
+is the open problem, tracked in TODO.md.
+
 To run it from anywhere instead of `./fusion`, move it onto your PATH:
 
 ```bash
