@@ -2,7 +2,7 @@
   "skills": [
     {
       "name": "azure2",
-      "version": "2aac202c665c",
+      "version": "0454f8ba1dcb",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -80,7 +80,7 @@
     },
     {
       "name": "coloss",
-      "version": "2aac202c665c",
+      "version": "e82e950e4385",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -156,7 +156,7 @@
     },
     {
       "name": "gsm",
-      "version": "2aac202c665c",
+      "version": "0454f8ba1dcb",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -175,7 +175,7 @@
     },
     {
       "name": "kb-search",
-      "version": "06ebd03b6c24",
+      "version": "104674d8eadb",
       "files": [
         "AGENTS.md",
         "SKILL.md"
@@ -210,7 +210,7 @@
     },
     {
       "name": "nlat",
-      "version": "2aac202c665c",
+      "version": "0454f8ba1dcb",
       "files": [
         ".gitignore",
         "AGENTS.md",
@@ -246,7 +246,7 @@
     },
     {
       "name": "pikoe",
-      "version": "2aac202c665c",
+      "version": "0454f8ba1dcb",
       "files": [
         ".gitignore",
         "AGENTS.md",
@@ -330,7 +330,7 @@
     },
     {
       "name": "sky3d",
-      "version": "057c54465e8c",
+      "version": "0454f8ba1dcb",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -387,7 +387,7 @@
     },
     {
       "name": "swanlop",
-      "version": "2aac202c665c",
+      "version": "0454f8ba1dcb",
       "files": [
         "AGENTS.md",
         "SKILL.md",

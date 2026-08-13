@@ -51,6 +51,26 @@ SRC) will collide; patch the file instead. The corrected patch is proven
 behaviour-preserving the CNOK way: same input on both platforms gives
 sigma_R = 1156.9048 mb, identical to every printed digit.
 
+**TALYS, added the same day, was deferred on a wrong premise and turned out
+to be the cheapest thing here.** "11 GB over a proxy tunnel" confused the
+working tree with the transfer: git moves the compressed pack, 2.03 GB by
+GitHub's own figure, and the script already shallow-clones. Measured at
+4.38 MB/s through the tunnel: **install 5 min 19 s, 11.2 GB on disk**, and
+the `n-Th232-fis-wkb` benchmark in 55 s. Worth generalising: before deferring
+a job as expensive, check which number is actually on the wire.
+
+**And it caught the audit's one honesty defect.** TALYS's verification tables
+report 1419 of 1438 reference files byte-for-byte, with no platform named;
+that was macOS/ARM. On Linux the same case agrees to ~5.4 significant figures
+(1290 physical observables, worst relative difference 3.89e-06), which is an
+ordinary compiler and libm difference and exactly what `verify_talys.sh`
+already reports. The tooling was right and the documentation was
+platform-blind, so a Linux user would read a correct run as a broken one.
+Both tables now name their platform and carry the Linux number. This is the
+2026-07-20 rule ("never overclaim bit-identical") failing in a new way: not
+by claiming bit-identity that was never measured, but by stating a real
+measurement without its scope.
+
 **Scoreboard:** 7 installed and verified clean on the bare box (fresco,
 ccfull, cgmf, cnok, sides, kshell, thermal-fist), later joined by smash,
 gibuu, swanlop, pikoe, sky3d and coloss after the fixes; 4 correctly stopped

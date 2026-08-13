@@ -49,6 +49,18 @@ compared file by file against the distributed `org/` references.
 "Exact" below means identical line for line once the `date:` / `user:` headers
 and the execution-time line are excluded.
 
+**Platform of this table: macOS/ARM.** Byte-for-byte agreement with a
+distributed reference certifies the build against the machine the reference
+came from; it does not survive a change of compiler and libm, and it is not
+what a Linux user should expect. Measured on Linux x86-64 (Ubuntu 24.04,
+gfortran 13.3, fresh clone and build, 2026-08-13): `n-Th232-fis-wkb`
+reproduces the reference to **about 5.4 significant figures**, with 1290
+physical observables above 1e-2 and a worst relative difference of 3.89e-06
+(ref 0.256981 against 0.256983); values below ~1e-4 are numerically-zero
+populations where one platform prints exact 0 and the other a float32
+residue. The whole cold-start install took 5 min 19 s and 11.2 GB on that
+box, and the verify case ran in 55 s.
+
 | sample | physics exercised | reference files | exact | differing |
 |---|---|---|---|---|
 | `n-Nb093-14MeV-full` | full output set: spectra, angular distributions, Legendre, gamma, DDX | 750 | 750 | 0 |

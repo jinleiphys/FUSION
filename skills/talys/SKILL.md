@@ -67,6 +67,8 @@ The `energy` keyword takes four forms and two of them depend on a file: a single
 
 Clean room: fresh clone, fresh build, fresh workdir with no reference present, stderr inspected, output grepped for errors. Full detail in `references/verification.md`.
 
+**These byte-for-byte results were measured on macOS/ARM, and byte-for-byte is not what another platform will see.** The same `n-Th232-fis-wkb` case rebuilt from scratch on Linux x86-64 (Ubuntu 24.04, gfortran 13.3) reproduces the distributed reference to **about 5.4 significant figures**, not exactly: 1290 physical observables, worst relative difference 3.89e-06 (ref 0.256981 against 0.256983). That is the expected size of a compiler and libm difference in a code this large, and `verify_talys.sh` reports it in exactly those terms. Judge a run on the physical-observables line, and do not read "not bit-identical" as a broken build.
+
 | sample | physics | result |
 |---|---|---|
 | `n-Nb093-14MeV-full` | full output set, spectra, angular distributions, DDX | 750/750 files bit-identical |
