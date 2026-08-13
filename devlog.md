@@ -3,6 +3,37 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-13 (size): relations.tsv halved by deleting the rows that said nothing
+
+**87.8 MB to 34.7 MB by dropping the 469,656 `background` rows.** The file had
+grown to 88 MB and every re-typing pass pushed it toward GitHub's 100 MB HARD
+limit (a push failure, not a warning). The choice between the two candidate
+cuts was settled by the previous day's Codex pass, not by size: stripping the
+`evidence` column would have saved 61 MB but removed exactly what makes a
+`contrasts` row usable, since that pass established a dispute label must be
+read with its evidence sentence. Background rows, by contrast, duplicate
+information `citations.tsv` already holds, and `inject_relations` was skipping
+them anyway. **New semantics, now documented in the skill: an edge with no
+relations row means background.**
+
+**The trap this created, and the fix.** 24,814 of 54,039 citing papers have
+ALL-background rows, so after the cut they vanish from relations.tsv, and
+`cmd_full` derived its resume set from that file's first column: the next run
+would have re-classified a quarter of the corpus at real cost, and re-added
+every row just deleted. The resume record therefore moved to
+`kb-wiki/relations-classified.txt` (0.65 MB, 54,039 ids), read at startup
+unioned with the tsv's first column so a pre-ledger checkout still resumes,
+and appended per paper as work completes. Flip-tested per the standing rule:
+ledger hidden reports 24,814 to go, restored reports 0, and the number
+matches the all-background count exactly. `cmd_full` now also skips
+background at write time, so the file cannot regrow.
+
+**A stale framing corrected while closing the gate:** the 2026-08-11 note
+called relations.tsv a build artifact that nothing at runtime reads, which
+had made "drop it from the distribution" look like a live option. It is
+false as of the `kb-search` skill: the who-disputes-X recipe greps it
+directly. Re-check what reads a file before deciding it is disposable.
+
 ## 2026-08-13: re-typing done, and two thirds of all contrasts labels were wrong
 
 **The headline number: of 17,408 edges labeled `contrasts`, only 6,000

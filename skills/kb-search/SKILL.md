@@ -34,16 +34,22 @@ query each layer, and where the trust boundaries sit.
   uncorroborated single-person match can still be the wrong person (surname
   truncations such as `Lei15` written for Leidemann). Treat an edge as a
   lead to verify against the citing paper's bibliography, not as a fact.
-- `relations.tsv`: the same 703,430 edges with a model-assigned type:
-  `citing  cited  type  confidence  evidence`. Counts (2026-08-13 build):
-  `background` 469,656, `uses` 189,453, `compares` 22,760, `extends`
-  11,153, `contrasts` 6,000, `applies` 4,408. Every `contrasts` label
-  survived a focused second-pass check asking only whether the citing text
-  disputes the cited paper's own claims (the first pass had labeled nearly
-  three times as many, mostly neutral comparisons). The evidence column is
-  a model rationale that may paraphrase, not a verbatim quote; in it, the
-  marker `[the cited paper]` stands where the citation sat in the source
-  text.
+- `relations.tsv`: the citation edges that carry a MEANINGFUL model-assigned
+  type, 233,774 rows of `citing  cited  type  confidence  evidence`:
+  `uses` 189,453, `compares` 22,760, `extends` 11,153, `contrasts` 6,000,
+  `applies` 4,408. Plain reference-list citations (two thirds of the graph)
+  are not stored, because the type says nothing the edge itself does not:
+  **an edge present in `citations.tsv` with no row here is a background
+  citation.** Every `contrasts` label survived a focused second-pass check
+  asking only whether the citing text disputes the cited paper's own claims
+  (the first pass had labeled nearly three times as many, mostly neutral
+  comparisons). The evidence column is a model rationale that may
+  paraphrase, not a verbatim quote; in it, the marker `[the cited paper]`
+  stands where the citation sat in the source text.
+- `relations-classified.txt`: the 54,039 citing papers whose citations have
+  been typed. It is what separates "typed as background" from "not yet
+  typed" for an edge with no relations row, and it is the pipeline's resume
+  record. Not needed for searching.
 
 Find the directory relative to this skill: `../../kb-wiki` from the directory
 containing this SKILL.md, i.e. `kb-wiki/` at the repository root. Set
@@ -143,8 +149,8 @@ model-assigned. `contrasts` means disagreement with the cited paper itself,
 and every such label has passed a dedicated dispute-only verification pass;
 it is still a model's reading, so when a dispute claim matters, quote the
 evidence column and confirm against the citing paper itself.
-Two thirds of all edges are `background` (plain reference-list citations); that
-is normal, not a defect.
+Most citations have no row here at all: that means an ordinary
+reference-list mention, which is the normal case, not a gap in the data.
 
 ## The three standard jobs
 

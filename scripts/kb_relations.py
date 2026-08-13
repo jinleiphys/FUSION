@@ -22,6 +22,7 @@ KB_WIKI = PROJECT_ROOT / "kb-wiki"
 PAPERS_DIR = KB_WIKI / "papers"
 CITATIONS_TSV = KB_WIKI / "citations.tsv"
 RELATIONS_TSV = KB_WIKI / "relations.tsv"
+CLASSIFIED_LEDGER = KB_WIKI / "relations-classified.txt"
 
 DB = Path.home() / "literature-corpus/corpus.db"
 AUTH = Path.home() / ".local/share/opencode/auth.json"
@@ -1104,7 +1105,19 @@ def cmd_full(args):
     citing_all = [a for a, cited in out_edges.items() if cited]
     citing_all.sort()
 
+    # Resume ledger. relations.tsv alone cannot answer "has this paper been
+    # classified", because since 2026-08-13 it stores only the typed edges and
+    # a paper whose every edge is plain background leaves no row at all
+    # (24,814 papers were in exactly that position). The ledger is the
+    # authoritative record; the tsv's own first column is unioned in so a
+    # pre-ledger checkout still resumes correctly.
     done = set()
+    if CLASSIFIED_LEDGER.exists():
+        with open(CLASSIFIED_LEDGER) as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    done.add(line)
     if Path(out_tsv).exists():
         with open(out_tsv) as f:
             next(f, None)
@@ -1130,6 +1143,7 @@ def cmd_full(args):
     out_f = open(out_tsv, "a")
     if header_needed:
         out_f.write("citing\tcited\ttype\tconfidence\tevidence\n")
+    ledger_f = open(CLASSIFIED_LEDGER, "a")
 
     def work(citing_aid):
         cited_set = out_edges.get(citing_aid, set())
@@ -1167,10 +1181,18 @@ def cmd_full(args):
             citing_aid, results, ti, to = fut.result()
             with lock:
                 for r in results:
+                    # Plain background carries no information the citation
+                    # graph does not already hold, and it was two thirds of
+                    # the file; absence of a row now means background, with
+                    # the ledger separating that from "not yet classified".
+                    if r["type"] == "background":
+                        continue
                     ev = r.get("rationale", "").replace("\t", " ").replace("\n", " ")
                     out_f.write(f"{citing_aid}\t{r['cited']}\t{r['type']}\t{r['confidence']}\t{ev}\n")
                     stats["edges"] += 1
                 out_f.flush()
+                ledger_f.write(f"{citing_aid}\n")
+                ledger_f.flush()
                 stats["n"] += 1
                 stats["in"] += ti
                 stats["out"] += to
@@ -1178,7 +1200,8 @@ def cmd_full(args):
                     print(f"  {stats['n']}/{len(todo)} papers, {stats['edges']} edges, "
                           f"in={stats['in']} out={stats['out']}", flush=True)
     out_f.close()
-    print(f"DONE full: {stats['n']} papers, {stats['edges']} edges, in={stats['in']} out={stats['out']}", flush=True)
+    ledger_f.close()
+    print(f"DONE full: {stats['n']} papers, {stats['edges']} typed edges, in={stats['in']} out={stats['out']}", flush=True)
 
 
 def classify_contrasts_recheck(citing_aid, cited_entries, api_key, arxiv_meta):
