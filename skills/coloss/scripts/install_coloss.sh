@@ -82,12 +82,15 @@ fi
 ( cd "$SRC_DIR/adyo_v1_0" && make >&2 )
 # 2) top-level Fortran build (uses LAPACK/BLAS; honors gfortran). The interactive
 #    compile.sh is bypassed; the Makefile does the real work non-interactively.
-#    LIB is a Makefile variable so the command line overrides it, but -lc++ is
-#    written into the link recipe itself and has to be rewritten in place.
-if [ "$CXXLIB" != "-lc++" ]; then
-  sed -i.fusion.bak "s/-lc++/$CXXLIB/g" "$SRC_DIR/Makefile"
-fi
-( cd "$SRC_DIR" && make FC="$FC" LIB="$LAPACK_LIB" >&2 )
+#    Both link settings are patched into the top-level Makefile rather than
+#    passed on the make command line: the top level recurses into adyo_v1_0,
+#    whose own Makefile uses LIB for the archive it builds, and a command-line
+#    LIB= propagates into that sub-make and makes it run `ar rv -llapack`.
+sed -i.fusion.bak \
+  -e "s|^LIB *=.*|LIB = $LAPACK_LIB|" \
+  -e "s|-lc++|$CXXLIB|g" \
+  "$SRC_DIR/Makefile"
+( cd "$SRC_DIR" && make FC="$FC" >&2 )
 
 [ -x "$SRC_DIR/COLOSS" ] || { echo "build failed: no COLOSS binary" >&2; exit 4; }
 cp "$SRC_DIR/COLOSS" "$BIN_DIR/COLOSS"
