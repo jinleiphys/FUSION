@@ -181,20 +181,32 @@ paper, never the page.
 
 ## It is not tied to one agent
 
+**The skills are the project. The bundled CLI is one way to run them, not the
+point.** If you already work in Claude Code or Codex, clone the repository and
+use it there; you can ignore the binary in the quickstart entirely, and you will
+be on a better-tested path than the fork, which exists mainly so that someone
+with no agent installed still has something to run.
+
 Skills are directories of Markdown and shell scripts. Each ships both entry
 files, so all three common agents can load them.
 
 | Agent | Entry | Install | Verification status |
 |---|---|---|---|
-| opencode | `SKILL.md` | none, auto-found in the clone | **verified**, all 23 load with zero config |
+| opencode | `SKILL.md` | none, auto-found in the clone | **verified**, all 26 load with zero config |
 | Claude Code | `SKILL.md` | `ln -s "$PWD"/skills/* ~/.claude/skills/` | **verified**, byte-identical to skills it already loads |
-| Codex | `AGENTS.md` | `ln -s "$PWD"/skills/* ~/.codex/skills/` | format only, **not** tested end to end |
+| Codex | `AGENTS.md` | none, auto-found in the clone via `.agents/skills` | **verified in anger**: every per-code skill was cross-checked by Codex before it shipped |
 
 The Codex entry files are generated pointers rather than hand-written condensed
 mirrors. Each names its skill, says when it applies, and tells Codex to read
 `SKILL.md` with its file-read tool, which it must, because Codex does not inline
 markdown imports. Functional, weaker than a mirror, and labelled as such at the
 top of every one.
+
+Codex is the most exercised of the three, for a reason that is not obvious from
+the table: no per-code skill ships until Codex has run an adversarial pass over
+it, reading the skill and running its scripts to try to falsify the benchmark.
+Those passes found defects that construction and self-review did not, and they
+ran from inside a clone with nothing linked into `~/.codex/skills`.
 
 ## How far to trust a skill
 

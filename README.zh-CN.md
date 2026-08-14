@@ -116,16 +116,19 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 
 ## 可在三个 agent 中使用
 
+**这些 skill 才是这个项目本身，自带的 CLI 只是运行它们的一种方式，不是重点。** 如果你本来就在用 Claude Code 或 Codex，直接克隆仓库在里面用就行，快速开始里的那个二进制完全可以不管；而且这条路比那个 fork 验证得更充分，fork 存在的主要意义是让手上没有 agent 的人也有个东西可以跑。
+
 skill 是由 Markdown 和 shell 脚本组成的目录。每个 skill 同时提供两种入口文件，opencode、Claude Code 和 Codex 都能加载。
 
 | Agent | 入口 | 怎么装 | 验证程度 |
 |---|---|---|---|
 | opencode | `SKILL.md` | 不用装，在克隆目录里自动发现 | **已验证**，零配置全部加载 |
 | Claude Code | `SKILL.md` | `ln -s "$PWD"/skills/* ~/.claude/skills/` | **已验证**，与它已在加载的技能逐字节一致 |
-| Codex | `AGENTS.md` | `ln -s "$PWD"/skills/* ~/.codex/skills/` | 仅格式，**未**端到端验证 |
+| Codex | `AGENTS.md` | 不用装，在克隆目录里通过 `.agents/skills` 自动发现 | **实战验证过**：每个程序技能上线前都由 Codex 交叉审查 |
 
-Codex 的入口是自动生成的指针文件。它会告诉 Codex 什么时候使用该 skill，并让 Codex 读取完整的 `SKILL.md`。
-这种方式还没有端到端验证，所以每个入口文件都明确写了这一限制。
+Codex 的入口是自动生成的指针文件。它会告诉 Codex 什么时候使用该 skill，并让 Codex 读取完整的 `SKILL.md`（Codex 不会自动内联 markdown 导入，所以必须让它自己读）。
+
+三个 runtime 里 Codex 其实是被用得最狠的那个，这一点从表格看不出来：**任何程序技能在上线前都要先经过 Codex 的对抗审查**，它会读技能、跑脚本，专门去证伪那个基准。这些审查抓出过构建者自己和自审都没看出来的缺陷，而且全都是在克隆目录里跑的，`~/.codex/skills` 里什么都没链。
 
 ## skill 验证到什么程度
 
