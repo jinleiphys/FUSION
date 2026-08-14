@@ -3,6 +3,12 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+**Keep this file under 100 lines.** CLAUDE.md imports it with `@devlog.md`, so
+every line is loaded into every session in this project. When it grows past
+that, move the oldest entries to `devlog-archive.md` in full, cutting at an
+entry boundary, and consolidate what stays. `scripts/hooks/pre-commit` enforces
+this; install it with `ln -sf ../../scripts/hooks/pre-commit .git/hooks/`.
+
 ## 2026-08-14: the onboarding path finally run somewhere other than the author's machine
 
 **It works, end to end, and that had never actually been checked.** Everything

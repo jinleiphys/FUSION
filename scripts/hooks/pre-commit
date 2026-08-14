@@ -1,0 +1,36 @@
+#!/bin/bash
+# Refuse a commit that leaves devlog.md over the auto-import budget.
+#
+# CLAUDE.md pulls devlog.md in with `@devlog.md`, so every line is loaded into
+# every session in this project. The todo skill has an archive step, but it
+# only runs inside its own `/todo log` flow: entries written directly with an
+# editor bypass it, which is how the file reached 707 lines and 44 KB before
+# anyone noticed. A hook fires whatever route the entry took.
+#
+# Install: ln -sf ../../scripts/hooks/pre-commit .git/hooks/
+# Bypass:  git commit --no-verify
+set -u
+LIMIT="${DEVLOG_LINE_LIMIT:-100}"
+ROOT="$(git rev-parse --show-toplevel)"
+LOG="$ROOT/devlog.md"
+
+[ -f "$LOG" ] || exit 0
+# Only judge a commit that actually touches the file.
+git diff --cached --name-only | grep -qx 'devlog.md' || exit 0
+
+n="$(wc -l < "$LOG" | tr -d ' ')"
+if [ "$n" -gt "$LIMIT" ]; then
+  cat >&2 <<EOF
+devlog.md is $n lines, over the $LIMIT-line auto-import budget.
+
+It is imported into every session by CLAUDE.md, so this cost is paid on every
+run. Move the oldest entries to devlog-archive.md in full, cutting at an entry
+boundary (a '## ' heading), and consolidate what stays.
+
+  grep -n '^## ' devlog.md      # find the cut
+
+Commit anyway with: git commit --no-verify
+EOF
+  exit 1
+fi
+exit 0
