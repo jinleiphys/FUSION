@@ -80,7 +80,7 @@ macOS、Linux、x64 和 arm64 的构建都在 [releases 页](https://github.com/
 
 FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游源码开始安装。
 
-**克隆下来大约 229 MB**，绝大部分是文献库。只想要技能、不想要文献库的话，可以不克隆，直接让 agent 从索引拉取：
+**克隆传输约 256 MB，占磁盘约 950 MB**，绝大部分是文献库。只想要技能、不想要文献库的话，可以不克隆，直接让 agent 从索引拉取：
 
 ```jsonc
 // ~/.config/opencode/opencode.json

@@ -137,8 +137,9 @@ Then ask for what you want, in words:
 
 It handles the rest, building FRESCO from source if your machine lacks it.
 
-The clone is about 229 MB, nearly all of it the knowledge base. If you want the
-skills without it, skip the clone and point your agent at the index instead:
+The clone transfers about 256 MB and takes roughly 950 MB on disk, nearly all
+of it the knowledge base. If you want the skills without it, skip the clone and
+point your agent at the index instead:
 
 ```jsonc
 // ~/.config/opencode/opencode.json

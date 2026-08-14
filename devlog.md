@@ -3,6 +3,41 @@
 Append-only, reverse-chronological. Log direction changes and dead-ends, not every failed run.
 Full-length versions of consolidated entries live in `devlog-archive.md` (not auto-imported).
 
+## 2026-08-14: the onboarding path finally run somewhere other than the author's machine
+
+**It works, end to end, and that had never actually been checked.** Everything
+verified up to now was the code-install layer; the path a real user takes
+(clone, download the CLI, ask a question) had only ever run where it was
+written. On heliumx, from an empty directory: clone 58.7 s, CLI downloaded and
+extracted, `./fusion --version` prints 0.1.0, `fusion debug skill` finds the
+skills from inside the clone with no configuration, and a Chinese question
+("帮我算 d+58Ni 在 21.6 MeV 的弹性散射") brought up the first-run setup offer
+AND reached for the FRESCO skill in the same turn, reading its examples and
+namelist reference. That is the product's central claim, demonstrated on a
+machine that is not the one it was built on.
+
+**A false alarm worth recording, because the mistake is a general one.** The
+first attempt ran without the proxy tunnel and both quick-start commands
+failed (github.com 0 of 6, clone dead after 132 s), which I wrote up as a
+distribution blocker for Chinese users. The user's correction: researchers and
+students in China run a proxy as standard equipment, so heliumx, a bare server
+with no proxy configured, is not a model of a student's laptop. The
+measurement was sound and the inference was not. **A number from one box is
+not a claim about a population**, and the cost of getting that backwards is
+worse than silence: the READMEs briefly told students they faced a problem
+they do not have. Retracted the same day; what survives is one line about
+installing onto a LAB SERVER, which genuinely often cannot reach github.com,
+pointing at `http_proxy` for the two download steps.
+
+**Two documentation defects fell out of the same run.** The clone is no longer
+229 MB compressed and 623 MB checked out; it is **256 MB transferred and 945
+MB on disk**, so both READMEs understated the disk cost by about 50 percent.
+And `./fusion --help` prints `opencode` on every line of its usage block: a
+user who downloaded a binary named `fusion` is told, by the most likely first
+command, that they are holding a different tool. That is the known open
+"TUI/CLI display-name strings sweep", now with a confirmed user-visible
+symptom.
+
 ## 2026-08-13 (TALYS packaging): the disk question answered itself, and hid the real defect
 
 **The long-open "should TALYS be an opt-in extra" decision was never a real
