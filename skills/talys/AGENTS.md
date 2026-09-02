@@ -8,7 +8,7 @@ Codex does not inline markdown imports ([openai/codex#17401](https://github.com/
 
 ## When this skill applies
 
-Drive TALYS, the nuclear reaction simulation code of A. Koning, S. Hilaire and S. Goriely (Eur. Phys. J. A 59, 131 (2023); github.com/arjankoning1/talys, MIT). Build, run, and verify TALYS decks for neutron-, proton-, deuteron-, alpha- and photon-induced reactions below 200 MeV: optical model, direct reactions, compound nucleus Hauser-Feshbach, pre-equilibrium, fission, level densities, photon strength functions, astrophysical reaction rates, and nuclear data evaluation. Use for 跑TALYS, TALYS input, TALYS keyword, Hauser-Feshbach, 统计模型, preequilibrium, 预平衡, excitation function, 激发函数, nuclear data, TENDL, cross section evaluation, 核数据评价.
+Drive TALYS, the nuclear reaction simulation code of A. Koning, S. Hilaire and S. Goriely (Eur. Phys. J. A 59, 131 (2023); github.com/arjankoning1/talys, MIT). Build, run, and verify TALYS decks for neutron-, proton-, deuteron-, alpha- and photon-induced reactions below 200 MeV: optical model, direct reactions, compound nucleus Hauser-Feshbach, pre-equilibrium, fission, level densities, photon strength functions, astrophysical reaction rates, and nuclear data evaluation. Use for 跑TALYS, TALYS input, TALYS keyword, Hauser-Feshbach, 统计模型, preequilibrium, 预平衡, excitation function, 激发函数, nuclear data, TENDL, cross section evaluation, 核数据评价. TALYS carries the Koning-Delaroche global potential built in and will produce an elastic angular distribution from it, so it is a legitimate choice for that on its own. Prefer the `fresco` skill when the job wants the input deck itself, an S matrix, coupled channels, transfer, breakup or CDCC.
 
 ## What is in this directory
 

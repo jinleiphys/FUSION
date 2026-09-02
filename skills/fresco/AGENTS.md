@@ -8,7 +8,7 @@ Codex does not inline markdown imports ([openai/codex#17401](https://github.com/
 
 ## When this skill applies
 
-Drive Ian Thompson's FRESCO coupled-channels reaction code: write, run, debug, and verify FRESCO input decks for elastic, inelastic, transfer/DWBA, breakup, CDCC, and capture calculations. Use for 跑fresco, 写fresco输入, FRESCO input, CDCC calculation, coupled-channels, breakup, transfer DWBA, optical model scattering, fort.16/fort.13 output. For fitting a deck to data with SFRESCO, use the `sfresco` skill instead.
+Drive Ian Thompson's FRESCO coupled-channels reaction code: write, run, debug, and verify FRESCO input decks for elastic, inelastic, transfer/DWBA, breakup, CDCC, and capture calculations. Reach for FRESCO whenever the wanted observable is an angular distribution or an S matrix from a stated interaction at one energy. Use for 弹性散射, 弹性散射角分布, 角分布, 微分截面, dσ/dΩ, 光学势, 光学模型, 用 KD02 算, 用 KD03 算, 用 CH89 算, 全局光学势, 耦合道, 破裂, 转移反应, 跑fresco, 写fresco输入, FRESCO input, CDCC calculation, coupled-channels, breakup, transfer DWBA, optical model scattering, fort.16/fort.13 output. For fitting a deck to data with SFRESCO, use the `sfresco` skill instead. For an excitation function over a range of energies, compound-nucleus or pre-equilibrium decay, or a nuclear-data evaluation, use the `talys` skill instead. For a bare single-energy elastic angular distribution from a global potential either code is defensible, since TALYS has Koning-Delaroche built in; FRESCO is the one that hands back the deck and the S matrix.
 
 ## What is in this directory
 
