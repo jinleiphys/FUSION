@@ -31,8 +31,9 @@
 >   `xattr -d com.apple.quarantine fusion` and it will start.
 > - **Do not begin with TALYS.** It downloads about 11 GB. Try FRESCO or CCFULL
 >   first; they build in a minute or two.
-> - **Cold-start installs are the least tested part.** Of the twenty codes, only
->   FRESCO has been installed from a genuinely empty cache. If a code fails to
+> - **Cold-start installs are the least tested part.** All twenty codes have been
+>   exercised once on a bare Linux box: thirteen installed and verified cleanly,
+>   four stopped with a message naming the missing dependency. If a code fails to
 >   build on your machine, that is the single most useful thing you can report.
 >
 > **What to report, in order of value**
@@ -239,9 +240,10 @@ other people need from it. Things you may hit:
 
 - The macOS and Linux binaries are unsigned, so the first run needs the
   quarantine attribute cleared. Windows is not built.
-- **Cold-start installs are under-tested.** Every skill's install path works on
-  a machine that already has the code; only FRESCO's has been exercised from a
-  genuinely empty cache. Expect a missing dependency somewhere.
+- **Cold-start installs are under-tested.** Every install path has been run once
+  on a bare Linux box (thirteen clean, four stopping with a named missing
+  dependency), and once on macOS only where the code was already present. Expect
+  a missing dependency somewhere.
 - TALYS wants about 11 GB of disk, 8.6 GB of it a structure database.
 - The main README is available in English and Chinese. Skill documentation is
   currently English only.
