@@ -35,18 +35,19 @@ written, so FRESCO uses `massp=1.0 masst=90.0` to match). Inputs:
 | FRESCO | Numerov, real axis | 1299.19061 | 1299.19061 |
 | COLOSS | complex scaling, Lagrange-Laguerre | 1299.1905 | 1299.1905 |
 
-Agreement between the two codes is 1.1e-4 mb, a relative 8.5e-8, so **seven significant figures**
-on two unrelated numerical methods. Each code is bit-identical across the two platforms.
+The two codes differ by 1.1e-4 mb on 1300. **Read this as a numerics check, not a physics one:**
+KD02 is a global fit and carries three or four physically meaningful digits, so agreement at this
+level says the two solvers are integrating the same problem and both are converged, and says
+nothing about accuracy. Each code gives the same digits on both platforms.
 
 **Convergence, stated because the number is quoted:** FRESCO is flat at 1299.19061 for
 `hcm` 0.025 and 0.0125 and for `rmatch` 40, 60 and 80 (`hcm=0.1` gives 1299.18937, so the coarse
 default is only good to 1e-6). COLOSS is flat at 1299.1905 for `nr` 120 to 140 and `Rmax` 50 to 60.
 
-**The trap this case exists to record: `ctheta` outside its stable window moves the answer while
-nothing complains.** At `ctheta=4` COLOSS returns 1299.1874, which looks like a converged number
-and is wrong in the fifth decimal; `ctheta=6` and `ctheta=8` agree at 1299.1905 and 1299.1908.
-The rotation angle is exactly what check 2 below tests, and this is a live example of why a result
-quoted without it is unsupported.
+**Complex-scaling angle:** `ctheta` 4, 6 and 8 give 1299.1874, 1299.1905 and 1299.1908, a spread
+of 0.003 mb or 2.4e-6. That is the angle window behaving, not failing, and well inside anything
+physically meaningful; it is recorded only so the quoted value has a stated angle. Check 2 below is
+the real angle test.
 
 **Mass convention, worth knowing before comparing to anything else.** The same FRESCO deck with
 physical masses (`massp=1.008665 masst=89.904698`) gives 1301.64017 mb, the value recorded in
