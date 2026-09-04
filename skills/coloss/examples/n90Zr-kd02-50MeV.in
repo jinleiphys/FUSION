@@ -1,0 +1,21 @@
+&general
+        nr=120  alpha=0 Rmax=50 ctheta=6
+        matgauss=f bgauss=f method=1
+        thetah=1.0 thetamax=180 /
+
+&system
+        zp=0    massp=1   namep='n'
+        zt=40   masst=90  namet='90Zr'
+        jmin=0 jmax=60  elab=50 sp=0.5/
+
+&pot
+        vv=35.274524  rv=1.213437  av=0.664417
+        wv=4.760451   rw=1.213437  aw=0.664417
+        vs=0          rvs=0        avs=0
+        ws=3.793594   rws=1.271370 aws=0.529696
+        vsov=4.892278  rsov=1.041026 asov=0.590
+        vsow=-0.369964  rsow=1.041026 asow=0.590
+        rc=1.2 /
+
+&nonlocalpot
+        nonlocal=f nlbeta=0.0 /
