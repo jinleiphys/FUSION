@@ -108,11 +108,20 @@ Both tables now name their platform and carry the Linux number. This is the
 by claiming bit-identity that was never measured, but by stating a real
 measurement without its scope.
 
-**Scoreboard:** 7 installed and verified clean on the bare box (fresco,
-ccfull, cgmf, cnok, sides, kshell, thermal-fist), later joined by smash,
-gibuu, swanlop, pikoe, sky3d and coloss after the fixes; 4 correctly stopped
-with an actionable missing-dependency message (azure2 GSL, skynet
-HDF5/GSL/Boost, nucleartoolkit Julia, gsm MPI).
+**Scoreboard** [corrected 2026-09-04 against `results-round1.tsv` and
+`results.tsv` on the box; the original said "7 installed and verified clean"
+and put smash in the after-the-fixes group, neither of which its own tables
+support]: **8** installed and passed the skill's own verify unattended (cgmf,
+cnok, sides, kshell, thermal-fist and smash in round 1; gibuu and vhlle when
+they were added). **4** correctly stopped with an actionable
+missing-dependency message (azure2 GSL, skynet HDF5/GSL/Boost,
+nucleartoolkit Julia, gsm MPI); heliumx has none of those installed, so none
+of the four was verified here. **5** failed on portability defects and passed
+once those were fixed (coloss, swanlop, sky3d, pikoe, nlat). For the last
+**3** the limit was the harness rather than the skill: fresco and ccfull ran
+no verify step at all in that round (their `verify_rc` column reads `none`),
+and TALYS's verify returned rc=2 in zero seconds, its benchmark being run by
+hand in 55 s.
 
 **Two nlat runs, two non-defects, both worth naming so they are not re-filed
 as bugs.** One hit a Mendeley download that returned JSON instead of gzip;
@@ -127,8 +136,14 @@ long-running verification hung, check what the skill says it costs.** Re-run
 with a real budget: `VERIFY OK` in 6500 s, 25 files compared across both
 cases, zero failures.
 
-**Final state of the audit: all 20 skills cold-start verified**, TALYS
-included.
+**Final state of the audit: all 20 install paths exercised; 13 verified
+under the harness, 4 correctly refused to install for a named missing
+dependency, and 3 closed by hand because what stopped them was the harness
+and not the skill.** [Corrected 2026-09-04. The original read "all 20 skills
+cold-start verified, TALYS included", which the result tables do not support:
+fresco and ccfull ran no verify step and TALYS's harness verify returned an
+error. The install-path claim in `CLAUDE.md`, which says *exercised* rather
+than *verified*, was right as written.]
 
 ## 2026-08-13 (size): relations.tsv halved by deleting the rows that said nothing
 
@@ -625,9 +640,11 @@ VERIFY OK on macOS/ARM and Linux/x86-64.
 
 ## 2026-07-23: SMASH shipped after five adversarial rounds, and what actually found the defects
 
-**Why it matters beyond SMASH:** four of the five rounds found that the PREVIOUS
-round's fixes had introduced a new defect of the same shape as the one they
-repaired. That is a base rate, not bad luck, and it is the reason this entry
+**Why it matters beyond SMASH:** three of the five rounds (2, 3 and 4) found
+that the PREVIOUS round's fixes had introduced a new defect of the same shape
+as the one they repaired. [Corrected 2026-09-04 from "four of the five": the
+per-round counts are found = 19, 2, 6, 2, 1 and introduced = 0, 2, 4, 2, 0,
+and round 5 is where the streak ends, as this log's own round-5 entry says.] That is a base rate, not bad luck, and it is the reason this entry
 exists. Full round-by-round detail in devlog-archive.md.
 
 **Severity decayed monotonically**, which is what finally justified stopping:
@@ -717,8 +734,10 @@ not solved.
 
 ## 2026-07-23: SMASH round 5, the streak ends, and the skill ships
 
-**Why we tried it:** four rounds in a row had found that the previous round's
-fixes carried a new defect of the same shape. The stopping condition was never
+**Why we tried it:** three rounds in a row (2, 3 and 4) had found that the
+previous round's fixes carried a new defect of the same shape. [Corrected
+2026-09-04 from "four rounds in a row"; the round-4 entry below states that
+rounds 2 and 3 had done so, and round 4 itself made three.] The stopping condition was never
 a round count, it was "a round comes back without one".
 
 **Result: round 5 found no new false pass.** First time in five rounds. It found
