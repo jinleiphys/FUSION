@@ -9,7 +9,7 @@
 # Ends with one Related-work injection.
 # Arm once AFTER the citation-graph rebuild + row re-open prep is done:
 #   nohup caffeinate -ims bash scripts/run_relations_repair.sh & disown
-# (-m keeps the external KINGSTON drive from idle-sleeping mid-batch, the
+# (-m keeps the external corpus drive from idle-sleeping mid-batch, the
 #  suspected cause of the July hang on exactly these papers.)
 set -u
 cd "$(dirname "$0")/.."

@@ -28,7 +28,7 @@ DB = Path.home() / "literature-corpus/corpus.db"
 AUTH = Path.home() / ".local/share/opencode/auth.json"
 MODEL = "deepseek-chat"
 
-TEX_ROOT = Path("/Volumes/KINGSTON/nucl-th_tex_files")
+TEX_ROOT = Path("/Volumes/Samsung4T/nucl-th-corpus/nucl-th_tex_files")
 
 # --- cite-key patterns ---
 RE_CITE = re.compile(r'\\cite\{([^}]+)\}')

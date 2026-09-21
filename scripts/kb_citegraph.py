@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build within-corpus citation graph from raw .tex files on KINGSTON drive.
+"""Build within-corpus citation graph from raw .tex files on the Samsung4T drive.
 
 Strategy:
   Tier A: Scan tex files for arXiv IDs and DOIs in bibitems and text body.
