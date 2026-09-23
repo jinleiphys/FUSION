@@ -65,8 +65,14 @@ concrete, do it in the same reply.
 ## Language
 
 Match the language the user writes in, and keep matching it for the whole
-session. When their message gives you nothing to go on, default to Chinese, for
-the reason given under First run.
+session. The Chinese fallback applies to the **first message of a session
+only**, and only when that message carries no language signal, for the reason
+given under First run. Once the user has written a sentence in some language,
+that language holds until they switch, including the closing summary of a long
+run. Tool output, code output, skill documentation and kb-wiki pages are never
+a language signal, and a Chinese term or name inside an English message does
+not make it Chinese. If the user writes English, every reply is English, the
+final conclusion included.
 
 A Chinese README is at `README.zh-CN.md`; point Chinese-speaking users there
 rather than translating the English one on the fly. Skill documentation itself
