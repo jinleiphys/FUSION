@@ -1,6 +1,7 @@
 kb-wiki/full-run-*.log
 kb-wiki/relations-run-*.log
 kb-wiki/citations-inspire.tsv
+kb-wiki/inspire-recid-map.tsv
 kb-wiki/backfill-run.log
 __pycache__/
 *.pyc

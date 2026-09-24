@@ -3,8 +3,19 @@
 
 Strategy:
   Tier A: Scan tex files for arXiv IDs and DOIs in bibitems and text body.
-  Tier B: For papers using \\bibliography{} (external bib), parse \\cite{} keys
-          and resolve via author-year heuristic against the corpus.
+  Tier B (off by default, --tier-b): for papers using \\bibliography{} (external
+          bib), parse \\cite{} keys and resolve via author-year heuristic.
+
+Tier B is off because it is wrong far more often than right. The corpus keeps
+only .tex, so a paper with an external .bib leaves nothing but keys such as
+Wang11 or Jin25, and a key alone cannot name a paper: on 2026-09-24, against
+the INSPIRE reference lists of the 5,722 tier-B papers INSPIRE covers (record
+numbers resolved), 15,709 of 84,587 tier-B edges were confirmed (18.6%). Wang11 accepted every 2011 paper with first author
+Wang, since authors were grouped by surname only; a self-citation key accepted
+every paper its author wrote that year. The papers it reached get their edges
+from INSPIRE instead (scripts/kb_inspire_backfill.py, merged afterwards); a
+paper INSPIRE does not know keeps no edges, because a wrong edge costs more
+than a missing one.
 """
 
 import os
@@ -27,8 +38,12 @@ def load_paper_set():
         return set(line.strip() for line in f if line.strip())
 
 
-def build_cite_graph():
+def build_cite_graph(out_path=CITATIONS_TSV, provenance_path=None, tier_b=False):
+    """provenance_path, if given, receives citing<TAB>cited<TAB>tier<TAB>key for
+    every resolved edge (tier A|B; key is the \\cite key for tier B), so the
+    heuristic's output can be audited against an independent reference list."""
     paper_ids = load_paper_set()
+    provenance = []
     print(f"Papers in list: {len(paper_ids)}")
 
     conn = sqlite3.connect(CORPUS_DB)
@@ -174,6 +189,7 @@ def build_cite_graph():
                 if aid and aid != arxiv_id:
                     cited_ids.add(aid)
                     tier_a_edges += 1
+                    provenance.append((arxiv_id, aid, 'A', ''))
 
             for match in re_new_arxiv.finditer(text):
                 nid = match.group(1).split('v')[0] if 'v' in match.group(1) else match.group(1)
@@ -181,15 +197,18 @@ def build_cite_graph():
                 if aid and aid != arxiv_id:
                     cited_ids.add(aid)
                     tier_a_edges += 1
+                    provenance.append((arxiv_id, aid, 'A', ''))
 
             for match in re_doi.finditer(text):
                 aid = resolve_doi(match.group(1))
                 if aid and aid != arxiv_id:
                     cited_ids.add(aid)
                     tier_a_edges += 1
+                    provenance.append((arxiv_id, aid, 'A', ''))
 
-        # If no edges from Tier A, try Tier B (author-year heuristic for bibtex keys)
-        if not cited_ids and full_text:
+        # If no edges from Tier A, try Tier B (author-year heuristic for bibtex
+        # keys) -- only when asked for; see the module docstring.
+        if tier_b and not cited_ids and full_text:
             cite_keys = set()
             for match in re_cite.finditer(full_text):
                 for key in match.group(1).split(','):
@@ -251,6 +270,7 @@ def build_cite_graph():
                 for aid in accepted:
                     cited_ids.add(aid)
                     tier_b_edges += 1
+                    provenance.append((arxiv_id, aid, 'B', key))
 
         for cited in cited_ids:
             edges.add((arxiv_id, cited))
@@ -274,8 +294,15 @@ def build_cite_graph():
                     removed += 1
         print(f"Blacklist: removed {removed} hand-verified false edges")
 
+    if provenance_path:
+        with open(provenance_path, 'w') as f:
+            f.write("citing\tcited\ttier\tkey\n")
+            for row in sorted(set(provenance)):
+                f.write("\t".join(row) + "\n")
+        print(f"Provenance: {len(set(provenance))} rows -> {provenance_path}")
+
     # Write citations.tsv
-    with open(CITATIONS_TSV, 'w') as f:
+    with open(out_path, 'w') as f:
         f.write("citing\tcited\n")
         for citing, cited in sorted(edges):
             f.write(f"{citing}\t{cited}\n")
@@ -302,9 +329,21 @@ def build_cite_graph():
     print(f"Mean out-degree: {mean_out:.1f}")
     print(f"Missing tex_dirs: {missing_dirs}")
 
+    # Calibration checks read the final graph, which is this tex graph plus the
+    # INSPIRE edges merged afterwards: without tier B these edges come from INSPIRE.
+    final = set(edges)
+    inspire_path = KB_WIKI / "citations-inspire.tsv"
+    if inspire_path.exists():
+        with open(inspire_path) as f:
+            f.readline()
+            for line in f:
+                p = line.rstrip('\n').split('\t')
+                if len(p) >= 2:
+                    final.add((p[0], p[1]))
+
     # Calibration: 1711.07540 -> 1511.03214
     cal_edge = ("1711.07540", "1511.03214")
-    present = cal_edge in edges
+    present = cal_edge in final
     print(f"\nCalibration: {cal_edge[0]} -> {cal_edge[1]}: {'PRESENT' if present else 'MISSING!'}")
 
     # Collision-guard calibration (2026-08-12): \cite{Jin15} in 1511.03214
@@ -312,8 +351,11 @@ def build_cite_graph():
     # "Lei, Jin", reachable only via the given-name index and won by the
     # self-citation corroboration), NOT 1508.03920 (first-author surname
     # Jin, an unrelated soliton paper the old tie-break picked).
-    good = ("1511.03214", "1510.02602") in edges
-    bad = ("1511.03214", "1508.03920") in edges
+    good = ("1511.03214", "1510.02602") in final
+    bad = ("1511.03214", "1508.03920") in final
+    # the false edges found on 2026-09-24 (Wang11, Jin25 resolutions) must be gone
+    for citing, cited in [("1711.07540", "1101.0453"), ("2504.03112", "2512.22500")]:
+        print(f"Tier-B regression: {citing} -> {cited} {'ABSENT' if (citing, cited) not in final else 'STILL PRESENT!'}")
     print(f"Guard calibration: 1511.03214 -> 1510.02602 {'PRESENT' if good else 'MISSING!'}; "
           f"-> 1508.03920 (false) {'ABSENT' if not bad else 'STILL PRESENT!'}")
 
@@ -360,4 +402,10 @@ def build_cite_graph():
 
 
 if __name__ == '__main__':
-    build_cite_graph()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--out', type=Path, default=CITATIONS_TSV, help='edge list to write (default kb-wiki/citations.tsv)')
+    ap.add_argument('--provenance', type=Path, help='also write citing/cited/tier/key per resolved edge')
+    ap.add_argument('--tier-b', action='store_true', help='enable the cite-key heuristic (18.6%% precision; audit use only)')
+    a = ap.parse_args()
+    build_cite_graph(a.out, a.provenance, a.tier_b)

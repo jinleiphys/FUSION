@@ -1,7 +1,7 @@
 ---
 name: kb-search
 description: >-
-  Search FUSION's offline literature knowledge base (kb-wiki): 61,059 arXiv nucl-th paper pages with digests, 108 PhySH topic pages, a 724k-edge citation graph, and typed semantic relations. Use for 查文献, 搜文献, 知识库, 谁引用了这篇, find papers about X, who cites this, cited-by, related work, literature survey, has anyone done X, offline literature search. Works with plain grep and awk, no network, no API key. A miss here is not proof that no paper exists.
+  Search FUSION's offline literature knowledge base (kb-wiki): 61,059 arXiv nucl-th paper pages with digests, 108 PhySH topic pages, an 810k-edge citation graph, and typed semantic relations. Use for 查文献, 搜文献, 知识库, 谁引用了这篇, find papers about X, who cites this, cited-by, related work, literature survey, has anyone done X, offline literature search. Works with plain grep and awk, no network, no API key. A miss here is not proof that no paper exists.
 ---
 
 # kb-search: the offline literature knowledge base
@@ -23,33 +23,36 @@ query each layer, and where the trust boundaries sit.
 - `topics/<slug>.md`: 108 PhySH concept pages: lineage, a newest-first paper
   list (capped at 100), and a landscape synthesis grounded in the topic's
   most-cited papers.
-- `citations.tsv`: 703,430 citation edges, `citing<TAB>cited`, both ends
-  arXiv ids with pages in `papers/`, parsed from .tex bibliographies plus
-  INSPIRE backfill. Bibitem keys with no explicit id resolve through an
-  author-plus-year heuristic; since the 2026-08-12 rebuild an ambiguous
-  several-person match is accepted only when the candidate's first author
-  appears among the citing paper's own authors (a self or collaborator
-  citation) and is dropped otherwise, and hand-verified false resolutions
-  are excised via `edge-blacklist.tsv`. A residual risk remains: an
-  uncorroborated single-person match can still be the wrong person (surname
-  truncations such as `Lei15` written for Leidemann). Treat an edge as a
-  lead to verify against the citing paper's bibliography, not as a fact.
-- `relations.tsv`: the citation edges that carry a MEANINGFUL model-assigned
-  type, 233,774 rows of `citing  cited  type  confidence  evidence`:
-  `uses` 189,453, `compares` 22,760, `extends` 11,153, `contrasts` 6,000,
-  `applies` 4,408. Plain reference-list citations (two thirds of the graph)
-  are not stored, because the type says nothing the edge itself does not:
-  **an edge present in `citations.tsv` with no row here is a background
-  citation.** Every `contrasts` label survived a focused second-pass check
-  asking only whether the citing text disputes the cited paper's own claims
-  (the first pass had labeled nearly three times as many, mostly neutral
-  comparisons). The evidence column is a model rationale that may
-  paraphrase, not a verbatim quote; in it, the marker `[the cited paper]`
-  stands where the citation sat in the source text.
-- `relations-classified.txt`: the 54,039 citing papers whose citations have
-  been typed. It is what separates "typed as background" from "not yet
-  typed" for an edge with no relations row, and it is the pipeline's resume
-  record. Not needed for searching.
+- `citations.tsv`: 809,632 citation edges, `citing<TAB>cited`, both ends
+  arXiv ids with pages in `papers/`. Two sources only: arXiv ids and DOIs
+  written in the citing paper's own .tex (bibitems and text), and the
+  paper's INSPIRE reference list (arXiv eprint, DOI, or INSPIRE record
+  number resolved to an eprint). Since the 2026-09-24 rebuild there is NO
+  cite-key guessing: a paper with an external .bib used to have keys such as
+  `Wang11` resolved by author and year, and against INSPIRE only 18.6% of
+  those edges were right, so they were removed (69,949 edges) and the same
+  papers take their references from INSPIRE. A paper that INSPIRE does not
+  index and whose .tex carries no ids has no outgoing edges; a missing edge
+  is expected, a wrong one should now be rare. Still check an edge against
+  the citing paper's bibliography before relying on it.
+- `relations.tsv`: citation edges with a MEANINGFUL model-assigned type,
+  207,055 rows of `citing  cited  type  confidence  evidence`: `uses`
+  168,229, `compares` 19,697, `extends` 10,051, `contrasts` 5,184,
+  `applies` 3,894. Plain reference-list citations are not stored, because
+  the type says nothing the edge itself does not. Every `contrasts` label
+  survived a focused second-pass check asking only whether the citing text
+  disputes the cited paper's own claims (the first pass had labeled nearly
+  three times as many, mostly neutral comparisons). The evidence column is a
+  model rationale that may paraphrase, not a verbatim quote; in it, the
+  marker `[the cited paper]` stands where the citation sat in the source
+  text.
+- `relations-untyped.tsv`: the 176,151 edges added by the 2026-09-24
+  rebuild (18,674 citing papers), not yet typed. **An edge with no
+  `relations.tsv` row is a background citation only if it is NOT listed
+  here**; an edge listed here has simply not been classified.
+- `relations-classified.txt`: the citing papers whose citations went
+  through the classifier (the pipeline's resume record). A paper listed there
+  can still have edges in `relations-untyped.tsv`. Not needed for searching.
 
 Find the directory relative to this skill: `../../kb-wiki` from the directory
 containing this SKILL.md, i.e. `kb-wiki/` at the repository root. Set
