@@ -1,8 +1,8 @@
 # Beta decay
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Beta decay
+**PhySH lineage:** Nuclear structure & decays > Beta decay
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 **Narrower:** [Double beta decay](double-beta-decay.md), [Neutrinoless double beta decay](neutrinoless-double-beta-decay.md)
 

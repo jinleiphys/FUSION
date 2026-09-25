@@ -1,8 +1,8 @@
 # s process
 
-**PhySH lineage:** [Nuclear astrophysics](nuclear-astrophysics.md) > [Hydrostatic stellar nucleosynthesis](hydrostatic-stellar-nucleosynthesis.md) > s process
+**PhySH lineage:** [Nuclear astrophysics](nuclear-astrophysics.md) > Hydrostatic stellar nucleosynthesis > s process
 
-**Broader:** [Hydrostatic stellar nucleosynthesis](hydrostatic-stellar-nucleosynthesis.md)
+**Broader:** Hydrostatic stellar nucleosynthesis
 
 ## Landscape
 
@@ -66,9 +66,9 @@ Active directions include reducing the significant uncertainties in stellar reac
 - [1106.1728](../papers/1106.1728.md) (2011) [1] Opportunities to constrain astrophysical reaction rates for the s-process through determination of the ground state cros...
 - [1005.2151](../papers/1005.2151.md) (2010) [1] Modification of nuclear transitions in stellar plasma by electronic processes: K-isomers in 176Lu and 180Ta under s-proc...
 - [0804.0223](../papers/0804.0223.md) (2008) [2] Thermal Equilibration of 176-Lu via K-Mixing
-- [astro-ph/0006350](../papers/astro-ph/0006350.md) (0000) [2] astro-ph/0006350
-- [astro-ph/0301461](../papers/astro-ph/0301461.md) (0000) [2] astro-ph/0301461
-- [astro-ph/9608125](../papers/astro-ph/9608125.md) (0000) [2] astro-ph/9608125
-- [nucl-th/0206072](../papers/nucl-th/0206072.md) (0000) [1] nucl-th/0206072
-- [nucl-th/0210059](../papers/nucl-th/0210059.md) (0000) [2] nucl-th/0210059
-- [nucl-th/0306048](../papers/nucl-th/0306048.md) (0000) [2] nucl-th/0306048
+- [astro-ph/0006350](../papers/astro-ph_0006350.md) (0000) [2] astro-ph/0006350
+- [astro-ph/0301461](../papers/astro-ph_0301461.md) (0000) [2] astro-ph/0301461
+- [astro-ph/9608125](../papers/astro-ph_9608125.md) (0000) [2] astro-ph/9608125
+- [nucl-th/0206072](../papers/nucl-th_0206072.md) (0000) [1] nucl-th/0206072
+- [nucl-th/0210059](../papers/nucl-th_0210059.md) (0000) [2] nucl-th/0210059
+- [nucl-th/0306048](../papers/nucl-th_0306048.md) (0000) [2] nucl-th/0306048

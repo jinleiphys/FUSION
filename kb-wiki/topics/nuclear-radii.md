@@ -1,8 +1,8 @@
 # Nuclear radii
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Nuclear radii
+**PhySH lineage:** Nuclear structure & decays > Nuclear radii
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 
@@ -59,15 +59,15 @@ Open questions include the persistent puzzle in oxygen isotopes, where ab initio
 - [0806.3655](../papers/0806.3655.md) (2008) [2] Correlating radii and electric monopole transitions of atomic nuclei
 - [0709.3525](../papers/0709.3525.md) (2007) [2] Parameterization of the Woods-Saxon Potential for Shell-Model Calculations
 - [2204.01625](../papers/2204.01625.md) (0000) [2] Tomography of Ultra-relativistic Nuclei with Polarized Photon-gluon Collisions
-- [hep-ph/0301028](../papers/hep-ph/0301028.md) (0000) [2] hep-ph/0301028
-- [nucl-th/0111036](../papers/nucl-th/0111036.md) (0000) [2] nucl-th/0111036
-- [nucl-th/0203062](../papers/nucl-th/0203062.md) (0000) [2] nucl-th/0203062
-- [nucl-th/0211015](../papers/nucl-th/0211015.md) (0000) [2] nucl-th/0211015
-- [nucl-th/0306038](../papers/nucl-th/0306038.md) (0000) [2] nucl-th/0306038
-- [nucl-th/0312027](../papers/nucl-th/0312027.md) (0000) [2] nucl-th/0312027
-- [nucl-th/0403015](../papers/nucl-th/0403015.md) (0000) [2] nucl-th/0403015
-- [nucl-th/0405033](../papers/nucl-th/0405033.md) (0000) [2] nucl-th/0405033
-- [nucl-th/0507052](../papers/nucl-th/0507052.md) (0000) [2] nucl-th/0507052
-- [nucl-th/9510058](../papers/nucl-th/9510058.md) (0000) [2] nucl-th/9510058
-- [nucl-th/9707016](../papers/nucl-th/9707016.md) (0000) [2] nucl-th/9707016
-- [nucl-th/9908052](../papers/nucl-th/9908052.md) (0000) [2] nucl-th/9908052
+- [hep-ph/0301028](../papers/hep-ph_0301028.md) (0000) [2] hep-ph/0301028
+- [nucl-th/0111036](../papers/nucl-th_0111036.md) (0000) [2] nucl-th/0111036
+- [nucl-th/0203062](../papers/nucl-th_0203062.md) (0000) [2] nucl-th/0203062
+- [nucl-th/0211015](../papers/nucl-th_0211015.md) (0000) [2] nucl-th/0211015
+- [nucl-th/0306038](../papers/nucl-th_0306038.md) (0000) [2] nucl-th/0306038
+- [nucl-th/0312027](../papers/nucl-th_0312027.md) (0000) [2] nucl-th/0312027
+- [nucl-th/0403015](../papers/nucl-th_0403015.md) (0000) [2] nucl-th/0403015
+- [nucl-th/0405033](../papers/nucl-th_0405033.md) (0000) [2] nucl-th/0405033
+- [nucl-th/0507052](../papers/nucl-th_0507052.md) (0000) [2] nucl-th/0507052
+- [nucl-th/9510058](../papers/nucl-th_9510058.md) (0000) [2] nucl-th/9510058
+- [nucl-th/9707016](../papers/nucl-th_9707016.md) (0000) [2] nucl-th/9707016
+- [nucl-th/9908052](../papers/nucl-th_9908052.md) (0000) [2] nucl-th/9908052

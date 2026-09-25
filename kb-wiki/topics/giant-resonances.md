@@ -1,8 +1,8 @@
 # Giant resonances
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Giant resonances
+**PhySH lineage:** Nuclear structure & decays > Giant resonances
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

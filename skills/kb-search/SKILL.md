@@ -36,23 +36,22 @@ query each layer, and where the trust boundaries sit.
   is expected, a wrong one should now be rare. Still check an edge against
   the citing paper's bibliography before relying on it.
 - `relations.tsv`: citation edges with a MEANINGFUL model-assigned type,
-  207,055 rows of `citing  cited  type  confidence  evidence`: `uses`
-  168,229, `compares` 19,697, `extends` 10,051, `contrasts` 5,184,
-  `applies` 3,894. Plain reference-list citations are not stored, because
-  the type says nothing the edge itself does not. Every `contrasts` label
-  survived a focused second-pass check asking only whether the citing text
-  disputes the cited paper's own claims (the first pass had labeled nearly
-  three times as many, mostly neutral comparisons). The evidence column is a
+  237,009 rows of `citing  cited  type  confidence  evidence`: `uses`
+  191,789, `compares` 23,183, `extends` 12,366, `contrasts` 5,640,
+  `applies` 4,031. Plain reference-list citations are not stored, because
+  the type says nothing the edge itself does not: **an edge present in
+  `citations.tsv` with no row here is a background citation.** Every
+  `contrasts` label survived a focused second-pass check asking only whether
+  the citing text disputes the cited paper's own claims (the first pass
+  labels contrast-shaped but neutral comparisons too; on the 2026-09-25
+  pass 405 of 861 new labels were overturned). The evidence column is a
   model rationale that may paraphrase, not a verbatim quote; in it, the
   marker `[the cited paper]` stands where the citation sat in the source
   text.
-- `relations-untyped.tsv`: the 176,151 edges added by the 2026-09-24
-  rebuild (18,674 citing papers), not yet typed. **An edge with no
-  `relations.tsv` row is a background citation only if it is NOT listed
-  here**; an edge listed here has simply not been classified.
-- `relations-classified.txt`: the citing papers whose citations went
-  through the classifier (the pipeline's resume record). A paper listed there
-  can still have edges in `relations-untyped.tsv`. Not needed for searching.
+- `relations-classified.txt`: the citing papers whose citations have been
+  typed. It is what separates "typed as background" from "not yet typed"
+  for an edge with no relations row, and it is the pipeline's resume record.
+  Not needed for searching.
 
 Find the directory relative to this skill: `../../kb-wiki` from the directory
 containing this SKILL.md, i.e. `kb-wiki/` at the repository root. Set

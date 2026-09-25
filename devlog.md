@@ -21,7 +21,10 @@ and the backfill resolves record-number-only references (40% of a sample),
 which also recovered edges for the 27k earlier backfill papers. Graph
 703,430 -> 809,632 edges (69,949 removed, 176,151 added, calibrations pass);
 26,719 relation rows on removed edges dropped; the 176,151 new edges are
-listed untyped in `relations-untyped.tsv`. A Codex review of the backfill
+listed untyped in `relations-untyped.tsv` (typed 2026-09-25: 30,088 typed,
+861 new contrasts rechecked, 405 overturned; relations 237,009 rows). Codex
+confirmed the counts offline and put the kept tex-derived edges at 98.7%
+against INSPIRE. A Codex review of the backfill
 change caught two recall losses of my own (an out-of-corpus eprint no
 longer fell back to its DOI; a record with an unmapped DOI was never
 looked up), worth 3.1% of edges, fixed before the final run. A first 150-paper sample said

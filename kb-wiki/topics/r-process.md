@@ -1,8 +1,8 @@
 # r process
 
-**PhySH lineage:** [Nuclear astrophysics](nuclear-astrophysics.md) > [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md) > r process
+**PhySH lineage:** [Nuclear astrophysics](nuclear-astrophysics.md) > Nucleosynthesis in explosive environments > r process
 
-**Broader:** [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md)
+**Broader:** Nucleosynthesis in explosive environments
 
 ## Landscape
 

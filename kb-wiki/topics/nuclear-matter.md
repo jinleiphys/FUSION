@@ -1,8 +1,8 @@
 # Nuclear matter
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Nuclear matter
+**PhySH lineage:** Nuclear structure & decays > Nuclear matter
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 **Narrower:** [Asymmetric nuclear matter](asymmetric-nuclear-matter.md), [Symmetry energy](symmetry-energy.md), [Equations of state of nuclear matter](equations-of-state-of-nuclear-matter.md)
 

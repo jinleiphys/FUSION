@@ -97,20 +97,20 @@ Active directions include the exploration of unbound nuclei beyond the neutron d
 - [0801.2304](../papers/0801.2304.md) (2008) [1] Recent Advances in the Description of Electromagnetic Two-Nucleon Knockout Reactions
 - [0710.5884](../papers/0710.5884.md) (2007) [2] Neutrino Interaction Calculations from MeV to GeV Region
 - [0706.0636](../papers/0706.0636.md) (2007) [2] Electromagnetic proton-neutron knockout off 16O: new achievements in theory
-- [nucl-th/0101034](../papers/nucl-th/0101034.md) (0000) [1] nucl-th/0101034
-- [nucl-th/0107019](../papers/nucl-th/0107019.md) (0000) [2] nucl-th/0107019
-- [nucl-th/0107052](../papers/nucl-th/0107052.md) (0000) [1] nucl-th/0107052
-- [nucl-th/0109049](../papers/nucl-th/0109049.md) (0000) [2] nucl-th/0109049
-- [nucl-th/0110071](../papers/nucl-th/0110071.md) (0000) [2] nucl-th/0110071
-- [nucl-th/0111080](../papers/nucl-th/0111080.md) (0000) [1] nucl-th/0111080
-- [nucl-th/0205013](../papers/nucl-th/0205013.md) (0000) [2] nucl-th/0205013
-- [nucl-th/0211023](../papers/nucl-th/0211023.md) (0000) [1] nucl-th/0211023
-- [nucl-th/0303067](../papers/nucl-th/0303067.md) (0000) [1] nucl-th/0303067
-- [nucl-th/0311024](../papers/nucl-th/0311024.md) (0000) [1] nucl-th/0311024
-- [nucl-th/0311079](../papers/nucl-th/0311079.md) (0000) [2] nucl-th/0311079
-- [nucl-th/0502074](../papers/nucl-th/0502074.md) (0000) [2] nucl-th/0502074
-- [nucl-th/0504048](../papers/nucl-th/0504048.md) (0000) [1] nucl-th/0504048
-- [nucl-th/0508002](../papers/nucl-th/0508002.md) (0000) [1] nucl-th/0508002
-- [nucl-th/0509103](../papers/nucl-th/0509103.md) (0000) [2] nucl-th/0509103
-- [nucl-th/0601019](../papers/nucl-th/0601019.md) (0000) [2] nucl-th/0601019
-- [nucl-th/0602048](../papers/nucl-th/0602048.md) (0000) [1] nucl-th/0602048
+- [nucl-th/0101034](../papers/nucl-th_0101034.md) (0000) [1] nucl-th/0101034
+- [nucl-th/0107019](../papers/nucl-th_0107019.md) (0000) [2] nucl-th/0107019
+- [nucl-th/0107052](../papers/nucl-th_0107052.md) (0000) [1] nucl-th/0107052
+- [nucl-th/0109049](../papers/nucl-th_0109049.md) (0000) [2] nucl-th/0109049
+- [nucl-th/0110071](../papers/nucl-th_0110071.md) (0000) [2] nucl-th/0110071
+- [nucl-th/0111080](../papers/nucl-th_0111080.md) (0000) [1] nucl-th/0111080
+- [nucl-th/0205013](../papers/nucl-th_0205013.md) (0000) [2] nucl-th/0205013
+- [nucl-th/0211023](../papers/nucl-th_0211023.md) (0000) [1] nucl-th/0211023
+- [nucl-th/0303067](../papers/nucl-th_0303067.md) (0000) [1] nucl-th/0303067
+- [nucl-th/0311024](../papers/nucl-th_0311024.md) (0000) [1] nucl-th/0311024
+- [nucl-th/0311079](../papers/nucl-th_0311079.md) (0000) [2] nucl-th/0311079
+- [nucl-th/0502074](../papers/nucl-th_0502074.md) (0000) [2] nucl-th/0502074
+- [nucl-th/0504048](../papers/nucl-th_0504048.md) (0000) [1] nucl-th/0504048
+- [nucl-th/0508002](../papers/nucl-th_0508002.md) (0000) [1] nucl-th/0508002
+- [nucl-th/0509103](../papers/nucl-th_0509103.md) (0000) [2] nucl-th/0509103
+- [nucl-th/0601019](../papers/nucl-th_0601019.md) (0000) [2] nucl-th/0601019
+- [nucl-th/0602048](../papers/nucl-th_0602048.md) (0000) [1] nucl-th/0602048

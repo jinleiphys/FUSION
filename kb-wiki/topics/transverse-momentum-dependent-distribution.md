@@ -28,4 +28,4 @@ Active directions include the extension of TMD formalism to threshold limits, wh
 - [1508.06964](../papers/1508.06964.md) (2015) [2] The electron in three-dimensional momentum space
 - [1410.1962](../papers/1410.1962.md) (2014) [2] Spin physics and TMD studies at A Fixed-Target ExpeRiment at the LHC (AFTER@LHC)
 - [0711.4741](../papers/0711.4741.md) (2007) [2] The Jlab Upgrade - Studies of the Nucleon with CLAS12
-- [hep-ph/0504184](../papers/hep-ph/0504184.md) (0000) [2] hep-ph/0504184
+- [hep-ph/0504184](../papers/hep-ph_0504184.md) (0000) [2] hep-ph/0504184

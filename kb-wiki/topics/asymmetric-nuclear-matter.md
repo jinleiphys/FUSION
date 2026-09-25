@@ -1,6 +1,6 @@
 # Asymmetric nuclear matter
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > [Nuclear matter](nuclear-matter.md) > Asymmetric nuclear matter
+**PhySH lineage:** Nuclear structure & decays > [Nuclear matter](nuclear-matter.md) > Asymmetric nuclear matter
 
 **Broader:** [Nuclear matter](nuclear-matter.md)
 

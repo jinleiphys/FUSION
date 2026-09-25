@@ -28,8 +28,8 @@ Active directions include the study of heavy flavor jets in heavy ion collisions
 - [1101.5481](../papers/1101.5481.md) (2011) [2] Some Comments on Relativistic Hydrodynamics and Fuzzy Bags
 - [0911.4609](../papers/0911.4609.md) (2009) [2] Probing QCD (media) with prompt photons
 - [0710.3629](../papers/0710.3629.md) (2007) [2] Dynamical quark recombination in ultrarelativistic heavy-ion collisions and the proton to pion ratio
-- [hep-ph/0411206](../papers/hep-ph/0411206.md) (0000) [1] hep-ph/0411206
-- [hep-ph/9401310](../papers/hep-ph/9401310.md) (0000) [1] hep-ph/9401310
-- [hep-ph/9511374](../papers/hep-ph/9511374.md) (0000) [1] hep-ph/9511374
-- [nucl-th/0408037](../papers/nucl-th/0408037.md) (0000) [1] nucl-th/0408037
-- [nucl-th/9808029](../papers/nucl-th/9808029.md) (0000) [2] nucl-th/9808029
+- [hep-ph/0411206](../papers/hep-ph_0411206.md) (0000) [1] hep-ph/0411206
+- [hep-ph/9401310](../papers/hep-ph_9401310.md) (0000) [1] hep-ph/9401310
+- [hep-ph/9511374](../papers/hep-ph_9511374.md) (0000) [1] hep-ph/9511374
+- [nucl-th/0408037](../papers/nucl-th_0408037.md) (0000) [1] nucl-th/0408037
+- [nucl-th/9808029](../papers/nucl-th_9808029.md) (0000) [2] nucl-th/9808029

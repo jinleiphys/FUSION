@@ -1,8 +1,8 @@
 # Proton emission
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Proton emission
+**PhySH lineage:** Nuclear structure & decays > Proton emission
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 
@@ -89,27 +89,27 @@ Open questions and active directions include the mechanism of two-proton radioac
 - [0802.3606](../papers/0802.3606.md) (2008) [2] Effects of the triaxial deformation and pairing correlation on the proton emitter 145Tm
 - [0801.0784](../papers/0801.0784.md) (2008) [2] Blurred femtoscopy in two-proton decay
 - [0709.3797](../papers/0709.3797.md) (2007) [2] Two-proton radioactivity
-- [nucl-th/0105029](../papers/nucl-th/0105029.md) (0000) [2] nucl-th/0105029
-- [nucl-th/0109013](../papers/nucl-th/0109013.md) (0000) [2] nucl-th/0109013
-- [nucl-th/0201039](../papers/nucl-th/0201039.md) (0000) [1] nucl-th/0201039
-- [nucl-th/0203041](../papers/nucl-th/0203041.md) (0000) [2] nucl-th/0203041
-- [nucl-th/0210044](../papers/nucl-th/0210044.md) (0000) [1] nucl-th/0210044
-- [nucl-th/0211004](../papers/nucl-th/0211004.md) (0000) [1] nucl-th/0211004
-- [nucl-th/0212033](../papers/nucl-th/0212033.md) (0000) [1] nucl-th/0212033
-- [nucl-th/0212078](../papers/nucl-th/0212078.md) (0000) [2] nucl-th/0212078
-- [nucl-th/0304055](../papers/nucl-th/0304055.md) (0000) [1] nucl-th/0304055
-- [nucl-th/0305066](../papers/nucl-th/0305066.md) (0000) [2] nucl-th/0305066
-- [nucl-th/0306016](../papers/nucl-th/0306016.md) (0000) [2] nucl-th/0306016
-- [nucl-th/0307108](../papers/nucl-th/0307108.md) (0000) [1] nucl-th/0307108
-- [nucl-th/0310059](../papers/nucl-th/0310059.md) (0000) [1] nucl-th/0310059
-- [nucl-th/0311052](../papers/nucl-th/0311052.md) (0000) [2] nucl-th/0311052
-- [nucl-th/0402063](../papers/nucl-th/0402063.md) (0000) [2] nucl-th/0402063
-- [nucl-th/0407112](../papers/nucl-th/0407112.md) (0000) [2] nucl-th/0407112
-- [nucl-th/0410053](../papers/nucl-th/0410053.md) (0000) [2] nucl-th/0410053
-- [nucl-th/0504050](../papers/nucl-th/0504050.md) (0000) [2] nucl-th/0504050
-- [nucl-th/0601070](../papers/nucl-th/0601070.md) (0000) [1] nucl-th/0601070
-- [nucl-th/0608071](../papers/nucl-th/0608071.md) (0000) [1] nucl-th/0608071
-- [nucl-th/9412034](../papers/nucl-th/9412034.md) (0000) [2] nucl-th/9412034
-- [nucl-th/9701002](../papers/nucl-th/9701002.md) (0000) [2] nucl-th/9701002
-- [nucl-th/9704005](../papers/nucl-th/9704005.md) (0000) [1] nucl-th/9704005
-- [nucl-th/9708044](../papers/nucl-th/9708044.md) (0000) [2] nucl-th/9708044
+- [nucl-th/0105029](../papers/nucl-th_0105029.md) (0000) [2] nucl-th/0105029
+- [nucl-th/0109013](../papers/nucl-th_0109013.md) (0000) [2] nucl-th/0109013
+- [nucl-th/0201039](../papers/nucl-th_0201039.md) (0000) [1] nucl-th/0201039
+- [nucl-th/0203041](../papers/nucl-th_0203041.md) (0000) [2] nucl-th/0203041
+- [nucl-th/0210044](../papers/nucl-th_0210044.md) (0000) [1] nucl-th/0210044
+- [nucl-th/0211004](../papers/nucl-th_0211004.md) (0000) [1] nucl-th/0211004
+- [nucl-th/0212033](../papers/nucl-th_0212033.md) (0000) [1] nucl-th/0212033
+- [nucl-th/0212078](../papers/nucl-th_0212078.md) (0000) [2] nucl-th/0212078
+- [nucl-th/0304055](../papers/nucl-th_0304055.md) (0000) [1] nucl-th/0304055
+- [nucl-th/0305066](../papers/nucl-th_0305066.md) (0000) [2] nucl-th/0305066
+- [nucl-th/0306016](../papers/nucl-th_0306016.md) (0000) [2] nucl-th/0306016
+- [nucl-th/0307108](../papers/nucl-th_0307108.md) (0000) [1] nucl-th/0307108
+- [nucl-th/0310059](../papers/nucl-th_0310059.md) (0000) [1] nucl-th/0310059
+- [nucl-th/0311052](../papers/nucl-th_0311052.md) (0000) [2] nucl-th/0311052
+- [nucl-th/0402063](../papers/nucl-th_0402063.md) (0000) [2] nucl-th/0402063
+- [nucl-th/0407112](../papers/nucl-th_0407112.md) (0000) [2] nucl-th/0407112
+- [nucl-th/0410053](../papers/nucl-th_0410053.md) (0000) [2] nucl-th/0410053
+- [nucl-th/0504050](../papers/nucl-th_0504050.md) (0000) [2] nucl-th/0504050
+- [nucl-th/0601070](../papers/nucl-th_0601070.md) (0000) [1] nucl-th/0601070
+- [nucl-th/0608071](../papers/nucl-th_0608071.md) (0000) [1] nucl-th/0608071
+- [nucl-th/9412034](../papers/nucl-th_9412034.md) (0000) [2] nucl-th/9412034
+- [nucl-th/9701002](../papers/nucl-th_9701002.md) (0000) [2] nucl-th/9701002
+- [nucl-th/9704005](../papers/nucl-th_9704005.md) (0000) [1] nucl-th/9704005
+- [nucl-th/9708044](../papers/nucl-th_9708044.md) (0000) [2] nucl-th/9708044

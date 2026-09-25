@@ -1,6 +1,6 @@
 # Efimov states
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > [Few-body systems](few-body-systems.md) > Efimov states
+**PhySH lineage:** Nuclear structure & decays > [Few-body systems](few-body-systems.md) > Efimov states
 
 **Broader:** [Few-body systems](few-body-systems.md)
 
@@ -69,13 +69,13 @@ Open questions center on the existence and properties of Efimov states in specif
 - [0807.3258](../papers/0807.3258.md) (2008) [2] Universal properties and structure of halo nuclei
 - [0712.1231](../papers/0712.1231.md) (2007) [1] Trajectory of virtual, bound and resonant Efimov states
 - [0711.3684](../papers/0711.3684.md) (2007) [1] Comment on "Efimov States and their Fano Resonances in a Neutron-Rich Nucleus
-- [cond-mat/0201281](../papers/cond-mat/0201281.md) (0000) [1] cond-mat/0201281
-- [cond-mat/0206232](../papers/cond-mat/0206232.md) (0000) [1] cond-mat/0206232
-- [cond-mat/0303249](../papers/cond-mat/0303249.md) (0000) [2] cond-mat/0303249
-- [cond-mat/0410417](../papers/cond-mat/0410417.md) (0000) [2] cond-mat/0410417
-- [cond-mat/0612125](../papers/cond-mat/0612125.md) (0000) [2] cond-mat/0612125
-- [nucl-th/9409018](../papers/nucl-th/9409018.md) (0000) [1] nucl-th/9409018
-- [nucl-th/9702034](../papers/nucl-th/9702034.md) (0000) [2] nucl-th/9702034
-- [nucl-th/9708023](../papers/nucl-th/9708023.md) (0000) [1] nucl-th/9708023
-- [physics/9808027](../papers/physics/9808027.md) (0000) [1] physics/9808027
-- [quant-ph/0607193](../papers/quant-ph/0607193.md) (0000) [1] quant-ph/0607193
+- [cond-mat/0201281](../papers/cond-mat_0201281.md) (0000) [1] cond-mat/0201281
+- [cond-mat/0206232](../papers/cond-mat_0206232.md) (0000) [1] cond-mat/0206232
+- [cond-mat/0303249](../papers/cond-mat_0303249.md) (0000) [2] cond-mat/0303249
+- [cond-mat/0410417](../papers/cond-mat_0410417.md) (0000) [2] cond-mat/0410417
+- [cond-mat/0612125](../papers/cond-mat_0612125.md) (0000) [2] cond-mat/0612125
+- [nucl-th/9409018](../papers/nucl-th_9409018.md) (0000) [1] nucl-th/9409018
+- [nucl-th/9702034](../papers/nucl-th_9702034.md) (0000) [2] nucl-th/9702034
+- [nucl-th/9708023](../papers/nucl-th_9708023.md) (0000) [1] nucl-th/9708023
+- [physics/9808027](../papers/physics_9808027.md) (0000) [1] physics/9808027
+- [quant-ph/0607193](../papers/quant-ph_0607193.md) (0000) [1] quant-ph/0607193

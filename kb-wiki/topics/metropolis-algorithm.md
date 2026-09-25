@@ -20,4 +20,4 @@ Open questions and active directions are visible in recent papers, particularly 
 - [2412.10306](../papers/2412.10306.md) (2024) [1] Stochastic relativistic viscous hydrodynamics from the Metropolis algorithm
 - [2403.04185](../papers/2403.04185.md) (2024) [1] The stochastic relativistic advection diffusion equation from the Metropolis algorithm
 - [2304.07279](../papers/2304.07279.md) (2023) [2] Dynamic scaling of order parameter fluctuations in model B
-- [nucl-th/9811001](../papers/nucl-th/9811001.md) (0000) [2] nucl-th/9811001
+- [nucl-th/9811001](../papers/nucl-th_9811001.md) (0000) [2] nucl-th/9811001

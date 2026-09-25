@@ -30,7 +30,7 @@ Open questions and active directions include the sensitivity of cluster formatio
 - [1009.2886](../papers/1009.2886.md) (2010) [2] Dynamical approach to spectator fragmentation in Au+Au reactions at 35 MeV/A
 - [0912.5126](../papers/0912.5126.md) (2009) [2] Microscopic approach to the spectator matter fragmentation from 400 to 1000 AMeV
 - [0912.5130](../papers/0912.5130.md) (2009) [2] Study of fragmentation using clusterization algorithm with realistic binding energies
-- [nucl-th/0505071](../papers/nucl-th/0505071.md) (0000) [1] nucl-th/0505071
-- [nucl-th/9305002](../papers/nucl-th/9305002.md) (0000) [1] nucl-th/9305002
-- [nucl-th/9306023](../papers/nucl-th/9306023.md) (0000) [2] nucl-th/9306023
-- [nucl-th/9811018](../papers/nucl-th/9811018.md) (0000) [1] nucl-th/9811018
+- [nucl-th/0505071](../papers/nucl-th_0505071.md) (0000) [1] nucl-th/0505071
+- [nucl-th/9305002](../papers/nucl-th_9305002.md) (0000) [1] nucl-th/9305002
+- [nucl-th/9306023](../papers/nucl-th_9306023.md) (0000) [2] nucl-th/9306023
+- [nucl-th/9811018](../papers/nucl-th_9811018.md) (0000) [1] nucl-th/9811018

@@ -1,8 +1,8 @@
 # Nuclear binding
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Nuclear binding
+**PhySH lineage:** Nuclear structure & decays > Nuclear binding
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

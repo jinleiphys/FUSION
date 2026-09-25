@@ -422,10 +422,10 @@ def _extract_sentence_snippet(text, target_str):
     return snippet[:800]
 
 
-def load_citation_edges():
-    """Load citation edges from citations.tsv and group by citing paper."""
+def load_citation_edges(path=None):
+    """Load citation edges (citations.tsv unless another edge list is given) and group by citing paper."""
     out_edges = defaultdict(set)
-    with open(CITATIONS_TSV) as f:
+    with open(path or CITATIONS_TSV) as f:
         header = f.readline()
         for line in f:
             line = line.strip()
@@ -1100,7 +1100,12 @@ def cmd_full(args):
 
     out_tsv = args.out or str(KB_WIKI / "relations.tsv")
     workers = args.workers
-    out_edges = load_citation_edges()
+    # --edges types only the listed edges (e.g. relations-untyped.tsv after a
+    # graph rebuild) instead of every edge of a citing paper, so edges already
+    # typed are neither paid for twice nor duplicated; give it its own
+    # --ledger, since the main ledger already lists those citing papers.
+    out_edges = load_citation_edges(getattr(args, "edges", None))
+    ledger_path = Path(getattr(args, "ledger", None) or CLASSIFIED_LEDGER)
 
     citing_all = [a for a, cited in out_edges.items() if cited]
     citing_all.sort()
@@ -1112,13 +1117,13 @@ def cmd_full(args):
     # authoritative record; the tsv's own first column is unioned in so a
     # pre-ledger checkout still resumes correctly.
     done = set()
-    if CLASSIFIED_LEDGER.exists():
-        with open(CLASSIFIED_LEDGER) as f:
+    if ledger_path.exists():
+        with open(ledger_path) as f:
             for line in f:
                 line = line.strip()
                 if line:
                     done.add(line)
-    if Path(out_tsv).exists():
+    if Path(out_tsv).exists() and not getattr(args, "edges", None):
         with open(out_tsv) as f:
             next(f, None)
             for line in f:
@@ -1126,6 +1131,8 @@ def cmd_full(args):
                 if p:
                     done.add(p[0])
     todo = [a for a in citing_all if a not in done]
+    if getattr(args, "limit", None):
+        todo = todo[:args.limit]
 
     if getattr(args, "count_only", False):
         # Cheap resumability probe for the launcher; runs NO classification.
@@ -1143,7 +1150,7 @@ def cmd_full(args):
     out_f = open(out_tsv, "a")
     if header_needed:
         out_f.write("citing\tcited\ttype\tconfidence\tevidence\n")
-    ledger_f = open(CLASSIFIED_LEDGER, "a")
+    ledger_f = open(ledger_path, "a")
 
     def work(citing_aid):
         cited_set = out_edges.get(citing_aid, set())
@@ -1439,6 +1446,9 @@ if __name__ == "__main__":
     p_full.add_argument("--workers", type=int, default=32)
     p_full.add_argument("--out", default=None)
     p_full.add_argument("--count-only", action="store_true", help="Print remaining count and exit, no classification")
+    p_full.add_argument("--edges", default=None, help="type only these edges (citing<TAB>cited list, e.g. kb-wiki/relations-untyped.tsv)")
+    p_full.add_argument("--ledger", default=None, help="resume ledger (default kb-wiki/relations-classified.txt); use a separate one with --edges")
+    p_full.add_argument("--limit", type=int, default=None, help="classify at most this many citing papers (cost probe)")
     p_full.add_argument("--no-context", action="store_true", help="Skip .tex context extraction (titles+abstracts only); use for backfill papers whose .tex has no inline cites")
 
     p_recheck = sub.add_parser("recheck-contrasts", help="Re-verify contrasts rows with a focused prompt; sidecar-resumable")

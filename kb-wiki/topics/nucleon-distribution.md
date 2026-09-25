@@ -1,8 +1,8 @@
 # Nucleon distribution
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Nucleon distribution
+**PhySH lineage:** Nuclear structure & decays > Nucleon distribution
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 
@@ -35,11 +35,11 @@ Active directions visible in recent papers include the use of isobar collisions 
 - [1010.5103](../papers/1010.5103.md) (2010) [2] Giant neutron halo in nuclei beyond beta-stability line
 - [0903.1723](../papers/0903.1723.md) (2009) [1] The Nucleon Distribution Amplitudes and their application to nucleon form factors and the $N \to Δ$ transition at interm...
 - [0807.4861](../papers/0807.4861.md) (2008) [2] Nucleon to Pion Transition Distribution Amplitudes in a Light-Cone Quark Model
-- [hep-ph/0101279](../papers/hep-ph/0101279.md) (0000) [2] hep-ph/0101279
-- [hep-ph/0311082](../papers/hep-ph/0311082.md) (0000) [2] hep-ph/0311082
-- [hep-ph/0604050](../papers/hep-ph/0604050.md) (0000) [2] hep-ph/0604050
-- [hep-ph/0701125](../papers/hep-ph/0701125.md) (0000) [2] hep-ph/0701125
-- [nucl-th/0111006](../papers/nucl-th/0111006.md) (0000) [2] nucl-th/0111006
-- [nucl-th/0112054](../papers/nucl-th/0112054.md) (0000) [2] nucl-th/0112054
-- [nucl-th/0306032](../papers/nucl-th/0306032.md) (0000) [2] nucl-th/0306032
-- [nucl-th/0405027](../papers/nucl-th/0405027.md) (0000) [2] nucl-th/0405027
+- [hep-ph/0101279](../papers/hep-ph_0101279.md) (0000) [2] hep-ph/0101279
+- [hep-ph/0311082](../papers/hep-ph_0311082.md) (0000) [2] hep-ph/0311082
+- [hep-ph/0604050](../papers/hep-ph_0604050.md) (0000) [2] hep-ph/0604050
+- [hep-ph/0701125](../papers/hep-ph_0701125.md) (0000) [2] hep-ph/0701125
+- [nucl-th/0111006](../papers/nucl-th_0111006.md) (0000) [2] nucl-th/0111006
+- [nucl-th/0112054](../papers/nucl-th_0112054.md) (0000) [2] nucl-th/0112054
+- [nucl-th/0306032](../papers/nucl-th_0306032.md) (0000) [2] nucl-th/0306032
+- [nucl-th/0405027](../papers/nucl-th_0405027.md) (0000) [2] nucl-th/0405027

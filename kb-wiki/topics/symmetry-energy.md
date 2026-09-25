@@ -1,6 +1,6 @@
 # Symmetry energy
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > [Nuclear matter](nuclear-matter.md) > Symmetry energy
+**PhySH lineage:** Nuclear structure & decays > [Nuclear matter](nuclear-matter.md) > Symmetry energy
 
 **Broader:** [Nuclear matter](nuclear-matter.md)
 

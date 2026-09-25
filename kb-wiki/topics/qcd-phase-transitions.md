@@ -42,8 +42,8 @@ Active directions include probing the QCD critical point through novel observabl
 - [1107.1581](../papers/1107.1581.md) (2011) [2] Surface tension in the cold and dense chiral transition and astrophysical applications
 - [1003.4169](../papers/1003.4169.md) (2010) [1] Chiral Magnetic Effect and QCD Phase Transitions with Effective Models
 - [0709.2487](../papers/0709.2487.md) (2007) [2] Exploring the QCD phase structure with density fluctuations
-- [hep-ph/9411391](../papers/hep-ph/9411391.md) (0000) [1] hep-ph/9411391
-- [hep-ph/9603403](../papers/hep-ph/9603403.md) (0000) [1] hep-ph/9603403
-- [hep-ph/9807550](../papers/hep-ph/9807550.md) (0000) [1] hep-ph/9807550
-- [hep-th/0510090](../papers/hep-th/0510090.md) (0000) [1] hep-th/0510090
-- [nucl-th/9702040](../papers/nucl-th/9702040.md) (0000) [2] nucl-th/9702040
+- [hep-ph/9411391](../papers/hep-ph_9411391.md) (0000) [1] hep-ph/9411391
+- [hep-ph/9603403](../papers/hep-ph_9603403.md) (0000) [1] hep-ph/9603403
+- [hep-ph/9807550](../papers/hep-ph_9807550.md) (0000) [1] hep-ph/9807550
+- [hep-th/0510090](../papers/hep-th_0510090.md) (0000) [1] hep-th/0510090
+- [nucl-th/9702040](../papers/nucl-th_9702040.md) (0000) [2] nucl-th/9702040

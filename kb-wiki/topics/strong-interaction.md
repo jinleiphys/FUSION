@@ -2,7 +2,7 @@
 
 **PhySH lineage:** Strong interaction
 
-**Narrower:** [Quark model](quark-model.md), [Color confinement](color-confinement.md), [Multiquark bound states](multiquark-bound-states.md), [Quantum chromodynamics](quantum-chromodynamics.md), [Quark matter](quark-matter.md), [Quark-gluon plasma](quark-gluon-plasma.md), [Quark & gluon jets](quark-gluon-jets.md)
+**Narrower:** [Quark model](quark-model.md), [Color confinement](color-confinement.md), Multiquark bound states, [Quantum chromodynamics](quantum-chromodynamics.md), [Quark matter](quark-matter.md), [Quark-gluon plasma](quark-gluon-plasma.md), Quark & gluon jets
 
 ## Landscape
 

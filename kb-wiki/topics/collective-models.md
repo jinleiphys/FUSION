@@ -32,12 +32,12 @@ Open questions include the effect of large neutron excess on the dipole response
 - [0903.4639](../papers/0903.4639.md) (2009) [1] On the asymptotic methods for nuclear collective models
 - [0807.4410](../papers/0807.4410.md) (2008) [1] Unified description of 0+ states in a large class of nuclear collective models
 - [0805.4787](../papers/0805.4787.md) (2008) [2] Skyrme-Rpa Description of Dipole Giant Resonance in Heavy and Superheavy Nuclei
-- [nucl-th/0312109](../papers/nucl-th/0312109.md) (0000) [2] nucl-th/0312109
-- [nucl-th/0409050](../papers/nucl-th/0409050.md) (0000) [2] nucl-th/0409050
-- [nucl-th/0510029](../papers/nucl-th/0510029.md) (0000) [2] nucl-th/0510029
-- [nucl-th/0510030](../papers/nucl-th/0510030.md) (0000) [2] nucl-th/0510030
-- [nucl-th/0605066](../papers/nucl-th/0605066.md) (0000) [2] nucl-th/0605066
-- [nucl-th/0610091](../papers/nucl-th/0610091.md) (0000) [2] nucl-th/0610091
-- [nucl-th/9707026](../papers/nucl-th/9707026.md) (0000) [2] nucl-th/9707026
-- [nucl-th/9801040](../papers/nucl-th/9801040.md) (0000) [2] nucl-th/9801040
-- [nucl-th/9909071](../papers/nucl-th/9909071.md) (0000) [2] nucl-th/9909071
+- [nucl-th/0312109](../papers/nucl-th_0312109.md) (0000) [2] nucl-th/0312109
+- [nucl-th/0409050](../papers/nucl-th_0409050.md) (0000) [2] nucl-th/0409050
+- [nucl-th/0510029](../papers/nucl-th_0510029.md) (0000) [2] nucl-th/0510029
+- [nucl-th/0510030](../papers/nucl-th_0510030.md) (0000) [2] nucl-th/0510030
+- [nucl-th/0605066](../papers/nucl-th_0605066.md) (0000) [2] nucl-th/0605066
+- [nucl-th/0610091](../papers/nucl-th_0610091.md) (0000) [2] nucl-th/0610091
+- [nucl-th/9707026](../papers/nucl-th_9707026.md) (0000) [2] nucl-th/9707026
+- [nucl-th/9801040](../papers/nucl-th_9801040.md) (0000) [2] nucl-th/9801040
+- [nucl-th/9909071](../papers/nucl-th_9909071.md) (0000) [2] nucl-th/9909071

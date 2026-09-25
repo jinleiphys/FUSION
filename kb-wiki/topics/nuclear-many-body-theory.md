@@ -39,9 +39,9 @@ Active directions include extending calculations to heavy and exotic nuclei, whe
 - [0812.1819](../papers/0812.1819.md) (2008) [2] Recent progress in Hamiltonian light-front QCD
 - [0805.2318](../papers/0805.2318.md) (2008) [2] Liquid-gas phase transition in nuclear matter from realistic many-body approaches
 - [0804.3098](../papers/0804.3098.md) (2008) [2] Nuclear Structure and the Search for Collective Enhancement of P,T-Violation
-- [nucl-th/0009055](../papers/nucl-th/0009055.md) (0000) [2] nucl-th/0009055
-- [nucl-th/0012082](../papers/nucl-th/0012082.md) (0000) [2] nucl-th/0012082
-- [nucl-th/0107066](../papers/nucl-th/0107066.md) (0000) [2] nucl-th/0107066
-- [nucl-th/0310046](../papers/nucl-th/0310046.md) (0000) [2] nucl-th/0310046
-- [nucl-th/0407106](../papers/nucl-th/0407106.md) (0000) [2] nucl-th/0407106
-- [nucl-th/0408008](../papers/nucl-th/0408008.md) (0000) [1] nucl-th/0408008
+- [nucl-th/0009055](../papers/nucl-th_0009055.md) (0000) [2] nucl-th/0009055
+- [nucl-th/0012082](../papers/nucl-th_0012082.md) (0000) [2] nucl-th/0012082
+- [nucl-th/0107066](../papers/nucl-th_0107066.md) (0000) [2] nucl-th/0107066
+- [nucl-th/0310046](../papers/nucl-th_0310046.md) (0000) [2] nucl-th/0310046
+- [nucl-th/0407106](../papers/nucl-th_0407106.md) (0000) [2] nucl-th/0407106
+- [nucl-th/0408008](../papers/nucl-th_0408008.md) (0000) [1] nucl-th/0408008

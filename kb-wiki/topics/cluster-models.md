@@ -70,13 +70,13 @@ Open questions include the missing monopole strength of the Hoyle state in carbo
 - [0812.4732](../papers/0812.4732.md) (2008) [2] A microscopic cluster model study of $^3$He+$p$ scatterings
 - [0811.3156](../papers/0811.3156.md) (2008) [1] Light $Ξ$ hypernuclei in four-body cluster models
 - [0712.2081](../papers/0712.2081.md) (2007) [2] Missing monopole strength of the Hoyle state in the inelastic $α$+$^{12}$C scattering
-- [astro-ph/0402668](../papers/astro-ph/0402668.md) (0000) [2] astro-ph/0402668
-- [nucl-th/0007018](../papers/nucl-th/0007018.md) (0000) [1] nucl-th/0007018
-- [nucl-th/0010053](../papers/nucl-th/0010053.md) (0000) [2] nucl-th/0010053
-- [nucl-th/0111015](../papers/nucl-th/0111015.md) (0000) [2] nucl-th/0111015
-- [nucl-th/0312028](../papers/nucl-th/0312028.md) (0000) [2] nucl-th/0312028
-- [nucl-th/0406048](../papers/nucl-th/0406048.md) (0000) [1] nucl-th/0406048
-- [nucl-th/0406049](../papers/nucl-th/0406049.md) (0000) [1] nucl-th/0406049
-- [nucl-th/0502072](../papers/nucl-th/0502072.md) (0000) [2] nucl-th/0502072
-- [nucl-th/0701061](../papers/nucl-th/0701061.md) (0000) [2] nucl-th/0701061
-- [nucl-th/9407019](../papers/nucl-th/9407019.md) (0000) [2] nucl-th/9407019
+- [astro-ph/0402668](../papers/astro-ph_0402668.md) (0000) [2] astro-ph/0402668
+- [nucl-th/0007018](../papers/nucl-th_0007018.md) (0000) [1] nucl-th/0007018
+- [nucl-th/0010053](../papers/nucl-th_0010053.md) (0000) [2] nucl-th/0010053
+- [nucl-th/0111015](../papers/nucl-th_0111015.md) (0000) [2] nucl-th/0111015
+- [nucl-th/0312028](../papers/nucl-th_0312028.md) (0000) [2] nucl-th/0312028
+- [nucl-th/0406048](../papers/nucl-th_0406048.md) (0000) [1] nucl-th/0406048
+- [nucl-th/0406049](../papers/nucl-th_0406049.md) (0000) [1] nucl-th/0406049
+- [nucl-th/0502072](../papers/nucl-th_0502072.md) (0000) [2] nucl-th/0502072
+- [nucl-th/0701061](../papers/nucl-th_0701061.md) (0000) [2] nucl-th/0701061
+- [nucl-th/9407019](../papers/nucl-th_9407019.md) (0000) [2] nucl-th/9407019

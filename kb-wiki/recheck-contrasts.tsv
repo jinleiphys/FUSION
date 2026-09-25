@@ -17407,3 +17407,864 @@ nucl-th/9909066	hep-ph/9808237	contrasts	low	recheck response unparseable, origi
 nucl-th/9909066	nucl-th/9806080	contrasts	low	recheck response unparseable, original label kept
 nucl-th/9909066	nucl-th/9810021	contrasts	low	recheck response unparseable, original label kept
 nucl-th/9909066	nucl-th/9809023	contrasts	low	recheck response unparseable, original label kept
+0803.3336	nucl-th/9611018	compares	high	States the present model differs from Baldo et al in diabatic motion and geometry, a neutral methodological difference not a dispute over their claims.
+1103.4918	1002.0907	background	low	Context is truncated and does not establish a dispute with the cited paper's own claims
+1107.5707	1002.3153	uses	high	Cited as prior literature on constraining the equation of state, not disputed
+1107.5707	1101.1504	uses	high	Cited as prior literature on constraining the equation of state, not disputed
+0711.3382	nucl-th/0605002	contrasts	medium	Citing paper disputes the mean-field assumption that fragments retain memory of low-density symmetry energy, calling it unconvincing
+0911.1092	astro-ph/0407530	contrasts	high	Citing paper reports parabolic approximation gives larger transition densities than its own results, disputing Kubis's prediction as quantitatively in tension
+0908.3137	0903.0343	background	low	No citation context was extracted, so no dispute can be verified
+0808.1504	nucl-th/0409047	uses	medium	Cited as an example where transport approaches underestimate slopes, supporting the citing paper's own point rather than disputing the cited paper's claims
+0808.1504	0708.1488	background	low	No citation context extracted, so no dispute can be established
+0808.1504	nucl-th/0011059	background	low	No citation context extracted, so no dispute can be established
+0705.4669	astro-ph/0606679	background	low	No citation context extracted from tex, so dispute with target cannot be verified
+0909.1600	nucl-th/0504018	contrasts	high	Citing paper finds a pronounced deformed halo in 44Mg, contradicting expectations from the cited paper.
+0911.5470	astro-ph/0407530	contrasts	high	Citing paper reports parabolic approximation gives significantly larger transition densities than its own results, disputing Kubis's prediction.
+1003.4901	astro-ph/0411538	contrasts	high	Citing paper says its spallation treatment overcomes the cited paper's assumption that interaction simply destroys the strangelet
+0801.2880	nucl-th/0308045	compares	high	Contrast is only between calculational methods, not a dispute over the cited paper's claims.
+0808.3363	nucl-th/0312024	background	low	The context is too thin to establish a dispute with the target paper's own claims
+0909.2573	nucl-th/0303062	contrasts	high	Citing paper disputes JOS claim that stopped kaons cannot reveal the Lambda(1405), proposing a method that does
+0909.2573	nucl-th/0109006	contrasts	high	Data favor Lambda(1405) over the Lambda*(1420) invoked by Geng-Oset, contradicting their claim
+1011.6142	astro-ph/0507061	contrasts	high	Citing paper says observed cooling rate is significantly larger than expected from the medium modified Urca process of the cited paper, indicating tension with its predictions.
+1004.2320	nucl-th/9710019	compares	high	The citing paper notes a methodological difference from the Schrodinger-like equations used previously, not a dispute with the cited paper's claims.
+1108.1745	nucl-th/9711022	contrasts	high	Citing paper asserts a very different pattern from Ramos and Oset, attributing it to their on-shell propagator treatment and nucleon hole term
+1108.1745	nucl-th/9906016	contrasts	high	Citing paper asserts a very different pattern from Ramos and Oset, attributing it to their on-shell propagator treatment and nucleon hole term
+1003.0330	0903.0343	contrasts	high	Citing paper explicitly states it does not agree with the criticism by the authors of the cited paper
+1003.0330	0908.3137	background	low	Citation appears only in a reference list with no substantive context
+1103.2403	0908.1922	contrasts	high	Citing paper reports no visible or significant difference, explicitly contrasting with TARGET's claim that U-boson lifts the fluffy EOS
+0904.3152	nucl-th/0207004	uses	high	Target cited as an example of more involved calculations the authors do not aim to perform
+0708.0357	nucl-th/0412010	contrasts	high	Citing paper notes Bertulani's relativistic CDCC results do not suggest the higher-order effect is significant, in tension with their own finding of significant higher-order effects.
+0709.2530	cond-mat/0108380	contrasts	high	Citing paper finds nonuniversal depletion larger than the EFT prediction of the cited paper, indicating quantitative tension with its result
+1102.4799	cond-mat/0604255	contrasts	high	Citing paper flags a different claim from these refs about the number of necessary operators
+1102.4799	nucl-th/0606006	contrasts	high	Citing paper flags a different claim from these refs about the number of necessary operators
+1001.4497	1710.05815	compares	high	The citing paper notes a difference in formulation from Wetterich's effective average action, not a dispute with its claims.
+0707.0399	nucl-th/9908028	uses	high	Citing paper cites Isgur's critique as background support for its own OGE-based approach, not as a dispute with the cited work.
+0707.0399	hep-lat/9908009	uses	high	Citing paper cites Isgur's critique as background support for its own OGE-based approach, not as a dispute with the cited work.
+1005.1456	0712.0252	compares	high	Citing paper reports Dubray et al found elongated shape without clear neck, a different result but no explicit dispute asserted
+0906.0636	0704.0731	compares	high	Compares weak T=1 tensor effects to T=0 tensor force without disputing the cited paper's claims
+1105.0358	1004.4065	compares	high	The citing paper notes a methodological difference from the target's strategy of extracting n(k) from data, not a dispute over the target's claims.
+0907.3534	hep-ph/9908230	uses	high	Target is cited as a pion cloud model whose predictions are contradicted by data, not a dispute with the target's own claims by the citing paper
+0907.3534	nucl-th/0512024	uses	medium	Target is cited as an example of absorption models whose argument fails, but the citing paper does not directly dispute the target's conclusions
+0907.3534	hep-ph/0311220	contrasts	medium	Citing paper notes HERMES data show increasing pT broadening with Q2, at variance with the Q2 dependence predicted by the target
+1107.3402	1102.4574	uses	high	PHSD incorporates the 4-pion channels microscopically instead of using the detailed-balance parametrization of the cited work, a methodological difference not a dispute.
+0805.4382	nucl-th/0610022	background	low	Context describes a third-party critique of Yamazaki-Akaishi, not a dispute with the cited Faddeev paper itself
+1109.5399	nucl-th/0308048	contrasts	high	Citing paper says its approach is at variance with the cited paper's treatment where the vector field was only at the nucleon level, not in quark dynamics
+1009.5514	physics/0701220	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	physics/0309107	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	hep-ph/0212403	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	physics/0604188	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	0709.0077	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	0807.4943	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	1008.3907	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	hep-ph/0201303	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	physics/0302015	background	low	Citation context is too thin to establish any dispute with the cited paper
+1009.5514	nucl-th/0601050	background	low	Citation context is too thin to establish any dispute with the cited paper
+1112.2114	0708.2818	contrasts	high	Citing paper says the GKP-Witten prescription relating chemical potential to density has an ambiguity, citing this paper as the source of that problem
+1202.3045	1004.0455	contrasts	high	Citing paper argues the cited paper's claim of no K-matrix poles is wrong because they implicitly have K-matrix poles
+1203.5234	nucl-th/0310085	contrasts	high	Citing paper notes its weakly bound I=0 QBS disagrees with the tight binding over 100 MeV predicted by the cited paper
+1201.3596	nucl-th/9512014	contrasts	high	Citing paper explicitly labels the cited work as a conflicting analysis finding the opposite result
+1110.5714	astro-ph/9706294	contrasts	high	Citing paper states the FRR global potential cannot reproduce the new experimental data, disputing its claimed applicability
+1110.5714	astro-ph/0305450	contrasts	high	Citing paper states the FRR global potential cannot reproduce the new experimental data, disputing its claimed applicability
+1110.5714	astro-ph/0004059	contrasts	high	Citing paper states the FRR global potential cannot reproduce the new experimental data, disputing its claimed applicability
+1110.5714	1010.4283	contrasts	high	Citing paper states the FRR global potential cannot reproduce the new experimental data, disputing its claimed applicability
+1208.6528	nucl-th/0303035	uses	high	Target is cited as evidence that Illinois three-body forces overbind pure neutron systems, supporting the citing paper's motivation rather than disputing the target's own claims.
+1206.5011	nucl-th/0307089	uses	high	Citing paper cites Schwenk & Friman as support for screening reducing Tc, not disputing their claims
+1206.6805	1009.3244	compares	high	Contrast marks a different modeling approach, not a dispute with the cited paper's claims
+1203.0071	nucl-th/0111051	background	low	Context describes a third-party CDCC result without stating any dispute with the citing paper's DPP claims
+1301.6670	nucl-th/0604008	contrasts	high	Citing paper disputes the cited paper's claim that chemical equilibrium deviation is a source of bulk viscosity
+1204.3959	hep-ph/0608297	uses	medium	Citing paper reports Matheus and Chen's tetraquark mass claim as prior literature, not as a dispute with its own results
+1204.3959	1106.0600	uses	medium	Citing paper cites Nieves and Valderrama's bound-state prediction as prior work, not as a direct dispute with its own claims
+1208.2279	1110.5466	compares	high	Notes a different approach in spirit, not a dispute with the cited paper's claims
+1204.4125	hep-ph/9802409	contrasts	high	Citing paper states its leading-order mixing angle is significantly smaller than the value extracted in the cited phenomenological analyses
+1301.3314	0911.2392	contrasts	high	Citing paper asserts hydrodynamic modeling of p-p with collective expansion is not always compatible with data, disputing the cited paper's claims.
+1301.3314	1010.0400	contrasts	high	Citing paper asserts hydrodynamic modeling of p-p with collective expansion is not always compatible with data, disputing the cited paper's claims.
+1209.3992	0805.2334	background	low	No citation context was extracted, so no dispute with the cited paper can be verified.
+1211.7310	astro-ph/9706120	compares	medium	Different seed and neutron-to-seed ratio chosen relative to Qian, a methodological difference not a dispute
+1211.6968	1301.5225	contrasts	high	Citing paper asserts the shell model calculation lacked a quenching factor and could not recover full GT and first-forbidden strengths, implying its results are deficient.
+1206.0234	nucl-th/9801034	uses	high	The citing paper cites the target as evidence that Weinberg power counting is disputed, not as its own dispute with the target.
+1301.0165	nucl-th/0609021	contrasts	high	Citing paper reports disagreement with ratios from the KLN model implementation, contradicting its predictions
+1205.5827	nucl-th/0412020	uses	medium	Target is cited as providing a conventional nuclear physics explanation, not as being disputed by the citing paper
+1207.6211	nucl-th/0110021	contrasts	high	Citing paper calls the dynamical PSS connection mystified and misleading, disputing the cited paper's own claim.
+1207.6211	1004.0823	contrasts	high	Citing paper rejects the nonperturbative nature of PSS attributed to the cited paper as mystified and misleading.
+1205.0782	hep-ph/0604138	contrasts	high	Citing paper asserts the KSS bound is not violated, contradicting the cited paper's claim that it is violated
+1205.1762	nucl-th/9711062	background	low	No citation context extracted from the tex, so no dispute can be established
+1205.1762	nucl-th/9808012	background	low	No citation context extracted from the tex, so no dispute can be established
+1208.1736	nucl-th/0303035	uses	high	The citing paper cites the target as evidence that Illinois forces produce unphysical overbinding in pure neutron systems, not as a disputed claim.
+1207.6206	1204.6260	uses	high	TARGET is cited as showing RH+RPA fragmentation, used as evidence for the improvement of the present RHF functional
+1211.1977	1204.5404	compares	high	Neutral comparison of scope: TARGET treated QE only, other work added pion production without FSI
+1211.1977	1202.4745	compares	high	Neutral comparison of scope: TARGET treated pion production without FSI, other work treated QE only
+1212.3398	1008.4499	contrasts	medium	Citing paper identifies an unaddressed systematic uncertainty in the cited finite volume three-body calculations
+1212.3398	0811.0159	contrasts	medium	Citing paper identifies an unaddressed systematic uncertainty in the cited finite volume three-body calculations
+1212.3398	0910.2191	contrasts	medium	Citing paper identifies an unaddressed systematic uncertainty in the cited finite volume three-body calculations
+1212.3398	1205.0277	contrasts	medium	Citing paper identifies an unaddressed systematic uncertainty in the cited finite volume three-body calculations
+1302.1165	1301.0713	contrasts	high	Citing paper's self-consistent shallow third minimum conflicts with the deeper minima from earlier macroscopic-microscopic calculations like the cited paper
+1305.5417	0904.2990	contrasts	high	Citing paper notes Feng and Jin favor a stiff symmetry energy, in tension with the soft result it supports
+1303.2196	nucl-th/0404089	compares	high	Notes a different parametrization of the bag constant, not a dispute with the cited paper's claims
+1302.3836	nucl-th/9606039	contrasts	high	Citing paper says its sound velocity results would rule out the delayed expansion and prolonged lifetime suggested by the cited paper
+1307.1889	1007.1746	background	low	Context describes a prior simpler SRG strategy without asserting the cited paper's claims are wrong
+1307.1889	1012.3381	background	low	Context describes a prior simpler SRG strategy without asserting the cited paper's claims are wrong
+1304.5454	0910.4586	compares	high	Describes a methodological difference in how Schmidt and Moroz eliminated couplings, not a dispute with their claims
+1307.2854	cond-mat/0103331	contrasts	high	Citing paper says its energy-dependent resonant features are in contrast to previous models where the parameter was assumed energy-independent
+1305.6959	nucl-th/0402064	uses	high	The citing paper cites the quark-meson coupling model as an example of in-medium form factor modifications, not as a disputed claim.
+1311.1607	1111.3798	contrasts	high	Citing paper states its cross sections are one order of magnitude smaller than the hadronic interaction-model calculations of the target paper, indicating quantitative tension with the target's results.
+1305.7101	1004.4871	uses	high	The citing paper cites the target as support for questioning a conservative radius estimate, not as a dispute with the target's own claims.
+1306.4108	0801.3540	uses	high	Cited as an example of authors reaching the opposite conclusion about OPE, a third-party disagreement, not a dispute with the cited paper itself.
+1306.4108	0808.0073	uses	high	Cited as an example of authors reaching the opposite conclusion about OPE, a third-party disagreement, not a dispute with the cited paper itself.
+1204.2800	1104.2236	contrasts	low	recheck response unparseable, original label kept
+1307.5850	1202.5295	compares	high	Notes the cited work uses a different strategy and pure Yang-Mills, so no direct comparison is possible, not a dispute.
+1307.4487	0907.3423	contrasts	high	Citing paper's measured quantity disagrees with the cited paper's theoretical predictions.
+1309.5191	nucl-th/0605082	uses	high	GWU analysis cited as evidence for absence of N(1710), supporting the citing paper's argument rather than disputing it
+1309.5477	1205.4066	contrasts	medium	Citing paper suggests the high Ye values from the cited paper could be an artifact of its progenitor choice, implying its result may be wrong.
+1308.0031	1202.6242	uses	high	Cited as a counter-example within a range of L values, not as a disputed claim
+1307.4309	1010.1708	uses	high	Citing paper cites the 2p2h calculation as supporting evidence that two-body currents cannot fully account for MiniBooNE data
+1307.4309	1112.2123	uses	high	Citing paper cites the 2p2h calculation as supporting evidence that two-body currents cannot fully account for MiniBooNE data
+1307.4309	1104.5446	uses	high	Citing paper cites the 2p2h calculation as supporting evidence that two-body currents cannot fully account for MiniBooNE data
+1307.7592	1105.6360	contrasts	high	Citing paper finds nonzero coefficient contradicting the cited paper's prediction of zero from entropy production arguments
+1304.7030	1109.4405	contrasts	high	Citing paper states PHENIX direct photon v2 is in contrast to theoretical expectations and predictions of the cited papers
+1304.7030	nucl-th/0511079	contrasts	high	Citing paper states PHENIX direct photon v2 is in contrast to theoretical expectations and predictions of the cited papers
+1304.7030	1107.0889	contrasts	high	Citing paper states PHENIX direct photon v2 is in contrast to theoretical expectations and predictions of the cited papers
+1311.2620	0904.3910	contrasts	low	recheck response unparseable, original label kept
+1311.1038	1302.1051	uses	high	Brune and Sayre is cited as support for excluding Stuttgart data, not disputed
+1309.4235	1211.4731	contrasts	high	Citing paper states the expression was incorrectly given in the target paper, correcting its result.
+1311.1980	1101.0554	uses	high	Citing paper cites the target as support for the claim that correlation functions are not universal
+1205.4326	1201.4885	contrasts	low	recheck response unparseable, original label kept
+1308.6002	1302.2089	contrasts	high	Citing paper asserts the Illinois force produces unphysical overbinding in pure neutron systems, contradicting the cited paper's claims.
+1308.6002	nucl-th/0303035	contrasts	high	Citing paper asserts the Illinois force produces unphysical overbinding in pure neutron systems, contradicting the cited paper's claims.
+1308.6002	nucl-th/0410115	background	low	Citation context is missing, so no dispute with the cited paper can be established.
+1311.1989	nucl-th/0604005	uses	high	Target is cited as an example of successful ad hoc procedures, not disputed
+1311.1989	0704.1542	uses	high	Target is cited as an alternative method, not as a disputed claim
+1311.7046	1305.3510	uses	medium	Target is cited as support that assumptions in another paper have been questioned, not as a dispute with the target itself
+1311.3390	nucl-th/0108004	compares	high	Citing paper notes its Woods-Saxon shape differs from the flat plateau plus half-Gaussian parametrization used by [TARGET], a neutral methodological difference not a dispute
+1311.3390	1004.1408	compares	high	Citing paper notes its Woods-Saxon shape differs from the flat plateau plus half-Gaussian parametrization used by [TARGET], a neutral methodological difference not a dispute
+1311.0255	1109.3459	compares	high	Citing paper notes its model differs in method and space from Dyson-Schwinger approaches, a neutral methodological difference not a dispute with the cited claims
+1311.0255	1108.0603	compares	high	Citing paper notes its model differs in method and space from Dyson-Schwinger approaches, a neutral methodological difference not a dispute with the cited claims
+1311.6672	nucl-th/0210012	contrasts	high	Citing paper states its AFDMC results are inconsistent with the cited paper's finding of core shrinkage
+1310.6631	nucl-th/0310001	background	low	Context is a thin fragment about complex energy method with no clear dispute with the cited paper's own claims
+1403.1186	1002.3153	contrasts	high	Citing paper says the 95% confidence radius range from the target is incompatible with nuclear experiment, disputing the target's result.
+1311.7573	0805.4383	contrasts	high	Citing paper argues divergences reported by Bender et al. arise from not remedying known problems, implying their conclusion is corrected.
+1311.7573	0809.2045	contrasts	high	Citing paper argues divergences reported by Bender et al. arise from not remedying known problems, implying their conclusion is corrected.
+1404.4517	0901.2757	compares	high	The citing paper lists the D meson mass substitution as an alternative approach and contrasts its own extracted mass against it, not disputing the cited paper's claims.
+1401.2367	1306.5442	contrasts	high	Citing paper asserts pT in p-Pb is stronger than the superposition model of the cited paper predicts
+1404.2440	nucl-th/0010048	compares	high	Notes similarity in applying BT construction, not a dispute with the cited paper's claims
+1404.2440	hep-ph/0108271	compares	high	Notes similarity in applying BT construction, not a dispute with the cited paper's claims
+1312.7307	1210.3280	contrasts	high	Citing paper presents its own scaling as differing from Sargsian's suggested scaling, indicating tension between the two claims.
+1404.2660	0901.2309	contrasts	high	Citing paper says its finding of no correlation between transition pressure and L appears to contradict these recent studies.
+1404.2660	1004.3882	contrasts	high	Citing paper says its finding of no correlation between transition pressure and L appears to contradict these recent studies.
+1404.2660	0807.4477	contrasts	high	Citing paper says its finding of no correlation between transition pressure and L appears to contradict these recent studies.
+1403.2232	nucl-th/0108006	compares	high	The 'in contrast' describes a methodological difference between KLN and IP-Glasma, not a dispute with the cited paper's claims.
+1403.2232	hep-ph/0212316	compares	high	The 'in contrast' describes a methodological difference between KLN and IP-Glasma, not a dispute with the cited paper's claims.
+1403.5119	1311.1843	contrasts	low	recheck response unparseable, original label kept
+1406.4696	1401.2605	background	low	Context notes the calculation employs phenomenological 3NFs with chiral 2BCs but does not assert its claims are wrong or in tension
+1406.7340	1405.3430	compares	high	Notes a difference in dominant channel between energy regimes, not a dispute with the cited paper's claims
+1407.6478	1210.3890	contrasts	low	recheck response unparseable, original label kept
+1407.8138	0907.1165	contrasts	high	Citing paper reports Gogny K_sym and Q_sym values that are in quantitative tension with the microscopic BHF predictions of the cited paper.
+1409.3110	1307.7654	contrasts	high	Citing paper notes Hong et al. claim PMR is insensitive to symmetry energy slope, in tension with the citing paper's finding that compatible constraints can be extracted
+1401.1010	0904.1487	contrasts	high	Citing paper states previous microscopic Bohr Hamiltonian theories adopted Inglis-Belyaev approximation, neglecting time-odd mean fields, which the citing paper corrects
+1401.1010	0911.0366	contrasts	high	Citing paper asserts the cited paper's Inglis-Belyaev approach underestimates inertial functions and stretches excitation spectra, a quantitative tension corrected by including Thouless-Valatin effect
+1407.6031	1401.7230	uses	high	Cited as evidence that TDHF overestimates above-barrier cross sections, supporting the citing paper's general characterization rather than disputing the cited paper's own claims
+1407.6031	1306.5514	uses	high	Cited as evidence that TDHF overestimates above-barrier cross sections, supporting the citing paper's general characterization rather than disputing the cited paper's own claims
+1207.6467	nucl-th/9712039	contrasts	low	recheck response unparseable, original label kept
+1405.3274	nucl-ex/0701025	compares	high	Notes a difference in weighting implementation between the present simulation and the usual Glauber implementation, not a dispute of the cited paper's claims
+1410.0895	1002.1006	contrasts	high	Citing paper asserts Otsuka's tensor-only explanation is corrected by showing central term also needed.
+1408.5172	1002.4441	contrasts	high	Citing paper argues J/psi pair observation should not be blindly interpreted as regeneration, in tension with the cited paper's statistical hadronization interpretation
+1409.2551	1311.5923	contrasts	high	Citing paper states its screening values are much smaller than those estimated by the cited paper, indicating quantitative tension with the cited paper's own result.
+1410.3681	1110.2858	contrasts	high	Citing paper asserts the cited paper's predicted low-energy monopole peaks are an artifact of discretization, correcting its result
+1308.5527	1003.4864	contrasts	low	recheck response unparseable, original label kept
+1403.2673	nucl-th/0601045	contrasts	low	recheck response unparseable, original label kept
+1411.4623	1305.5417	contrasts	high	Citing paper notes that the target found much higher L values, in tension with the constraint it supports
+1409.6347	0804.3858	contrasts	high	Citing paper states the factor of 1/2 in Eq. (9) of this paper is incorrect and corrects it
+1409.6347	0911.2720	contrasts	high	Citing paper states the factor of 1/2 in Eq. (3.2) is incorrect and the C(p,q) in Eq. (3.17) has an extra factor of 1/4
+1409.6347	0905.3234	contrasts	high	Citing paper states Eq. (12) of this paper does not reproduce the prefactor or momentum dependence correctly
+1409.6347	1009.5295	contrasts	high	Citing paper states Eq. (3) of this paper has an extra factor of 1/4
+1409.6347	0902.4435	contrasts	high	Citing paper states the factor of 1/2 in Eq. (3.2) is incorrect and the C(p,q) in Eq. (3.17) has an extra factor of 1/4
+1410.4206	1301.0786	contrasts	high	Citing paper argues the cited paper's claim neglected the transition form factor, correcting its conclusion.
+1410.4206	nucl-th/0104045	uses	high	Cited paper is invoked as the source of the form factor argument supporting the citing paper's critique of a third party.
+1410.0789	nucl-th/0408071	contrasts	medium	Citing paper states its results differ from Kanada-En'yo's AMD results on proton-neutron deformation of 16C
+1410.0789	nucl-th/9905048	contrasts	medium	Citing paper states its results differ from Kanada-En'yo's AMD results on proton-neutron deformation of 16C
+1410.0789	1202.1864	contrasts	medium	Citing paper states its results differ from Kanada-En'yo's AMD results on proton-neutron deformation of 16C
+1410.0789	nucl-th/0204039	contrasts	medium	Citing paper states its results differ from Kanada-En'yo's AMD results on proton-neutron deformation of 16C
+1410.3404	1109.4405	contrasts	high	Citing paper asserts prior works including target share a shortcoming by ignoring viscous medium modifications of the collision matrix element
+1410.3404	0803.1262	contrasts	high	Citing paper asserts prior works including target share a shortcoming by ignoring viscous medium modifications of the collision matrix element
+1307.2184	hep-ph/9705474	contrasts	low	recheck response unparseable, original label kept
+1504.06730	nucl-th/0005064	contrasts	high	Citing paper asserts newer Schwinger-Dyson analysis contradicts older studies' conclusion about real quark poles
+1502.01259	nucl-th/9511040	background	low	Context is too thin to establish a dispute with the cited papers
+1502.01259	nucl-th/9611053	background	low	Context is too thin to establish a dispute with the cited papers
+1503.03655	1002.0333	contrasts	high	Citing paper notes CGC predicts opposite rapidity asymmetry in average transverse momentum compared to hydrodynamic expectation
+1502.05673	1406.7789	contrasts	high	Citing paper reports a nonvanishing gap, correcting the cited paper's preliminary result of no pairing solution in this channel
+1505.07030	1010.3644	uses	high	The contrast is with approximate sharp-surface expressions often used in the literature, not a dispute with the cited paper's own claims.
+1505.07030	1411.1885	contrasts	high	The citing paper explicitly reports not finding inverted geometries that the cited work found, indicating a real disagreement with its results.
+1504.00177	1408.3368	compares	high	The citing paper notes its second-order result underpredicts attraction in contrast to the pseudopotential approach, a neutral methodological difference rather than a dispute with the cited paper's claims.
+1506.00584	1401.2367	contrasts	high	Citing paper asserts hydro calculations predict nq-independent pt, in tension with its own nq-dependent scaling findings
+1411.7058	astro-ph/9603138	background	low	Context is too thin and only notes that corrections are absent from a comparison, not a dispute with the cited paper's claims
+1411.7058	astro-ph/0109209	background	low	Context is too thin and only notes that corrections are absent from a comparison, not a dispute with the cited paper's claims
+1502.07500	nucl-th/9709044	background	low	Context only states the model is not dealt with and is inapplicable, without asserting the cited paper's claims are wrong
+1411.4959	1210.5907	contrasts	high	Citing paper says Patel's proposed oscillations may have too large a wavelength to be observable, in tension with the cited scenario.
+1411.4959	1111.0177	contrasts	high	Citing paper says Patel's proposed oscillations may have too large a wavelength to be observable, in tension with the cited scenario.
+1411.7804	nucl-th/9502030	uses	medium	Target is cited as support that Lorentz symmetry fixes time-odd fields while non-relativistic models have ambiguity, not a dispute with target's own claims
+1503.05774	0810.2959	uses	high	AdS/QCD prediction is cited as supporting the 2200 MeV mass, not disputed
+1503.05774	1202.0845	uses	high	GWU analysis is cited as prior evidence that the resonance is not seen, supporting the citing paper's case
+1502.04830	1410.0614	contrasts	high	Citing paper states the cited model is not fully self-consistent, correcting its approach
+1502.04682	1311.2925	contrasts	high	Citing paper asserts prior strategy in target failed to simultaneously describe nuclei and nuclear matter, motivating a different approach
+1502.04682	1312.7872	contrasts	high	Citing paper asserts prior strategy in target failed to simultaneously describe nuclei and nuclear matter, motivating a different approach
+1506.00520	1403.0366	contrasts	low	recheck response unparseable, original label kept
+1501.01981	1002.4538	background	low	Context only says two-body effects are partially accounted for in such studies, no assertion that their claims are wrong
+1501.01981	0910.2622	background	low	Context only says two-body effects are partially accounted for in such studies, no assertion that their claims are wrong
+1501.01981	1102.2777	background	low	Context only says two-body effects are partially accounted for in such studies, no assertion that their claims are wrong
+1411.7863	nucl-th/0001051	contrasts	high	Citing paper states the cited paper's Wilson coefficient term differs by a factor of -2, correcting its result.
+1411.7863	hep-ph/0411285	contrasts	high	Citing paper states the cited paper's Wilson coefficient term differs by a factor of -2, correcting its result.
+1411.1704	1408.5330	compares	medium	States calculations are not directly comparable due to different kinematics and assumptions, a neutral methodological difference not a dispute
+1411.1704	1008.4619	compares	medium	Describes following a similar procedure to the target then doing something different, a methodological contrast not a claim the target is wrong
+1411.1704	nucl-th/0601063	contrasts	high	Explicitly says the target's dipole Dirac and Pauli form factor parametrization contradicts empirical and theoretical information
+1411.1704	1406.1612	compares	medium	States calculations are not directly comparable due to different kinematics and assumptions, a neutral methodological difference not a dispute
+1411.1704	1406.2962	compares	medium	Notes that unlike the target work they include normalization, a methodological difference rather than asserting the target is wrong
+1411.1704	hep-ph/0502013	compares	medium	States calculations are not directly comparable due to different kinematics and assumptions, a neutral methodological difference not a dispute
+1506.08442	0812.3859	contrasts	high	Citing paper asserts SU(2) and SU(3) differ for EM currents, contradicting cited paper's claim of no qualitative difference
+1507.03756	0911.0483	background	low	Context is too thin to establish a dispute with the cited paper's own claims
+1403.6818	1205.5379	contrasts	low	recheck response unparseable, original label kept
+1506.09195	1308.3664	contrasts	high	Citing paper argues that constraining NEDF via neutron matter properties and rejecting higher isovector terms is ill-advised, directly disputing the cited paper's approach.
+1506.04507	nucl-th/0603032	uses	high	Target is cited as experimental evidence against PKO1 and DD-ME2 predictions, not as a disputed claim.
+1506.04507	1403.4039	uses	high	Target is cited as prior work whose approximation the citing paper improves upon, not as a disputed claim.
+1506.04507	1307.4054	uses	high	Target is cited as supporting evidence for the s-shaped specific heat behavior, not as a disputed claim.
+1506.05225	0910.2622	background	low	The cited paper is mentioned as an example of studies that only partially account for two-body current effects, but no explicit dispute with its own claims is asserted
+1507.07239	1105.5977	compares	high	The ab initio ANCs are compared with the present results, noting moderate conflict but not asserting the cited paper's claims are wrong.
+1507.05005	1405.3877	contrasts	high	Citing paper states the cited solutions are valid only without pressure gradients, so anisotropies remain constant, which may not hold, motivating their numerical approach
+1506.05586	1203.3635	background	low	Context only reports the extracted sigma term value without asserting a dispute with the cited paper
+1506.05586	1211.1148	background	low	Context only reports the extracted sigma term value without asserting a dispute with the cited paper
+1506.04949	1102.3789	contrasts	high	Citing paper reports no sign of the AAD Efimov effect predicted by the cited work, disputing its prediction
+1506.04949	cond-mat/0410417	contrasts	high	Citing paper reports no sign of the AAD Efimov effect predicted by the cited work, disputing its prediction
+1506.04949	nucl-th/0610105	contrasts	high	Citing paper reports no sign of the AAD Efimov effect predicted by the cited work, disputing its prediction
+1506.04949	1001.1981	contrasts	high	Citing paper reports no sign of the AAD Efimov effect predicted by the cited work, disputing its prediction
+1506.05975	1407.7943	compares	high	Citing paper notes a different approach to stability, not a dispute with the cited claims
+1506.05975	0910.1674	compares	high	Citing paper notes a different approach to stability, not a dispute with the cited claims
+1506.05975	0805.4086	compares	high	Citing paper notes a different approach to stability, not a dispute with the cited claims
+1501.07892	1012.0019	contrasts	low	recheck response unparseable, original label kept
+1404.0744	1009.3816	contrasts	low	recheck response unparseable, original label kept
+1512.01538	1110.6742	contrasts	high	Citing paper says previous 3+1D hydro calculations failed to describe pseudorapidity v2 and attributes this to their transport parameter choices
+1508.03991	nucl-th/0207007	compares	high	Different formalisms (light-front vs point-form) are noted as alternative approaches, not a dispute with the cited paper's claims.
+1507.07510	1102.1356	contrasts	high	Citing paper reports stronger curvature than the cited paper's result and notes differences in definitions and approach
+1510.01293	1411.1704	compares	high	The phrase 'in contrast to' describes a different methodological starting point, not a dispute with the cited paper's claims
+1510.01293	1505.01489	compares	high	The phrase 'in contrast to' describes a different methodological starting point, not a dispute with the cited paper's claims
+1512.06131	nucl-th/0408060	contrasts	low	recheck response unparseable, original label kept
+1512.08656	nucl-th/0005025	background	low	Context is too thin to establish a dispute with the cited paper's own claims
+1512.00951	1506.08120	contrasts	high	Citing paper states the Julich model fails to describe some cross sections, disputing the cited paper's claims
+1508.06680	nucl-th/0508025	background	low	The citing paper distinguishes its r_p^3 term from the third Zemach moment but does not dispute the cited paper's claims.
+1508.06680	1008.4345	background	low	The citing paper distinguishes its r_p^3 term from the third Zemach moment but does not dispute the cited paper's claims.
+1509.04124	1204.2815	contrasts	high	Citing paper argues observed eta dependence does not prove fluctuation-induced correlations, in tension with the cited paper's expectation that short-range correlations depend only on eta difference
+1509.01242	hep-ph/0608012	contrasts	high	Citing paper says its scaling is at variance with the expected weakly-coupled plasma behavior of the cited paper
+1507.08941	1402.6907	background	low	Context is truncated and only notes integrals cannot be cast analytically as in the target, not a dispute with its claims
+1601.01600	nucl-th/9902019	compares	high	Citing paper takes a different approach as an initial step, not disputing the cited paper's claims
+1601.00189	hep-ph/0110080	compares	high	Contrast marks a methodological difference and quantitative comparison, not a dispute with the cited paper's claims
+1602.07665	1206.4821	contrasts	high	Citing paper states its single-particle potential results provide a contrast to the relativistic versions in the target paper, indicating a disagreement with the target's own results.
+1510.06966	1011.5249	contrasts	high	Citing paper says double-hump is due to anisotropic flow rather than the Mach cone mechanism claimed by the cited paper
+1510.06966	1003.0194	contrasts	high	Citing paper says double-hump is due to anisotropic flow rather than the Mach cone mechanism claimed by the cited paper
+1510.06966	1009.3244	contrasts	high	Citing paper says double-hump is due to anisotropic flow rather than the Mach cone mechanism claimed by the cited paper
+1510.06966	0902.4870	contrasts	high	Citing paper says double-hump is due to anisotropic flow rather than the Mach cone mechanism claimed by the cited paper
+1602.02768	1102.0597	uses	high	Citing paper cites target as reporting empirical suggestion, then argues it is due to convention confusion, not a dispute with target's own claims.
+1601.07652	1312.5975	background	low	Context only notes a missing measurement in the table, no dispute with the cited paper's claims
+1602.05086	1104.2295	background	medium	Context describes a debate among models where the target is one approach, not a dispute with the target's own claims
+1601.07437	1402.7236	contrasts	high	Citing paper states modern calculations with improved schemes find substantial reduction of the directed flow signal, contradicting the earlier claim that v1 minimum signals a phase transition.
+1601.03971	1507.03910	contrasts	high	Citing paper states standard MCGM predictions disagree with data, framing the cited paper's approach as failing to reproduce measurements.
+1601.03971	1403.2232	contrasts	high	Citing paper notes standard MCGM produces broader E/E distribution than data, a quantitative tension with the cited paper's results.
+1604.01951	1502.00880	contrasts	high	Citing paper states the tensor part of the interaction was neglected in the target paper, a conceptual deficiency it corrects
+1603.08946	hep-ph/0503121	compares	medium	The phrase 'in contrast to' marks a difference in numerical sensitivity between simulations, not a dispute with the cited paper's claims.
+1603.08946	nucl-th/0509052	compares	medium	The phrase 'in contrast to' marks a difference in numerical sensitivity between simulations, not a dispute with the cited paper's claims.
+1512.08126	1109.4405	contrasts	high	Citing paper says PHENIX photon v2 observation is in contrast to theoretical expectations and predictions of the cited paper.
+1512.08126	nucl-th/0411110	compares	high	In contrast to Ref. marks a methodological difference in parton treatment, not a dispute with its claims.
+1512.08126	hep-ph/9802378	contrasts	high	Citing paper states the cited paper's formulae could not consistently describe photon production, correcting its approach.
+1512.08126	1107.0889	contrasts	high	Citing paper says PHENIX photon v2 observation is in contrast to theoretical expectations and predictions of the cited paper.
+1512.08126	nucl-th/0511079	contrasts	high	Citing paper says PHENIX photon v2 observation is in contrast to theoretical expectations and predictions of the cited paper.
+1604.00335	1110.3033	uses	medium	Target is cited as an example of initial state models that could not describe v2 and v3 simultaneously, supporting the citing paper's point rather than being disputed directly
+1605.07499	1510.02897	contrasts	high	Citing paper argues NSC's CD approach cannot constrain the capture cross section and their branching calculation disagrees with direct capture model
+1308.5787	nucl-th/0701046	contrasts	low	recheck response unparseable, original label kept
+1605.02371	1405.3243	background	low	The phrase 'in contrast to' signals a new, more flexible coupling solution, not a dispute with the cited papers' claims.
+1605.02371	1406.5322	background	low	The phrase 'in contrast to' signals a new, more flexible coupling solution, not a dispute with the cited papers' claims.
+1605.02371	1412.1017	background	low	The phrase 'in contrast to' signals a new, more flexible coupling solution, not a dispute with the cited papers' claims.
+1605.05455	1307.4921	contrasts	high	Comment disputes Rauscher's assumption that same OM potential applies to CE and CN formation
+1309.5451	1212.1122	contrasts	low	recheck response unparseable, original label kept
+1607.06791	0806.0873	background	low	Context only describes Summers and Nunes proposing an analysis, no dispute asserted here
+1608.02075	0908.1957	contrasts	high	Citing paper's abstract explicitly states its findings are contrary to the cited paper's claim of quasifission in these reactions
+1607.01264	1410.0372	contrasts	high	Citing paper argues Tsallis-based freezeout phase diagram disagrees with extensive statistical models, which it supports as correct
+1602.06378	1203.4529	contrasts	high	Citing paper says previous studies used traditional probability distribution and provides corrected formula, implying cited work's approach is wrong
+1602.06378	nucl-th/0611075	contrasts	high	Citing paper says previous studies used traditional probability distribution and provides corrected formula, implying cited work's approach is wrong
+1602.06378	1304.7133	contrasts	high	Citing paper says previous studies used traditional probability distribution and provides corrected formula, implying cited work's approach is wrong
+1602.06378	1508.02614	contrasts	high	Citing paper says previous studies used traditional probability distribution and provides corrected formula, implying cited work's approach is wrong
+1602.06378	1403.4903	contrasts	high	Citing paper says previous studies used traditional probability distribution and provides corrected formula, implying cited work's approach is wrong
+1606.02159	1406.2962	contrasts	high	Citing paper reports a smaller knee at k_max=6 versus the k_max=9 found in the target paper, indicating a quantitative tension with the target's result.
+1607.07927	1401.5845	contrasts	medium	Citing paper argues regeneration from strong hot medium effects predicts decreasing pT^2, contradicting observed increasing pT^2, challenging the cited mechanism
+1607.07927	0911.5008	contrasts	medium	Citing paper argues regeneration from strong hot medium effects predicts decreasing pT^2, contradicting observed increasing pT^2, challenging the cited mechanism
+1605.07158	1009.3244	contrasts	medium	Citing paper says this model greatly simplifies rapidity dependence, a limitation its own QCD-based approach aims to overcome
+1605.07158	1110.6742	contrasts	medium	Citing paper says this model greatly simplifies rapidity dependence, a limitation its own QCD-based approach aims to overcome
+1605.07158	nucl-th/0108004	contrasts	medium	Citing paper says this model greatly simplifies rapidity dependence, a limitation its own QCD-based approach aims to overcome
+1605.07158	1004.0805	contrasts	medium	Citing paper says flux tube models constrain rapidity dependence only phenomenologically, unlike its QCD-based derivation
+1607.00887	nucl-th/9507012	contrasts	low	recheck response unparseable, original label kept
+1608.01325	1602.08421	background	low	Context reports LHCb ruling out multiquark models and notes Lebed-Polosa predictions, but does not assert the citing paper disputes Lebed-Polosa's own claims
+1607.05245	1408.5646	compares	high	The contrast is between FLRW and Gubser expansion regimes, not a dispute with the cited paper's claims.
+1607.05245	1408.7048	compares	high	The contrast is between FLRW and Gubser expansion regimes, not a dispute with the cited paper's claims.
+1607.08565	1110.0221	compares	high	Citing paper notes prior works used non-relativistic approximations and different assumptions, a methodological difference not a dispute with their claims
+1607.08565	0910.2622	compares	high	Citing paper notes prior works used non-relativistic approximations and different assumptions, a methodological difference not a dispute with their claims
+1608.08615	1601.03593	background	low	No citation context extracted from the citing paper's tex, so no dispute can be verified.
+1608.08065	nucl-th/9905056	contrasts	low	recheck response unparseable, original label kept
+1312.4951	0801.3656	contrasts	low	recheck response unparseable, original label kept
+1611.02844	1112.2212	contrasts	high	Citing paper says contact-interaction Faddeev amplitude result is exposed as unrealistic, disputing the cited paper's own claim
+1611.08475	1207.2420	compares	high	The citing paper distinguishes its covariant scheme from the target's perturbative relativistic approach without asserting the target is wrong
+1612.05511	1005.2797	compares	high	The citing paper notes differences between its Hybrid model and the RPR model but does not dispute the cited paper's claims or results.
+1609.03343	0903.2152	contrasts	low	recheck response unparseable, original label kept
+1603.00664	1305.5417	contrasts	high	Citing paper says TARGET's extracted SE slope values are corrected downwards, directly disputing TARGET's quantitative result.
+1603.00664	1410.4926	contrasts	high	Citing paper calls TARGET's extrapolated pion potential inaccurate because it neglects the Delta width.
+1603.00664	1509.04861	contrasts	high	Citing paper notes its conclusions are in contrast with TARGET's, though it softens this by attributing the difference to missing threshold effects.
+1603.00664	nucl-th/0603003	contrasts	high	Citing paper deems TARGET's three-level pion self-energy model inaccurate for neglecting the Delta width.
+1603.00664	1507.03279	contrasts	high	Citing paper states its findings contrast with TARGET's conclusions on the Delta potential's impact on pionic observables.
+1603.00664	1307.7654	contrasts	high	Citing paper explicitly opposes its recommendation to TARGET's suggestion or implication about extracting L from pion observables.
+1504.08347	1311.0168	contrasts	low	recheck response unparseable, original label kept
+1608.08618	nucl-th/9810034	compares	high	Citing paper notes its back-to-back HBT origin differs from the cited paper's proposed origin, a neutral distinction not a dispute.
+1608.08618	0706.4325	compares	high	Citing paper notes its back-to-back HBT origin differs from the cited paper's proposed origin, a neutral distinction not a dispute.
+1610.08490	1409.8164	compares	high	The citing paper notes its code cannot be directly compared to VISH2+1 due to bulk viscosity implementation, a methodological difference not a dispute with VISH2+1's claims
+1612.04289	1701.06417	compares	high	The citing paper notes a different modeling approach and cites the target as an alternative explanation, not a dispute of its claims.
+1612.00923	1107.4956	contrasts	high	Citing paper states its finding of small ST=11 importance stands in contrast to these works that find non-negligible ST=11 contribution
+1612.00923	1211.0134	contrasts	high	Citing paper states its finding of small ST=11 importance stands in contrast to these works that find non-negligible ST=11 contribution
+1701.00924	1602.00862	contrasts	low	recheck response unparseable, original label kept
+1608.01385	0705.4335	contrasts	low	recheck response unparseable, original label kept
+1612.00929	0711.1292	contrasts	high	Citing paper argues the gauge invariance claimed in the cited paper actually signals gauge symmetry breaking
+1612.08992	nucl-th/9701035	contrasts	high	Citing paper asserts its pion treatment is preferable to the condensate approach used in the cited paper
+1612.09138	1605.02371	contrasts	high	Citing paper asserts its broadened quark spectral functions are very different from quasiparticle models where widths are zero or small
+1612.00308	1202.3986	contrasts	high	Citing paper asserts Id Betan's continuum Richardson equations lacked proof of exactness, correcting the cited work's claim.
+1612.00308	nucl-th/0201077	contrasts	high	Citing paper asserts Id Betan's continuum Richardson equations lacked proof of exactness, correcting the cited work's claim.
+1701.05741	1502.00880	contrasts	high	Citing paper states its model does not predict the peak that Ref. [TARGET] predicts, a direct disagreement with TARGET's result
+1701.07580	1503.03931	contrasts	high	Citing paper states its equation is the correct form, correcting the numerator in the cited paper
+1703.02483	1302.2125	uses	high	Citing paper cites the chiral magnetic instability as a competing process, not as a disputed claim.
+1702.08452	1011.6142	contrasts	high	Citing paper says its result is not necessarily in agreement with the cited paper's assumption of strong proton superfluid gaps
+1702.08452	astro-ph/0002232	contrasts	high	Citing paper states its results suggest an opposite trend to the cited paper's small-radius implication
+1701.03628	hep-ph/0604042	contrasts	high	Citing paper asserts numerical results in TARGET are inexact due to a mistake in the magnetic form-factor calculation
+1705.06192	nucl-th/9602006	compares	high	The new method is described as having milder sign oscillations than earlier shell model Monte Carlo techniques, a neutral methodological comparison rather than a claim that the cited work is wrong.
+1705.06192	nucl-th/9310026	compares	high	The new method is described as having milder sign oscillations than earlier shell model Monte Carlo techniques, a neutral methodological comparison rather than a claim that the cited work is wrong.
+1707.09063	1609.06688	background	low	Context does not mention the cited paper's own claims or a dispute with it
+1607.01326	1411.7931	contrasts	low	recheck response unparseable, original label kept
+1703.10792	1103.2380	compares	high	The citing paper notes a difference in fitted shear viscosity between its approach and the cited early calculations, not a dispute of the cited paper's claims
+1703.10792	1301.5893	compares	high	The citing paper notes a difference in fitted shear viscosity between its approach and the cited early calculations, not a dispute of the cited paper's claims
+1707.05203	1003.2940	compares	high	The citing paper notes a difference in emphasis on pair correlation, not a dispute with the cited paper's claims.
+1701.02561	hep-ph/0204001	uses	high	Citing paper cites TARGET as the perturbative result that disfavored 2SC, then notes NJL still allows it, using TARGET as background support rather than disputing its claims.
+1705.11172	nucl-th/0602064	contrasts	high	Citing paper argues the cited paper's phenomenological repulsion is actually simulating Pauli repulsion, disputing its interpretation
+1704.08503	1506.01123	uses	high	Citing paper cites the OGE-only calculation as prior work showing no binding, then presents its own chiral model result as reducing the mass, without asserting the cited paper's claims are wrong
+1705.07324	1407.0140	background	low	Context is truncated and only mentions earlier semi-classical calculations without asserting they are wrong
+1705.07324	1511.00211	background	low	Context is truncated and only mentions earlier semi-classical calculations without asserting they are wrong
+1710.02193	1407.7004	contrasts	high	Citing paper states its expressions differ from the cited paper's presented ones due to a misprint, correcting the cited paper's result.
+1711.09427	1404.0744	contrasts	high	Citing paper notes its favored incompressibility range 250-315 MeV differs from the cited paper's 240 +/- 20 MeV, indicating tension.
+1710.09425	1405.0710	contrasts	high	Citing paper states arguments from TARGET are not supported by recent measurements, disputing TARGET's claim
+1803.01810	1409.8164	compares	high	Contrast marks a methodological difference in reconstruction formulas, not a dispute with the cited paper's claims
+1708.00412	1703.09396	contrasts	high	Citing paper argues the deeply attractive potential's success is undermined by deuteron decay, disputing the cited paper's conclusion
+1711.00771	nucl-th/0612056	contrasts	high	Citing paper says its selected kF and E_shift values are at variance with the TARGET's previous values
+1804.04893	1608.02231	background	low	Context only notes a different early-time E-field trend without asserting the cited paper's claims are wrong
+1804.04893	1401.3805	background	low	Context merely notes reversed orientation and cites another paper for drag expectation, no dispute with target
+1801.03334	1501.04042	contrasts	low	recheck response unparseable, original label kept
+1712.03734	1308.0904	contrasts	high	Citing paper's octupole minimum in 222Th differs from TARGET's relativistic mean-field results where 222Th remains spherical
+1805.10183	nucl-th/0210015	uses	high	Citing paper cites Ogata et al. as producing results incompatible with observations, no dispute with that paper's own claims
+1805.10183	1209.4999	contrasts	high	Citing paper states subsequent improved-theory work did not find the large enhancement, correcting the cited paper's result
+1708.03194	1703.05454	compares	high	Notes the regulator artifact is absent in nonlocal NN interactions, a difference in method not a dispute with their claims
+1708.03194	nucl-th/0208023	compares	high	Contrasts local versus nonlocal regulators, noting the artifact is absent in the cited nonlocal 3N interactions
+1708.03194	nucl-th/0304018	compares	high	States the effect is not present in the cited nonlocal NN interactions, a difference in regulator choice not a dispute
+1802.00763	1004.5174	uses	high	Target is cited as an example of an effective NN interaction model, not disputed
+1802.00763	1502.00880	uses	high	Target is cited as another group's claim supporting the near-threshold peak, not disputed
+1707.09222	1408.3368	compares	high	The citing paper notes its second-order results still underpredict attraction, unlike the pseudo-potential approach in the target, which is a neutral comparison of methods rather than a dispute with the target's claims.
+1707.09222	1404.0744	uses	high	The target is cited as support for a larger incompressibility value, not as an object of dispute.
+1806.00481	nucl-th/0504019	contrasts	high	Citing paper states its results on relative sizes of unpolarized and polarized EMC effects significantly differ with the NJL model calculation in the target paper.
+1708.08342	1311.5154	uses	high	Target is cited as evidence that bag models disagree with PQCD, not as the disputed party
+1708.08342	0806.2706	uses	high	Target is cited as support for a crossover transition against a third-party approach
+1708.08342	1508.04861	uses	high	Target is cited as support for a crossover transition against a third-party approach
+1708.08342	1412.1108	uses	high	Target is cited as support for a crossover transition against a third-party approach
+1806.04844	1703.06181	contrasts	high	Citing paper asserts the cited paper's TPE calculation does not match experimental data well
+1806.00298	1108.2519	contrasts	high	Citing paper argues ADWA with NLOP is inadequate, disputing the cited paper's sensitivity claim
+1806.00298	1609.07303	background	low	No citation context extracted to establish a dispute
+1807.05339	nucl-th/0208042	contrasts	low	recheck response unparseable, original label kept
+1806.10997	1502.02556	compares	high	The citing paper notes cusps may be compared to holographic narrow structures but were not observed in TARGET, a neutral comparison of regimes rather than a dispute of TARGET's claims.
+1806.11262	1403.7336	contrasts	medium	Citing paper finds proton-driven PDR in nuclei without neutron excess, in tension with the neutron-excitation picture cited from these works
+1806.11262	0802.2649	contrasts	medium	Citing paper finds proton-driven PDR in nuclei without neutron excess, in tension with the neutron-excitation picture cited from these works
+1806.11262	1106.3618	contrasts	medium	Citing paper finds proton-driven PDR in nuclei without neutron excess, in tension with the neutron-excitation picture cited from these works
+1807.06739	1410.2546	contrasts	high	Citing paper states its conclusions differ from the target's extracted potential and imaginary parts, calling it an apparent discrepancy.
+1704.00254	nucl-th/0504002	contrasts	low	recheck response unparseable, original label kept
+1807.07481	1802.05047	contrasts	low	recheck response unparseable, original label kept
+1807.00596	1404.2136	contrasts	high	Citing paper asserts some implementations of many-body perturbation theory, including the cited paper, are inconsistent and yield disagreeing pressure determinations
+1807.05083	1711.02563	background	low	Context is too thin to establish a dispute with the cited paper's own claims
+1807.05083	1803.02860	background	low	Context is too thin to establish a dispute with the cited paper's own claims
+1808.02106	1611.00250	compares	high	The context distinguishes the present model from the wounded quark model as a methodological difference, not a dispute over the target's claims.
+1710.00874	1104.2971	uses	high	Target is cited as an example of relativistic Dirac calculations, then the citing work chooses a simpler non-relativistic approach without disputing the target's claims.
+1710.00874	1307.2340	contrasts	high	Citing paper states LO predictions of beta_M1 differ in overall sign and argues BChPT results are more reliable than the target's HBChPT result.
+1710.00874	1512.05773	uses	high	Target is cited as prior work assuming neutron-polarizability can be approximated by proton-polarizability, which the citing paper then improves upon without disputing the target's claims.
+1710.00874	1209.2523	contrasts	medium	Citing paper asserts the target's approach requires further examinations because there is no meaningful analogue for adjusting amplitudes on the cross section side.
+1710.00874	1406.5230	uses	high	Target is cited as prior work assuming neutron-polarizability can be approximated by proton-polarizability, which the citing paper then improves upon without disputing the target's claims.
+1808.00651	1405.3430	contrasts	high	Citing paper explicitly says Ohkubo and Hirabayashi proposed a completely different scenario at variance with prior conclusions
+1808.00651	1406.7340	contrasts	high	Citing paper explicitly says Ohkubo and Hirabayashi proposed a completely different scenario at variance with prior conclusions
+1806.10432	1606.09056	compares	high	The citing paper notes its second-order transition differs from the first-order transition in Zr, a neutral distinction not a dispute with the cited claims
+1810.11796	1704.06719	contrasts	high	Citing paper states the DOM value differs from their work and the DP result, indicating tension with the cited paper's own result.
+1810.06442	1703.05454	compares	high	Citing paper notes similar work uses a different chiral NN interaction, a methodological difference not a dispute
+1810.06442	1712.02879	compares	high	Citing paper notes similar work uses a different chiral NN interaction, a methodological difference not a dispute
+1607.02527	1304.7220	contrasts	low	recheck response unparseable, original label kept
+1809.00335	1007.3041	background	low	Citation context is truncated and does not establish a dispute with the cited paper
+1809.00335	nucl-th/9511040	background	low	Citation context is truncated and does not establish a dispute with the cited paper
+1809.00335	1611.04434	background	low	Citation context is truncated and does not establish a dispute with the cited paper
+1902.00417	1507.07239	compares	medium	Notes EFT calculation suggests scattering length uncertainty may not be large, a difference in sensitivity rather than a dispute of its claims
+1901.03875	1805.04662	background	low	Context only reports what the cited authors concluded, no dispute with the citing paper's own claims
+1808.00518	0905.3167	contrasts	low	recheck response unparseable, original label kept
+1809.11139	0911.5069	background	low	Context is a single thin sentence reporting Timofeyuk's finding without any dispute assertion
+1904.04233	1611.01357	compares	high	Citing paper notes its approach is similar to TARGET but differs in how the nuclear matter EoS is defined, a methodological difference not a dispute with TARGET's claims.
+1902.10150	1605.04823	background	low	The context only notes that these refs ascribe strange-quark impact, without asserting their claims are wrong or in tension
+1902.10150	1704.06248	background	low	The context only notes that these refs ascribe strange-quark impact, without asserting their claims are wrong or in tension
+1901.01924	1303.5650	contrasts	high	Citing paper asserts the cited paper's finding that instabilities saturate and become unimportant conflicts with the proposal that Weibel instabilities drive rapid thermalization
+1904.10696	0805.1858	contrasts	low	recheck response unparseable, original label kept
+1908.07605	1602.05085	contrasts	high	Citing paper calls the cited paper's constant conductivity assumption unrealistic and says it should be replaced
+1908.07605	1705.07842	uses	medium	Citing paper cites the cited paper as illustrating a limitation of ideal MHD, not as a disputed claim
+1908.07605	1408.7043	contrasts	high	Citing paper calls the cited paper's constant conductivity assumption unrealistic and says it should be replaced
+1908.07605	1810.12527	contrasts	high	Citing paper calls the cited paper's constant conductivity assumption unrealistic and says it should be replaced
+1907.03658	1903.12535	contrasts	high	Citing paper says the cited paper's claimed difference in scaling is inconsistent with QMC wave functions
+1907.03658	1905.02172	contrasts	high	Citing paper directly refutes the cited comment's speculation as inconsistent with QMC wave functions
+1811.00268	nucl-th/0310085	compares	high	Notes a difference between two potential pictures without asserting the cited claims are wrong
+1811.00268	1610.01249	compares	high	Notes a difference between two potential pictures without asserting the cited claims are wrong
+1811.00268	0709.0630	compares	high	Notes a difference between two potential pictures without asserting the cited claims are wrong
+1901.07632	1306.3661	compares	high	The citing paper notes a disagreement between two families of methods, not a dispute with the cited paper's own claims.
+1901.07632	1312.7872	compares	high	The citing paper contrasts two approaches to the drip line, treating the cited paper as one side of a neutral comparison.
+1910.13202	1805.11963	compares	high	Notes difference in EoS selection and fitting protocols, not a dispute with the cited paper's claims
+1910.14281	1011.0852	contrasts	high	Citing paper asserts the statistical hadronization model of the cited paper cannot explain the observed non-monotonic ratio
+1902.03231	1010.1635	contrasts	low	recheck response unparseable, original label kept
+1910.13581	1511.00738	compares	high	The context notes a difference in scope of initial conditions and pairing correlations, not a dispute with the cited paper's claims.
+1906.11413	1803.02860	contrasts	high	Citing paper states cited paper's results contradict the initial expectation, showing the R(S) curve can be concave rather than convex
+1906.11413	1711.02563	contrasts	high	Citing paper states cited paper's results contradict the initial expectation, showing the R(S) curve can be concave rather than convex
+1907.11013	0809.0565	background	low	Context questions whether the cited paper's potential curves might be wrong but does not assert a dispute
+1908.06610	1904.00925	contrasts	high	Reply disputes the Comment's ACCC-based arguments against the Letter's trap method
+1902.06154	1402.1407	contrasts	high	Citing paper identifies incorrect dripline and systematic overbinding in the cited paper's VS-IMSRG results and attributes them to a deficiency in its normal-ordering procedure.
+1902.06154	1607.03229	contrasts	high	Citing paper reports even more significant overbinding in the cited paper's calculations and explains the discrepancy as due to its normal-ordering choice.
+1812.00387	0903.5538	contrasts	high	Citing paper says previous calculations could not observe the effect because they broke RG invariance, correcting the cited paper's approach.
+1812.00387	1605.03898	contrasts	high	Citing paper says previous calculations could not observe the effect because they broke RG invariance, correcting the cited paper's approach.
+1812.00387	1712.10246	contrasts	high	Citing paper says previous calculations could not observe the effect because they broke RG invariance, correcting the cited paper's approach.
+1812.07688	1809.06765	uses	high	Citing paper cites the target as the source of counter-arguments that its own sexaquark scenario evades, not as a claim being disputed
+1803.00330	1207.5350	contrasts	low	recheck response unparseable, original label kept
+1908.02223	1110.3362	contrasts	high	Citing paper says its result disagrees with scalar diquark view supported by this extraction
+1908.02223	1602.03154	contrasts	high	Citing paper says its result disagrees with scalar diquark view supported by this extraction
+1908.02223	nucl-ex/0307012	contrasts	medium	Context groups this extraction with prior claims supporting scalar diquark view that citing paper disputes
+1901.03130	1601.01624	contrasts	high	Abstract states the derived sigma term sharply disagrees with recent direct lattice QCD calculations, which are these cited papers.
+1901.03130	hep-lat/0001007	contrasts	high	Abstract states the derived sigma term sharply disagrees with recent direct lattice QCD calculations, which are these cited papers.
+1709.04370	0910.4868	contrasts	low	recheck response unparseable, original label kept
+1708.04017	1406.6908	contrasts	low	recheck response unparseable, original label kept
+1905.12758	1410.0372	compares	high	Notes a difference in scope between generic chemical potential and baryon-only thermal model expression, not a dispute of the cited paper's claims.
+1909.12071	1510.00180	contrasts	high	Citing paper notes its EoS stiffens with increasing sigma mass, explicitly in contrast to the MFA case of the target paper
+1909.12071	1506.01868	contrasts	high	Citing paper notes its EoS stiffens with increasing sigma mass, explicitly in contrast to the MFA case of the target paper
+1910.11071	1311.6482	contrasts	high	Citing paper explicitly states that including VCS data in the generalized Baldin sum rule as done in the target paper is inappropriate, disputing the target's method.
+1907.04772	nucl-th/9901100	contrasts	high	Citing paper notes Bulgac and Shaginyan found E_/E_ around -40% to -20%, in tension with the 2% value
+1810.04024	1604.07494	contrasts	medium	Citing paper implies TDHF simulations like TARGET only fission at high energy or from pre-formed fragments, a limitation contrasted with its own real-time TDSLDA fission.
+1810.04024	1504.00919	contrasts	medium	Citing paper implies TDHF simulations like TARGET only fission at high energy or from pre-formed fragments, a limitation contrasted with its own real-time TDSLDA fission.
+1810.04024	1510.07846	contrasts	medium	Citing paper implies TDHF simulations like TARGET only fission at high energy or from pre-formed fragments, a limitation contrasted with its own real-time TDSLDA fission.
+1810.04024	1505.05647	contrasts	medium	Citing paper implies TDHF simulations like TARGET only fission at high energy or from pre-formed fragments, a limitation contrasted with its own real-time TDSLDA fission.
+1911.07766	1505.02257	background	low	Context is truncated and does not clearly establish a dispute with the cited paper's own claims
+1909.07287	1608.05853	contrasts	high	Citing paper states previous analyses including TARGET over-represented statistical error bars due to mistakes
+1911.13092	1008.1569	contrasts	low	recheck response unparseable, original label kept
+1911.09020	1402.3776	compares	high	The citing paper attributes a difference to nonlocal versus local potentials, not a dispute with the cited paper's claims.
+1911.09020	0706.1282	compares	high	The citing paper attributes a difference to nonlocal versus local potentials, not a dispute with the cited paper's claims.
+1912.00451	1301.7140	background	low	No citation context extracted, so no dispute with the cited paper can be established
+1912.00451	1606.08822	background	low	No citation context extracted, so no dispute with the cited paper can be established
+1903.12380	1804.08240	contrasts	low	recheck response unparseable, original label kept
+2002.07008	1712.03912	compares	high	The contrast is between mean pT and anisotropic flow sensitivity, not a dispute with the cited paper's claims.
+1912.09977	1411.3666	background	low	The note that their analysis uses Boltzmann statistics is a limitation, not a dispute with their claims.
+1912.09977	1705.00587	background	low	The note that their analysis uses Boltzmann statistics is a limitation, not a dispute with their claims.
+2006.10249	2004.03789	contrasts	high	Citing paper states its results contradict the recent claims of the cited paper
+1912.04934	1606.00699	contrasts	low	recheck response unparseable, original label kept
+2008.11314	hep-ph/9506436	background	low	Context is thin and does not clearly establish a dispute with the cited paper's own claims
+1912.10612	1002.4538	compares	high	Notes that Lyon model neglects exchange interference, a methodological difference rather than a dispute with its claims
+1912.10612	1307.8105	compares	high	Notes that Valencia model neglects exchange interference, a methodological difference rather than a dispute with its claims
+2002.07330	1702.07532	contrasts	high	Citing paper explicitly states Nishida's claim that the effect vanishes with two-body interaction is not the case
+2002.01911	1803.00867	contrasts	high	Citing paper states longitudinal polarization measurements disagree with the cited paper's theoretical expectation.
+2002.01911	1707.07984	contrasts	high	Citing paper states longitudinal polarization measurements disagree with the cited paper's theoretical expectation.
+2007.13139	1804.02674	contrasts	high	Citing paper says its SF results strongly disagree with TARGET and that TARGET's energy dependence is too different
+2001.11877	1409.3420	contrasts	high	Citing paper reports a smaller mass reduction than the cited paper's non-unitarized ChPT result, indicating quantitative tension with its findings.
+2004.10804	1305.0293	compares	high	Notes least-energy path is distinct from the most probable path, a neutral methodological difference not a dispute
+2004.10804	1310.2003	compares	high	Notes least-energy path is distinct from the most probable path, a neutral methodological difference not a dispute
+2003.08859	1501.04042	contrasts	medium	Citing paper claims its exact solutions are a counter-example to beliefs supported by the cited numerical analyses, asserting tension with the cited work's conclusions.
+2003.08859	1508.07017	contrasts	medium	Citing paper claims its exact solutions are a counter-example to beliefs supported by the cited numerical analyses, asserting tension with the cited work's conclusions.
+2008.11843	1709.05991	background	low	Context notes a limitation of the cited calculation but does not assert its claims are wrong or in tension
+1912.05756	nucl-th/9310009	contrasts	low	recheck response unparseable, original label kept
+2002.11752	1803.00867	contrasts	high	Citing paper states measured local polarizations disagree with predictions from this cited paper, framing a real dispute.
+2002.11752	1810.10359	contrasts	high	Citing paper says the chiral kinetic approach fails to describe measured Py and lacks angular momentum conservation, disputing the cited paper's approach.
+2002.11752	1706.09467	contrasts	high	Citing paper says the chiral kinetic approach fails to describe measured Py and lacks angular momentum conservation, disputing the cited paper's approach.
+2002.11752	1707.07984	contrasts	high	Citing paper states measured local polarizations disagree with predictions from this cited paper, framing a real dispute.
+2005.01621	1607.03065	uses	high	Citing paper describes EFT approach as reproducing a2 values but limited in scope, not disputing its claims
+2005.01621	1903.12587	contrasts	medium	Citing paper notes its GCF tensor-force sensitivity stands in contrast with EFT analysis where interaction cancels, implying tension in behavior
+2006.08929	1311.0999	contrasts	low	recheck response unparseable, original label kept
+2008.10980	1911.06485	contrasts	high	Citing paper states no-core Gamow shell model results contradict Faddeev-type calculations and aims to clarify the discrepancy
+2006.15430	1202.4731	contrasts	high	Citing paper states the cited work cannot give quantitative L dependence because its interactions differ, correcting its approach
+2003.13640	0712.4384	contrasts	high	Citing paper states its expression differs from the cited paper's axial form factor contribution to A
+2009.10119	hep-ph/9905509	contrasts	high	Citing paper identifies sign inconsistency in TARGET's equations and corrects the derivation
+2002.02135	1907.02478	contrasts	high	Citing paper asserts the Brückner density functional used in the cited paper's previous studies is inadequate and fails to reproduce empirical NM values
+2009.08303	hep-ph/0407077	contrasts	high	Citing paper corrects the cited paper's radiative correction formula and discusses shortcomings of the original calculation
+2007.16184	1904.01275	contrasts	high	Citing paper explicitly says its proton-configuration finding is at variance with the neutron-dominance interpretation attributed to this reference
+2007.16184	1205.5797	background	medium	Reference is listed as an alternative interpretation but no explicit dispute with its claims is asserted
+2007.16184	1902.09535	contrasts	medium	Citing paper states these detailed theoretical models fail to reproduce experimental observations in the region
+2007.16184	1809.08983	contrasts	high	Citing paper explicitly says its proton-configuration finding is at variance with the neutron-dominance interpretation attributed to this reference
+2005.04181	1312.2721	uses	high	Citing paper uses the cited method as a starting point but notes it is not practical enough, which is a limitation not a dispute of its claims
+2005.04181	1612.06002	uses	high	Citing paper uses the cited method as a starting point but notes it is not practical enough, which is a limitation not a dispute of its claims
+1912.09411	1904.00924	background	low	Citation is grouped as other many-body calculations to be set aside, with no dispute asserted against any specific target
+1912.09411	1612.04309	background	low	Citation is grouped as other many-body calculations to be set aside, with no dispute asserted against any specific target
+1912.09411	nucl-th/9804027	background	low	Citation is grouped as other many-body calculations to be set aside, with no dispute asserted against any specific target
+2008.07630	0812.0416	contrasts	high	Citing paper says the hypothesis fails to describe neutron data, contradicting the cited paper's claims.
+2008.07630	1906.05375	contrasts	high	Citing paper asserts VMD is a poor tool and likely overestimates, disputing the cited paper's approach.
+2008.07630	nucl-th/0204020	contrasts	high	Citing paper states diquark confinement claim is not true under RL truncation, directly disputing the cited paper.
+2011.01430	0804.4015	compares	medium	Notes previous studies found smaller sensitivity to bulk viscosity, a difference in findings rather than a dispute of the cited paper's claims
+2010.05841	1109.6691	compares	high	Notes Song Han Ko use second-order dissociation versus first order here, a methodological difference not a dispute
+2011.09785	1501.05419	contrasts	low	recheck response unparseable, original label kept
+2102.00988	2004.00846	compares	high	The context notes a difference in the direction of the bound derived, not a dispute with the target's claims.
+2005.07837	1705.05511	contrasts	high	Citing paper states previous studies neglected consistent SRG treatment of the M1 operator, correcting that omission
+2005.07837	1802.08584	contrasts	high	Citing paper states previous studies neglected consistent SRG treatment of the M1 operator, correcting that omission
+2101.01130	1912.08271	contrasts	high	Citing paper states its coefficients differ from the modified equilibrium distribution of the target
+2006.07983	1909.05889	contrasts	low	recheck response unparseable, original label kept
+2103.10841	nucl-th/0608002	contrasts	high	Citing paper suggests the strong S-shape in the target's heat capacities may stem from a numerical error and should be re-investigated
+2101.07160	2010.06916	contrasts	high	Comment critically discusses and disputes Song et al.'s predictions for the 3D1 partial wave
+2104.13612	2006.16296	contrasts	high	Citing paper moderates and challenges the cited paper's claim that massive NSs and stiff EoSs require non-trivial sound speed structures
+2012.04869	nucl-th/0405041	contrasts	high	Citing paper finds level density parameter decreases away from stability, while cited work suggests very little isospin dependence, a direct tension
+2012.04869	1006.5018	contrasts	high	Citing paper finds level density parameter decreases away from stability, while cited work suggests very little isospin dependence, a direct tension
+2101.04664	1903.01529	background	low	The cited paper is used as evidence of poor TMD agreement, not as a claim being disputed by the citing paper.
+2108.03324	2006.07975	contrasts	low	recheck response unparseable, original label kept
+2106.06311	1007.3675	contrasts	low	recheck response unparseable, original label kept
+2012.03499	1710.01210	contrasts	high	Citing paper says the cited paper's new terminology may cause confusion in interpreting quantal PTR results
+2012.03499	1310.1669	contrasts	high	Citing paper says the cited paper's new terminology may cause confusion in interpreting quantal PTR results
+2110.11056	1711.02644	contrasts	high	Citing paper disputes the cited paper's interpretation that the slope change signals deconfined quark matter
+2111.13932	2208.07203	background	low	Context is too thin to establish a dispute with the cited paper's own claims
+2108.06648	1901.10320	uses	high	The citing paper cites these refs as support that gluon saturation explains heavy meson elliptic flow, not as a dispute with their claims.
+2108.06648	2002.09878	uses	high	The citing paper cites these refs as support that gluon saturation explains heavy meson elliptic flow, not as a dispute with their claims.
+2109.11785	2004.03704	contrasts	high	Citing paper revisits the cited analysis and concludes no anomalous contributions survive, contradicting its claims.
+2109.11785	2101.04483	contrasts	high	Citing paper argues the cited work overlooked regulator artifacts and does not support QAE, disputing its conclusions.
+2109.11785	2102.07830	contrasts	high	Citing paper argues the cited work overlooked regulator artifacts and does not support QAE, disputing its conclusions.
+2102.11695	1004.3883	compares	high	The citing paper notes its setup is dissipative whereas the target is not, a difference in regime rather than a dispute over the target's claims.
+2102.11695	nucl-th/0306041	compares	high	The citing paper notes its setup is dissipative whereas the target is not, a difference in regime rather than a dispute over the target's claims.
+2102.11695	1711.08450	compares	high	The citing paper says the source and nature of its instability differ from the target's axial-charge mechanism, a neutral distinction not a refutation.
+2203.11645	1903.09121	contrasts	high	Citing paper notes its purely nucleonic model shows a similar pressure softening but cannot be quark matter, challenging the cited paper's interpretation of softening as quark matter evidence.
+2112.05323	1002.0642	compares	high	The citing paper notes BHF results show slight maximum mass reduction while RMF and Skyrme models predict increasing stability, a neutral comparison of differing model predictions rather than a dispute with the cited paper's own claims.
+2202.10293	1207.6314	compares	high	The citing paper notes it includes spin-orbit correlations unlike the FHNC/SOC calculations in the target, a methodological difference not a dispute over the target's claims
+2202.10293	1307.5815	compares	high	The citing paper contrasts its spin-dependent backflow correlations with the linearized correlations of the target, describing a methodological difference rather than asserting the target is wrong
+2204.01625	hep-ph/0506014	background	low	Citation supports prior belief about interference regime, no dispute with the cited paper's claims asserted
+2105.11091	1310.7099	contrasts	high	Citing paper states its calculated reaction rates are lower than NACRE II results, a quantitative tension with the cited paper's claims
+2202.10266	1410.2258	compares	high	States a methodological difference in procedure, not a dispute over the cited paper's claims
+2202.10266	0704.1336	compares	high	States a methodological difference in procedure, not a dispute over the cited paper's claims
+2201.01550	1405.3814	compares	high	Notes Ryckebusch calculations lack the proton momentum gap, a difference in results rather than a dispute with his claims
+2201.01550	1309.3794	compares	high	States Wiringa calculations do not clearly show the gap due to small asymmetry, a neutral difference not a dispute
+2201.01550	1312.7307	compares	high	Explains Rios finite-temperature calculations smooth out the gap, a methodological difference not a dispute
+2112.10633	1109.6904	compares	high	Contrast marks a different approximation method, not a dispute with the cited paper's claims
+2109.13303	1612.09090	compares	high	The contrast is between pionless EFT and the citing paper's own results, with [TARGET] cited as evidence for the pionless EFT behavior, not disputed.
+2109.13303	nucl-th/0409040	compares	high	The stark contrast is between the citing paper's own cutoff-dependent results and pionless EFT results, with [TARGET] cited as support for the latter, not as a disputed claim.
+2106.08340	2002.03753	compares	medium	Notes the exact chiral distribution differs from the usual equilibrium ansatz in form, a neutral difference not a dispute with the cited paper's claims.
+2105.14050	1706.02913	contrasts	high	Citing paper notes universality is lost in the cited paper's finite-temperature treatment, a tension with the cited paper's own claims.
+2105.14050	1912.08630	contrasts	high	Citing paper states the cited Lattice 2019 result gives a shallower potential depth than the value used, a quantitative tension with the cited paper's conclusion.
+2203.02848	1410.2258	contrasts	high	Citing paper asserts beyond-QRPA approaches based on the bare interaction, including the target, do not perform consistently well compared to effective-interaction approaches
+2204.13395	1311.0168	contrasts	high	Citing paper asserts Tarbert's claimed uncertainty is significantly underestimated due to missing second-order effects
+2202.01689	2110.14601	compares	high	The citing paper notes its non-factorized approach differs from factorized generator approaches, a methodological difference not a dispute with the cited paper's claims.
+2203.02408	2004.12789	contrasts	high	Citing paper notes more accurate analyses indicate small variations of q, in tension with the constant-q prediction
+2203.02408	1910.13840	contrasts	high	Citing paper notes more accurate analyses indicate small variations of q, in tension with the constant-q prediction
+2203.13042	1301.7172	compares	high	Attributes differences to distinct starting points for Hamiltonians, not a dispute with the cited paper's claims.
+2104.08469	2011.08656	contrasts	high	Citing paper explicitly says unlike the target it does not presume SU(3) symmetry is good, disputing the target's assumption
+2104.08469	2011.08725	uses	medium	Target's theoretical predictions are cited as a benchmark that data exceed, not as a disputed claim
+2109.15301	1902.01089	uses	medium	Citing paper cites target as the computation whose local spin polarization results deviate from data, not as a disputed claim
+2101.10029	1804.08240	contrasts	low	recheck response unparseable, original label kept
+2204.10879	1910.08004	compares	high	The phrase 'in contrast to' describes a different centrality-weighting method, not a dispute with the cited paper's claims.
+2204.10879	1302.2332	compares	high	The phrase 'in contrast to' describes a different centrality-weighting method, not a dispute with the cited paper's claims.
+2204.10879	1802.02911	compares	high	The phrase 'in contrast to' describes a different centrality-weighting method, not a dispute with the cited paper's claims.
+2204.10879	1603.05854	uses	high	The citing paper notes that its calculation includes effects neglected in the cited paper, but does not assert the cited paper's claims are wrong.
+2205.01108	1107.5509	contrasts	high	Citing paper says the low lattice value is at odds with the scattering length reported by the target paper, indicating tension with the target's own result.
+2205.07996	1111.4344	background	low	No citation context was extracted, so no dispute with the cited paper can be established.
+2205.06943	1607.00887	contrasts	high	Citing paper finds spherical shape for 48Cr while cited paper found large deformations above backbend, a direct tension in conclusions
+2204.07468	nucl-th/0209016	contrasts	low	recheck response unparseable, original label kept
+2207.05108	1304.7684	compares	high	The contrast is with a third paper's treatment of two-body currents, not a dispute with the target's own claims
+2207.05108	2204.12971	uses	high	The target is cited as prior evidence that a certain shape degrades the correlation, supporting the citing paper's observation
+2206.07598	1901.08398	contrasts	high	Citing paper explicitly keeps Q<9 GeV bins at variance with the cited review's choice to exclude them
+2301.11908	1409.8164	compares	high	Contrast describes MUSIC's more accurate medium evolution versus VISHNU, a methodological difference, not a dispute of VISHNU's claims.
+2208.11996	2012.11454	compares	high	In contrast marks a difference in what is varied, not a dispute with the cited paper's claims
+2210.04632	0906.1800	compares	high	Notes different power counting schemes among authors without asserting any are wrong
+2210.04632	0907.3437	compares	high	Notes different power counting schemes among authors without asserting any are wrong
+2210.04632	0810.1941	compares	high	Notes different power counting schemes among authors without asserting any are wrong
+2210.15650	1406.6530	contrasts	high	Citing paper says the cited work used non-perturbative partial resummation and lacked a counterterm needed for RG invariance, correcting its approach
+2207.10788	2004.03704	compares	high	Notes a difference in tensor structures between photon and electron targets, not a dispute with the cited paper's claims
+2207.11736	1403.1854	uses	high	Target is cited to explain why the old AMPT version does not conserve total charge, supporting the new version's motivation
+2301.12076	2109.00131	uses	high	STAR result is cited as the experimental finding that motivates the citing paper's reexamination, not disputed
+2210.02696	1708.03846	contrasts	high	Citing paper asserts the correlation in the cited paper's standard functionals is due to a parameter deficit and its use for constraining K_sym is misguided
+2209.13039	2108.08269	background	low	The cited paper is about eigenvector continuation for nuclear reactions, not chiral EFT symmetry energies, so the contrast is with chiral EFT generally, not with the target's own claims.
+2307.01745	1606.08838	contrasts	high	Citing paper asserts the van der Waals model's symmetry energy is smaller than experiments, disputing the cited paper's result
+2210.04372	2009.06968	contrasts	low	recheck response unparseable, original label kept
+2209.02817	1404.0744	contrasts	high	Citing paper notes TARGET analysis suggests a higher K0 range, in tension with commonly used constraints
+2210.00369	nucl-th/0011067	compares	high	Different power-counting assumption, not a claim that the cited paper is wrong
+2210.00369	1610.04545	compares	high	Different power-counting assumption, not a claim that the cited paper is wrong
+2210.00369	1505.02422	compares	high	Different power-counting assumption, not a claim that the cited paper is wrong
+2210.00369	nucl-th/0108059	compares	high	Different power-counting assumption, not a claim that the cited paper is wrong
+2304.11343	2001.01371	compares	high	Citing paper notes its turning energy differs from UrQMD and IQMD results but does not claim those results are wrong
+2304.11343	1803.00867	contrasts	high	Citing paper states previous studies predicted the opposite azimuthal angle trend, disputing the cited paper's conclusion
+2302.11826	1012.0234	background	low	Context is truncated and does not clearly establish a dispute with the cited paper's own claims
+2302.05399	2302.04423	contrasts	low	recheck response unparseable, original label kept
+2302.10675	2112.10633	compares	high	Notes a factor-2 convention difference in mu_I definition, not a dispute about the cited paper's claims
+2306.02829	1301.0099	contrasts	high	Citing paper says the cited analytical formulae only apply to constant conductivity, which is unrealistic, correcting their applicability
+2307.10769	1912.10562	compares	high	Contrast marks a methodological difference between DTT and ME hydrodynamics, not a dispute with the cited paper's claims
+2307.11165	2211.09596	background	low	The citation supports a general statement about wave packet dependence, not a dispute with the cited paper's claims.
+2305.01852	1305.4575	background	high	Citing paper acknowledges multichannel analyses are more sophisticated but chooses single-channel for its own NN demonstration, no dispute with cited work
+2305.01852	1407.6839	background	high	Citing paper acknowledges multichannel analyses are more sophisticated but chooses single-channel for its own NN demonstration, no dispute with cited work
+2305.01852	1305.3598	background	high	Citing paper acknowledges multichannel analyses are more sophisticated but chooses single-channel for its own NN demonstration, no dispute with cited work
+2305.01852	1506.01768	background	high	Citing paper acknowledges multichannel analyses are more sophisticated but chooses single-channel for its own NN demonstration, no dispute with cited work
+2305.01852	1510.07065	background	high	Citing paper acknowledges multichannel analyses are more sophisticated but chooses single-channel for its own NN demonstration, no dispute with cited work
+2306.09360	1611.09748	uses	high	Target models are cited as examples predicting suppression, not disputed
+2306.09360	2211.01387	contrasts	high	Citing paper notes CT found no clear evidence, in tension with intrinsic charm predictions
+2307.10301	1106.3887	background	low	Context only notes prior works lack the vacuum term, no explicit dispute with the cited paper's claims
+2210.03567	1207.4996	background	low	Context only notes earlier studies made calculational approximations, no dispute with the cited paper's claims
+2210.03567	hep-ph/0611231	compares	high	Contrast here distinguishes two EFT regimes, not a dispute with the cited paper's conclusions
+2210.03567	1201.4852	background	low	Context only notes earlier studies made calculational approximations, no dispute with the cited paper's claims
+2103.09978	hep-ph/0607257	contrasts	low	recheck response unparseable, original label kept
+2304.04725	2206.10021	contrasts	low	recheck response unparseable, original label kept
+2309.15327	1603.01319	compares	high	Notes a difference in sensitivity between this study and heavier-nuclei fusion studies, not a dispute with the cited paper's claims
+2307.13561	2009.11388	uses	high	Target is cited as an example of Landau matching whose choice the citing paper departs from, not as a disputed claim
+2309.02839	2203.15342	compares	high	The contrast is between VS-IMSRG and CCSD methods, not a dispute with the cited paper's own claims
+2311.07450	1304.3404	contrasts	high	Citing paper asserts its weak-coupling top-down thermalization is qualitatively different from the cited paper's strongly-coupled UV-first equilibration
+2312.12984	2102.07830	compares	high	The citing paper notes its tensor radius definition differs from the cited paper's definition, a neutral definitional difference rather than a dispute over claims or results.
+2201.01489	nucl-th/9711022	contrasts	low	recheck response unparseable, original label kept
+2207.03563	1903.09833	contrasts	low	recheck response unparseable, original label kept
+2309.08756	1608.07086	contrasts	high	Citing paper asserts its inclusion of Born and NLO terms is crucial, in contrast to all previous studies including the target's own claims.
+2309.08756	1505.02849	contrasts	high	Citing paper asserts its inclusion of Born and NLO terms is crucial, in contrast to all previous studies including the target's own claims.
+2308.01756	1506.02466	compares	high	The citing paper distinguishes its broader chiral-order variation analysis from the cited paper's focus on a family of N2LO potentials, without disputing the cited paper's claims.
+2311.07144	2101.03193	contrasts	high	Citing paper asserts the target's estimate is not model independent and too uncertain to draw conclusions
+2308.14857	1503.03495	compares	high	The citing paper notes a methodological difference from the target's fixed DiFF parameters, not a dispute with the target's claims or results.
+2311.10059	1904.09669	compares	high	Contrasts quark matter with hadronic models where TARGET supports density-proportional nucleon interactions, a difference not a dispute
+2310.17444	2310.10787	contrasts	high	Citing paper says its decreasing eta T/(epsilon+P) trend is at variance with the cited paper's assumed temperature-independent value
+2104.06238	1808.03997	contrasts	low	recheck response unparseable, original label kept
+2311.08864	1502.04305	contrasts	high	Citing paper states the cited paper's result overshoots the low-energy flank and is excluded
+2311.10547	2208.00744	contrasts	high	Citing paper asserts non-conformal studies showed attractor behavior is not as general as previously thought, correcting prior claims
+2312.16212	2205.09384	compares	high	The contrast is between geometrically symmetric systems and the current model, not a dispute with the cited paper's claims.
+2309.01603	1111.4400	compares	high	Citing paper compares its treatment of the Dirac sea with previous studies, noting a re-entrance behavior but not disputing the cited paper's claims
+2401.07976	1912.05978	background	low	Context is too thin to establish a dispute with the cited paper's own claims
+2203.04685	1409.8164	contrasts	low	recheck response unparseable, original label kept
+2401.10320	1704.07680	compares	high	The contrast is between the new non-boost-invariant result and the boost-invariant Glasma case, not a dispute with the cited paper's claims.
+2401.08551	2002.11355	background	low	The context distinguishes cold inspiral NS constraints from hot post-merger modeling, not a dispute with the cited paper's own claims.
+2401.08551	1711.02644	background	low	The context distinguishes cold inspiral NS constraints from hot post-merger modeling, not a dispute with the cited paper's own claims.
+2312.17734	2307.05593	contrasts	high	Citing paper rejects the cited paper's assumption that Hilbert space truncation errors must be removed, presenting a different perspective
+2402.08199	2210.04189	contrasts	high	Citing paper disputes the cited paper's claimed unexpected structure in A=3 nuclei, finding no evidence for it
+2402.01814	1909.13818	background	low	The context notes a zero is engineered in the target model but does not assert the target's claims are wrong or in tension
+2402.06776	2212.14619	contrasts	high	Citing paper asserts the cited paper's fluctuating BDNK attempt failed and is mathematically inconsistent
+2401.14282	1312.4230	uses	high	Target is cited as evidence for substantial radial flow at LHC, not disputed
+2311.09877	0806.1695	background	low	Context is truncated and only notes a model underestimation without a clear dispute with the cited paper's own claims
+2311.09877	1807.02813	background	low	Context is truncated and only notes a model underestimation without a clear dispute with the cited paper's own claims
+2402.18723	1912.05978	contrasts	high	Citing paper cannot reproduce the cited paper's predicted deformed 0+2 state and finds it at much higher energy
+2311.13585	2208.04025	contrasts	high	Citing paper highlights a one-order-of-magnitude discrepancy between TARGET's chiPT polarizability result and dispersion analysis, indicating tension with TARGET's claims
+2311.13585	2205.10076	uses	high	TARGET is cited as the dispersion analysis side of the discrepancy, not as the paper being disputed
+2311.13585	1511.04301	uses	high	TARGET is cited as the dispersion analysis side of the discrepancy, not as the paper being disputed
+2311.13585	1506.01298	contrasts	high	Citing paper asserts TARGET's approach introduces a 33% discrepancy and unquantified model dependence, so its agreement with experiment may be accidental
+2311.13585	1801.09790	uses	high	TARGET is cited as the dispersion analysis side of the discrepancy, not as the paper being disputed
+2405.01141	2209.04717	contrasts	high	Citing paper notes sharp contrast with TARGET's nuclear-matter bulk viscosity peaking at higher temperature
+2403.08088	2003.11655	compares	high	Notes an apparent conflict but resolves it by noting the zero lies beyond measurable range, framing it as expected differences rather than a dispute
+2404.04679	2308.04491	uses	high	Citing paper cites TARGET as prior evidence and clarifies its origin, not disputing its claims
+2403.08485	2208.11707	contrasts	high	The citing paper states that a new chiral perturbation theory analysis showed isospin breaking corrections are strongly enhanced, contradicting the earlier claim that both contributions vanished in the isospin limit.
+2404.01421	1908.02933	compares	high	The phrase on the contrary marks a different calculational method for relaxation times, not a dispute with the cited paper's claims.
+2404.16235	1301.3357	contrasts	high	Citing paper says the 1.4 GeV^2 calculation shows a difference between ratios not observed in the data, disputing the cited paper's result.
+2404.02281	2305.11995	uses	high	Citing paper cites target as a result that does not undermine number density interpretations, using it as supporting context rather than disputing it
+2403.04711	2309.05789	uses	medium	Target is cited as evidence that thermodynamic relations may require modifications, not as a disputed claim.
+2402.15548	2305.19376	contrasts	high	Citing paper states its K_sym result appears in contrast with the solution given in TARGET to conciliate PREX and CREX
+2402.15548	2104.13612	contrasts	high	Citing paper says its calculations do not support the EoS stiffening at high density seen in TARGET
+2405.11313	2305.05678	background	low	The context merely notes a different viewpoint without asserting a dispute with the citing paper's own claims.
+2403.07433	2311.03880	contrasts	low	recheck response unparseable, original label kept
+2407.09743	2005.00479	contrasts	high	Citing paper reports dramatically reduced spread relative to the uncertainty found in the target paper, indicating tension with the target's result
+2409.07038	1910.02266	compares	high	The context notes a difference in symmetry energy behavior between models, not a dispute with the cited paper's claims.
+2402.10183	1011.3354	contrasts	high	Citing paper states the shifted initial profile from the cited paper yields incorrect rapidity dependence of v1
+2402.10183	1902.06723	compares	high	In contrast marks a different interpolation method, not a dispute with the cited paper's claims
+2402.10183	1908.02113	uses	medium	Cited paper is invoked as evidence that transport approaches cannot explain thermalization
+2408.14808	1904.02730	contrasts	high	Citing paper asserts the oscillations reported in TARGET do not appear in the subtracted quark condensate, disputing TARGET's result
+2407.04403	2307.12364	contrasts	high	Citing paper notes the L0-R1.4 correlation disappears when the isoscalar channel varies, in tension with the cited paper's reported correlation.
+2407.04403	1610.06344	contrasts	high	Citing paper notes the L0-R1.4 correlation disappears when the isoscalar channel varies, in tension with the cited paper's reported correlation.
+2409.17127	2110.13153	compares	high	The context notes a methodological difference in parameter variation between Trajectum 1 and Trajectum 2, not a dispute over claims
+2408.15192	2203.14974	contrasts	high	Citing paper explicitly disputes recent reports from TARGET that pQCD input matters, finding it negligible instead
+2408.09877	2304.02276	contrasts	high	Citing paper acknowledges unresolved discrepancies between its findings and the cited paper's results
+2406.12029	2201.02091	contrasts	high	Citing paper asserts Tsallis blast-wave studies have flawed transverse momentum distributions
+2409.07685	2408.01399	contrasts	high	Citing paper states its optimal energy range and density are significantly lower than the previous estimates of the cited paper, indicating quantitative tension with the cited paper's own claims.
+2409.07685	1208.4107	contrasts	high	Citing paper states its optimal energy range and density are significantly lower than the previous estimates of the cited paper, indicating quantitative tension with the cited paper's own claims.
+2407.11447	1711.06748	compares	medium	States the approach differs from Fujimoto et al without asserting their claims are wrong
+2407.11447	1903.03400	compares	medium	States the approach differs from Fujimoto et al without asserting their claims are wrong
+2408.16097	1402.3776	compares	medium	Citing paper attributes differing cross sections to nonlocal versus local potentials, a methodological difference rather than a dispute with the cited paper's claims
+2408.16097	0706.1282	compares	medium	Citing paper attributes differing cross sections to nonlocal versus local potentials, a methodological difference rather than a dispute with the cited paper's claims
+2404.00454	1305.0927	contrasts	low	recheck response unparseable, original label kept
+2409.19438	0904.2183	contrasts	high	Citing paper reports tension between its thin-skin result and the cited ab initio asymmetric matter calculations
+2410.00140	2405.19251	compares	high	The citing paper notes its findings differ from the cited paper's inferred ADM mass but attributes the difference to differing priors, not a dispute over the cited paper's claims.
+2410.07583	2304.01009	compares	high	The citing paper notes a difference in assumptions, not a dispute with the cited paper's claims.
+2411.13398	2009.08345	background	low	Context only notes debates about the connection, without asserting the cited paper's claims are wrong
+2411.09323	1503.06986	contrasts	high	Citing paper says UrQMD hadronic rescatterings cannot generate baryon-meson v2 splitting, disputing the cited paper's hadronic flow explanation
+2410.20704	1507.07510	contrasts	high	Citing paper states its NJL phase boundary is not in quantitative agreement with the cited QCD results, asserting tension with the target's findings.
+2410.18791	2404.00554	background	low	The parenthetical points to a different perspective but does not assert the cited paper's claims are wrong or in tension
+2412.19393	2211.16376	background	low	The cited paper is mentioned as recent studies altering interpretation, but no explicit dispute with its own claims is asserted
+2411.10598	1510.05232	background	low	Citation context does not mention the cited paper's specific claims or results
+2410.23853	2306.02478	compares	high	Citing paper says its simpler two-body method agrees with data, acknowledging three-body approach might be better, not disputing its claims
+2412.04411	2311.07182	background	low	Context describes model changes and different results without asserting the cited paper's own claims are wrong
+2406.03545	2103.05996	contrasts	low	recheck response unparseable, original label kept
+2501.04637	2309.00511	contrasts	high	Citing paper asserts the Schwinger-Keldysh effective action becomes ill-defined precisely where the cited paper's hydrodynamic theory is causal and stable
+2412.04545	2012.07704	compares	high	The citing paper contrasts its correlation-based approach with the probabilistic treatment of systematic uncertainties in the target, a methodological difference rather than a claim that the target is wrong.
+2412.04545	1506.01343	compares	high	The citing paper contrasts its correlation-based approach with the probabilistic treatment of systematic uncertainties in the target, a methodological difference rather than a claim that the target is wrong.
+2412.04545	1904.10581	compares	high	The citing paper contrasts its correlation-based approach with the probabilistic treatment of systematic uncertainties in the target, a methodological difference rather than a claim that the target is wrong.
+2411.11782	2407.04774	uses	high	Citing paper cites target as support for identifying a misprint in a third paper, not disputing target's own claims
+2412.12282	2305.11995	contrasts	high	Citing paper says it cannot retrace the derivation asserted in the target paper, disputing the target's claim.
+2501.10012	2107.11713	contrasts	medium	Citing paper says its temperature dependence of quasi-parton masses differs from parameterized-mass quasi-parton models, implying tension with QLBT's approach
+2308.13233	2308.03650	contrasts	low	recheck response unparseable, original label kept
+2412.05599	2205.10742	contrasts	high	Citing paper notes that the validity of the BCS approximation adopted in this work has been questioned by the target paper
+2409.15387	2409.17127	contrasts	low	recheck response unparseable, original label kept
+2412.16972	1912.05978	contrasts	low	recheck response unparseable, original label kept
+2501.18252	1409.0877	contrasts	high	Citing paper asserts crossing point estimates are not robust, disputing the cited paper's suggested heuristic estimate
+2412.10242	2102.05267	uses	high	Cited as support for smaller R_1.4 values against PREX-II, not disputed by citing paper
+2412.10242	2102.10074	uses	high	Cited as support for smaller R_1.4 values against PREX-II, not disputed by citing paper
+2411.15198	1701.07792	contrasts	high	Citing paper asserts prior calculations omitted the 2F2 term, correcting their treatment
+2411.15198	hep-lat/0505022	contrasts	high	Citing paper states this prior calculation did not include the 2F2 term
+2411.15198	1512.00566	contrasts	high	Citing paper states this prior calculation did not include the 2F2 term
+2411.15198	hep-lat/0512004	contrasts	high	Citing paper states this prior calculation did not include the 2F2 term
+2501.07370	2405.11920	contrasts	low	recheck response unparseable, original label kept
+2503.20534	hep-ph/9601345	background	low	Context is garbled and too thin to establish a dispute with the cited paper
+2502.17232	2109.00131	uses	high	Citing paper cites isobar data as evidence that background contributions are large, not as a dispute with the cited paper's own claims.
+2501.11195	2102.13022	background	low	Context is too thin to establish a dispute with the cited paper's own claims
+2502.02634	2306.09495	background	low	The cited paper is invoked as an example of power-suppressed current-hemisphere measurements, not disputed or corrected.
+2502.04211	2407.03113	compares	high	The 'in contrast' marks a difference in proton fraction predictions, not a dispute with the cited paper's claims
+2502.04211	2307.12364	compares	high	The 'in contrast' marks a difference in proton fraction predictions, not a dispute with the cited paper's claims
+2502.04211	2402.15548	compares	high	The 'in contrast' marks a difference in proton fraction predictions, not a dispute with the cited paper's claims
+2503.11938	2407.01128	compares	high	Notes an alternative fit to the same data, not a dispute with the cited paper's claims
+2503.16405	1903.11494	contrasts	high	Citing paper notes the uncorrelated Poisson scenario from the target predicts zero antiproton cumulants, in contrast to the data
+2504.04026	1404.4690	background	low	Context is truncated and does not establish a dispute with the cited paper
+2504.03834	2312.14127	compares	high	The context notes a difference in convergence behavior between the NLO speed of sound and the NQM results, not a dispute with the cited paper's claims.
+2502.19327	2404.14160	uses	high	Target is cited as supporting evidence for the scalar-only condensate finding, not disputed
+2502.19327	2304.10240	contrasts	high	Citing paper states its axion mass result differs from target because target omitted color superconductivity
+2505.04444	2506.15531	compares	high	The only difference is in the calculation of the sound speed, a neutral comparison rather than a dispute over the cited paper's claims
+2504.00283	nucl-th/9307020	contrasts	high	Citing paper says its assumptions should be contrasted with the boost-invariant blast-wave models of the cited paper, which become inappropriate at lower beam energies.
+2504.18701	nucl-th/0702085	compares	high	Notes a difference in model behavior (no limiting pressure in Gogny vs limiting pressure in eMDYI) without asserting the cited paper is wrong
+2503.20564	2308.08987	contrasts	high	Citing paper's quantitative result that excluded volume is too small to solve the hyperon puzzle directly contradicts the cited paper's claim that these effects are strong enough to sustain heavy neutron stars
+2505.05466	2401.06609	contrasts	high	Citing paper identifies a technical issue in the RFT approach that previous work including the target did not study, implying a correction or gap in the target's treatment.
+2505.06135	2210.03807	contrasts	high	Citing paper calls the existing formula's non-trivial internal energy density for a pointlike particle peculiar, disputing the cited result
+2505.07076	2406.11059	contrasts	high	Citing paper asserts QM model ignores pion dissociation and fails to produce asymptotic vanishing of pion condensate, in tension with its own quarkyonic prediction
+2505.07677	2312.14127	background	low	Context notes not using perturbative QCD info, no dispute with the cited paper's claims
+2503.23919	2206.05868	contrasts	high	Citing paper says prior quark-loop-only treatments like TARGET yield a stable bound state and delta-function spectrum, which their kaon-loop inclusion corrects to a finite-width spectrum.
+2503.23919	2209.01872	contrasts	high	Citing paper says prior quark-loop-only treatments like TARGET yield a stable bound state and delta-function spectrum, which their kaon-loop inclusion corrects to a finite-width spectrum.
+2505.19906	2402.11205	compares	high	Citing paper compares its scheme favorably to TARGET's input scheme without asserting TARGET's claims are wrong
+2504.04688	2402.05995	contrasts	high	Citing paper asserts conventional flow observables in [TARGET] fundamentally lack resolving power to discriminate configurations, a direct limitation of the cited work's approach.
+2504.04688	2405.20210	contrasts	high	Citing paper asserts conventional flow observables in [TARGET] fundamentally lack resolving power to discriminate configurations, a direct limitation of the cited work's approach.
+2504.01814	2302.10117	background	low	Citation only notes that the n^(2/3) ansatz was suggested in these refs, no dispute asserted in this context
+2504.01814	2009.10846	background	low	Citation only notes that the n^(2/3) ansatz was suggested in these refs, no dispute asserted in this context
+2504.01814	2205.03455	background	low	Citation only notes that the n^(2/3) ansatz was suggested in these refs, no dispute asserted in this context
+2504.01814	2204.03611	background	low	Citation only notes that the n^(2/3) ansatz was suggested in these refs, no dispute asserted in this context
+2504.08379	2409.08841	contrasts	low	recheck response unparseable, original label kept
+2505.23550	2401.04901	contrasts	high	Citing paper asserts cited paper's claim of dynamical generation is inconsistent with data
+2104.06946	hep-ph/0412425	contrasts	low	recheck response unparseable, original label kept
+2507.19811	nucl-th/0304048	uses	high	Target is cited as providing a more reliable ab initio description, not as being disputed or corrected
+2506.21852	2407.03503	compares	high	The citing paper notes its new effective charges differ from the values used to describe 49,50Ti, a numerical difference rather than a claim that the cited paper's own conclusions are wrong.
+2506.10783	1907.11164	contrasts	high	Citing paper states the Lorentz force term was neglected in the cited paper's prior calculation, implying their result is incomplete or corrected
+2507.13254	2312.06952	contrasts	high	Citing paper notes Ref assumes only Lee-Yang edge cuts are non-analytic, implying a limitation or tension with its own approach
+2507.02448	2412.09393	contrasts	high	Citing paper asserts extended Skyrme interactions diverge at high energy and effective mass fails to approach bare mass, a conceptual tension with the cited paper's approach.
+2507.02448	2311.04026	contrasts	high	Citing paper asserts extended Skyrme interactions diverge at high energy and effective mass fails to approach bare mass, a conceptual tension with the cited paper's approach.
+2506.16161	2502.17976	compares	high	Model averaging is cited as an existing alternative approach, not as a wrong claim being corrected
+2506.16161	2502.14348	compares	high	Model averaging is cited as an existing alternative approach, not as a wrong claim being corrected
+2507.14087	2106.12825	contrasts	high	Citing paper states the NLO resolution claim is not confirmed by the full NLO calculation in the target paper, disputing its conclusion
+2508.10090	1710.02540	contrasts	high	Citing paper states TARGET obtained the opposite result at LO and its trial wavefunction was found not to yield bound states
+2507.23210	2408.04296	background	low	The context mentions a discrepancy between theoretical predictions and experimental data but does not clearly assert that the cited paper's own claims are wrong or corrected by the citing paper.
+2508.03496	2206.05868	contrasts	high	Citing paper asserts the cited paper's conventional spin-alignment predictions are far too small versus experiment
+2508.03496	2209.01872	contrasts	high	Citing paper asserts the cited paper's magnetic-field spin-alignment prediction is orders of magnitude below observed data
+2504.00981	2503.03057	contrasts	low	recheck response unparseable, original label kept
+2507.14098	2502.17976	compares	high	The citing paper notes its amplitudes are angular-independent while the target's carry angular dependence, a methodological difference not a dispute
+2509.00796	2411.17285	contrasts	high	Citing paper asserts its formula fits data better than the cited paper's analytical formula
+2508.04918	2009.11388	contrasts	low	recheck response unparseable, original label kept
+2508.04980	2410.09364	compares	high	Contrasts J/psi gluon probe with light vector mesons as chiral probes, a difference in sensitivity not a dispute with the cited paper's claims
+2510.11731	2109.11356	contrasts	high	Citing paper notes calculations excluding the trineutron resonance, in tension with the cited paper's three-body resonance claims
+2508.05814	2504.13640	contrasts	medium	Citing paper notes previous works approximated the three-body Wigner function and questions the quality of that approximation, implying tension with its own exact solution
+2508.17543	2311.10547	uses	high	Target is cited as evidence that attractor extensions to non-conformal and 3D systems failed, supporting the citing paper's point rather than being disputed
+2508.04550	2504.00790	compares	high	The citing paper notes photons are cleaner than the hadron probes proposed by the target, a neutral comparison of probe types rather than a dispute of the target's claims.
+2504.02657	2310.19042	contrasts	low	recheck response unparseable, original label kept
+2509.19848	nucl-th/0501056	compares	high	The context notes a methodological difference in how coupling constants depend on density versus scalar field, not a dispute over the cited paper's claims.
+2509.17366	1512.03805	compares	high	Describes a different renormalization choice in the cited work, not a dispute with its claims
+2509.13015	1301.4095	contrasts	high	Citing paper states LHC data show stronger suppression than CGC predictions constrained by HERA data, which grow too rapidly with W, indicating tension with the cited paper's results.
+2511.15385	2503.07405	contrasts	low	recheck response unparseable, original label kept
+2506.13677	2502.11976	background	low	Context is a truncated fragment listing references without a clear dispute claim
+2506.13677	2312.01975	background	low	Context is a truncated fragment listing references without a clear dispute claim
+2506.13677	2412.01426	background	low	Context is a truncated fragment listing references without a clear dispute claim
+2509.20844	2311.03880	compares	high	Context notes TARGET explored AVL with mu_B and B but omitted mu_I, a difference in regime rather than a dispute
+2509.20844	2403.07433	compares	high	In contrast marks a difference in setup, chiral limit versus finite pion mass, not a claim that TARGET is wrong
+2512.11555	2512.09272	background	low	Context only reports that the cited work suggested a triaxial IBM interpretation, with no assertion that its claims are wrong or in tension
+2512.19477	2506.10065	contrasts	high	Citing paper states its class-1 speed-of-sound behavior contrasts with results from the cited microphysical FOPT descriptions, indicating tension with the cited paper's own claims
+2512.15896	2507.11495	compares	high	The citing paper distinguishes its focus on IR behavior and one-loop factorization from the cited paper's approach, a difference in method rather than a dispute of the cited paper's claims.
+2512.08283	2403.06125	background	low	The cited paper is referenced as the source of the gluon TMD calculations, and the dispute is with a third-party model relation, not with the target paper's own claims
+2601.03102	0710.0306	contrasts	medium	Citing paper casts doubt on the Q^2 evaluation results of the target paper
+2510.06996	2308.11713	compares	high	The citing paper only notes that its transport-based initial conditions differ from other approaches, not that the cited paper's claims are wrong.
+2510.06996	2310.09380	compares	high	The citing paper only notes that its transport-based initial conditions differ from other approaches, not that the cited paper's claims are wrong.
+2510.06996	1911.12454	compares	high	The citing paper only notes that its transport-based initial conditions differ from other approaches, not that the cited paper's claims are wrong.
+2510.06996	2312.12595	compares	high	The citing paper only notes that its transport-based initial conditions differ from other approaches, not that the cited paper's claims are wrong.
+2510.06996	2207.09604	compares	high	The citing paper only notes that its transport-based initial conditions differ from other approaches, not that the cited paper's claims are wrong.
+2512.22763	1406.4494	contrasts	high	Citing paper finds nonzero hadron tensor elements that the cited paper's general decomposition seemingly excludes, indicating tension with the cited paper's claims.
+2512.09265	2404.17782	contrasts	high	Citing paper says gamma-soft emerges from SU(3) competition, in contrast to the traditional O(6)-like Hamiltonian approach of the target
+2512.01808	1501.03592	contrasts	high	Citing paper states BCS approximation underestimated the enhancement ratio, correcting the cited paper's prior result
+2508.10388	1910.14277	contrasts	high	Citing paper's lattice result of no bound state is explicitly stated in contrast to the cited paper's quark-model prediction of N-Omega dibaryons
+2601.03602	2502.17634	contrasts	high	Citing paper reports discrepancies with the cited paper's capture cross section results, indicating quantitative tension.
+2512.18549	1606.01126	compares	high	The citing paper notes its band-theory prediction is at variance with the hydrodynamic approach of the target, but this is a methodological difference between approaches rather than a claim that the target's own claims are wrong.
+2511.07358	1207.7327	contrasts	low	recheck response unparseable, original label kept
+2601.13636	1904.10712	contrasts	high	Citing paper reports entrainment while TARGET's one-dimensional study found anti-entrainment, a quantitative tension with TARGET's own result.
+2601.09307	1710.02549	contrasts	high	Citing paper questions the Roper TFF interpretations from the target paper, asserting they are not justified
+2601.17163	2401.05048	contrasts	low	recheck response unparseable, original label kept
+2601.19434	2303.00119	contrasts	high	Citing paper points out that the cited paper's transition GPDs use an x-independent transverse profile, a modeling choice the citing paper treats as a limitation to be overcome
+2601.19474	2403.17769	contrasts	high	Citing paper asserts its discrete purely damped modes sharply differ from the continuous line of nonhydrodynamic modes in the cited RTA paper
+2601.03804	nucl-th/0308044	background	low	The cited work is mentioned as predicting a rotational-effect disappearance that the citing paper's equations do not describe, but no explicit dispute with the cited paper's claims is asserted
+2601.03763	2006.10610	contrasts	high	Citing paper asserts its Gorkov approach is stable where the cited SCGF method requires high temperatures to avoid pairing instability
+2506.17973	1904.12471	contrasts	low	recheck response unparseable, original label kept
+2603.00274	2003.02085	background	low	Context describes prior tensor-coupling work as limited in flexibility, not a dispute with the cited paper's own claims
+2605.25600	2205.10742	contrasts	high	Citing paper questions the validity of the BCS approximation used in the cited paper's one-dimensional toy models.
+2605.25600	1704.08859	contrasts	high	Citing paper questions the validity of the BCS approximation used in the cited paper's one-dimensional toy models.
+2603.24341	2202.04726	contrasts	high	Citing paper's finding of low-energy dipole strength disputes the cited RPA calculation that disfavored a soft dipole mode
+2602.17611	astro-ph/0608360	uses	high	Target is cited as an example of standard pair-breaking cooling that the new excitations would bypass, not disputed
+2602.17611	nucl-th/0506042	background	medium	Target cited as prior work treating pairing channels in isolation, with no explicit assertion that its claims are wrong
+2605.28813	2507.05208	contrasts	high	Citing paper calls the time-scale argument usually put forward by the target incorrect
+2603.04263	0708.1631	contrasts	low	recheck response unparseable, original label kept
+2308.01942	1207.5292	contrasts	low	recheck response unparseable, original label kept
+2605.12626	nucl-th/0605061	contrasts	high	Citing paper labels the cited work an opposing theory that attributes the EMC Effect to a different mechanism
+2605.12626	nucl-th/0504019	contrasts	high	Citing paper labels the cited work an opposing theory that attributes the EMC Effect to a different mechanism
+2604.02098	1801.01923	uses	medium	Target cited as the prior belief that the citing paper's finding supersedes, not a dispute with target's own claims
+2604.00834	1404.2373	uses	medium	Target cited as an inferior alternative approach, not as a disputed claim
+2603.26924	1801.01923	contrasts	high	Citing paper reports no peak above 1/3, explicitly in tension with the cited paper's reported peak above 1/3
+2602.09890	2504.02481	contrasts	high	Citing paper says the cited paper's rotor model interpretation is not adapted to many nuclei, disputing its applicability
+2602.09211	2404.02281	contrasts	high	Citing paper explicitly disagrees with cited paper's conclusions and defends the standard definition against them
+2602.09211	2305.11995	contrasts	high	Citing paper argues the alternative definition from cited paper causes factorization and evolution problems
+2602.09211	2502.15817	contrasts	high	Citing paper criticizes cited paper's method as arbitrarily forcing fragmentation functions
+2512.06088	2408.02480	contrasts	low	recheck response unparseable, original label kept
+2512.09272	1707.00236	contrasts	low	recheck response unparseable, original label kept
+2606.09202	2203.09804	compares	high	Citing paper notes its combined treatment differs from the separate-sector treatment of the target, a methodological difference not a dispute
+2603.08805	hep-ph/9311205	background	low	Citation marks the CGC EFT definition, not a dispute with its claims
+2603.08805	1607.04448	background	low	Citation marks the CGC EFT definition, not a dispute with its claims
+2603.08805	1002.0333	background	low	Citation marks the CGC EFT definition, not a dispute with its claims
+2603.08805	hep-ph/9402335	background	low	Citation marks the CGC EFT definition, not a dispute with its claims
+2603.08805	hep-ph/9309289	background	low	Citation marks the CGC EFT definition, not a dispute with its claims
+2604.07221	hep-ph/0401172	compares	high	States they do not employ 3PI effective action methods, a methodological difference not a dispute with the cited paper's claims
+2604.03090	nucl-th/0412056	contrasts	high	Citing paper asserts a double-counting mistake arose from Towner and Hardy's use of the Behrens-Buhring formalism, correcting their approach
+2604.03090	nucl-th/9405031	contrasts	high	Citing paper states its finding was contrary to Towner and Hardy's earlier focus on axial strength modification
+2512.22500	2602.04553	contrasts	low	recheck response unparseable, original label kept
+2402.09571	1502.01675	contrasts	low	recheck response unparseable, original label kept
+2602.12495	2509.03862	contrasts	low	recheck response unparseable, original label kept
+hep-ph/0601127	nucl-th/9801034	contrasts	high	Citing paper asserts perturbative pion treatment in these frameworks fails to converge in all NN channels.
+hep-ph/0601127	nucl-th/9802075	contrasts	high	Citing paper asserts perturbative pion treatment in these frameworks fails to converge in all NN channels.
+hep-ph/0601127	nucl-th/9807081	contrasts	high	Citing paper asserts perturbative pion treatment in these frameworks fails to converge in all NN channels.
+hep-ph/0601127	nucl-th/9911001	uses	high	Target is cited as the supporting reference showing perturbative pions fail, not as the disputed framework.
+nucl-ex/0211023	nucl-th/0107050	contrasts	medium	Citing paper notes Friedman and Gal used old theoretical r_np values considerably different from empirical ones used here, implying tension in extracted potential parameters
+nucl-ex/0211023	nucl-th/0205054	contrasts	medium	Citing paper notes Friedman and Gal used old theoretical r_np values considerably different from empirical ones used here, implying tension in extracted potential parameters
+nucl-th/0307067	hep-ph/0104307	compares	high	Citing paper notes its argument went opposite to Oset-Ramos but establishes practical equivalence, not a dispute with their claims
+nucl-th/0608071	nucl-th/9310019	contrasts	high	Citing paper states its results are in contrast with Bright and Cotanch's calculated cross sections, indicating tension with the cited paper's own claims.
+nucl-th/9905060	nucl-th/9809063	contrasts	high	Citing paper asserts the cited paper's 2p-2h MEC response breaks second-kind scaling, contradicting the superscaling claim
+nucl-th/0306074	hep-ph/9604280	background	low	Context only notes a different chiral symmetry realization without asserting the cited paper is wrong
+nucl-th/0306074	hep-ph/9707307	background	low	Context only notes a different chiral symmetry realization without asserting the cited paper is wrong
+nucl-th/0209018	hep-ph/0104307	contrasts	low	recheck response unparseable, original label kept
+nucl-th/9606040	nucl-th/9401019	background	low	Context only notes the suggestion of an alternate form without stating any dispute
+nucl-th/0001018	nucl-th/9602006	contrasts	high	Citing paper argues shell model diagonalization is preferable to shell model Monte Carlo, which has low-temperature restrictions
+nucl-th/0001018	nucl-th/9210014	contrasts	high	Citing paper argues shell model diagonalization is preferable to shell model Monte Carlo, which has low-temperature restrictions
+nucl-th/9803057	nucl-th/9804051	uses	high	Citing paper cites Haberzettl as support for a known objection to a procedure, not a dispute with Haberzettl
+nucl-th/9803057	nucl-th/9704057	uses	high	Citing paper cites Haberzettl as support for a known objection to a procedure, not a dispute with Haberzettl
+nucl-th/9803057	nucl-th/9404013	contrasts	high	Citing paper states the energy-dependent phase found by Tiator and Knochlein is not present in its own results
+nucl-th/0101010	nucl-th/9910014	contrasts	low	recheck response unparseable, original label kept
+nucl-th/9508021	nucl-th/9308011	background	low	Citation context is too thin to establish any dispute with the cited paper
+nucl-th/9607058	hep-ph/9504250	contrasts	high	Citing paper explicitly disputes Brown and Rho's deep kaon potential of -200 MeV as contrary to its own findings.
+nucl-th/9607058	hep-ph/9304204	contrasts	high	Citing paper explicitly disputes Brown and Rho's deep kaon potential of -200 MeV as contrary to its own findings.
+nucl-th/9607058	nucl-th/9507028	contrasts	high	Citing paper explicitly disputes Brown and Rho's deep kaon potential of -200 MeV as contrary to its own findings.
+nucl-th/0601008	nucl-th/9309007	uses	medium	Citing paper builds on Tajima's suggestion that triaxiality alone is insufficient, not disputing Tajima's own claims
+nucl-th/9701033	nucl-th/9212016	background	low	Context only reports the Comment's contention about discrepancies, no assertion that the cited paper's own claims are wrong
+nucl-th/9701033	nucl-th/9604016	background	low	Context only reports the Comment's contention about discrepancies, no assertion that the cited paper's own claims are wrong
+hep-ph/0104023	hep-ph/0003134	contrasts	low	recheck response unparseable, original label kept
+2602.14541	2312.16671	contrasts	low	recheck response unparseable, original label kept
+2601.01615	2501.14375	contrasts	low	recheck response unparseable, original label kept
+nucl-th/9707047	nucl-th/9702018	uses	medium	Millener is cited as offering an alternative explanation, not as disputing the citing paper's own claims
+nucl-th/9312004	nucl-th/9211013	contrasts	low	recheck response unparseable, original label kept
+2606.12166	nucl-th/0405016	contrasts	low	recheck response unparseable, original label kept
+2512.05019	2201.07962	contrasts	low	recheck response unparseable, original label kept
+nucl-th/9505002	nucl-th/9405018	contrasts	low	recheck response unparseable, original label kept
+2602.19465	1605.07778	contrasts	low	recheck response unparseable, original label kept
+2602.19515	2201.09512	contrasts	low	recheck response unparseable, original label kept
+2308.16266	2206.10021	contrasts	low	recheck response unparseable, original label kept
+nucl-th/9304022	nucl-th/9211013	contrasts	low	recheck response unparseable, original label kept

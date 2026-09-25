@@ -62,18 +62,18 @@ Open questions center on the treatment of nuclear and plasma uncertainties. Rece
 - [0710.4854](../papers/0710.4854.md) (2007) [2] Big bang nucleosynthesis as a probe of fundamental "constants
 - [0708.2239](../papers/0708.2239.md) (2007) [2] Extension of thermonuclear functions through the pathway model including Maxwell-Boltzmann and Tsallis distributions
 - [0707.3500](../papers/0707.3500.md) (2007) [2] Coulomb tunneling for fusion reactions in dense matter: Path integral Monte Carlo versus mean field
-- [astro-ph/0010452](../papers/astro-ph/0010452.md) (0000) [2] astro-ph/0010452
-- [astro-ph/0405568](../papers/astro-ph/0405568.md) (0000) [2] astro-ph/0405568
-- [astro-ph/0608341](../papers/astro-ph/0608341.md) (0000) [1] astro-ph/0608341
-- [astro-ph/9610256](../papers/astro-ph/9610256.md) (0000) [1] astro-ph/9610256
-- [astro-ph/9612197](../papers/astro-ph/9612197.md) (0000) [1] astro-ph/9612197
-- [nucl-th/0001026](../papers/nucl-th/0001026.md) (0000) [2] nucl-th/0001026
-- [nucl-th/0007070](../papers/nucl-th/0007070.md) (0000) [1] nucl-th/0007070
-- [nucl-th/0102016](../papers/nucl-th/0102016.md) (0000) [2] nucl-th/0102016
-- [nucl-th/0211022](../papers/nucl-th/0211022.md) (0000) [2] nucl-th/0211022
-- [nucl-th/0305099](../papers/nucl-th/0305099.md) (0000) [2] nucl-th/0305099
-- [nucl-th/0312106](../papers/nucl-th/0312106.md) (0000) [1] nucl-th/0312106
-- [nucl-th/0607015](../papers/nucl-th/0607015.md) (0000) [2] nucl-th/0607015
-- [nucl-th/9508017](../papers/nucl-th/9508017.md) (0000) [2] nucl-th/9508017
-- [nucl-th/9705046](../papers/nucl-th/9705046.md) (0000) [2] nucl-th/9705046
-- [nucl-th/9912042](../papers/nucl-th/9912042.md) (0000) [1] nucl-th/9912042
+- [astro-ph/0010452](../papers/astro-ph_0010452.md) (0000) [2] astro-ph/0010452
+- [astro-ph/0405568](../papers/astro-ph_0405568.md) (0000) [2] astro-ph/0405568
+- [astro-ph/0608341](../papers/astro-ph_0608341.md) (0000) [1] astro-ph/0608341
+- [astro-ph/9610256](../papers/astro-ph_9610256.md) (0000) [1] astro-ph/9610256
+- [astro-ph/9612197](../papers/astro-ph_9612197.md) (0000) [1] astro-ph/9612197
+- [nucl-th/0001026](../papers/nucl-th_0001026.md) (0000) [2] nucl-th/0001026
+- [nucl-th/0007070](../papers/nucl-th_0007070.md) (0000) [1] nucl-th/0007070
+- [nucl-th/0102016](../papers/nucl-th_0102016.md) (0000) [2] nucl-th/0102016
+- [nucl-th/0211022](../papers/nucl-th_0211022.md) (0000) [2] nucl-th/0211022
+- [nucl-th/0305099](../papers/nucl-th_0305099.md) (0000) [2] nucl-th/0305099
+- [nucl-th/0312106](../papers/nucl-th_0312106.md) (0000) [1] nucl-th/0312106
+- [nucl-th/0607015](../papers/nucl-th_0607015.md) (0000) [2] nucl-th/0607015
+- [nucl-th/9508017](../papers/nucl-th_9508017.md) (0000) [2] nucl-th/9508017
+- [nucl-th/9705046](../papers/nucl-th_9705046.md) (0000) [2] nucl-th/9705046
+- [nucl-th/9912042](../papers/nucl-th_9912042.md) (0000) [1] nucl-th/9912042

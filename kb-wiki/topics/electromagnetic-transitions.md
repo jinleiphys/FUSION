@@ -1,8 +1,8 @@
 # Electromagnetic transitions
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Electromagnetic transitions
+**PhySH lineage:** Nuclear structure & decays > Electromagnetic transitions
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 
@@ -86,31 +86,31 @@ Open questions center on the role of sub-nucleonic degrees of freedom and the qu
 - [1005.2151](../papers/1005.2151.md) (2010) [2] Modification of nuclear transitions in stellar plasma by electronic processes: K-isomers in 176Lu and 180Ta under s-proc...
 - [0802.3316](../papers/0802.3316.md) (2008) [2] Negative-Parity States and beta-decays in odd Ho and Dy Nuclei with A=151,153
 - [0707.1212](../papers/0707.1212.md) (2007) [2] Extended Cluster Model for Light, and Medium Nuclei
-- [cond-mat/0603487](../papers/cond-mat/0603487.md) (0000) [2] cond-mat/0603487
-- [hep-lat/0309013](../papers/hep-lat/0309013.md) (0000) [1] hep-lat/0309013
-- [hep-lat/0406011](../papers/hep-lat/0406011.md) (0000) [2] hep-lat/0406011
-- [hep-ph/0505002](../papers/hep-ph/0505002.md) (0000) [2] hep-ph/0505002
-- [hep-ph/0608103](../papers/hep-ph/0608103.md) (0000) [2] hep-ph/0608103
-- [hep-ph/9910469](../papers/hep-ph/9910469.md) (0000) [1] hep-ph/9910469
-- [nucl-th/0009088](../papers/nucl-th/0009088.md) (0000) [2] nucl-th/0009088
-- [nucl-th/0010009](../papers/nucl-th/0010009.md) (0000) [2] nucl-th/0010009
-- [nucl-th/0012077](../papers/nucl-th/0012077.md) (0000) [2] nucl-th/0012077
-- [nucl-th/0202029](../papers/nucl-th/0202029.md) (0000) [1] nucl-th/0202029
-- [nucl-th/0210001](../papers/nucl-th/0210001.md) (0000) [2] nucl-th/0210001
-- [nucl-th/0301060](../papers/nucl-th/0301060.md) (0000) [2] nucl-th/0301060
-- [nucl-th/0305067](../papers/nucl-th/0305067.md) (0000) [1] nucl-th/0305067
-- [nucl-th/0409072](../papers/nucl-th/0409072.md) (0000) [1] nucl-th/0409072
-- [nucl-th/0411064](../papers/nucl-th/0411064.md) (0000) [2] nucl-th/0411064
-- [nucl-th/0411083](../papers/nucl-th/0411083.md) (0000) [1] nucl-th/0411083
-- [nucl-th/0510001](../papers/nucl-th/0510001.md) (0000) [2] nucl-th/0510001
-- [nucl-th/0511044](../papers/nucl-th/0511044.md) (0000) [2] nucl-th/0511044
-- [nucl-th/0611059](../papers/nucl-th/0611059.md) (0000) [2] nucl-th/0611059
-- [nucl-th/0612084](../papers/nucl-th/0612084.md) (0000) [2] nucl-th/0612084
-- [nucl-th/0701016](../papers/nucl-th/0701016.md) (0000) [2] nucl-th/0701016
-- [nucl-th/0703047](../papers/nucl-th/0703047.md) (0000) [2] nucl-th/0703047
-- [nucl-th/9307001](../papers/nucl-th/9307001.md) (0000) [2] nucl-th/9307001
-- [nucl-th/9409016](../papers/nucl-th/9409016.md) (0000) [1] nucl-th/9409016
-- [nucl-th/9508006](../papers/nucl-th/9508006.md) (0000) [2] nucl-th/9508006
-- [nucl-th/9606049](../papers/nucl-th/9606049.md) (0000) [2] nucl-th/9606049
-- [nucl-th/9608055](../papers/nucl-th/9608055.md) (0000) [2] nucl-th/9608055
-- [nucl-th/9804071](../papers/nucl-th/9804071.md) (0000) [2] nucl-th/9804071
+- [cond-mat/0603487](../papers/cond-mat_0603487.md) (0000) [2] cond-mat/0603487
+- [hep-lat/0309013](../papers/hep-lat_0309013.md) (0000) [1] hep-lat/0309013
+- [hep-lat/0406011](../papers/hep-lat_0406011.md) (0000) [2] hep-lat/0406011
+- [hep-ph/0505002](../papers/hep-ph_0505002.md) (0000) [2] hep-ph/0505002
+- [hep-ph/0608103](../papers/hep-ph_0608103.md) (0000) [2] hep-ph/0608103
+- [hep-ph/9910469](../papers/hep-ph_9910469.md) (0000) [1] hep-ph/9910469
+- [nucl-th/0009088](../papers/nucl-th_0009088.md) (0000) [2] nucl-th/0009088
+- [nucl-th/0010009](../papers/nucl-th_0010009.md) (0000) [2] nucl-th/0010009
+- [nucl-th/0012077](../papers/nucl-th_0012077.md) (0000) [2] nucl-th/0012077
+- [nucl-th/0202029](../papers/nucl-th_0202029.md) (0000) [1] nucl-th/0202029
+- [nucl-th/0210001](../papers/nucl-th_0210001.md) (0000) [2] nucl-th/0210001
+- [nucl-th/0301060](../papers/nucl-th_0301060.md) (0000) [2] nucl-th/0301060
+- [nucl-th/0305067](../papers/nucl-th_0305067.md) (0000) [1] nucl-th/0305067
+- [nucl-th/0409072](../papers/nucl-th_0409072.md) (0000) [1] nucl-th/0409072
+- [nucl-th/0411064](../papers/nucl-th_0411064.md) (0000) [2] nucl-th/0411064
+- [nucl-th/0411083](../papers/nucl-th_0411083.md) (0000) [1] nucl-th/0411083
+- [nucl-th/0510001](../papers/nucl-th_0510001.md) (0000) [2] nucl-th/0510001
+- [nucl-th/0511044](../papers/nucl-th_0511044.md) (0000) [2] nucl-th/0511044
+- [nucl-th/0611059](../papers/nucl-th_0611059.md) (0000) [2] nucl-th/0611059
+- [nucl-th/0612084](../papers/nucl-th_0612084.md) (0000) [2] nucl-th/0612084
+- [nucl-th/0701016](../papers/nucl-th_0701016.md) (0000) [2] nucl-th/0701016
+- [nucl-th/0703047](../papers/nucl-th_0703047.md) (0000) [2] nucl-th/0703047
+- [nucl-th/9307001](../papers/nucl-th_9307001.md) (0000) [2] nucl-th/9307001
+- [nucl-th/9409016](../papers/nucl-th_9409016.md) (0000) [1] nucl-th/9409016
+- [nucl-th/9508006](../papers/nucl-th_9508006.md) (0000) [2] nucl-th/9508006
+- [nucl-th/9606049](../papers/nucl-th_9606049.md) (0000) [2] nucl-th/9606049
+- [nucl-th/9608055](../papers/nucl-th_9608055.md) (0000) [2] nucl-th/9608055
+- [nucl-th/9804071](../papers/nucl-th_9804071.md) (0000) [2] nucl-th/9804071

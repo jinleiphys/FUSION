@@ -1,8 +1,8 @@
 # Few-body systems
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Few-body systems
+**PhySH lineage:** Nuclear structure & decays > Few-body systems
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 **Narrower:** [Efimov states](efimov-states.md)
 
@@ -112,7 +112,7 @@ Open questions and active directions include the role of an intrinsic four-body 
 - [0712.0039](../papers/0712.0039.md) (2007) [2] Dynamical coupled-channels: the key to understanding resonances
 - [0711.3846](../papers/0711.3846.md) (2007) [1] Similarity Renormalization Group for Few-Body Systems
 - [0704.3439](../papers/0704.3439.md) (2007) [2] The symmetric heavy-light ansatz
-- [chao-dyn/9701008](../papers/chao-dyn/9701008.md) (0000) [1] chao-dyn/9701008
-- [cond-mat/0308481](../papers/cond-mat/0308481.md) (0000) [2] cond-mat/0308481
-- [cond-mat/0410049](../papers/cond-mat/0410049.md) (0000) [2] cond-mat/0410049
-- [cond-mat/0410417](../papers/cond-mat/0410417.md) (0000) [1] cond-mat/0410417
+- [chao-dyn/9701008](../papers/chao-dyn_9701008.md) (0000) [1] chao-dyn/9701008
+- [cond-mat/0308481](../papers/cond-mat_0308481.md) (0000) [2] cond-mat/0308481
+- [cond-mat/0410049](../papers/cond-mat_0410049.md) (0000) [2] cond-mat/0410049
+- [cond-mat/0410417](../papers/cond-mat_0410417.md) (0000) [1] cond-mat/0410417

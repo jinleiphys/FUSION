@@ -41,16 +41,16 @@ Open questions include the precise nature of exotic hadrons, such as the five-qu
 - [1202.4167](../papers/1202.4167.md) (2012) [2] X(1835), X(2120) and X(2370) in a flux tube model
 - [1109.5607](../papers/1109.5607.md) (2011) [2] The effect of hidden color channels on nucleon-nucleon interaction in quark model
 - [1008.5247](../papers/1008.5247.md) (2010) [1] Unitarity and the color confinement
-- [hep-lat/0007006](../papers/hep-lat/0007006.md) (0000) [2] hep-lat/0007006
-- [hep-lat/0503030](../papers/hep-lat/0503030.md) (0000) [2] hep-lat/0503030
-- [hep-lat/0503035](../papers/hep-lat/0503035.md) (0000) [1] hep-lat/0503035
-- [hep-lat/0610006](../papers/hep-lat/0610006.md) (0000) [2] hep-lat/0610006
-- [hep-ph/9511374](../papers/hep-ph/9511374.md) (0000) [2] hep-ph/9511374
-- [hep-ph/9602358](../papers/hep-ph/9602358.md) (0000) [1] hep-ph/9602358
-- [hep-ph/9912475](../papers/hep-ph/9912475.md) (0000) [2] hep-ph/9912475
-- [nucl-th/0506041](../papers/nucl-th/0506041.md) (0000) [2] nucl-th/0506041
-- [nucl-th/0609010](../papers/nucl-th/0609010.md) (0000) [2] nucl-th/0609010
-- [nucl-th/9402008](../papers/nucl-th/9402008.md) (0000) [2] nucl-th/9402008
-- [nucl-th/9602018](../papers/nucl-th/9602018.md) (0000) [2] nucl-th/9602018
-- [nucl-th/9608018](../papers/nucl-th/9608018.md) (0000) [2] nucl-th/9608018
-- [nucl-th/9908021](../papers/nucl-th/9908021.md) (0000) [2] nucl-th/9908021
+- [hep-lat/0007006](../papers/hep-lat_0007006.md) (0000) [2] hep-lat/0007006
+- [hep-lat/0503030](../papers/hep-lat_0503030.md) (0000) [2] hep-lat/0503030
+- [hep-lat/0503035](../papers/hep-lat_0503035.md) (0000) [1] hep-lat/0503035
+- [hep-lat/0610006](../papers/hep-lat_0610006.md) (0000) [2] hep-lat/0610006
+- [hep-ph/9511374](../papers/hep-ph_9511374.md) (0000) [2] hep-ph/9511374
+- [hep-ph/9602358](../papers/hep-ph_9602358.md) (0000) [1] hep-ph/9602358
+- [hep-ph/9912475](../papers/hep-ph_9912475.md) (0000) [2] hep-ph/9912475
+- [nucl-th/0506041](../papers/nucl-th_0506041.md) (0000) [2] nucl-th/0506041
+- [nucl-th/0609010](../papers/nucl-th_0609010.md) (0000) [2] nucl-th/0609010
+- [nucl-th/9402008](../papers/nucl-th_9402008.md) (0000) [2] nucl-th/9402008
+- [nucl-th/9602018](../papers/nucl-th_9602018.md) (0000) [2] nucl-th/9602018
+- [nucl-th/9608018](../papers/nucl-th_9608018.md) (0000) [2] nucl-th/9608018
+- [nucl-th/9908021](../papers/nucl-th_9908021.md) (0000) [2] nucl-th/9908021

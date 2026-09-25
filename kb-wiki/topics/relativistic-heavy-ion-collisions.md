@@ -2,7 +2,7 @@
 
 **PhySH lineage:** Relativistic heavy-ion collisions
 
-**Narrower:** [Jet quenching](jet-quenching.md), [Photon, lepton & quark production](photon-lepton-quark-production.md), [Collective flow](collective-flow.md), [Transport in heavy-ion collisions](transport-in-heavy-ion-collisions.md), [Jets & heavy flavor physics](jets-heavy-flavor-physics.md), [Particle correlations & fluctuations](particle-correlations-fluctuations.md), [Quark-gluon plasma](quark-gluon-plasma.md), [Particle & resonance production](particle-resonance-production.md), [Hard scattering](hard-scattering.md), [Charged-particle multiplicity](charged-particle-multiplicity.md), [QCD phase transitions](qcd-phase-transitions.md)
+**Narrower:** [Jet quenching](jet-quenching.md), Photon, lepton & quark production, [Collective flow](collective-flow.md), [Transport in heavy-ion collisions](transport-in-heavy-ion-collisions.md), Jets & heavy flavor physics, Particle correlations & fluctuations, [Quark-gluon plasma](quark-gluon-plasma.md), Particle & resonance production, [Hard scattering](hard-scattering.md), [Charged-particle multiplicity](charged-particle-multiplicity.md), [QCD phase transitions](qcd-phase-transitions.md)
 
 ## Landscape
 

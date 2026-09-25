@@ -1,8 +1,8 @@
 # Nucleon-nucleon interactions
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Nucleon-nucleon interactions
+**PhySH lineage:** Nuclear structure & decays > Nucleon-nucleon interactions
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

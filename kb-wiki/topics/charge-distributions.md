@@ -1,8 +1,8 @@
 # Charge distributions
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Charge distributions
+**PhySH lineage:** Nuclear structure & decays > Charge distributions
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 
@@ -112,7 +112,7 @@ Open questions include the role of color charge correlations in the proton, wher
 - [0903.3304](../papers/0903.3304.md) (2009) [2] Interaction between Interpenetrating Charge Clouds and Collision of High-Energy Particles
 - [0810.0925](../papers/0810.0925.md) (2008) [2] Charge distribution and radii in clusters from nuclear pasta models
 - [0807.2173](../papers/0807.2173.md) (2008) [2] Symmetry interaction and many-body correlations
-- [nucl-th/0002046](../papers/nucl-th/0002046.md) (0000) [2] nucl-th/0002046
-- [nucl-th/0005023](../papers/nucl-th/0005023.md) (0000) [2] nucl-th/0005023
-- [nucl-th/0108065](../papers/nucl-th/0108065.md) (0000) [1] nucl-th/0108065
-- [nucl-th/0404007](../papers/nucl-th/0404007.md) (0000) [2] nucl-th/0404007
+- [nucl-th/0002046](../papers/nucl-th_0002046.md) (0000) [2] nucl-th/0002046
+- [nucl-th/0005023](../papers/nucl-th_0005023.md) (0000) [2] nucl-th/0005023
+- [nucl-th/0108065](../papers/nucl-th_0108065.md) (0000) [1] nucl-th/0108065
+- [nucl-th/0404007](../papers/nucl-th_0404007.md) (0000) [2] nucl-th/0404007

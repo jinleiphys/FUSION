@@ -48,9 +48,9 @@ Open questions and active directions focus on the detailed dynamics and properti
 - [1203.2606](../papers/1203.2606.md) (2012) [2] Dynamical approach to heavy-ion induced fission using actinide target nuclei at energies around the Coulomb barrier
 - [1112.2798](../papers/1112.2798.md) (2011) [2] Mass distributions for induced fission of different Hg isotopes
 - [1107.1478](../papers/1107.1478.md) (2011) [2] Microscopic description of cluster radioactivity in actinide nuclei
-- [nucl-th/0203057](../papers/nucl-th/0203057.md) (0000) [2] nucl-th/0203057
-- [nucl-th/0204052](../papers/nucl-th/0204052.md) (0000) [2] nucl-th/0204052
-- [nucl-th/0609034](../papers/nucl-th/0609034.md) (0000) [2] nucl-th/0609034
-- [nucl-th/0701010](../papers/nucl-th/0701010.md) (0000) [2] nucl-th/0701010
-- [nucl-th/9604031](../papers/nucl-th/9604031.md) (0000) [2] nucl-th/9604031
-- [nucl-th/9905006](../papers/nucl-th/9905006.md) (0000) [2] nucl-th/9905006
+- [nucl-th/0203057](../papers/nucl-th_0203057.md) (0000) [2] nucl-th/0203057
+- [nucl-th/0204052](../papers/nucl-th_0204052.md) (0000) [2] nucl-th/0204052
+- [nucl-th/0609034](../papers/nucl-th_0609034.md) (0000) [2] nucl-th/0609034
+- [nucl-th/0701010](../papers/nucl-th_0701010.md) (0000) [2] nucl-th/0701010
+- [nucl-th/9604031](../papers/nucl-th_9604031.md) (0000) [2] nucl-th/9604031
+- [nucl-th/9905006](../papers/nucl-th_9905006.md) (0000) [2] nucl-th/9905006

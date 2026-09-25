@@ -1,8 +1,8 @@
 # Shape coexistence
 
-**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > [Unstable nuclei induced nuclear reactions](unstable-nuclei-induced-nuclear-reactions.md) > Shape coexistence
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Unstable nuclei induced nuclear reactions > Shape coexistence
 
-**Broader:** [Unstable nuclei induced nuclear reactions](unstable-nuclei-induced-nuclear-reactions.md)
+**Broader:** Unstable nuclei induced nuclear reactions
 
 ## Landscape
 

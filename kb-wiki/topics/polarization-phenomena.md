@@ -35,23 +35,23 @@ Active open questions include the precise role of medium effects, such as strong
 - [0910.4706](../papers/0910.4706.md) (2009) [1] Towards Study of Light Scalar Mesons in Polarization Phenomena
 - [0804.2559](../papers/0804.2559.md) (2008) [2] Spin degrees and Polarization Observables in Electromagnetic Reactions
 - [0709.3188](../papers/0709.3188.md) (2007) [1] Spin polarization phenomena in dense nuclear matter
-- [hep-ph/0007358](../papers/hep-ph/0007358.md) (0000) [1] hep-ph/0007358
-- [hep-ph/0112215](../papers/hep-ph/0112215.md) (0000) [1] hep-ph/0112215
-- [hep-ph/0312214](../papers/hep-ph/0312214.md) (0000) [1] hep-ph/0312214
-- [nucl-th/0002025](../papers/nucl-th/0002025.md) (0000) [1] nucl-th/0002025
-- [nucl-th/0010046](../papers/nucl-th/0010046.md) (0000) [2] nucl-th/0010046
-- [nucl-th/0105002](../papers/nucl-th/0105002.md) (0000) [2] nucl-th/0105002
-- [nucl-th/0105007](../papers/nucl-th/0105007.md) (0000) [1] nucl-th/0105007
-- [nucl-th/0111032](../papers/nucl-th/0111032.md) (0000) [1] nucl-th/0111032
-- [nucl-th/0202025](../papers/nucl-th/0202025.md) (0000) [2] nucl-th/0202025
-- [nucl-th/0204066](../papers/nucl-th/0204066.md) (0000) [2] nucl-th/0204066
-- [nucl-th/0209031](../papers/nucl-th/0209031.md) (0000) [1] nucl-th/0209031
-- [nucl-th/0209047](../papers/nucl-th/0209047.md) (0000) [2] nucl-th/0209047
-- [nucl-th/0210078](../papers/nucl-th/0210078.md) (0000) [2] nucl-th/0210078
-- [nucl-th/0312036](../papers/nucl-th/0312036.md) (0000) [1] nucl-th/0312036
-- [nucl-th/0402004](../papers/nucl-th/0402004.md) (0000) [1] nucl-th/0402004
-- [nucl-th/0608029](../papers/nucl-th/0608029.md) (0000) [1] nucl-th/0608029
-- [nucl-th/9303020](../papers/nucl-th/9303020.md) (0000) [1] nucl-th/9303020
-- [nucl-th/9607004](../papers/nucl-th/9607004.md) (0000) [1] nucl-th/9607004
-- [nucl-th/9707006](../papers/nucl-th/9707006.md) (0000) [1] nucl-th/9707006
-- [nucl-th/9807075](../papers/nucl-th/9807075.md) (0000) [1] nucl-th/9807075
+- [hep-ph/0007358](../papers/hep-ph_0007358.md) (0000) [1] hep-ph/0007358
+- [hep-ph/0112215](../papers/hep-ph_0112215.md) (0000) [1] hep-ph/0112215
+- [hep-ph/0312214](../papers/hep-ph_0312214.md) (0000) [1] hep-ph/0312214
+- [nucl-th/0002025](../papers/nucl-th_0002025.md) (0000) [1] nucl-th/0002025
+- [nucl-th/0010046](../papers/nucl-th_0010046.md) (0000) [2] nucl-th/0010046
+- [nucl-th/0105002](../papers/nucl-th_0105002.md) (0000) [2] nucl-th/0105002
+- [nucl-th/0105007](../papers/nucl-th_0105007.md) (0000) [1] nucl-th/0105007
+- [nucl-th/0111032](../papers/nucl-th_0111032.md) (0000) [1] nucl-th/0111032
+- [nucl-th/0202025](../papers/nucl-th_0202025.md) (0000) [2] nucl-th/0202025
+- [nucl-th/0204066](../papers/nucl-th_0204066.md) (0000) [2] nucl-th/0204066
+- [nucl-th/0209031](../papers/nucl-th_0209031.md) (0000) [1] nucl-th/0209031
+- [nucl-th/0209047](../papers/nucl-th_0209047.md) (0000) [2] nucl-th/0209047
+- [nucl-th/0210078](../papers/nucl-th_0210078.md) (0000) [2] nucl-th/0210078
+- [nucl-th/0312036](../papers/nucl-th_0312036.md) (0000) [1] nucl-th/0312036
+- [nucl-th/0402004](../papers/nucl-th_0402004.md) (0000) [1] nucl-th/0402004
+- [nucl-th/0608029](../papers/nucl-th_0608029.md) (0000) [1] nucl-th/0608029
+- [nucl-th/9303020](../papers/nucl-th_9303020.md) (0000) [1] nucl-th/9303020
+- [nucl-th/9607004](../papers/nucl-th_9607004.md) (0000) [1] nucl-th/9607004
+- [nucl-th/9707006](../papers/nucl-th_9707006.md) (0000) [1] nucl-th/9707006
+- [nucl-th/9807075](../papers/nucl-th_9807075.md) (0000) [1] nucl-th/9807075

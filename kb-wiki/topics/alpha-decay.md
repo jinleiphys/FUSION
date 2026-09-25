@@ -1,8 +1,8 @@
 # Alpha decay
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Alpha decay
+**PhySH lineage:** Nuclear structure & decays > Alpha decay
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

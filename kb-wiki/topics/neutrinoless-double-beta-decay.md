@@ -1,6 +1,6 @@
 # Neutrinoless double beta decay
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > [Beta decay](beta-decay.md) > Neutrinoless double beta decay
+**PhySH lineage:** Nuclear structure & decays > [Beta decay](beta-decay.md) > Neutrinoless double beta decay
 
 **Broader:** [Beta decay](beta-decay.md)
 

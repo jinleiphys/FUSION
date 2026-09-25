@@ -32,4 +32,4 @@ Active directions include probing the neutron skin thickness via jet charge dist
 - [1411.7007](../papers/1411.7007.md) (2014) [1] Medium-induced flavor conversion and kaon spectra in electron-ion collisions
 - [1404.4743](../papers/1404.4743.md) (2014) [2] Predictions for the Spatial Distribution of Gluons in the Initial Nuclear State
 - [1211.3048](../papers/1211.3048.md) (2012) [1] Exclusive diffractive processes in electron-ion collisions
-- [nucl-th/9609062](../papers/nucl-th/9609062.md) (0000) [2] nucl-th/9609062
+- [nucl-th/9609062](../papers/nucl-th_9609062.md) (0000) [2] nucl-th/9609062

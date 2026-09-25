@@ -1,8 +1,8 @@
 # Electron & muon capture
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Electron & muon capture
+**PhySH lineage:** Nuclear structure & decays > Electron & muon capture
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

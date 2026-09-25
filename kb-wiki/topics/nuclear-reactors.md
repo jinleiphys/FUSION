@@ -4,7 +4,7 @@
 
 **Broader:** [Nuclear engineering](nuclear-engineering.md)
 
-**Narrower:** [Reactor fuels & coolants](reactor-fuels-coolants.md), [Reactor instrumentation](reactor-instrumentation.md), [Theory, design & simulation of reactors](theory-design-simulation-of-reactors.md), [Radioactive waste](radioactive-waste.md)
+**Narrower:** Reactor fuels & coolants, Reactor instrumentation, Theory, design & simulation of reactors, Radioactive waste
 
 ## Landscape
 
@@ -40,4 +40,4 @@ Open questions include the persistence of the reactor antineutrino anomaly and t
 - [1106.0687](../papers/1106.0687.md) (2011) [1] On the determination of anti-neutrino spectra from nuclear reactors
 - [1105.1659](../papers/1105.1659.md) (2011) [2] Superheavies: Theoretical incitements and predictions
 - [0908.3275](../papers/0908.3275.md) (2009) [2] Nuclear Reactions
-- [hep-ph/0107277](../papers/hep-ph/0107277.md) (0000) [2] hep-ph/0107277
+- [hep-ph/0107277](../papers/hep-ph_0107277.md) (0000) [2] hep-ph/0107277

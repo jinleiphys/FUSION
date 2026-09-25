@@ -1,8 +1,8 @@
 # Nuclear charge distribution
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Nuclear charge distribution
+**PhySH lineage:** Nuclear structure & decays > Nuclear charge distribution
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 **Narrower:** [Nuclear charge radii](nuclear-charge-radii.md)
 

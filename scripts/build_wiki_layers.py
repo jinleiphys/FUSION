@@ -128,6 +128,13 @@ def generate_topic_pages():
 
     TOPICS_DIR.mkdir(parents=True, exist_ok=True)
 
+    # Only concepts that get a page may be linked; a PhySH neighbour below the
+    # 5-paper threshold is written as plain text, not as a dead link.
+    has_page = {s for s, p in slug_papers.items() if len(p) >= 5 and s in slug_to_concept}
+
+    def topic_link(s):
+        return f"[{slug_to_label.get(s, s)}]({s}.md)" if s in has_page else slug_to_label.get(s, s)
+
     # Determine which slugs have >= 5 papers
     generated = 0
     for slug, papers in sorted(slug_papers.items(), key=lambda x: -len(x[1])):
@@ -164,7 +171,7 @@ def generate_topic_pages():
             parent_slug = current['broader'][0]
             parent = slug_to_concept.get(parent_slug)
             if parent:
-                lineage_parts.insert(0, f"[{parent['label']}]({parent_slug}.md)")
+                lineage_parts.insert(0, topic_link(parent_slug))
                 current = parent
             else:
                 break
@@ -178,10 +185,10 @@ def generate_topic_pages():
         lines.append(f"**PhySH lineage:** {lineage_str}")
         lines.append("")
         if broader_slugs:
-            lines.append("**Broader:** " + ", ".join(f"[{slug_to_label.get(s, s)}]({s}.md)" for s in broader_slugs))
+            lines.append("**Broader:** " + ", ".join(topic_link(s) for s in broader_slugs))
             lines.append("")
         if narrower_slugs:
-            lines.append("**Narrower:** " + ", ".join(f"[{slug_to_label.get(s, s)}]({s}.md)" for s in narrower_slugs))
+            lines.append("**Narrower:** " + ", ".join(topic_link(s) for s in narrower_slugs))
             lines.append("")
         lines.append(f"**Papers:** {count}" + (f" (showing first 100 of {len(papers)})" if capped else ""))
         lines.append("")
@@ -189,7 +196,8 @@ def generate_topic_pages():
         for pid, date, title, tier in paper_dates:
             year = date[:4] if date and len(date) >= 4 else "????"
             title_short = title[:120] + ("..." if len(title) > 120 else "")
-            lines.append(f"- [{pid}](../papers/{pid}.md) ({year}) [{tier}] {title_short}")
+            # old-style ids (nucl-th/0009055) live in nucl-th_0009055.md
+            lines.append(f"- [{pid}](../papers/{pid.replace('/', '_')}.md) ({year}) [{tier}] {title_short}")
 
         lines.append("")
 

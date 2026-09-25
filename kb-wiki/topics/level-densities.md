@@ -1,8 +1,8 @@
 # Level densities
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Level densities
+**PhySH lineage:** Nuclear structure & decays > Level densities
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

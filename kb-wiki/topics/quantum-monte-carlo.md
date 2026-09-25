@@ -4,7 +4,7 @@
 
 **Broader:** [Monte Carlo methods](monte-carlo-methods.md)
 
-**Narrower:** [Diffusion quantum Monte Carlo](diffusion-quantum-monte-carlo.md)
+**Narrower:** Diffusion quantum Monte Carlo
 
 ## Landscape
 

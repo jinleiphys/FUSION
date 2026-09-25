@@ -1,6 +1,6 @@
 # Nuclear charge radii
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > [Nuclear charge distribution](nuclear-charge-distribution.md) > Nuclear charge radii
+**PhySH lineage:** Nuclear structure & decays > [Nuclear charge distribution](nuclear-charge-distribution.md) > Nuclear charge radii
 
 **Broader:** [Nuclear charge distribution](nuclear-charge-distribution.md)
 
@@ -89,9 +89,9 @@ Open questions include the origin of unexpected charge radius increases in neutr
 - [0912.0503](../papers/0912.0503.md) (2009) [1] Garvey-Kelson Relations for Nuclear Charge Radii
 - [0911.0987](../papers/0911.0987.md) (2009) [2] Masses and Radii of the Nuclei with N>=Z in an Alpha-Cluster Model
 - [2204.01625](../papers/2204.01625.md) (0000) [2] Tomography of Ultra-relativistic Nuclei with Polarized Photon-gluon Collisions
-- [nucl-th/0107040](../papers/nucl-th/0107040.md) (0000) [1] nucl-th/0107040
-- [nucl-th/0402083](../papers/nucl-th/0402083.md) (0000) [2] nucl-th/0402083
-- [nucl-th/0508026](../papers/nucl-th/0508026.md) (0000) [2] nucl-th/0508026
-- [nucl-th/0701073](../papers/nucl-th/0701073.md) (0000) [1] nucl-th/0701073
-- [nucl-th/9311026](../papers/nucl-th/9311026.md) (0000) [1] nucl-th/9311026
-- [nucl-th/9410010](../papers/nucl-th/9410010.md) (0000) [1] nucl-th/9410010
+- [nucl-th/0107040](../papers/nucl-th_0107040.md) (0000) [1] nucl-th/0107040
+- [nucl-th/0402083](../papers/nucl-th_0402083.md) (0000) [2] nucl-th/0402083
+- [nucl-th/0508026](../papers/nucl-th_0508026.md) (0000) [2] nucl-th/0508026
+- [nucl-th/0701073](../papers/nucl-th_0701073.md) (0000) [1] nucl-th/0701073
+- [nucl-th/9311026](../papers/nucl-th_9311026.md) (0000) [1] nucl-th/9311026
+- [nucl-th/9410010](../papers/nucl-th_9410010.md) (0000) [1] nucl-th/9410010

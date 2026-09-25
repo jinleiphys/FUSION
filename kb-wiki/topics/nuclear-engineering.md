@@ -2,7 +2,7 @@
 
 **PhySH lineage:** Nuclear engineering
 
-**Narrower:** [Nuclear explosions](nuclear-explosions.md), [Isotope separation & enrichment](isotope-separation-enrichment.md), [Nuclear reactors](nuclear-reactors.md), [Neutron physics](neutron-physics.md)
+**Narrower:** Nuclear explosions, Isotope separation & enrichment, [Nuclear reactors](nuclear-reactors.md), [Neutron physics](neutron-physics.md)
 
 ## Landscape
 

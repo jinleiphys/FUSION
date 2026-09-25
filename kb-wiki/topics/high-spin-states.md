@@ -1,8 +1,8 @@
 # High spin states
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > High spin states
+**PhySH lineage:** Nuclear structure & decays > High spin states
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 
@@ -68,21 +68,21 @@ Open questions and active directions include the role of pairing fluctuations an
 - [0908.4486](../papers/0908.4486.md) (2009) [2] Global nuclear structure effects of tensor interaction
 - [0801.0296](../papers/0801.0296.md) (2008) [2] Triaxial projected shell model study of gamma-vibrational bands in even-even Er isotopes
 - [0706.3288](../papers/0706.3288.md) (2007) [2] Alternative experimental evidence for chiral restoration in excited baryons
-- [nucl-th/0004009](../papers/nucl-th/0004009.md) (0000) [2] nucl-th/0004009
-- [nucl-th/0204041](../papers/nucl-th/0204041.md) (0000) [2] nucl-th/0204041
-- [nucl-th/0211033](../papers/nucl-th/0211033.md) (0000) [2] nucl-th/0211033
-- [nucl-th/0212101](../papers/nucl-th/0212101.md) (0000) [1] nucl-th/0212101
-- [nucl-th/0407112](../papers/nucl-th/0407112.md) (0000) [2] nucl-th/0407112
-- [nucl-th/0501068](../papers/nucl-th/0501068.md) (0000) [2] nucl-th/0501068
-- [nucl-th/0503080](../papers/nucl-th/0503080.md) (0000) [2] nucl-th/0503080
-- [nucl-th/0701020](../papers/nucl-th/0701020.md) (0000) [2] nucl-th/0701020
-- [nucl-th/9502043](../papers/nucl-th/9502043.md) (0000) [1] nucl-th/9502043
-- [nucl-th/9506002](../papers/nucl-th/9506002.md) (0000) [1] nucl-th/9506002
-- [nucl-th/9507012](../papers/nucl-th/9507012.md) (0000) [2] nucl-th/9507012
-- [nucl-th/9602034](../papers/nucl-th/9602034.md) (0000) [2] nucl-th/9602034
-- [nucl-th/9604039](../papers/nucl-th/9604039.md) (0000) [2] nucl-th/9604039
-- [nucl-th/9701015](../papers/nucl-th/9701015.md) (0000) [2] nucl-th/9701015
-- [nucl-th/9703048](../papers/nucl-th/9703048.md) (0000) [2] nucl-th/9703048
-- [nucl-th/9710027](../papers/nucl-th/9710027.md) (0000) [1] nucl-th/9710027
-- [nucl-th/9802045](../papers/nucl-th/9802045.md) (0000) [1] nucl-th/9802045
-- [nucl-th/9911029](../papers/nucl-th/9911029.md) (0000) [2] nucl-th/9911029
+- [nucl-th/0004009](../papers/nucl-th_0004009.md) (0000) [2] nucl-th/0004009
+- [nucl-th/0204041](../papers/nucl-th_0204041.md) (0000) [2] nucl-th/0204041
+- [nucl-th/0211033](../papers/nucl-th_0211033.md) (0000) [2] nucl-th/0211033
+- [nucl-th/0212101](../papers/nucl-th_0212101.md) (0000) [1] nucl-th/0212101
+- [nucl-th/0407112](../papers/nucl-th_0407112.md) (0000) [2] nucl-th/0407112
+- [nucl-th/0501068](../papers/nucl-th_0501068.md) (0000) [2] nucl-th/0501068
+- [nucl-th/0503080](../papers/nucl-th_0503080.md) (0000) [2] nucl-th/0503080
+- [nucl-th/0701020](../papers/nucl-th_0701020.md) (0000) [2] nucl-th/0701020
+- [nucl-th/9502043](../papers/nucl-th_9502043.md) (0000) [1] nucl-th/9502043
+- [nucl-th/9506002](../papers/nucl-th_9506002.md) (0000) [1] nucl-th/9506002
+- [nucl-th/9507012](../papers/nucl-th_9507012.md) (0000) [2] nucl-th/9507012
+- [nucl-th/9602034](../papers/nucl-th_9602034.md) (0000) [2] nucl-th/9602034
+- [nucl-th/9604039](../papers/nucl-th_9604039.md) (0000) [2] nucl-th/9604039
+- [nucl-th/9701015](../papers/nucl-th_9701015.md) (0000) [2] nucl-th/9701015
+- [nucl-th/9703048](../papers/nucl-th_9703048.md) (0000) [2] nucl-th/9703048
+- [nucl-th/9710027](../papers/nucl-th_9710027.md) (0000) [1] nucl-th/9710027
+- [nucl-th/9802045](../papers/nucl-th_9802045.md) (0000) [1] nucl-th/9802045
+- [nucl-th/9911029](../papers/nucl-th_9911029.md) (0000) [2] nucl-th/9911029

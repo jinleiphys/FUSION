@@ -1,8 +1,8 @@
 # Neutron skin thickness
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Neutron skin thickness
+**PhySH lineage:** Nuclear structure & decays > Neutron skin thickness
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

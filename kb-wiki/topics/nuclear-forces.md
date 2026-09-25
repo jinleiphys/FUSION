@@ -1,8 +1,8 @@
 # Nuclear forces
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Nuclear forces
+**PhySH lineage:** Nuclear structure & decays > Nuclear forces
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

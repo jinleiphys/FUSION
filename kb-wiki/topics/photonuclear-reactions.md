@@ -30,23 +30,23 @@ Active directions include the search for observable consequences of in medium ch
 - [0912.2264](../papers/0912.2264.md) (2009) [1] Relativistic corrections of one-nucleon current in low-energy three-nucleon photonuclear reactions
 - [0911.0064](../papers/0911.0064.md) (2009) [1] Photonuclear reactions of actinides in the giant dipole resonance region
 - [0709.4155](../papers/0709.4155.md) (2007) [1] Photonuclear reactions of actinide and pre-actinide nuclei at intermediate energies
-- [hep-ph/9804348](../papers/hep-ph/9804348.md) (0000) [2] hep-ph/9804348
-- [nucl-th/0006069](../papers/nucl-th/0006069.md) (0000) [1] nucl-th/0006069
-- [nucl-th/0007005](../papers/nucl-th/0007005.md) (0000) [2] nucl-th/0007005
-- [nucl-th/0107052](../papers/nucl-th/0107052.md) (0000) [2] nucl-th/0107052
-- [nucl-th/0201030](../papers/nucl-th/0201030.md) (0000) [1] nucl-th/0201030
-- [nucl-th/0203052](../papers/nucl-th/0203052.md) (0000) [1] nucl-th/0203052
-- [nucl-th/0210079](../papers/nucl-th/0210079.md) (0000) [2] nucl-th/0210079
-- [nucl-th/0303070](../papers/nucl-th/0303070.md) (0000) [2] nucl-th/0303070
-- [nucl-th/0304080](../papers/nucl-th/0304080.md) (0000) [2] nucl-th/0304080
-- [nucl-th/0308045](../papers/nucl-th/0308045.md) (0000) [1] nucl-th/0308045
-- [nucl-th/0310074](../papers/nucl-th/0310074.md) (0000) [2] nucl-th/0310074
-- [nucl-th/0312093](../papers/nucl-th/0312093.md) (0000) [2] nucl-th/0312093
-- [nucl-th/0412084](../papers/nucl-th/0412084.md) (0000) [2] nucl-th/0412084
-- [nucl-th/0503061](../papers/nucl-th/0503061.md) (0000) [2] nucl-th/0503061
-- [nucl-th/0510070](../papers/nucl-th/0510070.md) (0000) [2] nucl-th/0510070
-- [nucl-th/0511075](../papers/nucl-th/0511075.md) (0000) [1] nucl-th/0511075
-- [nucl-th/0607007](../papers/nucl-th/0607007.md) (0000) [2] nucl-th/0607007
-- [nucl-th/9310019](../papers/nucl-th/9310019.md) (0000) [2] nucl-th/9310019
-- [nucl-th/9507021](../papers/nucl-th/9507021.md) (0000) [1] nucl-th/9507021
-- [nucl-th/9603026](../papers/nucl-th/9603026.md) (0000) [1] nucl-th/9603026
+- [hep-ph/9804348](../papers/hep-ph_9804348.md) (0000) [2] hep-ph/9804348
+- [nucl-th/0006069](../papers/nucl-th_0006069.md) (0000) [1] nucl-th/0006069
+- [nucl-th/0007005](../papers/nucl-th_0007005.md) (0000) [2] nucl-th/0007005
+- [nucl-th/0107052](../papers/nucl-th_0107052.md) (0000) [2] nucl-th/0107052
+- [nucl-th/0201030](../papers/nucl-th_0201030.md) (0000) [1] nucl-th/0201030
+- [nucl-th/0203052](../papers/nucl-th_0203052.md) (0000) [1] nucl-th/0203052
+- [nucl-th/0210079](../papers/nucl-th_0210079.md) (0000) [2] nucl-th/0210079
+- [nucl-th/0303070](../papers/nucl-th_0303070.md) (0000) [2] nucl-th/0303070
+- [nucl-th/0304080](../papers/nucl-th_0304080.md) (0000) [2] nucl-th/0304080
+- [nucl-th/0308045](../papers/nucl-th_0308045.md) (0000) [1] nucl-th/0308045
+- [nucl-th/0310074](../papers/nucl-th_0310074.md) (0000) [2] nucl-th/0310074
+- [nucl-th/0312093](../papers/nucl-th_0312093.md) (0000) [2] nucl-th/0312093
+- [nucl-th/0412084](../papers/nucl-th_0412084.md) (0000) [2] nucl-th/0412084
+- [nucl-th/0503061](../papers/nucl-th_0503061.md) (0000) [2] nucl-th/0503061
+- [nucl-th/0510070](../papers/nucl-th_0510070.md) (0000) [2] nucl-th/0510070
+- [nucl-th/0511075](../papers/nucl-th_0511075.md) (0000) [1] nucl-th/0511075
+- [nucl-th/0607007](../papers/nucl-th_0607007.md) (0000) [2] nucl-th/0607007
+- [nucl-th/9310019](../papers/nucl-th_9310019.md) (0000) [2] nucl-th/9310019
+- [nucl-th/9507021](../papers/nucl-th_9507021.md) (0000) [1] nucl-th/9507021
+- [nucl-th/9603026](../papers/nucl-th_9603026.md) (0000) [1] nucl-th/9603026

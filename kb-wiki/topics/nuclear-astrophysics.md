@@ -2,7 +2,7 @@
 
 **PhySH lineage:** Nuclear astrophysics
 
-**Narrower:** [Nuclear physics of explosive environments](nuclear-physics-of-explosive-environments.md), [Solar neutrinos](solar-neutrinos.md), [Hydrostatic stellar nucleosynthesis](hydrostatic-stellar-nucleosynthesis.md), [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md), [Nuclear matter in neutron stars](nuclear-matter-in-neutron-stars.md)
+**Narrower:** Nuclear physics of explosive environments, [Solar neutrinos](solar-neutrinos.md), Hydrostatic stellar nucleosynthesis, Nucleosynthesis in explosive environments, [Nuclear matter in neutron stars](nuclear-matter-in-neutron-stars.md)
 
 ## Landscape
 

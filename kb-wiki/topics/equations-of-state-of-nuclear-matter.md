@@ -1,6 +1,6 @@
 # Equations of state of nuclear matter
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > [Nuclear matter](nuclear-matter.md) > Equations of state of nuclear matter
+**PhySH lineage:** Nuclear structure & decays > [Nuclear matter](nuclear-matter.md) > Equations of state of nuclear matter
 
 **Broader:** [Nuclear matter](nuclear-matter.md)
 
@@ -21,6 +21,6 @@ Open questions and active directions include the precise nature of the deconfine
 - [1909.11826](../papers/1909.11826.md) (2019) [1] Bayesian truncation errors in equations of state of nuclear matter with chiral nucleon-nucleon potentials
 - [1905.01250](../papers/1905.01250.md) (2019) [2] Combined Rastall and Rainbow theories of gravity with applications to neutron stars
 - [0710.3874](../papers/0710.3874.md) (2007) [2] Equilibrium sequences of non rotating and rapidly rotating crystalline color superconducting hybrid stars
-- [nucl-th/9710047](../papers/nucl-th/9710047.md) (0000) [2] nucl-th/9710047
-- [nucl-th/9808078](../papers/nucl-th/9808078.md) (0000) [2] nucl-th/9808078
-- [nucl-th/9809070](../papers/nucl-th/9809070.md) (0000) [2] nucl-th/9809070
+- [nucl-th/9710047](../papers/nucl-th_9710047.md) (0000) [2] nucl-th/9710047
+- [nucl-th/9808078](../papers/nucl-th_9808078.md) (0000) [2] nucl-th/9808078
+- [nucl-th/9809070](../papers/nucl-th_9809070.md) (0000) [2] nucl-th/9809070

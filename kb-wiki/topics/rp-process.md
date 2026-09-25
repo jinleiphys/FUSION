@@ -1,8 +1,8 @@
 # rp process
 
-**PhySH lineage:** [Nuclear astrophysics](nuclear-astrophysics.md) > [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md) > rp process
+**PhySH lineage:** [Nuclear astrophysics](nuclear-astrophysics.md) > Nucleosynthesis in explosive environments > rp process
 
-**Broader:** [Nucleosynthesis in explosive environments](nucleosynthesis-in-explosive-environments.md)
+**Broader:** Nucleosynthesis in explosive environments
 
 ## Landscape
 
@@ -43,17 +43,17 @@ Open questions include the precise role of shape isomers in waiting point nuclei
 - [1005.4767](../papers/1005.4767.md) (2010) [2] Hydrodynamic Models of Type I X-Ray Bursts: Metallicity Effects
 - [0910.1021](../papers/0910.1021.md) (2009) [1] Weak interaction rates for Kr and Sr waiting-point nuclei under rp-process conditions
 - [0907.1055](../papers/0907.1055.md) (2009) [1] Evidence of double magicity of N=Z nuclei near the rp-process path
-- [astro-ph/0102418](../papers/astro-ph/0102418.md) (0000) [1] astro-ph/0102418
-- [nucl-ex/0206002](../papers/nucl-ex/0206002.md) (0000) [2] nucl-ex/0206002
-- [nucl-ex/0302009](../papers/nucl-ex/0302009.md) (0000) [2] nucl-ex/0302009
-- [nucl-ex/0303010](../papers/nucl-ex/0303010.md) (0000) [2] nucl-ex/0303010
-- [nucl-ex/0511040](../papers/nucl-ex/0511040.md) (0000) [1] nucl-ex/0511040
-- [nucl-th/0002063](../papers/nucl-th/0002063.md) (0000) [1] nucl-th/0002063
-- [nucl-th/0201053](../papers/nucl-th/0201053.md) (0000) [1] nucl-th/0201053
-- [nucl-th/0211043](../papers/nucl-th/0211043.md) (0000) [2] nucl-th/0211043
-- [nucl-th/0211072](../papers/nucl-th/0211072.md) (0000) [2] nucl-th/0211072
-- [nucl-th/0212095](../papers/nucl-th/0212095.md) (0000) [1] nucl-th/0212095
-- [nucl-th/0306061](../papers/nucl-th/0306061.md) (0000) [2] nucl-th/0306061
-- [nucl-th/0411081](../papers/nucl-th/0411081.md) (0000) [1] nucl-th/0411081
-- [nucl-th/0503079](../papers/nucl-th/0503079.md) (0000) [1] nucl-th/0503079
-- [nucl-th/0509071](../papers/nucl-th/0509071.md) (0000) [2] nucl-th/0509071
+- [astro-ph/0102418](../papers/astro-ph_0102418.md) (0000) [1] astro-ph/0102418
+- [nucl-ex/0206002](../papers/nucl-ex_0206002.md) (0000) [2] nucl-ex/0206002
+- [nucl-ex/0302009](../papers/nucl-ex_0302009.md) (0000) [2] nucl-ex/0302009
+- [nucl-ex/0303010](../papers/nucl-ex_0303010.md) (0000) [2] nucl-ex/0303010
+- [nucl-ex/0511040](../papers/nucl-ex_0511040.md) (0000) [1] nucl-ex/0511040
+- [nucl-th/0002063](../papers/nucl-th_0002063.md) (0000) [1] nucl-th/0002063
+- [nucl-th/0201053](../papers/nucl-th_0201053.md) (0000) [1] nucl-th/0201053
+- [nucl-th/0211043](../papers/nucl-th_0211043.md) (0000) [2] nucl-th/0211043
+- [nucl-th/0211072](../papers/nucl-th_0211072.md) (0000) [2] nucl-th/0211072
+- [nucl-th/0212095](../papers/nucl-th_0212095.md) (0000) [1] nucl-th/0212095
+- [nucl-th/0306061](../papers/nucl-th_0306061.md) (0000) [2] nucl-th/0306061
+- [nucl-th/0411081](../papers/nucl-th_0411081.md) (0000) [1] nucl-th/0411081
+- [nucl-th/0503079](../papers/nucl-th_0503079.md) (0000) [1] nucl-th/0503079
+- [nucl-th/0509071](../papers/nucl-th_0509071.md) (0000) [2] nucl-th/0509071

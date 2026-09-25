@@ -2,7 +2,7 @@
 
 **PhySH lineage:** Monte Carlo methods
 
-**Narrower:** [Metropolis algorithm](metropolis-algorithm.md), [Path-integral Monte Carlo](path-integral-monte-carlo.md), [Entropic sampling methods](entropic-sampling-methods.md), [Heatbath algorithm](heatbath-algorithm.md), [Simulated annealing](simulated-annealing.md), [Langevin algorithm](langevin-algorithm.md), [Quantum Monte Carlo](quantum-monte-carlo.md), [Hybrid Monte Carlo algorithm](hybrid-monte-carlo-algorithm.md)
+**Narrower:** [Metropolis algorithm](metropolis-algorithm.md), [Path-integral Monte Carlo](path-integral-monte-carlo.md), Entropic sampling methods, Heatbath algorithm, [Simulated annealing](simulated-annealing.md), [Langevin algorithm](langevin-algorithm.md), [Quantum Monte Carlo](quantum-monte-carlo.md), Hybrid Monte Carlo algorithm
 
 ## Landscape
 
@@ -78,24 +78,24 @@ Active directions include extending QMC methods to heavier nuclei and asymmetric
 - [0711.1500](../papers/0711.1500.md) (2007) [2] Quantum Monte Carlo Calculations of Light Nuclei
 - [0710.4103](../papers/0710.4103.md) (2007) [2] Path Integrals in Lattice Quantum Chromodynamics
 - [0704.1774](../papers/0704.1774.md) (2007) [2] Auxiliary Field Diffusion Monte Carlo calculation of nuclei with A<40 with tensor interactions
-- [cond-mat/9804290](../papers/cond-mat/9804290.md) (0000) [2] cond-mat/9804290
-- [hep-ph/0101186](../papers/hep-ph/0101186.md) (0000) [1] hep-ph/0101186
-- [nucl-th/0003015](../papers/nucl-th/0003015.md) (0000) [1] nucl-th/0003015
-- [nucl-th/0009005](../papers/nucl-th/0009005.md) (0000) [1] nucl-th/0009005
-- [nucl-th/0106047](../papers/nucl-th/0106047.md) (0000) [2] nucl-th/0106047
-- [nucl-th/0308020](../papers/nucl-th/0308020.md) (0000) [2] nucl-th/0308020
-- [nucl-th/0403069](../papers/nucl-th/0403069.md) (0000) [2] nucl-th/0403069
-- [nucl-th/0508016](../papers/nucl-th/0508016.md) (0000) [2] nucl-th/0508016
-- [nucl-th/0508048](../papers/nucl-th/0508048.md) (0000) [2] nucl-th/0508048
-- [nucl-th/0604069](../papers/nucl-th/0604069.md) (0000) [2] nucl-th/0604069
-- [nucl-th/0605033](../papers/nucl-th/0605033.md) (0000) [1] nucl-th/0605033
-- [nucl-th/9210014](../papers/nucl-th/9210014.md) (0000) [1] nucl-th/9210014
-- [nucl-th/9305002](../papers/nucl-th/9305002.md) (0000) [2] nucl-th/9305002
-- [nucl-th/9405012](../papers/nucl-th/9405012.md) (0000) [2] nucl-th/9405012
-- [nucl-th/9504027](../papers/nucl-th/9504027.md) (0000) [2] nucl-th/9504027
-- [nucl-th/9509038](../papers/nucl-th/9509038.md) (0000) [1] nucl-th/9509038
-- [nucl-th/9510022](../papers/nucl-th/9510022.md) (0000) [2] nucl-th/9510022
-- [nucl-th/9602006](../papers/nucl-th/9602006.md) (0000) [1] nucl-th/9602006
-- [nucl-th/9812031](../papers/nucl-th/9812031.md) (0000) [1] nucl-th/9812031
-- [nucl-th/9907116](../papers/nucl-th/9907116.md) (0000) [2] nucl-th/9907116
-- [nucl-th/9910038](../papers/nucl-th/9910038.md) (0000) [2] nucl-th/9910038
+- [cond-mat/9804290](../papers/cond-mat_9804290.md) (0000) [2] cond-mat/9804290
+- [hep-ph/0101186](../papers/hep-ph_0101186.md) (0000) [1] hep-ph/0101186
+- [nucl-th/0003015](../papers/nucl-th_0003015.md) (0000) [1] nucl-th/0003015
+- [nucl-th/0009005](../papers/nucl-th_0009005.md) (0000) [1] nucl-th/0009005
+- [nucl-th/0106047](../papers/nucl-th_0106047.md) (0000) [2] nucl-th/0106047
+- [nucl-th/0308020](../papers/nucl-th_0308020.md) (0000) [2] nucl-th/0308020
+- [nucl-th/0403069](../papers/nucl-th_0403069.md) (0000) [2] nucl-th/0403069
+- [nucl-th/0508016](../papers/nucl-th_0508016.md) (0000) [2] nucl-th/0508016
+- [nucl-th/0508048](../papers/nucl-th_0508048.md) (0000) [2] nucl-th/0508048
+- [nucl-th/0604069](../papers/nucl-th_0604069.md) (0000) [2] nucl-th/0604069
+- [nucl-th/0605033](../papers/nucl-th_0605033.md) (0000) [1] nucl-th/0605033
+- [nucl-th/9210014](../papers/nucl-th_9210014.md) (0000) [1] nucl-th/9210014
+- [nucl-th/9305002](../papers/nucl-th_9305002.md) (0000) [2] nucl-th/9305002
+- [nucl-th/9405012](../papers/nucl-th_9405012.md) (0000) [2] nucl-th/9405012
+- [nucl-th/9504027](../papers/nucl-th_9504027.md) (0000) [2] nucl-th/9504027
+- [nucl-th/9509038](../papers/nucl-th_9509038.md) (0000) [1] nucl-th/9509038
+- [nucl-th/9510022](../papers/nucl-th_9510022.md) (0000) [2] nucl-th/9510022
+- [nucl-th/9602006](../papers/nucl-th_9602006.md) (0000) [1] nucl-th/9602006
+- [nucl-th/9812031](../papers/nucl-th_9812031.md) (0000) [1] nucl-th/9812031
+- [nucl-th/9907116](../papers/nucl-th_9907116.md) (0000) [2] nucl-th/9907116
+- [nucl-th/9910038](../papers/nucl-th_9910038.md) (0000) [2] nucl-th/9910038

@@ -31,18 +31,18 @@ Open questions and active directions visible in recent papers include the puzzle
 - [1104.3815](../papers/1104.3815.md) (2011) [2] Charm diffusion in a pion gas implementing unitarity, chiral and heavy quark symmetries
 - [1005.2262](../papers/1005.2262.md) (2010) [2] $D\bar{D}$ production and their interactions
 - [0901.1195](../papers/0901.1195.md) (2009) [2] A way to estimate the heavy quark thermalization rate from the lattice
-- [hep-lat/0205021](../papers/hep-lat/0205021.md) (0000) [2] hep-lat/0205021
-- [hep-lat/0210019](../papers/hep-lat/0210019.md) (0000) [2] hep-lat/0210019
-- [hep-ph/0010321](../papers/hep-ph/0010321.md) (0000) [2] hep-ph/0010321
-- [hep-ph/0105148](../papers/hep-ph/0105148.md) (0000) [2] hep-ph/0105148
-- [hep-ph/0306274](../papers/hep-ph/0306274.md) (0000) [2] hep-ph/0306274
-- [hep-ph/0502219](../papers/hep-ph/0502219.md) (0000) [2] hep-ph/0502219
-- [hep-ph/0601166](../papers/hep-ph/0601166.md) (0000) [2] hep-ph/0601166
-- [hep-ph/9511383](../papers/hep-ph/9511383.md) (0000) [2] hep-ph/9511383
-- [hep-ph/9703298](../papers/hep-ph/9703298.md) (0000) [2] hep-ph/9703298
-- [hep-ph/9811395](../papers/hep-ph/9811395.md) (0000) [2] hep-ph/9811395
-- [hep-ph/9811475](../papers/hep-ph/9811475.md) (0000) [2] hep-ph/9811475
-- [nucl-th/0412006](../papers/nucl-th/0412006.md) (0000) [1] nucl-th/0412006
-- [nucl-th/0412015](../papers/nucl-th/0412015.md) (0000) [2] nucl-th/0412015
-- [nucl-th/0503030](../papers/nucl-th/0503030.md) (0000) [2] nucl-th/0503030
-- [nucl-th/0603061](../papers/nucl-th/0603061.md) (0000) [2] nucl-th/0603061
+- [hep-lat/0205021](../papers/hep-lat_0205021.md) (0000) [2] hep-lat/0205021
+- [hep-lat/0210019](../papers/hep-lat_0210019.md) (0000) [2] hep-lat/0210019
+- [hep-ph/0010321](../papers/hep-ph_0010321.md) (0000) [2] hep-ph/0010321
+- [hep-ph/0105148](../papers/hep-ph_0105148.md) (0000) [2] hep-ph/0105148
+- [hep-ph/0306274](../papers/hep-ph_0306274.md) (0000) [2] hep-ph/0306274
+- [hep-ph/0502219](../papers/hep-ph_0502219.md) (0000) [2] hep-ph/0502219
+- [hep-ph/0601166](../papers/hep-ph_0601166.md) (0000) [2] hep-ph/0601166
+- [hep-ph/9511383](../papers/hep-ph_9511383.md) (0000) [2] hep-ph/9511383
+- [hep-ph/9703298](../papers/hep-ph_9703298.md) (0000) [2] hep-ph/9703298
+- [hep-ph/9811395](../papers/hep-ph_9811395.md) (0000) [2] hep-ph/9811395
+- [hep-ph/9811475](../papers/hep-ph_9811475.md) (0000) [2] hep-ph/9811475
+- [nucl-th/0412006](../papers/nucl-th_0412006.md) (0000) [1] nucl-th/0412006
+- [nucl-th/0412015](../papers/nucl-th_0412015.md) (0000) [2] nucl-th/0412015
+- [nucl-th/0503030](../papers/nucl-th_0503030.md) (0000) [2] nucl-th/0503030
+- [nucl-th/0603061](../papers/nucl-th_0603061.md) (0000) [2] nucl-th/0603061

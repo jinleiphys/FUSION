@@ -4,7 +4,7 @@
 
 **Broader:** [Spin](spin.md)
 
-**Narrower:** [Transversity distribution functions](transversity-distribution-functions.md), [Helicity distribution functions](helicity-distribution-functions.md)
+**Narrower:** Transversity distribution functions, Helicity distribution functions
 
 ## Landscape
 
@@ -36,10 +36,10 @@ Open questions and active directions include the role of sea quarks, as seen in 
 - [1203.5579](../papers/1203.5579.md) (2012) [2] Azimuthal asymmetries in lepton-pair production at a fixed-target experiment using the LHC beams (AFTER)
 - [0807.4207](../papers/0807.4207.md) (2008) [2] High-energy hadron physics at J-PARC
 - [0711.1703](../papers/0711.1703.md) (2007) [2] Probing the nucleon structure with CLAS
-- [hep-ph/0106225](../papers/hep-ph/0106225.md) (0000) [1] hep-ph/0106225
-- [hep-ph/0109046](../papers/hep-ph/0109046.md) (0000) [2] hep-ph/0109046
-- [hep-ph/0110128](../papers/hep-ph/0110128.md) (0000) [1] hep-ph/0110128
-- [hep-ph/0211185](../papers/hep-ph/0211185.md) (0000) [2] hep-ph/0211185
-- [hep-ph/0310166](../papers/hep-ph/0310166.md) (0000) [2] hep-ph/0310166
-- [nucl-th/0411105](../papers/nucl-th/0411105.md) (0000) [2] nucl-th/0411105
-- [nucl-th/9712036](../papers/nucl-th/9712036.md) (0000) [2] nucl-th/9712036
+- [hep-ph/0106225](../papers/hep-ph_0106225.md) (0000) [1] hep-ph/0106225
+- [hep-ph/0109046](../papers/hep-ph_0109046.md) (0000) [2] hep-ph/0109046
+- [hep-ph/0110128](../papers/hep-ph_0110128.md) (0000) [1] hep-ph/0110128
+- [hep-ph/0211185](../papers/hep-ph_0211185.md) (0000) [2] hep-ph/0211185
+- [hep-ph/0310166](../papers/hep-ph_0310166.md) (0000) [2] hep-ph/0310166
+- [nucl-th/0411105](../papers/nucl-th_0411105.md) (0000) [2] nucl-th/0411105
+- [nucl-th/9712036](../papers/nucl-th_9712036.md) (0000) [2] nucl-th/9712036

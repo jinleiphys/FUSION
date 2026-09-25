@@ -79,17 +79,17 @@ Open questions and active directions include the precise determination of the ax
 - [0901.0875](../papers/0901.0875.md) (2009) [2] Three-body Faddeev-Alt-Grassberger-Sandhas approach to direct nuclear reactions
 - [0809.4772](../papers/0809.4772.md) (2008) [2] Big-Bang Nucleosynthesis Reactions Catalyzed by a Long-Lived Negatively Charged Leptonic Particle
 - [0706.2523](../papers/0706.2523.md) (2007) [1] An in-medium full-folding model approach to quasielastic (p,n) charge-exchange reactions
-- [nucl-th/0008012](../papers/nucl-th/0008012.md) (0000) [2] nucl-th/0008012
-- [nucl-th/0106055](../papers/nucl-th/0106055.md) (0000) [1] nucl-th/0106055
-- [nucl-th/0210080](../papers/nucl-th/0210080.md) (0000) [2] nucl-th/0210080
-- [nucl-th/0303015](../papers/nucl-th/0303015.md) (0000) [2] nucl-th/0303015
-- [nucl-th/0305055](../papers/nucl-th/0305055.md) (0000) [2] nucl-th/0305055
-- [nucl-th/0506051](../papers/nucl-th/0506051.md) (0000) [1] nucl-th/0506051
-- [nucl-th/0510048](../papers/nucl-th/0510048.md) (0000) [2] nucl-th/0510048
-- [nucl-th/0607016](../papers/nucl-th/0607016.md) (0000) [1] nucl-th/0607016
-- [nucl-th/0610064](../papers/nucl-th/0610064.md) (0000) [2] nucl-th/0610064
-- [nucl-th/0702016](../papers/nucl-th/0702016.md) (0000) [2] nucl-th/0702016
-- [nucl-th/9510030](../papers/nucl-th/9510030.md) (0000) [2] nucl-th/9510030
-- [nucl-th/9604005](../papers/nucl-th/9604005.md) (0000) [2] nucl-th/9604005
-- [nucl-th/9705002](../papers/nucl-th/9705002.md) (0000) [1] nucl-th/9705002
-- [nucl-th/9808019](../papers/nucl-th/9808019.md) (0000) [2] nucl-th/9808019
+- [nucl-th/0008012](../papers/nucl-th_0008012.md) (0000) [2] nucl-th/0008012
+- [nucl-th/0106055](../papers/nucl-th_0106055.md) (0000) [1] nucl-th/0106055
+- [nucl-th/0210080](../papers/nucl-th_0210080.md) (0000) [2] nucl-th/0210080
+- [nucl-th/0303015](../papers/nucl-th_0303015.md) (0000) [2] nucl-th/0303015
+- [nucl-th/0305055](../papers/nucl-th_0305055.md) (0000) [2] nucl-th/0305055
+- [nucl-th/0506051](../papers/nucl-th_0506051.md) (0000) [1] nucl-th/0506051
+- [nucl-th/0510048](../papers/nucl-th_0510048.md) (0000) [2] nucl-th/0510048
+- [nucl-th/0607016](../papers/nucl-th_0607016.md) (0000) [1] nucl-th/0607016
+- [nucl-th/0610064](../papers/nucl-th_0610064.md) (0000) [2] nucl-th/0610064
+- [nucl-th/0702016](../papers/nucl-th_0702016.md) (0000) [2] nucl-th/0702016
+- [nucl-th/9510030](../papers/nucl-th_9510030.md) (0000) [2] nucl-th/9510030
+- [nucl-th/9604005](../papers/nucl-th_9604005.md) (0000) [2] nucl-th/9604005
+- [nucl-th/9705002](../papers/nucl-th_9705002.md) (0000) [1] nucl-th/9705002
+- [nucl-th/9808019](../papers/nucl-th_9808019.md) (0000) [2] nucl-th/9808019

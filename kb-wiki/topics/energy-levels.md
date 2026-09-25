@@ -1,8 +1,8 @@
 # Energy levels
 
-**PhySH lineage:** [Nuclear structure & decays](nuclear-structure-decays.md) > Energy levels
+**PhySH lineage:** Nuclear structure & decays > Energy levels
 
-**Broader:** [Nuclear structure & decays](nuclear-structure-decays.md)
+**Broader:** Nuclear structure & decays
 
 ## Landscape
 

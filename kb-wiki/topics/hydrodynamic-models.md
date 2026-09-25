@@ -77,16 +77,16 @@ Open questions and active directions include resolving the \(v_2\)-to-\(v_3\) pu
 - [0811.3363](../papers/0811.3363.md) (2008) [2] Resolving the HBT Puzzle in Relativistic Heavy Ion Collision
 - [0806.1013](../papers/0806.1013.md) (2008) [2] Heavy flavor in heavy-ion collisions at RHIC and RHIC II
 - [0709.3366](../papers/0709.3366.md) (2007) [2] Jozso's Legacy: Chemical and Kinetic Freeze-out in Heavy-Ion Collisions
-- [hep-ph/0111114](../papers/hep-ph/0111114.md) (0000) [2] hep-ph/0111114
-- [hep-ph/0507134](../papers/hep-ph/0507134.md) (0000) [2] hep-ph/0507134
-- [hep-ph/9811459](../papers/hep-ph/9811459.md) (0000) [1] hep-ph/9811459
-- [nucl-th/0010107](../papers/nucl-th/0010107.md) (0000) [1] nucl-th/0010107
-- [nucl-th/0112011](../papers/nucl-th/0112011.md) (0000) [2] nucl-th/0112011
-- [nucl-th/0403042](../papers/nucl-th/0403042.md) (0000) [1] nucl-th/0403042
-- [nucl-th/0507057](../papers/nucl-th/0507057.md) (0000) [2] nucl-th/0507057
-- [nucl-th/0602023](../papers/nucl-th/0602023.md) (0000) [2] nucl-th/0602023
-- [nucl-th/0605008](../papers/nucl-th/0605008.md) (0000) [1] nucl-th/0605008
-- [nucl-th/0609021](../papers/nucl-th/0609021.md) (0000) [2] nucl-th/0609021
-- [nucl-th/0702082](../papers/nucl-th/0702082.md) (0000) [2] nucl-th/0702082
-- [nucl-th/9602011](../papers/nucl-th/9602011.md) (0000) [2] nucl-th/9602011
-- [nucl-th/9708001](../papers/nucl-th/9708001.md) (0000) [2] nucl-th/9708001
+- [hep-ph/0111114](../papers/hep-ph_0111114.md) (0000) [2] hep-ph/0111114
+- [hep-ph/0507134](../papers/hep-ph_0507134.md) (0000) [2] hep-ph/0507134
+- [hep-ph/9811459](../papers/hep-ph_9811459.md) (0000) [1] hep-ph/9811459
+- [nucl-th/0010107](../papers/nucl-th_0010107.md) (0000) [1] nucl-th/0010107
+- [nucl-th/0112011](../papers/nucl-th_0112011.md) (0000) [2] nucl-th/0112011
+- [nucl-th/0403042](../papers/nucl-th_0403042.md) (0000) [1] nucl-th/0403042
+- [nucl-th/0507057](../papers/nucl-th_0507057.md) (0000) [2] nucl-th/0507057
+- [nucl-th/0602023](../papers/nucl-th_0602023.md) (0000) [2] nucl-th/0602023
+- [nucl-th/0605008](../papers/nucl-th_0605008.md) (0000) [1] nucl-th/0605008
+- [nucl-th/0609021](../papers/nucl-th_0609021.md) (0000) [2] nucl-th/0609021
+- [nucl-th/0702082](../papers/nucl-th_0702082.md) (0000) [2] nucl-th/0702082
+- [nucl-th/9602011](../papers/nucl-th_9602011.md) (0000) [2] nucl-th/9602011
+- [nucl-th/9708001](../papers/nucl-th_9708001.md) (0000) [2] nucl-th/9708001
