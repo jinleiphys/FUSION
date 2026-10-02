@@ -3,15 +3,26 @@
 exfor.py - retrieve and parse experimental nuclear reaction data from the IAEA
 EXFOR database.
 
-Three subcommands:
-    fetch <ACC>        download entry ACC (5 digits) and cache the raw EXFOR text
-    list  <ACC>        show every subentry: ID, REACTION, energies, number of points
-    data  <SUBENT>     print one subentry's data table as clean numeric columns
+Four subcommands:
+    fetch  <ACC>       download entry ACC (5 characters) and cache the raw EXFOR text
+    list   <ACC>       show every subentry: ID, REACTION, energies, number of points
+    data   <SUBENT>    print one subentry's data table as clean numeric columns
+    verify <SUBENT>    compare this parser's table with the IAEA dataexplorer JSON
 
 Why this exists: EXFOR's interactive search servlet cannot be driven from a
-script (it always answers "Define Search Criteria!"), but the per-entry
-retrieval servlet works fine over plain HTTP. So the workflow is: find the
-accession number some other way, then pull the entry with this tool.
+script (it always answers "Define Search Criteria!"), but whole entries can be
+pulled by accession number. So the workflow is: find the accession number some
+other way, then pull the entry with this tool.
+
+Where the raw text comes from (2026-10-02). The per-entry servlet X4sGetEntry,
+the original source, has answered HTTP 500 since at least 2026-10-02. The raw
+entry files are now taken from the IAEA's own GitHub mirror of the EXFOR master
+files (IAEA-NDS/exfor_master, exforall/<first 3 characters>/<ACC>.x4, letters
+kept upper case), which is the same 80-column text the parser was built for;
+the servlet is still tried second in case it returns. The IAEA dataexplorer API
+serves the same entries already parsed into JSON; `verify` uses it as an
+independent second path to the numbers, not as the primary source, because the
+fixed-width parser and its header-count check are what this tool was audited on.
 
 The parser uses EXFOR's real fixed-width layout (6 fields of 11 characters per
 line, wrapping for wider tables). This matters: a blank field means "no value"
@@ -32,7 +43,11 @@ def warn(msg):
     print(f"warning: {msg}", file=sys.stderr)
 
 
-BASE = "https://www-nds.iaea.org/exfor//servlet/X4sGetEntry?acc={acc}&reqx=1"
+SOURCES = (
+    ("github exfor_master", "https://raw.githubusercontent.com/IAEA-NDS/exfor_master/main/exforall/{d3}/{acc}.x4"),
+    ("X4sGetEntry servlet", "https://www-nds.iaea.org/exfor//servlet/X4sGetEntry?acc={acc}&reqx=1"),
+)
+JSON_API = "https://nds.iaea.org/dataexplorer/api/exfor/entry/{acc}"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Safari/537.36"
 FIELD = 11          # EXFOR field width
 PER_LINE = 6        # fields per physical line
@@ -53,20 +68,31 @@ def strip_html(raw):
 
 def fetch(acc, cache=DEFAULT_CACHE, refresh=False):
     """Download entry `acc`, cache the de-HTMLed EXFOR text, return it."""
-    acc = str(acc).strip()
+    acc = str(acc).strip().upper()
     os.makedirs(cache, exist_ok=True)
     path = os.path.join(cache, f"{acc}.txt")
     if os.path.exists(path) and not refresh:
         return open(path, encoding="utf-8", errors="replace").read(), path
-    req = urllib.request.Request(BASE.format(acc=acc), headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=90) as r:
-        raw = r.read().decode("utf-8", errors="replace")
-    text = strip_html(raw)
-    if "SUBENT" not in text:
+    text, tried = None, []
+    for name, url in SOURCES:
+        req = urllib.request.Request(url.format(acc=acc, d3=acc[:3]), headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=90) as r:
+                raw = r.read().decode("utf-8", errors="replace")
+        except Exception as e:                     # HTTP error, timeout, DNS: try the next source
+            tried.append(f"{name}: {e}")
+            continue
+        cand = strip_html(raw)
+        if "SUBENT" in cand:
+            text = cand
+            break
+        tried.append(f"{name}: answered, but with no SUBENT in it")
+    if text is None:
         raise SystemExit(
-            f"No SUBENT found in the response for accession '{acc}'.\n"
-            "Check the accession number. Note the EXFOR *search* servlet cannot be\n"
-            "scripted; accession numbers must be found via literature or web search."
+            f"Could not retrieve accession '{acc}'.\n  " + "\n  ".join(tried) + "\n"
+            "Check the accession number (5 characters, e.g. 13160 or O0142). Note the EXFOR\n"
+            "*search* servlet cannot be scripted; accession numbers must be found via\n"
+            "literature or web search."
         )
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
@@ -153,17 +179,25 @@ def parse_subentries(text):
             #
             # EXFOR does not use N2 consistently, so the expectation depends on the
             # block. COMMON counts the heading and units records too ("COMMON 2 3"
-            # carries a single line of values), while DATA counts only the data lines
-            # ("DATA 3 37" is 37 points, with ENDDATA reporting 39).
+            # carries a single line of values), while DATA counts data RECORDS, not
+            # lines: "DATA 3 37" is 37 points, and "DATA 8 37" is also 37 points
+            # written on 74 lines, because a record wider than 6 fields wraps
+            # (41455007; ENDDATA then reports 4 + 74 = 78 lines). The two readings only
+            # coincide up to 6 columns, which is why the line reading survived until a
+            # wrapped table was checked against the IAEA JSON on 2026-10-02.
             #
             # These are checked separately rather than by accepting either reading.
             # Accepting both looks tolerant but is unsound: on a table with two lines
             # per record, losing one entire wrapped record moves `found` to exactly
             # declared - 2, which the permissive test reads as the COMMON convention
             # and waves through. Being specific is what makes the check load-bearing.
-            expected = declared - 2 if kind == "COMMON" else declared
-            if found != expected or nrec * per != found:
-                warn(f"{cur['id']} {kind}: header declares {declared} data line(s) "
+            if kind == "COMMON":
+                ok = found == declared - 2 and nrec * per == found
+            else:
+                ok = nrec == declared and nrec * per == found
+            if not ok:
+                unit = "data line(s)" if kind == "COMMON" else "record(s)"
+                warn(f"{cur['id']} {kind}: header declares {declared} {unit} "
                      f"but {found} found ({ncols} columns, {per} line(s) per record, "
                      f"{len(rows)} record(s) parsed). Table may be truncated; "
                      f"verify against the raw entry before using these numbers.")
@@ -259,7 +293,7 @@ def cmd_list(a):
 
 
 def cmd_data(a):
-    sub_id = str(a.subent).strip()
+    sub_id = str(a.subent).strip().upper()
     acc = sub_id[:5]
     text, _ = fetch(acc, a.cache, a.refresh)
     subs = parse_subentries(text)
@@ -299,6 +333,47 @@ def cmd_data(a):
         print("\t".join(r[i] if r[i] else "nan" for i in keep))
 
 
+def cmd_verify(a):
+    """Second path to the same numbers: the IAEA dataexplorer JSON for this subentry.
+
+    It is compiled by the IAEA's own parser from the same master file, so agreement
+    checks this tool's fixed-width parsing and wrapping, not the measurement itself.
+    """
+    import json
+    sub_id = str(a.subent).strip().upper()
+    acc, sfx = sub_id[:5], sub_id[5:]
+    text, _ = fetch(acc, a.cache, a.refresh)
+    sub = next((s for s in parse_subentries(text) if s["id"] == sub_id), None)
+    if sub is None or not sub.get("data"):
+        raise SystemExit(f"Subentry {sub_id} has no DATA table in the parsed entry.")
+    req = urllib.request.Request(JSON_API.format(acc=acc), headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=90) as r:
+        js = json.load(r)
+    t = (js.get("data_tables", {}).get(sfx) or {}).get("data")
+    if not t:
+        raise SystemExit(f"dataexplorer has no data table for {sub_id}.")
+    mine = sub["data"]
+    heads = [h.strip() for h in t["heads"]]
+    if heads != mine["names"]:
+        print(f"column names differ: parser {mine['names']} vs json {heads}")
+    # json: one list per column; parser: one list per row
+    cols = t["data"]
+    n_json = len(cols[0]) if cols else 0
+    bad = 0
+    for i, row in enumerate(mine["rows"]):
+        for j, v in enumerate(row):
+            w = cols[j][i] if j < len(cols) and i < len(cols[j]) else None
+            a_ = float(v) if v else None
+            if (a_ is None) != (w is None) or (a_ is not None and abs(a_ - w) > 1e-9 * max(1.0, abs(w))):
+                bad += 1
+                if bad <= 5:
+                    print(f"  row {i} {mine['names'][j]}: parser {v or 'blank'} vs json {w}")
+    print(f"{sub_id}: {len(mine['rows'])} rows parsed, {n_json} in dataexplorer JSON, "
+          f"{bad} mismatched value(s)")
+    if bad or n_json != len(mine["rows"]):
+        raise SystemExit(1)
+
+
 def main():
     p = argparse.ArgumentParser(description="Retrieve and parse IAEA EXFOR data.")
     p.add_argument("--cache", default=DEFAULT_CACHE, help="cache directory")
@@ -321,6 +396,10 @@ def main():
                    help="keep only these column names")
     g.add_argument("--header", action="store_true", help="print a column-name row")
     g.set_defaults(func=cmd_data)
+
+    v = sub.add_parser("verify", help="cross-check a subentry against the IAEA dataexplorer JSON")
+    v.add_argument("subent", help="8-character subentry id, e.g. 13160004")
+    v.set_defaults(func=cmd_verify)
 
     a = p.parse_args()
     a.func(a)

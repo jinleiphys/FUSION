@@ -23,11 +23,18 @@ Two things will waste your time if you discover them the hard way:
 - **The interactive search servlet cannot be scripted.** `X4sSearch5` answers `Define Search Criteria!` to every GET and POST, whatever parameter names you use, because the real form is JavaScript-built and session-bound. Do not spend calls trying to reverse-engineer it.
 - **WebFetch may return HTTP 402** on `www-nds.iaea.org`. That is a proxy artifact, not a paywall (EXFOR is free). Plain `curl` and Python `urllib` reach the site fine.
 
-What does work is per-entry retrieval, which is what `scripts/exfor.py` uses:
+- **The per-entry servlet `X4sGetEntry` has returned HTTP 500 since at least 2026-10-02.** It was this skill's original source. `scripts/exfor.py` still tries it, but only as a fallback.
+
+What works is retrieval of a whole entry by accession number. `scripts/exfor.py` tries, in order:
 
 ```
-https://www-nds.iaea.org/exfor//servlet/X4sGetEntry?acc=<5-digit accession>&reqx=1
+https://raw.githubusercontent.com/IAEA-NDS/exfor_master/main/exforall/<first 3 chars>/<ACC>.x4
+https://www-nds.iaea.org/exfor//servlet/X4sGetEntry?acc=<ACC>&reqx=1
 ```
+
+The first is the IAEA's own GitHub mirror of the EXFOR master files (pushed 2026-09-28 when checked): the same 80-column text the parser was built for. Keep the letter of a non-numeric accession upper case in the path (`O01/O0142.x4`; `o01` is a 404).
+
+A third path serves the same entries already parsed into JSON: `https://nds.iaea.org/dataexplorer/api/exfor/entry/<ACC>`. Use it through `exfor.py verify <SUBENT>`, which compares the fixed-width parse cell by cell against the IAEA's own parse of the same master file. Do not make it the primary source: the fixed-width parser and its header-count check are what this skill was audited on, and the JSON is useful precisely because it is a second, independent route to the numbers.
 
 So the workflow is inverted from what you would expect: you find the accession number first, then pull the entry.
 
@@ -60,6 +67,15 @@ python scripts/exfor.py data 22480005 --energy 55 --columns ANG-CM DATA DATA-ERR
 
 Output is tab-separated columns with `#` comment lines carrying the reaction, sample composition, incident energy, and **units for every column**. Read those comment lines; they are where the traps live.
 
+Before the numbers go into a figure or a fit, cross-check them by a second route:
+
+```bash
+python scripts/exfor.py verify 13160004
+# 13160004: 39 rows parsed, 39 in dataexplorer JSON, 0 mismatched value(s)
+```
+
+It exits nonzero on any mismatch. On 2026-10-02 it agreed cell for cell on 9 subentries from five accession series (1xxxx, 2xxxx, 4xxxx, Oxxxx, Dxxxx), including wrapped 7- and 8-column tables (41455002, 41455007). It checks the parsing, not the measurement.
+
 ### 4. Use it, checking frames and units
 
 Match the calculation to the data, not the other way round. If the data are centre-of-mass, compare in centre-of-mass. If the target is natural, either compute for the natural isotopic mix or say explicitly that you are approximating it.
@@ -69,6 +85,8 @@ Match the calculation to the data, not the other way round. If the data are cent
 These are why the bundled parser exists and why you should read the header lines.
 
 **Fixed-width columns.** EXFOR data are 6 fields of exactly 11 characters per line. A blank field means "not measured" and must stay blank. Splitting on whitespace collapses it and shifts every later column into the wrong slot, producing numbers that look reasonable and are wrong. `scripts/exfor.py` parses by column position. If you ever parse by hand with awk, verify the row count and a few values against the raw text.
+
+**Wide tables wrap, and the header counts records, not lines.** A record with more than 6 fields continues on the next line, so an 8-column table of 37 points is 74 lines, and its `DATA 8 37` header counts the 37 records. Up to 6 columns the two readings coincide, which is how a line-counting check survived until 2026-10-02 and then flagged every wrapped table as truncated.
 
 **Errors are sometimes percentages.** `DATA-ERR` carries whatever unit the compiler used. In EXFOR 22480.007 it is `PER-CENT`, while in 13160.004 it is `MB/SR`. Treating a percentage as absolute silently destroys every error bar. Always read the units line.
 
