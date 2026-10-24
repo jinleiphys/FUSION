@@ -14,6 +14,13 @@ LIMIT="${DEVLOG_LINE_LIMIT:-100}"
 ROOT="$(git rev-parse --show-toplevel)"
 LOG="$ROOT/devlog.md"
 
+# rules/fusion.md (Antigravity) is generated from AGENTS.md; refuse a commit that
+# changes one without the other being current.
+if git diff --cached --name-only | grep -qxE 'AGENTS.md|rules/fusion.md'; then
+  python3 "$ROOT/scripts/build_rule.py" --check >/dev/null || {
+    echo "rules/fusion.md is stale: run python3 scripts/build_rule.py and stage it" >&2; exit 1; }
+fi
+
 [ -f "$LOG" ] || exit 0
 # Only judge a commit that actually touches the file.
 git diff --cached --name-only | grep -qx 'devlog.md' || exit 0
