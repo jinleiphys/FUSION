@@ -119,15 +119,10 @@ agy plugin install https://github.com/jinleiphys/FUSION
 The skills and an always-on rule carrying FUSION's working rules load from the
 next session. Reinstall with the same command to update.
 
-### Gemini CLI
-
-```bash
-gemini extensions install https://github.com/jinleiphys/FUSION
-```
-
-It asks you to confirm that you trust the extension; an agent running it
-non-interactively, on the user's explicit request, adds `--consent`. Update with
-`gemini extensions update fusion`.
+Gemini CLI was retired for personal accounts on 2026-06-18 and replaced by
+Antigravity, so use the command above. On an enterprise Gemini Code Assist
+licence that still runs the old CLI, `gemini extensions install
+https://github.com/jinleiphys/FUSION` still works; the extension manifest is kept.
 
 ### opencode
 
@@ -223,8 +218,8 @@ paper, never the page.
 ## It is not tied to one agent
 
 The skills are the project; the agent is your choice. The same repository
-installs as a Claude Code plugin, a Codex plugin, an Antigravity plugin, a
-Gemini CLI extension and an opencode skill index, and it runs on whatever model your agent reaches,
+installs as a Claude Code plugin, a Codex plugin, an Antigravity plugin and an
+opencode skill index, and it runs on whatever model your agent reaches,
 DeepSeek, Qwen and GLM as readily as Claude or GPT.
 
 | Agent | How FUSION arrives | Install checked |
@@ -232,7 +227,6 @@ DeepSeek, Qwen and GLM as readily as Claude or GPT.
 | Claude Code | plugin + session-start hook | install, all skills, hook context, and a knowledge-base query end to end |
 | Codex | plugin | install and a skill used end to end from an empty directory |
 | Antigravity | plugin, working rules as an always-on rule | install, all skills, rule present in the prompt |
-| Gemini CLI | extension, `AGENTS.md` as context | install from a local copy, all skills load |
 | opencode | skill index URL + instructions URL | all skills pulled from the index, `AGENTS.md` reaches the model |
 
 Codex is also the most exercised runtime in a different sense: no per-code

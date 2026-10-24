@@ -78,13 +78,7 @@ agy plugin install https://github.com/jinleiphys/FUSION
 
 下一个会话起，skill 和一条常驻规则（FUSION 的工作规则）就会加载。更新时重新执行同一条命令。
 
-### Gemini CLI
-
-```bash
-gemini extensions install https://github.com/jinleiphys/FUSION
-```
-
-它会让你确认信任这个扩展；agent 在用户明确要求下非交互安装时加 `--consent`。更新用 `gemini extensions update fusion`。
+Gemini CLI 的个人账号已于 2026-06-18 停用，由 Antigravity 取代，所以用上面这条命令。企业版 Gemini Code Assist 如果还在用旧 CLI，`gemini extensions install https://github.com/jinleiphys/FUSION` 仍然可用，扩展清单保留着。
 
 ### opencode
 
@@ -160,15 +154,14 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 
 ## 不绑定某一个 agent
 
-这些 skill 才是项目本身，用哪个 agent 由你决定。同一个仓库可以装成 Claude Code 插件、Codex 插件、Antigravity 插件、
-Gemini CLI 扩展和 opencode 的 skill 索引；模型也随你的 agent，DeepSeek、Qwen、GLM 和 Claude、GPT 一样能用。
+这些 skill 才是项目本身，用哪个 agent 由你决定。同一个仓库可以装成 Claude Code 插件、Codex 插件、Antigravity 插件和
+opencode 的 skill 索引；模型也随你的 agent，DeepSeek、Qwen、GLM 和 Claude、GPT 一样能用。
 
 | Agent | FUSION 怎么进来 | 安装验证 |
 |---|---|---|
 | Claude Code | 插件 + 会话启动 hook | 安装、全部 skill、hook 上下文、一次文献库查询，端到端跑通 |
 | Codex | 插件 | 安装，并在空目录里端到端用了一个 skill |
 | Antigravity | 插件，工作规则作为常驻规则 | 安装，全部 skill，规则进入提示词 |
-| Gemini CLI | 扩展，`AGENTS.md` 作上下文 | 从本地副本安装，全部 skill 加载 |
 | opencode | skill 索引 URL + 指令 URL | 从索引拉到全部 skill，`AGENTS.md` 进入模型上下文 |
 
 另外，**任何程序 skill 上线前都要先经过 Codex 的对抗审查**：读 skill、跑脚本，专门去证伪那个基准。
