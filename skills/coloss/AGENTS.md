@@ -13,7 +13,7 @@ Drive COLOSS, the complex-scaled optical and Coulomb scattering solver (Liu Junz
 ## What is in this directory
 
 - `SKILL.md`, the full protocol. Read this first.
-- `examples/` (3 files)
+- `examples/` (4 files)
 - `references/` (1 file)
 - `scripts/` (2 files)
 

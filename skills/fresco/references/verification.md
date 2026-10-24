@@ -41,12 +41,14 @@ Reference outputs are on the FRESCO site (`https://www.fresco.org.uk/examples/`,
 
 ## Convergence protocol for a NEW deck
 
+**Full-CC CDCC prerequisite:** set `hort=5` in the actual `&FRESCO` input and verify the solver's `Solutions stabilized at intervals of  5.0 fm` message. Inspect `fort.301` when using the CDCC front end; its parameter echo alone does not prove stabilization is active. Check per-channel `Acc. loss` and absorption as well as the final accuracy summary. Negative absorption does not by itself distinguish a defective absorptive coupling matrix from unstable propagation. See `cdcc-format.md` for the front-end workaround; first-order `iter=1 iblock=1` uses `hort=0`.
+
 Before quoting σ to k significant figures, confirm it is stable to better than that under each of:
 
 1. **Radial step `hcm`**: halve it (0.1 → 0.05 → 0.02). σ must stop moving. Halo/heavy-ion usually need 0.05 or finer.
-2. **Matching radius `rmatch`** (and `rasym` if Coulomb-dominated): extend it. For Coulomb breakup/Coulex, `rasym` must be large enough that the long-range coupling is captured (100-340 fm typical).
+2. **Matching radius `rmatch`** (and `rasym` if Coulomb-dominated): extend it. For Coulomb breakup/Coulex, `rasym` must be large enough that the long-range coupling is captured (100-340 fm typical). Check that `rasym` is doing something (positive vs negative `rmatch` must differ); if they agree, the ladder is on `rmatch` itself. For CDCC run the ladder out to the extent of the narrowest bin, pi/dk, and do it at fixed J.
 3. **Partial waves `jtmax`**: raise it and check fort.56, the per-J reaction/nonelastic σ must have decayed to negligible before jtmax. If you use `jump/jbord`, refine the step blocks.
-4. **Continuum bins** (CDCC): increase the number of bins (smaller `step`, more (l,j) sets) and the max bin energy; the breakup σ must plateau. Confirm bins use `isc=2`.
+4. **Continuum bins** (CDCC): increase the number of bins (smaller `step`, more (l,j) sets) and the max bin energy; the breakup σ must plateau. Confirm bins use `isc=2`. Converge Emax BEFORE rmatch, and look at the per-bin cross section against bin energy: a flat or rising tail to Emax means the basis is broken. In full CC with charged fragments, refining bins can destroy convergence instead of improving it (narrow bins reach far in r), so use equal-k bins and judge the plateau at fixed rmatch AND across an rmatch ladder.
 5. **Channel pruning** (`smallchan/smallcoup`): if used to speed a run, verify the pruned result matches the unpruned one on a small case.
 
 Report the check explicitly, e.g. "reaction σ = 2758.7 mb, stable to 5 sig figs under hcm 0.05→0.025 and jtmax 1500→2000".

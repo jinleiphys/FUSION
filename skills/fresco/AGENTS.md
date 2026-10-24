@@ -13,7 +13,7 @@ Drive Ian Thompson's FRESCO coupled-channels reaction code: write, run, debug, a
 ## What is in this directory
 
 - `SKILL.md`, the full protocol. Read this first.
-- `examples/` (9 files)
+- `examples/` (10 files)
 - `references/` (5 files)
 - `scripts/` (4 files)
 

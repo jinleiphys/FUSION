@@ -54,7 +54,7 @@ xattr -d com.apple.quarantine fusion          # 只有 macOS 需要这一行
 ./fusion
 ```
 
-在仓库目录里运行 `./fusion`，26 个 skill 和文献库都会自动加载，不需要另写配置文件。
+在仓库目录里运行 `./fusion`，27 个 skill 和文献库都会自动加载，不需要另写配置文件。
 
 只有这两条命令需要连 GitHub。如果你是装在实验室服务器上而不是自己的机器上，先确认那台机器能访问 github.com：计算节点经常不能，症状是等一两分钟然后报 `Failed to connect to github.com port 443`，给这两条命令设上 `http_proxy` 和 `https_proxy` 就行。装完之后不再需要 GitHub，各个物理程序是首次使用时从它们各自的上游拉取，文献库本来就在克隆里。
 
@@ -93,8 +93,8 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 
 ## 里面有什么
 
-仓库里现有 26 个 skill。其中二十个负责具体程序，SFRESCO 负责拟合，EXFOR skill 取实验数据，
-`kb-search` 检索离线文献库，`literature-wiki` 和 `research-profile` 维护你自己的读文献 wiki 和研究档案，
+仓库里现有 27 个 skill。其中二十个负责具体程序，SFRESCO 负责拟合，EXFOR skill 取实验数据，
+`kb-search` 检索离线文献库，`literature-search` 联网核对引用（INSPIRE、arXiv、CrossRef），`literature-wiki` 和 `research-profile` 维护你自己的读文献 wiki 和研究档案，
 `fusion-setup` 用来配置 FUSION。
 
 | 领域 | 程序 |

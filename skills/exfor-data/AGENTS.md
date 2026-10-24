@@ -14,7 +14,7 @@ Retrieve real measured nuclear reaction data (cross sections, angular distributi
 
 - `SKILL.md`, the full protocol. Read this first.
 - `references/` (1 file)
-- `scripts/` (1 file)
+- `scripts/` (2 files)
 
 ## Scope
 

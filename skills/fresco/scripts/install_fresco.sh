@@ -6,12 +6,13 @@
 # source, compile with gfortran, and copy both binaries into the bin dir.
 #
 # Source:  https://github.com/I-Thompson/fresco  (FRES 3.4)
-# Build:   source/makefile, `make FC=gfortran` (default FFLAGS -O3).
+# Build:   source/makefile, `make FC=gfortran FFLAGS=...`, tuned to the build CPU.
 #
 # Config (env overrides):
 #   FRESCO_BIN_DIR   where to install the binary   (default: ~/bin)
 #   FRESCO_SRC_DIR   where to clone/build source    (default: ~/.cache/fusion/fresco-src)
 #   FRESCO_FC        Fortran compiler               (default: gfortran)
+#   FRESCO_FFLAGS    compiler flags                 (default: -O3 plus the native-CPU flag)
 #
 # Exit 0 = a usable binary is in place (already, or freshly built).
 # Prints the resolved binary path on the last line as: FRESCO=/path/to/fresco
@@ -31,6 +32,20 @@ done
 BIN_DIR="${FRESCO_BIN_DIR:-$HOME/bin}"
 SRC_DIR="${FRESCO_SRC_DIR:-$HOME/.cache/fusion/fresco-src}"
 FC="${FRESCO_FC:-gfortran}"
+# The makefile's own default is a generic -O3, which on x86_64 targets baseline SSE2
+# and leaves AVX/AVX-512 unused: the CRC example deck took about 21 s generic against
+# 16 to 17 s native on a Threadripper 7970X, same sigma_R. On Apple silicon the native
+# flag is neutral; there a current compiler is what helps.
+# Do NOT add -flto: alone it made the same deck about 1.5x slower on the Threadripper
+# and about 2x slower on an M3 Ultra (-funroll-loops alone was neutral).
+# A native binary can die with an illegal instruction on a different CPU, so build on
+# each machine instead of copying binaries across a shared home.
+case "$(uname -m)" in
+  x86_64|amd64)  NATIVE="-march=native" ;;
+  arm64|aarch64) NATIVE="-mcpu=native" ;;
+  *)             NATIVE="" ;;
+esac
+FFLAGS="${FRESCO_FFLAGS:--O3 $NATIVE}"
 REPO="https://github.com/I-Thompson/fresco"
 BIN="$BIN_DIR/fresco"
 
@@ -84,8 +99,11 @@ else
 fi
 
 # 4) Compile
-echo "# compiling with $FC (this takes ~1-2 min)"
-make -C "$SRC_DIR/source" FC="$FC" 2>&1 | tail -3 | sed 's/^/#   /'
+echo "# compiling with $FC $FFLAGS (this takes ~1-2 min)"
+# make rebuilds on timestamps, not flags: objects left from an earlier build would be
+# linked as they are, so clear them.
+rm -f "$SRC_DIR"/source/*.o "$SRC_DIR"/source/*.mod "$SRC_DIR/source/fresco" "$SRC_DIR/source/sfresco"
+make -C "$SRC_DIR/source" FC="$FC" FFLAGS="$FFLAGS" 2>&1 | tail -3 | sed 's/^/#   /'
 for b in fresco sfresco; do
   [ -x "$SRC_DIR/source/$b" ] || { echo "ERROR: build did not produce $b" >&2; exit 1; }
 done
