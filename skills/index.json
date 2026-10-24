@@ -132,7 +132,7 @@
     },
     {
       "name": "fusion-setup",
-      "version": "e65881f5cd65",
+      "version": "a7e84a21b1dc",
       "files": [
         "AGENTS.md",
         "SKILL.md"
@@ -177,10 +177,11 @@
     },
     {
       "name": "kb-search",
-      "version": "e8bdb7b9c15c",
+      "version": "ee3fb1650b29",
       "files": [
         "AGENTS.md",
-        "SKILL.md"
+        "SKILL.md",
+        "scripts/ensure_kb.sh"
       ]
     },
     {
@@ -202,7 +203,7 @@
     },
     {
       "name": "literature-search",
-      "version": "914a7c145dab",
+      "version": "ee3fb1650b29",
       "files": [
         "AGENTS.md",
         "SKILL.md",
