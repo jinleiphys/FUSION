@@ -6,8 +6,8 @@ description: >-
 
 # kb-search: the offline literature knowledge base
 
-FUSION ships its literature knowledge base in the repository's `kb-wiki/`
-directory. It is plain markdown and TSV, searched with grep and awk: no server,
+FUSION's literature knowledge base (`kb-wiki`) is downloaded once, on first
+use, into a local cache; it is not inside the plugin. It is plain markdown and TSV, searched with grep and awk: no server,
 no index to build, no network. This skill is the map: what is in there, how to
 query each layer, and where the trust boundaries sit.
 
@@ -53,9 +53,20 @@ query each layer, and where the trust boundaries sit.
   for an edge with no relations row, and it is the pipeline's resume record.
   Not needed for searching.
 
-Find the directory relative to this skill: `../../kb-wiki` from the directory
-containing this SKILL.md, i.e. `kb-wiki/` at the repository root. Set
-`KB=<that path>` once and use it in every command below.
+Locate it with the script next to this file, once per task:
+
+```bash
+KB=$(bash <this skill's dir>/scripts/ensure_kb.sh | sed -n 's/^KB_DIR=//p')
+```
+
+It checks `FUSION_KB_DIR`, then a `kb-wiki/` at the root of a FUSION
+development clone, then the cache `~/.cache/fusion/kb-wiki`. **On the very first
+use it downloads the knowledge base (about 250 MB, under a minute on a good
+line, 800 MB on disk)**, so tell the user in one line before running it, and
+let it finish; it verifies the copy against the snapshot's MANIFEST and refuses
+a partial one. If it fails, say that it failed and why (usually network or
+proxy; git honours `https_proxy`), never search a half-present directory.
+`ensure_kb.sh --update` refreshes the cached copy to the newest snapshot.
 
 ## Prime directive
 

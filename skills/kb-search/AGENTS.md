@@ -13,6 +13,7 @@ Search FUSION's offline literature knowledge base (kb-wiki): 61,059 arXiv nucl-t
 ## What is in this directory
 
 - `SKILL.md`, the full protocol. Read this first.
+- `scripts/` (1 file)
 
 ## Scope
 

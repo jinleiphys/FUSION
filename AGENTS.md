@@ -1,10 +1,11 @@
 # FUSION
 
-You are running inside a FUSION clone. All 23 skills in `skills/` are already
-available to you: reaction, structure, fission, astrophysics and heavy-ion
-codes, plus experimental-data retrieval. A knowledge base of 61,167 offline
-literature pages sits in `kb-wiki/`, one page per arXiv nucl-th paper, readable
-with plain grep, no network and no key.
+FUSION is loaded, as a plugin or from a clone, and its skills are available to
+you: reaction, structure, fission, astrophysics and heavy-ion codes,
+experimental-data retrieval, and live citation checking. A knowledge base of
+61,167 offline literature pages, one per arXiv nucl-th paper, is reached through
+the `kb-search` skill; it downloads once on first use and is then read with
+plain grep, no network and no key.
 
 ## First run
 
@@ -74,7 +75,7 @@ a language signal, and a Chinese term or name inside an English message does
 not make it Chinese. If the user writes English, every reply is English, the
 final conclusion included.
 
-A Chinese README is at `README.zh-CN.md`; point Chinese-speaking users there
+A Chinese README is at `README.zh-CN.md` (https://github.com/jinleiphys/FUSION/blob/main/README.zh-CN.md); point Chinese-speaking users there
 rather than translating the English one on the fly. Skill documentation itself
 is English, so translate what you quote from it rather than making the user
 read English to follow your answer.

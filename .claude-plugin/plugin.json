@@ -1,0 +1,23 @@
+{
+  "name": "fusion",
+  "version": "0.2.0",
+  "description": "Nuclear-physics research skills for coding agents: drive FRESCO, TALYS, KSHELL, SMASH and 16 more public codes from a verified input against a stated benchmark, pull EXFOR data, verify citations, and search a 61k-paper offline nucl-th knowledge base.",
+  "author": {
+    "name": "Jin Lei",
+    "url": "https://github.com/jinleiphys"
+  },
+  "homepage": "https://github.com/jinleiphys/FUSION",
+  "repository": "https://github.com/jinleiphys/FUSION",
+  "license": "MIT",
+  "keywords": [
+    "nuclear-physics",
+    "physics",
+    "fresco",
+    "talys",
+    "cdcc",
+    "optical-model",
+    "exfor",
+    "skills"
+  ],
+  "icon": "./assets/brand/fusion-logo-mark.png"
+}
