@@ -21,9 +21,9 @@
 </p>
 
 <p align="center">
-  <a href="https://youtu.be/6Xh6-xC436I"><img src="https://img.youtube.com/vi/6Xh6-xC436I/hqdefault.jpg" alt="FUSION in 11 minutes (YouTube)" width="640"></a>
+  <a href="https://youtu.be/6Xh6-xC436I"><img src="assets/brand/video-thumb.jpg" alt="FUSION in 11 minutes (YouTube)" width="640"></a>
   <br>
-  <sub>FUSION in 11 minutes (YouTube)</sub>
+  <sub>▶ FUSION in 11 minutes (YouTube)</sub>
 </p>
 
 ---

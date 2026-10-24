@@ -21,9 +21,9 @@
 </p>
 
 <p align="center">
-  <a href="https://youtu.be/6Xh6-xC436I"><img src="https://img.youtube.com/vi/6Xh6-xC436I/hqdefault.jpg" alt="11 分钟视频介绍（YouTube，英文）" width="640"></a>
+  <a href="https://youtu.be/6Xh6-xC436I"><img src="assets/brand/video-thumb.jpg" alt="11 分钟视频介绍（YouTube，英文）" width="640"></a>
   <br>
-  <sub>11 分钟视频介绍（YouTube，英文）</sub>
+  <sub>▶ 11 分钟视频介绍（YouTube，英文）</sub>
 </p>
 
 ---
