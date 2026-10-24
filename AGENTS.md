@@ -85,7 +85,8 @@ read English to follow your answer.
 - **Reach for the skill.** These codes have conventions that punish guesses. The
   standing example: FRESCO builds radii as `R = r0*(Ap^1/3 + At^1/3)` while KD02
   and CH89 are defined on `R = r0*At^1/3`, so a deck written from memory runs
-  fine and returns a cross section around 20% wrong. Read the skill.
+  fine and returns a wrong cross section: for n + 90Zr at 50 MeV, radii 22% too
+  large and sigma_R 1922 mb instead of 1299 mb (48% high). Read the skill.
 - **Never report a calculation as verified because it exited zero.** Several of
   these codes print a fatal error and exit 0 anyway; TALYS is the documented
   case. Check the output, not the status.

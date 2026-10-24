@@ -63,8 +63,9 @@ came out is right.
 
 A general-purpose coding agent fails at this in a specific and dangerous way.
 Ask one for a FRESCO deck and it will hand you a plausible file with the wrong
-radius convention. The deck runs. The cross section is 20% wrong. Nothing warns
-you.
+radius convention. The deck runs. For a neutron on 90Zr at 50 MeV every radius
+comes out 22% too large and the reaction cross section 48% too high (1922 mb
+instead of 1299 mb). Nothing warns you.
 
 FUSION ships one expert skill per code. Each teaches an agent to install that
 code from its own upstream source, write its inputs correctly, run it, parse the
