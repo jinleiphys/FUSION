@@ -1,12 +1,12 @@
 {
   "name": "fusion",
   "owner": { "name": "Jin Lei", "url": "https://github.com/jinleiphys" },
-  "metadata": { "description": "FUSION: nuclear-physics skills for coding agents", "version": "0.3.0" },
+  "metadata": { "description": "FUSION: nuclear-physics skills for coding agents", "version": "0.3.1" },
   "plugins": [
     {
       "name": "fusion",
       "description": "Nuclear-physics research skills for coding agents: drive FRESCO, TALYS, KSHELL, SMASH and 16 more public codes from a verified input against a stated benchmark, pull EXFOR data, verify citations, and search a 61k-paper offline nucl-th knowledge base.",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "author": { "name": "Jin Lei" },
       "source": "./",
       "category": "science"

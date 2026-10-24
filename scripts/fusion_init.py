@@ -407,15 +407,14 @@ def mark_setup_done(f: Path):
 # Claude Code needs none: the plugin's SessionStart hook reads ~/.fusion/.initialized.
 GLOBAL_INSTRUCTIONS = {
     "codex": Path(os.environ.get("CODEX_HOME", Path.home() / ".codex")) / "AGENTS.md",
-    "gemini": Path.home() / ".gemini" / "GEMINI.md",
+    # Antigravity (agy) reads ~/.gemini/GEMINI.md, checked 2026-10-24.
+    "antigravity": Path.home() / ".gemini" / "GEMINI.md",
 }
 
 
 def detect_agent() -> str:
     if os.environ.get("CLAUDECODE") or os.environ.get("CLAUDE_PLUGIN_ROOT"):
         return "claude"
-    if os.environ.get("GEMINI_CLI"):
-        return "gemini"
     if any(k.startswith("CODEX_") for k in os.environ):
         return "codex"
     return "opencode"
@@ -514,7 +513,7 @@ def main():
     ap.add_argument("--theme", action="store_true", help="install the FUSION colour theme")
     ap.add_argument("--private-dir", default="", help="where to seed the private layer; omit to skip it")
     ap.add_argument("--papers", default="", help="space or comma separated arXiv ids of the user's own papers")
-    ap.add_argument("--agent", choices=["opencode", "claude", "codex", "gemini"], default="",
+    ap.add_argument("--agent", choices=["opencode", "claude", "codex", "antigravity"], default="",
                     help="which agent FUSION runs in (default: detected; opencode if unsure). "
                          "Only opencode gets a config, theme and autoupdate change.")
     ap.add_argument("--list-areas", action="store_true", help="print the area ids and paper counts, then exit")

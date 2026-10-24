@@ -104,7 +104,7 @@ asking, because it looks like consent.
 
 ```bash
 python3 <FUSION root>/scripts/fusion_init.py --apply \
-  --agent <claude|codex|gemini|opencode> \
+  --agent <claude|codex|antigravity|opencode> \
   --model <provider/model> \
   --areas <id,id> \
   --theme \
@@ -114,7 +114,7 @@ python3 <FUSION root>/scripts/fusion_init.py --apply \
 
 `<FUSION root>` is two levels above this skill's directory (the plugin's install
 directory, or the clone). **Always pass `--agent` with the agent you are
-running in.** For `claude`, `codex` and `gemini`, FUSION is a plugin: the
+running in.** For `claude`, `codex` and `antigravity`, FUSION is a plugin: the
 script writes only the private layer and the setup marker, and `--model` and
 `--theme` are opencode settings, so leave them off. The private layer needs the
 knowledge base, so a first setup may download it (about 250 MB; say so before

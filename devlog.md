@@ -9,6 +9,15 @@ that, move the oldest entries to `devlog-archive.md` in full, cutting at an
 entry boundary, and consolidate what stays. `scripts/hooks/pre-commit` enforces
 this; install it with `ln -sf ../../scripts/hooks/pre-commit .git/hooks/`.
 
+## 2026-10-24: Gemini CLI support dropped
+
+**User ruling: Gemini CLI is retired upstream (personal accounts cut off
+2026-06-18, replaced by Antigravity), so nobody installs FUSION through it.**
+`gemini-extension.json` is gone and the READMEs no longer mention it.
+`fusion_init.py --agent gemini` became `--agent antigravity`: a canary line in
+`~/.gemini/GEMINI.md` showed up in an `agy -p` session, so that file is still
+where the setup marker belongs; Antigravity had no `--agent` value before. Plugin 0.3.1.
+
 ## 2026-10-24: BAND skill (rose, surmise, Taweret); the reviews earned their keep
 
 **`skills/band/`, one umbrella skill (user ruling), surmise admitted without a journal paper

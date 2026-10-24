@@ -119,11 +119,6 @@ agy plugin install https://github.com/jinleiphys/FUSION
 The skills and an always-on rule carrying FUSION's working rules load from the
 next session. Reinstall with the same command to update.
 
-Gemini CLI was retired for personal accounts on 2026-06-18 and replaced by
-Antigravity, so use the command above. On an enterprise Gemini Code Assist
-licence that still runs the old CLI, `gemini extensions install
-https://github.com/jinleiphys/FUSION` still works; the extension manifest is kept.
-
 ### opencode
 
 Add the skill index and the working rules to `~/.config/opencode/opencode.json`

@@ -78,8 +78,6 @@ agy plugin install https://github.com/jinleiphys/FUSION
 
 下一个会话起，skill 和一条常驻规则（FUSION 的工作规则）就会加载。更新时重新执行同一条命令。
 
-Gemini CLI 的个人账号已于 2026-06-18 停用，由 Antigravity 取代，所以用上面这条命令。企业版 Gemini Code Assist 如果还在用旧 CLI，`gemini extensions install https://github.com/jinleiphys/FUSION` 仍然可用，扩展清单保留着。
-
 ### opencode
 
 在 `~/.config/opencode/opencode.json` 里加上 skill 索引和工作规则（与已有内容合并，没有这个文件就新建）：

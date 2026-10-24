@@ -1,6 +1,6 @@
 {
   "name": "fusion",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Nuclear-physics research skills for coding agents: drive FRESCO, TALYS, KSHELL, SMASH and 16 more public codes from a verified input against a stated benchmark, pull EXFOR data, verify citations, and search a 61k-paper offline nucl-th knowledge base.",
   "author": {
     "name": "Jin Lei",
