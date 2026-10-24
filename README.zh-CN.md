@@ -61,11 +61,22 @@ skill 会显示为 `fusion:fresco`、`fusion:kb-search` 这样的名字。更新
 ### Codex
 
 ```bash
-codex plugin marketplace add jinleiphys/FUSION
+git clone --depth 1 https://github.com/jinleiphys/FUSION.git ~/.fusion/plugin
+codex plugin marketplace add ~/.fusion/plugin
 codex plugin add fusion@fusion
 ```
 
-更新用 `codex plugin marketplace upgrade fusion`。
+先浅克隆，不要直接 `codex plugin marketplace add jinleiphys/FUSION`：Codex 会把 GitHub 仓库连同全部历史一起克隆，
+还保留 `.git`，这个仓库那样要两份各约 290 MB，浅克隆只有 19 MB。更新用 `git -C ~/.fusion/plugin pull`，
+再 `codex plugin remove fusion@fusion && codex plugin add fusion@fusion`。
+
+### Antigravity
+
+```bash
+agy plugin install https://github.com/jinleiphys/FUSION
+```
+
+下一个会话起，skill 和一条常驻规则（FUSION 的工作规则）就会加载。更新时重新执行同一条命令。
 
 ### Gemini CLI
 
@@ -148,15 +159,16 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 
 ## 不绑定某一个 agent
 
-这些 skill 才是项目本身，用哪个 agent 由你决定。同一个仓库可以装成 Claude Code 插件、Codex 插件、
+这些 skill 才是项目本身，用哪个 agent 由你决定。同一个仓库可以装成 Claude Code 插件、Codex 插件、Antigravity 插件、
 Gemini CLI 扩展和 opencode 的 skill 索引；模型也随你的 agent，DeepSeek、Qwen、GLM 和 Claude、GPT 一样能用。
 
 | Agent | FUSION 怎么进来 | 安装验证 |
 |---|---|---|
 | Claude Code | 插件 + 会话启动 hook | 安装、27 个 skill、hook 上下文、一次文献库查询，端到端跑通 |
 | Codex | 插件 | 安装，并在空目录里端到端用了一个 skill |
-| Gemini CLI | 扩展，`AGENTS.md` 作上下文 | 安装，27 个 skill 全部加载 |
-| opencode | skill 索引 URL + 指令 URL | 在没有克隆的机器上拉取并缓存了全部 skill |
+| Antigravity | 插件，工作规则作为常驻规则 | 安装，27 个 skill，规则进入提示词 |
+| Gemini CLI | 扩展，`AGENTS.md` 作上下文 | 从本地副本安装，27 个 skill 全部加载 |
+| opencode | skill 索引 URL + 指令 URL | 从索引拉到 27 个 skill，`AGENTS.md` 进入模型上下文 |
 
 另外，**任何程序 skill 上线前都要先经过 Codex 的对抗审查**：读 skill、跑脚本，专门去证伪那个基准。
 

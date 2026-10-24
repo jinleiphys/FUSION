@@ -99,11 +99,25 @@ the agent FUSION's working rules. Update with `claude plugin update fusion`.
 ### Codex
 
 ```bash
-codex plugin marketplace add jinleiphys/FUSION
+git clone --depth 1 https://github.com/jinleiphys/FUSION.git ~/.fusion/plugin
+codex plugin marketplace add ~/.fusion/plugin
 codex plugin add fusion@fusion
 ```
 
-Update with `codex plugin marketplace upgrade fusion`.
+Clone first rather than `codex plugin marketplace add jinleiphys/FUSION`: Codex
+clones a GitHub marketplace with its full history and keeps the `.git`, which
+for this repository is about 290 MB twice over, against 19 MB for the shallow
+clone. Update with `git -C ~/.fusion/plugin pull`, then
+`codex plugin remove fusion@fusion && codex plugin add fusion@fusion`.
+
+### Antigravity
+
+```bash
+agy plugin install https://github.com/jinleiphys/FUSION
+```
+
+The skills and an always-on rule carrying FUSION's working rules load from the
+next session. Reinstall with the same command to update.
 
 ### Gemini CLI
 
@@ -207,16 +221,17 @@ paper, never the page.
 ## It is not tied to one agent
 
 The skills are the project; the agent is your choice. The same repository
-installs as a Claude Code plugin, a Codex plugin, a Gemini CLI extension and an
-opencode skill index, and it runs on whatever model your agent reaches,
+installs as a Claude Code plugin, a Codex plugin, an Antigravity plugin, a
+Gemini CLI extension and an opencode skill index, and it runs on whatever model your agent reaches,
 DeepSeek, Qwen and GLM as readily as Claude or GPT.
 
 | Agent | How FUSION arrives | Install checked |
 |---|---|---|
 | Claude Code | plugin + session-start hook | install, all 27 skills, hook context, and a knowledge-base query end to end |
 | Codex | plugin | install and a skill used end to end from an empty directory |
-| Gemini CLI | extension, `AGENTS.md` as context | install, all 27 skills load |
-| opencode | skill index URL + instructions URL | skill index pulled and cached on a machine with no clone |
+| Antigravity | plugin, working rules as an always-on rule | install, 27 skills, rule present in the prompt |
+| Gemini CLI | extension, `AGENTS.md` as context | install from a local copy, all 27 skills load |
+| opencode | skill index URL + instructions URL | 27 skills pulled from the index, `AGENTS.md` reaches the model |
 
 Codex is also the most exercised runtime in a different sense: no per-code
 skill ships until Codex has run an adversarial pass over it, reading the skill

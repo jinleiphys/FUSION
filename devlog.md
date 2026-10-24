@@ -29,6 +29,12 @@ CLIs present: Claude Code (hook context and a kb query in a `-p` session), Codex
 (skill used from an empty directory), Gemini (27 skills load). One near miss:
 Gemini also loads `hooks/hooks.json`, where `$CLAUDE_PLUGIN_ROOT` is unset, so
 the hook command is now a guarded no-op outside Claude Code.
+Antigravity (`agy plugin install <repo>`) wants a root `plugin.json` and
+`rules/*.md` with `trigger: always_on` frontmatter; a rule without it loads but
+is never injected (the model had to go read it). It also dropped two skills
+whose descriptions were invalid YAML that Claude Code had always tolerated.
+Codex clones a GitHub marketplace with full history (290 MB, twice), so its
+documented route is a shallow clone registered as a local marketplace (19 MB).
 
 ## 2026-09-24: the cite-key heuristic was wrong four times in five; the graph now takes INSPIRE
 
