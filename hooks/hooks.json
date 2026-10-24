@@ -4,7 +4,10 @@
       {
         "matcher": "startup|clear|compact",
         "hooks": [
-          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/session_start.py\"" }
+          {
+            "type": "command",
+            "command": "[ -n \"${CLAUDE_PLUGIN_ROOT:-}\" ] && python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/session_start.py\" || true"
+          }
         ]
       }
     ]

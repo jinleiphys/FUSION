@@ -59,7 +59,7 @@ tell them which skills exist for it if any do.
 
 ### Not a question either: the colours
 
-Install the theme, do not ask. Changing it back is `/theme`, one command the
+Only in opencode (the other agents have no theme to set). Install the theme, do not ask. Changing it back is `/theme`, one command the
 user already has, so asking permission spends one of your two questions on a
 decision that costs nothing to reverse. Mention it in one clause when you
 report what you did: 「配色换成 FUSION 的了,不喜欢 /theme 换回去。」
@@ -102,13 +102,22 @@ asking, because it looks like consent.
 ## Then run it, once
 
 ```bash
-python3 scripts/fusion_init.py --apply \
+python3 <FUSION root>/scripts/fusion_init.py --apply \
+  --agent <claude|codex|gemini|opencode> \
   --model <provider/model> \
   --areas <id,id> \
   --theme \
   --private-dir ~/.fusion \
   --papers "<arxiv ids>"
 ```
+
+`<FUSION root>` is two levels above this skill's directory (the plugin's install
+directory, or the clone). **Always pass `--agent` with the agent you are
+running in.** For `claude`, `codex` and `gemini`, FUSION is a plugin: the
+script writes only the private layer and the setup marker, and `--model` and
+`--theme` are opencode settings, so leave them off. The private layer needs the
+knowledge base, so a first setup may download it (about 250 MB; say so before
+you run the command).
 
 Omit any flag the user did not choose. Omit `--private-dir` entirely to skip the
 private layer. Add `--dry-run` first if the user wants to see what it would
@@ -123,8 +132,9 @@ show the user what it said; do not paper over it.
 
 ## Check it worked
 
-Run `opencode debug skill` (or `fusion debug skill`) and count how many skills
-came from this repository's `skills/` directory. There are 26. If some are
+The FUSION skills should be listed in your own skill list (27 of them; in
+Claude Code they appear as `fusion:<name>`). In opencode, run
+`opencode debug skill` and count the ones from FUSION. If some are
 missing, they were either shadowed by a same-named skill elsewhere, in which
 case say which and where the winning one lives, or they failed to load, in which
 case say so and that the cause is not visible from here. Do not report success

@@ -43,7 +43,8 @@ They do NOT apply to, and this repository does not redistribute:
    licence and copyright notice from the upstream project
    (github.com/anomalyco/opencode).
 
-3. The papers summarised under kb-wiki/. Those pages contain third-party
-   material: see kb-wiki/README.md for what they are, on what basis they are
+3. The papers summarised in the knowledge base (kb-wiki/, published on the
+   repository's kb branch). Those pages contain third-party
+   material: see the README on the kb branch for what they are, on what basis they are
    distributed, and how to ask for one to be removed. The MIT grant above does
    not purport to license anyone else's copyrighted work.

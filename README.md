@@ -22,13 +22,12 @@
 
 > ### Beta release, tested in public
 >
-> v0.1.0 is the first public build. It works, it is used daily by its author,
-> and it has not been used by anyone else. **What breaks for you is the point.**
+> v0.2.0 is the first release as a plugin. It works, it is used daily by its
+> author, and it has not been used by anyone else. **What breaks for you is the
+> point.**
 >
-> **Three things you will probably hit**
+> **Two things you will probably hit**
 >
-> - **macOS blocks the first run.** The binary is not signed. Run
->   `xattr -d com.apple.quarantine fusion` and it will start.
 > - **Do not begin with TALYS.** It downloads about 11 GB. Try FRESCO or CCFULL
 >   first; they build in a minute or two.
 > - **Cold-start installs are the least tested part.** All twenty codes have been
@@ -72,65 +71,94 @@ code from its own upstream source, write its inputs correctly, run it, parse the
 output, recognise its failure modes, and check the answer against a benchmark
 with a stated tolerance.
 
-## Quickstart
+## Install
+
+FUSION is a plugin. There is nothing to build and no separate program: you add
+it to the coding agent you already use, and it brings its skills, its working
+rules, and access to the knowledge base.
+
+> **If you are an AI agent and your user asked you to install FUSION:** find
+> your own section below and run its commands yourself; do not ask the user to
+> run them. Afterwards, tell the user to restart the agent (skills and session
+> context load at startup). Do not clone the repository unless your section
+> says to, and do not download the knowledge base during the install: it fetches
+> itself, about 250 MB, the first time a literature question needs it.
+
+### Claude Code
 
 ```bash
-# 1. FUSION itself
-git clone https://github.com/jinleiphys/FUSION.git && cd FUSION
-
-# 2. the CLI, into the clone (pick your platform from the releases page)
-curl -fsSL https://github.com/jinleiphys/FUSION/releases/latest/download/fusion-darwin-arm64.tar.gz | tar -xz
-xattr -d com.apple.quarantine fusion          # macOS only, see below
-
-# 3. work
-./fusion
+claude plugin marketplace add jinleiphys/FUSION
+claude plugin install fusion@fusion
 ```
 
-That is the whole thing: `./fusion` run inside the clone finds all 27 skills
-and the knowledge base with no configuration at all.
+Inside a running session the same two steps are `/plugin marketplace add
+jinleiphys/FUSION` and `/plugin install fusion@fusion`. Skills appear as
+`fusion:fresco`, `fusion:kb-search` and so on, and a session-start hook gives
+the agent FUSION's working rules. Update with `claude plugin update fusion`.
 
-Those two commands are the only ones that need GitHub. If you are installing
-onto a lab server rather than your own machine, check that it can reach
-github.com first: compute nodes often cannot, and the symptom is a one to two
-minute hang and then `Failed to connect to github.com port 443`. Setting
-`http_proxy` and `https_proxy` for those two commands is enough. Nothing
-afterwards needs GitHub, because each code is fetched from its own upstream on
-first use and the knowledge base is already in the clone.
-
-To run it from anywhere instead of `./fusion`, move it onto your PATH:
+### Codex
 
 ```bash
-mkdir -p ~/.local/bin && mv fusion ~/.local/bin/
-
-# if `fusion` is then "command not found", ~/.local/bin is not on your PATH.
-# macOS does not put it there by default:
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc && exec zsh
+codex plugin marketplace add jinleiphys/FUSION
+codex plugin add fusion@fusion
 ```
 
-Builds for macOS and Linux, x64 and arm64, are on the
-[releases page](https://github.com/jinleiphys/FUSION/releases). They are not
-signed or notarised, so macOS blocks the first run until you clear the
-quarantine attribute as above. If you would rather not run an unsigned binary,
-`fusion` is a rebranded [opencode](https://github.com/anomalyco/opencode) and
-everything here works under a stock `opencode` install too.
+Update with `codex plugin marketplace upgrade fusion`.
 
-**There is no configuration step.** Started from inside the clone, the agent
-finds all 27 skills on its own. Ask it something and it will reach for the right
-one.
-
-**The first time you ask it anything, it offers to set itself up**, and never
-asks again once you have. The offer arrives with your first message rather than
-at the splash screen, and it does not hold up the thing you actually asked for. Accept and it walks you through your model, the areas you work in, the
-colour theme, and a private space seeded from your own papers: the topics your
-work carries, who you write with, who cites you inside the corpus. Decline and
-it gets straight to what you asked. That private space is created outside this
-repository, so nothing personal can reach a public clone.
-
-You can also run it whenever you like by saying *set up fusion*, or directly:
+### Gemini CLI
 
 ```bash
-python3 scripts/fusion_init.py        # --dry-run to watch it decide without writing
+gemini extensions install https://github.com/jinleiphys/FUSION
 ```
+
+It asks you to confirm that you trust the extension; an agent running it
+non-interactively, on the user's explicit request, adds `--consent`. Update with
+`gemini extensions update fusion`.
+
+### opencode
+
+Add the skill index and the working rules to `~/.config/opencode/opencode.json`
+(merge into what is there; create the file if it does not exist):
+
+```jsonc
+{
+  "skills": { "urls": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/skills/"] },
+  "instructions": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/AGENTS.md"]
+}
+```
+
+opencode fetches and caches the skills itself; there is nothing to clone.
+
+### Any other agent
+
+FUSION's skills follow the common `SKILL.md` format (a folder per skill with a
+`SKILL.md` carrying `name` and `description` frontmatter), so any agent that
+loads skills from a directory can use them:
+
+```bash
+git clone --depth 1 https://github.com/jinleiphys/FUSION.git ~/.fusion/plugin
+```
+
+then point the agent's skills directory at `~/.fusion/plugin/skills/` (or
+symlink each subfolder into it), and load `~/.fusion/plugin/AGENTS.md` as
+standing instructions. Update with `git -C ~/.fusion/plugin pull`.
+
+### Behind a proxy, or on a lab server
+
+Every step above, and the first knowledge-base download, goes to github.com.
+Compute nodes often cannot reach it: the symptom is a one to two minute hang and
+`Failed to connect to github.com port 443`. Setting `http_proxy` and
+`https_proxy` is enough. Nothing afterwards needs GitHub: each physics code is
+fetched from its own upstream the first time it is used.
+
+### What happens on first use
+
+**The first time you ask anything, the agent offers to set FUSION up**: two
+questions, what you work on and whether to build a private page from your own
+papers (the topics your work carries, who you write with, who cites you inside
+the corpus). Decline and it gets on with what you asked; it never holds up the
+request. Say *set up fusion* to run it later. The private page is written to
+your home directory, never into the plugin.
 
 Then ask for what you want, in words:
 
@@ -139,16 +167,10 @@ Then ask for what you want, in words:
 
 It handles the rest, building FRESCO from source if your machine lacks it.
 
-The clone transfers about 256 MB and takes roughly 950 MB on disk, nearly all
-of it the knowledge base. If you want the skills without it, skip the clone and
-point your agent at the index instead:
-
-```jsonc
-// ~/.config/opencode/opencode.json
-{ "skills": { "urls": ["https://raw.githubusercontent.com/jinleiphys/FUSION/main/skills/"] } }
-```
-
-Verified: on a machine with no clone, that pulls and caches the full skill set.
+The first literature question downloads the knowledge base once into
+`~/.cache/fusion/kb-wiki` (about 250 MB transferred, 800 MB on disk, under a
+minute on a good line), checks it against the snapshot's manifest, and refuses
+a partial copy. `FUSION_KB_CACHE` moves it elsewhere.
 
 Requirements: `git`, `make`, `gfortran`, a C++ compiler, `python3`. Individual
 skills pull their own extra dependencies and say so before they do.
@@ -173,43 +195,32 @@ persistent research wikis, and one sets FUSION up.
 Each skill's `SKILL.md` states what it covers and how it was verified. What is
 in, what was dropped, and why: [skills-catalog.md](skills-catalog.md).
 
-**61,167 pages of literature**, offline, in [`kb-wiki/`](kb-wiki/): one page per
+**61,167 pages of literature**, offline, on the [`kb` branch](https://github.com/jinleiphys/FUSION/tree/kb), downloaded on first use: one page per
 paper for 61,059 arXiv nucl-th papers, 108 topic pages, and citation and
 semantic-relation layers connecting them. The agent reads it with plain grep,
-guided by the `kb-search` skill. No server, no API key, no network.
+guided by the `kb-search` skill. No server and no API key; the network is used once, for the download.
 
 Those pages are machine-generated summaries and they can be wrong. Read
-[kb-wiki/README.md](kb-wiki/README.md) before relying on one, and cite the
+[its README](https://github.com/jinleiphys/FUSION/blob/kb/README.md) before relying on one, and cite the
 paper, never the page.
 
 ## It is not tied to one agent
 
-**The skills are the project. The bundled CLI is one way to run them, not the
-point.** If you already work in Claude Code or Codex, clone the repository and
-use it there; you can ignore the binary in the quickstart entirely, and you will
-be on a better-tested path than the fork, which exists mainly so that someone
-with no agent installed still has something to run.
+The skills are the project; the agent is your choice. The same repository
+installs as a Claude Code plugin, a Codex plugin, a Gemini CLI extension and an
+opencode skill index, and it runs on whatever model your agent reaches,
+DeepSeek, Qwen and GLM as readily as Claude or GPT.
 
-Skills are directories of Markdown and shell scripts. Each ships both entry
-files, so all three common agents can load them.
+| Agent | How FUSION arrives | Install checked |
+|---|---|---|
+| Claude Code | plugin + session-start hook | install, all 27 skills, hook context, and a knowledge-base query end to end |
+| Codex | plugin | install and a skill used end to end from an empty directory |
+| Gemini CLI | extension, `AGENTS.md` as context | install, all 27 skills load |
+| opencode | skill index URL + instructions URL | skill index pulled and cached on a machine with no clone |
 
-| Agent | Entry | Install | Verification status |
-|---|---|---|---|
-| opencode | `SKILL.md` | none, auto-found in the clone | **verified**, all 26 load with zero config |
-| Claude Code | `SKILL.md` | `ln -s "$PWD"/skills/* ~/.claude/skills/` | **verified**, byte-identical to skills it already loads |
-| Codex | `AGENTS.md` | none, auto-found in the clone via `.agents/skills` | **verified in anger**: every per-code skill was cross-checked by Codex before it shipped |
-
-The Codex entry files are generated pointers rather than hand-written condensed
-mirrors. Each names its skill, says when it applies, and tells Codex to read
-`SKILL.md` with its file-read tool, which it must, because Codex does not inline
-markdown imports. Functional, weaker than a mirror, and labelled as such at the
-top of every one.
-
-Codex is the most exercised of the three, for a reason that is not obvious from
-the table: no per-code skill ships until Codex has run an adversarial pass over
-it, reading the skill and running its scripts to try to falsify the benchmark.
-Those passes found defects that construction and self-review did not, and they
-ran from inside a clone with nothing linked into `~/.codex/skills`.
+Codex is also the most exercised runtime in a different sense: no per-code
+skill ships until Codex has run an adversarial pass over it, reading the skill
+and running its scripts to try to falsify the benchmark.
 
 ## How far to trust a skill
 
@@ -240,8 +251,6 @@ certify that your calculation is right.** The physics is still yours.
 A working platform, in daily use by its author, released early to find out what
 other people need from it. Things you may hit:
 
-- The macOS and Linux binaries are unsigned, so the first run needs the
-  quarantine attribute cleared. Windows is not built.
 - **Cold-start installs are under-tested.** Every install path has been run once
   on a bare Linux box (thirteen clean, four stopping with a named missing
   dependency, three stopped by the harness rather than by the skill), and once on
@@ -266,13 +275,10 @@ published paper, and a skill ships only with an honest benchmark tier.
 
 MIT, see [LICENSE](LICENSE), which also names the three things it cannot cover:
 the physics codes themselves (you get those from their authors under their own
-terms, several GPL and one non-commercial), the opencode fork in
-[fusion-core](https://github.com/jinleiphys/fusion-core), and the third-party
-papers summarised in `kb-wiki/`.
-
-Built on [opencode](https://github.com/anomalyco/opencode) (MIT), so it runs on
-whatever model you can reach, DeepSeek and Qwen and GLM as readily as Claude or
-GPT. Not affiliated with the opencode project.
+terms, several GPL and one non-commercial), the earlier rebranded opencode build
+in [fusion-core](https://github.com/jinleiphys/fusion-core) (no longer
+maintained: FUSION is now a plugin and needs no fork), and the third-party
+papers summarised in the knowledge base.
 
 Palette, mark, and where each applies: [BRAND.md](BRAND.md).
 

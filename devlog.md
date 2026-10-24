@@ -9,6 +9,27 @@ that, move the oldest entries to `devlog-archive.md` in full, cutting at an
 entry boundary, and consolidate what stays. `scripts/hooks/pre-commit` enforces
 this; install it with `ln -sf ../../scripts/hooks/pre-commit .git/hooks/`.
 
+## 2026-10-23: FUSION is a plugin; the opencode fork is retired
+
+**User ruling: stop maintaining the rebrand.** The fork only ever added a name
+and a logo: stock opencode already reads `skills/index.json`, Codex and Gemini
+read `.agents/skills` and `AGENTS.md`. Main now carries `.claude-plugin/`
+(plugin + self-hosted marketplace), `.codex-plugin/` +
+`.agents/plugins/marketplace.json`, `gemini-extension.json`, and a SessionStart
+hook that hands `AGENTS.md` to Claude Code minus the maintainer section, and
+minus the first-run offer once `~/.fusion/.initialized` exists.
+
+**The knowledge base had to leave `main`.** A local-path test install was 620
+MB because the plugin copy takes the whole tree; per install, per update, per
+agent. It now lives on the `kb` branch (made with `commit-tree` from the
+existing tree object, so the push sent no blobs), and `ensure_kb.sh` fetches it
+on first use: 54 s, 791 MB on disk, verified against a MANIFEST, a deleted page
+is refused. Install from a git-clean copy: 13 MB. Tested for real in all three
+CLIs present: Claude Code (hook context and a kb query in a `-p` session), Codex
+(skill used from an empty directory), Gemini (27 skills load). One near miss:
+Gemini also loads `hooks/hooks.json`, where `$CLAUDE_PLUGIN_ROOT` is unset, so
+the hook command is now a guarded no-op outside Claude Code.
+
 ## 2026-09-24: the cite-key heuristic was wrong four times in five; the graph now takes INSPIRE
 
 **Tier B of `kb_citegraph.py` is gone.** For a paper with an external .bib the

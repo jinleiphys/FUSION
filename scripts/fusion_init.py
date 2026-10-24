@@ -41,9 +41,25 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 MAP_FILE = REPO / "data" / "concept-skill-map.json"
-CLASSIFICATION = REPO / "kb-wiki" / "classification.json"
-PAPERS = REPO / "kb-wiki" / "papers"
-CITATIONS = REPO / "kb-wiki" / "citations.tsv"
+ENSURE_KB = REPO / "skills" / "kb-search" / "scripts" / "ensure_kb.sh"
+_KB = None
+
+
+def kb() -> Path:
+    """The knowledge base directory, downloaded on first use.
+
+    Not inside the repository any more: it lives on the `kb` branch and
+    ensure_kb.sh (the one place that knows where) fetches it into a cache.
+    Its progress messages go straight to the terminal.
+    """
+    global _KB
+    if _KB is None:
+        r = subprocess.run(["bash", str(ENSURE_KB)], stdout=subprocess.PIPE, text=True)
+        line = [l for l in r.stdout.splitlines() if l.startswith("KB_DIR=")]
+        if r.returncode != 0 or not line:
+            sys.exit("the knowledge base is not available (see the message above); nothing was written")
+        _KB = Path(line[-1][len("KB_DIR="):])
+    return _KB
 THEME_FILE = REPO / "data" / "fusion-theme.json"
 
 PROVIDERS = [
@@ -173,8 +189,9 @@ def merge_config(existing: dict, skills_dir: Path, model: str, theme: str = "",
 def load_areas():
     m = json.loads(MAP_FILE.read_text())
     counts = {}
-    if CLASSIFICATION.exists():
-        cls = json.loads(CLASSIFICATION.read_text())
+    cls_file = kb() / "classification.json"
+    if cls_file.exists():
+        cls = json.loads(cls_file.read_text())
         for area in m["areas"]:
             want = set(area["concepts"])
             counts[area["id"]] = sum(
@@ -213,7 +230,7 @@ def read_frontmatter(path: Path) -> dict:
 def find_my_papers(ids):
     found, missing = [], []
     for pid in ids:
-        p = PAPERS / f"{pid.replace('/', '_')}.md"
+        p = kb() / "papers" / f"{pid.replace('/', '_')}.md"
         if p.exists():
             fm = read_frontmatter(p)
             fm["_id"] = pid
@@ -231,9 +248,10 @@ def citation_neighbourhood(my_ids):
     """
     mine = set(my_ids)
     citers, cited_by_me = {}, {}
-    if not CITATIONS.exists():
+    cit_file = kb() / "citations.tsv"
+    if not cit_file.exists():
         return citers, cited_by_me
-    with CITATIONS.open(errors="replace") as fh:
+    with cit_file.open(errors="replace") as fh:
         next(fh, None)
         for line in fh:
             parts = line.rstrip("\n").split("\t")
@@ -248,7 +266,7 @@ def citation_neighbourhood(my_ids):
 
 
 def title_of(pid):
-    p = PAPERS / f"{pid.replace('/', '_')}.md"
+    p = kb() / "papers" / f"{pid.replace('/', '_')}.md"
     fm = read_frontmatter(p) if p.exists() else {}
     return fm.get("title") or "(no title on that page)", fm.get("authors", "")
 
@@ -294,7 +312,7 @@ def seed_private_layer(home: Path, papers, areas_picked, area_labels):
         lines += ["", f"## My papers in the corpus ({len(papers)})", ""]
         for fm in papers:
             t = fm.get("title", "(title not found)")
-            lines.append(f"- [{fm['_id']}](../kb-wiki/papers/{fm['_id']}.md) {t}")
+            lines.append(f"- [{fm['_id']}]({kb()}/papers/{fm['_id']}.md) {t}")
 
     if concepts:
         lines += ["", "## Topics my own papers carry", "",
@@ -314,7 +332,7 @@ def seed_private_layer(home: Path, papers, areas_picked, area_labels):
                   "against the paper itself before believing it.", ""]
         for pid, n in sorted(citers.items(), key=lambda kv: -kv[1])[:20]:
             t, _ = title_of(pid)
-            lines.append(f"- [{pid}](../kb-wiki/papers/{pid}.md) {t}" + (f"  (cites {n} of your papers)" if n > 1 else ""))
+            lines.append(f"- [{pid}]({kb()}/papers/{pid}.md) {t}" + (f"  (cites {n} of your papers)" if n > 1 else ""))
 
     repeated = {pid: n for pid, n in cited_by_me.items() if n >= 2}
     if repeated:
@@ -325,7 +343,7 @@ def seed_private_layer(home: Path, papers, areas_picked, area_labels):
                   "is your bibliography in arbitrary order, not a reading list.", ""]
         for pid, n in sorted(repeated.items(), key=lambda kv: (-kv[1], kv[0]))[:20]:
             t, _ = title_of(pid)
-            lines.append(f"- [{pid}](../kb-wiki/papers/{pid}.md) {t}  (cited by {n} of your papers)")
+            lines.append(f"- [{pid}]({kb()}/papers/{pid}.md) {t}  (cited by {n} of your papers)")
     elif cited_by_me:
         lines += ["", "## What my own work leans on repeatedly", "",
                   f"Nothing yet: your {len(papers)} listed paper(s) cite {len(cited_by_me)} corpus papers",
@@ -354,7 +372,7 @@ you work on.
 MARKER = "FUSION-SETUP-DONE"
 
 
-def mark_setup_done(cfg_dir: Path):
+def mark_setup_done(f: Path):
     """Leave a line in the agent's GLOBAL instructions saying setup is finished.
 
     opencode loads <config>/AGENTS.md into every session, so a line here is
@@ -366,7 +384,6 @@ def mark_setup_done(cfg_dir: Path):
     Appended, never overwritten, and idempotent. This is the user's own file and
     may contain their own instructions; it is backed up before being touched.
     """
-    f = cfg_dir / "AGENTS.md"
     existing = f.read_text(errors="replace") if f.exists() else ""
     if MARKER in existing:
         say(f"  {f} already records the setup")
@@ -386,7 +403,25 @@ def mark_setup_done(cfg_dir: Path):
     say(f"  recorded the setup in {f}")
 
 
-def apply(model, areas, theme, private_dir, papers):
+# Where each agent keeps a global instruction file loaded into every session.
+# Claude Code needs none: the plugin's SessionStart hook reads ~/.fusion/.initialized.
+GLOBAL_INSTRUCTIONS = {
+    "codex": Path(os.environ.get("CODEX_HOME", Path.home() / ".codex")) / "AGENTS.md",
+    "gemini": Path.home() / ".gemini" / "GEMINI.md",
+}
+
+
+def detect_agent() -> str:
+    if os.environ.get("CLAUDECODE") or os.environ.get("CLAUDE_PLUGIN_ROOT"):
+        return "claude"
+    if os.environ.get("GEMINI_CLI"):
+        return "gemini"
+    if any(k.startswith("CODEX_") for k in os.environ):
+        return "codex"
+    return "opencode"
+
+
+def apply(model, areas, theme, private_dir, papers, agent="opencode"):
     """Do the setup from answers already collected, asking nothing.
 
     This exists so an AGENT can run the setup. The agent holds the conversation,
@@ -408,6 +443,19 @@ def apply(model, areas, theme, private_dir, papers):
         sys.exit(f"unknown area(s): {', '.join(unknown)}. Valid: {', '.join(sorted(known))}")
 
     all_skills = sorted(p.name for p in (REPO / "skills").iterdir() if p.is_dir())
+    if agent != "opencode":
+        # Installed as a plugin: the agent already loads the skills, and model,
+        # theme and autoupdate are opencode settings. Only the private layer and
+        # the setup marker are ours to write.
+        seed_private(private_dir, papers, areas, area_labels)
+        write_file(Path.home() / ".fusion" / ".initialized",
+                   f"set up by fusion_init.py on {time.strftime('%Y-%m-%d')}\n")
+        if agent in GLOBAL_INSTRUCTIONS:
+            mark_setup_done(GLOBAL_INSTRUCTIONS[agent])
+        say("")
+        say(f"SETUP OK  agent={agent}  skills={len(all_skills)}  private_layer={'yes' if private_dir else 'no'}")
+        return
+
     cfg_dir = config_dir()
     cfg_path = cfg_dir / "opencode.json"
     existing = load_config(cfg_path)
@@ -426,27 +474,32 @@ def apply(model, areas, theme, private_dir, papers):
         say(f"  backed up existing config to {backup}")
     write_file(cfg_path, json.dumps(merged, indent=2) + "\n")
 
-    if private_dir:
-        home = Path(private_dir).expanduser()
-        try:
-            home.resolve().relative_to(REPO.resolve())
-            sys.exit("refusing to create the private layer inside the FUSION repository")
-        except ValueError:
-            pass
-        found, missing = find_my_papers(papers) if papers else ([], [])
-        if missing:
-            say(f"  not in the corpus: {', '.join(missing)}")
-        seed_private_layer(home, found, areas, area_labels)
+    seed_private(private_dir, papers, areas, area_labels)
 
     write_file(Path.home() / ".fusion" / ".initialized",
                f"set up by fusion_init.py on {time.strftime('%Y-%m-%d')}\n")
-    mark_setup_done(cfg_dir)
+    mark_setup_done(cfg_dir / "AGENTS.md")
 
     say("")
     say(f"SETUP OK  config={cfg_path}  skills={len(all_skills)}  "
         f"theme={theme_name or 'unchanged'}  autoupdate_disabled={kill_autoupdate}")
     if theme_name:
         say("NOTE the theme is installed; `/theme` switches it back")
+
+
+def seed_private(private_dir, papers, areas, area_labels):
+    if not private_dir:
+        return
+    home = Path(private_dir).expanduser()
+    try:
+        home.resolve().relative_to(REPO.resolve())
+        sys.exit("refusing to create the private layer inside the FUSION repository")
+    except ValueError:
+        pass
+    found, missing = find_my_papers(papers) if papers else ([], [])
+    if missing:
+        say(f"  not in the corpus: {', '.join(missing)}")
+    seed_private_layer(home, found, areas, area_labels)
 
 
 def main():
@@ -461,6 +514,9 @@ def main():
     ap.add_argument("--theme", action="store_true", help="install the FUSION colour theme")
     ap.add_argument("--private-dir", default="", help="where to seed the private layer; omit to skip it")
     ap.add_argument("--papers", default="", help="space or comma separated arXiv ids of the user's own papers")
+    ap.add_argument("--agent", choices=["opencode", "claude", "codex", "gemini"], default="",
+                    help="which agent FUSION runs in (default: detected; opencode if unsure). "
+                         "Only opencode gets a config, theme and autoupdate change.")
     ap.add_argument("--list-areas", action="store_true", help="print the area ids and paper counts, then exit")
     args = ap.parse_args()
     DRY_RUN = args.dry_run
@@ -476,7 +532,8 @@ def main():
               [x for x in args.areas.replace(",", " ").split() if x],
               args.theme,
               args.private_dir,
-              [x for x in args.papers.replace(",", " ").split() if x])
+              [x for x in args.papers.replace(",", " ").split() if x],
+              args.agent or detect_agent())
         return
 
     say("\n\033[1mFUSION init\033[0m")
@@ -693,7 +750,7 @@ def main():
     head("Done")
     say(f"  config      {cfg_path}")
     say(f"  skills      {REPO / 'skills'}  ({len(all_skills)} available)")
-    say(f"  knowledge   {REPO / 'kb-wiki'}  (browse offline, no key needed)")
+    say(f"  knowledge   {kb()}  (browse offline, no key needed)")
     if home:
         say(f"  private     {home}")
     say("")
