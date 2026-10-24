@@ -1,0 +1,118 @@
+# Direct reactions
+
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Direct reactions
+
+**Broader:** [Nuclear reactions](nuclear-reactions.md)
+
+## Landscape
+
+### Landscape Synthesis: Direct Reactions
+
+Direct reactions are a cornerstone of nuclear physics, used to probe the structure of atomic nuclei and the dynamics of nuclear interactions. They encompass processes where a projectile transfers energy or nucleons to a target in a single, swift encounter, in contrast to the formation of a long-lived compound nucleus. This topic is critical because it provides access to exotic nuclei far from stability, tests fundamental symmetries like chiral symmetry restoration in dense matter, and informs models of nucleosynthesis in astrophysical environments, such as neutron star mergers.
+
+The main approaches include transfer reactions, which are central to studying shell evolution and pairing. For instance, the Sn(d,3He) reaction was used to measure deeply bound pionic states, revealing evidence for chiral symmetry restoration. Multinucleon transfer reactions are studied with microscopic frameworks like Time-Dependent Hartree-Fock (TDHF) theory and its extensions, as reviewed for the production of neutron-rich nuclei. The complex-energy continuum shell model provides a consistent description of bound and resonant states, while the NACRE II compilation updates thermonuclear reaction rates for charged-particle-induced reactions. Pairing correlations are investigated through one- and two-nucleon transfer below the Coulomb barrier, showing a strong enhancement of two-particle transfer due to pairing.
+
+Active directions include the production of new exotic nuclei via multinucleon transfer, as explored in reactions like 58Ni+124Sn and 154Sm+160Gd. The isospin equilibration process in near-barrier reactions is being studied with quantum molecular dynamics models. Open questions involve the nature of neutron-proton pairing along the N=Z line and the extraction of scattering lengths from production reactions, such as pp to K+ p Lambda. The recent discovery of a two-neutron halo in 29F challenges traditional shell closures, highlighting the ongoing need to understand nuclear structure at the limits of stability.
+
+**Papers:** 244 (showing first 100 of 244)
+
+- [2606.02270](../papers/2606.02270.md) (2026) [2] The spectrum of $^{18}$O in terms of the multiconfigurational dynamical symmetry
+- [2605.16533](../papers/2605.16533.md) (2026) [3] One- and two-nucleon transfer in $^{\mathbf{116}}$Sn+$^{\mathbf{60}}$Ni: A coupled reaction channel analysis
+- [2604.13766](../papers/2604.13766.md) (2026) [2] Spectroscopy of $^{11}$Be from the $^{10}$Be($d,p$) reaction measured in inverse kinematics by the AT-TPC in SOLARIS
+- [2604.14423](../papers/2604.14423.md) (2026) [3] Constraining the $N=16$ Shell Gap in $^{17}$C via Transfer to the Continuum in the $^{16}$C$(d,p)^{17}$C Reaction
+- [2604.05600](../papers/2604.05600.md) (2026) [2] Channel couplings redirect absorbed flux from peripheral loss to fusion in weakly bound nuclear reactions
+- [2603.18632](../papers/2603.18632.md) (2026) [2] Single-particle strength toward N = 32: Spectroscopy of 51 Ca via the 50 Ca(d, p) reaction
+- [2602.22464](../papers/2602.22464.md) (2026) [3] The 2027-2034 Vision for Nuclear Physics in Canada, with an outlook to 2041
+- [2601.20059](../papers/2601.20059.md) (2026) [3] The 2025 Evaluation of Experimental Thermonuclear Reaction Rates (ETR25)
+- [2601.14604](../papers/2601.14604.md) (2026) [2] \textit{Ab initio} study of spectroscopic factors in $^{48}$K and neighboring $N=28$ isotones
+- [2601.06242](../papers/2601.06242.md) (2026) [2] Direct transfer to $^{46,48}$K as a survey of the $π(s_{1/2})$$-ν(sdpf)$ interaction
+- [2510.15171](../papers/2510.15171.md) (2025) [3] Ab initio symmetry-adapted approaches to nuclear reactions
+- [2510.12103](../papers/2510.12103.md) (2025) [2] The role of the overlap function in describing angular distributions of single-nucleon transfer reactions
+- [2506.23228](../papers/2506.23228.md) (2025) [3] Direct proton transfer on $^{46}$Ar supports the presence of a charge density bubble linked to a novel nuclear structure...
+- [2506.11392](../papers/2506.11392.md) (2025) [1] Charge Pickup Reaction Cross Section for Neutron-Rich p-Shell Isotopes at 900A MeV
+- [2502.16990](../papers/2502.16990.md) (2025) [3] Pauli Blocking effects in Nilsson states of weakly bound exotic nuclei
+- [2501.02848](../papers/2501.02848.md) (2025) [2] Direct observation of $β$ and $γ$ decay from a high-spin long-lived isomer in $^{187}$Ta
+- [2412.17588](../papers/2412.17588.md) (2024) [2] Shell Migration at N = 32, 34 around Ca Region
+- [2412.16649](../papers/2412.16649.md) (2024) [3] Reaction mechanism of quasi-free knockout processes in exotic RI beam era
+- [2412.09703](../papers/2412.09703.md) (2024) [2] Deuteron-${}^{3}\mathrm{He}$ scattering using nucleon-${}^{3}\mathrm{He}$ optical potentials fitted to four-body amplitu...
+- [2411.13963](../papers/2411.13963.md) (2024) [3] Proton-neutron pair correlations in neutron-rich nuclei
+- [2410.06144](../papers/2410.06144.md) (2024) [3] Motivations for Early High-Profile FRIB Experiments
+- [2408.00175](../papers/2408.00175.md) (2024) [3] The art of modeling nuclear reactions with weakly bound nuclei: status and perspectives
+- [2407.16775](../papers/2407.16775.md) (2024) [2] Investigating the rate of $^{10}$Be(n,$γ$)$^{11}$Be radiative capture reaction within the FRDWBA framework
+- [2405.15014](../papers/2405.15014.md) (2024) [3] Modeling of Deuteron Induced Reactions on Molybdenum at Low Energies
+- [2402.14964](../papers/2402.14964.md) (2024) [2] Pairing enhancement through the photography of the intermediate nucleus spectrum in a two-nucleon transfer process
+- [2401.08319](../papers/2401.08319.md) (2024) [2] Shell effects on the drift and fluctuation in multinucleon transfer reactions
+- [2312.17354](../papers/2312.17354.md) (2023) [3] Population of tetraneutron continuum in reactions of $^{8}$He on deuterium
+- [2310.14765](../papers/2310.14765.md) (2023) [1] One-neutron transfer reaction in the $^{18}$O + $^{48}$Ti collision at 275 MeV
+- [2310.02099](../papers/2310.02099.md) (2023) [2] Re-evaluation of the $^{22}$Ne($p$,$γ$)$^{23}$Na reaction rate: $R-$matrix analysis of the non-resonant capture and effe...
+- [2309.10086](../papers/2309.10086.md) (2023) [3] Status of experimental knowledge on the unbound nucleus $^{13}$Be
+- [2309.08378](../papers/2309.08378.md) (2023) [2] Analysis of the 16C(d,p)17C reaction from microscopic 17C wave functions
+- [2308.08188](../papers/2308.08188.md) (2023) [3] Elastic scattering and total reaction cross sections of $^{6}$Li studied with a microscopic continuum discretized couple...
+- [2307.01835](../papers/2307.01835.md) (2023) [3] Reaction dynamics in clustered nuclear systems
+- [2305.19945](../papers/2305.19945.md) (2023) [3] Transfer reactions of exotic nuclei including core deformations: $^{11}$Be and $^{17}$C
+- [2305.17792](../papers/2305.17792.md) (2023) [2] A schematic model for the direct cross-section in reactions induced by exotic and stable projectiles
+- [2304.13391](../papers/2304.13391.md) (2023) [3] Two-proton emission and related phenomena
+- [2303.11085](../papers/2303.11085.md) (2023) [3] Investigation of spectroscopic factors of deeply-bound nucleons in drip-line nuclei with the Gamow shell model
+- [2303.06128](../papers/2303.06128.md) (2023) [2] New Constraints on Sodium Production in Globular Clusters From the $^{23}$Na$(^3$He$, \textbf{d})^{24}$Mg Reaction
+- [2302.09980](../papers/2302.09980.md) (2023) [3] Study of the threshold anomaly in the elastic scattering of d+$^{197}$Au
+- [2302.07544](../papers/2302.07544.md) (2023) [3] Preequilibrium cluster emission in massive transfer reactions near Coulomb barrier energy
+- [2302.04837](../papers/2302.04837.md) (2023) [3] Nonlocal optical potential with core excitation in ${}^{10}\mathrm{Be}(d,p){}^{11}\mathrm{Be}$ and ${}^{11}\mathrm{Be}(p...
+- [2301.05419](../papers/2301.05419.md) (2023) [1] Gamow Shell Model description of ${ { }^{ 40 } }$Ca(d,p) transfer reaction
+- [2212.00218](../papers/2212.00218.md) (2022) [3] Secondary Neutron Production from Thick Target Deuteron Breakup
+- [2211.16781](../papers/2211.16781.md) (2022) [3] Dissipative reactions with intermediate-energy beams -- a novel approach to populate complex-structure states in rare is...
+- [2211.12113](../papers/2211.12113.md) (2022) [3] Role of neutron transfer in the reaction mechanism of $^9$Be+$^{169}$Tm, $^{181}$Ta, $^{187}$Re and $^{197}$Au systems
+- [2211.06281](../papers/2211.06281.md) (2022) [3] Perspectives on few-body cluster structures in exotic nuclei
+- [2207.13582](../papers/2207.13582.md) (2022) [2] Production of proton-rich nuclei in the vicinity of 100Sn via multinucleon transfer reactions
+- [2206.12341](../papers/2206.12341.md) (2022) [1] Analysis of one-neutron transfer reaction in $^{18}$O + $^{76}$Se collision at 275 MeV
+- [2206.04809](../papers/2206.04809.md) (2022) [2] Renormalization group evolution of optical potentials: explorations using a toy model
+- [2202.12820](../papers/2202.12820.md) (2022) [1] In-beam $γ$-ray spectroscopy of $^{32}$Mg via direct reactions
+- [2202.05918](../papers/2202.05918.md) (2022) [3] Multi-channel experimental and theoretical constraints for the $^{116}$Cd($^{20}$Ne,$^{20}$F)$^{116}$In charge exchange ...
+- [2201.09512](../papers/2201.09512.md) (2022) [3] Coupled-channels calculations for nuclear reactions: from exotic nuclei to superheavy elements
+- [2201.00433](../papers/2201.00433.md) (2022) [2] Direct Nuclear Reactions
+- [2111.07541](../papers/2111.07541.md) (2021) [3] $α$ knockout reaction as a new probe for $α$ formation in $α$-decay nuclei
+- [2110.10975](../papers/2110.10975.md) (2021) [2] Analysis of two-proton transfer in the 40Ca(18O,20Ne)38Ar reaction at 270 MeV incident energy
+- [2110.10642](../papers/2110.10642.md) (2021) [1] Study of one-proton transfer reaction for the $^{18}$O + $^{48}$Ti system at 275 MeV
+- [2110.07254](../papers/2110.07254.md) (2021) [3] Neutron transfer in $^{9}$Be + $^{159}$Tb system
+- [2110.01592](../papers/2110.01592.md) (2021) [3] Proton inelastic scattering reveals deformation in $^8$He
+- [2109.03203](../papers/2109.03203.md) (2021) [3] Determination of $1p$ and $2p$ stripping excitation functions for $^{16}$O+$^{142}$Ce using a Recoil Mass Spectrometer
+- [2108.13598](../papers/2108.13598.md) (2021) [2] Production of neutron-rich heavy nuclei around N = 162 in multinucleon transfer reactions
+- [2106.05693](../papers/2106.05693.md) (2021) [2] Elastic scattering measurements for the $^{10}$C + $^{208}$Pb system at E$_{\rm lab}$ = 66 MeV
+- [2105.04435](../papers/2105.04435.md) (2021) [2] The $^{6}$H states studied in the $^2\text{He}(^8\text{He},^4\text{He})$ reaction and evidence of extremely correlated c...
+- [2105.04490](../papers/2105.04490.md) (2021) [3] Halo effective field theory analysis of one-neutron knockout reactions of $^{11}\rm Be$ and $^{15}\rm C$
+- [2104.13689](../papers/2104.13689.md) (2021) [2] Investigating neutron transfer in the $^{9}$Be + $^{197}$Au system
+- [2103.05357](../papers/2103.05357.md) (2021) [1] Experimental study of intruder components in light neutron-rich nuclei via single-nucleon transfer reaction
+- [2103.01642](../papers/2103.01642.md) (2021) [2] Tests of collectivity in $^{98}$Zr by absolute transition rates
+- [2102.03452](../papers/2102.03452.md) (2021) [3] Cross sections for neutron-induced reactions from surrogate data: revisiting the Weisskopf-Ewing approximation for $(n,n...
+- [2012.12553](../papers/2012.12553.md) (2020) [1] Quenching of single-particle strength from direct reactions with stable and rare-isotope beams
+- [2011.02622](../papers/2011.02622.md) (2020) [3] Folding model approach to the elastic $p+^{12,13}$C scattering at low energies and radiative capture $^{12,13}$C$(p,γ)$ ...
+- [2010.15587](../papers/2010.15587.md) (2020) [2] Important Influence of Entrance Channel Reorientation Coupling on Proton Stripping
+- [2009.12801](../papers/2009.12801.md) (2020) [2] Multi-neutron transfer in $^{8}$He induced reactions near the Coulomb barrier
+- [2009.01159](../papers/2009.01159.md) (2020) [1] Role of continuum in nuclear direct reactions with one-neutron halo nuclei: a one-dimensional model
+- [2008.10408](../papers/2008.10408.md) (2020) [2] The total reaction cross section of heavy-ion reactions induced by stable and unstable exotic beams: The low-energy regi...
+- [2008.01282](../papers/2008.01282.md) (2020) [3] Coupled reaction channel study of the 12C(alpha,8Be) reaction, and the 8Be+8Be optical potential
+- [2007.15225](../papers/2007.15225.md) (2020) [2] Parity-transfer $({}^{16}{\rm O},{}^{16}{\rm F}(0^-,{\rm g.s.}))$ reaction as a selective probe of isovector $0^-$ state...
+- [2007.13331](../papers/2007.13331.md) (2020) [3] Trojan horse method as surrogate indirect approach to study resonant reactions in nuclear astrophysics
+- [2007.13370](../papers/2007.13370.md) (2020) [2] Multi-step processes in heavy-ion induced single-nucleon transfer reactions
+- [2006.14530](../papers/2006.14530.md) (2020) [1] Bayesian Analysis of the $^{70}$Zn$(d, ^3\!\text{He}) ^{69}$Cu Transfer Reaction
+- [2005.09492](../papers/2005.09492.md) (2020) [3] A two-neutron halo is unveiled in $^{29}$F
+- [1912.03932](../papers/1912.03932.md) (2019) [3] An overview of the scientific contribution of Andrea Vitturi to Nuclear Physics (being an account of the recent TNP19 me...
+- [1911.12571](../papers/1911.12571.md) (2019) [2] Impact of uncertainties of unbound $^{10}$Li on the ground state of two-neutron halo $^{11}$Li
+- [1911.06782](../papers/1911.06782.md) (2019) [3] Lifetimes and moments measurements to investigate the structure of midheavy nuclei
+- [1910.10570](../papers/1910.10570.md) (2019) [1] Asymptotic normalization coefficients from transfer reaction and R-martix analysis of direct capture in $^{22}$Ne(p,$γ$)...
+- [1910.03104](../papers/1910.03104.md) (2019) [3] Elastic and inelastic scattering of $^{16}$O on $^{27}$Al and $^{28}$Si at 240 MeV
+- [1907.04581](../papers/1907.04581.md) (2019) [1] Microscopic studies of production cross sections in multinucleon transfer reaction $^{58}$Ni+$^{124}$Sn
+- [1905.12976](../papers/1905.12976.md) (2019) [2] Two-particle transfer processes as a signature of shape phase transition in Zirconium isotopes
+- [1905.03664](../papers/1905.03664.md) (2019) [3] Characterization of vorticity in pygmy resonances and soft-dipole modes with two-nucleon transfer reactions
+- [1904.04224](../papers/1904.04224.md) (2019) [2] Investigating the 10Li continuum through 9Li(d,p)10Li reactions
+- [1904.02786](../papers/1904.02786.md) (2019) [3] Radioactive beams and inverse kinematics: probing the quantal texture of the nuclear vacuum
+- [1904.00398](../papers/1904.00398.md) (2019) [2] Production of the exotic neutron-deficient isotopes near N, Z = 50 in multinucleon transfer reactions
+- [1903.10580](../papers/1903.10580.md) (2019) [3] Elastic scattering, inelastic excitation, and 1n pick-up transfer cross sections for $^{10}$B+$^{120}$Sn at energies nea...
+- [1903.00335](../papers/1903.00335.md) (2019) [3] Revisiting fission-probability data using $\mathcal{R}$-matrix Monte-Carlo simulations : application to Pu fissile isoto...
+- [1902.06595](../papers/1902.06595.md) (2019) [3] States of the $^{12}$C Nucleus in the Toroidal Configuration
+- [1902.01616](../papers/1902.01616.md) (2019) [1] TDHF Theory and Its Extensions for the Multinucleon Transfer Reaction: a Mini Review
+- [1812.09152](../papers/1812.09152.md) (2018) [2] Neutron transfer reactions in halo effective field theory
+- [1812.05197](../papers/1812.05197.md) (2018) [2] Two-neutron transfer reactions and shape phase transitions in the microscopically-formulated interacting boson model
+- [1812.01761](../papers/1812.01761.md) (2018) [3] The 9Li(d,p) reaction, a specific probe of 10Li, paradigm of parity--inverted nuclei around N=6 closed shell
+- [1811.03111](../papers/1811.03111.md) (2018) [3] Recent developments for the optical model of nuclei
+- [1811.02118](../papers/1811.02118.md) (2018) [3] Dominance of tensor correlations in high-momentum nucleon pairs studied by (p,pd) reaction
+- [1811.01231](../papers/1811.01231.md) (2018) [3] Inclusive breakup reaction of a two-cluster projectile on a two-fragment target: A genuine four-body problem

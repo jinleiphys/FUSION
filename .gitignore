@@ -1,0 +1,6 @@
+# build logs and intermediate INSPIRE tables: never part of a snapshot
+full-run-*.log
+relations-run-*.log
+citations-inspire.tsv
+inspire-recid-map.tsv
+backfill-run.log

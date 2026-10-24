@@ -1,0 +1,97 @@
+# Nuclear charge radii
+
+**PhySH lineage:** Nuclear structure & decays > [Nuclear charge distribution](nuclear-charge-distribution.md) > Nuclear charge radii
+
+**Broader:** [Nuclear charge distribution](nuclear-charge-distribution.md)
+
+## Landscape
+
+### Landscape Synthesis: Nuclear Charge Radii
+
+Nuclear charge radii, which quantify the spatial distribution of electric charge within an atomic nucleus, are fundamental observables that probe the complex dynamics of the nucleon-nucleon interaction and the bulk properties of nuclear matter. Their precise determination is crucial for validating nuclear structure models, understanding shell effects and isospin dependence, and constraining the nuclear equation of state, with implications ranging from the structure of exotic isotopes to astrophysical phenomena.
+
+The main theoretical approaches include nuclear density functional theory (DFT) using Skyrme, Fayans, and covariant functionals, which are applied to study correlations between charge radii, neutron skins, and nuclear matter parameters. A prominent sub-thread combines DFT with Bayesian neural networks (BNN) to refine predictions across the nuclear chart, as seen in the works exploring BNN-based approaches. Empirical formulas incorporating shell corrections and deformations, such as the four-parameter formula from the Weizsäcker-Skyrme mass model, also achieve high accuracy. Experimentally, collinear laser spectroscopy provides precise isotope shift measurements, as demonstrated for nickel, silicon, and potassium isotopes, enabling stringent tests of ab initio methods like chiral effective field theory and in-medium similarity renormalization group calculations.
+
+Open questions include the origin of unexpected charge radius increases in neutron-rich calcium and potassium isotopes, which challenge current theory and the magic character of N=32. The role of short-range correlated nucleon pairs in influencing long-range nuclear properties like charge radii remains an active direction. Additionally, the bulk versus surface nature of neutron skin formation and its correlation with the symmetry energy slope L continues to be investigated, with recent mirror pair measurements suggesting L ≤ 60 MeV.
+
+**Papers:** 79
+
+- [2606.07829](../papers/2606.07829.md) (2026) [2] Clustering in hadrons and light nuclei from Lorentz boosted form factors
+- [2605.13985](../papers/2605.13985.md) (2026) [2] Taming nuclear size and shape effects in superallowed beta-decay
+- [2605.09139](../papers/2605.09139.md) (2026) [1] Nuclear charge radii of aluminium isotopes at the proton drip line
+- [2605.08413](../papers/2605.08413.md) (2026) [2] Charge radii of Cl isotopes from x-ray spectroscopy of muonic atoms
+- [2604.08985](../papers/2604.08985.md) (2026) [1] Towards better nuclear charge radii
+- [2601.09614](../papers/2601.09614.md) (2026) [2] Ab initio charge form factors and radii of light isoscalar nuclei: Role of the two-body charge density
+- [2512.06683](../papers/2512.06683.md) (2025) [2] Understanding Charge Radii with Machine Learning: Discovering Physics Expressions
+- [2511.15346](../papers/2511.15346.md) (2025) [2] Comprehensive Assessment of $\mathrm{Th}^{3+}$ Properties for Nuclear Clock and Fundamental Physics Applications
+- [2510.27427](../papers/2510.27427.md) (2025) [1] Model-independent determination of nuclear charge radii from Li-like ions
+- [2510.08362](../papers/2510.08362.md) (2025) [2] Hartree-Fock emulators for nuclei: Application to charge radii of $^{48,52}$Ca
+- [2506.20414](../papers/2506.20414.md) (2025) [1] Shell effects in nuclear charge radii based on Skyrme density functionals
+- [2506.08804](../papers/2506.08804.md) (2025) [2] Modern approach to muonic x-ray spectroscopy demonstrated through the measurement of stable Cl radii
+- [2505.22412](../papers/2505.22412.md) (2025) [1] Neutron Magic Numbers in $sd$ Shell from Nuclear Charge Radii within Neutron-Proton Correction around the Fermi Surface
+- [2504.17060](../papers/2504.17060.md) (2025) [2] Charge Radii Measurements of Exotic Tin Isotopes in the Proximity of $N=50$ and $N=82$
+- [2504.12001](../papers/2504.12001.md) (2025) [2] Charge radii of neutron-rich scandium isotopes and the seniority symmetry in the $0f_{7/2}$ shell
+- [2504.09871](../papers/2504.09871.md) (2025) [2] Implication of shell quenching in scandium isotopes around N=20
+- [2504.01438](../papers/2504.01438.md) (2025) [2] Precise Determination of Electric Quadrupole Moments and Isotope Shift Constants of Yb$^+$ in Pursuance of Probing Funda...
+- [2502.20363](../papers/2502.20363.md) (2025) [2] Global Framework for Emulation of Nuclear Calculations
+- [2411.05621](../papers/2411.05621.md) (2024) [2] Second-order hyperfine correction to H, D, and $^3$He energy levels
+- [2411.03076](../papers/2411.03076.md) (2024) [1] Potential signature of new magicity from universal aspects of nuclear charge radii
+- [2410.15784](../papers/2410.15784.md) (2024) [1] Shell quenching in nuclear charge radii based on Monte Carlo dropout Bayesian neural network
+- [2408.09959](../papers/2408.09959.md) (2024) [2] Recent advancements in atomic many-body methods for high-precision studies of isotope shifts
+- [2407.10199](../papers/2407.10199.md) (2024) [2] Charge radii of $^{11-16}$C, $^{13-17}$N and $^{15-18}$O determined from their charge-changing cross-sections and the mi...
+- [2405.12936](../papers/2405.12936.md) (2024) [2] Improved predictions of phenomenological nuclear charge radius formulae with Bayesian optimization approach
+- [2404.13369](../papers/2404.13369.md) (2024) [2] Isotope-shift factors with quantum electrodynamics effects for many-electron systems: A study of the nuclear charge radi...
+- [2404.12609](../papers/2404.12609.md) (2024) [2] Nuclear charge radius predictions by kernel ridge regression with odd-even effects
+- [2404.06046](../papers/2404.06046.md) (2024) [1] Nuclear charge radii of germanium isotopes around $N$ = 40
+- [2403.18377](../papers/2403.18377.md) (2024) [2] Nuclear shape evolution of neutron-deficient Au and kink structure of Pb isotopes
+- [2312.15983](../papers/2312.15983.md) (2023) [1] Effects of center-of-mass correction and nucleon anomalous magnetic moments on nuclear charge radii
+- [2312.04912](../papers/2312.04912.md) (2023) [1] Improved description of nuclear charge radii: Global trends beyond $N=28$ shell closure
+- [2310.15093](../papers/2310.15093.md) (2023) [2] Electromagnetic Properties of Indium Isotopes Elucidate the Doubly Magic Character of $^{100}$Sn
+- [2310.13936](../papers/2310.13936.md) (2023) [2] Isospin-dependence of the charge-changing cross-section shaped by the charged-particle evaporation process
+- [2310.09546](../papers/2310.09546.md) (2023) [2] The extraction of higher-order radial moments of nuclear charge density from muonic atom spectroscopy
+- [2310.03846](../papers/2310.03846.md) (2023) [2] Towards Precision Muonic X-Ray Measurements of Charge Radii of Light Nuclei
+- [2309.02037](../papers/2309.02037.md) (2023) [1] Nuclear charge radii of silicon isotopes
+- [2306.09026](../papers/2306.09026.md) (2023) [2] Revisiting the extraction of charge radii of $^{40}$Ca and $^{208}$Pb with muonic atom spectroscopy
+- [2306.06099](../papers/2306.06099.md) (2023) [2] NuCLR: Nuclear Co-Learned Representations
+- [2301.11064](../papers/2301.11064.md) (2023) [2] King-plot analysis of isotope shifts in simple diatomic molecules
+- [2212.13782](../papers/2212.13782.md) (2022) [2] Comprehensive theory of the Lamb shift in light muonic atoms
+- [2210.01924](../papers/2210.01924.md) (2022) [2] Charge radii of $^{55,56}$Ni reveal a surprisingly similar behavior at $N=28$ in Ca and Ni isotopes
+- [2206.13169](../papers/2206.13169.md) (2022) [1] Nuclear charge radii in Bayesian neural networks revisited
+- [2203.14027](../papers/2203.14027.md) (2022) [2] Improved phenomenological nuclear charge radius formulae with kernel ridge regression
+- [2203.10792](../papers/2203.10792.md) (2022) [2] Bayesian analysis of nuclear polarizability corrections to the Lamb shift of muonic H-atoms and He-ions
+- [2112.03829](../papers/2112.03829.md) (2021) [2] Local variations of charge radii for nuclei with even $Z$ from 84 to 120
+- [2112.03382](../papers/2112.03382.md) (2021) [1] Nuclear Charge Radii of the Nickel Isotopes $^{58-68,70}$Ni
+- [2111.12464](../papers/2111.12464.md) (2021) [2] Universal trend of charge radii of even-even Ca-Zn nuclei
+- [2109.10539](../papers/2109.10539.md) (2021) [1] Nuclear charge radii of Na isotopes: A tale of two theories
+- [2109.09626](../papers/2109.09626.md) (2021) [1] Novel Bayesian neural network based approach for nuclear charge radii
+- [2108.00278](../papers/2108.00278.md) (2021) [2] Odd-even staggering and shell effects of charge radii for nuclei with even $Z$ from $36$ to $38$ and from $52$ to $62$
+- [2107.05057](../papers/2107.05057.md) (2021) [1] Evolution of nuclear charge radii in copper and indium isotopes
+- [2012.01864](../papers/2012.01864.md) (2020) [2] Charge radii of exotic potassium isotopes challenge nuclear theory and the magic character of $N = 32$
+- [2006.09677](../papers/2006.09677.md) (2020) [2] Study of Charge Radii with Neural Networks
+- [2005.00141](../papers/2005.00141.md) (2020) [2] Novel ansatz for charge radii in density functional theories
+- [1901.06323](../papers/1901.06323.md) (2019) [1] Nuclear Charge Radii of $^{10,11}$B
+- [1806.03525](../papers/1806.03525.md) (2018) [1] Nuclear charge radii of $^{229}$Th from isotope and isomer shifts
+- [1805.12099](../papers/1805.12099.md) (2018) [2] Can Long-Range Nuclear Properties Be Influenced By Short Range Interactions? A chiral dynamics estimate
+- [1704.07430](../papers/1704.07430.md) (2017) [1] Towards the global description of nuclear charge radii: exploring the Fayans energy density functional
+- [1608.03020](../papers/1608.03020.md) (2016) [1] Nuclear charge radii: Density functional theory meets Bayesian neural networks
+- [1601.06324](../papers/1601.06324.md) (2016) [2] Nuclear charge and neutron radii and nuclear matter: trend analysis
+- [1509.01430](../papers/1509.01430.md) (2015) [2] Understanding the proton radius puzzle: Nuclear structure effects in light muonic atoms
+- [1410.2664](../papers/1410.2664.md) (2014) [2] Half-lives of $α$ decay from natural nuclides and from superheavy elements
+- [1408.6954](../papers/1408.6954.md) (2014) [2] New charge radius relations for atomic nuclei
+- [1405.6479](../papers/1405.6479.md) (2014) [2] Ground-state properties and symmetry energy of neutron-rich and neutron-deficient Mg isotopes
+- [1307.2315](../papers/1307.2315.md) (2013) [1] Shell and isospin effects in nuclear charge radii
+- [1306.2847](../papers/1306.2847.md) (2013) [2] Correlations between charge radii, E0 transitions, and M1 strength
+- [1212.6319](../papers/1212.6319.md) (2012) [1] An artificial neural network application on nuclear charge radii
+- [1207.3644](../papers/1207.3644.md) (2012) [1] Nuclear charge radii and electric monopole transitions in the interacting boson model
+- [1203.4379](../papers/1203.4379.md) (2012) [1] Consistent description of nuclear charge radii and electric monopole transitions
+- [1103.4285](../papers/1103.4285.md) (2011) [2] Shape evolution in Yttrium and Niobium neutron-rich isotopes
+- [1003.5225](../papers/1003.5225.md) (2010) [2] Analysis of bulk and surface contributions in the neutron skin of nuclei
+- [0912.0503](../papers/0912.0503.md) (2009) [1] Garvey-Kelson Relations for Nuclear Charge Radii
+- [0911.0987](../papers/0911.0987.md) (2009) [2] Masses and Radii of the Nuclei with N>=Z in an Alpha-Cluster Model
+- [2204.01625](../papers/2204.01625.md) (0000) [2] Tomography of Ultra-relativistic Nuclei with Polarized Photon-gluon Collisions
+- [nucl-th/0107040](../papers/nucl-th_0107040.md) (0000) [1] nucl-th/0107040
+- [nucl-th/0402083](../papers/nucl-th_0402083.md) (0000) [2] nucl-th/0402083
+- [nucl-th/0508026](../papers/nucl-th_0508026.md) (0000) [2] nucl-th/0508026
+- [nucl-th/0701073](../papers/nucl-th_0701073.md) (0000) [1] nucl-th/0701073
+- [nucl-th/9311026](../papers/nucl-th_9311026.md) (0000) [1] nucl-th/9311026
+- [nucl-th/9410010](../papers/nucl-th_9410010.md) (0000) [1] nucl-th/9410010

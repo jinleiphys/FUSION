@@ -1,0 +1,116 @@
+# Neutron skin thickness
+
+**PhySH lineage:** Nuclear structure & decays > Neutron skin thickness
+
+**Broader:** Nuclear structure & decays
+
+## Landscape
+
+The neutron skin thickness, defined as the difference between the root-mean-square radii of neutrons and protons in a heavy nucleus, is a fundamental observable that probes the density dependence of the nuclear symmetry energy. This quantity is critical because it directly links the properties of finite nuclei to the equation of state of neutron-rich matter, which governs the structure and radii of neutron stars. Precise measurements of the neutron skin, particularly in 208Pb, therefore provide a stringent laboratory constraint that connects terrestrial nuclear physics to astrophysical observations.
+
+The main approaches to determining the neutron skin include electroweak parity-violating electron scattering, as performed by the PREX collaboration on 208Pb and the CREX collaboration on 48Ca, which directly probes the weak form factor. Complementary methods involve measuring the electric dipole polarizability in 208Pb, which correlates with the skin thickness within mean-field models. Theoretical efforts span from relativistic mean-field models and Skyrme-Hartree-Fock approaches, which establish correlations between the skin thickness and the slope of the symmetry energy L, to ab initio predictions that link the skin of 208Pb directly to nuclear forces using advanced quantum many-body methods.
+
+Active directions focus on resolving tensions between experimental results, such as the large neutron skin thickness reported by PREX-II for 208Pb, which implies a slope parameter L larger than most microscopic calculations and other nuclear experiments. Recent work uses nonparametric equation of state representations based on Gaussian processes to reconcile these astrophysical constraints with minimal modeling assumptions. The era of multi-messenger astronomy, combining gravitational wave observations of neutron star mergers with laboratory measurements, provides new opportunities to refine the equation of state and the symmetry energy across a wide density range.
+
+**Papers:** 303 (showing first 100 of 303)
+
+- [2606.17169](../papers/2606.17169.md) (2026) [2] Heaven and Earth: Connecting Jefferson Lab to the Cosmos
+- [2606.03760](../papers/2606.03760.md) (2026) [1] Revisiting neutron-skin thickness and dipole polarizability constraints on the symmetry energy in Antisymmetrized Molecu...
+- [2605.04841](../papers/2605.04841.md) (2026) [2] Nuclear Structure and Shape Evolution of Nd Isotopes
+- [2604.26876](../papers/2604.26876.md) (2026) [2] Neutron Stars and Neutron Skins: Connecting Finite Nuclei to Dense Matter
+- [2604.19650](../papers/2604.19650.md) (2026) [1] Probing the neutron-skin thickness through $J/ψ$ photoproduction in ultra-peripheral collisions
+- [2604.17685](../papers/2604.17685.md) (2026) [2] Constraining neutron skin impurity in $^{48}\mathrm{Ca}$ and its relevance for the CREX-PREX puzzle
+- [2604.08136](../papers/2604.08136.md) (2026) [2] The neutron skin effect in Pb+Pb collisions at 2.76A TeV at the LHC
+- [2603.11983](../papers/2603.11983.md) (2026) [2] The Matter Radius of 132Sn and the CREX-PREX Dilemma
+- [2603.03849](../papers/2603.03849.md) (2026) [2] Nuclear matter properties and neutron star structures from an extended linear sigma model
+- [2602.22722](../papers/2602.22722.md) (2026) [2] CREX and PREX-II reconciled within energy-density functional theory
+- [2602.20436](../papers/2602.20436.md) (2026) [2] Probing Neutron Skins with KDAR Neutrinos: From Coherent to Diffractive Elastic Neutrino--Nucleus Scattering
+- [2602.19039](../papers/2602.19039.md) (2026) [2] Constraining the nuclear symmetry energy from electric dipole polarizability and neutron skin in $^{208}\mathrm{Pb}$ wit...
+- [2602.18683](../papers/2602.18683.md) (2026) [2] Nucleon Size Independence of Hadronic Nucleus-Nucleus Cross Sections
+- [2602.04794](../papers/2602.04794.md) (2026) [2] A Hierarchical Bayesian Analysis of Neutron-Skin Thicknesses and Implications for the Symmetry-Energy Slope
+- [2602.03323](../papers/2602.03323.md) (2026) [1] Neutron skin thickness and its volume and surface contributions
+- [2602.04079](../papers/2602.04079.md) (2026) [2] Disentangling baryon stopping and neutron skin effects in heavy-ion collisions
+- [2601.01049](../papers/2601.01049.md) (2026) [2] Neutron skins probed in proton knockout from neutron-rich nuclei
+- [2512.00114](../papers/2512.00114.md) (2025) [2] Characterizing the Neutron Skin of $^{48}$Ca Through Collective Flow at the CERN Large Hadron Collider
+- [2511.00646](../papers/2511.00646.md) (2025) [2] Implication of multimessenger observations on the relativistic mean-field equation of state of dense nuclear matter and ...
+- [2510.20166](../papers/2510.20166.md) (2025) [2] Probing Neutron Skin through Event-by-Event Pion Asymmetry in Heavy-ion collisions
+- [2510.20554](../papers/2510.20554.md) (2025) [2] Probing the Three-dimension Emission Source and Neutron Skin via $π$-$π$ Correlations in Heavy-Ion Collisions
+- [2510.07816](../papers/2510.07816.md) (2025) [2] Probing the Neutron Skin with Extreme Collision Geometries in Heavy-Ion Collisions
+- [2509.21644](../papers/2509.21644.md) (2025) [2] Neutron Skin from Conserved Charge Measurements at Collider Experiments
+- [2509.12565](../papers/2509.12565.md) (2025) [2] Investigation of ground state properties and shape evolution in Hf isotopes using the CDFT approach
+- [2507.10049](../papers/2507.10049.md) (2025) [2] Composition of scalar mesons and their effects on nuclear matter properties in an extended linear sigma model
+- [2506.18936](../papers/2506.18936.md) (2025) [1] Neutron skin thickness for $^{nat}$Pb, $^{159}$Tb and effects of deformation on matter radii for Mg, Na, Ar isotopes
+- [2506.10694](../papers/2506.10694.md) (2025) [1] Unraveling the neutron skin thickness through jet charge in deep inelastic scattering
+- [2505.19229](../papers/2505.19229.md) (2025) [2] Electric dipole polarizability constraints on neutron skin and symmetry energy
+- [2505.02341](../papers/2505.02341.md) (2025) [1] Probing the neutron-skin thickness via the double-charge exchange reactions in pion-nucleus collisions
+- [2503.07405](../papers/2503.07405.md) (2025) [2] Role of the isovector spin-orbit potential in mitigating the CREX-PREX dilemma
+- [2502.05820](../papers/2502.05820.md) (2025) [1] Robust linear correlations related to neutron skin thickness
+- [2412.15936](../papers/2412.15936.md) (2024) [2] Constraining neutron star properties through parity-violating electron scattering experiments and relativistic point cou...
+- [2411.13210](../papers/2411.13210.md) (2024) [2] Novel features of asymmetric nuclear matter from terrestrial experiments and astrophysical observations of neutron stars
+- [2411.13622](../papers/2411.13622.md) (2024) [2] Probing small neutron skin variations in isotope pairs by hyperon-antihyperon production in antiproton--nucleus interact...
+- [2411.08337](../papers/2411.08337.md) (2024) [1] Investigating the possibility of extracting neutron-skin thickness in nuclei by their collisions at intermediate energie...
+- [2411.08619](../papers/2411.08619.md) (2024) [1] Correlation of the symmetry energy at subsaturation densities and neutron-skin thickness in low-energy antiproton induce...
+- [2410.15856](../papers/2410.15856.md) (2024) [1] The nuclear symmetry energy and the neutron skin thickness in nuclei
+- [2409.15040](../papers/2409.15040.md) (2024) [2] Disentangling nuclear structure through multiparticle azimuthal correlations in high-energy isobar collisions
+- [2409.07059](../papers/2409.07059.md) (2024) [2] Neutron skin and its effects in heavy-ion collisions
+- [2408.17403](../papers/2408.17403.md) (2024) [2] How do mirror charge radii constrain density dependence of the symmetry energy?
+- [2407.11707](../papers/2407.11707.md) (2024) [1] The neutron skin-thickness of 208 Pb determined by electron and proton scattering
+- [2405.19018](../papers/2405.19018.md) (2024) [2] Neutron skin impurity from Coulomb core polarization in $^{208}\text{Pb}$: Insights from PREX-II and validation via the ...
+- [2405.02926](../papers/2405.02926.md) (2024) [2] Charge-changing cross section and interaction cross sections for 4$\leq$Z$ \leq$9 isotopes
+- [2404.09511](../papers/2404.09511.md) (2024) [1] Bayesian inference of neutron-skin thickness and neutron-star observables based on effective nuclear interactions
+- [2402.19210](../papers/2402.19210.md) (2024) [2] Symmetry Energy from Two-Nucleon Separation Energies of Pb and Ca Isotopes
+- [2401.13939](../papers/2401.13939.md) (2024) [2] Estimation of the slope of nuclear symmetry energy via charge radii of mirror nuclei
+- [2312.15434](../papers/2312.15434.md) (2023) [2] New quantification of symmetry energy from neutron skin thicknesses of $^{48}$Ca and $^{208}$Pb
+- [2312.13474](../papers/2312.13474.md) (2023) [2] Impact of tensor interactions and scalar mixing on covariant energy density functionals
+- [2312.07113](../papers/2312.07113.md) (2023) [2] Hybrid stars in light of the HESS J1731-347 remnant and the PREX-II experiment
+- [2312.04335](../papers/2312.04335.md) (2023) [1] The charge density and neutron skin thickness of Skyrmions
+- [2311.11676](../papers/2311.11676.md) (2023) [2] Extracting neutron skin from elastic proton-nucleus scattering with deep neural network
+- [2311.10830](../papers/2311.10830.md) (2023) [2] Sensitivity of one-neutron knockout observables of loosely- to more deeply-bound nuclei
+- [2311.08892](../papers/2311.08892.md) (2023) [2] Parameters of nucleon densities and the Coulomb barrier in heavy-ion collisions
+- [2311.07899](../papers/2311.07899.md) (2023) [2] Quark structure of isoscalar- and isovector-scalar mesons and nuclear matter property
+- [2311.01747](../papers/2311.01747.md) (2023) [1] Determining the neutron skin thickness by relativistic semi-isobaric collisions
+- [2310.11012](../papers/2310.11012.md) (2023) [2] A Data-Driven Density Functional Model for Nuclear Systems
+- [2309.09302](../papers/2309.09302.md) (2023) [2] Global properties of nuclei at finite-temperature within the covariant energy density functional theory
+- [2308.05457](../papers/2308.05457.md) (2023) [2] Alpha-Clustering in Nuclei and Its Impact on Nuclear Symmetry Energy
+- [2308.00208](../papers/2308.00208.md) (2023) [2] Correlations between charge radii differences of mirror nuclei and stellar observables
+- [2307.04974](../papers/2307.04974.md) (2023) [1] Determination of matter radius and neutron-skin thickness of $^{60,62,64}$Ni from reaction cross section of proton scatt...
+- [2307.05018](../papers/2307.05018.md) (2023) [2] Effects of neutron-rich nuclei masses on symmetry energy
+- [2306.09609](../papers/2306.09609.md) (2023) [2] Skin values and matter radii of $^{208}$Pb and $^{58,60,64}$Ni based on reaction cross section of $^{3,4}$He scattering ...
+- [2305.19376](../papers/2305.19376.md) (2023) [2] Density Dependence of the Symmetry Energy in the Post PREX-CREX Era
+- [2305.16058](../papers/2305.16058.md) (2023) [2] Equation of state of nuclear matter and neutron stars: Quark mean-field model versus relativistic mean-field model
+- [2305.06667](../papers/2305.06667.md) (2023) [2] Relativistic approach for the determination of nuclear and neutron star properties in consideration of PREX-II results
+- [2305.05937](../papers/2305.05937.md) (2023) [2] CREX- and PREX-II-motivated relativistic interactions and their implications for the bulk properties of nuclear matter a...
+- [2303.14763](../papers/2303.14763.md) (2023) [2] Can the PREX-2 and CREX results be understood by relativistic mean-field models with the astrophysical constraints?
+- [2303.12156](../papers/2303.12156.md) (2023) [1] Neutron Skin Thickness Dependence of Astrophysical $S$-factor
+- [2303.03631](../papers/2303.03631.md) (2023) [2] Empirical neutron star mass formula based on experimental observables
+- [2302.08667](../papers/2302.08667.md) (2023) [1] Neutron skin thickness of $^{116,118,120,122,124}$Sn determined from reaction cross sections of proton scattering
+- [2302.08421](../papers/2302.08421.md) (2023) [1] Effects of Coulomb and isospin symmetry breaking interactions on neutron-skin thickness
+- [2301.10940](../papers/2301.10940.md) (2023) [2] Relativistic hybrid stars with sequential first-order phase transitions in light of multimessenger constraints
+- [2301.09692](../papers/2301.09692.md) (2023) [2] Bayesian refinement of covariant energy density functionals
+- [2301.07884](../papers/2301.07884.md) (2023) [2] Bayesian inference of nucleus resonance and neutron skin
+- [2301.08251](../papers/2301.08251.md) (2023) [2] Collision geometry effect on free spectator nucleons in relativistic heavy-ion collisions
+- [2301.03666](../papers/2301.03666.md) (2023) [2] Constraints on Nuclear Symmetry Energy Parameters
+- [2212.14186](../papers/2212.14186.md) (2022) [2] Properties of $^{208}$Pb predicted from the relativistic equation of state in the full Dirac space
+- [2211.03948](../papers/2211.03948.md) (2022) [2] Neutron skin of $^{27}$Al with Skyrme and Korea-IBS-Daegu-SKKU density functionals
+- [2211.04133](../papers/2211.04133.md) (2022) [2] Study of structure and radii for $^{20-31}$Na isotopes using microscopic interactions
+- [2210.14554](../papers/2210.14554.md) (2022) [2] Exploring sensitivity of charge-exchange ($p, n$) reactions to the neutron density distribution
+- [2210.04534](../papers/2210.04534.md) (2022) [2] Supernova Neutrinos as a Precise Probe of Nuclear Neutron Skin
+- [2209.13039](../papers/2209.13039.md) (2022) [2] Bayes goes fast: Uncertainty Quantification for a Covariant Energy Density Functional emulated by the Reduced Basis Meth...
+- [2209.03875](../papers/2209.03875.md) (2022) [2] Exploring the neutron skin by hyperon-antihyperon production in antiproton-nucleus interactions
+- [2209.03106](../papers/2209.03106.md) (2022) [2] Free spectator nucleons in ultracentral relativistic heavy-ion collisions as a probe of neutron skin
+- [2209.02861](../papers/2209.02861.md) (2022) [2] Massive neutron stars with small radii in relativistic mean-field models optimized to nuclear ground states
+- [2208.13938](../papers/2208.13938.md) (2022) [2] Ground state correlations on ground state densities and total binding energies of 40Ca, 48Ca and 208Pb
+- [2208.06149](../papers/2208.06149.md) (2022) [1] Constraints on neutron skin thickness and nuclear deformations using relativistic heavy-ion collisions from STAR
+- [2207.03328](../papers/2207.03328.md) (2022) [2] Bayesian Inference of the Symmetry Energy and the Neutron Skin in $^{48}$Ca and $^{208}$Pb from CREX and PREX-2
+- [2207.00635](../papers/2207.00635.md) (2022) [2] Neutron skin of 48Ca deduced from interaction cross section
+- [2206.12760](../papers/2206.12760.md) (2022) [2] The Hadron-Quark Crossover in Neutron Star within Gaussian Process Regression Method
+- [2206.06527](../papers/2206.06527.md) (2022) [2] Implications of parity-violating electron scattering experiments on $^{48}$Ca (CREX) and $^{208}$Pb (PREX-II) for nuclea...
+- [2205.11593](../papers/2205.11593.md) (2022) [2] Precision Determination of the Neutral Weak Form Factor of $^{48}$Ca
+- [2205.05276](../papers/2205.05276.md) (2022) [2] Constraining equation of state of nuclear matter by charge-changing cross section measurements of mirror nuclei
+- [2205.01911](../papers/2205.01911.md) (2022) [2] Constraints on the dark photon from parity violation and the $W$ mass
+- [2204.13395](../papers/2204.13395.md) (2022) [1] Theoretical analysis of the extraction of neutron skin thickness from coherent π0 photoproduction off nuclei
+- [2204.11013](../papers/2204.11013.md) (2022) [1] The relationship of the neutron-skin thickness to the symmetry energy and its slope
+- [2204.09000](../papers/2204.09000.md) (2022) [1] Neutron star radii, deformabilities, and moments of inertia from experimental and ab initio theory constraints on the 20...
+- [2204.04485](../papers/2204.04485.md) (2022) [2] Isospin dependent properties of the isotopic chain of Scandium and Titanium nuclei within the relativistic mean-field fo...
+- [2203.09924](../papers/2203.09924.md) (2022) [1] Probing neutron-skin thickness with free spectator neutrons in ultracentral high-energy isobaric collisions
+- [2202.08705](../papers/2202.08705.md) (2022) [2] Effects of isoscalar- and isovector-scalar meson mixing on neutron star structure

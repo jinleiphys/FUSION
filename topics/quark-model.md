@@ -1,0 +1,116 @@
+# Quark model
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > Quark model
+
+**Broader:** [Strong interaction](strong-interaction.md)
+
+## Landscape
+
+The quark model, which classifies hadrons as bound states of constituent quarks, has been a cornerstone of nuclear and particle physics. Its importance is underscored by its success in describing the spectrum of conventional mesons and baryons, yet the discovery of states that defy this simple picture, such as the charged charmonium-like \(Z_c\) states and hidden-charm pentaquarks, has driven a renaissance in hadron spectroscopy. Understanding these exotic states is crucial for mapping the full spectrum of QCD and probing the nature of confinement.
+
+The main theoretical approaches to this problem are diverse. One prominent method treats these exotic candidates as hadronic molecules, analogues of light nuclei, using nonrelativistic effective field theories to make predictions with controlled uncertainty, as reviewed in the work on hadronic molecules. Another approach uses lattice QCD, which has provided evidence that the \(\Lambda(1405)\) resonance is an antikaon-nucleon molecule and has enabled the calculation of excited baryon spectra for spins up to \(J=7/2\). Complementing these are functional QCD methods, such as Dyson-Schwinger and Bethe-Salpeter equations, which describe baryons as relativistic three-quark bound states, and constituent quark models that investigate specific systems like \(\Sigma_c \bar{D}\) bound states or the decays of nonstrange baryons.
+
+Open questions and active directions are visible in recent papers. The existence of additional, experimentally uncharted strange hadrons predicted by quark models is suggested by comparisons of lattice QCD thermodynamics with hadron resonance gas models. The role of hyperons in massive neutron stars remains an open problem, with the maximum neutron star mass appearing to depend linearly on the strangeness content of the core. Furthermore, the nature of the third family of hybrid compact stars, modeled using a nonlocal chiral quark model, is actively investigated, particularly regarding the conditions for diquark condensation and the existence of a stable hybrid star branch.
+
+**Papers:** 1313 (showing first 100 of 1313)
+
+- [2606.10356](../papers/2606.10356.md) (2026) [2] Light and Strange Baryons in Medium
+- [2606.07073](../papers/2606.07073.md) (2026) [2] Mechanical distribution of the pseudoscalar charmonium and bottomonium on the light-front
+- [2606.03042](../papers/2606.03042.md) (2026) [2] Chiral Quark Soliton Model And Nucleon Parton Distribution Functions
+- [2606.01768](../papers/2606.01768.md) (2026) [2] Semileptonic Decays of $Λ\to p \ell^{-} \barν_{\ell}$ in the Light-Front Dynamics
+- [2605.23433](../papers/2605.23433.md) (2026) [2] Quasiradial oscillations of rotating hybrid neutron stars
+- [2605.17389](../papers/2605.17389.md) (2026) [2] An Analysis on the Parton Distribution Functions of Heavy Mesons
+- [2605.13903](../papers/2605.13903.md) (2026) [2] Radiative decays of the 1$P$, 1$D$, 2$S$, and 2$P$ $Λ_c$ and 1$D$, 2$S$, and 2$P$ $Ξ_c$ charmed baryons
+- [2605.05005](../papers/2605.05005.md) (2026) [1] Characterizing the quark-hadron mixed phase in compact star cores : sensitivity to nuclear saturation and quark-model pa...
+- [2604.15897](../papers/2604.15897.md) (2026) [2] Delineating neutral and charged mesons in magnetic fields
+- [2604.10038](../papers/2604.10038.md) (2026) [2] Understanding the structure of nucleon excitations from their wavefunctions
+- [2603.27657](../papers/2603.27657.md) (2026) [2] Magnetic moments of open bottom--charm molecular pentaquark octets
+- [2603.19839](../papers/2603.19839.md) (2026) [1] A dual description of quarks and baryons: Quarkyonic matter within a relativistic quark model
+- [2603.13819](../papers/2603.13819.md) (2026) [1] Electromagnetic structure of Bc and heavy quarkonia in the light-front quark model
+- [2603.05311](../papers/2603.05311.md) (2026) [2] Exploring $T_{ΥΥ}$ tetraquark candidates in a coupled-channels formalism
+- [2602.12148](../papers/2602.12148.md) (2026) [1] Resonating group method for baryon-baryon interactions with unequal oscillator frequencies and its application to the $N...
+- [2602.05502](../papers/2602.05502.md) (2026) [2] Electromagnetic polarizabilities of the triplet hadrons in heavy hadron chiral perturbation theory
+- [2602.01759](../papers/2602.01759.md) (2026) [1] Fully strange tetra- and penta-quarks in a chiral quark model
+- [2601.22898](../papers/2601.22898.md) (2026) [2] $f_2(1270)\toπ+π$ as a probe of spin and vorticity in heavy-ion collisions
+- [2601.19564](../papers/2601.19564.md) (2026) [2] Octet baryon electroweak form factors in dense nuclear matter
+- [2601.12670](../papers/2601.12670.md) (2026) [2] Investigation of deuteron-like singly bottomed dibaryon resonances
+- [2601.06628](../papers/2601.06628.md) (2026) [1] Distribution Functions of Radially Excited Pion using the Light-Front Quark Model
+- [2601.01953](../papers/2601.01953.md) (2026) [1] Exploring bound states and interactions of the nucleon-antinucleon system in a constituent quark model
+- [2512.24921](../papers/2512.24921.md) (2025) [2] Valence quark distribution of the pion inside a medium with finite baryon density: A Nambu--Jona-Lasinio model approach
+- [2512.22465](../papers/2512.22465.md) (2025) [2] Quark Coalescence: Formation of Mesons Including Excited States
+- [2512.10346](../papers/2512.10346.md) (2025) [2] A unified approach for the hadronic weak decays of $Λ$ and $Σ^{\pm}\to Nπ$
+- [2512.09099](../papers/2512.09099.md) (2025) [1] System Energies for Pentaquark Family Using Thomas-Fermi Quark Model
+- [2510.02053](../papers/2510.02053.md) (2025) [2] The sharpness of the quark-hadron transition and the properties of hybrid stars
+- [2509.12925](../papers/2509.12925.md) (2025) [2] Coupled-channel analysis for vector charmonia and their nature
+- [2509.08648](../papers/2509.08648.md) (2025) [2] Light Meson Resonances
+- [2509.03008](../papers/2509.03008.md) (2025) [2] Origin of nucleon mass in the light of PSR J0614-3329 with quark-hadron crossover
+- [2509.02554](../papers/2509.02554.md) (2025) [2] Bayesian inference favors quark matter in neutron star interiors
+- [2508.21145](../papers/2508.21145.md) (2025) [1] Heavy Quarkonia in the Light-Front Quark Model
+- [2508.15000](../papers/2508.15000.md) (2025) [2] Helicity amplitudes of $N(1520)$ and $N(1535)$ including pentaquark components
+- [2508.03496](../papers/2508.03496.md) (2025) [2] Hyperon spin correlation in high-energy heavy-ion collisions
+- [2507.18894](../papers/2507.18894.md) (2025) [2] Structure of heavy quarkonia in a strong magnetic field
+- [2507.13728](../papers/2507.13728.md) (2025) [1] Triply heavy tetraquarks $\bar{b}c\bar{q}c$ and $\bar{c}b\bar{q}b$ in a constituent quark model
+- [2507.10350](../papers/2507.10350.md) (2025) [1] Quark model of nucleon based on an analogy with polaron
+- [2507.06741](../papers/2507.06741.md) (2025) [2] Asymptotic behavior of the Speed of Sound in Dense Matter
+- [2507.03437](../papers/2507.03437.md) (2025) [1] $M1$ Radiative Transition of Light Mesons in the Light-Front Quark Model
+- [2506.23027](../papers/2506.23027.md) (2025) [2] Quarks in Hadrons and Nuclei Part 1: Quark Structure of Nucleon
+- [2506.19347](../papers/2506.19347.md) (2025) [2] Kaon structure modifications in strange hadronic matter
+- [2506.08707](../papers/2506.08707.md) (2025) [2] $D$ and $D^*$ mesons in isospin asymmetric nuclear medium
+- [2505.16219](../papers/2505.16219.md) (2025) [2] Hidden-Charm Tetraquarks in a Mixture Model: Coupled-Channel Analysis with $c\bar{c}$ and Hadronic Molecular Components
+- [2505.12828](../papers/2505.12828.md) (2025) [2] Exploring the spectroscopic features of double-strangeness tetraquark states
+- [2505.06726](../papers/2505.06726.md) (2025) [1] Pseudoscalar Meson Parton Distributions Within Gauge-Invariant Nonlocal Chiral Quark Model
+- [2504.21392](../papers/2504.21392.md) (2025) [2] Impact of isospin asymmetric nuclear medium on pseudoscalar and vector $B$ mesons
+- [2504.15660](../papers/2504.15660.md) (2025) [2] Electroweak form factors of baryons in dense nuclear matter
+- [2504.07897](../papers/2504.07897.md) (2025) [1] The Constituent Quark Model
+- [2503.21554](../papers/2503.21554.md) (2025) [2] Internal structure of $T_{cc}$ and $X(3872)$ by using compositeness
+- [2503.20225](../papers/2503.20225.md) (2025) [2] Proton Spin Decomposition via QCD Sum Rules
+- [2503.18014](../papers/2503.18014.md) (2025) [2] Search for doubly charmed dibaryons in baryon-baryon scattering
+- [2503.16838](../papers/2503.16838.md) (2025) [2] Investigation of $Δ(1232)$ resonance substructure in $pγ^*\to Δ(1232)$ process through helicity amplitudes
+- [2503.07055](../papers/2503.07055.md) (2025) [2] Parton distribution functions of ground state mesons composed of $c$ or $b$ quarks
+- [2502.16604](../papers/2502.16604.md) (2025) [1] Proton spin from small-$x$ with constraints from the valence quark model
+- [2502.04414](../papers/2502.04414.md) (2025) [2] Establishing the vector-meson-exchange dominance for the short range interactions of light quarks
+- [2501.16706](../papers/2501.16706.md) (2025) [2] Effect of nuclear medium on the spatial distribution of pions
+- [2501.14386](../papers/2501.14386.md) (2025) [2] Can one-loop corrections to the one-gluon exchange potential adequately describe the charmed meson spectrum?
+- [2501.10497](../papers/2501.10497.md) (2025) [1] Constituent Quark-model for BaryonsTh. Harmonic confinement and Two-body Meson-exchange Potentials
+- [2501.00115](../papers/2501.00115.md) (2024) [2] Bayesian analysis of hybrid neutron star EOS constraints within an instantaneous nonlocal chiral quark matter model
+- [2412.19858](../papers/2412.19858.md) (2024) [1] Constituent Quark Model and nucleon-Nucleon Potentials
+- [2412.15732](../papers/2412.15732.md) (2024) [2] Quark-Quark and Quark-nucleon Potential model Extended-soft-core meson-exchange Interactions
+- [2412.15104](../papers/2412.15104.md) (2024) [2] Symmetry breaking effects in pion couplings to constituent quark currents
+- [2412.09883](../papers/2412.09883.md) (2024) [1] In-medium electromagnetic form factors of pseudoscalar mesons from the quark model
+- [2412.04007](../papers/2412.04007.md) (2024) [2] Radial Oscillations in Hybrid Stars with Slow Quark Phase Transition
+- [2411.17962](../papers/2411.17962.md) (2024) [1] Fully charmed P-wave tetraquark resonant states in the quark model
+- [2411.18190](../papers/2411.18190.md) (2024) [2] The Equation of State and Multiparticle Production
+- [2411.18257](../papers/2411.18257.md) (2024) [2] Production of exotic hadrons in $pp$ and nuclear collisions
+- [2410.15632](../papers/2410.15632.md) (2024) [2] Quark mass effects in octet baryon magnetic polarisabilities via lattice QCD
+- [2410.13297](../papers/2410.13297.md) (2024) [2] Confined but chirally and chiral spin symmetric hot matter
+- [2410.13538](../papers/2410.13538.md) (2024) [2] Magnetic moments of $\frac{1}{2}^-$ baryon resonances in hot and dense strange hadronic matter
+- [2410.12465](../papers/2410.12465.md) (2024) [1] Revisiting the proton-antiproton scattering using a constituent-quark-model based coupled-channels calculation
+- [2410.09622](../papers/2410.09622.md) (2024) [2] Strong decay widths of S- and P-wave singly-, doubly- and triply-heavy charm and bottom baryons
+- [2410.06951](../papers/2410.06951.md) (2024) [1] Exclusive rare semileptonic decays of $B$ and $B_c$ mesons in the relativistic independent quark model
+- [2409.17492](../papers/2409.17492.md) (2024) [2] Determining the Meson Cloud Contribution of Nucleon Electromagnetic Form Factor Using Dispersion Relation
+- [2409.13172](../papers/2409.13172.md) (2024) [1] Self-consistent $M1$ radiative transitions of excited $B_c$ and heavy quarkonia with different polarizations in the ligh...
+- [2409.07998](../papers/2409.07998.md) (2024) [2] Unified study of nucleon and $Δ$ baryon spectra and their strong decays with chiral dynamics
+- [2409.06492](../papers/2409.06492.md) (2024) [2] Beam energy dependence of net-hyperon yield and its implication on baryon transport mechanism
+- [2409.05394](../papers/2409.05394.md) (2024) [2] Does nuclear medium affect the transverse momentum-dependent parton distributions of valence quark of pions?
+- [2409.05859](../papers/2409.05859.md) (2024) [1] Asymptotically conformal CFL quark matter within a nonlocal chiral quark model
+- [2409.03165](../papers/2409.03165.md) (2024) [2] Search for singly charmed dibaryons in baryon-baryon scattering
+- [2409.03373](../papers/2409.03373.md) (2024) [2] Doubly heavy tetraquark bound and resonant states
+- [2408.15493](../papers/2408.15493.md) (2024) [2] Investigating the $p$-$Ω$ Interaction and Correlation Functions
+- [2408.11578](../papers/2408.11578.md) (2024) [2] Strong decays of $P-$wave doubly charmed and bottom baryons
+- [2408.07334](../papers/2408.07334.md) (2024) [2] Pions valence quark distributions in asymmetric nuclear matter at finite temperature
+- [2408.07131](../papers/2408.07131.md) (2024) [2] Search for baryon junctions in e+A collisions at the Electron Ion Collider
+- [2407.21397](../papers/2407.21397.md) (2024) [2] Electromagnetic $|G_E/G_M|$ ratios of hyperons at large timelike $q^2$
+- [2407.13990](../papers/2407.13990.md) (2024) [1] Exploring the first-order phase transition in neutron stars using the parity doublet model and NJL-type quark model
+- [2407.14548](../papers/2407.14548.md) (2024) [1] Triply charm and bottom tetraquarks in a constituent quark model
+- [2407.10063](../papers/2407.10063.md) (2024) [2] Two-pion emission decays of negative parity singly heavy baryons
+- [2407.08893](../papers/2407.08893.md) (2024) [1] Polarized Dipole Scattering Amplitudes meet the Valence Quark Model
+- [2407.07232](../papers/2407.07232.md) (2024) [2] Triply-heavy/strange baryons with Cornell potential on a quantum computer
+- [2407.01064](../papers/2407.01064.md) (2024) [2] Magnetic Polarisability of Octet Baryons via Lattice QCD
+- [2407.01759](../papers/2407.01759.md) (2024) [1] A chiral quark model analysis of the $\bar KN$ interaction
+- [2406.19208](../papers/2406.19208.md) (2024) [1] Study of the $Ω_{ccc}Ω_{ccc}$ and $Ω_{bbb}Ω_{bbb}$ dibaryons in constituent quark model
+- [2406.17193](../papers/2406.17193.md) (2024) [2] Hybrid isentropic twin stars
+- [2406.13530](../papers/2406.13530.md) (2024) [1] Resonances in the quark model
+- [2406.07958](../papers/2406.07958.md) (2024) [2] Weak interaction axial form factors of the octet baryons in nuclear medium
+- [2406.07743](../papers/2406.07743.md) (2024) [2] Off-shell pion properties: electromagnetic form factors and light-front wave functions
+- [2406.00981](../papers/2406.00981.md) (2024) [2] Understanding the nature of the $Δ(1600)$ resonance
+- [2406.01697](../papers/2406.01697.md) (2024) [1] Exploring doubly-heavy tetraquarks in constituent-quark-model based meson-meson coupled-channels approach

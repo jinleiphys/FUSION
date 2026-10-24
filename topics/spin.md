@@ -1,0 +1,118 @@
+# Spin
+
+**PhySH lineage:** Spin
+
+**Narrower:** [Nucleon spin structure](nucleon-spin-structure.md)
+
+## Landscape
+
+### Landscape Synthesis: Spin in Nuclear Physics
+
+The topic of spin in nuclear physics explores how the intrinsic angular momentum of particles influences the structure of nuclei, the dynamics of dense matter, and the properties of the quark-gluon plasma created in heavy-ion collisions. Understanding spin is crucial because it provides a unique probe of fundamental interactions, from the spin and flavor structure of the proton to the equation of state of neutron stars, and it reveals new transport phenomena in extreme conditions.
+
+The main approaches include ab-initio methods and relativistic fluid dynamics. Quantum Monte Carlo methods, as reviewed for light nuclei, use realistic nuclear interactions to calculate ground and excited states, successfully reproducing properties like moments and transitions. For dense matter, NJL-type models analyze the interplay between chiral symmetry restoration and color superconductivity. A major sub-thread is the development of relativistic hydrodynamics for spin-polarized fluids, where distribution functions for spin-1/2 particles at local thermodynamical equilibrium predict polarization proportional to fluid vorticity. This framework, extended by conservation laws for angular momentum, is used to analyze global hyperon polarization in non-central collisions, where spin-orbital coupling in parton scattering leads to observable left-right asymmetries and azimuthal anisotropy.
+
+Active directions focus on the interplay of vorticity, magnetic fields, and polarization. Recent papers investigate how the intense magnetic field generated in non-central collisions may cause a splitting in polarization between particles and antiparticles, a signature distinct from vorticity-induced polarization. The derivation of a relativistic chiral kinetic equation with a 4-dimensional Berry monopole connects vorticity terms to the axial anomaly. Open questions include constraining the neutron star equation of state through precision measurements of spin rates and maximum mass, and understanding the spin alignment of vector mesons, which depends on different hadronization scenarios and can be tested via angular distributions of decay products.
+
+**Papers:** 5935 (showing first 100 of 5935)
+
+- [2606.18165](../papers/2606.18165.md) (2026) [2] Observation of a dominant $\boldsymbol{0f_{7/2}}$ neutron configuration in the $\boldsymbol{^{32}}$Si $\boldsymbol{J^π=5...
+- [2606.16966](../papers/2606.16966.md) (2026) [1] Spin-Selective Hadron Spectroscopy via Azimuthal Anisotropies from Entanglement-Enabled Spin Interference
+- [2606.17148](../papers/2606.17148.md) (2026) [2] Quantum Resources and Wigner Symmetry in Nucleon-Nucleon Scattering from Effective Field Theory
+- [2606.17240](../papers/2606.17240.md) (2026) [1] Quantum decoherence of hyperon spin correlations in QCD hadronization
+- [2606.15798](../papers/2606.15798.md) (2026) [2] Why fluctuations of conserved charges in the confining regime above $T_{ch}$ behave as if the quarks were free?
+- [2606.14171](../papers/2606.14171.md) (2026) [2] Teleportation in Proton Systems Revisited
+- [2606.13415](../papers/2606.13415.md) (2026) [1] Transport simulations with a constrained momentum-dependent Chiral Mean Field EoS at different iso-spin fractions
+- [2606.13908](../papers/2606.13908.md) (2026) [2] Anomalies, Topology, and Hadron Structure in QCD
+- [2606.11668](../papers/2606.11668.md) (2026) [2] Application of the Skyrme Hartree-Fock-Bogoliubov Theory to WIMP-Nucleus Interactions in 40Ar
+- [2606.10341](../papers/2606.10341.md) (2026) [2] Global polarization of $Λ$, $Ξ^{-}$, and $Ω^{-}$ hyperons in Au+Au collisions at RHIC BES-II energies
+- [2606.11491](../papers/2606.11491.md) (2026) [2] Polarized Nuclear DVCS at the EIC
+- [2606.09202](../papers/2606.09202.md) (2026) [2] Five-flavor $udsc\bar{b}$ molecular pentaquarks from heavy-quark and local hidden gauge symmetries
+- [2606.09760](../papers/2606.09760.md) (2026) [2] Einstein-de Haas effect and induced rotation in an evolving magnetized QCD matter
+- [2606.07465](../papers/2606.07465.md) (2026) [2] Proton and Neutron Elastic Scattering on He Targets from $\textit{Ab Initio}$ SA-NCSM Optical Potentials
+- [2606.05940](../papers/2606.05940.md) (2026) [2] Seed-Robust PINN Determination of $s$-Wave Bound States and Jost-Function-Based vertex constants in $_Λ^{208}$Pb
+- [2606.06263](../papers/2606.06263.md) (2026) [1] Spin-orbit correlation of quarks within quarkonium
+- [2606.06553](../papers/2606.06553.md) (2026) [2] Hyperon-Nucleon Spectrometer
+- [2606.02574](../papers/2606.02574.md) (2026) [2] Quantum Simulation of Nucleon-Antinucleon Interaction in Large-$N$ QCD$_2$ on an IBM Quantum Nighthawk Processor
+- [2606.01054](../papers/2606.01054.md) (2026) [2] Examination of the $α$-cluster breaking in the four $0^+$ bands of $^{12}$C with the variation of multiple bases of the ...
+- [2606.01429](../papers/2606.01429.md) (2026) [2] Pseudo-Gauge Stabilizers and Fibration Structure of the Cooper--Frye Map at Freeze-Out
+- [2605.30944](../papers/2605.30944.md) (2026) [2] Neural-network excited states of $A=4$ nuclei and hypernuclei
+- [2605.29383](../papers/2605.29383.md) (2026) [1] Bayesian constraints on the transport coefficients $η/s$ and $ζ/s$ from spin polarization in relativisitic heavy-ion col...
+- [2605.28718](../papers/2605.28718.md) (2026) [2] Formation of bound composite vortices of a singly-quantized $^1$S$_0$ vortex and half-quantized $^3$P$_2$ vortices in th...
+- [2605.26432](../papers/2605.26432.md) (2026) [2] Muon-Catalyzed Nuclear Fusion: Physical Mechanism, Bottleneck Breakthroughs, and an Engineering Pathway
+- [2605.26561](../papers/2605.26561.md) (2026) [1] Spin-Dependent Nucleon-Nucleus Interactions Constrained by Neutron Observables and Their Impact on Near-Barrier Proton F...
+- [2605.26912](../papers/2605.26912.md) (2026) [2] Nuclear structure within the relativistic mean field approach including chiral symmetry and quark confinement effects
+- [2605.27637](../papers/2605.27637.md) (2026) [1] Projection operator onto spin-S eigenspaces of total and orbital angular momenta
+- [2605.25636](../papers/2605.25636.md) (2026) [1] Odderon Form Factors in Reggeized Spin-2 Pomeron and Spin-3 Odderon Exchange in $pp$ and $p\bar p$ Elastic Scattering
+- [2605.25067](../papers/2605.25067.md) (2026) [1] Thermal Spin Polarization Driven by Nuclear Spin-Orbit Coupling in Neutron Star Pasta
+- [2605.23433](../papers/2605.23433.md) (2026) [2] Quasiradial oscillations of rotating hybrid neutron stars
+- [2605.23615](../papers/2605.23615.md) (2026) [1] Observation of Entanglement Enabled Spin-Interference in the Drell-Söding Process in Au+Au Ultraperipheral Collisions at...
+- [2605.22318](../papers/2605.22318.md) (2026) [2] Shielded inner-shell transitions in atomic samarium for tests of fundamental physics
+- [2605.22805](../papers/2605.22805.md) (2026) [2] Two bodies left behind
+- [2605.20661](../papers/2605.20661.md) (2026) [2] Entangling Power: A Probe of Symmetry and Integrability in Quantum Many-Body Systems
+- [2605.16822](../papers/2605.16822.md) (2026) [2] 2N and 3N Tensor Force in the $N=34$ Shell Evolution: An Ab Initio Perspective
+- [2605.15280](../papers/2605.15280.md) (2026) [2] Sivers Tomography from Charge and Angle Only
+- [2605.15302](../papers/2605.15302.md) (2026) [2] Study of the shape coexistence in the 96Zr, 96Mo, 96Ru isobars
+- [2605.11765](../papers/2605.11765.md) (2026) [2] In-medium Y(1S,2S,3S) suppression in Pb-Pb collisions at sqrt(s_NN)=5.02 TeV
+- [2605.12023](../papers/2605.12023.md) (2026) [2] Mass radius and D-term of atomic nuclei in relativistic mean field theory
+- [2605.11216](../papers/2605.11216.md) (2026) [2] The mean-field theory of superfluid-superconducting vortex states in the outer core of neutron stars
+- [2605.12554](../papers/2605.12554.md) (2026) [1] Spin dynamics and polarization in relativistic systems: recent developments
+- [2605.07258](../papers/2605.07258.md) (2026) [2] $Ξ$-deuteron low-energy $s$-wave phase shifts and momentum correlation functions in Faddeev formulation
+- [2605.06461](../papers/2605.06461.md) (2026) [1] Quantum spin dynamics of heavy quarks and polarization observables in relativistic heavy-ion collisions
+- [2605.04814](../papers/2605.04814.md) (2026) [2] Charged current neutrino processes in hot nuclear matter with a recent Skyrme parametrization constrained by microscopic...
+- [2605.05150](../papers/2605.05150.md) (2026) [2] The $T_{bc}$ tetraquarks near the $B\bar{D}$ threshold
+- [2605.08219](../papers/2605.08219.md) (2026) [1] Modeling $Λ$ polarization in Au$+$Au collisions at $\sqrt{s_{\rm NN}}=200$ GeV using relativistic spin hydrodynamics
+- [2605.02161](../papers/2605.02161.md) (2026) [1] Relativistic Feshbach-Villars Equation for Two Spin-$0$ Particles
+- [2605.02826](../papers/2605.02826.md) (2026) [2] Structure of the $^8$B and $^8$Li nuclei and the astrophysical $S_{17}(0)$-factor of the $^7$Be($p,γ$)$^8$B direct captu...
+- [2605.01857](../papers/2605.01857.md) (2026) [1] Boost-invariant and cylindrically symmetric perfect spin hydrodynamics
+- [2605.00430](../papers/2605.00430.md) (2026) [1] Twist-2 relations for the twist-3 tensor-polarized distribution function $f_{LT}$ of a spin-1 hadron by the operator-pro...
+- [2605.00549](../papers/2605.00549.md) (2026) [2] Bounds on massive graviton-like particles from searches for axion-like particles coupling to photons
+- [2605.00727](../papers/2605.00727.md) (2026) [2] Hyperon-nucleon interaction through the $K^-d\toπΛN$ reaction
+- [2604.27652](../papers/2604.27652.md) (2026) [2] Examination of the $c\bar{c}+n+^{10}$Be bound-state problem within three cluster models based on QCD charmonium-nucleon ...
+- [2604.28131](../papers/2604.28131.md) (2026) [2] Simplified approach to extracting nucleon transversity in collinear factorization using near-side energy-energy correlat...
+- [2604.28164](../papers/2604.28164.md) (2026) [2] Deeply virtual pion production through two-loop order
+- [2604.27144](../papers/2604.27144.md) (2026) [2] Unmasking Hidden Wigner's Symmetry from First Principles
+- [2604.22719](../papers/2604.22719.md) (2026) [2] Mechanisms of high energy polarized photoproduction of $π^{-}Δ^{++}$
+- [2604.22943](../papers/2604.22943.md) (2026) [2] Amplitude-Based Analysis of QED Radiative Corrections to Electroproduction of $η$-Mesons on Protons
+- [2604.21245](../papers/2604.21245.md) (2026) [2] Octupole correlation effects on two-neutron transfer intensity in rare-earth nuclei
+- [2604.20717](../papers/2604.20717.md) (2026) [1] Rank-2 Electromagnetic Backgrounds and Angular Momentum Barriers in Gravitomagnetic Spin-Quadrupole Searches
+- [2604.17756](../papers/2604.17756.md) (2026) [2] Polarization, Maximal Concurrence, and Pure States in High-Energy Collisions
+- [2604.17392](../papers/2604.17392.md) (2026) [1] Boost-invariant perfect Fermi-Dirac spin hydrodynamics
+- [2604.15817](../papers/2604.15817.md) (2026) [1] Novel microscopic approaches for Spin-Isospin excitations and Beta-decay
+- [2604.15904](../papers/2604.15904.md) (2026) [2] Charge radii of Sn isotopes in the relativistic mean field approximation
+- [2604.15926](../papers/2604.15926.md) (2026) [1] Exact expectation values in a boost-invariant fluid of Dirac fermions with finite spin density
+- [2604.25947](../papers/2604.25947.md) (2026) [2] Resonance Statistics -Informed Fitting Applied to Automated Cross Section Evaluation
+- [2604.13701](../papers/2604.13701.md) (2026) [2] Global polarization of $Λ$ hyperons in hot QCD matter at TeV energies
+- [2604.12603](../papers/2604.12603.md) (2026) [2] Open-flavor threshold effects on quarkonium spectrum in the BOEFT
+- [2604.11180](../papers/2604.11180.md) (2026) [1] Extended Variable Phase Method for Spin-1/2 Correlation Functions
+- [2604.10038](../papers/2604.10038.md) (2026) [2] Understanding the structure of nucleon excitations from their wavefunctions
+- [2604.07657](../papers/2604.07657.md) (2026) [1] Gaussian pseudogauge invariant hydrodynamics with spin
+- [2604.05472](../papers/2604.05472.md) (2026) [1] Multi-Quark Clustering in Neutron-Star Matter from Color-Spin Molecular Dynamics
+- [2604.04433](../papers/2604.04433.md) (2026) [2] Lattice studies of chimera baryons in Sp(4) gauge theory
+- [2604.04533](../papers/2604.04533.md) (2026) [1] Dissipative spin hydrodynamics in Bjorken flow and thermal dilepton production
+- [2604.06248](../papers/2604.06248.md) (2026) [2] Relativistic Barnett effect and Curie law in a rigidly rotating free Fermi gas
+- [2604.04113](../papers/2604.04113.md) (2026) [2] Heavy and heavy-light tensor and axial-tensor mesons in the Covariant Spectator Theory
+- [2604.04222](../papers/2604.04222.md) (2026) [2] Causality, the Kovtun-Son-Starinets bound, and a novel sum rule for spectral densities
+- [2604.02782](../papers/2604.02782.md) (2026) [1] Spin effects in superfluidity, neutron matter and neutron stars
+- [2604.00797](../papers/2604.00797.md) (2026) [2] Emergent Weyl Nodes and Berry Curvature in Bose Polarons via $p$-Wave Feshbach Coupling
+- [2604.00302](../papers/2604.00302.md) (2026) [2] Fluid Acceleration in Heavy-Ion Collisions
+- [2603.28337](../papers/2603.28337.md) (2026) [1] Combined analysis of the data on cross sections and spin density matrix elements for $K^*Σ$ photoproduction reactions
+- [2603.28842](../papers/2603.28842.md) (2026) [2] Dimer Effective Field Theory
+- [2603.28978](../papers/2603.28978.md) (2026) [2] Ab initio optical potentials for magnesium isotopes: from stability to the island of inversion
+- [2603.27657](../papers/2603.27657.md) (2026) [2] Magnetic moments of open bottom--charm molecular pentaquark octets
+- [2603.27182](../papers/2603.27182.md) (2026) [1] Late-time attractors in relativistic spin hydrodynamics in Gubser flow
+- [2603.26905](../papers/2603.26905.md) (2026) [2] Linking Electromagnetic Moments to Nuclear Interactions with a Global Physics-Driven Machine-Learning Emulator
+- [2603.23270](../papers/2603.23270.md) (2026) [2] Shape Polarization and Quasiparticle Alignment in the [523]5/2 and [642]5/2 bands of $^{169}$Hf
+- [2603.23699](../papers/2603.23699.md) (2026) [1] Semi-inclusive deep-inelastic scattering on a polarized spin-1 target. I. Cross section and spin observables
+- [2603.23700](../papers/2603.23700.md) (2026) [1] Semi-inclusive deep-inelastic scattering on a polarized spin-1 target. II. Deuteron and spectator nucleon tagging
+- [2603.21023](../papers/2603.21023.md) (2026) [2] Elastic proton-proton and pion-proton scattering in holographic QCD
+- [2603.20090](../papers/2603.20090.md) (2026) [2] Interrogating the composition and distribution of nuclear magnetization via the hyperfine anomaly: experiment meets nucl...
+- [2603.18951](../papers/2603.18951.md) (2026) [1] Transverse spin effects and light-quark dipole moments at colliders
+- [2603.17794](../papers/2603.17794.md) (2026) [1] Hydrodynamics of dilation and spin currents
+- [2603.16230](../papers/2603.16230.md) (2026) [2] Lattice QCD at finite temperature and density
+- [2603.15135](../papers/2603.15135.md) (2026) [1] A systematic study of global spin polarizations and correlations of hadrons with different spins in relativistic heavy i...
+- [2603.12589](../papers/2603.12589.md) (2026) [2] Quarkonium spectra with magnetically-induced anisotropic confinement
+- [2603.13164](../papers/2603.13164.md) (2026) [2] Parameter adjustment of nuclear leading-order local pairing energy density functionals
+- [2603.11429](../papers/2603.11429.md) (2026) [2] Gamow-Teller strength of $^{12,14,16}$C within deformed quasiparticle random-phase approximation
+- [2603.11704](../papers/2603.11704.md) (2026) [1] Energy-momentum tensor form factors and spin density distribution in the nucleon calculated in a quantized Skyrme model ...
+- [2603.09630](../papers/2603.09630.md) (2026) [1] The eikonal spin-dependent Odderon and gluon Sivers function of a proton, and its small-$x$ evolution

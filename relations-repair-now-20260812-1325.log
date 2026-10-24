@@ -1,0 +1,199 @@
+immediate run start Wed Aug 12 13:25:00 CST 2026
+full: 54039 citing papers, 49480 done, 4559 to go, 40 workers
+  100/4559 papers, 1095 edges, in=269295 out=49811
+  200/4559 papers, 3150 edges, in=683944 out=136249
+  300/4559 papers, 5191 edges, in=1104243 out=222676
+  400/4559 papers, 7525 edges, in=1582065 out=325527
+  500/4559 papers, 9979 edges, in=2073922 out=427705
+  600/4559 papers, 13355 edges, in=2729659 out=574236
+  700/4559 papers, 16279 edges, in=3325722 out=693315
+  800/4559 papers, 19499 edges, in=3962648 out=827979
+  900/4559 papers, 23176 edges, in=4699573 out=977158
+  1000/4559 papers, 27961 edges, in=5656467 out=1168407
+  1100/4559 papers, 32692 edges, in=6540104 out=1357827
+  1200/4559 papers, 38922 edges, in=7780254 out=1611180
+  1300/4559 papers, 41493 edges, in=8312391 out=1711421
+  1400/4559 papers, 45417 edges, in=9138333 out=1895381
+  1500/4559 papers, 45761 edges, in=9255942 out=1909058
+  1600/4559 papers, 46014 edges, in=9358060 out=1918821
+  1700/4559 papers, 46292 edges, in=9467804 out=1929978
+  1800/4559 papers, 46551 edges, in=9573761 out=1940677
+  1900/4559 papers, 46852 edges, in=9683238 out=1951691
+  2000/4559 papers, 47314 edges, in=9826793 out=1970082
+  2100/4559 papers, 47608 edges, in=9939431 out=1981732
+  2200/4559 papers, 47882 edges, in=10043925 out=1992390
+  2300/4559 papers, 48246 edges, in=10164011 out=2006688
+  2400/4559 papers, 48494 edges, in=10273038 out=2016423
+  2500/4559 papers, 48894 edges, in=10403012 out=2031622
+  2600/4559 papers, 49198 edges, in=10515917 out=2042966
+  2700/4559 papers, 49505 edges, in=10631207 out=2054707
+  2800/4559 papers, 49840 edges, in=10753651 out=2067705
+  2900/4559 papers, 50216 edges, in=10880353 out=2082502
+  3000/4559 papers, 50588 edges, in=11005812 out=2096576
+  3100/4559 papers, 51038 edges, in=11148820 out=2113662
+  3200/4559 papers, 51448 edges, in=11280422 out=2129269
+  3300/4559 papers, 51798 edges, in=11403724 out=2143454
+  3400/4559 papers, 52227 edges, in=11535903 out=2160397
+  3500/4559 papers, 52559 edges, in=11654167 out=2172916
+  3600/4559 papers, 52950 edges, in=11783672 out=2189100
+  3700/4559 papers, 53330 edges, in=11914828 out=2203787
+  3800/4559 papers, 53670 edges, in=12041710 out=2217391
+  3900/4559 papers, 54061 edges, in=12174728 out=2232889
+  4000/4559 papers, 54496 edges, in=12315185 out=2249391
+  4100/4559 papers, 54924 edges, in=12455252 out=2265785
+  4200/4559 papers, 55387 edges, in=12590868 out=2282629
+  4300/4559 papers, 55807 edges, in=12719831 out=2297989
+  4400/4559 papers, 56257 edges, in=12850532 out=2314491
+  4500/4559 papers, 56511 edges, in=12968797 out=2325000
+DONE full: 4559 papers, 56652 edges, in=13033990 out=2330802
+phase1 done Thu Aug 13 01:34:30 CST 2026
+recheck: 17408 contrasts edges over 8776 citing papers, 8776 papers to go, 40 workers
+Traceback (most recent call last):
+  File "/Users/jinlei/Desktop/code/FUSION/scripts/kb_relations.py", line 1439, in <module>
+    cmd_recheck_contrasts(args)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/jinlei/Desktop/code/FUSION/scripts/kb_relations.py", line 1342, in cmd_recheck_contrasts
+    lock = threading.Lock()
+           ^^^^^^^^^
+NameError: name 'threading' is not defined. Did you forget to import 'threading'?
+phase2 done Thu Aug 13 01:34:34 CST 2026
+apply: 0 rows retyped; verdict counts: {}
+Updated 12079 paper pages with Related work sections
+
+=== Example pages ===
+
+--- 0704.0060.md ---
+## Related work
+
+**Contrasted by:**
+- [0712.0484](../papers/0712.0484.md) -- On the Analysis of Intermediate-Energy Coulomb Excitation Experiments
+- [0808.0361](../papers/0808.0361.md) ~ -- Coulomb excitation at intermediate energies
+
+--- 0704.3793.md ---
+## Related work
+
+**Applied by:**
+- [1001.1981](../papers/1001.1981.md) -- Efimov States in Nuclear and Particle Physics
+
+--- 0705.1313.md ---
+## Related work
+
+**Used by:**
+- [0909.2298](../papers/0909.2298.md) ~ -- Signature of smooth transition from diabatic to adiabatic states in heavy-ion fusion reactions at de
+- [1807.01859](../papers/1807.01859.md) -- Heavy-ions collisions and fission dynamics with the time-dependent Hartree-Fock theory and its exten
+ALL DONE Thu Aug 13 01:34:52 CST 2026
+phase2 retry start Thu Aug 13 01:36:07 CST 2026
+recheck: 17408 contrasts edges over 8776 citing papers, 8776 papers to go, 40 workers
+  100/8776 papers, 164 edges, in=75577 out=8420
+  200/8776 papers, 348 edges, in=155601 out=17443
+  300/8776 papers, 554 edges, in=237634 out=27786
+  400/8776 papers, 712 edges, in=311678 out=36004
+  500/8776 papers, 896 edges, in=391326 out=45082
+  600/8776 papers, 1076 edges, in=470372 out=53955
+  700/8776 papers, 1272 edges, in=550970 out=63568
+  800/8776 papers, 1441 edges, in=630007 out=72059
+  900/8776 papers, 1618 edges, in=709659 out=81251
+  1000/8776 papers, 1783 edges, in=788348 out=89754
+  1100/8776 papers, 1968 edges, in=870162 out=99124
+  1200/8776 papers, 2176 edges, in=956358 out=109531
+  1300/8776 papers, 2367 edges, in=1038965 out=119061
+  1400/8776 papers, 2587 edges, in=1125499 out=129999
+  1500/8776 papers, 2756 edges, in=1205212 out=138945
+  1600/8776 papers, 2961 edges, in=1291444 out=149412
+  1700/8776 papers, 3144 edges, in=1375128 out=158787
+  1800/8776 papers, 3332 edges, in=1457866 out=168313
+  1900/8776 papers, 3518 edges, in=1541132 out=177594
+  2000/8776 papers, 3707 edges, in=1623299 out=187249
+  2100/8776 papers, 3887 edges, in=1702629 out=196212
+  2200/8776 papers, 4108 edges, in=1791697 out=206688
+  2300/8776 papers, 4306 edges, in=1877802 out=216911
+  2400/8776 papers, 4510 edges, in=1962658 out=227114
+  2500/8776 papers, 4713 edges, in=2049876 out=237375
+  2600/8776 papers, 4922 edges, in=2141130 out=247748
+  2700/8776 papers, 5126 edges, in=2231084 out=258026
+  2800/8776 papers, 5328 edges, in=2318261 out=268087
+  2900/8776 papers, 5547 edges, in=2409155 out=278990
+  3000/8776 papers, 5775 edges, in=2499153 out=290102
+  3100/8776 papers, 5975 edges, in=2586167 out=299945
+  3200/8776 papers, 6177 edges, in=2674241 out=310318
+  3300/8776 papers, 6375 edges, in=2759667 out=320381
+  3400/8776 papers, 6554 edges, in=2844146 out=329422
+  3500/8776 papers, 6734 edges, in=2930703 out=338967
+  3600/8776 papers, 6925 edges, in=3016296 out=348874
+  3700/8776 papers, 7134 edges, in=3104276 out=359322
+  3800/8776 papers, 7338 edges, in=3194532 out=370177
+  3900/8776 papers, 7554 edges, in=3286911 out=380757
+  4000/8776 papers, 7800 edges, in=3381101 out=392865
+  4100/8776 papers, 7995 edges, in=3468939 out=402564
+  4200/8776 papers, 8204 edges, in=3554850 out=413286
+  4300/8776 papers, 8416 edges, in=3643830 out=424069
+  4400/8776 papers, 8614 edges, in=3732569 out=434274
+  4500/8776 papers, 8819 edges, in=3822371 out=444382
+  4600/8776 papers, 9033 edges, in=3913846 out=454828
+  4700/8776 papers, 9242 edges, in=4001251 out=465050
+  4800/8776 papers, 9449 edges, in=4090640 out=475560
+  4900/8776 papers, 9662 edges, in=4177946 out=486115
+  5000/8776 papers, 9854 edges, in=4265042 out=495687
+  5100/8776 papers, 10044 edges, in=4350848 out=505552
+  5200/8776 papers, 10259 edges, in=4441188 out=516286
+  5300/8776 papers, 10448 edges, in=4525600 out=525936
+  5400/8776 papers, 10678 edges, in=4617297 out=537332
+  5500/8776 papers, 10899 edges, in=4708530 out=548068
+  5600/8776 papers, 11082 edges, in=4794883 out=557587
+  5700/8776 papers, 11313 edges, in=4882978 out=568623
+  5800/8776 papers, 11530 edges, in=4977907 out=579217
+  5900/8776 papers, 11745 edges, in=5066426 out=589794
+  6000/8776 papers, 11955 edges, in=5157656 out=600251
+  6100/8776 papers, 12160 edges, in=5243222 out=610484
+  6200/8776 papers, 12390 edges, in=5333930 out=621902
+  6300/8776 papers, 12580 edges, in=5419943 out=631727
+  6400/8776 papers, 12788 edges, in=5510536 out=642210
+  6500/8776 papers, 12991 edges, in=5598314 out=652314
+  6600/8776 papers, 13191 edges, in=5685736 out=662515
+  6700/8776 papers, 13385 edges, in=5772024 out=672277
+  6800/8776 papers, 13569 edges, in=5860670 out=681510
+  6900/8776 papers, 13796 edges, in=5952019 out=692694
+  7000/8776 papers, 14013 edges, in=6041427 out=703422
+  7100/8776 papers, 14221 edges, in=6133470 out=714097
+  7200/8776 papers, 14392 edges, in=6216798 out=722802
+  7300/8776 papers, 14596 edges, in=6304470 out=732722
+  7400/8776 papers, 14809 edges, in=6395135 out=743367
+  7500/8776 papers, 15021 edges, in=6484366 out=753839
+  7600/8776 papers, 15240 edges, in=6577105 out=764893
+  7700/8776 papers, 15450 edges, in=6668884 out=775075
+  7800/8776 papers, 15685 edges, in=6758689 out=786264
+  7900/8776 papers, 15844 edges, in=6836918 out=794268
+  8000/8776 papers, 16013 edges, in=6915599 out=802817
+  8100/8776 papers, 16179 edges, in=6989621 out=811135
+  8200/8776 papers, 16360 edges, in=7063328 out=819842
+  8300/8776 papers, 16513 edges, in=7136390 out=827673
+  8400/8776 papers, 16687 edges, in=7213131 out=836886
+  8500/8776 papers, 16875 edges, in=7292992 out=846294
+  8600/8776 papers, 17063 edges, in=7371567 out=855582
+  8700/8776 papers, 17265 edges, in=7450475 out=864952
+DONE recheck: 8776 papers, 17408 edges, in=7507656 out=871645
+phase2 done Thu Aug 13 01:41:43 CST 2026
+apply: 11408 rows retyped; verdict counts: {'contrasts': 6000, 'background': 2344, 'uses': 6433, 'compares': 2631}
+Updated 12834 paper pages with Related work sections
+
+=== Example pages ===
+
+--- 0704.0060.md ---
+## Related work
+
+**Contrasted by:**
+- [0712.0484](../papers/0712.0484.md) -- On the Analysis of Intermediate-Energy Coulomb Excitation Experiments
+
+--- 0704.3793.md ---
+## Related work
+
+**Applied by:**
+- [1001.1981](../papers/1001.1981.md) -- Efimov States in Nuclear and Particle Physics
+
+--- 0705.1313.md ---
+## Related work
+
+**Used by:**
+- [0909.2298](../papers/0909.2298.md) ~ -- Signature of smooth transition from diabatic to adiabatic states in heavy-ion fusion reactions at de
+- [1807.01859](../papers/1807.01859.md) -- Heavy-ions collisions and fission dynamics with the time-dependent Hartree-Fock theory and its exten
+ALL DONE (retry) Thu Aug 13 01:41:54 CST 2026

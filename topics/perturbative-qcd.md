@@ -1,0 +1,116 @@
+# Perturbative QCD
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > [Quantum chromodynamics](quantum-chromodynamics.md) > Perturbative QCD
+
+**Broader:** [Quantum chromodynamics](quantum-chromodynamics.md)
+
+## Landscape
+
+Perturbative QCD (pQCD) is the framework for calculating the strong interaction at high energies or short distances, where the coupling constant is small enough to allow expansion in terms of Feynman diagrams. It matters because it provides the first-principles tool to describe phenomena from jet production in heavy ion collisions to the partonic structure of hadrons, and it underpins the theoretical interpretation of experiments at RHIC, the LHC, and future facilities like the Electron-Ion Collider.
+
+The main approaches include the Color Glass Condensate effective theory, which describes high-energy scattering where parton densities saturate, as detailed in the paper by Gelis et al. Another thread uses the Nambu-Jona-Lasinio model to study chiral symmetry breaking and color superconductivity in dense quark matter, as reviewed by Buballa and by Hatsuda and Kunihiro. For heavy ion collisions, the AMPT model combines pQCD initial conditions with parton cascades and hadronic transport, while relativistic viscous hydrodynamics, applied by Luzum and Romatschke, connects pQCD inputs to the observed collective flow of the quark-gluon plasma.
+
+Open questions include the nature of strongly coupled QCD matter at RHIC, where evidence points to a nearly perfect fluid, and the existence of quark matter cores in neutron stars, now constrained by gravitational wave observations from GW170817. The role of nuclear parton distribution functions, as analyzed in the EPS09 study, remains active, and the heavy quarkonium sector continues to present puzzles in production and suppression that challenge pQCD predictions.
+
+**Papers:** 2868 (showing first 100 of 2868)
+
+- [2606.16377](../papers/2606.16377.md) (2026) [3] Static linear response of hot and dense QCD matter to electromagnetic fields: Leading hard and soft QCD corrections
+- [2606.16966](../papers/2606.16966.md) (2026) [2] Spin-Selective Hadron Spectroscopy via Azimuthal Anisotropies from Entanglement-Enabled Spin Interference
+- [2606.13646](../papers/2606.13646.md) (2026) [3] Observable Dependence of Viscous Corrections in QGP: Heavy Quarks and Dileptons in Chapman--Enskog Theory
+- [2606.13908](../papers/2606.13908.md) (2026) [2] Anomalies, Topology, and Hadron Structure in QCD
+- [2606.10206](../papers/2606.10206.md) (2026) [3] Charm quark production in heavy-ion collisions as a signature of pre-equilibrium
+- [2606.08522](../papers/2606.08522.md) (2026) [2] Post-Merger Gravitational-Wave Uncertainties of Binary Neutron Stars under Multi-Messenger EOS Constraints
+- [2606.08830](../papers/2606.08830.md) (2026) [3] Nuclear parton distributions and nuclear shadowing
+- [2606.06378](../papers/2606.06378.md) (2026) [2] On the Possibility of a Strong First-Order Phase Transition in Neutron Stars
+- [2606.03058](../papers/2606.03058.md) (2026) [3] Chemical Equilibration and Thermalization of Quark-Gluon Plasma in a Parton Cascade Model with 2-to-3 Quark Interactions
+- [2606.03703](../papers/2606.03703.md) (2026) [2] Phase structure of strong interaction matter from Functional QCD
+- [2606.04169](../papers/2606.04169.md) (2026) [3] TMD factorization in diffractive heavy-quark production in photon-nucleus collisions
+- [2605.31527](../papers/2605.31527.md) (2026) [3] Accessing Exotic Hadronic States via Charmed-Meson Femtoscopy in Relativistic Heavy-Ion Collisions
+- [2605.26308](../papers/2605.26308.md) (2026) [3] Nuclear Physics of Binary Neutron Star Mergers
+- [2605.18560](../papers/2605.18560.md) (2026) [2] Astrophysics equation of state inference with Bayesian chiral effective field theory uncertainties
+- [2605.17511](../papers/2605.17511.md) (2026) [3] A flow-matching generative model for event-by-event jet-induced hydro response in high-energy heavy-ion collisions
+- [2605.16914](../papers/2605.16914.md) (2026) [2] 3D Initial-State Dynamics across scales: A Comparative Study of saturation and string-based descriptions
+- [2605.16019](../papers/2605.16019.md) (2026) [3] Inclusive charm and bottom quark pair production cross sections at hadron colliders at next-to-next-to-leading-order acc...
+- [2605.08584](../papers/2605.08584.md) (2026) [2] Non-Parametric Equation of State Reveals Non-Conformal Behavior Beyond Neutron Star Densities
+- [2605.07578](../papers/2605.07578.md) (2026) [2] Light-Ion Collisions: Bridging Small and Large QCD Systems
+- [2605.07826](../papers/2605.07826.md) (2026) [3] Hadronic parity violation: successes, challenges, and future prospects
+- [2605.05816](../papers/2605.05816.md) (2026) [2] Massive hybrid stars within the extended three-flavor quark-meson diquark model
+- [2605.05314](../papers/2605.05314.md) (2026) [2] First next-to-next-to-leading-order extraction of fragmentation functions for Lambda hyperons
+- [2605.08225](../papers/2605.08225.md) (2026) [2] Spiral structure and logarithmic evolution of deuteron form factors: evidence for a transitional regime in QCD
+- [2605.02342](../papers/2605.02342.md) (2026) [2] Measurement of isolated-prompt photon$-$hadron correlations in Pb$-$Pb collisions at $\mathbf{\sqrt{\textit{s}_{\rm NN}}...
+- [2605.00437](../papers/2605.00437.md) (2026) [2] Maximal mass of neutron stars constrained by neutron star observations
+- [2604.28164](../papers/2604.28164.md) (2026) [2] Deeply virtual pion production through two-loop order
+- [2605.00084](../papers/2605.00084.md) (2026) [2] Baryonic Bound States in the Non-Local NJL Model
+- [2604.26537](../papers/2604.26537.md) (2026) [3] Particle seismology: mechanical and gravitational properties from parton-hadron duality
+- [2604.26715](../papers/2604.26715.md) (2026) [3] Thermodynamics of magnetized matter in hot and dense QCD
+- [2604.24949](../papers/2604.24949.md) (2026) [2] A Physics Informed Bayesian Neural Network for the Neutron Star Equation of State
+- [2604.25059](../papers/2604.25059.md) (2026) [2] Chapman-Enskog calculation of the shear viscosity of quark-gluon plasma including all $2\leftrightarrow 2$ scatterings a...
+- [2604.20159](../papers/2604.20159.md) (2026) [3] A Poincaré-covariant study of strange quark stars
+- [2604.18010](../papers/2604.18010.md) (2026) [2] Jet Quenching in the Smallest Hadronic Collision Systems
+- [2604.15724](../papers/2604.15724.md) (2026) [2] Theoretical modeling of charged current $ν_μ(\barν_μ)-^{40}Ar$ DIS at DUNE energies
+- [2604.14133](../papers/2604.14133.md) (2026) [2] AI-assisted modeling and Bayesian inference of unpolarized quark transverse momentum distributions from Drell-Yan data
+- [2604.08841](../papers/2604.08841.md) (2026) [1] Crossover Equation of State Constrained by Astronomical Observations and pQCD
+- [2604.05814](../papers/2604.05814.md) (2026) [3] Observation of nuclear suppression in coherent $Υ$(1S) photoproduction off heavy nuclei at the LHC
+- [2603.26413](../papers/2603.26413.md) (2026) [2] Neural network enhanced Bayesian global analysis of relativistic heavy ion collisions
+- [2603.19839](../papers/2603.19839.md) (2026) [3] A dual description of quarks and baryons: Quarkyonic matter within a relativistic quark model
+- [2603.13819](../papers/2603.13819.md) (2026) [3] Electromagnetic structure of Bc and heavy quarkonia in the light-front quark model
+- [2603.09622](../papers/2603.09622.md) (2026) [2] JLab and J-PARC for the J/{\ensuremathψ} Production at the Threshold
+- [2603.09777](../papers/2603.09777.md) (2026) [2] Overview of recent UPC measurements
+- [2603.11081](../papers/2603.11081.md) (2026) [3] Isentropic thermodynamics across the hadron-quark mixed phase in a two-phase model with a PNJL quark description
+- [2603.08776](../papers/2603.08776.md) (2026) [3] Sensitivity of Jet Observables to Molière Scattering Off Quasiparticles in Quark-Gluon Plasma
+- [2602.22969](../papers/2602.22969.md) (2026) [3] The Delta-isobar masquerade: intrahadronic phase transitions and their quark-mimicking signatures in neutron stars
+- [2602.22464](../papers/2602.22464.md) (2026) [3] The 2027-2034 Vision for Nuclear Physics in Canada, with an outlook to 2041
+- [2602.19664](../papers/2602.19664.md) (2026) [2] 2025 EIC-France Workshop: Physics Highlights and Perspectives
+- [2602.19887](../papers/2602.19887.md) (2026) [3] Unquenched Charmonium and Beyond
+- [2602.19072](../papers/2602.19072.md) (2026) [3] Charmonium suppression in fixed target proton-nucleus collisions
+- [2602.18256](../papers/2602.18256.md) (2026) [2] Quark-meson diquark model and color superconductivity in dense quark matter
+- [2602.16230](../papers/2602.16230.md) (2026) [3] Electromagnetic Production of Kaons on the Nucleon
+- [2602.15928](../papers/2602.15928.md) (2026) [2] A compendium of cold-nuclear matter baseline predictions in light-ion collisions
+- [2602.11253](../papers/2602.11253.md) (2026) [3] Pion $β$ decay and $τ\toππν_τ$ beyond leading logarithms
+- [2602.06696](../papers/2602.06696.md) (2026) [3] Bayesian Constraints on the Neutron Star Equation of State with a Smooth Hadron-Quark Crossover
+- [2602.06815](../papers/2602.06815.md) (2026) [3] Many-body effects on dense matter with hyperons at finite temperature
+- [2602.05796](../papers/2602.05796.md) (2026) [3] Violation of the Conformal Limit at Finite Density: Insights from Effective Models and Lattice QCD
+- [2602.06170](../papers/2602.06170.md) (2026) [3] How Neutron Star Observations Point Towards Exotic Matter: Existing Explanations and a Prospective Proposal
+- [2601.16762](../papers/2601.16762.md) (2026) [3] Thermodynamic geometry in hadron resonance gas model at real and imaginary baryon chemical potential and a simple suffic...
+- [2601.14967](../papers/2601.14967.md) (2026) [3] Shear and bulk viscosities of the gluon plasma across the transition temperature from lattice QCD
+- [2601.14194](../papers/2601.14194.md) (2026) [3] Influence of Finite-Nuclei Constraints on High-Density Transitions and Neutron Star Properties
+- [2601.12650](../papers/2601.12650.md) (2026) [3] QCD-Like Theories with Different Color Numbers
+- [2601.13076](../papers/2601.13076.md) (2026) [3] Heavy Quarks in the initial stages of Proton-Ion Collisions
+- [2601.13374](../papers/2601.13374.md) (2026) [3] Trace Anomaly of Cold Dense Matter Constrained by Collective Flow
+- [2601.11123](../papers/2601.11123.md) (2026) [3] Elliptic flow of charm quarks produced in the early stage of pA collisions
+- [2601.11760](../papers/2601.11760.md) (2026) [3] Minkowski Space Dynamics and Light-Front Projection
+- [2601.07931](../papers/2601.07931.md) (2026) [2] General gravitational properties of neutron stars: curvature invariants, binding energy, and trace anomaly
+- [2512.22384](../papers/2512.22384.md) (2025) [3] Nonequilibrium QCD in heavy-ion collisions: Kinetic theory and jet modifications during the initial stages
+- [2512.19477](../papers/2512.19477.md) (2025) [3] Strong model-agnostic constraints for twin-star solutions
+- [2512.19907](../papers/2512.19907.md) (2025) [2] Astrophysical constraints on the cold equation of state of the strongly interacting matter
+- [2512.17410](../papers/2512.17410.md) (2025) [3] Kinetic-Theory Bounds on the Equation of State of Dense QCD Matter
+- [2512.17832](../papers/2512.17832.md) (2025) [2] From Lead to Helium: Discovery Potential for Jet Quenching in the Smallest Collision Systems
+- [2512.18044](../papers/2512.18044.md) (2025) [3] Constrained Gaussian-process bridge prior for neutron-star equation-of-state inference
+- [2512.15064](../papers/2512.15064.md) (2025) [3] Three-dimensional imaging of hadrons with hard exclusive reactions: advances in experiment, theory, phenomenology, and l...
+- [2512.15986](../papers/2512.15986.md) (2025) [3] Hadron Physics Opportunities at FAIR
+- [2512.08283](../papers/2512.08283.md) (2025) [3] Nucleon Structure from Basis Light-Front Quantization : Status and Prospects
+- [2512.08843](../papers/2512.08843.md) (2025) [3] The QCD phase diagram
+- [2512.07633](../papers/2512.07633.md) (2025) [2] Chiral transition in a Non-Abelian Quasi-Particle Model with three quark flavours
+- [2512.02602](../papers/2512.02602.md) (2025) [3] Thermoelectric coefficients of two-flavor quark matter from the Kubo formalism
+- [2512.01503](../papers/2512.01503.md) (2025) [3] Bayesian inferences on covariant density functionals from multimessenger astrophysical data: Influences of parametrizati...
+- [2511.22190](../papers/2511.22190.md) (2025) [3] Topological production of charmonia with event-shape engineering in $pp$ collisions at $\sqrt{s} = 13$ TeV using PYTHIA8
+- [2511.20378](../papers/2511.20378.md) (2025) [3] Toward a Unified Understanding of the Dense Matter Equation of State
+- [2511.18310](../papers/2511.18310.md) (2025) [2] Proton mass decompositions in the NNLO QCD
+- [2511.15646](../papers/2511.15646.md) (2025) [3] Relativistic mean-field model with density- and isospin-density-dependent couplings
+- [2511.14105](../papers/2511.14105.md) (2025) [3] Inclusive $J/ψ$ productions in pp collisions at $\sqrt{s}=$ 5.02, 7, and 13 TeV with the PACIAE model
+- [2511.11516](../papers/2511.11516.md) (2025) [3] Exclusive photoproduction of a $π^0γ$ pair in the saturation framework
+- [2511.08773](../papers/2511.08773.md) (2025) [3] Electromagnetic Radiation from Baryon-Rich Matter in Heavy-Ion Collisions
+- [2511.08796](../papers/2511.08796.md) (2025) [3] Correlations between heavy mesons and the creation of the charmonia, bottomonia, and $B_c$ mesons in high energy $pp$ co...
+- [2511.04737](../papers/2511.04737.md) (2025) [3] Effective Field Theories for Neutron Stars Physics
+- [2511.03714](../papers/2511.03714.md) (2025) [3] Is The Trace Anomaly at its Minimum Value at Neutron Star Centers?
+- [2511.02236](../papers/2511.02236.md) (2025) [3] Magnetic-type Love number differentiating quark stars from neutron stars
+- [2511.02653](../papers/2511.02653.md) (2025) [2] A Bayesian Inference of Hybrid Stars with Large Quark Cores
+- [2511.03065](../papers/2511.03065.md) (2025) [2] Updated flexible global parametrization of generalized parton distributions from elastic and deep inelastic inclusive sc...
+- [2511.01980](../papers/2511.01980.md) (2025) [3] Incoherent Particle Production in Ultraperipheral Heavy Ion Collisions
+- [2511.00646](../papers/2511.00646.md) (2025) [3] Implication of multimessenger observations on the relativistic mean-field equation of state of dense nuclear matter and ...
+- [2510.26237](../papers/2510.26237.md) (2025) [3] MC-EKRT: Monte Carlo event generator with saturated minijet production for initializing 3+1 D fluid dynamics in high ene...
+- [2510.26773](../papers/2510.26773.md) (2025) [3] Automated event generation for S-wave quarkonium and leptonium production in NRQCD and NRQED
+- [2510.25601](../papers/2510.25601.md) (2025) [3] Out-of-equilibrium contributions to charm hadrons in a fluid-dynamic approach
+- [2510.23950](../papers/2510.23950.md) (2025) [3] Symmetry Constraints on Pion Valence Structure
+- [2510.23984](../papers/2510.23984.md) (2025) [1] Symmetry Energy of 2+1-flavor dense quark matter from perturbative QCD
+- [2510.24396](../papers/2510.24396.md) (2025) [2] Probing the nonstrange quark star equation of state with compact stars and gravitational waves

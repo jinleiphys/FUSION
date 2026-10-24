@@ -1,0 +1,2603 @@
+physh_version: 2.8.0
+discipline: Nuclear Physics
+discipline_physh_id: 0213a5a0-0742-43f3-804b-3ccea08a13c0
+total_concepts: 180
+matching_tiers:
+  1: phrase hits title
+  2: phrase hits abstract
+  3: fulltext only; requires >= 2 distinct match phrases OR one phrase hitting >= 3 times
+negative_filter:
+  rule: papers with primary_cat starting with hep- or astro-ph can only receive reaction-family concepts at tier 1 or 2, never on a tier-3 fulltext match
+  reaction_family_slugs:
+  - nuclear-reactions
+  - direct-reactions
+  - breakup-reactions
+  - knockout-reactions
+  - fusion-reactions
+  - nuclear-fusion
+  - transfer-reactions
+  - coulomb-excitation
+  - optical-model
+  - few-body-systems
+  - relativistic-heavy-ion-collisions
+  - heavy-ion-nuclear-reactions
+dangerous_fulltext_words:
+- binding
+- cross-section
+- density
+- energy
+- excitation
+- isospin
+- lifetime
+- mass
+- model
+- momentum
+- parity
+- shell
+- spin
+- strength
+- symmetry
+- width
+concepts:
+- slug: neutron-star-crust
+  physh_id: 033b7123-5ac3-430f-8c2e-70837a53fb00
+  label: Neutron star crust
+  broader:
+  - neutron-stars-pulsars
+  narrower: []
+  match:
+  - query: '"Neutron star crust"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: true
+- slug: nuclear-fusion
+  physh_id: 047c9d16-460f-4d03-b991-42f412b9c272
+  label: Nuclear fusion
+  broader:
+  - nuclear-reactions
+  narrower:
+  - fusion-evaporation-reactions
+  match:
+  - query: '"Nuclear fusion"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"Fusion"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"complete fusion"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"incomplete fusion"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"fusion suppression"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: optical-coupled-channel-distorted-wave-models
+  physh_id: 0593c217-5a51-4a64-bac7-e9f379367df6
+  label: Optical, coupled-channel & distorted wave models
+  broader: []
+  narrower: []
+  match:
+  - query: '"Optical, coupled-channel & distorted wave models"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: hypernuclei-mesic-nuclei
+  physh_id: 0845f541-b7a3-402b-b779-736d06a64443
+  label: Hypernuclei & mesic nuclei
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Hypernuclei & mesic nuclei"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: scission-point
+  physh_id: 0a0f9e2d-cd3c-4d96-9ece-21f4988fdc80
+  label: Scission point
+  broader:
+  - fission
+  narrower: []
+  match:
+  - query: '"Scission point"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: lifetimes-widths
+  physh_id: 0a37f3c2-43fd-48fa-a630-85e5b860cda5
+  label: Lifetimes & widths
+  broader:
+  - nuclear-structure-decays
+  narrower:
+  - lifetime-of-molecular-or-ionic-species
+  match:
+  - query: '"Lifetimes & widths"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: strong-interaction
+  physh_id: 0b08c33f-27b1-4bbf-90f9-1eb1bf63d1eb
+  label: Strong interaction
+  broader: []
+  narrower:
+  - quark-model
+  - color-confinement
+  - multiquark-bound-states
+  - quantum-chromodynamics
+  - quark-matter
+  - quark-gluon-plasma
+  - quark-gluon-jets
+  match:
+  - query: '"Strong interaction"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"Strong force"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: color-deconfinement
+  physh_id: 0b2e2d12-fe25-4c67-8086-edfad1177ee7
+  label: Color deconfinement
+  broader:
+  - qcd-phase-transitions
+  narrower: []
+  match:
+  - query: '"Color deconfinement"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: h-he-induced-nuclear-reactions
+  physh_id: 0dcb4eb8-43eb-4766-a3a4-83f1360cabe2
+  label: H & He induced nuclear reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"H & He induced nuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: photon-lepton-quark-production
+  physh_id: 0ecc27c0-3b2d-413b-8780-fe9dde80ed68
+  label: Photon, lepton & quark production
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Photon, lepton & quark production"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: breakup-reactions
+  physh_id: 0fd0ac3b-8eee-41e1-8fa0-2ec7ac1488af
+  label: Breakup reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Breakup reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"inclusive breakup"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"elastic breakup"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"nonelastic breakup"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"non-elastic breakup"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"breakup cross section"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: synthesis-of-new-superheavy-elements
+  physh_id: 0fe307b1-cfb7-401a-8d94-be4064d16e8d
+  label: Synthesis of new superheavy elements
+  broader: []
+  narrower: []
+  match:
+  - query: '"Synthesis of new superheavy elements"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: lifetime-of-molecular-or-ionic-species
+  physh_id: 109740e4-dc39-4311-b31d-7e77a1648efa
+  label: Lifetime of molecular or ionic species
+  broader:
+  - lifetimes-widths
+  narrower: []
+  match:
+  - query: '"Lifetime of molecular or ionic species"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: 39-a-58
+  physh_id: 12aae757-568b-4acf-995c-1497aca36937
+  label: 39 ≤ A ≤ 58
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"39 ≤ A ≤ 58"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: 20-a-38
+  physh_id: 12ad5a64-13ab-439d-8a12-071c089de2bb
+  label: 20 ≤ A ≤ 38
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"20 ≤ A ≤ 38"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: helicity-distribution-functions
+  physh_id: 149763ee-5622-485e-8715-8d4c03a24da5
+  label: Helicity distribution functions
+  broader:
+  - nucleon-spin-structure
+  narrower: []
+  match:
+  - query: '"Helicity distribution functions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: collective-levels
+  physh_id: 14ae8e80-c205-4119-b0b3-744d0fb178d0
+  label: Collective levels
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Collective levels"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: neutron-physics
+  physh_id: 14fede99-f5aa-4e3e-94be-167116d8c322
+  label: Neutron physics
+  broader:
+  - nuclear-engineering
+  narrower: []
+  match:
+  - query: '"Neutron physics"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: collective-models
+  physh_id: 17c60544-56fd-45e2-853d-30c986f5ab63
+  label: Collective models
+  broader: []
+  narrower: []
+  match:
+  - query: '"Collective models"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: hyperspherical-method
+  physh_id: 187af2f2-b6a9-40be-83d2-546148dec617
+  label: Hyperspherical method
+  broader: []
+  narrower: []
+  match:
+  - query: '"Hyperspherical method"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-structure-decays
+  physh_id: 1cf75de2-e14b-41cd-b733-8f704652db33
+  label: Nuclear structure & decays
+  broader: []
+  narrower:
+  - heavy-particle-decays
+  - neutron-decay-time
+  - hypernuclei-mesic-nuclei
+  - nuclear-spin-parity
+  - rare-new-isotopes
+  - beta-decay
+  - isomer-decays
+  - nuclear-charge-distribution
+  - electroweak-interactions-in-nuclear-physics
+  - binding-energy-masses
+  - nucleon-distribution
+  - coulomb-energies-analogue-states
+  - high-spin-states
+  - energy-levels
+  - proton-emission
+  - neutron-skin-thickness
+  - nuclear-matter
+  - nuclear-shapes-and-moments
+  - nucleus-neutrino-interactions
+  - nuclear-radii
+  - charge-distributions
+  - nuclear-binding
+  - spectroscopic-factors-electromagnetic-moments
+  - electron-muon-capture
+  - few-body-systems
+  - nucleon-nucleon-interactions
+  - giant-resonances
+  - collective-levels
+  - nuclear-forces
+  - electromagnetic-transitions
+  - alpha-decay
+  - level-densities
+  - lifetimes-widths
+  match:
+  - query: '"Nuclear structure & decays"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: perturbative-qcd
+  physh_id: 1d281972-785b-42bb-944c-e35a91320b05
+  label: Perturbative QCD
+  broader:
+  - quantum-chromodynamics
+  narrower: []
+  match:
+  - query: '"Perturbative QCD"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"pQCD"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: jets-heavy-flavor-physics
+  physh_id: 1e0f3a18-3230-45e8-8804-5b9654465bd5
+  label: Jets & heavy flavor physics
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Jets & heavy flavor physics"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: langevin-algorithm
+  physh_id: 20a43606-a8fd-4c85-97a2-b7b127f2ba00
+  label: Langevin algorithm
+  broader:
+  - monte-carlo-methods
+  narrower: []
+  match:
+  - query: '"Langevin algorithm"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: direct-reactions
+  physh_id: 21601513-6c94-4bc8-a1ee-6cbff0bbaac6
+  label: Direct reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Direct reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"transfer reaction"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"stripping reaction"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"pickup reaction"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: rp-process
+  physh_id: 21b2f19f-e126-45ea-b221-c5a44ac62834
+  label: rp process
+  broader:
+  - nucleosynthesis-in-explosive-environments
+  narrower: []
+  match:
+  - query: '"rp process"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: few-body-systems
+  physh_id: 23dc1816-95ac-4954-b14c-f497299effe7
+  label: Few-body systems
+  broader:
+  - nuclear-structure-decays
+  narrower:
+  - efimov-states
+  match:
+  - query: '"Few-body systems"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: effective-field-theory
+  physh_id: 25bc4713-6ee8-4a66-8ab3-a3e33090c90e
+  label: Effective field theory
+  broader: []
+  narrower: []
+  match:
+  - query: '"Effective field theory"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: true
+- slug: nucleosynthesis-in-explosive-environments
+  physh_id: 29903cc6-9078-49fa-8c8f-9416eb5644fb
+  label: Nucleosynthesis in explosive environments
+  broader:
+  - nuclear-astrophysics
+  narrower:
+  - explosive-burning
+  - rp-process
+  - r-process
+  match:
+  - query: '"Nucleosynthesis in explosive environments"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-radii
+  physh_id: 2b534c54-ace7-425b-8282-798d56312fc2
+  label: Nuclear radii
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Nuclear radii"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: energy-levels
+  physh_id: 2c208d45-2118-46a2-b406-a78838263ea7
+  label: Energy levels
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Energy levels"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: coulomb-energies-analogue-states
+  physh_id: 2e2be214-1eff-49e0-a4c9-e38af3680db2
+  label: Coulomb energies & analogue states
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Coulomb energies & analogue states"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: 6-a-19
+  physh_id: 303ae788-385a-47c3-8e25-031548d8677f
+  label: 6 ≤ A ≤ 19
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"6 ≤ A ≤ 19"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: a-5
+  physh_id: 305753ba-ca44-404e-80f2-7c992baa34ba
+  label: A ≤ 5
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"A ≤ 5"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"Light elements"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: asymmetric-nuclear-matter
+  physh_id: 314cc56e-57b2-4cde-a602-3aae9949766c
+  label: Asymmetric nuclear matter
+  broader:
+  - nuclear-matter
+  narrower: []
+  match:
+  - query: '"Asymmetric nuclear matter"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-transition-rates
+  physh_id: 323d8bba-d268-41a6-b135-ffec787e4244
+  label: Nuclear transition rates
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Nuclear transition rates"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: 90-a-149
+  physh_id: 3346188e-2ca7-426d-a1c6-9da0e28f25c4
+  label: 90 ≤ A ≤ 149
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"90 ≤ A ≤ 149"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: radiative-capture
+  physh_id: 33dfb6ab-f1f6-41e8-b219-1e819e5b63d3
+  label: Radiative capture
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Radiative capture"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nucleon-spin-structure
+  physh_id: 33f199a2-1b0f-4e00-a922-a42ef08688db
+  label: Nucleon spin structure
+  broader:
+  - spin
+  narrower:
+  - transversity-distribution-functions
+  - helicity-distribution-functions
+  match:
+  - query: '"Nucleon spin structure"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: alpha-decay
+  physh_id: 34a274ff-a677-40a6-b390-dfcea4340aa6
+  label: Alpha decay
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Alpha decay"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: coulomb-dissociation
+  physh_id: 34aa4f0d-f19a-4ec4-9726-d5a23295f84c
+  label: Coulomb dissociation
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Coulomb dissociation"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: neutron-skin-thickness
+  physh_id: 389efcc8-e090-497e-b414-8c90e6a69cd7
+  label: Neutron skin thickness
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Neutron skin thickness"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-astrophysics
+  physh_id: 38c3eaa1-e9a7-4590-9a93-cbdfd9fe162f
+  label: Nuclear astrophysics
+  broader: []
+  narrower:
+  - nuclear-physics-of-explosive-environments
+  - solar-neutrinos
+  - hydrostatic-stellar-nucleosynthesis
+  - nucleosynthesis-in-explosive-environments
+  - nuclear-matter-in-neutron-stars
+  match:
+  - query: '"Nuclear astrophysics"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: lepton-induced-nuclear-reactions
+  physh_id: 38c8cc9d-4cb4-4528-b4bb-1ffb6ea5b346
+  label: Lepton induced nuclear reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Lepton induced nuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: electron-muon-capture
+  physh_id: 392f3bdf-86fc-4e76-947b-91479f6ebcdf
+  label: Electron & muon capture
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Electron & muon capture"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"Electron capture"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: proton-emission
+  physh_id: 3985b0f8-5a86-4628-b81a-d283a4f93b76
+  label: Proton emission
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Proton emission"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: isotope-separation-enrichment
+  physh_id: 39add935-c036-4b4b-8555-5b1ba27062f3
+  label: Isotope separation & enrichment
+  broader:
+  - nuclear-engineering
+  narrower: []
+  match:
+  - query: '"Isotope separation & enrichment"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: lattice-qcd
+  physh_id: 3d61a6b2-fc2b-4fdf-b339-3215750643cd
+  label: Lattice QCD
+  broader:
+  - quantum-chromodynamics
+  narrower: []
+  match:
+  - query: '"Lattice QCD"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: s-factor
+  physh_id: 3f586fc2-2119-4133-8746-1e078bf35be0
+  label: S-factor
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"S-factor"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: high-spin-states
+  physh_id: 41832898-7313-44fe-a1fe-258cbf4a5ec9
+  label: High spin states
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"High spin states"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nucleon-nucleon-interactions
+  physh_id: 4214927b-d43a-4eac-8975-f610cb1cc8e9
+  label: Nucleon-nucleon interactions
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Nucleon-nucleon interactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nucleus-neutrino-interactions
+  physh_id: 42778a2b-d265-4877-9f98-99161aa3dbe3
+  label: Nucleus-neutrino interactions
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Nucleus-neutrino interactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: jet-quenching
+  physh_id: 42ce52af-cb27-42e1-b268-0cb89ed0a09d
+  label: Jet quenching
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Jet quenching"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: solar-neutrinos
+  physh_id: 4501b22f-36e3-4024-8fe8-7222b02313eb
+  label: Solar neutrinos
+  broader:
+  - nuclear-astrophysics
+  narrower: []
+  match:
+  - query: '"Solar neutrinos"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: spin-dependent-parton-distribution-functions
+  physh_id: 47a722cd-0867-4ef2-9574-9e6bfc2206da
+  label: Spin-dependent parton distribution functions
+  broader:
+  - parton-distribution-functions
+  narrower: []
+  match:
+  - query: '"Spin-dependent parton distribution functions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: beta-decay
+  physh_id: 486fd198-240a-4fef-a8a8-60d4cb9ed665
+  label: Beta decay
+  broader:
+  - nuclear-structure-decays
+  narrower:
+  - double-beta-decay
+  - neutrinoless-double-beta-decay
+  match:
+  - query: '"Beta decay"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: a-220
+  physh_id: 4a4df734-a188-4394-bb81-42c9f3872454
+  label: A ≥ 220
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"A ≥ 220"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: efimov-states
+  physh_id: 4dfb300a-0557-45f2-a9b4-ca554db6d652
+  label: Efimov states
+  broader:
+  - few-body-systems
+  narrower: []
+  match:
+  - query: '"Efimov states"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: elastic-scattering-reactions
+  physh_id: 4f7c2ea6-bed8-48dd-b1c0-cd3e20b556cd
+  label: Elastic scattering reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Elastic scattering reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-explosions
+  physh_id: 5174619b-f9e9-495a-a296-83a14ffd3087
+  label: Nuclear explosions
+  broader:
+  - nuclear-engineering
+  narrower: []
+  match:
+  - query: '"Nuclear explosions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: quark-gluon-jets
+  physh_id: 51cfc384-c54c-4e7d-92d3-ba8dabde7cc4
+  label: Quark & gluon jets
+  broader:
+  - strong-interaction
+  narrower: []
+  match:
+  - query: '"Quark & gluon jets"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-binding
+  physh_id: 531d572f-5343-4cf1-910a-3657ba30aa75
+  label: Nuclear binding
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Nuclear binding"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: transversity-distribution-functions
+  physh_id: 532ce441-0fc6-45b5-ab1d-7d7bba53645a
+  label: Transversity distribution functions
+  broader:
+  - nucleon-spin-structure
+  narrower: []
+  match:
+  - query: '"Transversity distribution functions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: qcd-in-nuclear-reactions
+  physh_id: 53dbf388-0773-4e60-83b9-13de84487845
+  label: QCD in nuclear reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"QCD in nuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: electroweak-interactions-in-nuclear-physics
+  physh_id: 57034c64-1440-4f6c-a380-b9545d77c82a
+  label: Electroweak interactions in nuclear physics
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Electroweak interactions in nuclear physics"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: simulated-annealing
+  physh_id: 5a3e040e-ef6f-4ae6-b8e9-39da105b9446
+  label: Simulated annealing
+  broader:
+  - monte-carlo-methods
+  narrower: []
+  match:
+  - query: '"Simulated annealing"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nonrelativistic-qcd
+  physh_id: 5cedebeb-56df-4037-a9f7-803a10b9e13c
+  label: Nonrelativistic QCD
+  broader:
+  - quantum-chromodynamics
+  narrower: []
+  match:
+  - query: '"Nonrelativistic QCD"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"NRQCD"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: fission
+  physh_id: 6080ec71-e7c6-45fd-9184-60285aafae40
+  label: Fission
+  broader:
+  - nuclear-reactions
+  narrower:
+  - scission-point
+  match:
+  - query: '"Fission"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"Nuclear fission"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: lattice-gauge-theory
+  physh_id: 612f2818-37e6-4798-ac55-d67bb4053702
+  label: Lattice gauge theory
+  broader: []
+  narrower: []
+  match:
+  - query: '"Lattice gauge theory"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nucleon-induced-nuclear-reactions
+  physh_id: 624a78a4-af11-4f01-8bb8-5a0a81905d3d
+  label: Nucleon induced nuclear reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Nucleon induced nuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-matter
+  physh_id: 63a9c708-1efc-49bb-9b67-fb6a39269235
+  label: Nuclear matter
+  broader:
+  - nuclear-structure-decays
+  narrower:
+  - asymmetric-nuclear-matter
+  - symmetry-energy
+  - equations-of-state-of-nuclear-matter
+  match:
+  - query: '"Nuclear matter"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: collective-flow
+  physh_id: 63ac8383-f353-4343-9c94-de98d9631340
+  label: Collective flow
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Collective flow"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: hydrostatic-stellar-nucleosynthesis
+  physh_id: 670457a5-ade7-47cf-b508-6ff87f3d30e0
+  label: Hydrostatic stellar nucleosynthesis
+  broader:
+  - nuclear-astrophysics
+  narrower:
+  - s-process
+  - h-he-burning
+  match:
+  - query: '"Hydrostatic stellar nucleosynthesis"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: 190-a-219
+  physh_id: 67e66b8d-f8c2-4782-a35e-9bae3e0d8664
+  label: 190 ≤ A ≤ 219
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"190 ≤ A ≤ 219"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: 150-a-189
+  physh_id: 68d7090d-127f-44dd-bda5-5ee1aee2a7a2
+  label: 150 ≤ A ≤ 189
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"150 ≤ A ≤ 189"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-mass-ranges
+  physh_id: 68e48847-c427-4c28-a6e0-01e33a33e926
+  label: Nuclear mass ranges
+  broader: []
+  narrower:
+  - 20-a-38
+  - 6-a-19
+  - a-220
+  - a-5
+  - 59-a-89
+  - 39-a-58
+  - 150-a-189
+  - 190-a-219
+  - 90-a-149
+  match:
+  - query: '"Nuclear mass ranges"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: charged-particle-multiplicity
+  physh_id: 6a67c968-5a26-448e-a158-d4eef9233cab
+  label: Charged-particle multiplicity
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Charged-particle multiplicity"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: reactor-instrumentation
+  physh_id: 6b8cec18-fe24-4997-9c52-0ec84c560462
+  label: Reactor instrumentation
+  broader:
+  - nuclear-reactors
+  narrower: []
+  match:
+  - query: '"Reactor instrumentation"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: qcd-phenomenology
+  physh_id: 6bd7d694-d5ae-4ba4-910d-1f427bc874fa
+  label: QCD phenomenology
+  broader:
+  - quantum-chromodynamics
+  narrower: []
+  match:
+  - query: '"QCD phenomenology"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: big-bang-nucleosynthesis
+  physh_id: 7077df72-2381-46cd-a858-2305519b9fbd
+  label: Big bang nucleosynthesis
+  broader: []
+  narrower: []
+  match:
+  - query: '"Big bang nucleosynthesis"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: true
+- slug: polarization-phenomena
+  physh_id: 707ca316-ba1c-4a57-bcfd-815a2356b0a9
+  label: Polarization phenomena
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Polarization phenomena"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: fusion-evaporation-reactions
+  physh_id: 7134b210-84c1-4aef-af11-de8e0158f84d
+  label: Fusion evaporation reactions
+  broader:
+  - nuclear-fusion
+  narrower: []
+  match:
+  - query: '"Fusion evaporation reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-forces
+  physh_id: 72fd2bae-0362-40c5-91a3-36083a6477ba
+  label: Nuclear forces
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Nuclear forces"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: relativistic-heavy-ion-collisions
+  physh_id: 7321e0f7-3b12-45a2-aa4a-28c2a7e03149
+  label: Relativistic heavy-ion collisions
+  broader: []
+  narrower:
+  - jet-quenching
+  - photon-lepton-quark-production
+  - collective-flow
+  - transport-in-heavy-ion-collisions
+  - jets-heavy-flavor-physics
+  - particle-correlations-fluctuations
+  - quark-gluon-plasma
+  - particle-resonance-production
+  - hard-scattering
+  - charged-particle-multiplicity
+  - qcd-phase-transitions
+  match:
+  - query: '"Relativistic heavy-ion collisions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: h-he-burning
+  physh_id: 735be4e0-f261-4524-8c0a-f133d560764a
+  label: H & He burning
+  broader:
+  - hydrostatic-stellar-nucleosynthesis
+  narrower: []
+  match:
+  - query: '"H & He burning"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: s-process
+  physh_id: 74239a90-9c27-4056-b15e-1f8f41ed0e03
+  label: s process
+  broader:
+  - hydrostatic-stellar-nucleosynthesis
+  narrower: []
+  match:
+  - query: '"s process"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: resonance-reactions
+  physh_id: 74a8caf9-1e57-49c0-bc03-27b219a10e6a
+  label: Resonance reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Resonance reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: quantum-chromodynamics
+  physh_id: 74f884e0-6764-4962-a081-b198cca267c3
+  label: Quantum chromodynamics
+  broader:
+  - strong-interaction
+  narrower:
+  - qcd-phenomenology
+  - chiral-perturbation-theory
+  - nonrelativistic-qcd
+  - generalized-parton-distributions
+  - parton-distribution-functions
+  - lattice-qcd
+  - heavy-quark-effective-theory
+  - perturbative-qcd
+  match:
+  - query: '"Quantum chromodynamics"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"QCD"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: neutron-decay-time
+  physh_id: 756837f2-dbd1-49c3-afb6-ad3560f2c49b
+  label: Neutron decay time
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Neutron decay time"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: symmetry-energy
+  physh_id: 78696d1f-9f22-4dcd-aade-94c56d24db96
+  label: Symmetry energy
+  broader:
+  - nuclear-matter
+  narrower: []
+  match:
+  - query: '"Symmetry energy"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: low-intermediate-energy-heavy-ion-reactions
+  physh_id: 7949bfe4-7221-4501-8608-7b5bd77fbb7a
+  label: Low & intermediate energy heavy-ion reactions
+  broader:
+  - nuclear-reactions
+  narrower:
+  - heavy-ion-reaction-mechanisms
+  match:
+  - query: '"Low & intermediate energy heavy-ion reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: chiral-perturbation-theory
+  physh_id: 7972e0ba-1a34-474c-afd4-5446c54d1b1e
+  label: Chiral perturbation theory
+  broader:
+  - quantum-chromodynamics
+  narrower: []
+  match:
+  - query: '"Chiral perturbation theory"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: electron-ion-collisions
+  physh_id: 7a5ddfe4-a73c-47e3-9fc9-a649c78862d3
+  label: Electron-ion collisions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Electron-ion collisions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: r-process
+  physh_id: 7b743095-26c0-432e-9eab-45c856d4ce29
+  label: r process
+  broader:
+  - nucleosynthesis-in-explosive-environments
+  narrower: []
+  match:
+  - query: '"r process"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-charge-radii
+  physh_id: 7c64589b-99c1-4f11-8592-a6e0c273f589
+  label: Nuclear charge radii
+  broader:
+  - nuclear-charge-distribution
+  narrower: []
+  match:
+  - query: '"Nuclear charge radii"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: heavy-ion-reaction-mechanisms
+  physh_id: 7cd84fc1-1dfc-4868-8269-40f1c7d73fb2
+  label: Heavy-ion reaction mechanisms
+  broader:
+  - low-intermediate-energy-heavy-ion-reactions
+  narrower: []
+  match:
+  - query: '"Heavy-ion reaction mechanisms"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: particle-sources-targets
+  physh_id: 7e0090ff-4a5c-44e2-b167-0ac747e5e728
+  label: Particle sources & targets
+  broader: []
+  narrower: []
+  match:
+  - query: '"Particle sources & targets"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: transport-in-heavy-ion-collisions
+  physh_id: 7e57ef0c-07de-4919-8fd8-d27d99a1cd6d
+  label: Transport in heavy-ion collisions
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower:
+  - ion-induced-tracks
+  match:
+  - query: '"Transport in heavy-ion collisions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: radioactive-waste
+  physh_id: 7ecf5917-cd16-436d-b8d3-f6ac5afcb57d
+  label: Radioactive waste
+  broader:
+  - nuclear-reactors
+  narrower: []
+  match:
+  - query: '"Radioactive waste"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: path-integral-monte-carlo
+  physh_id: 7f1887e2-e66f-453e-bb84-c1e1ebd6101f
+  label: Path-integral Monte Carlo
+  broader:
+  - monte-carlo-methods
+  narrower: []
+  match:
+  - query: '"Path-integral Monte Carlo"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: binding-energy-masses
+  physh_id: 80225ff1-75fb-4e39-9e94-f565c3933b4e
+  label: Binding energy & masses
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Binding energy & masses"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: charge-exchange-reactions
+  physh_id: 809153e1-3335-4eca-a6da-ed975994dda4
+  label: Charge-exchange reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Charge-exchange reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: electromagnetic-transitions
+  physh_id: 824ae77e-7d83-4b9e-8bbe-1a1d2dcd7cd6
+  label: Electromagnetic transitions
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Electromagnetic transitions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: multipole-matrix-elements
+  physh_id: 85d6e22c-4376-40a6-9451-9c66745c1955
+  label: Multipole matrix elements
+  broader: []
+  narrower: []
+  match:
+  - query: '"Multipole matrix elements"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: shell-model
+  physh_id: 85f8341d-5dbc-427c-96ab-511220fd44b6
+  label: Shell model
+  broader: []
+  narrower: []
+  match:
+  - query: '"Shell model"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-shapes-and-moments
+  physh_id: 8692716f-f11a-403b-ac30-f80a2c9c9651
+  label: Nuclear shapes and moments
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Nuclear shapes and moments"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: color-confinement
+  physh_id: 87ca58a8-a316-4438-a430-36d3d0a0f6b6
+  label: Color confinement
+  broader:
+  - strong-interaction
+  narrower: []
+  match:
+  - query: '"Color confinement"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-engineering
+  physh_id: 8ad76784-af63-4e0f-a57c-e8483afce6c5
+  label: Nuclear engineering
+  broader: []
+  narrower:
+  - nuclear-explosions
+  - isotope-separation-enrichment
+  - nuclear-reactors
+  - neutron-physics
+  match:
+  - query: '"Nuclear engineering"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nucleon-distribution
+  physh_id: 8d086d50-9e53-4988-b836-cf1108d32c93
+  label: Nucleon distribution
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Nucleon distribution"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: transfer-reactions
+  physh_id: 8f33b140-6e59-4b37-b124-bdd0633377d5
+  label: Transfer reactions
+  broader:
+  - nuclear-reactions
+  narrower:
+  - knockout-reactions
+  match:
+  - query: '"Transfer reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: spin
+  physh_id: 8fc05421-d713-43be-b560-4bca5de50eab
+  label: Spin
+  broader: []
+  narrower:
+  - nucleon-spin-structure
+  match:
+  - query: '"Spin"'
+    tiers:
+    - 1
+    - 2
+  neighbor: false
+- slug: level-densities
+  physh_id: 913be659-e5cb-4203-a3a6-0d6ba9c783b6
+  label: Level densities
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Level densities"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: entropic-sampling-methods
+  physh_id: 92597d78-ac9b-4e8b-8b10-23893c0c4716
+  label: Entropic sampling methods
+  broader:
+  - monte-carlo-methods
+  narrower: []
+  match:
+  - query: '"Entropic sampling methods"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"Wang-Landau"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: metropolis-algorithm
+  physh_id: 9509a217-d06f-407a-82f2-410cbd47a9ca
+  label: Metropolis algorithm
+  broader:
+  - monte-carlo-methods
+  narrower: []
+  match:
+  - query: '"Metropolis algorithm"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: spectrometers-spectroscopic-techniques
+  physh_id: 97e2d545-ee8b-42a3-bb91-36c49d6c5ffc
+  label: Spectrometers & spectroscopic techniques
+  broader: []
+  narrower: []
+  match:
+  - query: '"Spectrometers & spectroscopic techniques"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: models-based-on-symmetries
+  physh_id: 9af709f6-5f1d-4c71-a663-0c66c9db09d3
+  label: Models based on symmetries
+  broader: []
+  narrower: []
+  match:
+  - query: '"Models based on symmetries"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: hydrodynamic-models
+  physh_id: 9d5d8dc3-42bd-4f98-8535-3de25a94f98a
+  label: Hydrodynamic models
+  broader: []
+  narrower: []
+  match:
+  - query: '"Hydrodynamic models"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: radioactive-beams
+  physh_id: 9dbfd6fe-b782-4f11-826e-82ae5084a744
+  label: Radioactive beams
+  broader: []
+  narrower: []
+  match:
+  - query: '"Radioactive beams"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: quantum-monte-carlo
+  physh_id: 9dc2ee1a-ff51-438a-b7c7-1045cd385cfc
+  label: Quantum Monte Carlo
+  broader:
+  - monte-carlo-methods
+  narrower:
+  - diffusion-quantum-monte-carlo
+  match:
+  - query: '"Quantum Monte Carlo"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: 59-a-89
+  physh_id: 9ebaacc9-f580-461c-ae18-8686659f5421
+  label: 59 ≤ A ≤ 89
+  broader:
+  - nuclear-mass-ranges
+  narrower: []
+  match:
+  - query: '"59 ≤ A ≤ 89"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-fragmentation
+  physh_id: a1ea7e3f-96ef-45c6-9f78-8fc5f688f044
+  label: Nuclear fragmentation
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Nuclear fragmentation"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: heatbath-algorithm
+  physh_id: a4da8014-2433-42a4-8994-60a4a1adfd37
+  label: Heatbath algorithm
+  broader:
+  - monte-carlo-methods
+  narrower: []
+  match:
+  - query: '"Heatbath algorithm"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: knockout-reactions
+  physh_id: a5e662dd-e588-440d-80d3-72f52b8e14ac
+  label: Knockout reactions
+  broader:
+  - transfer-reactions
+  narrower: []
+  match:
+  - query: '"Knockout reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: shape-coexistence
+  physh_id: a6758855-6e21-49d9-851d-3c18fa579e85
+  label: Shape coexistence
+  broader:
+  - unstable-nuclei-induced-nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Shape coexistence"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-matter-in-neutron-stars
+  physh_id: a71bd8c0-903c-4991-9877-3a8eaf171967
+  label: Nuclear matter in neutron stars
+  broader:
+  - nuclear-astrophysics
+  narrower: []
+  match:
+  - query: '"Nuclear matter in neutron stars"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: particle-correlations-fluctuations
+  physh_id: a923556f-ddb8-48c1-a730-a10a924b691c
+  label: Particle correlations & fluctuations
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Particle correlations & fluctuations"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: generalized-parton-distributions
+  physh_id: abd176b8-d5c8-4a8c-85dc-b80a4a77f485
+  label: Generalized parton distributions
+  broader:
+  - quantum-chromodynamics
+  narrower: []
+  match:
+  - query: '"Generalized parton distributions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"GPD"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: particle-resonance-production
+  physh_id: ad204586-a9a9-49e4-af2f-58f1d8ea2e70
+  label: Particle & resonance production
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Particle & resonance production"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-spin-parity
+  physh_id: aff93223-66f4-4a9a-8285-2bd2b8a714a9
+  label: Nuclear spin & parity
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Nuclear spin & parity"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-physics-of-explosive-environments
+  physh_id: b10d176e-09d6-4bcb-bd82-bb884d5964df
+  label: Nuclear physics of explosive environments
+  broader:
+  - nuclear-astrophysics
+  narrower: []
+  match:
+  - query: '"Nuclear physics of explosive environments"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: charge-distributions
+  physh_id: b1731414-84b7-4c13-927c-ef95bd85cf87
+  label: Charge distributions
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Charge distributions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: multiquark-bound-states
+  physh_id: b2cfd7a5-6ecd-4dd7-9ab1-150ab32fc687
+  label: Multiquark bound states
+  broader:
+  - strong-interaction
+  narrower: []
+  match:
+  - query: '"Multiquark bound states"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: qcd-phase-transitions
+  physh_id: b9110fa6-0c37-4c22-b39b-e90d8cacdc6f
+  label: QCD phase transitions
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower:
+  - color-deconfinement
+  match:
+  - query: '"QCD phase transitions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: quark-matter
+  physh_id: b94f60a0-02d3-4d70-a109-22eec108ba26
+  label: Quark matter
+  broader:
+  - strong-interaction
+  narrower: []
+  match:
+  - query: '"Quark matter"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: diffusion-quantum-monte-carlo
+  physh_id: b9e02b47-e089-442d-ad1c-a29f2e65c709
+  label: Diffusion quantum Monte Carlo
+  broader:
+  - quantum-monte-carlo
+  narrower: []
+  match:
+  - query: '"Diffusion quantum Monte Carlo"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  - query: '"DQMC"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: hybrid-monte-carlo-algorithm
+  physh_id: ba064101-4ae8-49b2-b947-4538e7064840
+  label: Hybrid Monte Carlo algorithm
+  broader:
+  - monte-carlo-methods
+  narrower: []
+  match:
+  - query: '"Hybrid Monte Carlo algorithm"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-many-body-theory
+  physh_id: bade400c-827b-4a33-87b2-695354930d18
+  label: Nuclear many-body theory
+  broader: []
+  narrower: []
+  match:
+  - query: '"Nuclear many-body theory"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: fragmentation-functions
+  physh_id: bade8808-168e-44b0-bf2a-161d31ed4ba8
+  label: Fragmentation functions
+  broader:
+  - parton-distribution-functions
+  narrower: []
+  match:
+  - query: '"Fragmentation functions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-reactions
+  physh_id: bbb0ce0d-36da-4da5-a443-df064f36aa17
+  label: Nuclear reactions
+  broader: []
+  narrower:
+  - qcd-in-nuclear-reactions
+  - coulomb-excitation
+  - breakup-reactions
+  - nuclear-fragmentation
+  - meson-hyperon-induced-nuclear-reactions
+  - unstable-nuclei-induced-nuclear-reactions
+  - low-intermediate-energy-heavy-ion-reactions
+  - inelastic-scattering-reactions
+  - elastic-scattering-reactions
+  - direct-reactions
+  - electron-ion-collisions
+  - gamma-ray-strength-functions
+  - fission
+  - coulomb-dissociation
+  - polarization-phenomena
+  - nuclear-reaction-rates
+  - photonuclear-reactions
+  - models-methods-for-nuclear-reactions
+  - nuclear-transition-rates
+  - charge-exchange-reactions
+  - lepton-induced-nuclear-reactions
+  - h-he-induced-nuclear-reactions
+  - radiative-capture
+  - transfer-reactions
+  - statistical-phenomena-chaos
+  - resonance-reactions
+  - s-factor
+  - nucleon-induced-nuclear-reactions
+  - nuclear-fusion
+  match:
+  - query: '"Nuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: hard-scattering
+  physh_id: bc0c832d-ff8b-438a-8c02-81fa6c15ed25
+  label: Hard scattering
+  broader:
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Hard scattering"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: neutron-stars-pulsars
+  physh_id: c17001d7-c0bd-41d6-b970-ea4269e7ec06
+  label: Neutron stars & pulsars
+  broader: []
+  narrower:
+  - neutron-star-crust
+  match:
+  - query: '"Neutron stars & pulsars"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: true
+- slug: parity
+  physh_id: c21efba1-aa17-434c-92b2-2b72f6f67670
+  label: Parity
+  broader: []
+  narrower: []
+  match:
+  - query: '"Parity"'
+    tiers:
+    - 1
+    - 2
+  neighbor: false
+- slug: nuclear-tests-of-fundamental-interactions
+  physh_id: c348f41e-fe2b-4ff6-ae11-c12c1a63e4c7
+  label: Nuclear tests of fundamental interactions
+  broader: []
+  narrower: []
+  match:
+  - query: '"Nuclear tests of fundamental interactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: reactor-fuels-coolants
+  physh_id: c38c003f-e0a0-4aeb-9769-a3a2d3801385
+  label: Reactor fuels & coolants
+  broader:
+  - nuclear-reactors
+  narrower: []
+  match:
+  - query: '"Reactor fuels & coolants"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: photonuclear-reactions
+  physh_id: c728a028-1878-419b-9d01-0f8959e06b4a
+  label: Photonuclear reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Photonuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: isomer-decays
+  physh_id: c7ab6671-1a61-46c3-90b7-bb80847079ca
+  label: Isomer decays
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Isomer decays"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: theory-design-simulation-of-reactors
+  physh_id: c8d96fc7-7105-414b-8cc1-e4c90c8c04a7
+  label: Theory, design & simulation of reactors
+  broader:
+  - nuclear-reactors
+  narrower: []
+  match:
+  - query: '"Theory, design & simulation of reactors"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: models-methods-for-nuclear-reactions
+  physh_id: c98434b0-e98e-49be-9355-5de4b1799898
+  label: Models & methods for nuclear reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Models & methods for nuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-data-analysis-compilation
+  physh_id: cd1858f1-89e4-4b0e-864a-b5a4a73de5a8
+  label: Nuclear data analysis & compilation
+  broader: []
+  narrower: []
+  match:
+  - query: '"Nuclear data analysis & compilation"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: spectroscopic-factors-electromagnetic-moments
+  physh_id: cd8557b1-6114-4e5a-a78b-6612f197dbf9
+  label: Spectroscopic factors & electromagnetic moments
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Spectroscopic factors & electromagnetic moments"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: double-beta-decay
+  physh_id: cfcdff89-d672-490a-a06c-1d9cff147a1f
+  label: Double beta decay
+  broader:
+  - beta-decay
+  narrower: []
+  match:
+  - query: '"Double beta decay"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: neutrinoless-double-beta-decay
+  physh_id: d3bfaca4-3f7c-4619-b15c-1522f85d3c89
+  label: Neutrinoless double beta decay
+  broader:
+  - beta-decay
+  narrower: []
+  match:
+  - query: '"Neutrinoless double beta decay"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: explosive-burning
+  physh_id: d67c733a-2184-43d0-afd0-4eb8486f9a09
+  label: Explosive burning
+  broader:
+  - nucleosynthesis-in-explosive-environments
+  narrower: []
+  match:
+  - query: '"Explosive burning"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: quark-model
+  physh_id: d6c8011e-0457-41cc-a9c4-13718c357417
+  label: Quark model
+  broader:
+  - strong-interaction
+  narrower: []
+  match:
+  - query: '"Quark model"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: heavy-particle-decays
+  physh_id: d7555320-c35e-4bfc-b17d-6e2fe467463b
+  label: Heavy-particle decays
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Heavy-particle decays"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: shape-development
+  physh_id: d989b751-363d-49a0-bcc8-5d7304c77187
+  label: Shape development
+  broader:
+  - unstable-nuclei-induced-nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Shape development"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-reactors
+  physh_id: d9e32a6d-d42e-430a-9665-10aaf0776e26
+  label: Nuclear reactors
+  broader:
+  - nuclear-engineering
+  narrower:
+  - reactor-fuels-coolants
+  - reactor-instrumentation
+  - theory-design-simulation-of-reactors
+  - radioactive-waste
+  match:
+  - query: '"Nuclear reactors"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: statistical-phenomena-chaos
+  physh_id: dd79c77f-fc7a-4956-acbe-5e680c90fb06
+  label: Statistical phenomena & chaos
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Statistical phenomena & chaos"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: cluster-models
+  physh_id: decec525-9bef-4d01-872b-6fcc208dc890
+  label: Cluster models
+  broader: []
+  narrower: []
+  match:
+  - query: '"Cluster models"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-reaction-rates
+  physh_id: dfad8fb2-ba51-4845-ac3d-8a4f1065044b
+  label: Nuclear reaction rates
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Nuclear reaction rates"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: random-matrix-theory
+  physh_id: e004c5bf-0efa-40fc-a2f4-bdb72f7d77cb
+  label: Random matrix theory
+  broader: []
+  narrower: []
+  match:
+  - query: '"Random matrix theory"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: thermal-statistical-models
+  physh_id: e4482ea2-2cf0-451a-9152-bb25295fda85
+  label: Thermal & statistical models
+  broader: []
+  narrower: []
+  match:
+  - query: '"Thermal & statistical models"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: meson-hyperon-induced-nuclear-reactions
+  physh_id: e83448a2-8715-4268-93b1-1712750e5a5c
+  label: Meson & hyperon induced nuclear reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Meson & hyperon induced nuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: gamma-ray-strength-functions
+  physh_id: e8874e1c-ffb5-4c6c-9b28-8f667e783ccc
+  label: Gamma-ray strength functions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Gamma-ray strength functions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: coulomb-excitation
+  physh_id: e98c6636-816e-48aa-89c2-042aabeaa5df
+  label: Coulomb excitation
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Coulomb excitation"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: monte-carlo-methods
+  physh_id: eb9bd2e1-eedd-4bd0-997d-58b44ffa3ebb
+  label: Monte Carlo methods
+  broader: []
+  narrower:
+  - metropolis-algorithm
+  - path-integral-monte-carlo
+  - entropic-sampling-methods
+  - heatbath-algorithm
+  - simulated-annealing
+  - langevin-algorithm
+  - quantum-monte-carlo
+  - hybrid-monte-carlo-algorithm
+  match:
+  - query: '"Monte Carlo methods"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: quark-gluon-plasma
+  physh_id: ed47e543-18fb-4597-9384-a5fc4c7921f5
+  label: Quark-gluon plasma
+  broader:
+  - strong-interaction
+  - relativistic-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Quark-gluon plasma"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: parton-distribution-functions
+  physh_id: edc1099a-36c7-42d9-9364-842b964617bb
+  label: Parton distribution functions
+  broader:
+  - quantum-chromodynamics
+  narrower:
+  - fragmentation-functions
+  - spin-dependent-parton-distribution-functions
+  - transverse-momentum-dependent-distribution
+  match:
+  - query: '"Parton distribution functions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: inelastic-scattering-reactions
+  physh_id: ef098eda-722a-4e25-8996-aa19116b725a
+  label: Inelastic scattering reactions
+  broader:
+  - nuclear-reactions
+  narrower: []
+  match:
+  - query: '"Inelastic scattering reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: equations-of-state-of-nuclear-matter
+  physh_id: ef11c112-69f0-402d-9e59-a3fb0584b262
+  label: Equations of state of nuclear matter
+  broader:
+  - nuclear-matter
+  narrower: []
+  match:
+  - query: '"Equations of state of nuclear matter"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: radiation-detectors
+  physh_id: f27a3e9c-1897-4ee8-9270-edd2d637fe86
+  label: Radiation detectors
+  broader: []
+  narrower: []
+  match:
+  - query: '"Radiation detectors"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: transverse-momentum-dependent-distribution
+  physh_id: f2939fef-1916-4c9f-9653-5fbf94a7f130
+  label: Transverse momentum dependent distribution
+  broader:
+  - parton-distribution-functions
+  narrower: []
+  match:
+  - query: '"Transverse momentum dependent distribution"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-density-functional-theory
+  physh_id: f3901c9b-bf9c-44a0-8c9e-b9c2b0b89339
+  label: Nuclear density functional theory
+  broader: []
+  narrower: []
+  match:
+  - query: '"Nuclear density functional theory"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: ab-initio-calculations
+  physh_id: f5523cbb-df53-402a-8b99-d9a6efb8c1e4
+  label: Ab initio calculations
+  broader: []
+  narrower: []
+  match:
+  - query: '"Ab initio calculations"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: heavy-quark-effective-theory
+  physh_id: f6577a8c-a6d7-49fe-bbda-818d3b15dac0
+  label: Heavy quark effective theory
+  broader:
+  - quantum-chromodynamics
+  narrower: []
+  match:
+  - query: '"Heavy quark effective theory"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: unstable-nuclei-induced-nuclear-reactions
+  physh_id: f7596119-caf1-4d2d-9f87-7a727621e77c
+  label: Unstable nuclei induced nuclear reactions
+  broader:
+  - nuclear-reactions
+  narrower:
+  - shape-development
+  - shape-coexistence
+  match:
+  - query: '"Unstable nuclei induced nuclear reactions"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: nuclear-charge-distribution
+  physh_id: f837d92b-2b47-45d3-8803-a555715c1b78
+  label: Nuclear charge distribution
+  broader:
+  - nuclear-structure-decays
+  narrower:
+  - nuclear-charge-radii
+  match:
+  - query: '"Nuclear charge distribution"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: ion-induced-tracks
+  physh_id: f91bb300-b457-45fb-a396-dff856134f61
+  label: Ion-induced tracks
+  broader:
+  - transport-in-heavy-ion-collisions
+  narrower: []
+  match:
+  - query: '"Ion-induced tracks"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: rare-new-isotopes
+  physh_id: fba210d7-a749-425f-a730-515392fa9ae3
+  label: Rare & new isotopes
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Rare & new isotopes"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false
+- slug: giant-resonances
+  physh_id: ffe22c08-57d2-4806-a07d-0e5b18da52e8
+  label: Giant resonances
+  broader:
+  - nuclear-structure-decays
+  narrower: []
+  match:
+  - query: '"Giant resonances"'
+    tiers:
+    - 1
+    - 2
+    - 3
+  neighbor: false

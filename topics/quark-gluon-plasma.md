@@ -1,0 +1,116 @@
+# Quark-gluon plasma
+
+**PhySH lineage:** [Strong interaction](strong-interaction.md) > Quark-gluon plasma
+
+**Broader:** [Strong interaction](strong-interaction.md), [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
+
+## Landscape
+
+The quark-gluon plasma (QGP) is a state of matter where quarks and gluons, normally confined within hadrons, become deconfined and free to travel over distances larger than the size of a proton. This topic matters because it recreates the conditions of the early universe, often described as the "Little Bang," and allows the study of the strong force under extreme temperatures and energy densities, as noted in the review of collective flow and viscosity.
+
+The primary approach to studying QGP is through relativistic heavy-ion collisions, modeled using relativistic hydrodynamics. The paper on hydrodynamic description of ultrarelativistic collisions demonstrates that this model successfully describes momentum distributions and elliptic flow. A key sub-thread is the extraction of the specific shear viscosity, with the paper on 200 A GeV Au+Au collisions concluding the QGP behaves as a nearly perfect liquid with a very low viscosity. Other methods include the study of the Color Glass Condensate as an initial state, as discussed in "New Forms of QCD Matter Discovered at RHIC," and the investigation of event-by-event fluctuations to locate the QCD critical point, as detailed in the paper on fluctuations and the QCD critical point.
+
+Open questions and active directions include the precise role of electromagnetic fields, with the event-by-event generation paper noting strong fields and their implications for the Chiral Magnetic Effect, a topic reviewed in a dedicated status report. The phase structure of QCD remains a central puzzle, with the paper on decoding the phase structure using statistical hadronization pointing to quark-hadron duality. Finally, Bayesian parameter estimation, as applied in the paper on simultaneous characterization, represents a modern direction for quantitatively constraining both the initial state and the QGP medium properties from experimental data.
+
+**Papers:** 2805 (showing first 100 of 2805)
+
+- [2606.16377](../papers/2606.16377.md) (2026) [2] Static linear response of hot and dense QCD matter to electromagnetic fields: Leading hard and soft QCD corrections
+- [2606.17133](../papers/2606.17133.md) (2026) [2] Short-Range Correlations Between Partons in a Proton
+- [2606.14166](../papers/2606.14166.md) (2026) [2] Thermal dileptons to probe the baryon-rich QCD matter in the forward region of LHC energy heavy-ion collisions
+- [2606.14799](../papers/2606.14799.md) (2026) [2] Experimental exploration of the QCD phase diagram
+- [2606.10689](../papers/2606.10689.md) (2026) [2] Chiral Plasma under Strong Magnetic Fields: A Holographic Analysis of Transport Phenomena
+- [2606.09760](../papers/2606.09760.md) (2026) [2] Einstein-de Haas effect and induced rotation in an evolving magnetized QCD matter
+- [2606.10258](../papers/2606.10258.md) (2026) [2] Nonflow Subtraction Beyond Two-Particle Correlations
+- [2606.06283](../papers/2606.06283.md) (2026) [2] Diffusion of multiple conserved charges from entropy production
+- [2606.03058](../papers/2606.03058.md) (2026) [1] Chemical Equilibration and Thermalization of Quark-Gluon Plasma in a Parton Cascade Model with 2-to-3 Quark Interactions
+- [2606.03552](../papers/2606.03552.md) (2026) [2] $D^0$-$D_s^+$ Elliptic-Flow Splitting under Event-Shape Engineering: A Probe of Sequential Charm Hadronization
+- [2606.02446](../papers/2606.02446.md) (2026) [2] Cumulant dynamics in finite-memory diffusion
+- [2606.00597](../papers/2606.00597.md) (2026) [2] Investigation of the onset of deconfinement with the NA61/SHINE experiment
+- [2606.00171](../papers/2606.00171.md) (2026) [2] Dependence of two-particle azimuthal correlations on the forward rapidity gap width in pPb collisions at $\sqrt{s_\mathr...
+- [2605.29383](../papers/2605.29383.md) (2026) [2] Bayesian constraints on the transport coefficients $η/s$ and $ζ/s$ from spin polarization in relativisitic heavy-ion col...
+- [2605.30180](../papers/2605.30180.md) (2026) [2] The polarization of thermal dileptons emitted in high-energy heavy-ion collisions
+- [2605.26280](../papers/2605.26280.md) (2026) [2] CNN-Based Online Trigger for QGP Event Selection
+- [2605.19985](../papers/2605.19985.md) (2026) [2] Lindblad-driven quarkonium production in heavy-ion collisions
+- [2605.19058](../papers/2605.19058.md) (2026) [2] Looking at the Entropy in a Proton through a QGP Lens
+- [2605.17511](../papers/2605.17511.md) (2026) [2] A flow-matching generative model for event-by-event jet-induced hydro response in high-energy heavy-ion collisions
+- [2605.12554](../papers/2605.12554.md) (2026) [2] Spin dynamics and polarization in relativistic systems: recent developments
+- [2605.07578](../papers/2605.07578.md) (2026) [2] Light-Ion Collisions: Bridging Small and Large QCD Systems
+- [2605.04393](../papers/2605.04393.md) (2026) [2] Medium Characterization with Hard Probes: From Cherenkov Light in QED to Jet Drift in QCD
+- [2604.24535](../papers/2604.24535.md) (2026) [1] Non-perturbative heavy quark diffusion coefficients in arbitrarily magnetized quark-gluon plasma
+- [2604.25059](../papers/2604.25059.md) (2026) [1] Chapman-Enskog calculation of the shear viscosity of quark-gluon plasma including all $2\leftrightarrow 2$ scatterings a...
+- [2604.23689](../papers/2604.23689.md) (2026) [2] Three regimes/phases of QCD at high T, their symmetries and N_c scaling
+- [2604.21872](../papers/2604.21872.md) (2026) [2] Quark and gluon production in the presence of the time-varying chiral magnetic current
+- [2604.21895](../papers/2604.21895.md) (2026) [2] Heavy Quark Transport is Non-Gaussian Beyond Leading Log
+- [2604.20493](../papers/2604.20493.md) (2026) [2] Investigation of Nonlinear Collective Dynamics in Relativistic Heavy-Ion Collisions Using A Multi-Phase Transport Model
+- [2604.19288](../papers/2604.19288.md) (2026) [2] Geometric bias and centrality dependence of jet quenching in high-energy nuclear collisions
+- [2604.18010](../papers/2604.18010.md) (2026) [2] Jet Quenching in the Smallest Hadronic Collision Systems
+- [2604.15926](../papers/2604.15926.md) (2026) [2] Exact expectation values in a boost-invariant fluid of Dirac fermions with finite spin density
+- [2604.07982](../papers/2604.07982.md) (2026) [2] Memory effect on the heavy quark dynamics in hot QCD matter
+- [2604.08136](../papers/2604.08136.md) (2026) [2] The neutron skin effect in Pb+Pb collisions at 2.76A TeV at the LHC
+- [2604.05858](../papers/2604.05858.md) (2026) [1] Thermodynamic and Transport Properties of Quark-Gluon Plasma at Finite Chemical Potential with a DNN framework
+- [2604.04533](../papers/2604.04533.md) (2026) [2] Dissipative spin hydrodynamics in Bjorken flow and thermal dilepton production
+- [2604.04222](../papers/2604.04222.md) (2026) [2] Causality, the Kovtun-Son-Starinets bound, and a novel sum rule for spectral densities
+- [2604.00618](../papers/2604.00618.md) (2026) [2] Absorption of 1$P$-wave heavy charmonium $χ_{c1}(1P)$ in nuclei
+- [2603.29772](../papers/2603.29772.md) (2026) [2] Revisiting QCD-induced little inflation with chiral density wave state and its implications on pulsar timing array gravi...
+- [2603.28389](../papers/2603.28389.md) (2026) [2] Heavy-Flavor Fragmentation from HF-NRevo: Status, Prospects, and Intrinsic Charm
+- [2603.27846](../papers/2603.27846.md) (2026) [2] Full energy fraction and angular dependence of medium-induced splittings in the large-$N_c$ limit
+- [2603.23498](../papers/2603.23498.md) (2026) [1] Hall Viscosity in the Quark-Gluon Plasma
+- [2603.23596](../papers/2603.23596.md) (2026) [2] A Breath of Fresh Air for Molière: Detecting Molière Scattering using Jet Substructure Observables in Oxygen Collisions
+- [2603.19581](../papers/2603.19581.md) (2026) [2] Global $Λ$ hyperon polarization in low-energy heavy ion collisions -- a scenario without vorticity
+- [2603.17985](../papers/2603.17985.md) (2026) [2] Asymptotics of superfluid Bjorken flow
+- [2603.15891](../papers/2603.15891.md) (2026) [2] Scaled transverse-momentum spectra as a probe of collective dynamics in heavy-ion collisions
+- [2603.13203](../papers/2603.13203.md) (2026) [2] $π$, K, and p production in high-multiplicity pp collisions at $\sqrt{s} = 13$ TeV
+- [2603.11097](../papers/2603.11097.md) (2026) [2] Searching for New Particles Hidden under Known Resonances: A Heavy-Ion Diagnostic
+- [2603.09647](../papers/2603.09647.md) (2026) [2] Extracting the speed of sound of QCD from transverse momentum fluctuations
+- [2603.09732](../papers/2603.09732.md) (2026) [2] Event-by-Event Multiplicity Fluctuations in Heavy-Ion Collisions Using Modified HIJING Monte Carlo Generator
+- [2603.08776](../papers/2603.08776.md) (2026) [1] Sensitivity of Jet Observables to Molière Scattering Off Quasiparticles in Quark-Gluon Plasma
+- [2603.05798](../papers/2603.05798.md) (2026) [2] Study of Collective Phenomena in Heavy-Ion Collisions Using CMS Open Data
+- [2603.04263](../papers/2603.04263.md) (2026) [2] Quantum Kinetic Theory for Quantum Chromodynamics
+- [2603.04674](../papers/2603.04674.md) (2026) [1] Coupled charm and charmonium transport in a strongly coupled quark-gluon plasma
+- [2603.05545](../papers/2603.05545.md) (2026) [1] VarP-GP: cost-efficient Bayesian emulation of quark-gluon plasma modeling with variable statistical precision
+- [2603.02927](../papers/2603.02927.md) (2026) [2] Unshadowing the constituent quark number scaling of harmonic flow in heavy-ion collisions
+- [2603.00238](../papers/2603.00238.md) (2026) [2] An EFT approach to Color decoherence in jet quenching
+- [2602.22383](../papers/2602.22383.md) (2026) [2] Impact of Geometric Inflation on Nucleon Size Sensitivity in Relativistic Heavy-Ion Collisions
+- [2602.16450](../papers/2602.16450.md) (2026) [2] All-path-length and sub-eikonal corrections to momentum broadening in the opacity expansion approach
+- [2602.15928](../papers/2602.15928.md) (2026) [2] A compendium of cold-nuclear matter baseline predictions in light-ion collisions
+- [2602.13618](../papers/2602.13618.md) (2026) [1] Probing Rotational Dynamics of Quark Gluon Plasma via Global Vorticity
+- [2602.13044](../papers/2602.13044.md) (2026) [1] Rotating Synchrotron Radiation (RoSyRa): photon emission from magnetized and rotating quark-gluon plasma
+- [2602.11713](../papers/2602.11713.md) (2026) [2] QCD matter at a finite magnetic field and nonzero chemical potential
+- [2602.10395](../papers/2602.10395.md) (2026) [2] Improved linear Boltzmann transport model for hadron and jet suppression in ultra-relativistic heavy-ion collisions
+- [2602.08155](../papers/2602.08155.md) (2026) [2] Shear viscosity of a massless quark-gluon gas in chemical equilibrium including all $2\leftrightarrow 2$ cross sections
+- [2602.06697](../papers/2602.06697.md) (2026) [2] Physics of strong electromagnetic fields in relativistic heavy-ion collisions
+- [2602.02687](../papers/2602.02687.md) (2026) [2] Anisotropic time evolution of sound modes in Bjorken expanding holographic plasma
+- [2601.22882](../papers/2601.22882.md) (2026) [2] Heavy quark polarization anisotropy as a novel probe of fireball geometry
+- [2602.07004](../papers/2602.07004.md) (2026) [1] Asymptotic Freedom and Vacuum Polarization Determine the Astrophysical End State of Relativistic Gravitational Collapse:...
+- [2601.20505](../papers/2601.20505.md) (2026) [2] Bjorken Initial Energy Density and Viscous Longitudinal Hydrodynamic Evolution in Xe-Xe Collisions
+- [2601.15023](../papers/2601.15023.md) (2026) [2] Carroll hydrodynamics with spin
+- [2601.07570](../papers/2601.07570.md) (2026) [2] EPOS4 Model Predictions for Global Observables in Pb-Pb Collisions at $\sqrt{s_{NN}}$ = 5.36 TeV
+- [2512.22715](../papers/2512.22715.md) (2025) [2] Kinematic and dynamical origins of mean-$p_T$ fluctuations in heavy-ion collisions
+- [2512.22384](../papers/2512.22384.md) (2025) [2] Nonequilibrium QCD in heavy-ion collisions: Kinetic theory and jet modifications during the initial stages
+- [2512.18728](../papers/2512.18728.md) (2025) [2] Dissociation-driven quarkonium spin alignment in Pb--Pb collisions at $\sqrt{s_{\rm NN}} = 5.02$ TeV
+- [2512.17230](../papers/2512.17230.md) (2025) [2] Dynamical equation for quark spin polarization in the rotating medium
+- [2512.17651](../papers/2512.17651.md) (2025) [1] Towards a fluid-dynamic description of an entire heavy-ion collision: from the colliding nuclei to the quark-gluon plasm...
+- [2512.17832](../papers/2512.17832.md) (2025) [2] From Lead to Helium: Discovery Potential for Jet Quenching in the Smallest Collision Systems
+- [2512.14053](../papers/2512.14053.md) (2025) [2] Substructure grooming of inclusive and photon-tagged jets in heavy-ion collisions
+- [2512.14375](../papers/2512.14375.md) (2025) [1] Signatures of local acceleration of quark-gluon plasma in the dilepton production
+- [2512.13792](../papers/2512.13792.md) (2025) [2] Magnetoviscosity of relativistic plasma
+- [2512.12715](../papers/2512.12715.md) (2025) [2] Emergence of thermal recoil jets in high-energy heavy-ion collisions
+- [2512.11536](../papers/2512.11536.md) (2025) [1] Data-Driven Analysis for the Bottomonium Potential in the Quark-Gluon Plasma
+- [2512.11539](../papers/2512.11539.md) (2025) [2] Lindblad-driven recombination of the X(3872) tetraquark
+- [2512.11951](../papers/2512.11951.md) (2025) [2] Directional dead-cone effect in QCD matter
+- [2512.11952](../papers/2512.11952.md) (2025) [2] Renormalization Group Evolution for In-medium Energy Correlators
+- [2512.10265](../papers/2512.10265.md) (2025) [1] Dynamical correlations across momentum scales in the Quark-Gluon Plasma
+- [2512.09973](../papers/2512.09973.md) (2025) [2] Phase transitions at high and low densities for a rotating QCD matter from holography
+- [2512.10026](../papers/2512.10026.md) (2025) [2] Living on the edge: radius effects in the angular substructure of heavy-ion jets
+- [2512.08843](../papers/2512.08843.md) (2025) [2] The QCD phase diagram
+- [2512.07169](../papers/2512.07169.md) (2025) [2] Bayesian Inference of Heavy-Quark Dissipation and Jet Transport Parameters from D-Meson observables in heavy-ion collisi...
+- [2512.06339](../papers/2512.06339.md) (2025) [1] The influence of heavy quark potential on quarkonium production in quark-gluon plasma
+- [2512.05874](../papers/2512.05874.md) (2025) [2] Topical issue on the intersection of low-energy nuclear structure and high-energy nuclear collisions
+- [2512.01592](../papers/2512.01592.md) (2025) [2] Nuclear modification of heavy flavor decayed dielectrons in relativistic heavy-ion collisions
+- [2511.17737](../papers/2511.17737.md) (2025) [2] Collinear spin correlations of final-state radiation in dense QCD matter
+- [2511.14891](../papers/2511.14891.md) (2025) [2] First order transition region of an equation of state for QCD with a critical point
+- [2511.13163](../papers/2511.13163.md) (2025) [2] A deep learning approach for predicting multiple observables in Au+Au collisions at RHIC
+- [2511.11094](../papers/2511.11094.md) (2025) [2] New constraints on equation of state of hot QCD matter
+- [2511.08773](../papers/2511.08773.md) (2025) [2] Electromagnetic Radiation from Baryon-Rich Matter in Heavy-Ion Collisions
+- [2511.04605](../papers/2511.04605.md) (2025) [1] The size of the quark-gluon plasma in ultracentral collisions: impact of initial density fluctuations on the average tra...
+- [2511.03588](../papers/2511.03588.md) (2025) [2] Impact of QCD Energy Evolution on Observables in Heavy-Ion Collisions

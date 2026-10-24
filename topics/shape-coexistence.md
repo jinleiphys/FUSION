@@ -1,0 +1,118 @@
+# Shape coexistence
+
+**PhySH lineage:** [Nuclear reactions](nuclear-reactions.md) > Unstable nuclei induced nuclear reactions > Shape coexistence
+
+**Broader:** Unstable nuclei induced nuclear reactions
+
+## Landscape
+
+### Landscape Synthesis: Shape Coexistence in Nuclear Physics
+
+Shape coexistence describes the phenomenon where atomic nuclei exhibit multiple distinct equilibrium deformations (e.g., spherical, prolate, oblate) at similar excitation energies. This topic is crucial because it challenges the simple mean-field picture of a single nuclear ground-state shape, revealing the subtle interplay between the nuclear force, shell structure, and correlations. Understanding shape coexistence provides deep insights into the effective nucleon-nucleon interaction and the evolution of magic numbers, particularly in exotic nuclei far from stability, as highlighted by the discovery of a doubly magic stronghold in \(^{78}\)Ni.
+
+The main theoretical approaches include self-consistent mean-field methods and the nuclear shell model. Configuration mixing of symmetry-restored mean-field states, using Skyrme interactions like SLy6, is a key technique for studying coexistence in neutron-deficient Pb and Kr isotopes. The relativistic Hartree-Bogoliubov (RHB) framework and Gogny-Hartree-Fock-Bogoliubov (HFB) calculations are also widely applied, for instance, to analyze shape evolution in N=28 isotones and triaxiality in Germanium isotopes. Large-scale shell-model calculations, using effective interactions like GXPF1 for the \(pf\)-shell, successfully describe core-excitations and the onset of deformation in regions such as the \(N=Z=28\) closed core and the new island of inversion around \(^{78}\)Ni.
+
+Active open questions include the precise microscopic mechanism driving shape coexistence, with Type II shell evolution recently identified as a quantitative cause in \(^{96}\)Zr. The role of exotic deformations, such as tetrahedral (\(Y_{32}\)) and triangular (\(Y_{33}\)) shapes, is being explored in symmetry-unrestricted calculations for N=Z nuclei like \(^{68}\)Se and \(^{80}\)Zr. Furthermore, the ordering of calculated bands in neutron-deficient Kr isotopes remains a challenge for current models, indicating that constraints on the single-particle spectrum from collective excitations are needed to refine effective interactions and better predict coexistence in regions like the neutron-rich N=50 island of inversion.
+
+**Papers:** 212 (showing first 100 of 212)
+
+- [2606.07092](../papers/2606.07092.md) (2026) [1] Impact of Shape Coexistence on Nuclear Stability
+- [2606.01253](../papers/2606.01253.md) (2026) [2] Shape evolution of krypton isotopes calculated with axially deformed relativistic Hartree-Bogoliubov approach
+- [2605.14813](../papers/2605.14813.md) (2026) [2] Skyrme SV density-functional analysis of the $2νββ$ decay in $^{76}$Ge
+- [2605.15302](../papers/2605.15302.md) (2026) [1] Study of the shape coexistence in the 96Zr, 96Mo, 96Ru isobars
+- [2605.11412](../papers/2605.11412.md) (2026) [1] Multiple shape coexistence near Sn118: First 03+ lifetime measurement
+- [2604.09010](../papers/2604.09010.md) (2026) [2] Shape transitions and ground-state properties of tungsten isotopes in covariant density functional theory
+- [2603.29433](../papers/2603.29433.md) (2026) [2] Nuclear shapes of Nb isotopes
+- [2603.21985](../papers/2603.21985.md) (2026) [2] Systematic Cranked Shell Model Calculations for $^{87, 89, 91}$Br
+- [2603.17797](../papers/2603.17797.md) (2026) [2] Spectroscopic factors as a probe of nuclear shape in $^{44}$S via one-neutron knockout reaction
+- [2603.09227](../papers/2603.09227.md) (2026) [1] Effects of shape coexistence and configuration mixing on low-lying states in tellurium isotopes
+- [2603.07194](../papers/2603.07194.md) (2026) [2] Shape phase transition, coexistence and mixing in the $^{98-106}$Ru isotopes
+- [2601.10447](../papers/2601.10447.md) (2026) [1] Islands of shape coexistence for Z=38-84 in a non-relativistic mean-field approach using Hartree-Fock-Bogoliubov theory
+- [2601.03838](../papers/2601.03838.md) (2026) [1] Thermal Evolution of Shape Coexistence in Mo and Ru Isotopes
+- [2510.16775](../papers/2510.16775.md) (2025) [2] Probing the shape evolution and shell structures in neutron-rich N=50 nuclei
+- [2510.16453](../papers/2510.16453.md) (2025) [2] Microscopic triaxial quadrupole-octupole collective Hamiltonian for low-energy nuclear excitations
+- [2509.25789](../papers/2509.25789.md) (2025) [2] Shape polarization and coexistence of high-$K$ three-quasiparticle states in odd-mass $N=106$ isotones
+- [2508.21391](../papers/2508.21391.md) (2025) [2] Bohr-Mottelson Hamiltonian with octic potential applied to the $^{106-116}$Cd isotopes
+- [2508.08616](../papers/2508.08616.md) (2025) [1] Impact of shape coexistence on the symmetric to asymmetric fission mode transition in Th isotopes
+- [2508.05268](../papers/2508.05268.md) (2025) [2] Quadrupole-hexadecapole coupling in the rare earth region with beyond mean field correlations
+- [2507.21806](../papers/2507.21806.md) (2025) [2] Shape evolution in neutron-rich odd-even $^{105-109}$Nb isotopes
+- [2507.20275](../papers/2507.20275.md) (2025) [2] Vibrational Modes in Strongly Deformed Nuclei
+- [2506.10659](../papers/2506.10659.md) (2025) [2] Geometry of Configuration Mixing in Bose-Fermi Systems
+- [2505.07199](../papers/2505.07199.md) (2025) [2] The coexistence of possible magnetic and chiral rotation in $^{129}\mathrm{Cs}$ and $^{131}\mathrm{La}$: a microscopic i...
+- [2504.11244](../papers/2504.11244.md) (2025) [1] Multireference covariant density functional theory for shape coexistence and isomerism in $^{43}$S
+- [2504.04449](../papers/2504.04449.md) (2025) [2] Non-negligible influence of shape inheritance and staggering on α decay
+- [2503.00775](../papers/2503.00775.md) (2025) [2] Investigation of Gamow-Teller strength of 186Hg within deformed pn-QRPA
+- [2502.12681](../papers/2502.12681.md) (2025) [1] Extreme Shape Coexistence Observed in $^{70}$Co
+- [2502.05820](../papers/2502.05820.md) (2025) [2] Robust linear correlations related to neutron skin thickness
+- [2502.04985](../papers/2502.04985.md) (2025) [2] Microscopic description of quadrupole-hexadecapole coupling in radium, thorium, uranium and plutonium isotopes with the ...
+- [2501.10925](../papers/2501.10925.md) (2025) [2] Typical new spherical-like $γ$-soft spectra in $^{104,106,108}$Pd
+- [2501.00387](../papers/2501.00387.md) (2024) [1] Reexamination of nuclear structure properties and shape coexistence of nuclei around A70
+- [2412.16972](../papers/2412.16972.md) (2024) [2] Competition of the shell closure and deformations across the doubly magic $^{78}$Ni
+- [2412.08077](../papers/2412.08077.md) (2024) [2] Ground-state properties and structure evolutions of odd-$A$ transuranium Bk isotopes from deformed relativistic Hartree-...
+- [2411.12816](../papers/2411.12816.md) (2024) [2] Intertwined Quantum Phase Transitions in Bose and Bose-Fermi Systems
+- [2411.08682](../papers/2411.08682.md) (2024) [1] Multiple shape coexistence in the $N=Z$ $^{84}$Mo nucleus
+- [2410.23113](../papers/2410.23113.md) (2024) [1] Ab initio nuclear shape coexistence and emergence of island of inversion around $N=20$
+- [2409.12064](../papers/2409.12064.md) (2024) [2] Quantum Magic and Multi-Partite Entanglement in the Structure of Nuclei
+- [2409.04357](../papers/2409.04357.md) (2024) [2] Seven years of the proxy-SU(3) shell model symmetry
+- [2408.06940](../papers/2408.06940.md) (2024) [1] Spherical-oblate shape coexistence in $^{94}$Zr from a model-independent analysis
+- [2407.15048](../papers/2407.15048.md) (2024) [1] Shape coexistence in Ne isotopes and hyperon impurity effect on low-lying states
+- [2404.14506](../papers/2404.14506.md) (2024) [2] Shell-model study of $^{28}$Si: coexistence of oblate, prolate and superdeformed shapes
+- [2403.18377](../papers/2403.18377.md) (2024) [2] Nuclear shape evolution of neutron-deficient Au and kink structure of Pb isotopes
+- [2402.15901](../papers/2402.15901.md) (2024) [2] Ab initio description of monopole resonances in light- and medium-mass nuclei: II. Ab initio PGCM calculations in $^{46}...
+- [2402.12606](../papers/2402.12606.md) (2024) [2] Intruder band mixing in an ab initio description of 12Be
+- [2402.11276](../papers/2402.11276.md) (2024) [1] The pervasiveness of shape coexistence in nuclear pair condensates
+- [2402.06403](../papers/2402.06403.md) (2024) [1] Correlation between the Shape Coexistence and Stability in Mo and Ru isotopes
+- [2402.02228](../papers/2402.02228.md) (2024) [2] Ab initio description of monopole resonances in light- and medium-mass nuclei: I. Technical aspects and uncertainties of...
+- [2312.00750](../papers/2312.00750.md) (2023) [1] Shape coexistence and superdeformation in $^{28}$Si
+- [2311.13020](../papers/2311.13020.md) (2023) [2] Understanding the Effect of Chiral NN Parametrization on Nuclear Shapes From an Ab Initio Perspective
+- [2310.19458](../papers/2310.19458.md) (2023) [1] At the edge of shape coexistence in the Z=40 region
+- [2310.16915](../papers/2310.16915.md) (2023) [1] Further evidence for shape coexistence in $^{79}$Zn$^{m}$ near doubly-magic $^{78}$Ni
+- [2309.07426](../papers/2309.07426.md) (2023) [1] At the borderline of shape coexistence: Mo and Ru
+- [2308.15393](../papers/2308.15393.md) (2023) [1] Shape coexistence in even-even nuclei: A theoretical overview
+- [2305.17550](../papers/2305.17550.md) (2023) [1] Signatures for shape coexistence and shape/phase transitions in even-even nuclei
+- [2305.16442](../papers/2305.16442.md) (2023) [2] Simultaneous $γ$-ray and electron spectroscopy of $^{182,184,186}$Hg isotopes
+- [2305.07577](../papers/2305.07577.md) (2023) [2] Coupled-cluster theory for strong entanglement in nuclei
+- [2304.00189](../papers/2304.00189.md) (2023) [2] Investigation of giant dipole resonance in Mo isotopes within TDHF theory
+- [2303.07040](../papers/2303.07040.md) (2023) [1] Sr isotopes: the interplay between shape coexistence and quantum phase transitions
+- [2303.00838](../papers/2303.00838.md) (2023) [2] Systematic Analysis of Double-Beta Decay Half Lives
+- [2302.07417](../papers/2302.07417.md) (2023) [1] Shape and multiple shape coexistence of nuclei within covariant density functional theory
+- [2212.08494](../papers/2212.08494.md) (2022) [2] The proxy-SU(3) symmetry in atomic nuclei
+- [2212.05940](../papers/2212.05940.md) (2022) [1] Islands of shape coexistence: theoretical predictions and experimental evidence
+- [2211.12288](../papers/2211.12288.md) (2022) [2] Investigation of octupole collectivity near the $A =72$ shape-transitional point
+- [2211.00279](../papers/2211.00279.md) (2022) [2] Microscopic formulation of the interacting boson model for reflection asymmetric nuclei
+- [2210.16067](../papers/2210.16067.md) (2022) [1] Islands of shape coexistence from single-particle spectra in covariant density functional theory
+- [2210.12779](../papers/2210.12779.md) (2022) [1] Islands of shape coexistence in proxy-SU(3) symmetry and in covariant density functional theory
+- [2209.12966](../papers/2209.12966.md) (2022) [2] Deformation dependence of 2p-radioactivity half-lives: Probe with a new formula across the mass region with Z<82
+- [2209.09463](../papers/2209.09463.md) (2022) [1] Collective-model description of shape coexistence and intruder states in cadmium isotopes based on a relativistic energy...
+- [2209.06298](../papers/2209.06298.md) (2022) [2] E2 Rotational Invariants of $0^+_1$ and $2^+_1$ states for $^{106}$Cd: the Emergence of Collective Rotation
+- [2208.02079](../papers/2208.02079.md) (2022) [2] Nucleon-pair truncation of the shell model for medium-heavy nuclei
+- [2206.15184](../papers/2206.15184.md) (2022) [2] Effect of configuration mixing on quadrupole and octupole collective states of transitional nuclei
+- [2204.00805](../papers/2204.00805.md) (2022) [1] Microscopic origin of shape coexistence in the N=90, Z=64 region
+- [2203.09837](../papers/2203.09837.md) (2022) [2] $β$ decay and evolution of low-lying structure in Ge and As nuclei
+- [2203.05324](../papers/2203.05324.md) (2022) [1] Shape coexistence in Sr isotopes
+- [2203.01013](../papers/2203.01013.md) (2022) [2] Shell-model calculation of $^{100}$Mo double-$β$ decay
+- [2202.03871](../papers/2202.03871.md) (2022) [1] Bubble nuclei with shape coexistence in even-even isotopes of Hf to Hg
+- [2201.05731](../papers/2201.05731.md) (2022) [1] Erosion of N = 28 shell closure: Shape coexistence and monopole transition
+- [2201.05892](../papers/2201.05892.md) (2022) [1] Shape Coexistence in 74Ge, 74Se and 74Kr Investigated by Phenomenological and Microscopic Models
+- [2112.06520](../papers/2112.06520.md) (2021) [1] Shape coexistence and neutron skin thickness of Pb isotopes by the deformed relativistic Hartree-Bogoliubov theory in co...
+- [2112.04056](../papers/2112.04056.md) (2021) [1] Symmetry and shape coexistence in 10Be
+- [2108.07360](../papers/2108.07360.md) (2021) [1] Structure of $^{43}$P and $^{42}$Si in a two-level shape-coexistence model
+- [2107.01498](../papers/2107.01498.md) (2021) [2] Machine learning approach to pattern recognition in nuclear dynamics from the ab initio symmetry-adapted no-core shell m...
+- [2104.06238](../papers/2104.06238.md) (2021) [2] The Neutron-Rich Edge of the Nuclear Landscape. Experiment and Theory
+- [2104.03455](../papers/2104.03455.md) (2021) [2] Benchmarking projected Hartree-Fock as an approximation
+- [2102.05133](../papers/2102.05133.md) (2021) [1] The islands of shape coexistence within the Elliott and the proxy-SU(3) Models
+- [2101.08400](../papers/2101.08400.md) (2021) [2] Giant dipole resonance in Sm isotopes within TDHF method
+- [2011.05581](../papers/2011.05581.md) (2020) [1] The subtle connection between shape coexistence and quantum phase transition. The Zr case
+- [2011.02504](../papers/2011.02504.md) (2020) [2] Structural Properties and $α$-Decay Chains of Transfermium Nuclei (101$\leq$Z$\leq$110)
+- [2008.04857](../papers/2008.04857.md) (2020) [1] Shape Coexistence at Zero Spin in 64Ni Driven by the Monopole Tensor Interaction
+- [2007.12629](../papers/2007.12629.md) (2020) [1] Two-neutron transfer reactions as a tool to study the interplay between shape coexistence and quantum phase transitions
+- [2005.11210](../papers/2005.11210.md) (2020) [2] Convergence of electric quadrupole rotational invariants from the nuclear shell model
+- [2004.13790](../papers/2004.13790.md) (2020) [2] Description of the low-lying collective states of $^{96}$Zr based on the quadrupole-collective Bohr Hamiltonian
+- [2004.10835](../papers/2004.10835.md) (2020) [2] Structure of Krypton Isotopes using the Generalised Bohr Hamiltonian Method
+- [2001.09035](../papers/2001.09035.md) (2020) [1] Shape coexistence in the neutron-deficient $^{188}$Hg investigated via lifetime measurements
+- [2001.00500](../papers/2001.00500.md) (2020) [2] Coordinate-space solver for finite-temperature Hartree-Fock-Bogoliubov calculation using the shifted Krylov method
+- [1912.05978](../papers/1912.05978.md) (2019) [2] $^{78}$Ni revealed as a doubly magic stronghold against nuclear deformation
+- [1911.06782](../papers/1911.06782.md) (2019) [2] Lifetimes and moments measurements to investigate the structure of midheavy nuclei
+- [1909.08305](../papers/1909.08305.md) (2019) [1] Interplay between shape-phase transitions and shape coexistence in the Zr isotopes
+- [1909.07188](../papers/1909.07188.md) (2019) [1] Nuclear shape coexistence from the perspective of an algebraic many-nucleon version of the Bohr-Mottelson unified model
+- [1909.00824](../papers/1909.00824.md) (2019) [1] The quest of shape coexistence in Zr isotopes

@@ -1,0 +1,116 @@
+# Neutrinoless double beta decay
+
+**PhySH lineage:** Nuclear structure & decays > [Beta decay](beta-decay.md) > Neutrinoless double beta decay
+
+**Broader:** [Beta decay](beta-decay.md)
+
+## Landscape
+
+Neutrinoless double beta decay is a hypothetical ultra-rare nuclear process that, if observed, would prove that neutrinos are their own antiparticles (Majorana particles) and that lepton number is not conserved, directly creating matter. Its discovery would have profound implications for particle physics, astrophysics, and cosmology, offering a portal to physics beyond the Standard Model and potentially explaining the matter-antimatter asymmetry of the universe. The experimental search for this decay is now a major priority, with ton-scale experiments becoming feasible, and even a non-observation provides valuable constraints on neutrino mass.
+
+The primary theoretical challenge is the accurate calculation of nuclear matrix elements (NMEs), which govern the decay rate. A review by Engel and Menendez surveys NMEs across many nuclear models, noting that rapidly developing ab initio nuclear structure theory holds promise for more accurate results. Several papers pursue this ab initio path using chiral effective field theory (EFT) interactions. Yao et al. combine the in-medium similarity renormalization group with the generator coordinate method for 48Ca, while Novario et al. use coupled-cluster theory for the same nucleus. A critical development from Cirigliano et al. and others is the demonstration, within chiral EFT, that a leading-order short-range operator is required in the transition operator, a contribution missing in all previous calculations. Other major approaches include the interacting shell model, as used by Menendez et al., and energy density functional methods, such as the Gogny D1S study by Rodriguez and Martinez-Pinedo and the covariant density functional theory by Yao et al.
+
+Active directions focus on refining the theoretical framework and reducing uncertainties. The inclusion of chiral two-body currents is shown by Menendez et al. to provide significant contributions that must be included in all calculations. A major open question is the determination of the finite part of the newly identified short-range coupling, with strategies proposed to match to lattice QCD or relate it to isospin-breaking observables. The broader effort, as described by Hagen et al., aims to ground nuclear physics in QCD using exascale computing to produce a predictive theory with quantifiable uncertainties, which is essential for interpreting the results of next-generation experiments.
+
+**Papers:** 282 (showing first 100 of 282)
+
+- [2606.09288](../papers/2606.09288.md) (2026) [1] Global Ab initio Neutrino Mass Limits from Neutrinoless Double-Beta Decay
+- [2605.21657](../papers/2605.21657.md) (2026) [1] Uncertainty Quantification of the $^{76}$Ge Neutrinoless Double-Beta Decay Nuclear Matrix Element
+- [2604.22727](../papers/2604.22727.md) (2026) [1] Ab initio short-range nuclear matrix elements for neutrinoless double-beta decay
+- [2603.20344](../papers/2603.20344.md) (2026) [2] Universality of the Majorana Double Charge Exchange
+- [2602.02152](../papers/2602.02152.md) (2026) [1] Systematical decomposition of dimension-11 short-range neutrinoless double beta decay operators
+- [2511.19173](../papers/2511.19173.md) (2025) [2] Scalarful double beta decay
+- [2510.23401](../papers/2510.23401.md) (2025) [2] Determination of the Muon Lifetime in $^{76}$Se with the MONUMENT experiment
+- [2510.21564](../papers/2510.21564.md) (2025) [2] Three-nucleon lepton-number-violating potentials in chiral EFT and their matrix elements in light nuclei
+- [2508.06221](../papers/2508.06221.md) (2025) [2] Realistic shell model for ordinary muon capture of sd-shell nuclei
+- [2508.01900](../papers/2508.01900.md) (2025) [1] Lattice Calculation of Short-Range Contributions to Neutrinoless Double-Beta Decay $π^-\toπ^+ ee$ at Physical Pion Mass
+- [2507.21845](../papers/2507.21845.md) (2025) [2] Neutrino non-radiative decay in matter: constraints and prospects
+- [2507.02538](../papers/2507.02538.md) (2025) [2] Matching from quark to hadronic operators: external source vs spurion methods
+- [2507.02707](../papers/2507.02707.md) (2025) [2] Statistical shell model for neutrinoless double $β$-decay nuclear transition matrix elements: Results for $^{76}$Ge, $^{...
+- [2506.05757](../papers/2506.05757.md) (2025) [1] Pathfinding Quantum Simulations of Neutrinoless Double-Beta Decay
+- [2505.24121](../papers/2505.24121.md) (2025) [1] Next-to-leading-order prediction for the neutrinoless double-beta decay
+- [2503.16650](../papers/2503.16650.md) (2025) [1] Virtual Majorana Neutrinos and the Minimum Neutrino Mass Scale in Neutrinoless Double-Beta Decay
+- [2502.02502](../papers/2502.02502.md) (2025) [2] Developing techniques for Simulation of SU(3) Quantum Field Theories on State-of-the-Art Quantum Devices
+- [2412.14160](../papers/2412.14160.md) (2024) [2] $2νββ$ Spectrum in Chiral Effective Field Theory
+- [2412.10497](../papers/2412.10497.md) (2024) [1] Neutrinoless double beta decay with light sterile neutrinos: the contact terms
+- [2411.09634](../papers/2411.09634.md) (2024) [2] The lowest-radiation environments in the Solar System: new opportunities for underground rare-event searches
+- [2411.04895](../papers/2411.04895.md) (2024) [2] Effective field theories for collective excitations of atomic nuclei
+- [2410.11517](../papers/2410.11517.md) (2024) [2] Constraints on neutrino-Majoron couplings using SN1987A data
+- [2408.02169](../papers/2408.02169.md) (2024) [1] Correlation of neutrinoless double-beta decay nuclear matrix elements with nucleon-nucleon phase shifts
+- [2408.01488](../papers/2408.01488.md) (2024) [1] Restricting Sterile Neutrinos by Neutrinoless Double Beta Decay
+- [2407.19695](../papers/2407.19695.md) (2024) [1] Neutrinoless double-beta decay in a finite volume from relativistic effective field theory
+- [2407.10560](../papers/2407.10560.md) (2024) [1] Confronting the low-scale seesaw and leptogenesis with neutrinoless double beta decay
+- [2407.02795](../papers/2407.02795.md) (2024) [1] Nuclear shell model study of neutrinoless double beta decay under Left-Right symmetric model
+- [2405.10503](../papers/2405.10503.md) (2024) [1] Renormalizability of the leading order operator for neutrinoless double beta decay with the effects of finite nucleon si...
+- [2403.17722](../papers/2403.17722.md) (2024) [1] Nuclear matrix elements of neutrinoless double-beta decay in covariant density functional theory with different mechanis...
+- [2403.02602](../papers/2403.02602.md) (2024) [1] Macroscopic neutrinoless double beta decay: long range quantum coherence
+- [2402.19048](../papers/2402.19048.md) (2024) [2] Nuclear medium meson structures from the Schwinger proper-time Nambu--Jona-Lasinio model
+- [2402.09362](../papers/2402.09362.md) (2024) [1] Long-Distance Nuclear Matrix Elements for Neutrinoless Double-Beta Decay from Lattice QCD
+- [2402.07993](../papers/2402.07993.md) (2024) [1] Neutrinoless double beta decay rates in the presence of light sterile neutrinos
+- [2401.16059](../papers/2401.16059.md) (2024) [2] Simultaneous Measurement of Half-Life and Spectral Shape of $^{115}$In $β$-decay with an Indium Iodide Cryogenic Calorim...
+- [2312.15016](../papers/2312.15016.md) (2023) [1] Neutrinoless Double Beta Decay without Vacuum Majorana Neutrino Mass
+- [2312.00780](../papers/2312.00780.md) (2023) [2] Theoretical Developments in Lattice Gauge Theory for Applications in Double-beta Decay Processes and Quantum Simulation
+- [2308.15634](../papers/2308.15634.md) (2023) [1] Ab initio uncertainty quantification of neutrinoless double-beta decay in $^{76}$Ge
+- [2308.08216](../papers/2308.08216.md) (2023) [1] Effect of Spin-Dependent Short-Range Correlations on Nuclear Matrix Elements for Neutrinoless Double Beta Decay of $^{48...
+- [2308.03356](../papers/2308.03356.md) (2023) [1] Relativistic model-free prediction for neutrinoless double beta decay at leading order
+- [2305.00742](../papers/2305.00742.md) (2023) [1] Impact of isovector pairing fluctuation on neutrinoless double-beta decay in multi-reference covariant density functiona...
+- [2304.11780](../papers/2304.11780.md) (2023) [1] Shape transition of Nd and Sm isotopes and neutrinoless double-beta decay nuclear matrix element of $^{150}$Nd
+- [2304.05415](../papers/2304.05415.md) (2023) [1] $ν$DoBe -- A Python Tool for Neutrinoless Double Beta Decay
+- [2303.04168](../papers/2303.04168.md) (2023) [1] Neutrinoless double-beta decay in the neutrino-extended Standard Model
+- [2302.03664](../papers/2302.03664.md) (2023) [1] Predicting the neutrinoless double-beta decay matrix element of $^{136}$Xe using a statistical approach
+- [2212.11099](../papers/2212.11099.md) (2022) [1] Neutrinoless Double Beta Decay
+- [2211.02797](../papers/2211.02797.md) (2022) [1] Optimization of generator coordinate method with machine-learning techniques for nuclear spectra and neutrinoless double...
+- [2210.05809](../papers/2210.05809.md) (2022) [1] Constraining Neutrinoless Double-Beta Decay Matrix Elements from Ab Initio Nuclear Theory
+- [2208.08595](../papers/2208.08595.md) (2022) [2] $0νββ$ to the first $2^+$ state with two-nucleon mechanism for L-R symmetric model
+- [2208.05322](../papers/2208.05322.md) (2022) [1] Neutrinoless Double Beta Decay from Lattice QCD: The Short-Distance $π^-\rightarrowπ^+ e^- e^-$ Amplitude
+- [2207.01085](../papers/2207.01085.md) (2022) [1] Towards Precise and Accurate Calculations of Neutrinoless Double-Beta Decay: Project Scoping Workshop Report
+- [2206.14235](../papers/2206.14235.md) (2022) [2] Isospin-symmetry implications for nuclear two-body distributions and short-range correlations
+- [2206.07151](../papers/2206.07151.md) (2022) [1] The Decay Q Value of Neutrinoless Double Beta Decay
+- [2204.12971](../papers/2204.12971.md) (2022) [1] Ab initio studies of double Gamow-Teller transition and its correlation with neutrinoless double beta decay
+- [2204.09569](../papers/2204.09569.md) (2022) [2] Majorana neutrino mass constraints in the landscape of nuclear matrix elements
+- [2203.12169](../papers/2203.12169.md) (2022) [1] Neutrinoless Double-Beta Decay: A Roadmap for Matching Theory to Experiment
+- [2203.10577](../papers/2203.10577.md) (2022) [1] A Statistical Analysis for the Neutrinoless Double-Beta Decay Matrix element of 48Ca
+- [2202.04563](../papers/2202.04563.md) (2022) [2] Symmetries in subatomic six-quark fermions
+- [2202.01787](../papers/2202.01787.md) (2022) [1] Toward the discovery of matter creation with neutrinoless double-beta decay
+- [2201.12983](../papers/2201.12983.md) (2022) [2] Global calculation of two-neutrino double-$β$ decay within the finite amplitude method in nuclear density functional the...
+- [2112.08146](../papers/2112.08146.md) (2021) [1] Neutrinoless double-beta decay: combining quantum Monte Carlo and the nuclear shell model with the generalized contact f...
+- [2111.15543](../papers/2111.15543.md) (2021) [1] Beyond-mean-field approaches for nuclear neutrinoless double beta decay in the standard mechanism
+- [2111.14133](../papers/2111.14133.md) (2021) [2] A Pfaffian formulation for matrix elements of three-body operators in multiple quasi-particle configurations
+- [2111.11360](../papers/2111.11360.md) (2021) [2] Partial muon capture rates in $A=3$ and $A=6$ nuclei with chiral effective field theory
+- [2111.01053](../papers/2111.01053.md) (2021) [1] Complementarity between neutrinoless double beta decay and collider searches for heavy neutrinos in composite-fermion mo...
+- [2110.09141](../papers/2110.09141.md) (2021) [1] Long-range neutrinoless double beta decay mechanisms
+- [2108.11805](../papers/2108.11805.md) (2021) [1] Neutrinoless double-beta decay from an effective field theory for heavy nuclei
+- [2108.09364](../papers/2108.09364.md) (2021) [1] The Physics of Neutrinoless Double Beta Decay: A Primer
+- [2107.13354](../papers/2107.13354.md) (2021) [1] Impact of the leading-order short-range nuclear matrix element on the neutrinoless double-beta decay of medium-mass and ...
+- [2107.08747](../papers/2107.08747.md) (2021) [2] Two-neutrino double-beta decay matrix elements based on relativistic nuclear energy density functional
+- [2107.09104](../papers/2107.09104.md) (2021) [1] Testing the Inverted Neutrino Mass Ordering with Neutrinoless Double-Beta Decay
+- [2105.05415](../papers/2105.05415.md) (2021) [1] Ab initio calculation of the contact operator contribution in the standard mechanism for neutrinoless double beta decay
+- [2104.02327](../papers/2104.02327.md) (2021) [2] Nuclear matrix elements for Majoron emitting double-$β$ decay
+- [2102.02184](../papers/2102.02184.md) (2021) [1] Large-$N_c$ analysis of two-nucleon neutrinoless double beta decay and charge-independence-breaking contact terms
+- [2101.05659](../papers/2101.05659.md) (2021) [2] Transfer reactions between odd-odd and even-even nuclei by using IBFFM
+- [2101.03299](../papers/2101.03299.md) (2021) [2] NMEs for $0νββ(0^+\rightarrow2^+)$ of two-nucleon mechanism for $^{76}$Ge
+- [2011.14734](../papers/2011.14734.md) (2020) [1] Present Status of Nuclear Shell-Model Calculations of Neutrinoless Double-Beta Decay Matrix Elements
+- [2011.03157](../papers/2011.03157.md) (2020) [2] Variational approach with the superposition of the symmetry-restored quasi-particle vacua for nuclear shell-model calcul...
+- [2010.08609](../papers/2010.08609.md) (2020) [1] Ab initio benchmarks of neutrinoless double beta decay in light nuclei with a chiral Hamiltonian
+- [2009.10119](../papers/2009.10119.md) (2020) [2] Analysis of Light Neutrino Exchange and Short-Range Mechanisms in $0νββ$ Decay
+- [2009.01257](../papers/2009.01257.md) (2020) [1] Left-right symmetry and leading contributions to neutrinoless double beta decay
+- [2008.13249](../papers/2008.13249.md) (2020) [1] Advances in modeling nuclear matrix elements of neutrinoless double beta decay
+- [2008.09696](../papers/2008.09696.md) (2020) [1] Coupled-cluster calculations of neutrinoless double-beta decay in $^{48}$Ca
+- [2008.06588](../papers/2008.06588.md) (2020) [1] Ab initio neutrinoless double-beta decay matrix elements for 48Ca, 76Ge, and 82Se
+- [2007.15542](../papers/2007.15542.md) (2020) [2] Two-neutrino double-beta decay in pionless effective field theory from a Euclidean finite-volume correlation function
+- [2004.07404](../papers/2004.07404.md) (2020) [1] Neutrinoless Double Beta Decay from Lattice QCD: The Long-Distance $π^{-} \rightarrow π^{+} e^{-} e^{-}$ Amplitude
+- [2003.11836](../papers/2003.11836.md) (2020) [2] Searching for New Physics in Two-Neutrino Double Beta Decay
+- [2003.08493](../papers/2003.08493.md) (2020) [2] Lattice QCD Inputs for Nuclear Double Beta Decay
+- [2003.04002](../papers/2003.04002.md) (2020) [2] Nuclear matrix elements for $λ$ mechanism of $0νββ$ of $^{48}$Ca in nuclear shell-model: Closure versus nonclosure appro...
+- [2003.05060](../papers/2003.05060.md) (2020) [2] Role of individual components of two-nucleon interaction in nuclear matrix elements of $2νββ$ and $0νββ$ of $^\textbf{48...
+- [2002.07182](../papers/2002.07182.md) (2020) [1] Sterile neutrinos and neutrinoless double beta decay in effective field theory
+- [2001.00890](../papers/2001.00890.md) (2020) [1] The calculation of the neutrinoless double-beta decay matrix element within the realistic shell model
+- [1912.02850](../papers/1912.02850.md) (2019) [2] Interference Effects for $0νββ$ Decay in the Left-Right Symmetric Model
+- [1911.12117](../papers/1911.12117.md) (2019) [1] Neutrinoless Double-Beta Decay and Realistic Shell Model
+- [1910.07961](../papers/1910.07961.md) (2019) [2] Towards grounding nuclear physics in QCD
+- [1910.04146](../papers/1910.04146.md) (2019) [1] Short-range correlations for neutrinoless double-beta decay and low-momentum NN potentials
+- [1910.03000](../papers/1910.03000.md) (2019) [2] 20Ne + 76Ge elastic and inelastic scattering at 306 MeV
+- [1909.13525](../papers/1909.13525.md) (2019) [1] Long-distance Contributions to Neutrinoless Double Beta Decay $π^- \toπ^+ e e$
+- [1909.06501](../papers/1909.06501.md) (2019) [1] Benchmark neutrinoless double-beta decay matrix elements in a light nucleus
+- [1908.05424](../papers/1908.05424.md) (2019) [1] Ab Initio Treatment of Collective Correlations and the Neutrinoless Double Beta Decay of $^{48}$Ca
+- [1908.01873](../papers/1908.01873.md) (2019) [1] The union of rotational and vibrational modes in generator-coordinate-type calculations, with application to neutrinoles...

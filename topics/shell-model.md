@@ -1,0 +1,114 @@
+# Shell model
+
+**PhySH lineage:** Shell model
+
+## Landscape
+
+The nuclear shell model is a foundational paradigm for understanding the structure of atomic nuclei, describing how protons and neutrons occupy quantized energy levels, or shells, analogous to electrons in atoms. This topic matters because it explains the emergence of magic numbers, which correspond to particularly stable nuclei, and provides a framework for predicting nuclear properties across the entire chart of nuclides, including exotic, short-lived isotopes.
+
+The field encompasses both phenomenological and ab initio approaches. Traditional large-scale shell-model calculations diagonalize matrices in spaces up to \(10^9\) dimensions using the Lanczos method, as analyzed in "The Shell Model as Unified View of Nuclear Structure." Ab initio methods, such as the In-Medium Similarity Renormalization Group (IM-SRG) reviewed by Hergert et al., continuously decouple the ground state from excitations. The no-core shell model (NCSM) is applied to light nuclei like \(^{12}\)C using realistic nucleon-nucleon potentials, while a nucleus-dependent valence-space approach generalizes the IM-SRG to an ensemble reference, capturing three-nucleon forces for medium-mass nuclei. Effective interactions are also derived from chiral effective field theory, as seen in the local three-nucleon interaction used in NCSM calculations for \(^{3}\)H and \(^{4}\)He.
+
+Active directions include the evolution of shell structure in exotic nuclei, where traditional magic numbers may change due to spin- and isospin-dependent interactions. Open questions involve the microscopic description of clustering in light nuclei, as reviewed in "Microscopic Clustering in Light Nuclei," and the development of efficient eigensolvers like the thick-restart block Lanczos method for highly excited states. The interplay between shape coexistence and the effective nucleon-nucleon interaction, explored via Hartree-Fock and shell-model methods, remains an active area of investigation.
+
+**Papers:** 2308 (showing first 100 of 2308)
+
+- [2606.11668](../papers/2606.11668.md) (2026) [2] Application of the Skyrme Hartree-Fock-Bogoliubov Theory to WIMP-Nucleus Interactions in 40Ar
+- [2606.08963](../papers/2606.08963.md) (2026) [2] Systematic study of the half-lives of nuclear bound-state $β^-$ decay
+- [2606.07302](../papers/2606.07302.md) (2026) [1] Probing exotic multi-proton emitters: A Gamow shell model study of proton-rich fluorine and neon isotopes beyond the dri...
+- [2606.07465](../papers/2606.07465.md) (2026) [2] Proton and Neutron Elastic Scattering on He Targets from $\textit{Ab Initio}$ SA-NCSM Optical Potentials
+- [2606.02270](../papers/2606.02270.md) (2026) [2] The spectrum of $^{18}$O in terms of the multiconfigurational dynamical symmetry
+- [2605.30261](../papers/2605.30261.md) (2026) [2] Qubit-efficient variational algorithm for nuclear structure
+- [2605.21657](../papers/2605.21657.md) (2026) [2] Uncertainty Quantification of the $^{76}$Ge Neutrinoless Double-Beta Decay Nuclear Matrix Element
+- [2605.16533](../papers/2605.16533.md) (2026) [2] One- and two-nucleon transfer in $^{\mathbf{116}}$Sn+$^{\mathbf{60}}$Ni: A coupled reaction channel analysis
+- [2605.11353](../papers/2605.11353.md) (2026) [2] Ab initio calculation of symmetry-breaking observables
+- [2605.12626](../papers/2605.12626.md) (2026) [2] Short-range correlations in nuclei
+- [2604.22599](../papers/2604.22599.md) (2026) [1] The 0+-spectrum in rare earth nuclei within the pseudo-SU(3) shell model
+- [2604.13766](../papers/2604.13766.md) (2026) [2] Spectroscopy of $^{11}$Be from the $^{10}$Be($d,p$) reaction measured in inverse kinematics by the AT-TPC in SOLARIS
+- [2604.10972](../papers/2604.10972.md) (2026) [2] Microscopic investigation of $E2$ matrix elements in atomic nuclei -- II
+- [2604.11381](../papers/2604.11381.md) (2026) [2] Improved quasiparticle nuclear Hamiltonians for quantum computing
+- [2604.11918](../papers/2604.11918.md) (2026) [2] Parameter-free deformation variables of the proxy-SU(3) symmetry in even-even atomic nuclei with Z=28-82, N=28-126
+- [2604.09935](../papers/2604.09935.md) (2026) [1] From credible shell model interactions to neutron-capture uncertainties
+- [2604.08253](../papers/2604.08253.md) (2026) [2] High-precision ab initio nuclear theory: Learning to overcome model-space limitations
+- [2604.02612](../papers/2604.02612.md) (2026) [2] Halo Nuclei from Ab Initio Nuclear Theory
+- [2604.03410](../papers/2604.03410.md) (2026) [2] Precise determination of electron-capture $Q$ value of $^{113}$Sn decay related to electron neutrino mass measurements
+- [2603.28383](../papers/2603.28383.md) (2026) [2] Study of radiative proton capture by the 7Be nucleus with the use of ab initio approaches
+- [2603.28978](../papers/2603.28978.md) (2026) [2] Ab initio optical potentials for magnesium isotopes: from stability to the island of inversion
+- [2603.26265](../papers/2603.26265.md) (2026) [2] Inelastic nucleon-nucleus scattering from a microscopic point of view
+- [2603.24022](../papers/2603.24022.md) (2026) [2] Precision Tests of Isospin Symmetry through Coulomb excitation of A = 62 Nuclei
+- [2603.21985](../papers/2603.21985.md) (2026) [1] Systematic Cranked Shell Model Calculations for $^{87, 89, 91}$Br
+- [2603.18632](../papers/2603.18632.md) (2026) [2] Single-particle strength toward N = 32: Spectroscopy of 51 Ca via the 50 Ca(d, p) reaction
+- [2603.17414](../papers/2603.17414.md) (2026) [2] Resolving anomalous collectivity in the $4_1^+$ to $2_1^+$ transition of $^{58}$Fe
+- [2603.07056](../papers/2603.07056.md) (2026) [2] $^{14}$N(p,$γ)^{15}$O $S$ factor and the puzzling solar composition problem
+- [2603.07157](../papers/2603.07157.md) (2026) [2] Microscopic investigation of $γ~$ vibrational band structures in odd-mass nuclei
+- [2603.01429](../papers/2603.01429.md) (2026) [2] Probing a Fifth Force in Muonic Atoms through Lamb Shifts and Hyperfine Structure
+- [2602.24175](../papers/2602.24175.md) (2026) [2] Theoretical Studies of alpha Clustering in Nuclei and Beyond
+- [2603.00352](../papers/2603.00352.md) (2026) [2] Electromagnetic Properties of the N=50 Isotones with the p35-i3 Hamiltonian
+- [2602.18162](../papers/2602.18162.md) (2026) [2] Light antiproton-nucleus systems at low energies with the ab initio NCSM/RGM method
+- [2602.11308](../papers/2602.11308.md) (2026) [2] Partial conservation of seniority in semi-magic nuclei
+- [2602.06580](../papers/2602.06580.md) (2026) [2] Quasi-elastic scattering for the nuclear ground state structure: An intriguing case of $^{30}$Si
+- [2602.05678](../papers/2602.05678.md) (2026) [2] Three-body Effect in Short-range Correlations
+- [2602.01552](../papers/2602.01552.md) (2026) [2] Structure evolution of ground and excited states in the exotic nucleus $^{22}$Al
+- [2601.18688](../papers/2601.18688.md) (2026) [2] First observation of multi-phonon $γ$-vibrations in an odd-odd nuclear system
+- [2601.14596](../papers/2601.14596.md) (2026) [2] How Threshold Effects in Spectroscopic Factors Influence Heavy-Ion Knockout Reactions
+- [2601.14604](../papers/2601.14604.md) (2026) [2] \textit{Ab initio} study of spectroscopic factors in $^{48}$K and neighboring $N=28$ isotones
+- [2601.15002](../papers/2601.15002.md) (2026) [2] Decomposition of angular momentum projected nuclear wave function
+- [2601.12829](../papers/2601.12829.md) (2026) [2] Electric dipole strength in $sd$-shell nuclei from small-angle proton scattering
+- [2601.12225](../papers/2601.12225.md) (2026) [2] Radiative strength functions from the energy-localized Brink-Axel hypothesis
+- [2601.12496](../papers/2601.12496.md) (2026) [2] Microscopic investigation of magnetic and antimagnetic rotational motion in atomic nuclei
+- [2601.09614](../papers/2601.09614.md) (2026) [2] Ab initio charge form factors and radii of light isoscalar nuclei: Role of the two-body charge density
+- [2601.06242](../papers/2601.06242.md) (2026) [2] Direct transfer to $^{46,48}$K as a survey of the $π(s_{1/2})$$-ν(sdpf)$ interaction
+- [2601.05058](../papers/2601.05058.md) (2026) [2] Benchmarking projected generator coordinate method for nuclear Gamow-Teller transitions
+- [2601.00315](../papers/2601.00315.md) (2026) [2] Toward $\textit{Ab Initio}$ Quantum Simulations of Atomic Nuclei Using Noisy Qubits
+- [2512.24123](../papers/2512.24123.md) (2025) [2] Halo structure of $^6$He from $\textit{ab initio}$ two-nucleon spatial correlations
+- [2512.24280](../papers/2512.24280.md) (2025) [2] Nuclear structure properties of $^{184-194}$Pb isotopes and isomers
+- [2512.22951](../papers/2512.22951.md) (2025) [2] The effect of inversion of $p$ and $f$ orbits on halo formation in heavy sodium isotopes
+- [2512.16329](../papers/2512.16329.md) (2025) [1] Modeling Ultra-High-Energy Cosmic Rays propagation using the input from Configuration Interaction Shell Model
+- [2512.16773](../papers/2512.16773.md) (2025) [2] Comparing invariant-mass spectroscopy of 8B with ab initio predictions
+- [2512.15454](../papers/2512.15454.md) (2025) [2] Universality of nucleon short-range behavior with chiral forces
+- [2512.15598](../papers/2512.15598.md) (2025) [2] Triplet of kindred prompt-2p emitters in mass-8 proton-rich nuclei
+- [2512.14447](../papers/2512.14447.md) (2025) [2] Modeling Short-Range Nucleon Pair and Triplet Abundances in Atomic Nuclei
+- [2512.13322](../papers/2512.13322.md) (2025) [1] Shell model study of isobaric analog states for $T_z= \pm 2$ nuclei using isospin non-conserving interactions
+- [2512.12798](../papers/2512.12798.md) (2025) [2] Single-step Quantum Simulation of Two Nucleons
+- [2512.11555](../papers/2512.11555.md) (2025) [2] The $B(E2)$ anomaly: Evidence for a low-lying mixed-symmetry collective excitation mode
+- [2512.07376](../papers/2512.07376.md) (2025) [1] Shell-model calculation with density-dependent interaction for $pf$-shell nuclei
+- [2512.07594](../papers/2512.07594.md) (2025) [1] Gamow shell model predictions for six-proton unbound nucleus $^{20}$Si
+- [2511.20247](../papers/2511.20247.md) (2025) [1] Discrete non-orthogonal shell model for nuclear structure: Towards heavy elements
+- [2511.18129](../papers/2511.18129.md) (2025) [2] Nuclear structure study with two- and three-nucleon contact interactions derived within low-energy EFT
+- [2511.14674](../papers/2511.14674.md) (2025) [2] Deviations from the Isobaric Multiplet Mass Equation due to threshold states
+- [2511.11565](../papers/2511.11565.md) (2025) [2] Low-energy enhancement in the magnetic dipole radiation of actinide nuclei
+- [2511.05061](../papers/2511.05061.md) (2025) [1] Extrapolation to infinite model space of no-core shell model calculations using machine learning
+- [2511.03161](../papers/2511.03161.md) (2025) [1] Centroids of nuclear shell-model Hamiltonians, with optimization of energy-based truncation schemes
+- [2511.00862](../papers/2511.00862.md) (2025) [2] Investigation of $2ν$ECEC in $^{132}$Ba and revisited for $^{78}$Kr
+- [2510.27293](../papers/2510.27293.md) (2025) [2] Double pole $S$-matrix singularity in the continuum of $^7$Be
+- [2511.00313](../papers/2511.00313.md) (2025) [2] Challenges for first-principles nuclear structure: $^{11}$Li and $^{29}$F
+- [2510.25197](../papers/2510.25197.md) (2025) [1] Impact of shell model interactions on WIMP-nucleus scattering observables for silicon and germanium targets
+- [2510.23779](../papers/2510.23779.md) (2025) [2] Microscopic study of the low-energy enhancement in the gamma-decay strength of \(^{50}\)V
+- [2510.23787](../papers/2510.23787.md) (2025) [2] RHODIUM: A post-processor for BIGSTICK configuration-interaction wave functions
+- [2510.22352](../papers/2510.22352.md) (2025) [2] Origin of the electric hexadecapole isomer in $^{93}$Mo
+- [2510.19513](../papers/2510.19513.md) (2025) [2] Coherent and incoherent antineutrino scattering on stable even-even isotopes of molybdenum detectors
+- [2510.19561](../papers/2510.19561.md) (2025) [2] The Regulated GeAs Cycles with the New $^{63}$Ga(p,$γ$)$^{64}$Ge and $^{64}$Ge(p,$γ$)$^{65}$As Reaction Rates and Their ...
+- [2510.19757](../papers/2510.19757.md) (2025) [2] Beta-decay Half Lives beyond $^{54}$Ca: A Systematic Survey of Decay Properties approaching the Neutron Dripline
+- [2510.19067](../papers/2510.19067.md) (2025) [2] Connecting ground-state properties of ${}^6$Li to each other and to scattering data
+- [2510.16775](../papers/2510.16775.md) (2025) [2] Probing the shape evolution and shell structures in neutron-rich N=50 nuclei
+- [2510.14933](../papers/2510.14933.md) (2025) [2] Nucleon Electric Dipole Moments in Paramagnetic Molecules through Effective Field Theory
+- [2510.15171](../papers/2510.15171.md) (2025) [2] Ab initio symmetry-adapted approaches to nuclear reactions
+- [2510.12103](../papers/2510.12103.md) (2025) [2] The role of the overlap function in describing angular distributions of single-nucleon transfer reactions
+- [2510.12207](../papers/2510.12207.md) (2025) [2] Perturbative $χ$EFT calculations of the deuteron and triton up to N$^2$LO
+- [2510.07693](../papers/2510.07693.md) (2025) [1] Gamow shell model study of the 17Ne(p, p) reaction and of isospin symmetry breaking in 18Na
+- [2510.07701](../papers/2510.07701.md) (2025) [1] Gamow shell model calculations for the Thomas-Ehrman shift in new isotopes 21Al
+- [2510.07711](../papers/2510.07711.md) (2025) [1] Large scale shell model calculation for collectivity in nuclei beyond 78Ni
+- [2510.08019](../papers/2510.08019.md) (2025) [2] Collectivity and isomers in the Pb isotopes
+- [2510.05726](../papers/2510.05726.md) (2025) [2] Microscopic study of nuclei synthesis in pycnonuclear reaction $^{12}$C + $^{12}$C in neutron stars
+- [2510.04456](../papers/2510.04456.md) (2025) [2] $β$-Delayed Proton Pandemonium: A first look at the $^{31}$Cl($βp γ$)$^{30}$P decay scheme
+- [2510.05073](../papers/2510.05073.md) (2025) [2] Valence $1s-0d$ proton vacancy of the $^{32}$Si ground state
+- [2510.01928](../papers/2510.01928.md) (2025) [1] Gamow shell model description of exceptional point in $^7$Li
+- [2510.02124](../papers/2510.02124.md) (2025) [1] A low-circuit-depth quantum computing approach to the nuclear shell model
+- [2509.26571](../papers/2509.26571.md) (2025) [1] Nuclear state and level densities of actinides with the shell-model Monte Carlo
+- [2509.24542](../papers/2509.24542.md) (2025) [2] Many-body correlations as the origin of Gamow-Teller quenching in nuclear $β$-decay
+- [2509.24549](../papers/2509.24549.md) (2025) [2] Anomaly in first-forbidden transitions of $^{176}$Lu
+- [2509.20642](../papers/2509.20642.md) (2025) [2] Bridging Quantum Computing and Nuclear Structure: Atomic Nuclei on a Trapped-Ion Quantum Computer
+- [2509.12549](../papers/2509.12549.md) (2025) [2] A weak entanglement approximation for nuclear structure: review and recent developments
+- [2509.09634](../papers/2509.09634.md) (2025) [2] Algebraic treatment of alpha-cluster nuclei
+- [2509.07310](../papers/2509.07310.md) (2025) [2] Quantum Monte Carlo calculation of $δ_{\rm NS}$ in $^{10}$C using an effective field theory approach
+- [2508.19686](../papers/2508.19686.md) (2025) [1] Microscopic nuclear structure study of $^{229}$Th by Projected Shell Model
+- [2508.18189](../papers/2508.18189.md) (2025) [1] New shell-model calculations of the $δ_C$ correction to superallowed $0^+\rightarrow0^+$ nuclear $β$ decay and standard-...

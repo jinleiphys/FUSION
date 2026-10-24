@@ -1,0 +1,116 @@
+# Hard scattering
+
+**PhySH lineage:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md) > Hard scattering
+
+**Broader:** [Relativistic heavy-ion collisions](relativistic-heavy-ion-collisions.md)
+
+## Landscape
+
+Hard scattering refers to high-momentum-transfer interactions between partons, which are calculable in perturbative QCD and serve as the foundation for precision phenomenology at colliders. This topic matters because it connects the fundamental quark and gluon structure of hadrons to observable final-state particles, enabling tests of the Standard Model and probes of the quark-gluon plasma in heavy-ion collisions.
+
+The main approaches include the BDMPS-Z formalism for medium-induced gluon radiation, used in "Calculating Quenching Weights" to compute quenching weights for hard partons in expanding QCD matter. The "Parton-Based Gribov-Regge Theory" provides a unified treatment of soft and hard scattering without a cutoff parameter. "An Effective Field Theory for Forward Scattering and Factorization Violation" derives Glauber gluon exchanges within SCET, showing how they can invalidate factorization. "Parton Physics from Large-Momentum Effective Field Theory" introduces LaMET to extract parton properties from lattice QCD. Global PDF analyses, reviewed in "The Structure of the Proton in the LHC Precision Era", incorporate hard-scattering measurements to determine parton distributions.
+
+Active directions include the role of thermalization in hard scattering, as explored in "Thermal Radiation and Entanglement in Proton-Proton Collisions at the LHC", which finds an effective temperature extending to Higgs production. The interplay of initial hard scattering and regeneration in the quark-gluon plasma is studied for charmonium and bottomonia production in "Charmonium Production in Heavy-Ion Collisions from SPS to LHC" and "Bottomonia Suppression in Heavy-Ion Collisions". New observables such as the azimuthal dependence of energy correlators, introduced in "Probing Transverse Momentum Dependent Structures with Azimuthal Dependence of Energy Correlators", offer novel probes of transverse momentum dependent parton distributions.
+
+**Papers:** 119 (showing first 100 of 119)
+
+- [2604.20780](../papers/2604.20780.md) (2026) [2] Probing QCD instantons using jet correlation observables in proton-proton collisions at the LHC
+- [2604.13157](../papers/2604.13157.md) (2026) [2] Proton Structure from Neural Simulation-Based Inference at the LHC
+- [2604.11616](../papers/2604.11616.md) (2026) [2] Quantum simulating multi-particle processes in high energy nuclear physics: dijet production and color (de)coherence
+- [2603.23596](../papers/2603.23596.md) (2026) [2] A Breath of Fresh Air for Molière: Detecting Molière Scattering using Jet Substructure Observables in Oxygen Collisions
+- [2603.08776](../papers/2603.08776.md) (2026) [2] Sensitivity of Jet Observables to Molière Scattering Off Quasiparticles in Quark-Gluon Plasma
+- [2602.17860](../papers/2602.17860.md) (2026) [2] Producing and Studying Rare Isotopes in $e+A$ Collisions at the Electron-Ion Collider
+- [2511.14105](../papers/2511.14105.md) (2025) [2] Inclusive $J/ψ$ productions in pp collisions at $\sqrt{s}=$ 5.02, 7, and 13 TeV with the PACIAE model
+- [2511.09019](../papers/2511.09019.md) (2025) [2] The color force acting on a quark in the pion and nucleon
+- [2510.24847](../papers/2510.24847.md) (2025) [2] Heavy Quark Energy Loss in the Hybrid Model
+- [2507.09744](../papers/2507.09744.md) (2025) [2] Fragmentation of fully heavy tetraquarks: The TQ4Q1.1 functions as a case study
+- [2506.13889](../papers/2506.13889.md) (2025) [2] Deep-Inelastic Scattering at TeV Energies with LHC Muons
+- [2506.07426](../papers/2506.07426.md) (2025) [2] Tracing the Evolution of Nuclear Excitation at the Electron-Ion Collider
+- [2505.10663](../papers/2505.10663.md) (2025) [2] Distribution Functions of $Λ$ and $Σ^0$ Baryons
+- [2504.07372](../papers/2504.07372.md) (2025) [2] Empirical Determination of the Kaon Distribution Amplitude
+- [2502.18887](../papers/2502.18887.md) (2025) [2] A hybrid model for multi-particle production and multi-fragment emission in electron-nucleus collisions at the forthcomi...
+- [2412.19738](../papers/2412.19738.md) (2024) [2] Hard Photon Triggered Jets in $p$-$p$ and $A$-$A$ Collisions
+- [2412.14026](../papers/2412.14026.md) (2024) [2] Dynamics of Hot QCD Matter 2024 -- Hard Probes
+- [2412.14247](../papers/2412.14247.md) (2024) [2] Secondary Lund jet plane as a gluon enriched sample
+- [2412.05661](../papers/2412.05661.md) (2024) [2] On the quarkonium-in-jet collinear fragmentation at moderate-to-large transverse momentum
+- [2408.06871](../papers/2408.06871.md) (2024) [2] Pion to photon transition form factor: Beyond valence quarks
+- [2407.19966](../papers/2407.19966.md) (2024) [2] QCD jets in a hot and dense medium: a study of shower formation time and collision kernels
+- [2407.17443](../papers/2407.17443.md) (2024) [2] A soft-hard framework with exact four momentum conservation for small systems
+- [2406.10779](../papers/2406.10779.md) (2024) [2] Quarkonium fragmentation in a variable-flavor number scheme: Towards NRFF1.0
+- [2406.10129](../papers/2406.10129.md) (2024) [2] Investigating the Role of Quantum Entanglement in Heavy Ion Collisions through Elliptic Flow
+- [2405.20660](../papers/2405.20660.md) (2024) [2] Factorization of photon induced processes in ultra-peripheral heavy ion collisions
+- [2405.19399](../papers/2405.19399.md) (2024) [2] Hard processes in multi-TeV ion collisions
+- [2403.01224](../papers/2403.01224.md) (2024) [2] Study of identified particle production as a function of transverse event activity classifier, $S_{T}$ in p$-$p collisio...
+- [2402.06095](../papers/2402.06095.md) (2024) [2] Contact interaction study of proton parton distributions
+- [2401.06895](../papers/2401.06895.md) (2024) [2] Mini-jet Clustering Algorithm Using Transverse-momentum Seeds in High-energy Nuclear Collisions
+- [2310.15159](../papers/2310.15159.md) (2023) [2] Probing Transverse Momentum Dependent Structures with Azimuthal Dependence of Energy Correlators
+- [2309.03346](../papers/2309.03346.md) (2023) [2] On the definition of fragmentation functions and the violation of sum rules
+- [2307.07890](../papers/2307.07890.md) (2023) [2] Comparative multi-probe study of jet energy-loss in QGP
+- [2212.05944](../papers/2212.05944.md) (2022) [2] Comparing the MARTINI and CUJET models for jet-quenching: Medium modification of jets and jet substructure
+- [2211.13674](../papers/2211.13674.md) (2022) [2] Jet radius and momentum splitting fraction with dynamical grooming in heavy-ion collisions
+- [2203.02579](../papers/2203.02579.md) (2022) [2] The Status and Future of Color Transparency and Nuclear Filtering
+- [2112.07680](../papers/2112.07680.md) (2021) [2] Factorization for Azimuthal Asymmetries in SIDIS at Next-to-Leading Power
+- [2112.04593](../papers/2112.04593.md) (2021) [2] Deciphering the role of multiple scatterings and time delays in the in-medium emission process
+- [2110.14384](../papers/2110.14384.md) (2021) [2] The importance of multiple scatterings in medium-induced gluon radiation
+- [2106.00752](../papers/2106.00752.md) (2021) [2] Electromagnetic radii of the nucleon in soft-wall holographic QCD
+- [2011.14909](../papers/2011.14909.md) (2020) [2] Progress in the Glauber model at collider energies
+- [2011.06522](../papers/2011.06522.md) (2020) [2] From soft to hard radiation: the role of multiple scatterings in medium-induced gluon emissions
+- [2009.04407](../papers/2009.04407.md) (2020) [2] Photon-jet correlations in p-p and Pb-Pb collisions using JETSCAPE framework
+- [2008.10606](../papers/2008.10606.md) (2020) [2] QCD Beyond Leading Power
+- [2007.14425](../papers/2007.14425.md) (2020) [2] QCD resummation on single hadron transverse momentum distribution with the thrust axis
+- [2005.01093](../papers/2005.01093.md) (2020) [2] Medium modifications of girth distributions for inclusive jets and $Z^0+{\rm jet}$ in relativistic heavy-ion collisions ...
+- [2003.02884](../papers/2003.02884.md) (2020) [2] Improved opacity expansion for medium-induced parton splitting
+- [1911.01309](../papers/1911.01309.md) (2019) [2] Jet quenching test of the QCD matter created at RHIC and the LHC needs opacity-resummed medium induced radiation
+- [1905.07864](../papers/1905.07864.md) (2019) [2] Deep Inelastic Scattering on an Extremal RN-AdS Black Hole II: Holographic Fermi Surface
+- [1901.03878](../papers/1901.03878.md) (2019) [2] First 4D lattice calculation of transport coefficient $\hat{q}$ for pure gluon plasma
+- [1811.01021](../papers/1811.01021.md) (2018) [2] The Entropy of a Jet
+- [1809.04975](../papers/1809.04975.md) (2018) [2] Nonperturbative strange-quark sea from lattice QCD, light-front holography, and meson-baryon fluctuation models
+- [1808.09461](../papers/1808.09461.md) (2018) [2] Mass-dependence of pseudoscalar meson elastic form factors
+- [1805.01295](../papers/1805.01295.md) (2018) [2] Exclusive production of pions and the pion distribution amplitude
+- [1801.10164](../papers/1801.10164.md) (2018) [2] Process-independent effective coupling. From QCD Green's functions to phenomenology
+- [1712.04558](../papers/1712.04558.md) (2017) [2] Thermal radiation and entanglement in proton-proton collisions at the LHC
+- [1710.01203](../papers/1710.01203.md) (2017) [2] Event patterns extracted from anisotropic spectra of charged particles produced in Pb-Pb collisions at 2.76 TeV
+- [1709.04922](../papers/1709.04922.md) (2017) [2] The Structure of the Proton in the LHC Precision Era
+- [1703.04875](../papers/1703.04875.md) (2017) [2] Exposing strangeness: projections for kaon electromagnetic form factors
+- [1703.03408](../papers/1703.03408.md) (2017) [2] A Subleading Operator Basis and Matching for $gg \to H$
+- [1703.03411](../papers/1703.03411.md) (2017) [2] A Complete Basis of Helicity Operators for Subleading Factorization
+- [1612.02438](../papers/1612.02438.md) (2016) [2] Hunting the Gluon Orbital Angular Momentum at the Electron-Ion Collider
+- [1611.04848](../papers/1611.04848.md) (2016) [2] Direct-Photon Spectra and Anisotropic Flow in Heavy Ion Collisions from Holography
+- [1609.07208](../papers/1609.07208.md) (2016) [2] Holographic Photon Production in Heavy Ion Collisions
+- [1609.06688](../papers/1609.06688.md) (2016) [2] Analysis of nucleon electromagnetic form factors from light-front holographic QCD : The spacelike region
+- [1604.01207](../papers/1604.01207.md) (2016) [2] Thermal production of charm quarks in heavy ion collisions at Future Circular Collider
+- [1604.01441](../papers/1604.01441.md) (2016) [2] Evolving images of the proton: Hadron physics over the past 40 years
+- [1603.09296](../papers/1603.09296.md) (2016) [2] Relating $\hat{q}$, $η/s$ and $ΔE$ in an expanding Quark-Gluon Plasma
+- [1603.06607](../papers/1603.06607.md) (2016) [2] Consequences of high-$x$ proton size fluctuations in small collision systems at RHIC
+- [1601.04695](../papers/1601.04695.md) (2016) [2] An Effective Field Theory for Forward Scattering and Factorization Violation
+- [1512.00006](../papers/1512.00006.md) (2015) [2] Initial-state splitting kernels in cold nuclear matter
+- [1511.04423](../papers/1511.04423.md) (2015) [2] Experiment summary
+- [1502.02986](../papers/1502.02986.md) (2015) [2] Kinematic biases on centrality selection of jet events in pPb collisions at the LHC
+- [1411.0904](../papers/1411.0904.md) (2014) [2] Hard Excluseive $Φ$ and $J/Ψ$ Photoproduction off a Proton
+- [1408.3403](../papers/1408.3403.md) (2014) [2] Mass depletion: a new parameter for quantitative jet modification
+- [1404.6680](../papers/1404.6680.md) (2014) [2] Parton Physics from Large-Momentum Effective Field Theory
+- [1401.1806](../papers/1401.1806.md) (2014) [2] Coherence effects between the initial and final state radiation in a dense QCD medium
+- [1312.3742](../papers/1312.3742.md) (2013) [2] Alternative way to understand the unexpected results of the JLab polarization experiments to measure the Sachs form fact...
+- [1309.7330](../papers/1309.7330.md) (2013) [1] Relativistic Hard-Scattering and Tsallis Fits to pT Spectra in pp Collisions at the LHC
+- [1309.5371](../papers/1309.5371.md) (2013) [2] Bayesian reweighting of nuclear PDFs and constraints from proton-lead collisions at the LHC
+- [1308.2186](../papers/1308.2186.md) (2013) [2] Coherence phenomena between initial and final state radiation in a dense QCD medium
+- [1307.7034](../papers/1307.7034.md) (2013) [2] How robust is a thermal photon interpretation of the ALICE low-p_T data?
+- [1307.3557](../papers/1307.3557.md) (2013) [2] Multiple scattering effects on inclusive particle production in the large-x regime
+- [1305.2627](../papers/1305.2627.md) (2013) [1] Tsallis Fits to pT Spectra and Multiple Hard Scattering in pp Collisions at the LHC
+- [1212.1702](../papers/1212.1702.md) (2012) [2] Global parton distributions with nuclear and finite-Q^2 corrections
+- [1212.1127](../papers/1212.1127.md) (2012) [2] Head shock vs Mach cone: azimuthal correlations from 2 to 3 parton processes in relativistic heavy-ion collisions
+- [1210.0634](../papers/1210.0634.md) (2012) [2] On the physical meaning of Sachs form factors and on the violation of the dipole dependence of G_E and G_M on Q^2
+- [1205.2410](../papers/1205.2410.md) (2012) [2] Monte Carlo approach for hadron azimuthal correlations in high energy proton and nuclear collisions
+- [1109.6691](../papers/1109.6691.md) (2011) [2] Bottomonia suppression in heavy-ion collisions
+- [1108.4977](../papers/1108.4977.md) (2011) [2] QCD Structure of Nuclear Interactions
+- [1103.6197](../papers/1103.6197.md) (2011) [2] Charmonium production in heavy-ion collisions from SPS to LHC
+- [1011.1812](../papers/1011.1812.md) (2010) [2] Generalized parton distributions and the parton structure of light nuclei
+- [1007.0758](../papers/1007.0758.md) (2010) [2] Systematic Improvement of Parton Showers with Effective Theory
+- [0912.1377](../papers/0912.1377.md) (2009) [2] Scaling Behavior of the Azimuthal and Centrality Dependencies of Jet Production in Heavy-ion Collisions
+- [0909.0098](../papers/0909.0098.md) (2009) [2] Probing non-perturbative QCD through hadronic matrix elements extracted from exclusive hard processes
+- [0901.3058](../papers/0901.3058.md) (2009) [2] Conventional nuclear effects on generalized parton distributions of trinucleons
+- [0812.4590](../papers/0812.4590.md) (2008) [2] Hard Break-Up of Two-Nucleons from the 3He Nucleus
+- [0801.2183](../papers/0801.2183.md) (2008) [2] Azimuthal Anisotropy: Ridges, Recombination and Breaking of Quark Number Scaling
+- [0711.2475](../papers/0711.2475.md) (2007) [2] Photon bremsstrahlung and diffusive broadening of a hard jet
+- [0709.1684](../papers/0709.1684.md) (2007) [2] Thermal Charm Production in Quark-Gluon Plasma at LHC
+- [0708.1508](../papers/0708.1508.md) (2007) [1] Elliptic Flow arising from Ridges due to Semi-hard Scattering
