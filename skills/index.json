@@ -80,13 +80,14 @@
     },
     {
       "name": "coloss",
-      "version": "e82e950e4385",
+      "version": "914a7c145dab",
       "files": [
         "AGENTS.md",
         "SKILL.md",
         "examples/6Li208Pb.in",
         "examples/alpha40Ca.in",
         "examples/n40Ca.in",
+        "examples/n90Zr-kd02-50MeV.in",
         "references/verification.md",
         "scripts/install_coloss.sh",
         "scripts/run_coloss.sh"
@@ -94,7 +95,7 @@
     },
     {
       "name": "exfor-data",
-      "version": "2aac202c665c",
+      "version": "914a7c145dab",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -104,7 +105,7 @@
     },
     {
       "name": "fresco",
-      "version": "2aac202c665c",
+      "version": "914a7c145dab",
       "files": [
         "AGENTS.md",
         "SKILL.md",
@@ -117,6 +118,7 @@
         "examples/be11-cdcc-lowlevel.nin",
         "examples/crc-16O-208Pb-multistep.nin",
         "examples/dex-deuteron-cdcc.nin",
+        "examples/n90Zr-kd02-50MeV.in",
         "references/cdcc-format.md",
         "references/failure-modes.md",
         "references/namelist-reference.md",
@@ -175,7 +177,7 @@
     },
     {
       "name": "kb-search",
-      "version": "104674d8eadb",
+      "version": "e8bdb7b9c15c",
       "files": [
         "AGENTS.md",
         "SKILL.md"
@@ -199,8 +201,23 @@
       ]
     },
     {
+      "name": "literature-search",
+      "version": "914a7c145dab",
+      "files": [
+        "AGENTS.md",
+        "SKILL.md",
+        "references/output-formats.md",
+        "references/search-apis.md",
+        "references/verification-checklist.md",
+        "scripts/arxiv_search.py",
+        "scripts/crossref_search.py",
+        "scripts/inspire_search.py",
+        "scripts/verify_doi.py"
+      ]
+    },
+    {
       "name": "literature-wiki",
-      "version": "e65881f5cd65",
+      "version": "36d0c3ac45c4",
       "files": [
         "AGENTS.md",
         "README.md",
@@ -404,7 +421,7 @@
     },
     {
       "name": "talys",
-      "version": "b975075fb0a9",
+      "version": "44eb7515476a",
       "files": [
         "AGENTS.md",
         "SKILL.md",
