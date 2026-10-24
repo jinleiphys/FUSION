@@ -9,6 +9,8 @@
   <br><br>
   <a href="https://vibeinscience.com/">vibeinscience.com</a>
   ·
+  <a href="https://youtu.be/6Xh6-xC436I">视频介绍</a>
+  ·
   <a href="LICENSE">MIT</a>
   ·
   28 个技能
@@ -16,6 +18,12 @@
   61,167 页离线文献
   ·
   <a href="README.md">English</a>
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/6Xh6-xC436I"><img src="https://img.youtube.com/vi/6Xh6-xC436I/hqdefault.jpg" alt="11 分钟视频介绍（YouTube，英文）" width="640"></a>
+  <br>
+  <sub>11 分钟视频介绍（YouTube，英文）</sub>
 </p>
 
 ---

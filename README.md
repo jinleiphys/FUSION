@@ -9,6 +9,8 @@
   <br><br>
   <a href="https://vibeinscience.com/">vibeinscience.com</a>
   ·
+  <a href="https://youtu.be/6Xh6-xC436I">Video intro</a>
+  ·
   <a href="LICENSE">MIT</a>
   ·
   28 skills
@@ -16,6 +18,12 @@
   61,167 offline literature pages
   ·
   <a href="README.zh-CN.md">中文</a>
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/6Xh6-xC436I"><img src="https://img.youtube.com/vi/6Xh6-xC436I/hqdefault.jpg" alt="FUSION in 11 minutes (YouTube)" width="640"></a>
+  <br>
+  <sub>FUSION in 11 minutes (YouTube)</sub>
 </p>
 
 ---
