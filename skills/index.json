@@ -132,7 +132,7 @@
     },
     {
       "name": "fusion-setup",
-      "version": "a7e84a21b1dc",
+      "version": "27e3a4c0c9b6",
       "files": [
         "AGENTS.md",
         "SKILL.md"
@@ -218,7 +218,7 @@
     },
     {
       "name": "literature-wiki",
-      "version": "36d0c3ac45c4",
+      "version": "27e3a4c0c9b6",
       "files": [
         "AGENTS.md",
         "README.md",
