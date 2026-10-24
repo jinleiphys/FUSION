@@ -31,6 +31,23 @@
       ]
     },
     {
+      "name": "band",
+      "version": "697d4a8eab46",
+      "files": [
+        "AGENTS.md",
+        "SKILL.md",
+        "examples/rose_n90zr_hifi.py",
+        "examples/rose_paper_fig5.py",
+        "examples/surmise_linear_posterior.py",
+        "examples/taweret_samba_mixing.py",
+        "references/tools.md",
+        "references/verification.md",
+        "scripts/install_band.sh",
+        "scripts/run_band.sh",
+        "scripts/verify_band.sh"
+      ]
+    },
+    {
       "name": "ccfull",
       "version": "2aac202c665c",
       "files": [
@@ -132,7 +149,7 @@
     },
     {
       "name": "fusion-setup",
-      "version": "27e3a4c0c9b6",
+      "version": "697d4a8eab46",
       "files": [
         "AGENTS.md",
         "SKILL.md"
