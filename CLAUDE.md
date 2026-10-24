@@ -2,7 +2,7 @@
 
 # FUSION: agent rules
 
-One-sentence goal: build FUSION, a cross-agent plugin (Claude Code, Codex, Gemini CLI, opencode) that ships nuclear-physics skills, per-code expert skills, and a 62k-paper knowledge base fetched on first use; full statement in [README.md#project-goal](README.md#project-goal).
+One-sentence goal: build FUSION, a cross-agent plugin (Claude Code, Codex, Antigravity, opencode) that ships nuclear-physics skills, per-code expert skills, and a 62k-paper knowledge base fetched on first use; full statement in [README.md#project-goal](README.md#project-goal).
 
 ## Hard rules
 
