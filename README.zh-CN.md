@@ -11,7 +11,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  27 个技能
+  28 个技能
   ·
   61,167 页离线文献
   ·
@@ -136,7 +136,7 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 
 ## 里面有什么
 
-仓库里现有 27 个 skill。其中二十个负责具体程序，SFRESCO 负责拟合，EXFOR skill 取实验数据，
+仓库里现有 28 个 skill。其中二十个负责具体程序，一个驱动 BAND 贝叶斯不确定度框架（rose、surmise、Taweret），SFRESCO 负责拟合，EXFOR skill 取实验数据，
 `kb-search` 检索离线文献库，`literature-search` 联网核对引用（INSPIRE、arXiv、CrossRef），`literature-wiki` 和 `research-profile` 维护你自己的读文献 wiki 和研究档案，
 `fusion-setup` 用来配置 FUSION。
 
@@ -147,6 +147,7 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 | 裂变、统计衰变 | CGMF、TALYS |
 | 核天体、R 矩阵 | AZURE2、SkyNet |
 | 重离子、状态方程 | SMASH、GiBUU、Thermal-FIST、vHLLE |
+| 贝叶斯不确定度 | BAND：rose（散射仿真器）、surmise（校准）、Taweret（模型混合） |
 | 实验数据 | EXFOR 检索与解析 |
 
 每个 skill 的 `SKILL.md` 都写明了覆盖范围和验证方法。已收录、已放弃和待处理的程序都记在
@@ -164,11 +165,11 @@ Gemini CLI 扩展和 opencode 的 skill 索引；模型也随你的 agent，Deep
 
 | Agent | FUSION 怎么进来 | 安装验证 |
 |---|---|---|
-| Claude Code | 插件 + 会话启动 hook | 安装、27 个 skill、hook 上下文、一次文献库查询，端到端跑通 |
+| Claude Code | 插件 + 会话启动 hook | 安装、全部 skill、hook 上下文、一次文献库查询，端到端跑通 |
 | Codex | 插件 | 安装，并在空目录里端到端用了一个 skill |
-| Antigravity | 插件，工作规则作为常驻规则 | 安装，27 个 skill，规则进入提示词 |
-| Gemini CLI | 扩展，`AGENTS.md` 作上下文 | 从本地副本安装，27 个 skill 全部加载 |
-| opencode | skill 索引 URL + 指令 URL | 从索引拉到 27 个 skill，`AGENTS.md` 进入模型上下文 |
+| Antigravity | 插件，工作规则作为常驻规则 | 安装，全部 skill，规则进入提示词 |
+| Gemini CLI | 扩展，`AGENTS.md` 作上下文 | 从本地副本安装，全部 skill 加载 |
+| opencode | skill 索引 URL + 指令 URL | 从索引拉到全部 skill，`AGENTS.md` 进入模型上下文 |
 
 另外，**任何程序 skill 上线前都要先经过 Codex 的对抗审查**：读 skill、跑脚本，专门去证伪那个基准。
 

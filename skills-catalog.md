@@ -270,6 +270,10 @@ HFODD (Skyrme DFT, distributed through the CPC library). None located on GitHub 
 pass, so each needs its channel, license and paper found before it can enter the table above.
 Thermal-FIST already covers the hadron-resonance-gas branch of "EOS" and is verified.
 
+## Bayesian uncertainty quantification (opened 2026-10-23)
+
+- [x] **band** DONE 2026-10-23: `skills/band/`, the BAND framework (bandframework v1.0.0, BSD-2; Phillips et al., J. Phys. G 48, 072001 (2021)). One umbrella skill, user ruling: install, recipe and benchmark for the three core tools, a routing table for the other eight. **rose** 1.1.8 (GPL-3.0; Odell et al., PRC 109, 044612 (2024)): its high-fidelity solver reproduces FUSION's n+90Zr KD02 50 MeV case, FRESCO 1299.19061 / COLOSS 1299.1905 / rose 1299.19050 mb; its emulator reproduces the paper's typical Fig. 5 accuracy (about 0.1%) but NOT the worst-case "1%" on the paper's own max-over-angle metric (0.7-5% by seed). **surmise** 1.0.0 (MIT; users manual only, no journal paper, admitted on user ruling): exact Gaussian posterior recovered through PCGP + directbayes. **Taweret** 1.3.0 (MIT; JOSS 9, 6175 (2024)): the SAMBA toy (PRC 106, 044002) re-derived from the paper's equations and matched to SAMBA's own arrays to 1e-16. Shipped suites 303 + 28 pass. Codex pass rejected the first version (nine findings, all applied). Install routes uv, venv, conda-forge; openbt (Taweret's dependency, source-only on PyPI) needs MPI and Eigen, which a lab server lacked.
+
 ## Lei code family (ONLY published + publicly-open ones; hard rule, see CLAUDE.md)
 
 Eligible (published paper + public repo, skills double as student onboarding docs):

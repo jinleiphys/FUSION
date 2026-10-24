@@ -11,7 +11,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  27 skills
+  28 skills
   ·
   61,167 offline literature pages
   ·
@@ -191,7 +191,8 @@ skills pull their own extra dependencies and say so before they do.
 
 ## What is in it
 
-**27 skills.** Twenty drive a specific code, one is a fitting companion, one
+**28 skills.** Twenty drive a specific code, one drives the BAND Bayesian-UQ framework
+(rose, surmise, Taweret), one is a fitting companion, one
 retrieves experimental data, one searches the offline knowledge base, one
 (`literature-search`) finds and verifies citations live against INSPIRE, arXiv
 and CrossRef, two (`literature-wiki`, `research-profile`) maintain your own
@@ -204,6 +205,7 @@ persistent research wikis, and one sets FUSION up.
 | Fission, statistical | CGMF, TALYS |
 | Astrophysics, R-matrix | AZURE2, SkyNet |
 | Heavy-ion, equation of state | SMASH, GiBUU, Thermal-FIST, vHLLE |
+| Bayesian UQ | BAND: rose (scattering emulator), surmise (calibration), Taweret (model mixing) |
 | Experimental data | EXFOR retrieval and parsing |
 
 Each skill's `SKILL.md` states what it covers and how it was verified. What is
@@ -227,11 +229,11 @@ DeepSeek, Qwen and GLM as readily as Claude or GPT.
 
 | Agent | How FUSION arrives | Install checked |
 |---|---|---|
-| Claude Code | plugin + session-start hook | install, all 27 skills, hook context, and a knowledge-base query end to end |
+| Claude Code | plugin + session-start hook | install, all skills, hook context, and a knowledge-base query end to end |
 | Codex | plugin | install and a skill used end to end from an empty directory |
-| Antigravity | plugin, working rules as an always-on rule | install, 27 skills, rule present in the prompt |
-| Gemini CLI | extension, `AGENTS.md` as context | install from a local copy, all 27 skills load |
-| opencode | skill index URL + instructions URL | 27 skills pulled from the index, `AGENTS.md` reaches the model |
+| Antigravity | plugin, working rules as an always-on rule | install, all skills, rule present in the prompt |
+| Gemini CLI | extension, `AGENTS.md` as context | install from a local copy, all skills load |
+| opencode | skill index URL + instructions URL | all skills pulled from the index, `AGENTS.md` reaches the model |
 
 Codex is also the most exercised runtime in a different sense: no per-code
 skill ships until Codex has run an adversarial pass over it, reading the skill
