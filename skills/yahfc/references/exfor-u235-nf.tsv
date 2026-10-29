@@ -1,0 +1,11 @@
+# Measured 235U(n,f) used by verify_yahfc.sh L2. Retrieved 2026-10-29 with the
+# exfor-data skill (IAEA EXFOR, GitHub mirror); values as in the entries, sigma in b.
+# Rule: linear interpolation in energy between the two bracketing points.
+#   10950.002 (Wasson et al.) gives bins EN-MIN..EN-MAX in keV; a bin is placed at its
+#   midpoint, and both run sets (FLAG 1 and 2) are pooled and sorted by midpoint.
+#   14016.002 (Lisowski et al.) gives point energies in MeV.
+# E_yahfc(MeV)	subentry	E_lo(MeV)	sig_lo	E_hi(MeV)	sig_hi	sig_interp	pinned
+0.46074054	10950.002	0.4145	1.212	0.4695	1.123	1.1372	1.137
+0.97089601	10950.002	0.9475	1.17	0.9940	1.2	1.1851	1.185
+4.9501491	14016.002	4.8892	1.0749	5.0381	1.0685	1.0723	1.072
+14.031277	14016.002	13.9730	2.06	14.3980	2.0968	2.0650	2.065

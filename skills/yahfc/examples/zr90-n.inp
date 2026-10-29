@@ -1,0 +1,11 @@
+file Zr90
+target Zr90
+projectile n
+all_discrete_states y
+delta_e 0.1
+proj_eminmax 1.0 14.0 13.0
+wf_model 1
+preeq_model 1
+num_mc_samp 2000
+ran_seed 12345
+end
