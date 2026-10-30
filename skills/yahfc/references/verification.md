@@ -1,11 +1,11 @@
-# YAHFC verification (DRAFT, skill under construction)
+# YAHFC verification
 
 Status 2026-10-28: measurements below were taken during the feasibility pass on
 macOS 26 / Apple Silicon, gfortran 15.2.0 (Homebrew), YAHFC 18af2fe, Frescox
 eca88f3, upstream default flags (YAHFC `-Ofast`, Frescox `-O2`). They are the
 values `verify_yahfc.sh` pins. On 2026-10-29 `verify_yahfc.sh --seeds` passed on the same Mac build,
-reproducing every pinned value below exactly (L1, L2 seed 12345) and the seed means to 1e-4. Reproduced on Linux on 2026-10-29 (section at the end); not yet
-through the Codex adversarial pass. Nothing here may be quoted as shipped.
+reproducing every pinned value below exactly (L1, L2 seed 12345) and the seed means to 1e-4. Reproduced on Linux on 2026-10-29 (section at the end). Two Codex adversarial
+passes followed on 2026-10-29, all findings fixed; shipped 2026-10-29.
 
 ## Tier
 
@@ -83,8 +83,9 @@ through the `KE_com` energy grid, up to 15 printed units (~2e-7 relative).
 Events per channel, sigma_tot and sigma_R identical in every build. All of it is
 far below the Monte Carlo noise at the event counts used here, so the
 regression tolerance is 1e-6 relative, not byte identity. Root causes and the
-two upstream bugs (uninitialised `num_particles`; cancellation in `KE_com` and
-`KE_lab`) are in `devlog.md`, 2026-10-28.
+two code defects (uninitialised `num_particles`; cancellation in `KE_com` and
+`KE_lab`) are in the FUSION devlog, 2026-10-28. Both act at ~1e-7, with no
+physical effect, so they are documented and not reported upstream (user, 2026-10-29).
 
 ## Harness self-test
 
