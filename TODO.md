@@ -2,12 +2,6 @@
 
 Validation rules and hard constraints live in [CLAUDE.md](CLAUDE.md); do not restate them here.
 
-## Phase 1: rebrand fork + CI
-
-- [ ] **`fusion upgrade` would replace a FUSION install with upstream opencode** [user decision]. It fetches `api.github.com/repos/anomalyco/opencode/releases/latest`, so a student who runs it silently loses FUSION. Relabelling it was refused because that would make the help text lie, and redirecting it at the FUSION releases is a FUNCTIONAL change, which the hard rule says to stop and discuss. Its description now says plainly that it upgrades the underlying opencode and not FUSION. Options: leave it honest-but-useless, point it at the FUSION releases (functional patch, grows the rebase surface), or hide the command
-- [ ] Remaining brand surfaces: desktop/web icons need an actual FUSION graphic (nature-figure skill or designer)
-- [ ] TUI logo v2: current block-glyph version verified rendering as "FUSion" (user: 效果一般, acceptable for now); revisit in the visual design pass together with the icons
-
 ## Phase 2: skill pack
 
 Scope (user directive 2026-07-09): **every excellent open-source nuclear-physics code gets its own skill**, across reactions, statistical/fission, R-matrix/astro, structure, and (scoped) transport/data. Full living roadmap with openness-verification flags and wave ordering: [skills-catalog.md](skills-catalog.md).
@@ -47,7 +41,7 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 - [ ] install.sh: opencode binary + skill pack + kb-wiki + default config in one shot. Constrained by the 2026-08-13 rule: it never pre-builds a nuclear-physics code, since provisioning is lazy and codes arrive on first use. **Reconsider whether it is worth writing at all**: the documented quick start is already three readable commands, verified working end to end on 2026-08-14 from an empty directory on another machine, and collapsing them into one opaque script cuts against a project whose pitch is that you can see what it does
 - [ ] Default model config for CN users (domestic providers) and international users
 - [ ] Student-facing docs (zh + en); wizard closing demo doubles as the tutorial
-- [ ] **Pilot with 2-3 group students; collect failures into devlog. This is now the top item and the one thing nobody else can do.** The technical gates are clear: every code installs cold, the onboarding path works on another machine, the repo size is honest. What is untested is whether the first-run experience makes sense to someone who did not build it, which no amount of self-testing settles. Fix the `--help` branding leak first, since it is the most likely first command a student types
+- [ ] **Pilot with 2-3 group students; collect failures into devlog. This is now the top item and the one thing nobody else can do.** The technical gates are clear: every code installs cold, the onboarding path works on another machine, the repo size is honest. What is untested is whether the first-run experience makes sense to someone who did not build it, which no amount of self-testing settles.
 - [ ] v2+: TUI popup wizard (plugin slots), ORCID/INSPIRE author lookup, group mode (advisor-curated shared config)
 
 ## Repo hygiene
@@ -62,6 +56,8 @@ Strategy (user 2026-07-20): community codes first, self-consistent benchmarks (r
 - The five Wave 1b CPC papers (pikoe CPC 297, 109058; NLAT CPC 207, 499; CNOK CPC 288, 108726; SWANLOP; SIDES CPC 254, 107340), delivered and read 2026-07-21. Ingest paused at the vocabulary-approval step (proposed: methods `dwia`, `johnson-tandy-adwa`, `nonlocal-iteration-scheme`, `nonlocal-matrix-inversion-scheme`, `t-rho-rho-folding`; observables `residue-momentum-distribution`, `triple-differential-cs`; system `16c-12c`; five code entities plus lead-author entities). Two findings to file: SIDES defines itself against NLAT by name ("without resorting to any ad-hoc seed as required in iterative methods", [4] = NLAT), a methodological-debate page; NLAT's "4% accuracy" and "Ed = 10 to 70 MeV" appear only in its abstract, never derived in the body.
 
 ## Completed
+
+- [x] 2026-10-29: Phase 1 (rebrand fork + CI) CLOSED (user): retired by the 2026-10-23 plugin ruling. Its three open items (`fusion upgrade` pulling upstream opencode, desktop/web icons, TUI logo v2) all lived in the unmaintained fusion-core fork
 
 - [x] 2026-10-29: YAHFC upstream report DROPPED (user): the two numerical bugs act at ~1e-7 with no physical effect; documented in the skill, not reported to LLNL
 
