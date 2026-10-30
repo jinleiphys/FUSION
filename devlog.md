@@ -9,6 +9,46 @@ that, move the oldest entries to `devlog-archive.md` in full, cutting at an
 entry boundary, and consolidate what stays. `scripts/hooks/pre-commit` enforces
 this; install it with `ln -sf ../../scripts/hooks/pre-commit .git/hooks/`.
 
+## 2026-10-29: the Studio's working tree was two months stale under a current HEAD
+
+HEAD had been mixed-reset to origin/main, but Nextcloud never delivered the
+files: 22 tracked files matched old committed blobs, 32 were missing, and the
+YAHFC session read the OLD CLAUDE.md unnoticed. Four files held real local
+work. Fix: `git hash-object` each modified file against `git rev-list --all
+--objects` (found = stale, restore from HEAD; not found = local, merge by hand).
+**After `reset origin/main`, check that the files moved too.**
+
+## 2026-10-28: YAHFC feasibility; why -Ofast and -O0 disagree; a patch tested and declined
+
+**Eligible, builds, no shipped reference output (tier 2 unless an anchor is found).**
+User ruling: technical report LLNL-TR-824700 (DOE CODE DOI 10.11578/dc.20211209.1)
+counts as the paper; MIT in README prose. YAHFC and Frescox (LLNL fork, GPL-2.0,
+run as bare `frescox` from PATH, no version or exit check) build unpatched on
+Apple Silicon. `ran_seed N` makes runs bit-reproducible (default: clock). Existing
+`.tcoef` in the run dir are silently reused. `Data/Trans-coeff/CC-DWBA/` ships 25
+FRESCO `.tcoef` usable to check Frescox.
+
+**-Ofast vs -O0 (45 of 87 files) has three causes, none physics.** (i)
+`Exit_Channel%num_particles` is never zeroed (`decay-chain.f90:503`, heap from
+`allocate` at :287); it toggles one header line in 6 (n,g) files at -O2, and
+`-finit-integer` cannot see an allocated component. (ii) Fast-math, up to 15
+printed units, enters via `KE_com = sqrt(M**2+2*mT*E) - M` (`YAHFC-Master.f90:5947`),
+which cancels catastrophically (M ~ 85 GeV; rel error 7e-7 on the grid, stable
+form 3e-16); forcing the O0 grid removes it. (iii) FMA: object-swap bisection
+puts all 21 numeric O2 files in `print_channels.o`, `print_elastic.o` (exact
+zeros become 2^-54 ~ 1e-17) and `eig_eis.o` (Gauss nodes one ulp, 6e-12 abs).
+An `fmadd` in KE_com moves the grid but does not reach the library.
+
+**Patch tested, then NOT adopted** (user: 1e-7 is invisible in nuclear physics;
+see Key decisions 2026-10-28). Zeroing `num_particles`, stable KE_com/KE_lab
+and `cc_file` 132 to 256 made -O2 = -Ofast byte for byte and lifted the path
+limit, moving 31 files by <= 2e-7 with events and sigma unchanged. The skill
+ships upstream source; an install guard handles the path limit instead.
+**Physics anchor found:** LLNL's tuned `YAHFC-Examples/U235` deck gives
+235U(n,f) within 4% of EXFOR 10950/14016 at 0.46, 0.97, 4.95, 14.0 MeV
+(numbers in `skills/yahfc/references/verification.md`). **Trap:** stdout
+carries NUL bytes, so a plain grep treats it as binary; always `grep -a`.
+
 ## 2026-10-24: Gemini CLI support dropped
 
 **User ruling: Gemini CLI is retired upstream (personal accounts cut off
@@ -56,25 +96,3 @@ is never injected (the model had to go read it). It also dropped two skills
 whose descriptions were invalid YAML that Claude Code had always tolerated.
 Codex clones a GitHub marketplace with full history (290 MB, twice), so its
 documented route is a shallow clone registered as a local marketplace (19 MB).
-
-## 2026-09-24: the cite-key heuristic was wrong four times in five; the graph now takes INSPIRE
-
-**Tier B of `kb_citegraph.py` is gone.** For a paper with an external .bib the
-corpus holds only keys like `Wang11`, and the heuristic grouped authors by
-surname (every 2011 "Wang" was one person, accepted wholesale) and let a
-self-citation key take every paper its author wrote that year. Against INSPIRE
-reference lists (record numbers resolved), 15,709 of 84,587 tier-B edges were
-right, 18.6%. The same 5,931 papers now take their references from INSPIRE,
-and the backfill resolves record-number-only references (40% of a sample),
-which also recovered edges for the 27k earlier backfill papers. Graph
-703,430 -> 809,632 edges (69,949 removed, 176,151 added, calibrations pass);
-26,719 relation rows on removed edges dropped; the 176,151 new edges are
-listed untyped in `relations-untyped.tsv` (typed 2026-09-25: 30,088 typed,
-861 new contrasts rechecked, 405 overturned; relations 237,009 rows). Codex
-confirmed the counts offline and put the kept tex-derived edges at 98.7%
-against INSPIRE. A Codex review of the backfill
-change caught two recall losses of my own (an out-of-corpus eprint no
-longer fell back to its DOI; a record with an unmapped DOI was never
-looked up), worth 3.1% of edges, fixed before the final run. A first 150-paper sample said
-12.9%; it undercounted because its truth set skipped record numbers, and the
-same flaw made tier A look 79.5% right when every inspected miss was real.

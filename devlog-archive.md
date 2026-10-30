@@ -2,6 +2,28 @@
 
 Older entries moved out of devlog.md to keep the auto-loaded portion under ~5 KB. NOT auto-imported.
 
+## 2026-09-24: the cite-key heuristic was wrong four times in five; the graph now takes INSPIRE
+
+**Tier B of `kb_citegraph.py` is gone.** For a paper with an external .bib the
+corpus holds only keys like `Wang11`, and the heuristic grouped authors by
+surname (every 2011 "Wang" was one person, accepted wholesale) and let a
+self-citation key take every paper its author wrote that year. Against INSPIRE
+reference lists (record numbers resolved), 15,709 of 84,587 tier-B edges were
+right, 18.6%. The same 5,931 papers now take their references from INSPIRE,
+and the backfill resolves record-number-only references (40% of a sample),
+which also recovered edges for the 27k earlier backfill papers. Graph
+703,430 -> 809,632 edges (69,949 removed, 176,151 added, calibrations pass);
+26,719 relation rows on removed edges dropped; the 176,151 new edges are
+listed untyped in `relations-untyped.tsv` (typed 2026-09-25: 30,088 typed,
+861 new contrasts rechecked, 405 overturned; relations 237,009 rows). Codex
+confirmed the counts offline and put the kept tex-derived edges at 98.7%
+against INSPIRE. A Codex review of the backfill
+change caught two recall losses of my own (an out-of-corpus eprint no
+longer fell back to its DOI; a record with an unmapped DOI was never
+looked up), worth 3.1% of edges, fixed before the final run. A first 150-paper sample said
+12.9%; it undercounted because its truth set skipped record numbers, and the
+same flaw made tier A look 79.5% right when every inspected miss was real.
+
 ## 2026-08-14: the onboarding path finally run somewhere other than the author's machine
 
 **It works, end to end, and that had never actually been checked.** Everything

@@ -133,7 +133,7 @@ show the user what it said; do not paper over it.
 
 ## Check it worked
 
-The FUSION skills should be listed in your own skill list (28 of them; in
+The FUSION skills should be listed in your own skill list (29 of them; in
 Claude Code they appear as `fusion:<name>`). In opencode, run
 `opencode debug skill` and count the ones from FUSION. If some are
 missing, they were either shadowed by a same-named skill elsewhere, in which

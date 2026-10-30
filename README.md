@@ -13,7 +13,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  28 skills
+  29 skills
   ·
   61,167 offline literature pages
   ·
@@ -190,7 +190,7 @@ skills pull their own extra dependencies and say so before they do.
 
 ## What is in it
 
-**28 skills.** Twenty drive a specific code, one drives the BAND Bayesian-UQ framework
+**29 skills.** Twenty-one drive a specific code, one drives the BAND Bayesian-UQ framework
 (rose, surmise, Taweret), one is a fitting companion, one
 retrieves experimental data, one searches the offline knowledge base, one
 (`literature-search`) finds and verifies citations live against INSPIRE, arXiv
@@ -201,7 +201,7 @@ persistent research wikis, and one sets FUSION up.
 |---|---|
 | Reactions, optical model | FRESCO (+ SFRESCO fitting), COLOSS, CCFULL, pikoe, NLAT, CNOK, SIDES, SWANLOP |
 | Structure, ab initio | GSM, KSHELL, NuclearToolkit.jl, Sky3D |
-| Fission, statistical | CGMF, TALYS |
+| Fission, statistical | CGMF, TALYS, YAHFC |
 | Astrophysics, R-matrix | AZURE2, SkyNet |
 | Heavy-ion, equation of state | SMASH, GiBUU, Thermal-FIST, vHLLE |
 | Bayesian UQ | BAND: rose (scattering emulator), surmise (calibration), Taweret (model mixing) |
@@ -245,11 +245,11 @@ to reproduce something. The evidence is stated rather than implied:
 - **Tier 1** (14 skills, including FRESCO, TALYS, CGMF, SMASH, SkyNet,
   Thermal-FIST): the code's own distribution ships reference values and the
   skill reproduces them, several byte for byte.
-- **Tier 2** (6 skills, including AZURE2, KSHELL, GiBUU, vHLLE): the code ships
+- **Tier 2** (7 skills, including AZURE2, KSHELL, GiBUU, vHLLE, YAHFC): the code ships
   no reference output, so the skill is pinned by cross-platform reproduction,
   physics invariants such as the optical theorem, or an independent analytic
   solution. vHLLE is checked against closed-form Gubser flow rather than against
-  its own output.
+  its own output, and YAHFC against measured 235U(n,f) cross sections.
 
 Most skills are built and verified on **two platforms**, macOS/ARM and
 Linux/x86-64, and every one goes through an adversarial review pass by a second

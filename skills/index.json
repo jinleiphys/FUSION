@@ -281,7 +281,7 @@
     },
     {
       "name": "pikoe",
-      "version": "0454f8ba1dcb",
+      "version": "30d280879ebf",
       "files": [
         ".gitignore",
         "AGENTS.md",
@@ -492,6 +492,25 @@
         "scripts/run_vhlle.sh",
         "scripts/selftest_vhlle.sh",
         "scripts/verify_vhlle.sh"
+      ]
+    },
+    {
+      "name": "yahfc",
+      "version": "30d280879ebf",
+      "files": [
+        "AGENTS.md",
+        "SKILL.md",
+        "examples/zr90-n.inp",
+        "references/exfor-u235-nf.tsv",
+        "references/failure-modes.md",
+        "references/input-format.md",
+        "references/output-format.md",
+        "references/verification.md",
+        "scripts/install_yahfc.sh",
+        "scripts/run_yahfc.sh",
+        "scripts/selftest_yahfc.sh",
+        "scripts/verify_yahfc.sh",
+        "scripts/yahfc_check.py"
       ]
     }
   ]

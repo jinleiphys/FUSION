@@ -13,7 +13,7 @@
   ·
   <a href="LICENSE">MIT</a>
   ·
-  28 个技能
+  29 个技能
   ·
   61,167 页离线文献
   ·
@@ -136,7 +136,7 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 
 ## 里面有什么
 
-仓库里现有 28 个 skill。其中二十个负责具体程序，一个驱动 BAND 贝叶斯不确定度框架（rose、surmise、Taweret），SFRESCO 负责拟合，EXFOR skill 取实验数据，
+仓库里现有 29 个 skill。其中二十一个负责具体程序，一个驱动 BAND 贝叶斯不确定度框架（rose、surmise、Taweret），SFRESCO 负责拟合，EXFOR skill 取实验数据，
 `kb-search` 检索离线文献库，`literature-search` 联网核对引用（INSPIRE、arXiv、CrossRef），`literature-wiki` 和 `research-profile` 维护你自己的读文献 wiki 和研究档案，
 `fusion-setup` 用来配置 FUSION。
 
@@ -144,7 +144,7 @@ FUSION 会选择合适的 skill。如果机器上没有 FRESCO，它会从上游
 |---|---|
 | 反应、光学模型 | FRESCO（+ SFRESCO 拟合）、COLOSS、CCFULL、pikoe、NLAT、CNOK、SIDES、SWANLOP |
 | 结构、从头算 | GSM、KSHELL、NuclearToolkit.jl、Sky3D |
-| 裂变、统计衰变 | CGMF、TALYS |
+| 裂变、统计衰变 | CGMF、TALYS、YAHFC |
 | 核天体、R 矩阵 | AZURE2、SkyNet |
 | 重离子、状态方程 | SMASH、GiBUU、Thermal-FIST、vHLLE |
 | 贝叶斯不确定度 | BAND：rose（散射仿真器）、surmise（校准）、Taweret（模型混合） |
@@ -177,7 +177,7 @@ opencode 的 skill 索引；模型也随你的 agent，DeepSeek、Qwen、GLM 和
 每个 skill 都基于程序的公开源码和手册，并且要复现一项可检查的结果。验证分两档：
 
 - **Tier 1**（14 个，含 FRESCO、TALYS、CGMF、SMASH、SkyNet、Thermal-FIST）：程序自己的发行包里带参考数值，技能能复现，其中几个是逐字节复现。
-- **Tier 2**（6 个，含 AZURE2、KSHELL、GiBUU、vHLLE）：程序不带参考输出，所以改用跨平台复现、物理恒等式（比如光学定理）、或者一个独立的解析解来锁定。vHLLE 是拿闭式 Gubser 流去对，而不是拿它自己的输出去对。
+- **Tier 2**（7 个，含 AZURE2、KSHELL、GiBUU、vHLLE、YAHFC）：程序不带参考输出，所以改用跨平台复现、物理恒等式（比如光学定理）、或者一个独立的解析解来锁定。vHLLE 是拿闭式 Gubser 流去对，而不是拿它自己的输出去对；YAHFC 是拿实测的 235U(n,f) 截面去对。
 
 多数 skill 已在 macOS/ARM 和 Linux/x86-64 上分别构建和验证。上线前还会交给第二个 AI 专门找错。这个过程曾经找出过几类实际缺陷：
 运行旧输入卡却报成功，检查条件从未真正触发，测试脚本自己伪造了输入。详细记录在各 skill 的 `references/verification.md` 里。
